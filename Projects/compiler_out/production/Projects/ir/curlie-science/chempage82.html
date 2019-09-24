@@ -1,0 +1,263 @@
+<BASE HREF="http://www.signatureseismic.com/">
+<!DOCTYPE html>
+<html>
+<head>
+<title>Home - Signature Seismic</title>
+<meta charset="UTF-8">
+<meta name="Rating" content="General" />
+<meta name="revisit-after" content="5 Days" />
+<meta name="doc-class" content="Living Document" />
+<meta name="MSSmartTagsPreventParsing" content="true" />
+<meta name="description" content="" />
+<meta name="copyright" content="" />
+		<script type='text/javascript'>
+			ROOT_URI = "http://www.signatureseismic.com";
+		</script>
+				<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js'></script>
+			<script type='text/javascript' src='http://www.signatureseismic.com/ccms/lib/fancybox/jquery.fancybox-1.3.4.pack.js'></script>
+	<link rel='stylesheet' type='text/css' href='http://www.signatureseismic.com/ccms/lib/fancybox/jquery.fancybox-1.3.4.css' />
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+	<script>
+	var markers = new Array();
+	var info_windows = new Array();
+	var lat;
+	var long;
+	
+	function googlemaps_add_marker(map, title, clickable, lat, long, win_content) {
+		markers.push(new google.maps.Marker({
+			position: new google.maps.LatLng(lat,long),
+			title: title,
+			clickable: clickable,
+			map: map
+			}));
+		
+		info_windows.push(new google.maps.InfoWindow({
+			content: win_content
+			}));
+		
+		var window_row = info_windows.length-1;
+		var marker = markers.length-1;
+		
+		google.maps.event.addListener(markers[markers.length-1],'click',function(){
+			info_windows[window_row].open(map,markers[marker]);
+			});
+		}
+				function googlemaps_initialize_map_3()
+				{
+				var latlng = new google.maps.LatLng(0,0);
+				var opt = {
+					center:latlng,
+					zoom:4,
+					mapTypeId: google.maps.MapTypeId.ROADMAP,
+					disableAutoPan:false,
+					navigationControl:true,
+					navigationControlOptions: {style:google.maps.NavigationControlStyle.SMALL },
+					mapTypeControl:true,
+					mapTypeControlOptions: {style:google.maps.MapTypeControlStyle.DROPDOWN_MENU}
+					};
+				
+				var map_3 = new google.maps.Map(document.getElementById("map-3"),opt);
+										googlemaps_add_marker(map_3, "yahoo", true, 51.0496501, -114.0791774, "<div class=\"map-info-window\" id=\"map-info-window-2\">blahblah</div>");
+										}
+			
+			google.maps.event.addDomListener(window, 'load', googlemaps_initialize_map_3);
+				</script>
+	<style>
+		.map-info-window {
+			overflow-x:auto;
+			overflow-y:auto;
+			margin:0;
+			padding:0;
+			}
+		
+						#map-3 {
+					width: 500px;
+					height: 450px;
+					}
+								#map-info_window-2 {
+					height: 100px;
+					width: 350px;
+					}
+					</style>
+	<!-- JQUERY -->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+<!-- SUPERFISH -->
+<script type="text/javascript" src="/templates/master/javascript/superfish/superfish.js"></script>
+<link rel="stylesheet" type="text/css" href="/templates/master/javascript/superfish/superfish.css" media="all" /></script>
+<!-- APP -->
+<script type="text/javascript" src="/templates/master/javascript/app.js"></script>
+<link rel="stylesheet" type="text/css" href="/templates/master/style.css" media="all" /></script>
+</head><body class="">
+
+<!-- WRAP -->
+<div id="wrap" class="clearfix">
+
+<!-- HEADER -->
+<div id="header" class="clearfix">
+<a id="logo" href="/"><img src="/templates/master/images/logo.png" alt="Signature Seismic" width="299" height="44" /></a>
+<div id="contact-info">
+<div class="left">&nbsp;<br />
+Signature Seismic<br />
+info@signatureseismic.com<br />
+(403) 531-0760</div>
+
+<div class="right"><a href="https://www.signatureseismic.com">English</a>&nbsp;&nbsp;<a href="https://www.signatureseismic.com/espanol/hogar"> Espa&ntilde;ol</a><br />
+#900, 940 - 6th Avenue S.W.<br />
+Calgary Alberta, T2P 3T1<br />
+Canada</div>
+</div>
+</div>
+
+
+
+<!-- NAV -->
+<div id="nav" class="clearfix">
+	<ul class='NavigationRoot'>
+				<li id='NavigationNode_1' class='NavigationPageCurrent'>
+							<a href='http://www.signatureseismic.com/en/home' target='_self'>Home</a>
+						</li>
+				<li id='NavigationNode_3' class='NavigationPage'>
+							<a href='http://www.signatureseismic.com/en/about-us' target='_self'>About Us</a>
+								<ul class='NavigationPage'>
+							<li id='NavigationNode_45' class='NavigationPage'>
+							<a href='http://www.signatureseismic.com/en/about-us/technical-team' target='_self'>Technical Team</a>
+						</li>
+				<li id='NavigationNode_5' class='NavigationPage'>
+							<a href='http://www.signatureseismic.com/en/about-us/our-experience' target='_self'>Our Experience</a>
+						</li>
+						</ul>
+						</li>
+				<li id='NavigationNode_4' class='NavigationPage'>
+							<a href='http://www.signatureseismic.com/en/services' target='_self'>Services</a>
+								<ul class='NavigationPage'>
+							<li id='NavigationNode_10' class='NavigationPage'>
+							<a href='http://www.signatureseismic.com/en/services/time-processing' target='_self'>Time Processing</a>
+						</li>
+				<li id='NavigationNode_11' class='NavigationPage'>
+							<a href='http://www.signatureseismic.com/en/services/depth-processing' target='_self'>Depth Processing</a>
+						</li>
+				<li id='NavigationNode_53' class='NavigationPage'>
+							<a href='http://www.signatureseismic.com/en/services/3d-merging' target='_self'>3D Merging</a>
+						</li>
+				<li id='NavigationNode_54' class='NavigationPage'>
+							<a href='http://www.signatureseismic.com/en/services/poststack-processing' target='_self'>Post-stack Processing</a>
+						</li>
+				<li id='NavigationNode_12' class='NavigationPage'>
+							<a href='http://www.signatureseismic.com/en/services/seismic-interpretation' target='_self'>Interpretation Services</a>
+						</li>
+				<li id='NavigationNode_13' class='NavigationPage'>
+							<a href='http://www.signatureseismic.com/en/services/geophysical-archiving' target='_self'>Geophysical Archiving</a>
+						</li>
+						</ul>
+						</li>
+				<li id='NavigationNode_15' class='NavigationPage'>
+							<a href='http://www.signatureseismic.com/en/technology' target='_self'>Technology</a>
+								<ul class='NavigationPage'>
+							<li id='NavigationNode_17' class='NavigationPage'>
+							<a href='http://www.signatureseismic.com/en/technology/software' target='_self'>Software</a>
+						</li>
+				<li id='NavigationNode_18' class='NavigationPage'>
+							<a href='http://www.signatureseismic.com/en/technology/hardware' target='_self'>Hardware</a>
+						</li>
+						</ul>
+						</li>
+				<li id='NavigationNode_25' class='NavigationPage'>
+							<a href='http://www.signatureseismic.com/en/contact-us' target='_self'>Contact Us</a>
+						</li>
+				<li id='NavigationNode_36' class='NavigationPage'>
+							<a href='http://www.signatureseismic.com/en/careers' target='_self'>Careers</a>
+						</li>
+			</ul>
+	</div>
+
+
+<!-- HEADER2 -->
+<div id="header2">
+<div id="computer">
+<img class="current" src="/templates/master/images/comp1.png" alt="comp1" width="362" height="267" />
+<img src="/templates/master/images/comp2.png" alt="comp2" width="362" height="267" />
+<img src="/templates/master/images/comp3.png" alt="comp3" width="362" height="267" />
+<img src="/templates/master/images/comp4.png" alt="comp4" width="362" height="267" />
+<img src="/templates/master/images/comp5.png" alt="comp5" width="362" height="267" />
+</div>
+</div>
+
+
+
+<!-- MAIN -->
+<div id="main" class="col_8 alpha">
+<h3 style="text-align: center;"><strong>Innovative&nbsp;&nbsp;*&nbsp;&nbsp;Intuitive&nbsp;&nbsp;*&nbsp;&nbsp;Interactive</strong></h3>
+
+<h3 style="text-align: center;"><span style="font-size:24px;">Working worldwide since 2000 to help minimize your exploration and production risks.</span></h3>
+
+<h3 style="text-align: center;"><strong><img alt="" height="352" src="/files/updated_map_12-18.jpg" width="610" /></strong></h3>
+
+<h5 style="text-align: center;">&nbsp;</h5>
+
+<h5 style="text-align: center;">&nbsp;</h5>
+
+<h5 class="btn right"><a href="http://www.signatureseismic.com/en/about-us" target="_blank">Learn More &raquo;</a></h5>
+		<!-- Empty cell 111 -->
+				<!-- Empty cell 250 -->
+				<!-- Empty cell 251 -->
+				<!-- Empty cell 252 -->
+		</div>
+
+<!-- SIDEBAR -->
+<div id="sidebar" class="col_4 omega">
+<!--<h4>Location & Map</h4>-->
+		<!-- Empty cell 112 -->
+		
+
+
+<h4 align="center">News and Events</h4>
+
+<p><big><strong>News</strong></big></p>
+
+<p style="background: rgb(238, 238, 238) none repeat scroll 0% 0%; padding: 5px 10px; border: 1px solid rgb(204, 204, 204);"><span style="color:#006633;">Software update:&nbsp;</span><span style="color:#006633;">ECHOS 18 (Time &amp; Depth)</span></p>
+
+<p style="background: rgb(238, 238, 238); padding: 5px 10px; border: 1px solid rgb(204, 204, 204); border-image: none;">&nbsp;</p>
+
+<p><big><strong>Sponsorships</strong></big></p>
+
+<p style="background: rgb(238, 238, 238); padding: 5px 10px; border: 1px solid rgb(204, 204, 204); border-image: none;"><a href="http://cseg.ca/social/wise-golf-tournament" target="_blank">CSEG WiSE Golf Tournament (2008 - present)</a></p>
+
+<p style="background: rgb(238, 238, 238); padding: 5px 10px; border: 1px solid rgb(204, 204, 204); border-image: none;"><a href="http://www.conquercancer.ca/index.html" target="_blank">Ride to Conquer Cancer (2009 - present)</a></p>
+
+<p style="background: rgb(238, 238, 238); padding: 5px 10px; border: 1px solid rgb(204, 204, 204); border-image: none;"><a href="http://www.csegskispree.com/" target="_blank">CSEG Family Ski Spree (2013 - present)</a></p>
+
+<p style="background: rgb(238, 238, 238); padding: 5px 10px; border: 1px solid rgb(204, 204, 204); border-image: none;"><a href="http://cseg.ca/students/geophysical-industry-field-trip" target="_blank">CSEG G.I.F.T. (2016-present)</a></p>
+
+<p style="background: rgb(238, 238, 238); padding: 5px 10px; border: 1px solid rgb(204, 204, 204); border-image: none;"><a href="http://cseg.ca/social/t-wave-golf-tournament" target="_blank">CSEG T-Wave Golf Tournament (2015 - 2016)</a></p>
+
+<p><big><strong>Upcoming Events</strong></big></p>
+
+<p style="background: rgb(238, 238, 238); padding: 5px 10px; border: 1px solid rgb(204, 204, 204); border-image: none;">&nbsp;</p>
+
+
+<!--<h4>News & Events</h4>
+<ul class="news-list">
+<li>Aug 8th 2011 <a href="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus porttitor dapibus dolor.</a></li>
+<li>Aug 8th 2011 <a href="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus porttitor dapibus dolor.</a></li>
+<li>Aug 8th 2011 <a href="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus porttitor dapibus dolor.</a></li>
+<li>Aug 8th 2011 <a href="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus porttitor dapibus dolor.</a></li>
+</ul>-->
+		<!-- Empty cell 115 -->
+		
+		<!-- Empty cell 116 -->
+		
+
+</div>
+
+<!-- FOOTER -->
+<div class="clear clearfix"></div>
+<div id="footer">
+<div><a href="http://www.seg.org" target="_blank"><img alt="" border="0" height="60" src="/user_files/images/seg1_bw.jpg" style="width: 112px; height: 60px;" width="112" /></a> <a href="http://www.cseg.ca" target="_blank"><img alt="" border="0" height="72" src="/user_files/images/cseg.png" style="width: 109px; height: 72px;" width="109" /></a> <a href="http://geoscience.ucalgary.ca" target="_blank"><img alt="" border="0" height="74" src="/user_files/images/uofc_bw.jpg" style="width: 69px; height: 74px;" width="69" /></a> <a href="http://www.physics.ualberta.ca/en/Research/Geophysics.aspx" target="_blank"><img alt="" border="0" height="55" src="/user_files/images/alberta.png" style="width: 153px; height: 55px;" width="153" /></a> <a href="http://www.apegga.com" target="_blank"><img alt="" border="0" height="52" src="/user_files/images/apegga1_bw.jpg" style="width: 112px; height: 52px;" width="112" /></a></div>
+
+<p>Signature Seismic Processing Inc. All Rights Reserved © Copyright 2012</p>
+</div>
+
+</div><!-- END WRAP -->
+</body>
+</html>

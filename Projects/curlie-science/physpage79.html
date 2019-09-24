@@ -1,0 +1,82 @@
+<BASE HREF="http://icsd.ill.fr/icsd/">
+<HTML><HEAD><TITLE>ICSD for WWW Help: Introduction</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<META content="ICSD for WWW is a database of inorganic crystal structures and allows the 
+user to search and display these structures in VRML and neutron or X-ray powder patterns in 
+PDF and display postscript." name=description>
+<META content="crystals, crystal structures, inorganic chemistry, mineralogy, superconductors, 
+high Tc, zeolites, materials, physics, phase transitions, solid state, chemical databases, 
+minerals, mineral structures, ICSD, ICSD-for-WWW, VRML, 3D-crystals, X-ray, neutron, 
+crystallography, Rietveld, FIZ, crystin, ILL, Grenoble, diffraction, powder diffraction, 
+Daresbury, Karlsruhe, B-factors, Hewat, Lazy PulverIx, profile, Cosmo, CosmoPlayer, openGL, 
+atom co-ordinates, thermal parameters, Debye-Waller, ORTEP, CIF, IUCr, FullProf, GSAS, xtal-3d, 
+bond-valence, endnote, valence sums, bond lengths, WorldView, Fachinformationszentrum" name=keywords>
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<link href="icsd.css" type="text/css" rel="stylesheet">
+<BODY bgColor=#eeeeee onload="javascript:document.JStest.ifEnabled.value='';javascript:document.JStest.ifMSIE7.value='';self.focus()"> 
+<style style=text/css>
+input.red {border-style:none; background-color:#eeeeee; font-weight:bold; color:red;}
+</style>
+<?php unset($HTTP_SESSION_VARS['icsd']) ?> 
+
+<div class='divWithImage'><CENTER><H1>ICSD for WWW</H1>
+<H2>Inorganic Crystal Structure Database</H2></CENTER><br></div>
+<b>20 Feb 2019</b> ICSD database update to the 2018 version (A.Filhol)<br />
+<b>15 Jun 2019</b> JSMol version, HTML5/javascript (Y.Raoul)<br />
+<p>
+
+<b>Important:</b><br>
+<b>1)</b> We have cleaned up old user files, which were preventing some options from running eg jmol display.<BR>
+<b>2)</b> JSMol requires javascript.<br>
+<p>
+This is the ILL's PHP-MySQL Inorganic Crystal Structure Database (ICSD-for-WWW). 
+Unlicensed users only have access to a demonstration version, with a 3% structure subset 
+of the <b>203,830 inorganic structures</b> in release 2018-2. 
+To get started, just enter eg <b><a href="index.php?action=Search&elements=Y+Ba2+Cu3+O" target="form">Y Ba2 Cu3 O</a></b> in the <b>elements</b> box 
+and click <b>Search</b>. (Click on the titles of the input boxes for help).
+If you are unfamiliar with ICSD-for-WWW, you may want to first look at some 
+<a href="http://hewat.net/science/3D-crystals/index.html" target=help>
+Pretty pictures</a> of typical structures.<p>
+
+<div style="font-size:20px"><b><a href="index.php" target="form">Login or use the Demo</a></b></div> (ICSD-for-WWW works with Windows 
+up to Mac-OSX & Linux, but <b>not with old browsers</b>). 
+<br><b><font color=green>Do not disable popups, cookies or javascript; a popup window is needed to login to the full database. Some help on this topic is available <a href="ICSD-popups-macOS.html">here for MacOS</a>, and <a href="ICSD-popups-Windows.html">here for Windows OS</a>.<br>
+In the browser options, prefer to open new pages in a new window, not a new tab.</font></b>
+
+<FORM ACTION="" METHOD="post" NAME="JStest">
+<INPUT class="red" TYPE="Text" NAME="ifEnabled" 
+	VALUE="Scripts are currently FORBIDDEN! Please allow scripts/javascripts in your WWW client options." SIZE="100" MAXLENGTH="100">
+<INPUT class="red" TYPE="Text" NAME="ifMSIE7" 
+	VALUE="In Microsoft Internet Explorer v7 go to Tools/Options/Security/Trusted Sites and add this site." SIZE="100" MAXLENGTH="100">
+</FORM>
+
+<br>If you have problems, use a modern browser like 
+<a href="http://www.mozilla.org/products/firefox/" target="help">Mozilla Firefox</a> which is an 
+excellent Netscape-like browser for most platforms. With
+Internet Explorer, please include ICSD as a "trusted site" under "security".</b>
+<p>
+
+<li> <a href="news.html" target=help>News and bug fixes</a>.</li>
+<li> <a href="conditions.html" target=help>Conditions of use and prices</a>.</li>
+<li> <a href="help/icsd_ps.html" target=help>Using Adobe Reader or Ghostscript</a>
+to view the powder patterns on-screen.</li>
+<li> Displaying the 3D structures using <b><a href="help/CIF-help.html" target="help">CIF and JSMol</a></b> (recommended) or
+	<a href="help/VRML-help.html" target="help">VRML</a>.</li>
+<li> <a href="http://hewat.net/science/3D-crystals/" target=help>Pretty pictures</a> 
+of typical structures produced by ICSD-for-WWW</li>
+<li> <a href="http://icsd.ill.fr/icsd/install/index.html" target=help>
+Install your own ICSD server</a> for Windows, linux or other systems.
+<p>
+
+The ICSD-for-WWW interface was introduced by the <a href="http://www.ill.fr/instruments-support/instruments-groups/groups/dif/" target=help>Institut Laue-Langevin (ILL)</a>, in Grenoble France.
+<HR>
+<b>Copying or publishing either the ICSD data or software without written permission is illegal.</b><br>
+<b>The ICSD database</b> is copyright &copy; 2018 by
+<a href="https://icsd.fiz-karlsruhe.de/search/index.xhtml" target="FIZ"> Fachinformationszentrum (FIZ) Karlsruhe </a><br>
+<b>The PHP-mySQL WWW interface</b> is copyright &copy; 2003-2015 by <a href="http://www.hewat.fr/" target=help>Peter Hewat</a><br>
+<b>The 3D crystal structure visualisation software,
+<a href="help/xtal-3d.html" target=help>xtal-3d</a></b> is copyright &copy; 1994-2015 by Marcus Hewat<br>
+<b>The PHP-JMOL drawing software</b> is copyright &copy; 2006-2015 by <a href="http://neutronoptics.com/hewat.html" target=help>Alan Hewat</a><br>
+Please report technical problems with ICSD for WWW to <A HREF="mailto:alan.hewat@neutronoptics.com"> alan.hewat[a]neutronoptics.com</A> (Alan Hewat).<p>
+</BODY>
+</HTML>

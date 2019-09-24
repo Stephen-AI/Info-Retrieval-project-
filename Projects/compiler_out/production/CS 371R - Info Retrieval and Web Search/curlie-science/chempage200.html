@@ -1,0 +1,1817 @@
+<BASE HREF="http://www.chemnews.com/">
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<?xml version="1.0">
+<head id="ctl00_Head1"><title>
+	Inside Informatics | PerkinElmer
+</title><meta http-equiv="content-type" content="application/xhtml+xml;charset=utf-8" /><meta name="keywords" content="Cambridgesoft, science, scientific, chemistry, biology, enotebook, knowledge management, software, biotech, training, tips, tricks, articles, tutorials" /><meta http-equiv="pragma" content="no-cache" /><meta http-equiv="cache-control" content="no-cache" /><meta name="author" content="CambridgeSoft Corporation" /><meta name="copyright" content="CambridgeSoft Corporation" /><meta name="robots" content="all" />
+<script type="text/javascript" src="/register/controls/ajax-dynamic-list.js"></script>
+<script type="text/javascript" src="/register/controls/ajax.js"></script>
+
+<script src="/js/tabber.js" type="text/javascript"></script>
+<script src="/js/PanelSlider.js" type="text/javascript"></script>
+<script src="/js/jquery-1.4.4.min.js" type="text/javascript"></script>
+<script src="/js/jquery-1.6.2.js" type="text/javascript"></script>
+<script src="/js/ddsmoothmenu.js" type="text/javascript"></script>
+<script type="text/javascript">    document.write('<style type="text/css">.tabber{display:none;}<\/style>');</script>
+<script type="text/javascript">
+    function clickButton(e, buttonid) {
+        var bt = document.getElementById(buttonid);
+        if (typeof bt == 'object') {
+            if ((navigator.appName.indexOf("Netscape") > (-1)) || (navigator.appName.indexOf("Opera") > (-1))) {
+                if (e.keyCode == 13) {
+                    bt.click();
+                    return false;
+                }
+            }
+            if (navigator.appName.indexOf("Microsoft Internet Explorer") > (-1)) {
+                if (event.keyCode == 13) {
+                    bt.click();
+                    return false;
+                }
+            }
+        }
+    }
+    
+</script>
+
+
+<script type="text/javascript" language="javascript">
+    ddsmoothmenu.init({
+        mainmenuid: "smoothmenu1", //menu DIV id
+        orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+        classname: 'ddsmoothmenu', //class added to menu's outer DIV
+        //customtheme: ["#1c5a80", "#18374a"],
+        contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+    })
+
+    ddsmoothmenu.init({
+        mainmenuid: "smoothmenu2", //Menu DIV id
+        orientation: 'v', //Horizontal or vertical menu: Set to "h" or "v"
+        classname: 'ddsmoothmenu-v', //class added to menu's outer DIV
+        //customtheme: ["#804000", "#482400"],
+        contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+    })
+
+    function box() {
+    }
+
+    function box2() {
+    }
+    //Redirects user to selected website
+    function CSWebsites_OnChange() {
+        $(location).attr('href', $("#ddlCSWebsites").val());
+    }
+</script>
+<!--[if IE 7]>
+    <link href="App_Themes/ie7csc.css?t=637032277531297548" type="text/css" rel="stylesheet" /><link href="App_Themes/ie7menu.css?t=637032277531297548" type="text/css" rel="stylesheet" />
+<![endif]-->
+ 
+ 
+ <script type="text/javascript">
+     var _gaq = _gaq || [];
+     var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+     _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+     _gaq.push(['_setAccount', 'UA-13163706-1']);
+     _gaq.push(['_setDomainName', '.cambridgesoft.com']);
+     _gaq.push(['_trackPageview']);
+     (function () {
+         var ga = document.createElement('script');
+         ga.type = 'text/javascript';
+         ga.async = true;
+         ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+         var s = document.getElementsByTagName('script')[0];
+         s.parentNode.insertBefore(ga, s);
+     })();
+
+     //Pardot tracking
+     piAId = '33222';
+     piCId = '7788';
+     (function () {
+         function async_load() {
+             var s = document.createElement('script'); s.type = 'text/javascript';
+             s.src = ('https:' == document.location.protocol ? 'https://pi' : 'http://cdn') + '.pardot.com/pd.js';
+             var c = document.getElementsByTagName('script')[0]; c.parentNode.insertBefore(s, c);
+         }
+         if (window.attachEvent) { window.attachEvent('onload', async_load); }
+         else { window.addEventListener('load', async_load, false); }
+     })();  
+</script>
+<link href="App_Themes/cbn/01normalizer.css?t=637032277531297548" type="text/css" rel="stylesheet" /><link href="App_Themes/cbn/02cbnStyle.css?t=637032277531297548" type="text/css" rel="stylesheet" /><link href="App_Themes/cbn/03menu.css?t=637032277531297548" type="text/css" rel="stylesheet" /><link href="App_Themes/cbn/ddsmoothmenu.css?t=637032277531297548" type="text/css" rel="stylesheet" /><link href="App_Themes/cbn/jqueryslidemenu.css?t=637032277531297548" type="text/css" rel="stylesheet" /><meta name="description" content="Pharmaceutical, Biotechnology and Chemical Industry News." /></head>
+<body id="ctl00_Body1">
+ <script type="text/javascript">
+     $(function() {
+         $('#ddlCSWebsites').jqTransSelect();
+         $('#ctl00_ddlLanguages').jqTransSelect();
+         $('#ctl00_ddlqp').jqTransSelect();
+     });
+	</script>
+<form name="aspnetForm" method="post" action="default.aspx" id="aspnetForm" enctype="multipart/form-data">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTQyOTUyOTAyMg9kFgJmD2QWBAIBD2QWDgIJDxYCHgRocmVmBSx+L0FwcF9UaGVtZXMvaWU3Y3NjLmNzcz90PTYzNzAzMjI3NzUzMTI5NzU0OGQCCg8WAh8ABS1+L0FwcF9UaGVtZXMvaWU3bWVudS5jc3M/dD02MzcwMzIyNzc1MzEyOTc1NDhkAg4PFgIfAAU2fi9BcHBfVGhlbWVzL2Nibi8wMW5vcm1hbGl6ZXIuY3NzP3Q9NjM3MDMyMjc3NTMxMjk3NTQ4ZAIPDxYCHwAFNH4vQXBwX1RoZW1lcy9jYm4vMDJjYm5TdHlsZS5jc3M/dD02MzcwMzIyNzc1MzEyOTc1NDhkAhAPFgIfAAUwfi9BcHBfVGhlbWVzL2Nibi8wM21lbnUuY3NzP3Q9NjM3MDMyMjc3NTMxMjk3NTQ4ZAIRDxYCHwAFNn4vQXBwX1RoZW1lcy9jYm4vZGRzbW9vdGhtZW51LmNzcz90PTYzNzAzMjI3NzUzMTI5NzU0OGQCEg8WAh8ABTl+L0FwcF9UaGVtZXMvY2JuL2pxdWVyeXNsaWRlbWVudS5jc3M/dD02MzcwMzIyNzc1MzEyOTc1NDhkAgMPZBYCZg9kFhBmD2QWAgIBDxYCHgVzdHlsZQULd2lkdGg6NzNweDsWAgIBDxAPFgQeBVdpZHRoGwAAAAAAAElAAQAAAB4EXyFTQgKAAmRkFgFmZAIEDw8WAh4EVGV4dAXvAUhlbGxvLiA8YSBocmVmPSdodHRwOi8vd3d3LmNhbWJyaWRnZXNvZnQuY29tL2xvZ2luL0RlZmF1bHQuYXNweD9SZXR1cm5Vcmw9aHR0cDovL2luc2lkZWluZm9ybWF0aWNzLmNhbWJyaWRnZXNvZnQuY29tL2RlZmF1bHQuYXNweCc+U2lnbiBpbjwvYT4gZm9yIGZ1bGwgc2l0ZSBhY2Nlc3MuIE5ldyB1c2VyPyA8YSBocmVmPSdodHRwOi8vd3d3LmNhbWJyaWRnZXNvZnQuY29tL3JlZ2lzdGVyLyc+U3RhcnQgaGVyZTwvYT4uZGQCBQ8PFgIfBAVOPGEgaHJlZj0naHR0cDovL3d3dy5jYW1icmlkZ2Vzb2Z0LmNvbS9yZWdpc3RlcicgPjxzdHJvbmc+UkVHSVNURVI8L3N0cm9uZz48L2E+ZGQCBg8PFgIfBAWWATxhIGhyZWY9J2h0dHA6Ly93d3cuY2FtYnJpZGdlc29mdC5jb20vbG9naW4vRGVmYXVsdC5hc3B4P1JldHVyblVybD1odHRwOi8vaW5zaWRlaW5mb3JtYXRpY3MuY2FtYnJpZGdlc29mdC5jb20vZGVmYXVsdC5hc3B4Jz48c3Ryb25nPkxPR0lOPC9zdHJvbmc+PC9hPmRkAggPZBYCZg9kFgJmD2QWCAIBD2QWAgIBDxAPFgYeDURhdGFUZXh0RmllbGQFDkRlc2NyaXB0aW9uX1VTHg5EYXRhVmFsdWVGaWVsZAUKTWFpbkNhdHNJRB4LXyFEYXRhQm91bmRnZBAVDQ5BbGwgQ2F0ZWdvcmllcxtQZXJzb25hbCBQcm9kdWN0aXZpdHkgVG9vbHMiQ29sbGFib3JhdGl2ZSBTY2llbnRpZmljIFNvbHV0aW9ucwdCaW9sb2d5CUNoZW1pc3RyeQhDbGluaWNhbA5EYXRhIEFuYWx5dGljcwdJbWFnaW5nFlRyYW5zbGF0aW9uYWwgTWVkaWNpbmUEUUFRQxRTY2llbnRpZmljIERhdGFiYXNlcxJTdHJhdGVnaWMgUGFydG5lcnMIU2VydmljZXMVDQ5BbGwgQ2F0ZWdvcmllcwExATICMjECMjACMjcCMjMCMjYCMjUCMjIBMwE0AjI0FCsDDWdnZ2dnZ2dnZ2dnZ2cWAWZkAgMPZBYCAgEPEGQPFgFmFgEQBRFBbGwgU3ViY2F0ZWdvcmllcwURQWxsIFN1YmNhdGVnb3JpZXNnFgFmZAIFD2QWAgIBDxBkDxYGZgIBAgICAwIEAgUWBhAFDFNlbGVjdCBNZWRpYQUMU2VsZWN0IE1lZGlhZxAFCFdlYmluYXJzBQhXZWJpbmFyc2cQBRBWaWRlb3MgYW5kIERlbW9zBRBWaWRlb3MgYW5kIERlbW9zZxAFCEFydGljbGVzBQhBcnRpY2xlc2cQBQxXaGl0ZSBQYXBlcnMFDFdoaXRlIFBhcGVyc2cQBRFJbnRlcmFjdGl2ZSBEZW1vcwURSW50ZXJhY3RpdmUgRGVtb3NnFgFmZAIHDw9kFgIeCm9ua2V5cHJlc3MFNnJldHVybiBjbGlja0J1dHRvbihldmVudCwnY3RsMDBfQ2JuU2VhcmNoMV9idG5TZWFyY2gnKWQCCQ8WAh8EBUY8ZGl2IGNsYXNzPSJoZXJvSW1hZ2UiPjxpbWcgc3JjPSIvaW1hZ2VzL2hlcm9faW1hZ2VfaG9tZS5qcGciLz48L2Rpdj4gZAIKD2QWBAIDDxYCHgtfIUl0ZW1Db3VudAIMFhhmD2QWBGYPFQIyL2NhdGVnb3JpZXMvcGVyc29uYWxwcm9kdWN0aXZpdHl0b29scy9kZWZhdWx0LmFzcHgbUGVyc29uYWwgUHJvZHVjdGl2aXR5IFRvb2xzZAIBD2QWAgIBDzwrAAkBAA8WBB4IRGF0YUtleXMWAB8JAglkFhJmD2QWAmYPFQI5L2NhdGVnb3JpZXMvcGVyc29uYWxwcm9kdWN0aXZpdHl0b29scy9jaGVtM2QvZGVmYXVsdC5hc3B4BkNoZW0zRGQCAQ9kFgJmDxUCOy9jYXRlZ29yaWVzL3BlcnNvbmFscHJvZHVjdGl2aXR5dG9vbHMvY2hlbWRyYXcvZGVmYXVsdC5hc3B4CENoZW1EcmF3ZAICD2QWAmYPFQI9L2NhdGVnb3JpZXMvcGVyc29uYWxwcm9kdWN0aXZpdHl0b29scy9jaGVtb2ZmaWNlL2RlZmF1bHQuYXNweApDaGVtT2ZmaWNlZAIDD2QWAmYPFQI9L2NhdGVnb3JpZXMvcGVyc29uYWxwcm9kdWN0aXZpdHl0b29scy9jaGVtc2NyaXB0L2RlZmF1bHQuYXNweApDaGVtU2NyaXB0ZAIED2QWAmYPFQI9L2NhdGVnb3JpZXMvcGVyc29uYWxwcm9kdWN0aXZpdHl0b29scy9lLW5vdGVib29rL2RlZmF1bHQuYXNweApFLU5vdGVib29rZAIFD2QWAmYPFQI/L2NhdGVnb3JpZXMvcGVyc29uYWxwcm9kdWN0aXZpdHl0b29scy9lbnRlcnByaXNlcmQvZGVmYXVsdC5hc3B4DkVudGVycHJpc2UgUiZEZAIGD2QWAmYPFQI4L2NhdGVnb3JpZXMvcGVyc29uYWxwcm9kdWN0aXZpdHl0b29scy9tb3BhYy9kZWZhdWx0LmFzcHgFTU9QQUNkAgcPZBYCZg8VAkMvY2F0ZWdvcmllcy9wZXJzb25hbHByb2R1Y3Rpdml0eXRvb2xzL3NvZnR3YXJlcm91bmR1cHMvZGVmYXVsdC5hc3B4EVNvZnR3YXJlIFJvdW5kdXBzZAIID2QWAmYPFQI+L2NhdGVnb3JpZXMvcGVyc29uYWxwcm9kdWN0aXZpdHl0b29scy9zdHJ1Y3Q9bmFtZS9kZWZhdWx0LmFzcHgLU3RydWN0PU5hbWVkAgEPZBYEZg8VAjkvY2F0ZWdvcmllcy9jb2xsYWJvcmF0aXZlc2NpZW50aWZpY3NvbHV0aW9ucy9kZWZhdWx0LmFzcHgiQ29sbGFib3JhdGl2ZSBTY2llbnRpZmljIFNvbHV0aW9uc2QCAQ9kFgICAQ88KwAJAQAPFgQfChYAHwkCE2QWJmYPZBYCZg8VAksvY2F0ZWdvcmllcy9jb2xsYWJvcmF0aXZlc2NpZW50aWZpY3NvbHV0aW9ucy9iaW9sb2d5ZS1ub3RlYm9vay9kZWZhdWx0LmFzcHgSQmlvbG9neSBFLU5vdGVib29rZAIBD2QWAmYPFQJNL2NhdGVnb3JpZXMvY29sbGFib3JhdGl2ZXNjaWVudGlmaWNzb2x1dGlvbnMvY2hlbWlzdHJ5ZS1ub3RlYm9vay9kZWZhdWx0LmFzcHgUQ2hlbWlzdHJ5IEUtTm90ZWJvb2tkAgIPZBYCZg8VAk4vY2F0ZWdvcmllcy9jb2xsYWJvcmF0aXZlc2NpZW50aWZpY3NvbHV0aW9ucy9jaGVtb2ZmaWNlZW50ZXJwcmlzZS9kZWZhdWx0LmFzcHgVQ2hlbU9mZmljZSBFbnRlcnByaXNlZAIDD2QWAmYPFQJjL2NhdGVnb3JpZXMvY29sbGFib3JhdGl2ZXNjaWVudGlmaWNzb2x1dGlvbnMvY29sdW1idXNpbWFnZWRhdGFzdG9yYWdlYW5kYW5hbHlzaXNzeXN0ZW0vZGVmYXVsdC5hc3B4L0NvbHVtYnVzIEltYWdlIERhdGEgU3RvcmFnZSBhbmQgQW5hbHlzaXMgU3lzdGVtZAIED2QWAmYPFQJJL2NhdGVnb3JpZXMvY29sbGFib3JhdGl2ZXNjaWVudGlmaWNzb2x1dGlvbnMvY29ubmVjdG9yZm9yc2FwL2RlZmF1bHQuYXNweBFDb25uZWN0b3IgZm9yIFNBUGQCBQ9kFgJmDxUCQi9jYXRlZ29yaWVzL2NvbGxhYm9yYXRpdmVzY2llbnRpZmljc29sdXRpb25zL2VsZW1lbnRzL2RlZmF1bHQuYXNweAhFbGVtZW50c2QCBg9kFgJmDxUCTi9jYXRlZ29yaWVzL2NvbGxhYm9yYXRpdmVzY2llbnRpZmljc29sdXRpb25zL2Utbm90ZWJvb2tlbnRlcnByaXNlL2RlZmF1bHQuYXNweBVFLU5vdGVib29rIEVudGVycHJpc2VkAgcPZBYCZg8VAlMvY2F0ZWdvcmllcy9jb2xsYWJvcmF0aXZlc2NpZW50aWZpY3NvbHV0aW9ucy9mb3JtdWxhdGlvbmFuYWx5dGljYWxsaW1zL2RlZmF1bHQuYXNweB1Gb3JtdWxhdGlvbiAmIEFuYWx5dGljYWwgTElNU2QCCA9kFgJmDxUCTi9jYXRlZ29yaWVzL2NvbGxhYm9yYXRpdmVzY2llbnRpZmljc29sdXRpb25zL2Zvcm11bGF0aW9uc21peHR1cmVzL2RlZmF1bHQuYXNweBdGb3JtdWxhdGlvbnMgJiBNaXh0dXJlc2QCCQ9kFgJmDxUCUC9jYXRlZ29yaWVzL2NvbGxhYm9yYXRpdmVzY2llbnRpZmljc29sdXRpb25zL2Zvcm11bGF0aW9uc2Utbm90ZWJvb2svZGVmYXVsdC5hc3B4F0Zvcm11bGF0aW9ucyBFLU5vdGVib29rZAIKD2QWAmYPFQJBL2NhdGVnb3JpZXMvY29sbGFib3JhdGl2ZXNjaWVudGlmaWNzb2x1dGlvbnMvaWxhYmxlcy9kZWZhdWx0LmFzcHgIaUxhYiBMRVNkAgsPZBYCZg8VAk0vY2F0ZWdvcmllcy9jb2xsYWJvcmF0aXZlc2NpZW50aWZpY3NvbHV0aW9ucy9pbnZlbnRvcnllbnRlcnByaXNlL2RlZmF1bHQuYXNweBRJbnZlbnRvcnkgRW50ZXJwcmlzZWQCDA9kFgJmDxUCXS9jYXRlZ29yaWVzL2NvbGxhYm9yYXRpdmVzY2llbnRpZmljc29sdXRpb25zL2xlYWRkaXNjb3Zlcnlwb3dlcmVkYnl0aWJjb3Nwb3RmaXJlL2RlZmF1bHQuYXNweChMZWFkIERpc2NvdmVyeSBwb3dlcmVkIGJ5IFRJQkNPIFNwb3RmaXJlZAIND2QWAmYPFQJCL2NhdGVnb3JpZXMvY29sbGFib3JhdGl2ZXNjaWVudGlmaWNzb2x1dGlvbnMvbGltc2xpbmsvZGVmYXVsdC5hc3B4CExpbXNMaW5rZAIOD2QWAmYPFQJFL2NhdGVnb3JpZXMvY29sbGFib3JhdGl2ZXNjaWVudGlmaWNzb2x1dGlvbnMvb21pY3NvZmZpY2UvZGVmYXVsdC5hc3B4C09taWNzT2ZmaWNlZAIPD2QWAmYPFQJJL2NhdGVnb3JpZXMvY29sbGFib3JhdGl2ZXNjaWVudGlmaWNzb2x1dGlvbnMvb3JhY2xlY2FydHJpZGdlL2RlZmF1bHQuYXNweBBPcmFjbGUgQ2FydHJpZGdlZAIQD2QWAmYPFQJOL2NhdGVnb3JpZXMvY29sbGFib3JhdGl2ZXNjaWVudGlmaWNzb2x1dGlvbnMvcHJvZmVzc2lvbmFsc2VydmljZXMvZGVmYXVsdC5hc3B4FVByb2Zlc3Npb25hbCBTZXJ2aWNlc2QCEQ9kFgJmDxUCUC9jYXRlZ29yaWVzL2NvbGxhYm9yYXRpdmVzY2llbnRpZmljc29sdXRpb25zL3JlZ2lzdHJhdGlvbmVudGVycHJpc2UvZGVmYXVsdC5hc3B4F1JlZ2lzdHJhdGlvbiBFbnRlcnByaXNlZAISD2QWAmYPFQJRL2NhdGVnb3JpZXMvY29sbGFib3JhdGl2ZXNjaWVudGlmaWNzb2x1dGlvbnMvdGliY29zcG90ZmlyZcKuc29mdHdhcmUvZGVmYXVsdC5hc3B4GVRJQkNPIFNwb3RmaXJlwq4gc29mdHdhcmVkAgIPZBYEZg8VAiAvY2F0ZWdvcmllcy9iaW9sb2d5L2RlZmF1bHQuYXNweAdCaW9sb2d5ZAIBD2QWAgIBDzwrAAkBAA8WBB8KFgAfCQIMZBYYZg9kFgJmDxUCMi9jYXRlZ29yaWVzL2Jpb2xvZ3kvYmlvbG9neWUtbm90ZWJvb2svZGVmYXVsdC5hc3B4EkJpb2xvZ3kgRS1Ob3RlYm9va2QCAQ9kFgJmDxUCJy9jYXRlZ29yaWVzL2Jpb2xvZ3kvY2hlbTNkL2RlZmF1bHQuYXNweAZDaGVtM0RkAgIPZBYCZg8VAikvY2F0ZWdvcmllcy9iaW9sb2d5L2NoZW1kcmF3L2RlZmF1bHQuYXNweAhDaGVtRHJhd2QCAw9kFgJmDxUCKy9jYXRlZ29yaWVzL2Jpb2xvZ3kvY2hlbW9mZmljZS9kZWZhdWx0LmFzcHgKQ2hlbU9mZmljZWQCBA9kFgJmDxUCSi9jYXRlZ29yaWVzL2Jpb2xvZ3kvY29sdW1idXNpbWFnZWRhdGFzdG9yYWdlYW5kYW5hbHlzaXNzeXN0ZW0vZGVmYXVsdC5hc3B4L0NvbHVtYnVzIEltYWdlIERhdGEgU3RvcmFnZSBhbmQgQW5hbHlzaXMgU3lzdGVtZAIFD2QWAmYPFQIrL2NhdGVnb3JpZXMvYmlvbG9neS9lLW5vdGVib29rL2RlZmF1bHQuYXNweApFLU5vdGVib29rZAIGD2QWAmYPFQI1L2NhdGVnb3JpZXMvYmlvbG9neS9lLW5vdGVib29rZW50ZXJwcmlzZS9kZWZhdWx0LmFzcHgVRS1Ob3RlYm9vayBFbnRlcnByaXNlZAIHD2QWAmYPFQItL2NhdGVnb3JpZXMvYmlvbG9neS9lbnRlcnByaXNlcmQvZGVmYXVsdC5hc3B4DkVudGVycHJpc2UgUiZEZAIID2QWAmYPFQI0L2NhdGVnb3JpZXMvYmlvbG9neS9pbnZlbnRvcnllbnRlcnByaXNlL2RlZmF1bHQuYXNweBRJbnZlbnRvcnkgRW50ZXJwcmlzZWQCCQ9kFgJmDxUCLC9jYXRlZ29yaWVzL2Jpb2xvZ3kvb21pY3NvZmZpY2UvZGVmYXVsdC5hc3B4C09taWNzT2ZmaWNlZAIKD2QWAmYPFQIxL2NhdGVnb3JpZXMvYmlvbG9neS9zb2Z0d2FyZXJvdW5kdXBzL2RlZmF1bHQuYXNweBFTb2Z0d2FyZSBSb3VuZHVwc2QCCw9kFgJmDxUCOC9jYXRlZ29yaWVzL2Jpb2xvZ3kvdGliY29zcG90ZmlyZcKuc29mdHdhcmUvZGVmYXVsdC5hc3B4GVRJQkNPIFNwb3RmaXJlwq4gc29mdHdhcmVkAgMPZBYEZg8VAiIvY2F0ZWdvcmllcy9jaGVtaXN0cnkvZGVmYXVsdC5hc3B4CUNoZW1pc3RyeWQCAQ9kFgICAQ88KwAJAQAPFgQfChYAHwkCEWQWImYPZBYCZg8VAikvY2F0ZWdvcmllcy9jaGVtaXN0cnkvY2hlbTNkL2RlZmF1bHQuYXNweAZDaGVtM0RkAgEPZBYCZg8VAisvY2F0ZWdvcmllcy9jaGVtaXN0cnkvY2hlbWRyYXcvZGVmYXVsdC5hc3B4CENoZW1EcmF3ZAICD2QWAmYPFQI2L2NhdGVnb3JpZXMvY2hlbWlzdHJ5L2NoZW1pc3RyeWUtbm90ZWJvb2svZGVmYXVsdC5hc3B4FENoZW1pc3RyeSBFLU5vdGVib29rZAIDD2QWAmYPFQItL2NhdGVnb3JpZXMvY2hlbWlzdHJ5L2NoZW1vZmZpY2UvZGVmYXVsdC5hc3B4CkNoZW1PZmZpY2VkAgQPZBYCZg8VAi0vY2F0ZWdvcmllcy9jaGVtaXN0cnkvY2hlbXNjcmlwdC9kZWZhdWx0LmFzcHgKQ2hlbVNjcmlwdGQCBQ9kFgJmDxUCKy9jYXRlZ29yaWVzL2NoZW1pc3RyeS9lbGVtZW50cy9kZWZhdWx0LmFzcHgIRWxlbWVudHNkAgYPZBYCZg8VAi0vY2F0ZWdvcmllcy9jaGVtaXN0cnkvZS1ub3RlYm9vay9kZWZhdWx0LmFzcHgKRS1Ob3RlYm9va2QCBw9kFgJmDxUCNy9jYXRlZ29yaWVzL2NoZW1pc3RyeS9lLW5vdGVib29rZW50ZXJwcmlzZS9kZWZhdWx0LmFzcHgVRS1Ob3RlYm9vayBFbnRlcnByaXNlZAIID2QWAmYPFQIvL2NhdGVnb3JpZXMvY2hlbWlzdHJ5L2VudGVycHJpc2VyZC9kZWZhdWx0LmFzcHgORW50ZXJwcmlzZSBSJkRkAgkPZBYCZg8VAjwvY2F0ZWdvcmllcy9jaGVtaXN0cnkvZm9ybXVsYXRpb25hbmFseXRpY2FsbGltcy9kZWZhdWx0LmFzcHgdRm9ybXVsYXRpb24gJiBBbmFseXRpY2FsIExJTVNkAgoPZBYCZg8VAjcvY2F0ZWdvcmllcy9jaGVtaXN0cnkvZm9ybXVsYXRpb25zbWl4dHVyZXMvZGVmYXVsdC5hc3B4F0Zvcm11bGF0aW9ucyAmIE1peHR1cmVzZAILD2QWAmYPFQI2L2NhdGVnb3JpZXMvY2hlbWlzdHJ5L2ludmVudG9yeWVudGVycHJpc2UvZGVmYXVsdC5hc3B4FEludmVudG9yeSBFbnRlcnByaXNlZAIMD2QWAmYPFQIyL2NhdGVnb3JpZXMvY2hlbWlzdHJ5L29yYWNsZWNhcnRyaWRnZS9kZWZhdWx0LmFzcHgQT3JhY2xlIENhcnRyaWRnZWQCDQ9kFgJmDxUCOS9jYXRlZ29yaWVzL2NoZW1pc3RyeS9yZWdpc3RyYXRpb25lbnRlcnByaXNlL2RlZmF1bHQuYXNweBdSZWdpc3RyYXRpb24gRW50ZXJwcmlzZWQCDg9kFgJmDxUCMy9jYXRlZ29yaWVzL2NoZW1pc3RyeS9zb2Z0d2FyZXJvdW5kdXBzL2RlZmF1bHQuYXNweBFTb2Z0d2FyZSBSb3VuZHVwc2QCDw9kFgJmDxUCLi9jYXRlZ29yaWVzL2NoZW1pc3RyeS9zdHJ1Y3Q9bmFtZS9kZWZhdWx0LmFzcHgLU3RydWN0PU5hbWVkAhAPZBYCZg8VAjovY2F0ZWdvcmllcy9jaGVtaXN0cnkvdGliY29zcG90ZmlyZcKuc29mdHdhcmUvZGVmYXVsdC5hc3B4GVRJQkNPIFNwb3RmaXJlwq4gc29mdHdhcmVkAgQPZBYEZg8VAiEvY2F0ZWdvcmllcy9jbGluaWNhbC9kZWZhdWx0LmFzcHgIQ2xpbmljYWxkAgEPZBYCAgEPPCsACQEADxYEHwoWAB8JAgFkFgJmD2QWAmYPFQIyL2NhdGVnb3JpZXMvY2xpbmljYWwvY2xpbmljYWxyZXNlYXJjaC9kZWZhdWx0LmFzcHgRQ2xpbmljYWwgUmVzZWFyY2hkAgUPZBYEZg8VAiYvY2F0ZWdvcmllcy9kYXRhYW5hbHl0aWNzL2RlZmF1bHQuYXNweA5EYXRhIEFuYWx5dGljc2QCAQ9kFgICAQ88KwAJAQAPFgQfChYAHwkCBGQWCGYPZBYCZg8VAjovY2F0ZWdvcmllcy9kYXRhYW5hbHl0aWNzL2hpZ2hjb250ZW50cHJvZmlsZXIvZGVmYXVsdC5hc3B4FUhpZ2ggQ29udGVudCBQcm9maWxlcmQCAQ9kFgJmDxUCMi9jYXRlZ29yaWVzL2RhdGFhbmFseXRpY3Mvb21pY3NvZmZpY2UvZGVmYXVsdC5hc3B4C09taWNzT2ZmaWNlZAICD2QWAmYPFQIwL2NhdGVnb3JpZXMvZGF0YWFuYWx5dGljcy9zY2lzdHJlYW0vZGVmYXVsdC5hc3B4CVNjaXN0cmVhbWQCAw9kFgJmDxUCPi9jYXRlZ29yaWVzL2RhdGFhbmFseXRpY3MvdGliY29zcG90ZmlyZcKuc29mdHdhcmUvZGVmYXVsdC5hc3B4GVRJQkNPIFNwb3RmaXJlwq4gc29mdHdhcmVkAgYPZBYEZg8VAiAvY2F0ZWdvcmllcy9pbWFnaW5nL2RlZmF1bHQuYXNweAdJbWFnaW5nZAIBD2QWAgIBDzwrAAkBAA8WBB8KFgAfCQICZBYEZg9kFgJmDxUCKS9jYXRlZ29yaWVzL2ltYWdpbmcvY29sdW1idXMvZGVmYXVsdC5hc3B4CENvbHVtYnVzZAIBD2QWAmYPFQI0L2NhdGVnb3JpZXMvaW1hZ2luZy9oaWdoY29udGVudHByb2ZpbGVyL2RlZmF1bHQuYXNweBVIaWdoIENvbnRlbnQgUHJvZmlsZXJkAgcPZBYEZg8VAi4vY2F0ZWdvcmllcy90cmFuc2xhdGlvbmFsbWVkaWNpbmUvZGVmYXVsdC5hc3B4FlRyYW5zbGF0aW9uYWwgTWVkaWNpbmVkAgEPZBYCAgEPPCsACQEADxYEHwoWAB8JAgJkFgRmD2QWAmYPFQI2L2NhdGVnb3JpZXMvdHJhbnNsYXRpb25hbG1lZGljaW5lL3NpZ25hbHMvZGVmYXVsdC5hc3B4B1NpZ25hbHNkAgEPZBYCZg8VAjcvY2F0ZWdvcmllcy90cmFuc2xhdGlvbmFsbWVkaWNpbmUvdHJhbnNtZWQvZGVmYXVsdC5hc3B4CFRyYW5zbWVkZAIID2QWBGYPFQIdL2NhdGVnb3JpZXMvcWFxYy9kZWZhdWx0LmFzcHgEUUFRQ2QCAQ9kFgICAQ88KwAJAQAPFgQfChYAHwkCBGQWCGYPZBYCZg8VAi0vY2F0ZWdvcmllcy9xYXFjL2Nvbm5lY3RvcmZvcnNhcC9kZWZhdWx0LmFzcHgRQ29ubmVjdG9yIGZvciBTQVBkAgEPZBYCZg8VAjcvY2F0ZWdvcmllcy9xYXFjL2Zvcm11bGF0aW9uYW5hbHl0aWNhbGxpbXMvZGVmYXVsdC5hc3B4HUZvcm11bGF0aW9uICYgQW5hbHl0aWNhbCBMSU1TZAICD2QWAmYPFQIlL2NhdGVnb3JpZXMvcWFxYy9pbGFibGVzL2RlZmF1bHQuYXNweAhpTGFiIExFU2QCAw9kFgJmDxUCJi9jYXRlZ29yaWVzL3FhcWMvbGltc2xpbmsvZGVmYXVsdC5hc3B4CExpbXNMaW5rZAIJD2QWBGYPFQIsL2NhdGVnb3JpZXMvc2NpZW50aWZpY2RhdGFiYXNlcy9kZWZhdWx0LmFzcHgUU2NpZW50aWZpYyBEYXRhYmFzZXNkAgEPFgIeB1Zpc2libGVoFgICAQ88KwAJAQAPFgQfChYAHwkC/////w9kZAIKD2QWBGYPFQIqL2NhdGVnb3JpZXMvc3RyYXRlZ2ljcGFydG5lcnMvZGVmYXVsdC5hc3B4ElN0cmF0ZWdpYyBQYXJ0bmVyc2QCAQ9kFgICAQ88KwAJAQAPFgQfChYAHwkCAWQWAmYPZBYCZg8VAkgvY2F0ZWdvcmllcy9zdHJhdGVnaWNwYXJ0bmVycy9jaGVtaWNhbGFic3RyYWN0c3NlcnZpY2UoY2FzKS9kZWZhdWx0LmFzcHggQ2hlbWljYWwgQWJzdHJhY3RzIFNlcnZpY2UgKENBUylkAgsPZBYEZg8VAiEvY2F0ZWdvcmllcy9zZXJ2aWNlcy9kZWZhdWx0LmFzcHgIU2VydmljZXNkAgEPFgIfC2gWAgIBDzwrAAkBAA8WBB8KFgAfCQL/////D2RkAgUPZBYEAgIPFgIfC2hkAgQPFgIfBAW9BjxsaSBjbGFzcz0ic3BvdGxpZ2h0Qm94Ij48aDI+VmlkZW9zIGFuZCBEZW1vczwvaDI+PGEgY2xhc3M9J3RpdGxlTGluaycgaHJlZj0nL3ZpZGVvc2FuZGRlbW9zLzIxMC9jb25uZWN0aW5nLXRoZS1sYWJvcmF0b3J5LXdpdGgtc2FwJz5Db25uZWN0aW5nIHRoZSBMYWJvcmF0b3J5IHdpdGggU0FQwq48L2E+PGRpdiBjbGFzcz0ic3BvdGxpZ2h0Qm94VGV4dCIgPkF1dG9tYXRlZCBpbnRlZ3JhdGlvbiBiZXR3ZWVuIFNBUCBhbmQgbGFib3JhdG9yeSBzeXN0ZW1zIGNyZWF0ZXMgcXVhbGl0eSBhbmQgZWZmaWNpZW5jeSBhZHZhbnRhZ2VzIGluIGxhYm9yYXRvcnkgb3BlcmF0aW9ucyBhbmQgcHJvZHVjdCByZWxlYXNlIHByb2Nlc3NlczwvZGl2PjxzcGFuIGNsYXNzPSJsaW5rTW9yZSI+PGEgaHJlZj0nL3ZpZGVvc2FuZGRlbW9zLzIxMC9jb25uZWN0aW5nLXRoZS1sYWJvcmF0b3J5LXdpdGgtc2FwJz5XYXRjaCBWaWRlbzwvYT48L3NwYW4+PGxpIGNsYXNzPSJzcG90bGlnaHRCb3giPjxoMj5WaWRlb3MgYW5kIERlbW9zPC9oMj48YSBjbGFzcz0ndGl0bGVMaW5rJyBocmVmPScvdmlkZW9zYW5kZGVtb3MvMTk4L2ludGVncmF0aW9uLW9mLWluZm9ybWF0aWNzLXN5c3RlbXMnPkludGVncmF0aW9uIG9mIEluZm9ybWF0aWNzIFN5c3RlbXM8L2E+PGRpdiBjbGFzcz0ic3BvdGxpZ2h0Qm94VGV4dCIgPmlMQUIgTGFib3JhdG9yeSBFeGVjdXRpb24gU3lzdGVtIChMRVMpPC9kaXY+PHNwYW4gY2xhc3M9ImxpbmtNb3JlIj48YSBocmVmPScvdmlkZW9zYW5kZGVtb3MvMTk4L2ludGVncmF0aW9uLW9mLWluZm9ybWF0aWNzLXN5c3RlbXMnPldhdGNoIFZpZGVvPC9hPjwvc3Bhbj5kAgwPZBYCAgEPZBYEAgEPZBYCAgMPFgIfCQICFgQCAQ9kFgZmDxUE4io8YSBocmVmPSdodHRwOi8vYmxvZy5jYW1icmlkZ2Vzb2Z0LmNvbTovcG9zdC5hc3B4P0lEPTQ5M2U5ZjYwLWM3YTAtNGY3MS04MjY4LWNmODllM2IwYzBiZCc+PGltZyBzcmM9J2RhdGE6aW1hZ2UvanBlZztiYXNlNjQsLzlqLzRBQVFTa1pKUmdBQkFRRUFZQUJnQUFELzJ3QkRBQWdHQmdjR0JRZ0hCd2NKQ1FnS0RCUU5EQXNMREJrU0V3OFVIUm9mSGgwYUhCd2dKQzRuSUNJc0l4d2NLRGNwTERBeE5EUTBIeWM1UFRneVBDNHpOREwvMndCREFRa0pDUXdMREJnTkRSZ3lJUndoTWpJeU1qSXlNakl5TWpJeU1qSXlNakl5TWpJeU1qSXlNakl5TWpJeU1qSXlNakl5TWpJeU1qSXlNakl5TWpJeU1qTC93QUFSQ0FCa0FJSURBU0lBQWhFQkF4RUIvOFFBSHdBQUFRVUJBUUVCQVFFQUFBQUFBQUFBQUFFQ0F3UUZCZ2NJQ1FvTC84UUF0UkFBQWdFREF3SUVBd1VGQkFRQUFBRjlBUUlEQUFRUkJSSWhNVUVHRTFGaEJ5SnhGREtCa2FFSUkwS3h3UlZTMGZBa00ySnlnZ2tLRmhjWUdSb2xKaWNvS1NvME5UWTNPRGs2UTBSRlJrZElTVXBUVkZWV1YxaFpXbU5rWldabmFHbHFjM1IxZG5kNGVYcURoSVdHaDRpSmlwS1RsSldXbDVpWm1xS2pwS1dtcDZpcHFyS3p0TFcydDdpNXVzTER4TVhHeDhqSnl0TFQxTlhXMTlqWjJ1SGk0K1RsNXVmbzZlcng4dlAwOWZiMytQbjYvOFFBSHdFQUF3RUJBUUVCQVFFQkFRQUFBQUFBQUFFQ0F3UUZCZ2NJQ1FvTC84UUF0UkVBQWdFQ0JBUURCQWNGQkFRQUFRSjNBQUVDQXhFRUJTRXhCaEpCVVFkaGNSTWlNb0VJRkVLUm9iSEJDU016VXZBVlluTFJDaFlrTk9FbDhSY1lHUm9tSnlncEtqVTJOemc1T2tORVJVWkhTRWxLVTFSVlZsZFlXVnBqWkdWbVoyaHBhbk4wZFhaM2VIbDZnb09FaFlhSGlJbUtrcE9VbFphWG1KbWFvcU9rcGFhbnFLbXFzck8wdGJhM3VMbTZ3c1BFeGNiSHlNbkswdFBVMWRiWDJObmE0dVBrNWVibjZPbnE4dlAwOWZiMytQbjYvOW9BREFNQkFBSVJBeEVBUHdEeldlUUdRMWJqdVB0VnQ1UlA3eVBwN2lueTZPUE1KTW5IMXAxdmEyOXBNc3BiSlU1K3Rlekk2ME9qZ2E0TU0rMDVEYkpSN2p2K0kvVUd0eWUxaXZWYUZFdy9tWkdCN0NraGxqdUludW9rd3BrNVh1YWlhOGhzdFZlTjVqa3B0WjR6d3BPZHcvMnVBUFR2WExVTllqNHJDRkxaWEQ1VElsVTR4eGppc2Y1YldhNGFNRll3aW9vSnllQUIxL0Nyazg4aXJJaGw4emJKZ3VEblArZjZuMHF0Y3dHUnBBRDFJTmNWUTZJbCsway8wZU1TOUpHeWF5TDlSSGR5SjZIaXBiaWMyODQvdWhma0h2VmJWV1lYRVRucThZSit0Y05RNklqUkZ2QXF4SEY1VXdTUlNwRFlZRVlJcDJtU0lKWWhKRVdFcmlOU0RqRGRSK2VNZmpVMGNjY21wd1J0SXdoY29QTWJydDRCSjkrdjVWdzFGb2J3a3IyTkM1dGtsRFRSTmphS3c0b1k1RTg5ejh4a0tsZndycnRWMHVDMTFiVUxPMW1aN2EzbDI1emtsZTR6NjlSV00ybVdxV0V0eUhDdHRXV0pOMmVEak5jMStXOXlwTG1zMFJYVmxkV0VkdElZV1JMaVB6b3Mvd0FhWkl6K2xkenFkcnBGajRHczUwalNhYSt0MWprVmlTQzI3Y2ZwakEvSVZEZVdMYXJlZUY3T09kSkIvWmtlN0g4RzRsc0gzeGo4cXl2RkY3RStwTFpXeC8wV3pIbHhnZE05elVUZG5aTDVreFRhdTM4ak9tL2ZLU01EUFlkQlZjeGVTME9WeUFOeEhyazAzN1FBY0ExZnVuaWJBWGtoQUQ5UUt4dTQ2Rk5LV3BtTXU1Mlk5U2MwVkx0OTZLdm1NK1VqdUk5elpVMW0zQ3NEZ1ZjTWpiMVVkV09LdFJ4WXV2TGJ5OXdPQ1hBSXgzNisxZm9jenhVVGFNaFRUbWtLa3FqbHp6NkRQOU92dlhGYWhleU5kWURZdzVJR2E3YTcvZDZSL29rTEF0dUJRT01Eams4bko0NTZkcTRIVVloOXBJQS9TdUt0c1ZKNkhXTElaTkZpdUNEODJFT0QzQkp6K1hGSlozQnVQT3oxVmFyd3BKSm9OdXNhT3pvU1hVS2VNZ1lQOCthZzA2UXhYTGh1Tnc1cmttZFVOaTdlZ0o1YXlEOTRuYXRqL2hHSk5VME9PWVBpNVRKQTlSV0xJeHViL3dBK1UvS295ZndycGRHMWRFaUtGOGtjZ2p0WERVT21KejloRDltdVJCZHhzcnBJcktSMllIanIycVMzajgrM2FISDc2SWxvL1ZoM1grby9HdTQxWHc2MnA2ZC9hVUtEY3VBU1A0cWgwZndqL2FHbjNPc0dZZnUzS3RFQjh5SGJrc2ZRWnpYRk5ONkd5Y1ZxWkhoOHdhVnJWbi9hZVJDNGthU01udUZPMGZpY1ZVZTJhOHZjS3BtWjFKRWJOMXgwVW4wenhTWDJwV3M5MnFwYjVtTEF0Y0Z6a1o0T0IweDdmclY4VHhhRmJsMXhKY3UyMUd6MjY4ZTNTdVNvbXJXTGcxSzl4N3VQRDBCaGlmRjhXR0NEbmF1SzU1bUpMTVR6U1MzRXQxY1BQTzVhUnprbWxmOEExUnJOUnR1RTVYMktTdXp6aFF3R1QxSjRIdWEwQklUY1BHVzUza0UxamtqekNHQjJzQ3JZNjRJd2F0eVNtV1NTVVpHNXl3OXNtdDV3VFJ5UmsweXlaZ0RqTkZVZWFLbjJhSzUyVFNOc0t0bmtVZmF6SklXSnl4TlJYQVo0Y3FLMVBEZWhTWFVubnpENUIwelgzc2p5a2ExbEVyYWRHSmw1Qkorb1BYOUs0N1V0TGtUVXhFVkpPY1lCNjEybCs1V2RvcldWT0ZWVC9zZ2s4L2pnaXFjalN3WE1sd0Q4OFNsVkpBSkM5VGpQVG4wOTY1S2l1YUpYS2wxUExwbW14VzBUN0psTzJRYlFSNjlEOVJWU2U3dUJwejNjMXJCTk5HdTVKQ21EMUF3UU9HR0Q2VlBxYitmYWVmM1VnbjZIL3dDdmluVFRQRmJRdEUyM2Fvd2ZldU9vZEVkaWhoWnQ2b0NvZGNnSHRudFZxTlUwbTJiZU15U0o4dFUyU1h6Q1JuZGptcmNzVjNlVzhhdWdFU3g0RWpEamVXd0IrUVA1MXcxRG9pZGo0WDhYTXVuTnBkeVBrZGd5TWV4OUticU9vM0Z2YVhWeGJzMXQ1dVkzUXRqY3U3SEk5Q0JrR3M3eFZvMWg0ZDAvUlRaeXM4OXhISTh6RnM4aGh0K25VajhLcXRlRFU5Q25ESDk5RW96anZ5SzRwL0ZZMVZuRnRISlJYZ0Y2U0dmWVczWlBwNzFzYWpjRjVMVm1QM29RY2ZpUi9JQ3VXYmNseTQ3SzNBQjQvd0E4VjBwZ2FhMmc4My9XdEdXaEl6eUIxVTlqMzkrUjFvclFTMU9lak51NkVKd29OYmZoV3doMWZ4SHA5aGNxV2dtbUN5QUhCSzkrYXhOaS9adDdTWWMvZFRIM2dNWlA2aXVoOEQzbHZwM2lpeHZMdVR5NEltWm1jZ25CMkhIVDN4WExGTG1WKzV0TnZsZHV4a2Fwb2JXMm4yMnFSWSt6WE0wc1NqUEtzamZ5d1J6OWFyeFFaajZWYm1XYVpJMGtabVNJRUlwNktDU1QrcE5UUlE1andCVVZLcWEwQ25TYWVwbWVUN1VWcS9Zdjl0YUt5OXNqVDJMRjBIU0pOWWZ5WTBKeGdrOWdLMnRhdjROSnR2N09zU0RKakR1SzNOYXY5TDhGNlA4QTJIcERyTnFEcVBQbUhiNi80VjVyTEl6U2JuWXN6SEpKNzEraHQzVnp3NGtEdmQrZXNhU3R0TGJqV3RlWFlOdTNUSllLM0hxRC93REUxWEsvNkU4a1kvZVovU283ZTBubmhKa1VoWkhCQkk2NEIveHJtbWJSSVpidEcyUlp4SGdvL3dCRDMvRHIrRk5RemI0N2VaR1hCR01qcUtxeTI1VzViSFJUeld6SGJSVFR3bzd0R2pCbTNzY0FIazhlMmE0cWh2RXRXa2NiU1M3aHlFejlLMHhMYjJuaFhVSVhVRzYzeGVTK003ZVR1eDZkY2Y4QTZxeWRKMjNGNGZNL3VFSDhxWmQrYXlUZ3NmTE54ajZkYTRhaDBSTXE0OHlhTk1zeDJEQ2duZ0RyeFZuVFVhUFBta3hveDJQeHpqL1A4cUdtUVJ4eGhlVVluZDYxZmxDM1UzbU1mTHlvSUFHZXVNZjByaG1kQzJNWmRBbU9xNGYxenR4MTk4anRWbTV1ZzE4RWlBVVFOdFJnTUhqalA1NVA0MVlUVTVCNTN6TXNhQlZVZjNVNkVmVDd0UVQyUVNZVHhjeFNjZytucldVNmpmeEdjYVNqOEpmdXhHU0FJb1NkdkRoY0ZjOWNmWEFyWDBiWFZzOVAvczJTeGhuVmlTalNZT3h6MGJCQkhINjFtUVdmbTJVa3BPR1VaVWV0TFp3UmlQenBXd3grNFBjVnhlMWNWb3pwbFNVbnFqdTAxbUNjVEpCcDBTNWZFaXF5NEp5ZUcrWDVsNTZIMCt0YzE0eDFVd1cwVUVHbHcyWUhMU1JoUjVoSTQ2QVk3LzVGY3g5dGxaYndLN0RNM1kxY3ZiR1hWYnJZSkdMQkNjRTlBQUswVTVKMnF2VDVHRGhGcTlKYW5PSFVMakovZW1pb2pZM0FKR3c4R2l1eTFQeU9LOVR6Tk8yZHBHTHlNV2Rqa3NUa2swK1VaWVZEYm5ibXBnMlNmYXZ0cEhDaTNiT2tiWWsrNlZ3YWtDU3d6TGRDUWJKZ2lSeGR4amRrL3JWUkY4Nk9adHdIbEp1K3RQdHBwcnVlRkZCYnlVYkFIMHJrbWJSTlB3M290dHI5OXFNTnhPWWd0dEpOR1FRTXN1TUQvUHBVbXJXbHRwWDJTRzJuV2RwWXR6NHdUN2ZUak5ZTUwzRU4wejJ4Y0dPTGNXVWZkenhuOWFaTEtZbnQ1QWdKampVSGQwTmNkUTNpV3JtKyt4MnhkUnRlVnVXSFVxTzN0My9LdEcza2kxWFNMaTVNbTFvU1BrR0J1N0FuOWE1cnhPU2x6QWtlZkxNWUkvUG1yZWhaRUdKQWZKYkJZZzlNZi9yTmNOUTZJRWpScnZHNDRYUEo5QlRaTDJTSzVPQ0YrVUtRclpBR0FNWjcxYXZtVmxES3NhZzVJQ0hvT3dQdjFyQmtiNTY0SnEraHVuWlhOaU9KWjFsS2RIallFZlQ1djVpazB5NUtUclp5SDkzSXdBei9BQW4vQUR4Um96RnAwVWM3ampIcm1xdDBHKzBMSkNQM2l0a0QzRmMrN2NXVkoyU21qVXZyMlMzMVo0UXBWYmNFRmNZNHFLNHZWYTZ0V1Q3aHljVTI4aGpGOUU2VG1GWkkxQkVoenVYR0NwUDVmbFdla1VtQnU0TUQ0SVAxeFdhcHdlcUlsVW5zeVFsbzVMa2MvZkNBdDFPT00vcFhWcGNSd05MTEd2N3hZd3ArdUs1eThJM293SER2bXRMVUx5M3RJNEhKYmZNU0FBT3BBNy81NzFqV2o3VGxWdHk2VXVUbWR5a0xlNmRRNXdDd3lhS3BOcTAyNDRiQXpSVzNzNm5rWWUwcCtaTkhIRVk1Z0d4SkVzYkgzRExtb2lkcWswMlNWUHNNY3F2KzhrSVJseDAyQWorVEwrdFJ2Sm1QRmZmczhpSkI1cnN6Qld4bkFJejE1cnRrdXJIdy9iblRZVkUxMjZBelNEb3BHN3I2Y0VWeGRsYlhGKzB0bGJXN1N6TWZORzBjaFZWaTMrZmFyR202aTBMWExTZ3l2UEdVTE9jbm52WE5NMmlkaTB1a2FaNGJqbmoydmUzWmVHY0ZqbFU0S25IK2Ywcm5iYmJmeU50QXdrZ3dQVVZSYlpNQWt0eUl3V0FRRVp5YVk1ZlRJSlZMNHVaUGwyS2Y5V081UHYyeFhGVU40bDdXN09LK2lNdHJoekMyMG5yMkhOV2JDeWM2WkhCR3ltUmo1Z1FuQklHUnhuM1A2Vmo2ZmN5V2pXcFZtVUZTWHgzeXhIUHIwRlhicHlraHp3ZG94N2NDdUdvZEVCbHdjUnNEd1JXSzcvdksyTG1ZM0VJWTV5RndTVG5OWVRBK1pYSGJVdWJzamMwZHlMbUlnNHd3TmF0dlkvWTdpTzdsQVpXakxCVFdWcE1ndDJqY2dNenlwQ29QKzBlZjBCcmQxS1pXaFdRTUZSQUkyWW5nR3VLc21ucDFPaWswMXIwTXE4MjMyMHIvQUFzTWUxVHpmWkV0SnA3aVFqZVUrVlRna2pPZnpQUDRVMkcxbFdKOExoc2trTVFEV0w0aXhGWlFLUWZNWVpiSCs4YW1uSG5rb0ptZFdUaEZ6YU5PVlk3bUd5K3lsbTNzMlNSMEl4blArZWxGN3FDeW9rVVlVeHFDRUpISXp3VCtOWkdpVDNNbWxYRVViRU1EakFIVUhnLzU5NnZKYWxVQ3Y5L0djVnBLbW9TdExvWUtvNXh2SHFLTFJTb09Pb29xK0hUYVBwUldmdEpGK3ppWWE4MlRrL3d5cmo4UWMveUZJcEpGRkZmb0VqeDBiV2hhcGNhT0h1YlZZdk4yVERMcG5xcWorcHJBUTdYNG9vcmxtYXhOQ0NZUnF6bUdLUmxHVkxqTzArb3FsSU9jbm5JeWFLSzRxaDBSTEtBYjBIb2k0L0xOUHZuWTNzZ0ovakkvV2lpdUdvZEVTWEErejFsdW84eWlpdUo3bXN0algwOEFtRlNPQk1KQjlWVmlLdjZkTTRqa1Q1V1VrSEREUFA0MFVWeVYvaE5LWHhtUmRyNVpsMmsvZTlhZzFGQkpwRm9XNTJxMlB6TkZGYXczajYvb2N0VGFYcCtvbWdmSmJ5RmVDWFFIL1A0VnZ5TTB1cXhRazRESjk1UUF3NDdHaWlzY1IvRlpWRCtFak5MSEpvb29waVAvMlE9PSc+PC9hPiQ0OTNlOWY2MC1jN2EwLTRmNzEtODI2OC1jZjg5ZTNiMGMwYmRVRmFzdGVyIGluc2lnaHRzIGFuZCBiZXR0ZXIgc2NpZW5jZSBpbiB0aGUgc2VhcmNoIGZvciBkZXNwZXJhdGVseSBuZWVkZWQgbmV3IHRoZXJhcGllc70ESW4gYSBwcmV2aW91cyBwb3N0Jm5ic3A7IHdlIG5vdGVkIHRoZSBpbmNyZWFzaW5nIGltcG9ydGFuY2Ugb2YgYmlvbG9naWNzIGFzIHRoZXJhcGV1dGljIGFnZW50cywgd2l0aCAzNyUgb2YgdGhlIGRydWdzIGFwcHJvdmVkIGJ5IHRoZSBGREEgaW4gMjAxNyBiZWluZyBiaW9sb2dpYyBlbnRpdGllcy4gQSByZWNlbnQgYXJ0aWNsZSBpbiBDaGVtaWNhbCAmYW1wOyBFbmdpbmVlcmluZyBOZXdzIChKdW5lIDQsIDIwMTgsIHBwIDI4LTMzKSBmb2N1c2VkIG9uIGFjdGl2aXRpZXMgaW4gaW1tdW5vLW9uY29sb2d5LCB3aGVyZSBiaW9sb2dpYyBjaGVja3BvaW50IGluaGliaXRvcnMgYXJlIGJlaW5nIHRlc3RlZCBpbiBjb21iaW5hdGlvbiB3aXRoIG90aGVyIGltbXVub3RoZXJhcGllczogdGhlcmUgYXJlIGN1cnJlbnRseSBjYS4gMjUwIHNtYWxsIG1vbGVjdWxlLSBhbmQgYW50aWJvZHktYmFzZWQgaW1tdW5vdGhlcmFwaWVzIGluIGNsaW5pY2FsIHN0dWRpZXMsIGFuZCAmZ3Q7IDExMDAgY2xpbmljYWwgdHJpYWxzIGluIDIwMTcgY29tYmluZWQgYSBjaGVja3BvaW50IGluaGliaXRvciB3aXRoIGFub3RoZXIgLi4uZAIBDw8WAh8EBQEwZGQCAg8VASQ0OTNlOWY2MC1jN2EwLTRmNzEtODI2OC1jZjg5ZTNiMGMwYmRkAgIPZBYGZg8VBNoBPGEgaHJlZj0naHR0cDovL2Jsb2cuY2FtYnJpZGdlc29mdC5jb206L3Bvc3QuYXNweD9JRD1mOWNlMDFmOC00M2RjLTQxMmUtYjg5ZS03MGFjMGU2YTE4NjgnPjxpbWcgc3JjPSdodHRwOi8vYmxvZy5jYW1icmlkZ2Vzb2Z0LmNvbS9pbWFnZS5heGQ/cGljdHVyZT0lMmYyMDE4JTJmMDYlMmZMZWFkRGlzY292ZXJ5LmpwZycgd2lkdGg9JzEzMHB4OycgaGVpZ2h0PScxMDBweDsnPjwvYT4kZjljZTAxZjgtNDNkYy00MTJlLWI4OWUtNzBhYzBlNmExODY4MFJhcGlkLCBJbmNpc2l2ZSBEYXRhIEFuYWx5c2lzIGZvciBMZWFkIERpc2NvdmVyecUESW4gYSBwcmV2aW91cyBwb3N0IHdlIGNvbW1pc2VyYXRlZCB3aXRoIGRydWcgZGlzY292ZXJ5IHNjaWVudGlzdHMgYW5kIHRoZWlyIElUIGNvbGxlYWd1ZXMgaW4gdGhlaXIgZGFpbHkgc3RydWdnbGVzIHRvIGRlYWwgd2l0aCB0aGUgZXZlci1pbmNyZWFzaW5nIHJlc2VhcmNoIGRhdGEgZGVsdWdlLiBXZSB0aGVuIGF0dGVtcHRlZCB0byBlYXNlIHRoZWlyIHBhaW4gYnkgZXhwbG9yaW5nIG1vZGVybiBpbmZvcm1hdGljcyB0b29scyBhbmQgYXBwbGljYXRpb25zIHRoYXQgZ3VpZGUgdGhlbSB0byByYXBpZGx5IGFuZCBpbnRlbGxpZ2VudGx5IGlkZW50aWZ5LCBsb2NhdGUsIHNlYXJjaCwgZXh0cmFjdCBhbmQgb3JnYW5pemUgdHJhY3RhYmxlIHNldHMgb2YgcmVsZXZhbnQgZGF0YSAoaW50ZXJuYWwgb3IgZXh0ZXJuYWwsIHN0cnVjdHVyZWQgb3IgdW5zdHJ1Y3R1cmVkLCBzbWFsbCBtb2xlY3VsZSBvciBiaW9sb2dpYykgZm9yIGRldGFpbGVkIGFuYWx5c2lzIGFuZCB2aXN1YWxpemF0aW9uLiZuYnNwO1RoaXMgY3VycmVudCBwb3N0IG1vdmVzIHRvIHRoZSBpbXByb3ZlbWVudHMgdGhhdCBhcmUgbmVlZGVkIGluIHRoZSAuLi5kAgEPDxYCHwQFATBkZAICDxUBJGY5Y2UwMWY4LTQzZGMtNDEyZS1iODllLTcwYWMwZTZhMTg2OGQCBQ8WAh8JAgQWCAIBD2QWAmYPFQbrATxkaXY+PGEgaHJlZj0nL2FydGljbGVzLzgyMC9jaGVtYWN4LXVwZGF0ZS0xODE4My1hdmFpbGFibGUnIGNsYXNzPSdjb3Zlcic+PGltZyAgYWx0PSdDaGVtQUNYIHVwZGF0ZSAxOC4xOC4zIGF2YWlsYWJsZScgc3R5bGU9J3ZlcnRpY2FsLWFsaWduOm1pZGRsZScgc3JjPSdodHRwOi8vaW5zaWRlaW5mb3JtYXRpY3MuY2FtYnJpZGdlc29mdC5jb20vaW1hZ2VzL2FydGljbGVzL2hnODIwLmdpZicvPjwvYT48L2Rpdj5cPGEgaHJlZj0nL2FydGljbGVzLzgyMC9jaGVtYWN4LXVwZGF0ZS0xODE4My1hdmFpbGFibGUnID5DaGVtQUNYIHVwZGF0ZSAxOC4xOC4zIGF2YWlsYWJsZTwvYT5lPGk+Qnk6Jm5ic3A7PC9pPjxhIGhyZWY9Jy9wdWJsaXNoZXJzLz9wYWlkPTE0JyA+SnVsaWUgRS4gTmVsc29uPC9hPjxpPiBvZiA8L2k+UGVya2luRWxtZXIgSW5mb3JtYXRpY3MtPGxpIGlkPSdpY29uQXJ0aWNsZXMnIGNsYXNzPSdpY29uTWVkaWEnPjwvbGk+IENoZW1BQ1ggdG9wcyAyMSBtaWxsaW9uIHByb2R1Y3RzRzxhIGhyZWY9Jy9hcnRpY2xlcy84MjAvY2hlbWFjeC11cGRhdGUtMTgxODMtYXZhaWxhYmxlJz5SZWFkIEFydGljbGU8L2E+ZAICD2QWAmYPFQbrATxkaXY+PGEgaHJlZj0nL2FydGljbGVzLzgxOS9jaGVtYWN4LXVwZGF0ZS0xODE4Mi1hdmFpbGFibGUnIGNsYXNzPSdjb3Zlcic+PGltZyAgYWx0PSdDaGVtQUNYIHVwZGF0ZSAxOC4xOC4yIGF2YWlsYWJsZScgc3R5bGU9J3ZlcnRpY2FsLWFsaWduOm1pZGRsZScgc3JjPSdodHRwOi8vaW5zaWRlaW5mb3JtYXRpY3MuY2FtYnJpZGdlc29mdC5jb20vaW1hZ2VzL2FydGljbGVzL2hnODE5LmdpZicvPjwvYT48L2Rpdj5cPGEgaHJlZj0nL2FydGljbGVzLzgxOS9jaGVtYWN4LXVwZGF0ZS0xODE4Mi1hdmFpbGFibGUnID5DaGVtQUNYIHVwZGF0ZSAxOC4xOC4yIGF2YWlsYWJsZTwvYT5lPGk+Qnk6Jm5ic3A7PC9pPjxhIGhyZWY9Jy9wdWJsaXNoZXJzLz9wYWlkPTE0JyA+SnVsaWUgRS4gTmVsc29uPC9hPjxpPiBvZiA8L2k+UGVya2luRWxtZXIgSW5mb3JtYXRpY3MtPGxpIGlkPSdpY29uQXJ0aWNsZXMnIGNsYXNzPSdpY29uTWVkaWEnPjwvbGk+IkNoZW1BQ1ggdG9wcyAxMCBtaWxsaW9uIHN0cnVjdHVyZXNHPGEgaHJlZj0nL2FydGljbGVzLzgxOS9jaGVtYWN4LXVwZGF0ZS0xODE4Mi1hdmFpbGFibGUnPlJlYWQgQXJ0aWNsZTwvYT5kAgMPZBYCZg8VBusBPGRpdj48YSBocmVmPScvYXJ0aWNsZXMvODE4L2NoZW1hY3gtdXBkYXRlLTE4MTgxLWF2YWlsYWJsZScgY2xhc3M9J2NvdmVyJz48aW1nICBhbHQ9J0NoZW1BQ1ggdXBkYXRlIDE4LjE4LjEgYXZhaWxhYmxlJyBzdHlsZT0ndmVydGljYWwtYWxpZ246bWlkZGxlJyBzcmM9J2h0dHA6Ly9pbnNpZGVpbmZvcm1hdGljcy5jYW1icmlkZ2Vzb2Z0LmNvbS9pbWFnZXMvYXJ0aWNsZXMvaGc4MTguZ2lmJy8+PC9hPjwvZGl2Plw8YSBocmVmPScvYXJ0aWNsZXMvODE4L2NoZW1hY3gtdXBkYXRlLTE4MTgxLWF2YWlsYWJsZScgPkNoZW1BQ1ggdXBkYXRlIDE4LjE4LjEgYXZhaWxhYmxlPC9hPmU8aT5CeTombmJzcDs8L2k+PGEgaHJlZj0nL3B1Ymxpc2hlcnMvP3BhaWQ9MTQnID5KdWxpZSBFLiBOZWxzb248L2E+PGk+IG9mIDwvaT5QZXJraW5FbG1lciBJbmZvcm1hdGljcy08bGkgaWQ9J2ljb25BcnRpY2xlcycgY2xhc3M9J2ljb25NZWRpYSc+PC9saT4hQ2hlbUFDWCBuZWFycyAyMCBtaWxsaW9uIHByb2R1Y3RzRzxhIGhyZWY9Jy9hcnRpY2xlcy84MTgvY2hlbWFjeC11cGRhdGUtMTgxODEtYXZhaWxhYmxlJz5SZWFkIEFydGljbGU8L2E+ZAIED2QWAmYPFQbrATxkaXY+PGEgaHJlZj0nL2FydGljbGVzLzgxNy9jaGVtYWN4LXVwZGF0ZS0xNzE3NC1hdmFpbGFibGUnIGNsYXNzPSdjb3Zlcic+PGltZyAgYWx0PSdDaGVtQUNYIHVwZGF0ZSAxNy4xNy40IGF2YWlsYWJsZScgc3R5bGU9J3ZlcnRpY2FsLWFsaWduOm1pZGRsZScgc3JjPSdodHRwOi8vaW5zaWRlaW5mb3JtYXRpY3MuY2FtYnJpZGdlc29mdC5jb20vaW1hZ2VzL2FydGljbGVzL2hnODE3LmdpZicvPjwvYT48L2Rpdj5cPGEgaHJlZj0nL2FydGljbGVzLzgxNy9jaGVtYWN4LXVwZGF0ZS0xNzE3NC1hdmFpbGFibGUnID5DaGVtQUNYIHVwZGF0ZSAxNy4xNy40IGF2YWlsYWJsZTwvYT5lPGk+Qnk6Jm5ic3A7PC9pPjxhIGhyZWY9Jy9wdWJsaXNoZXJzLz9wYWlkPTE0JyA+SnVsaWUgRS4gTmVsc29uPC9hPjxpPiBvZiA8L2k+UGVya2luRWxtZXIgSW5mb3JtYXRpY3MtPGxpIGlkPSdpY29uQXJ0aWNsZXMnIGNsYXNzPSdpY29uTWVkaWEnPjwvbGk+IUNoZW1BQ1ggdG9wcyA5IG1pbGxpb24gc3RydWN0dXJlc0c8YSBocmVmPScvYXJ0aWNsZXMvODE3L2NoZW1hY3gtdXBkYXRlLTE3MTc0LWF2YWlsYWJsZSc+UmVhZCBBcnRpY2xlPC9hPmRkol8YLqtNZaTYoTD8zZWjPUjB13o=" />
+
+<script type="text/javascript">
+//<![CDATA[
+var Anthem_DefaultURL = "default.aspx?Anthem_CallBack=true";
+var Anthem_FormID = "aspnetForm";
+//]]>
+</script><script type="text/javascript">
+//![CDATA[
+
+function Anthem_AddEvent(obj, evType, fn, useCapture) {
+	if (obj.addEventListener) {
+		obj.addEventListener(evType, fn, useCapture);
+		return true;
+	} else if (obj.attachEvent) {
+		var r = obj.attachEvent("on" + evType, fn);
+		return r;
+	} else {
+		alert("Anthem_AddEvent could not add event!");
+	}
+}
+
+function Anthem_GetXMLHttpRequest() {
+	if (window.XMLHttpRequest) {
+		return new XMLHttpRequest();
+	} else {
+		if (window.Anthem_XMLHttpRequestProgID) {
+			return new ActiveXObject(window.Anthem_XMLHttpRequestProgID);
+		} else {
+			var progIDs = ["Msxml2.XMLHTTP.5.0", "Msxml2.XMLHTTP.4.0", "MSXML2.XMLHTTP.3.0", "MSXML2.XMLHTTP", "Microsoft.XMLHTTP"];
+			for (var i = 0; i < progIDs.length; ++i) {
+				var progID = progIDs[i];
+				try {
+					var x = new ActiveXObject(progID);
+					window.Anthem_XMLHttpRequestProgID = progID;
+					return x;
+				} catch (e) {
+				}
+			}
+		}
+	}
+	return null;
+}
+
+function Anthem_CallBack(url, target, id, method, args, clientCallBack, clientCallBackArg, includeControlValuesWithCallBack, updatePageAfterCallBack) {
+	if (window.Anthem_PreCallBack) {
+		var preCallBackResult = Anthem_PreCallBack();
+		if (!(typeof preCallBackResult == "undefined" || preCallBackResult)) {
+			if (window.Anthem_CallBackCancelled) {
+				Anthem_CallBackCancelled();
+			}
+			return null;
+		}
+	}
+	var x = Anthem_GetXMLHttpRequest();
+	var result = null;
+	if (!x) {
+		result = { "value": null, "error": "NOXMLHTTP" };
+		Anthem_DebugError(result.error);
+		if (window.Anthem_Error) {
+			Anthem_Error(result);
+		}
+		if (clientCallBack) {
+			clientCallBack(result, clientCallBackArg);
+		}
+		return result;
+	}
+	x.open("POST", url ? url : Anthem_DefaultURL, clientCallBack ? true : false);
+	x.setRequestHeader("Content-Type", "application/x-www-form-urlencoded; charset=utf-8");
+	x.setRequestHeader("Accept-Encoding", "gzip, deflate");
+	if (clientCallBack) {
+		x.onreadystatechange = function() {
+			if (x.readyState != 4) {
+				return;
+			}
+			Anthem_DebugResponseText(x.responseText);
+			result = Anthem_GetResult(x);
+			if (result.error) {
+				Anthem_DebugError(result.error);
+				if (window.Anthem_Error) {
+					Anthem_Error(result);
+				}
+			}
+			if (updatePageAfterCallBack) {
+				Anthem_UpdatePage(result);
+			}
+			Anthem_EvalClientSideScript(result);
+			clientCallBack(result, clientCallBackArg);
+			x = null;
+			if (window.Anthem_PostCallBack) {
+				Anthem_PostCallBack();
+			}
+		}
+	}
+    var encodedData = "";
+    if (target == "Page") {
+        encodedData += "&Anthem_PageMethod=" + method;
+    } else if (target == "MasterPage") {
+        encodedData += "&Anthem_MasterPageMethod=" + method;
+    } else if (target == "Control") {
+        encodedData += "&Anthem_ControlID=" + id.split(":").join("_");
+        encodedData += "&Anthem_ControlMethod=" + method;
+    }
+	if (args) {
+		for (var argsIndex = 0; argsIndex < args.length; ++argsIndex) {
+			if (args[argsIndex] instanceof Array) {
+				for (var i = 0; i < args[argsIndex].length; ++i) {
+					encodedData += "&Anthem_CallBackArgument" + argsIndex + "=" + encodeURIComponent(args[argsIndex][i]);
+				}
+			} else {
+				encodedData += "&Anthem_CallBackArgument" + argsIndex + "=" + encodeURIComponent(args[argsIndex]);
+			}
+		}
+	}
+	if (updatePageAfterCallBack) {
+		encodedData += "&Anthem_UpdatePage=true";
+	}
+	if (includeControlValuesWithCallBack) {
+		var form = document.getElementById(Anthem_FormID);
+		if (form != null) {
+			for (var elementIndex = 0; elementIndex < form.length; ++elementIndex) {
+				var element = form.elements[elementIndex];
+				if (element.name) {
+					var elementValue = null;
+					if (element.nodeName == "INPUT") {
+						var inputType = element.getAttribute("TYPE").toUpperCase();
+						if (inputType == "TEXT" || inputType == "PASSWORD" || inputType == "HIDDEN") {
+							elementValue = element.value;
+						} else if (inputType == "CHECKBOX" || inputType == "RADIO") {
+							if (element.checked) {
+								elementValue = element.value;
+							}
+						}
+					} else if (element.nodeName == "SELECT") {
+						if (element.multiple) {
+							elementValue = [];
+							for (var i = 0; i < element.length; ++i) {
+								if (element.options[i].selected) {
+									elementValue.push(element.options[i].value);
+								}
+							}
+						} else {
+							elementValue = element.value;
+						}
+					} else if (element.nodeName == "TEXTAREA") {
+						elementValue = element.value;
+					}
+					if (elementValue instanceof Array) {
+						for (var i = 0; i < elementValue.length; ++i) {
+							encodedData += "&" + element.name + "=" + encodeURIComponent(elementValue[i]);
+						}
+					} else if (elementValue != null) {
+						encodedData += "&" + element.name + "=" + encodeURIComponent(elementValue);
+					}
+				}
+			}
+			// ASP.NET 1.1 won't fire any events if neither of the following
+			// two parameters are not in the request so make sure they're
+			// always in the request.
+			if (typeof form.__VIEWSTATE == "undefined") {
+				encodedData += "&__VIEWSTATE=";
+			}
+			if (typeof form.__EVENTTARGET == "undefined") {
+				encodedData += "&__EVENTTARGET=";
+			}
+		}
+	}
+	Anthem_DebugRequestText(encodedData.split("&").join("\n&"));
+	x.send(encodedData);
+	if (!clientCallBack) {
+		Anthem_DebugResponseText(x.responseText);
+		result = Anthem_GetResult(x);
+		if (result.error) {
+			Anthem_DebugError(result.error);
+			if (window.Anthem_Error) {
+				Anthem_Error(result);
+			}
+		}
+		if (updatePageAfterCallBack) {
+			Anthem_UpdatePage(result);
+		}
+		Anthem_EvalClientSideScript(result);
+		if (window.Anthem_PostCallBack) {
+			Anthem_PostCallBack();
+		}
+	}
+	return result;
+}
+
+function Anthem_GetResult(x) {
+	var result = { "value": null, "error": null };
+	var responseText = x.responseText;
+	try {
+		result = eval("(" + responseText + ")");
+	} catch (e) {
+		if (responseText.length == 0) {
+			result.error = "NORESPONSE";
+		} else {
+			result.error = "BADRESPONSE";
+			result.responseText = responseText;
+		}
+	}
+	return result;
+}
+
+function Anthem_SetHiddenInputValue(form, name, value) {
+    var input = null;
+    if (form[name]) {
+        input = form[name];
+    } else {
+        input = document.createElement("input");
+        input.setAttribute("name", name);
+        input.setAttribute("type", "hidden");
+    }
+    input.setAttribute("value", value);
+    var parentElement = input.parentElement ? input.parentElement : input.parentNode;
+    if (parentElement == null) {
+        form.appendChild(input);
+        form[name] = input;
+    }
+}
+
+function Anthem_RemoveHiddenInput(form, name) {
+    var input = form[name];
+    var parentElement = input.parentElement ? input.parentElement : input.parentNode;
+    if (input && parentElement == form) {
+        form[name] = null;
+        form.removeChild(input);
+    }
+}
+
+function Anthem_FireEvent(eventTarget, eventArgument, clientCallBack, clientCallBackArg, includeControlValuesWithCallBack, updatePageAfterCallBack) {
+	var form = document.getElementById(Anthem_FormID);
+	Anthem_SetHiddenInputValue(form, "__EVENTTARGET", eventTarget);
+	Anthem_SetHiddenInputValue(form, "__EVENTARGUMENT", eventArgument);
+	Anthem_CallBack(null, null, null, null, null, clientCallBack, clientCallBackArg, includeControlValuesWithCallBack, updatePageAfterCallBack);
+	form.__EVENTTARGET.value = "";
+	form.__EVENTARGUMENT.value = "";
+}
+
+function Anthem_UpdatePage(result) {
+	var form = document.getElementById(Anthem_FormID);
+	if (result.viewState) {
+		Anthem_SetHiddenInputValue(form, "__VIEWSTATE", result.viewState);
+	}
+	if (result.viewStateEncrypted) {
+		Anthem_SetHiddenInputValue(form, "__VIEWSTATEENCRYPTED", result.viewStateEncrypted);
+	}
+	if (result.eventValidation) {
+		Anthem_SetHiddenInputValue(form, "__EVENTVALIDATION", result.eventValidation);
+	}
+	if (result.controls) {
+		for (var controlID in result.controls) {
+			var containerID = "Anthem_" + controlID.split("$").join("_") + "__";
+			var control = document.getElementById(containerID);
+			if (control) {
+				control.innerHTML = result.controls[controlID];
+				if (result.controls[controlID] == "") {
+					control.style.display = "none";
+				} else {
+					control.style.display = "";
+				}
+			}
+		}
+	}
+	if (result.pagescript) {
+		for (var i = 0; i < result.pagescript.length; ++i) {
+			try {
+			    var script = document.createElement('script');
+			    script.type = 'text/javascript';
+			    if (script.canHaveChildren ) {
+			        script.appendChild(document.createTextNode(result.pagescript[i]));
+			    } else {
+			        script.text = result.pagescript[i];
+			    }
+				document.getElementsByTagName("head")[0].appendChild(script);
+			} catch (e) {
+			    Anthem_DebugError("Error adding page script to head. " + e.name + ": " + e.message);
+			}
+		}
+	}
+}
+
+function Anthem_EvalClientSideScript(result) {
+	if (result.script) {
+		for (var i = 0; i < result.script.length; ++i) {
+			try {
+				eval(result.script[i]);
+			} catch (e) {
+				alert("Error evaluating client-side script!\n\nScript: " + result.script[i] + "\n\nException: " + e);
+			}
+		}
+	}
+}
+
+function Anthem_DebugRequestText(text) {
+}
+
+function Anthem_DebugResponseText(text) {
+}
+
+function Anthem_DebugError(text) {
+}
+
+//Fix for bug #1429412, "Reponse callback returns previous response after file push".
+//see http://sourceforge.net/tracker/index.php?func=detail&aid=1429412&group_id=151897&atid=782464
+function Anthem_Clear__EVENTTARGET()
+{
+	var form = document.getElementById(Anthem_FormID);
+	Anthem_SetHiddenInputValue(form, "__EVENTTARGET", "");
+}
+
+function Anthem_InvokePageMethod(methodName, args, callBack, context) {
+	Anthem_Clear__EVENTTARGET(); // fix for bug #1429412
+    return Anthem_CallBack(null, "Page", null, methodName, args, callBack, context, true, true);
+}
+
+function Anthem_InvokeMasterPageMethod(methodName, args, callBack, context) {
+	Anthem_Clear__EVENTTARGET(); // fix for bug #1429412
+    return Anthem_CallBack(null, "MasterPage", null, methodName, args, callBack, context, true, true);
+}
+
+function Anthem_InvokeControlMethod(id, methodName, args, callBack, context) {
+	Anthem_Clear__EVENTTARGET(); // fix for bug #1429412
+    return Anthem_CallBack(null, "Control", id, methodName, args, callBack, context, true, true);
+}
+
+function GetLabelText(id) {
+    var labels = document.getElementsByTagName('label');
+    for (var i = 0; i < labels.length; i++) {
+        if (labels[i].htmlFor == id) {
+            return labels[i].innerHTML;
+        }
+    }
+    return null;
+}
+
+function SetLabelText(id, text) {
+    var labels = document.getElementsByTagName('label');
+    for (var i = 0; i < labels.length; i++) {
+        if (labels[i].htmlFor == id) {
+            labels[i].innerHTML = text;
+            return;
+        }
+    }
+}
+
+function Anthem_FireCallBackEvent(
+	control,
+	e,
+	eventTarget,
+	eventArgument,
+	causesValidation,
+	validationGroup,
+	imageUrlDuringCallBack,
+	textDuringCallBack,
+	enabledDuringCallBack,
+	preCallBackFunction,
+	postCallBackFunction,
+	callBackCancelledFunction,
+	includeControlValuesWithCallBack,
+	updatePageAfterCallBack
+) {
+	var preCallBackResult = true;
+	if (preCallBackFunction) {
+		preCallBackResult = preCallBackFunction(control);
+	}
+	if (typeof preCallBackResult == "undefined" || preCallBackResult) {
+		var valid = true;
+		if (causesValidation && typeof Page_ClientValidate == "function") {
+			valid = Page_ClientValidate(validationGroup);
+		}
+		if (valid) {
+			var inputType = control.getAttribute("TYPE");
+			inputType = (inputType == null) ? '' : inputType.toUpperCase();
+			var parentElement = null;
+			var text = '';
+			if (imageUrlDuringCallBack || textDuringCallBack) {
+			    if (control.nodeName == "INPUT") {
+			        if (inputType == "CHECKBOX" || inputType == "RADIO" || inputType == "TEXT") {
+			            text = GetLabelText(control.id);
+			            SetLabelText(control.id, textDuringCallBack);
+			        }
+			        else if (inputType == "IMAGE") {
+	                    var form = document.getElementById(Anthem_FormID);
+	                    if (e.offsetX)
+	                    {
+	                        Anthem_SetHiddenInputValue(form, eventTarget + ".x", e.offsetX);
+	                        Anthem_SetHiddenInputValue(form, eventTarget + ".y", e.offsetY);
+	                    }
+	                    else
+	                    {
+	                        Anthem_SetHiddenInputValue(form, eventTarget + ".x", e.clientX - control.offsetLeft + 1);
+	                        Anthem_SetHiddenInputValue(form, eventTarget + ".y", e.clientY - control.offsetTop + 1);
+	                    }
+			            if (imageUrlDuringCallBack) {
+			                text = control.src;
+			                control.src = imageUrlDuringCallBack;
+			            }
+			            else {
+			                parentElement = control.parentElement ? control.parentElement : control.parentNode;
+			                if (parentElement) {
+			                    text = parentElement.innerHTML;
+			                    parentElement.innerHTML = textDuringCallBack;
+			                }
+			            }
+			        }
+			        else if (inputType == "SUBMIT") {
+			            text = control.value;
+			            control.value = textDuringCallBack;
+			        }
+			    }
+			    else if (control.nodeName == "SELECT") {
+			        text = GetLabelText(control.id);
+			        SetLabelText(control.id, textDuringCallBack);
+			    }
+			    else {
+			        text = control.innerHTML;
+				    control.innerHTML = textDuringCallBack;
+				}
+			}
+			var enabled = !control.disabled;
+			control.disabled = !enabledDuringCallBack;
+			Anthem_FireEvent(
+				eventTarget,
+				eventArgument,
+				function(result) {
+					if (postCallBackFunction) {
+						postCallBackFunction(control);
+					}
+					control.disabled = !enabled;
+					if (imageUrlDuringCallBack || textDuringCallBack) {
+					    if (control.nodeName == "INPUT") {
+					        if (inputType == "CHECKBOX" || inputType == "RADIO" || inputType == "TEXT")
+					            SetLabelText(control.id, text);
+					        else if (inputType == "IMAGE") {
+	                            Anthem_RemoveHiddenInput(form, eventTarget + ".x");
+	                            Anthem_RemoveHiddenInput(form, eventTarget + ".y");
+					            if (imageUrlDuringCallBack)
+					                control.src = text;
+					            else
+					                parentElement.innerHTML = text;
+					        }
+					        else if (inputType == "SUBMIT")
+					            control.value = text;
+					    }
+					    else if (control.nodeName == "SELECT") {
+					        SetLabelText(control.id, text);
+					    }
+					    else {
+					        control.innerHTML = text;
+					    }
+					}
+				},
+				null,
+				includeControlValuesWithCallBack,
+				updatePageAfterCallBack
+			);
+		}
+	} else if (callBackCancelledFunction) {
+		callBackCancelledFunction(control);
+	}
+}
+
+function AnthemListControl_OnClick(
+    e,
+	causesValidation,
+	validationGroup,
+	textDuringCallBack,
+	enabledDuringCallBack,
+	preCallBackFunction,
+	postCallBackFunction,
+	callBackCancelledFunction,
+	includeControlValuesWithCallBack,
+	updatePageAfterCallBack
+) {
+	var target = e.target || e.srcElement;
+	if (target.nodeName == "LABEL" && target.htmlFor != '')
+	    return;
+	var eventTarget = target.id.split("_").join("$");
+	Anthem_FireCallBackEvent(
+	    target, 
+	    e,
+	    eventTarget, 
+	    '', 
+	    causesValidation, 
+	    validationGroup, 
+	    '',
+	    textDuringCallBack, 
+	    enabledDuringCallBack, 
+	    preCallBackFunction, 
+	    postCallBackFunction, 
+	    callBackCancelledFunction, 
+	    true, 
+	    true
+	);
+}
+
+//]]>
+</script>
+<script src="/ScriptResource.axd?d=K2vdsGGyvHFSiMBBqPswllABGhVPcU4KCZAyWf_dqNZy1JVsewqdZHi8PH3h9Cn1wdod2g0SlKg6BonO3t-2Fvr6-JMXv75qdJw-7EG-YHBBDVh84jfOpEYw_gN_nk-DbmQKnLNKLTevMsLrPS_DaVdIwEU1&amp;t=3f4a792d" type="text/javascript"></script>
+<script src="js/WebKit.js" type="text/javascript"></script>
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWIQLYl6y3DwKV66yuBQK4kd6VAgKMu8i1AgKRyvtfApzS1PoKAuamrsUHAre8/9EGAumW1iUCmpGzyQIC/Z/gjgICwpj5kgcCgv6cugsCg/6cugsCg/7QuQsCg/7cuQsCg/74uQsCg/7ouQsCg/7kuQsCg/7guQsCg/7UuQsCgP6cugsCgf6cugsCg/7suQsCrJW76AMCu/2N6gkC2Lbi4w8C+sDiYgKW5tq4BwK9uJvvAwKuoYbhDwKM277UDQLIm/3BDBkZBw7RbIVZDC3JNhMj5q0J/IGC" />
+<div class="headerWrap">
+            <div class="header_PKI">
+                <ul>
+                    <li>
+                        <h1 title="PerkinElmer Informatics Life Science Solutions">
+                            <a href="/" title="Life Science Enterprise Solutions">Desktop and Enterprise Software, Solutions and Services for Chemists and Biologists.</a>
+                        </h1>
+                    </li>
+                    <li>
+                     <ul class="mediaShare_header">
+                    <li><a target="_blank" href="http://www.facebook.com/pages/PerkinElmer-Informatics/175050115916445#!/pages/PerkinElmer-Informatics/175050115916445?sk=wall"><img src="/images/fb_header.gif" alt="" width="18" height="18"/></a></li>
+                    <li><a target="_blank" href="http://twitter.com/#!/PKI_Informatics"><img src="/images/twitter_header.gif" alt="" width="18" height="18" /></a></li>
+                     <li><a target="_blank" href="http://www.linkedin.com/groups?gid=4049842&trk=hb_side_g"><img src="/images/linkein_header.gif" alt="" width="18" height="18"/></a></li>
+                   <li><a target="_blank" href="http://www.youtube.com/user/PKIinformatics"><img src="/images/logo_yt_size1.png" alt="" width="47" height="18"/></a></li>
+                    </ul>
+                        <ul class="languageSelect_bar">
+                            <li class="languageSelBarImg">
+                                <img id="imgTag" src="/images/tag.png"/>
+                            </li>
+                            <li id="csSites" class="languageSelBar">
+                                <div style="width: 126px;" class="jqTransformSelectOuterWrapper">
+                                    <select id="ddlCSWebsites" onchange="CSWebsites_OnChange()" style="display:none;width:104px;">
+                                        <option value="http://insideinformatics.cambridgesoft.com/">Inside Informatics</option>
+                                        <option value="http://www.cambridgesoft.com/">Informatics Home</option>
+                                        <option value="http://chembiofinder.cambridgesoft.com/">ChemBioFinder</option>
+                                        <option value="http://scistore.cambridgesoft.com/">SciStore</option>
+                                        <option value="http://blog.cambridgesoft.com/">Informatics Blog</option>
+                                    </select>
+                                </div>
+                            </li>
+                            <li id="ctl00_languages" class="languageSelBar">
+                                <div id="ctl00_dvlanguages" style="width:73px;" class="jqTransformSelectOuterWrapper">
+                                    <select name="ctl00$ddlLanguages" id="ctl00_ddlLanguages" style="display:none;">
+	<option selected="selected" value="English">English</option>
+	<option value="Deutsch">Deutsch</option>
+	<option value="French">Fran&#231;ais</option>
+	<option value="Japanese">Japanese</option>
+
+</select>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul id="csSearch" class="searchBar_header">
+                        
+                            <li class="csSearchBar"><p>Website Search</p></li>
+                            <li class="csSearchBar">
+                                <div style="width: 139px;" class="jqTransformSelectOuterWrapper">
+                                    <select name="ctl00$ddlqp" id="ctl00_ddlqp" style="display:none;">
+	<option value="All Informatics Sites">All Informatics Sites</option>
+	<option value="csc">Informatics Home</option>
+	<option value="insdinf">Inside Informatics</option>
+	<option value="store">SciStore</option>
+
+</select>
+                                </div>
+                            </li>
+                            <li class="csSearchBar">
+                                <input name="ctl00$qt" type="text" id="ctl00_qt" />
+                            </li>
+                            <li class="goButton csSearchBar">
+                                <input type="submit" name="ctl00$btnSearch" value="GO" id="ctl00_btnSearch" />
+                            </li>
+                        </ul>
+                        <ul class="welcomeMessage" id="welcomeMessage">
+                            <li id="liwelcomeMessage"><span id="Anthem_ctl00_litwelcomemsg__"><span id="ctl00_litwelcomemsg">Hello. <a href='http://www.cambridgesoft.com/login/Default.aspx?ReturnUrl=http://insideinformatics.cambridgesoft.com/default.aspx'>Sign in</a> for full site access. New user? <a href='http://www.cambridgesoft.com/register/'>Start here</a>.</span></span></li>
+                        </ul>
+                        <ul id="ulwelcomeMessage" class="welcomeMessage">
+                            <li id="liRegister"><span id="Anthem_ctl00_lnkRegister__"><span id="ctl00_lnkRegister"><a href='http://www.cambridgesoft.com/register' ><strong>REGISTER</strong></a></span></span></li>
+                            <li class="breakLinks">|</li>
+                            <li id="lilogin"><span id="Anthem_ctl00_lnkLogin__"><span id="ctl00_lnkLogin"><a href='http://www.cambridgesoft.com/login/Default.aspx?ReturnUrl=http://insideinformatics.cambridgesoft.com/default.aspx'><strong>LOGIN</strong></a></span></span></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+      
+        </div>
+
+<div class="navWrap" id="nav">
+            
+            <div class="ddsmoothmenu" id="smoothmenu1"><ul>
+                <li style="z-index: 100;"><a href="/Media/" class="" style="padding-right: 10px;">MEDIA</a>
+                  <ul style="top: 28px; visibility: visible; left: 0px; width: 204px; display: none;">
+                        <li><a href="/Media/Webinars/default.aspx">Webinars</a>
+                            
+                        </li>
+                        
+                        <li><a href="/Media/Articles/default.aspx">Articles</a>
+                            
+                        </li>
+                        
+                        
+                        <li><a href="/Media/Whitepapers/default.aspx">White papers</a>
+                            
+                        </li>
+                        
+                        <li><a href="/Media/VideosAndDemos/default.aspx">Videos and Demos</a>
+                            
+                        </li>
+
+                        <li><a href="/Media/InteractiveDemos/">Interactive Demos</a>
+                            
+                        </li>
+                  </ul>
+                </li>
+            
+                <li style="z-index: 99;"><a href="/Contributing/InstructionsForAuthors.aspx" class="" style="padding-right: 10px;">CONTRIBUTE</a>
+                  <ul style="top: 28px; visibility: visible; left: 0px; width: 204px; display: none;">
+                        <li><a href="/Contributing/InstructionsForAuthors.aspx">Instructions for Authors</a>
+                            
+                        </li>
+                        
+                        <li><a href="/publishers/directory/">Publishers Directory</a>
+                            
+                        </li>
+                  </ul>
+              </li>
+            
+                <li style="z-index: 96;"><a href="/Help/" class="" style="padding-right: 10px;">FAQ</a>
+                 
+                </li>
+               <li style="z-index: 98;"><a href="/Contact/" class="noborder" style="padding-right: 10px;">Contact</a>
+                <ul style="top: 28px; visibility: visible; left: 0px; width: 204px; display: none;">
+                        <li><a href="http://www.cambridgesoft.com/contact/sales/">Sales</a>
+                            
+                        </li>
+                        <li><a href="http://www.cambridgesoft.com/contact/support/">Technical Support</a>
+                            
+                        </li>
+                        
+                        <li><a href="http://www.cambridgesoft.com/contact/customerservice/">Customer Service</a>
+                            
+                        </li>
+                        
+                        <li><a href="http://insideinformatics.cambridgesoft.com">Inside Informatics</a>
+                            
+                        </li>
+                        
+                        <li><a href="http://scistore.cambridgesoft.com/ScistoreContact.aspx">SciStore.com</a>
+                            
+                        </li>
+                        
+                        <li><a href="http://www.cambridgesoft.com/contact/hr/">Human Resources</a>
+                            
+                        </li>
+                        
+                        <li><a href="http://www.cambridgesoft.com/contact/corporate/directions.aspx">Directions</a>
+                            
+                        </li>
+                        
+                        <li style="z-index: 97;"><a href="http://www.cambridgesoft.com/contact/corporate/">Corporate<img style="border:0;" class="rightarrowclass" src="/images/right.gif"><img style="border:0;" class="rightarrowclass" src="/images/right.gif" /></a>
+                            <ul style="display: none; top: 0px; visibility: visible;"><li><a href="http://www.cambridgesoft.com/contact/corporate/directions.aspx">Directions</a></li><li><a href="http://www.cambridgesoft.com/contact/corporate/map.aspx">Map</a></li></ul>
+                        </li>
+                        
+                        <li><a href="http://www.cambridgesoft.com/RequestInfo/">Request Information</a>
+                            
+                        </li>
+                        </ul>
+                </li>
+            </ul>
+          <br style="clear: left" /></div>
+        </div>
+
+<div class="mainContent">
+    
+    
+<script type="text/javascript">
+     $(function() {
+         $('#ctl00_CbnSearch1_ddlCategories').jqTransSelect();
+         $('#ctl00_CbnSearch1_ddlSubCat').jqTransSelect();
+         $('#ctl00_CbnSearch1_ddlMedia').jqTransSelect();
+     });
+
+     function transformDDL() {
+         $('#ctl00_CbnSearch1_ddlCategories').jqTransSelect();
+         $('#ctl00_CbnSearch1_ddlSubCat').jqTransSelect();
+         $('#ctl00_CbnSearch1_ddlMedia').jqTransSelect();
+     }
+     Sys.WebForms.PageRequestManager.getInstance().add_endRequest(transformDDL);
+	</script>
+<div id="dvSearchBar" class="searchBar">
+    <span id="ctl00_CbnSearch1_upnlSearch">
+    <ul>
+        <li class="searchBarTitle">Search Inside Informatics</li>
+        <li>
+            <div id="ctl00_CbnSearch1_dvCategories" class="jqTransformSelectOuterWrapper">
+                <select name="ctl00$CbnSearch1$ddlCategories" id="ctl00_CbnSearch1_ddlCategories" class="searchQp" style="display:none">
+	<option selected="selected" value="All Categories">All Categories</option>
+	<option value="1">Personal Productivity Tools</option>
+	<option value="2">Collaborative Scientific Solutions</option>
+	<option value="21">Biology</option>
+	<option value="20">Chemistry</option>
+	<option value="27">Clinical</option>
+	<option value="23">Data Analytics</option>
+	<option value="26">Imaging</option>
+	<option value="25">Translational Medicine</option>
+	<option value="22">QAQC</option>
+	<option value="3">Scientific Databases</option>
+	<option value="4">Strategic Partners</option>
+	<option value="24">Services</option>
+
+</select>
+            </div>
+        </li>
+        <li>
+            <div id="ctl00_CbnSearch1_dvSubCat" class="jqTransformSelectOuterWrapper searchBarSelectDisabled">
+                <select name="ctl00$CbnSearch1$ddlSubCat" id="ctl00_CbnSearch1_ddlSubCat" disabled="disabled" class="searchQp" style="display:none">
+	<option selected="selected" value="All Subcategories">All Subcategories</option>
+
+</select>
+            </div>
+        </li>
+        <li class="mediaSelectList">
+            <div id="ctl00_CbnSearch1_dvMedia" class="jqTransformSelectOuterWrapper">
+                <select name="ctl00$CbnSearch1$ddlMedia" id="ctl00_CbnSearch1_ddlMedia" class="searchQp" style="display:none">
+	<option selected="selected" value="Select Media">Select Media</option>
+	<option value="Webinars">Webinars</option>
+	<option value="Videos and Demos">Videos and Demos</option>
+	<option value="Articles">Articles</option>
+	<option value="White Papers">White Papers</option>
+	<option value="Interactive Demos">Interactive Demos</option>
+
+</select>
+            </div>
+        </li>
+        <li class="txtSearchwrap">
+            <input name="ctl00$CbnSearch1$txtSearch" type="text" id="ctl00_CbnSearch1_txtSearch" class="searchBox" onkeypress="return clickButton(event,'ctl00_CbnSearch1_btnSearch')" />
+        </li>
+        <li class="buttonSubmitSearch" style="margin:0px;"> 
+            <input type="submit" name="ctl00$CbnSearch1$btnSearch" value="GO" id="ctl00_CbnSearch1_btnSearch" class="buttonSubmit" />
+        </li>
+    </ul>
+    </span>
+</div>
+
+    <div class="hRuler"></div>
+    <div class="heroImage"><img src="/images/hero_image_home.jpg"/></div> 
+    
+<script src="/js/jqueryslidemenu.js" type="text/javascript"></script>
+
+<div class="lPanel">
+    <ul>
+        <li>
+            <h3>
+                Browse By Topic</h3>
+        </li>
+    </ul>
+    <ul>
+        <li>
+            <div id="myslidemenu" class="jqueryslidemenu" style="float: left; position: relative;">
+                <ul>
+                    
+                            <li><a href='/categories/personalproductivitytools/default.aspx'>
+                                Personal Productivity Tools</a>
+                                <ul id="ctl00_BrowseByTopic1_rptCategories_ctl00_ulsubcat" style="display: none;" class="serv-box" onmouseover="javascript:box();" onmouseout="javascript:box2();">
+                                    <img src="/images/arrow_submenu.png" width="13" height="21" style="float: left; left: -13px;
+                                        position: absolute; top: 8px;" >
+                                    <table id="ctl00_BrowseByTopic1_rptCategories_ctl00_DLSubcategories" cellspacing="0" align="Center" border="0">
+	<tr>
+		<td align="left">
+                                            <li>
+                                                <div class="sub-box">
+                                                    <a href='/categories/personalproductivitytools/chem3d/default.aspx'>
+                                                        Chem3D</a>
+                                                </div>
+                                            </li>
+                                        </td><td align="left">
+                                            <li>
+                                                <div class="sub-box">
+                                                    <a href='/categories/personalproductivitytools/chemscript/default.aspx'>
+                                                        ChemScript</a>
+                                                </div>
+                                            </li>
+                                        </td><td align="left">
+                                            <li>
+                                                <div class="sub-box">
+                                                    <a href='/categories/personalproductivitytools/mopac/default.aspx'>
+                                                        MOPAC</a>
+                                                </div>
+                                            </li>
+                                        </td>
+	</tr><tr>
+		<td align="left">
+                                            <li>
+                                                <div class="sub-box">
+                                                    <a href='/categories/personalproductivitytools/chemdraw/default.aspx'>
+                                                        ChemDraw</a>
+                                                </div>
+                                            </li>
+                                        </td><td align="left">
+                                            <li>
+                                                <div class="sub-box">
+                                                    <a href='/categories/personalproductivitytools/e-notebook/default.aspx'>
+                                                        E-Notebook</a>
+                                                </div>
+                                            </li>
+                                        </td><td align="left">
+                                            <li>
+                                                <div class="sub-box">
+                                                    <a href='/categories/personalproductivitytools/softwareroundups/default.aspx'>
+                                                        Software Roundups</a>
+                                                </div>
+                                            </li>
+                                        </td>
+	</tr><tr>
+		<td align="left">
+                                            <li>
+                                                <div class="sub-box">
+                                                    <a href='/categories/personalproductivitytools/chemoffice/default.aspx'>
+                                                        ChemOffice</a>
+                                                </div>
+                                            </li>
+                                        </td><td align="left">
+                                            <li>
+                                                <div class="sub-box">
+                                                    <a href='/categories/personalproductivitytools/enterpriserd/default.aspx'>
+                                                        Enterprise R&D</a>
+                                                </div>
+                                            </li>
+                                        </td><td align="left">
+                                            <li>
+                                                <div class="sub-box">
+                                                    <a href='/categories/personalproductivitytools/struct=name/default.aspx'>
+                                                        Struct=Name</a>
+                                                </div>
+                                            </li>
+                                        </td>
+	</tr>
+</table>
+                                </ul>
+                            </li>
+                        
+                            <li><a href='/categories/collaborativescientificsolutions/default.aspx'>
+                                Collaborative Scientific Solutions</a>
+                                <ul id="ctl00_BrowseByTopic1_rptCategories_ctl01_ulsubcat" style="display: none;" class="serv-box" onmouseover="javascript:box();" onmouseout="javascript:box2();">
+                                    <img src="/images/arrow_submenu.png" width="13" height="21" style="float: left; left: -13px;
+                                        position: absolute; top: 8px;" >
+                                    <table id="ctl00_BrowseByTopic1_rptCategories_ctl01_DLSubcategories" cellspacing="0" align="Center" border="0">
+	<tr>
+		<td align="left">
+                                            <li>
+                                                <div class="sub-box">
+                                                    <a href='/categories/collaborativescientificsolutions/biologye-notebook/default.aspx'>
+                                                        Biology E-Notebook</a>
+                                                </div>
+                                            </li>
+                                        </td><td align="left">
+                                            <li>
+                                                <div class="sub-box">
+                                                    <a href='/categories/collaborativescientificsolutions/formulationanalyticallims/default.aspx'>
+                                                        Formulation & Analytical LIMS</a>
+                                                </div>
+                                            </li>
+                                        </td><td align="left">
+                                            <li>
+                                                <div class="sub-box">
+                                                    <a href='/categories/collaborativescientificsolutions/limslink/default.aspx'>
+                                                        LimsLink</a>
+                                                </div>
+                                            </li>
+                                        </td>
+	</tr><tr>
+		<td align="left">
+                                            <li>
+                                                <div class="sub-box">
+                                                    <a href='/categories/collaborativescientificsolutions/chemistrye-notebook/default.aspx'>
+                                                        Chemistry E-Notebook</a>
+                                                </div>
+                                            </li>
+                                        </td><td align="left">
+                                            <li>
+                                                <div class="sub-box">
+                                                    <a href='/categories/collaborativescientificsolutions/formulationsmixtures/default.aspx'>
+                                                        Formulations & Mixtures</a>
+                                                </div>
+                                            </li>
+                                        </td><td align="left">
+                                            <li>
+                                                <div class="sub-box">
+                                                    <a href='/categories/collaborativescientificsolutions/omicsoffice/default.aspx'>
+                                                        OmicsOffice</a>
+                                                </div>
+                                            </li>
+                                        </td>
+	</tr><tr>
+		<td align="left">
+                                            <li>
+                                                <div class="sub-box">
+                                                    <a href='/categories/collaborativescientificsolutions/chemofficeenterprise/default.aspx'>
+                                                        ChemOffice Enterprise</a>
+                                                </div>
+                                            </li>
+                                        </td><td align="left">
+                                            <li>
+                                                <div class="sub-box">
+                                                    <a href='/categories/collaborativescientificsolutions/formulationse-notebook/default.aspx'>
+                                                        Formulations E-Notebook</a>
+                                                </div>
+                                            </li>
+                                        </td><td align="left">
+                                            <li>
+                                                <div class="sub-box">
+                                                    <a href='/categories/collaborativescientificsolutions/oraclecartridge/default.aspx'>
+                                                        Oracle Cartridge</a>
+                                                </div>
+                                            </li>
+                                        </td>
+	</tr><tr>
+		<td align="left">
+                                            <li>
+                                                <div class="sub-box">
+                                                    <a href='/categories/collaborativescientificsolutions/columbusimagedatastorageandanalysissystem/default.aspx'>
+                                                        Columbus Image Data Storage and Analysis System</a>
+                                                </div>
+                                            </li>
+                                        </td><td align="left">
+                                            <li>
+                                                <div class="sub-box">
+                                                    <a href='/categories/collaborativescientificsolutions/ilables/default.aspx'>
+                                                        iLab LES</a>
+                                                </div>
+                                            </li>
+                                        </td><td align="left">
+                                            <li>
+                                                <div class="sub-box">
+                                                    <a href='/categories/collaborativescientificsolutions/professionalservices/default.aspx'>
+                                                        Professional Services</a>
+                                                </div>
+                                            </li>
+                                        </td>
+	</tr><tr>
+		<td align="left">
+                                            <li>
+                                                <div class="sub-box">
+                                                    <a href='/categories/collaborativescientificsolutions/connectorforsap/default.aspx'>
+                                                        Connector for SAP</a>
+                                                </div>
+                                            </li>
+                                        </td><td align="left">
+                                            <li>
+                                                <div class="sub-box">
+                                                    <a href='/categories/collaborativescientificsolutions/inventoryenterprise/default.aspx'>
+                                                        Inventory Enterprise</a>
+                                                </div>
+                                            </li>
+                                        </td><td align="left">
+                                            <li>
+                                                <div class="sub-box">
+                                                    <a href='/categories/collaborativescientificsolutions/registrationenterprise/default.aspx'>
+                                                        Registration Enterprise</a>
+                                                </div>
+                                            </li>
+                                        </td>
+	</tr><tr>
+		<td align="left">
+                                            <li>
+                                                <div class="sub-box">
+                                                    <a href='/categories/collaborativescientificsolutions/elements/default.aspx'>
+                                                        Elements</a>
+                                                </div>
+                                            </li>
+                                        </td><td align="left">
+                                            <li>
+                                                <div class="sub-box">
+                                                    <a href='/categories/collaborativescientificsolutions/leaddiscoverypoweredbytibcospotfire/default.aspx'>
+                                                        Lead Discovery powered by TIBCO Spotfire</a>
+                                                </div>
+                                            </li>
+                                        </td><td align="left">
+                                            <li>
+                                                <div class="sub-box">
+                                                    <a href='/categories/collaborativescientificsolutions/tibcospotfire®software/default.aspx'>
+                                                        TIBCO Spotfire® software</a>
+                                                </div>
+                                            </li>
+                                        </td>
+	</tr><tr>
+		<td align="left">
+                                            <li>
+                                                <div class="sub-box">
+                                                    <a href='/categories/collaborativescientificsolutions/e-notebookenterprise/default.aspx'>
+                                                        E-Notebook Enterprise</a>
+                                                </div>
+                                            </li>
+                                        </td><td></td><td></td>
+	</tr>
+</table>
+                                </ul>
+                            </li>
+                        
+                            <li><a href='/categories/biology/default.aspx'>
+                                Biology</a>
+                                <ul id="ctl00_BrowseByTopic1_rptCategories_ctl02_ulsubcat" style="display: none;" class="serv-box" onmouseover="javascript:box();" onmouseout="javascript:box2();">
+                                    <img src="/images/arrow_submenu.png" width="13" height="21" style="float: left; left: -13px;
+                                        position: absolute; top: 8px;" >
+                                    <table id="ctl00_BrowseByTopic1_rptCategories_ctl02_DLSubcategories" cellspacing="0" align="Center" border="0">
+	<tr>
+		<td align="left">
+                                            <li>
+                                                <div class="sub-box">
+                                                    <a href='/categories/biology/biologye-notebook/default.aspx'>
+                                                        Biology E-Notebook</a>
+                                                </div>
+                                            </li>
+                                        </td><td align="left">
+                                            <li>
+                                                <div class="sub-box">
+                                                    <a href='/categories/biology/columbusimagedatastorageandanalysissystem/default.aspx'>
+                                                        Columbus Image Data Storage and Analysis System</a>
+                                                </div>
+                                            </li>
+                                        </td><td align="left">
+                                            <li>
+                                                <div class="sub-box">
+                                                    <a href='/categories/biology/inventoryenterprise/default.aspx'>
+                                                        Inventory Enterprise</a>
+                                                </div>
+                                            </li>
+                                        </td>
+	</tr><tr>
+		<td align="left">
+                                            <li>
+                                                <div class="sub-box">
+                                                    <a href='/categories/biology/chem3d/default.aspx'>
+                                                        Chem3D</a>
+                                                </div>
+                                            </li>
+                                        </td><td align="left">
+                                            <li>
+                                                <div class="sub-box">
+                                                    <a href='/categories/biology/e-notebook/default.aspx'>
+                                                        E-Notebook</a>
+                                                </div>
+                                            </li>
+                                        </td><td align="left">
+                                            <li>
+                                                <div class="sub-box">
+                                                    <a href='/categories/biology/omicsoffice/default.aspx'>
+                                                        OmicsOffice</a>
+                                                </div>
+                                            </li>
+                                        </td>
+	</tr><tr>
+		<td align="left">
+                                            <li>
+                                                <div class="sub-box">
+                                                    <a href='/categories/biology/chemdraw/default.aspx'>
+                                                        ChemDraw</a>
+                                                </div>
+                                            </li>
+                                        </td><td align="left">
+                                            <li>
+                                                <div class="sub-box">
+                                                    <a href='/categories/biology/e-notebookenterprise/default.aspx'>
+                                                        E-Notebook Enterprise</a>
+                                                </div>
+                                            </li>
+                                        </td><td align="left">
+                                            <li>
+                                                <div class="sub-box">
+                                                    <a href='/categories/biology/softwareroundups/default.aspx'>
+                                                        Software Roundups</a>
+                                                </div>
+                                            </li>
+                                        </td>
+	</tr><tr>
+		<td align="left">
+                                            <li>
+                                                <div class="sub-box">
+                                                    <a href='/categories/biology/chemoffice/default.aspx'>
+                                                        ChemOffice</a>
+                                                </div>
+                                            </li>
+                                        </td><td align="left">
+                                            <li>
+                                                <div class="sub-box">
+                                                    <a href='/categories/biology/enterpriserd/default.aspx'>
+                                                        Enterprise R&D</a>
+                                                </div>
+                                            </li>
+                                        </td><td align="left">
+                                            <li>
+                                                <div class="sub-box">
+                                                    <a href='/categories/biology/tibcospotfire®software/default.aspx'>
+                                                        TIBCO Spotfire® software</a>
+                                                </div>
+                                            </li>
+                                        </td>
+	</tr>
+</table>
+                                </ul>
+                            </li>
+                        
+                            <li><a href='/categories/chemistry/default.aspx'>
+                                Chemistry</a>
+                                <ul id="ctl00_BrowseByTopic1_rptCategories_ctl03_ulsubcat" style="display: none;" class="serv-box" onmouseover="javascript:box();" onmouseout="javascript:box2();">
+                                    <img src="/images/arrow_submenu.png" width="13" height="21" style="float: left; left: -13px;
+                                        position: absolute; top: 8px;" >
+                                    <table id="ctl00_BrowseByTopic1_rptCategories_ctl03_DLSubcategories" cellspacing="0" align="Center" border="0">
+	<tr>
+		<td align="left">
+                                            <li>
+                                                <div class="sub-box">
+                                                    <a href='/categories/chemistry/chem3d/default.aspx'>
+                                                        Chem3D</a>
+                                                </div>
+                                            </li>
+                                        </td><td align="left">
+                                            <li>
+                                                <div class="sub-box">
+                                                    <a href='/categories/chemistry/e-notebook/default.aspx'>
+                                                        E-Notebook</a>
+                                                </div>
+                                            </li>
+                                        </td><td align="left">
+                                            <li>
+                                                <div class="sub-box">
+                                                    <a href='/categories/chemistry/oraclecartridge/default.aspx'>
+                                                        Oracle Cartridge</a>
+                                                </div>
+                                            </li>
+                                        </td>
+	</tr><tr>
+		<td align="left">
+                                            <li>
+                                                <div class="sub-box">
+                                                    <a href='/categories/chemistry/chemdraw/default.aspx'>
+                                                        ChemDraw</a>
+                                                </div>
+                                            </li>
+                                        </td><td align="left">
+                                            <li>
+                                                <div class="sub-box">
+                                                    <a href='/categories/chemistry/e-notebookenterprise/default.aspx'>
+                                                        E-Notebook Enterprise</a>
+                                                </div>
+                                            </li>
+                                        </td><td align="left">
+                                            <li>
+                                                <div class="sub-box">
+                                                    <a href='/categories/chemistry/registrationenterprise/default.aspx'>
+                                                        Registration Enterprise</a>
+                                                </div>
+                                            </li>
+                                        </td>
+	</tr><tr>
+		<td align="left">
+                                            <li>
+                                                <div class="sub-box">
+                                                    <a href='/categories/chemistry/chemistrye-notebook/default.aspx'>
+                                                        Chemistry E-Notebook</a>
+                                                </div>
+                                            </li>
+                                        </td><td align="left">
+                                            <li>
+                                                <div class="sub-box">
+                                                    <a href='/categories/chemistry/enterpriserd/default.aspx'>
+                                                        Enterprise R&D</a>
+                                                </div>
+                                            </li>
+                                        </td><td align="left">
+                                            <li>
+                                                <div class="sub-box">
+                                                    <a href='/categories/chemistry/softwareroundups/default.aspx'>
+                                                        Software Roundups</a>
+                                                </div>
+                                            </li>
+                                        </td>
+	</tr><tr>
+		<td align="left">
+                                            <li>
+                                                <div class="sub-box">
+                                                    <a href='/categories/chemistry/chemoffice/default.aspx'>
+                                                        ChemOffice</a>
+                                                </div>
+                                            </li>
+                                        </td><td align="left">
+                                            <li>
+                                                <div class="sub-box">
+                                                    <a href='/categories/chemistry/formulationanalyticallims/default.aspx'>
+                                                        Formulation & Analytical LIMS</a>
+                                                </div>
+                                            </li>
+                                        </td><td align="left">
+                                            <li>
+                                                <div class="sub-box">
+                                                    <a href='/categories/chemistry/struct=name/default.aspx'>
+                                                        Struct=Name</a>
+                                                </div>
+                                            </li>
+                                        </td>
+	</tr><tr>
+		<td align="left">
+                                            <li>
+                                                <div class="sub-box">
+                                                    <a href='/categories/chemistry/chemscript/default.aspx'>
+                                                        ChemScript</a>
+                                                </div>
+                                            </li>
+                                        </td><td align="left">
+                                            <li>
+                                                <div class="sub-box">
+                                                    <a href='/categories/chemistry/formulationsmixtures/default.aspx'>
+                                                        Formulations & Mixtures</a>
+                                                </div>
+                                            </li>
+                                        </td><td align="left">
+                                            <li>
+                                                <div class="sub-box">
+                                                    <a href='/categories/chemistry/tibcospotfire®software/default.aspx'>
+                                                        TIBCO Spotfire® software</a>
+                                                </div>
+                                            </li>
+                                        </td>
+	</tr><tr>
+		<td align="left">
+                                            <li>
+                                                <div class="sub-box">
+                                                    <a href='/categories/chemistry/elements/default.aspx'>
+                                                        Elements</a>
+                                                </div>
+                                            </li>
+                                        </td><td align="left">
+                                            <li>
+                                                <div class="sub-box">
+                                                    <a href='/categories/chemistry/inventoryenterprise/default.aspx'>
+                                                        Inventory Enterprise</a>
+                                                </div>
+                                            </li>
+                                        </td><td></td>
+	</tr>
+</table>
+                                </ul>
+                            </li>
+                        
+                            <li><a href='/categories/clinical/default.aspx'>
+                                Clinical</a>
+                                <ul id="ctl00_BrowseByTopic1_rptCategories_ctl04_ulsubcat" style="display: none;" class="serv-box" onmouseover="javascript:box();" onmouseout="javascript:box2();">
+                                    <img src="/images/arrow_submenu.png" width="13" height="21" style="float: left; left: -13px;
+                                        position: absolute; top: 8px;" >
+                                    <table id="ctl00_BrowseByTopic1_rptCategories_ctl04_DLSubcategories" cellspacing="0" align="Center" border="0">
+	<tr>
+		<td align="left">
+                                            <li>
+                                                <div class="sub-box">
+                                                    <a href='/categories/clinical/clinicalresearch/default.aspx'>
+                                                        Clinical Research</a>
+                                                </div>
+                                            </li>
+                                        </td><td></td><td></td>
+	</tr>
+</table>
+                                </ul>
+                            </li>
+                        
+                            <li><a href='/categories/dataanalytics/default.aspx'>
+                                Data Analytics</a>
+                                <ul id="ctl00_BrowseByTopic1_rptCategories_ctl05_ulsubcat" style="display: none;" class="serv-box" onmouseover="javascript:box();" onmouseout="javascript:box2();">
+                                    <img src="/images/arrow_submenu.png" width="13" height="21" style="float: left; left: -13px;
+                                        position: absolute; top: 8px;" >
+                                    <table id="ctl00_BrowseByTopic1_rptCategories_ctl05_DLSubcategories" cellspacing="0" align="Center" border="0">
+	<tr>
+		<td align="left">
+                                            <li>
+                                                <div class="sub-box">
+                                                    <a href='/categories/dataanalytics/highcontentprofiler/default.aspx'>
+                                                        High Content Profiler</a>
+                                                </div>
+                                            </li>
+                                        </td><td align="left">
+                                            <li>
+                                                <div class="sub-box">
+                                                    <a href='/categories/dataanalytics/scistream/default.aspx'>
+                                                        Scistream</a>
+                                                </div>
+                                            </li>
+                                        </td><td align="left">
+                                            <li>
+                                                <div class="sub-box">
+                                                    <a href='/categories/dataanalytics/tibcospotfire®software/default.aspx'>
+                                                        TIBCO Spotfire® software</a>
+                                                </div>
+                                            </li>
+                                        </td>
+	</tr><tr>
+		<td align="left">
+                                            <li>
+                                                <div class="sub-box">
+                                                    <a href='/categories/dataanalytics/omicsoffice/default.aspx'>
+                                                        OmicsOffice</a>
+                                                </div>
+                                            </li>
+                                        </td><td></td><td></td>
+	</tr>
+</table>
+                                </ul>
+                            </li>
+                        
+                            <li><a href='/categories/imaging/default.aspx'>
+                                Imaging</a>
+                                <ul id="ctl00_BrowseByTopic1_rptCategories_ctl06_ulsubcat" style="display: none;" class="serv-box" onmouseover="javascript:box();" onmouseout="javascript:box2();">
+                                    <img src="/images/arrow_submenu.png" width="13" height="21" style="float: left; left: -13px;
+                                        position: absolute; top: 8px;" >
+                                    <table id="ctl00_BrowseByTopic1_rptCategories_ctl06_DLSubcategories" cellspacing="0" align="Center" border="0">
+	<tr>
+		<td align="left">
+                                            <li>
+                                                <div class="sub-box">
+                                                    <a href='/categories/imaging/columbus/default.aspx'>
+                                                        Columbus</a>
+                                                </div>
+                                            </li>
+                                        </td><td align="left">
+                                            <li>
+                                                <div class="sub-box">
+                                                    <a href='/categories/imaging/highcontentprofiler/default.aspx'>
+                                                        High Content Profiler</a>
+                                                </div>
+                                            </li>
+                                        </td><td></td>
+	</tr>
+</table>
+                                </ul>
+                            </li>
+                        
+                            <li><a href='/categories/translationalmedicine/default.aspx'>
+                                Translational Medicine</a>
+                                <ul id="ctl00_BrowseByTopic1_rptCategories_ctl07_ulsubcat" style="display: none;" class="serv-box" onmouseover="javascript:box();" onmouseout="javascript:box2();">
+                                    <img src="/images/arrow_submenu.png" width="13" height="21" style="float: left; left: -13px;
+                                        position: absolute; top: 8px;" >
+                                    <table id="ctl00_BrowseByTopic1_rptCategories_ctl07_DLSubcategories" cellspacing="0" align="Center" border="0">
+	<tr>
+		<td align="left">
+                                            <li>
+                                                <div class="sub-box">
+                                                    <a href='/categories/translationalmedicine/signals/default.aspx'>
+                                                        Signals</a>
+                                                </div>
+                                            </li>
+                                        </td><td align="left">
+                                            <li>
+                                                <div class="sub-box">
+                                                    <a href='/categories/translationalmedicine/transmed/default.aspx'>
+                                                        Transmed</a>
+                                                </div>
+                                            </li>
+                                        </td><td></td>
+	</tr>
+</table>
+                                </ul>
+                            </li>
+                        
+                            <li><a href='/categories/qaqc/default.aspx'>
+                                QAQC</a>
+                                <ul id="ctl00_BrowseByTopic1_rptCategories_ctl08_ulsubcat" style="display: none;" class="serv-box" onmouseover="javascript:box();" onmouseout="javascript:box2();">
+                                    <img src="/images/arrow_submenu.png" width="13" height="21" style="float: left; left: -13px;
+                                        position: absolute; top: 8px;" >
+                                    <table id="ctl00_BrowseByTopic1_rptCategories_ctl08_DLSubcategories" cellspacing="0" align="Center" border="0">
+	<tr>
+		<td align="left">
+                                            <li>
+                                                <div class="sub-box">
+                                                    <a href='/categories/qaqc/connectorforsap/default.aspx'>
+                                                        Connector for SAP</a>
+                                                </div>
+                                            </li>
+                                        </td><td align="left">
+                                            <li>
+                                                <div class="sub-box">
+                                                    <a href='/categories/qaqc/ilables/default.aspx'>
+                                                        iLab LES</a>
+                                                </div>
+                                            </li>
+                                        </td><td align="left">
+                                            <li>
+                                                <div class="sub-box">
+                                                    <a href='/categories/qaqc/limslink/default.aspx'>
+                                                        LimsLink</a>
+                                                </div>
+                                            </li>
+                                        </td>
+	</tr><tr>
+		<td align="left">
+                                            <li>
+                                                <div class="sub-box">
+                                                    <a href='/categories/qaqc/formulationanalyticallims/default.aspx'>
+                                                        Formulation & Analytical LIMS</a>
+                                                </div>
+                                            </li>
+                                        </td><td></td><td></td>
+	</tr>
+</table>
+                                </ul>
+                            </li>
+                        
+                            <li><a href='/categories/scientificdatabases/default.aspx'>
+                                Scientific Databases</a>
+                                
+                            </li>
+                        
+                            <li><a href='/categories/strategicpartners/default.aspx'>
+                                Strategic Partners</a>
+                                <ul id="ctl00_BrowseByTopic1_rptCategories_ctl10_ulsubcat" style="display: none;" class="serv-box" onmouseover="javascript:box();" onmouseout="javascript:box2();">
+                                    <img src="/images/arrow_submenu.png" width="13" height="21" style="float: left; left: -13px;
+                                        position: absolute; top: 8px;" >
+                                    <table id="ctl00_BrowseByTopic1_rptCategories_ctl10_DLSubcategories" cellspacing="0" align="Center" border="0">
+	<tr>
+		<td align="left">
+                                            <li>
+                                                <div class="sub-box">
+                                                    <a href='/categories/strategicpartners/chemicalabstractsservice(cas)/default.aspx'>
+                                                        Chemical Abstracts Service (CAS)</a>
+                                                </div>
+                                            </li>
+                                        </td><td></td><td></td>
+	</tr>
+</table>
+                                </ul>
+                            </li>
+                        
+                            <li><a href='/categories/services/default.aspx'>
+                                Services</a>
+                                
+                            </li>
+                        
+                </ul>
+                
+            </div>
+        </li>
+    </ul>
+    
+    
+
+<ul class="panelSpotlight">
+    <li>
+        <h2>
+            Spotlight
+        </h2>
+    </li>
+    
+   
+    <li class="spotlightBox"><h2>Videos and Demos</h2><a class='titleLink' href='/videosanddemos/210/connecting-the-laboratory-with-sap'>Connecting the Laboratory with SAP®</a><div class="spotlightBoxText" >Automated integration between SAP and laboratory systems creates quality and efficiency advantages in laboratory operations and product release processes</div><span class="linkMore"><a href='/videosanddemos/210/connecting-the-laboratory-with-sap'>Watch Video</a></span><li class="spotlightBox"><h2>Videos and Demos</h2><a class='titleLink' href='/videosanddemos/198/integration-of-informatics-systems'>Integration of Informatics Systems</a><div class="spotlightBoxText" >iLAB Laboratory Execution System (LES)</div><span class="linkMore"><a href='/videosanddemos/198/integration-of-informatics-systems'>Watch Video</a></span>
+</ul>
+
+
+</div>
+
+    <div id="ctl00_bredcrumbs" class="breadcrumbs">
+	
+        <span id="ctl00_SiteMapPath1"><a href="#ctl00_SiteMapPath1_SkipLink"><img alt="Breadcrumb" height="0" width="0" src="/WebResource.axd?d=1cM112C8zT2CJiWiq4ByXxKuzjrxJALt-h52iZBsrCipfodL8uN7Wte7u0MNdraslfK7iE6YCobxsHY_u4U65_4E62s1&amp;t=636271527501517547" border="0" /></a><span></span><a id="ctl00_SiteMapPath1_SkipLink"></a></span>
+    
+</div>
+     
+    
+
+<!-- Recent Highlights -->    
+
+<div class="contentPanel">
+    <div id="ctl00_ContentPlaceHolder1_ucRecentHighLights_PanelFeaturedPost">
+	
+        <ul>
+            <li>
+                <h2>
+                    <span id="ctl00_ContentPlaceHolder1_ucRecentHighLights_lblfeaturedpost">Recent Blog Entries</span></h2>
+            </li>
+        </ul>
+        <ul>
+            
+                
+                    <div class="contentBlock">
+                        <ul>
+                            <li class="thumb_1">
+                                <a href='http://blog.cambridgesoft.com:/post.aspx?ID=493e9f60-c7a0-4f71-8268-cf89e3b0c0bd'><img src='data:image/jpeg;base64,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'></a></li>
+                        </ul>
+                        <ul class="descriptionBlock">
+                            <li>
+                                <h3>
+                                <a href='http://blog.cambridgesoft.com:/post.aspx?ID=493e9f60-c7a0-4f71-8268-cf89e3b0c0bd'>
+                                    Faster insights and better science in the search for desperately needed new therapies
+                                    </a>
+                                </h3>
+                            </li>
+                            <li style="width:540px;">In a previous post&nbsp; we noted the increasing importance of biologics as therapeutic agents, with 37% of the drugs approved by the FDA in 2017 being biologic entities. A recent article in Chemical &amp; Engineering News (June 4, 2018, pp 28-33) focused on activities in immuno-oncology, where biologic checkpoint inhibitors are being tested in combination with other immunotherapies: there are currently ca. 250 small molecule- and antibody-based immunotherapies in clinical studies, and &gt; 1100 clinical trials in 2017 combined a checkpoint inhibitor with another ...</li>
+                        </ul>
+                        <ul class="commentBar">
+                            <li class="subNote">Comments:<span id="ctl00_ContentPlaceHolder1_ucRecentHighLights_rptFeaturedPosts_ctl01_Label1">0</span>
+                            </li>
+                            <li class="linkMore"><a href='http://blog.cambridgesoft.com:/post.aspx?ID=493e9f60-c7a0-4f71-8268-cf89e3b0c0bd'>
+                                Continue Reading</a> </li>
+                        </ul>
+                    </div>
+                
+                    <div class="contentBlock">
+                        <ul>
+                            <li class="thumb_1">
+                                <a href='http://blog.cambridgesoft.com:/post.aspx?ID=f9ce01f8-43dc-412e-b89e-70ac0e6a1868'><img src='http://blog.cambridgesoft.com/image.axd?picture=%2f2018%2f06%2fLeadDiscovery.jpg' width='130px;' height='100px;'></a></li>
+                        </ul>
+                        <ul class="descriptionBlock">
+                            <li>
+                                <h3>
+                                <a href='http://blog.cambridgesoft.com:/post.aspx?ID=f9ce01f8-43dc-412e-b89e-70ac0e6a1868'>
+                                    Rapid, Incisive Data Analysis for Lead Discovery
+                                    </a>
+                                </h3>
+                            </li>
+                            <li style="width:540px;">In a previous post we commiserated with drug discovery scientists and their IT colleagues in their daily struggles to deal with the ever-increasing research data deluge. We then attempted to ease their pain by exploring modern informatics tools and applications that guide them to rapidly and intelligently identify, locate, search, extract and organize tractable sets of relevant data (internal or external, structured or unstructured, small molecule or biologic) for detailed analysis and visualization.&nbsp;This current post moves to the improvements that are needed in the ...</li>
+                        </ul>
+                        <ul class="commentBar">
+                            <li class="subNote">Comments:<span id="ctl00_ContentPlaceHolder1_ucRecentHighLights_rptFeaturedPosts_ctl02_Label1">0</span>
+                            </li>
+                            <li class="linkMore"><a href='http://blog.cambridgesoft.com:/post.aspx?ID=f9ce01f8-43dc-412e-b89e-70ac0e6a1868'>
+                                Continue Reading</a> </li>
+                        </ul>
+                    </div>
+                
+        </ul>
+    
+</div>
+    <ul>
+        <li>
+            <h2>
+                <span id="ctl00_ContentPlaceHolder1_ucRecentHighLights_lblTitle">Recent Highlights</span></h2>
+        </li>
+    </ul>
+    
+            <ul>
+        
+            <div class="contentBlock">
+                <ul>
+                    <li class="thumb_1">
+                        <div><a href='/articles/820/chemacx-update-18183-available' class='cover'><img  alt='ChemACX update 18.18.3 available' style='vertical-align:middle' src='http://insideinformatics.cambridgesoft.com/images/articles/hg820.gif'/></a></div>
+                    </li>
+                </ul>
+                <ul class="descriptionBlock">
+                    <li>
+                        <h3>
+                            <a href='/articles/820/chemacx-update-18183-available' >ChemACX update 18.18.3 available</a>
+                        </h3>
+                    </li>
+                    <li class="subNote" style="width:500px;">
+                        <i>By:&nbsp;</i><a href='/publishers/?paid=14' >Julie E. Nelson</a><i> of </i>PerkinElmer Informatics
+                    </li>                     
+                        <li id='iconArticles' class='iconMedia'></li> 
+                    <li>
+                        <p>
+                            ChemACX tops 21 million products
+                        </p>
+                    </li>
+                </ul>
+                <ul class="commentBar">
+                    <li class="linkMore"><a href='/articles/820/chemacx-update-18183-available'>Read Article</a></li>
+                </ul>
+            </div>
+        
+            <div class="contentBlock">
+                <ul>
+                    <li class="thumb_1">
+                        <div><a href='/articles/819/chemacx-update-18182-available' class='cover'><img  alt='ChemACX update 18.18.2 available' style='vertical-align:middle' src='http://insideinformatics.cambridgesoft.com/images/articles/hg819.gif'/></a></div>
+                    </li>
+                </ul>
+                <ul class="descriptionBlock">
+                    <li>
+                        <h3>
+                            <a href='/articles/819/chemacx-update-18182-available' >ChemACX update 18.18.2 available</a>
+                        </h3>
+                    </li>
+                    <li class="subNote" style="width:500px;">
+                        <i>By:&nbsp;</i><a href='/publishers/?paid=14' >Julie E. Nelson</a><i> of </i>PerkinElmer Informatics
+                    </li>                     
+                        <li id='iconArticles' class='iconMedia'></li> 
+                    <li>
+                        <p>
+                            ChemACX tops 10 million structures
+                        </p>
+                    </li>
+                </ul>
+                <ul class="commentBar">
+                    <li class="linkMore"><a href='/articles/819/chemacx-update-18182-available'>Read Article</a></li>
+                </ul>
+            </div>
+        
+            <div class="contentBlock">
+                <ul>
+                    <li class="thumb_1">
+                        <div><a href='/articles/818/chemacx-update-18181-available' class='cover'><img  alt='ChemACX update 18.18.1 available' style='vertical-align:middle' src='http://insideinformatics.cambridgesoft.com/images/articles/hg818.gif'/></a></div>
+                    </li>
+                </ul>
+                <ul class="descriptionBlock">
+                    <li>
+                        <h3>
+                            <a href='/articles/818/chemacx-update-18181-available' >ChemACX update 18.18.1 available</a>
+                        </h3>
+                    </li>
+                    <li class="subNote" style="width:500px;">
+                        <i>By:&nbsp;</i><a href='/publishers/?paid=14' >Julie E. Nelson</a><i> of </i>PerkinElmer Informatics
+                    </li>                     
+                        <li id='iconArticles' class='iconMedia'></li> 
+                    <li>
+                        <p>
+                            ChemACX nears 20 million products
+                        </p>
+                    </li>
+                </ul>
+                <ul class="commentBar">
+                    <li class="linkMore"><a href='/articles/818/chemacx-update-18181-available'>Read Article</a></li>
+                </ul>
+            </div>
+        
+            <div class="contentBlock">
+                <ul>
+                    <li class="thumb_1">
+                        <div><a href='/articles/817/chemacx-update-17174-available' class='cover'><img  alt='ChemACX update 17.17.4 available' style='vertical-align:middle' src='http://insideinformatics.cambridgesoft.com/images/articles/hg817.gif'/></a></div>
+                    </li>
+                </ul>
+                <ul class="descriptionBlock">
+                    <li>
+                        <h3>
+                            <a href='/articles/817/chemacx-update-17174-available' >ChemACX update 17.17.4 available</a>
+                        </h3>
+                    </li>
+                    <li class="subNote" style="width:500px;">
+                        <i>By:&nbsp;</i><a href='/publishers/?paid=14' >Julie E. Nelson</a><i> of </i>PerkinElmer Informatics
+                    </li>                     
+                        <li id='iconArticles' class='iconMedia'></li> 
+                    <li>
+                        <p>
+                            ChemACX tops 9 million structures
+                        </p>
+                    </li>
+                </ul>
+                <ul class="commentBar">
+                    <li class="linkMore"><a href='/articles/817/chemacx-update-17174-available'>Read Article</a></li>
+                </ul>
+            </div>
+        
+            </ul>
+        
+</div>
+
+<!-- Upcoming Webinars -->
+
+
+</div>
+
+
+
+<div id="footer" class="footerWrap">
+  <div class="footer">
+                <ul>
+                    <li>
+                        <ul class="footerLinks">
+                            <li><h2>Our Websites</h2></li>
+                            <li><a href="http://www.cambridgesoft.com/">Informatics Home</a></li>
+                            <li><a href="http://insideinformatics.cambridgesoft.com/">Inside Informatics</a></li>
+                            <li><a href="http://chembiofinder.cambridgesoft.com/">ChemBioFinder</a></li>
+                            <li><a href="http://scistore.cambridgesoft.com/">SciStore</a></li>
+                            <li><a href="http://blog.cambridgesoft.com/">Informatics Blog</a></li>
+                            <li><a href="http://www.perkinelmer.com/">PerkinElmer</a></li>                            
+                        </ul>
+                        <ul class="footerLinks"></ul>
+                        <ul class="callUs">
+                            <li><h2>Other Links</h2></li>
+                            <li><a href="http://www.cambridgesoft.com/privacy/">Privacy Policy</a></li>
+                            <li><a href="http://www.cambridgesoft.com/terms/">Terms &amp; Conditions</a></li>
+                            <li><a href="http://www.cambridgesoft.com/membership/">Manage Your Account </a></li>
+                            <li><a href="/contact/">Contact Us</a></li>
+                            <li><a href="http://www.cambridgesoft.com/about/profile/">About Us</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="copyRight">
+                            <li class="rightsTxt">Copyright 1998-2013 PerkinElmer Inc. All Rights Reserved</li>                        
+                            <li>
+                            <ul class="followUs">
+                                <li>Follow Us</li>
+                                <li><a href="http://www.facebook.com/pages/PerkinElmer-Informatics/175050115916445#!/pages/PerkinElmer-Informatics/175050115916445?sk=wall" target="_blank"><img width="16" height="16" src="/images/fb_footer.jpg"></a></li>
+                                <li><a href="http://twitter.com/#!/PKI_Informatics" target="_blank"><img width="16" height="16" src="/images/twitter_footer.jpg"></a></li>
+                                <li><a href="http://www.linkedin.com/groups?gid=4049842&amp;trk=hb_side_g" target="_blank"><img width="16" height="16" src="/images/linkedin_footer.jpg"></a></li>
+                                <li><a href="http://www.youtube.com/user/PKIinformatics" target="_blank"><img width="47" height="16" alt="" src="/images/logo_yt_size4.png"></a></li>
+                            </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+</div>
+
+
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.initialize();
+//]]>
+</script>
+</form>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $(".btnRequstInfo").attr("href", function(i, href) {
+            return href + '';
+        });
+    });     
+</script>
+<script src="/js/jquery.jqtransform.js" type="text/javascript"></script>
+</body>
+</html>

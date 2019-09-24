@@ -1,0 +1,1496 @@
+<BASE HREF="http://www.mmrrc.org/">
+
+
+    <!DOCTYPE html>
+<html lang="en" class="sb-init">
+
+
+    <!-- Head -->
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <!--    <meta name="viewport" content="width=device-width, initial-scale=1">-->
+                    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0, user-scalable=no">
+        
+        <title>MMRRC Repository</title>        <meta name="robots" content="index, follow" />
+
+            </head>
+    <!-- /.head -->
+
+
+    <!-- Body -->
+<body ng-app="mmrrcApp">
+<script type='text/javascript' src='/minified-js/jquery1.10.2.js?v=37cf57755c94eb464d2d97b1dc24ef402a79d536'></script><script type='text/javascript' src='/minified-js/bootstrap.js?v=37cf57755c94eb464d2d97b1dc24ef402a79d536'></script><script type='text/javascript' src='/minified-js/bootstrapValidator.js?v=37cf57755c94eb464d2d97b1dc24ef402a79d536'></script><script type='text/javascript' src='/minified-js/sweet-alert.js?v=37cf57755c94eb464d2d97b1dc24ef402a79d536'></script><script type='text/javascript' src='/minified-js/summernote.js?v=37cf57755c94eb464d2d97b1dc24ef402a79d536'></script><script type='text/javascript' src='/minified-js/jquery.finger.js?v=37cf57755c94eb464d2d97b1dc24ef402a79d536'></script><script type='text/javascript' src='/minified-js/jquery-ui.js?v=37cf57755c94eb464d2d97b1dc24ef402a79d536'></script><script type='text/javascript' src='/minified-js/typeahead.js?v=37cf57755c94eb464d2d97b1dc24ef402a79d536'></script><script type='text/javascript' src='/minified-js/slidebars.js?v=37cf57755c94eb464d2d97b1dc24ef402a79d536'></script><script type='text/javascript' src='/minified-js/header.js?v=37cf57755c94eb464d2d97b1dc24ef402a79d536'></script><script type='text/javascript' src='/minified-js/angular.js?v=37cf57755c94eb464d2d97b1dc24ef402a79d536'></script><script type='text/javascript' src='/minified-js/angular-sanitize.js?v=37cf57755c94eb464d2d97b1dc24ef402a79d536'></script><script type='text/javascript' src='/minified-js/app.js?v=37cf57755c94eb464d2d97b1dc24ef402a79d536'></script><script type='text/javascript' src='/minified-js/services.js?v=37cf57755c94eb464d2d97b1dc24ef402a79d536'></script><script type='text/javascript' src='/minified-js/controllers.js?v=37cf57755c94eb464d2d97b1dc24ef402a79d536'></script><script type='text/javascript' src='/minified-js/d3.min.js?v=37cf57755c94eb464d2d97b1dc24ef402a79d536'></script><script type='text/javascript' src='/minified-js/d3-tip.js?v=37cf57755c94eb464d2d97b1dc24ef402a79d536'></script><script type='text/javascript' src='/minified-js/select2.js?v=37cf57755c94eb464d2d97b1dc24ef402a79d536'></script><script type='text/javascript' src='/minified-js/notify.js?v=37cf57755c94eb464d2d97b1dc24ef402a79d536'></script><link rel='stylesheet' type='text/css' href='/minified-css/lumen.bootstrap.css?v=37cf57755c94eb464d2d97b1dc24ef402a79d536'><link rel='stylesheet' type='text/css' href='/minified-css/bootstrapValidator.css?v=37cf57755c94eb464d2d97b1dc24ef402a79d536'><link rel='stylesheet' type='text/css' href='/minified-css/summernote.css?v=37cf57755c94eb464d2d97b1dc24ef402a79d536'><link rel='stylesheet' type='text/css' href='/minified-css/sweet-alert.css?v=37cf57755c94eb464d2d97b1dc24ef402a79d536'><link rel='stylesheet' type='text/css' href='/minified-css/bootstrap_custom.css?v=37cf57755c94eb464d2d97b1dc24ef402a79d536'><link rel='stylesheet' type='text/css' href='/minified-css/header.css?v=37cf57755c94eb464d2d97b1dc24ef402a79d536'><link rel='stylesheet' type='text/css' href='/minified-css/font-awesome.css?v=37cf57755c94eb464d2d97b1dc24ef402a79d536'><link rel='stylesheet' type='text/css' href='/minified-css/jquery-ui.css?v=37cf57755c94eb464d2d97b1dc24ef402a79d536'><link rel='stylesheet' type='text/css' href='/minified-css/slidebars.css?v=37cf57755c94eb464d2d97b1dc24ef402a79d536'><link rel='stylesheet' type='text/css' href='/minified-css/select2.css?v=37cf57755c94eb464d2d97b1dc24ef402a79d536'><link rel='stylesheet' type='text/css' href='/minified-css/printer.css?v=37cf57755c94eb464d2d97b1dc24ef402a79d536'>    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries --><!-- WARNING: Respond.js doesn't work if you view the page via file:// --><!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script><![endif]-->
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <script type="text/javascript">
+        /* Needed for google analytics */
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-12379267-10']);
+        _gaq.push(['_setDomainName', '.mmrrc.org']);
+        _gaq.push(['_trackPageview']);
+
+        $(document).ready(function(){
+            // Initiate Slidebars
+            $.slidebars();
+
+            /* Needed for google analytics */
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        });
+    </script>
+
+    <nav class="navbar navbar-default navbar-fixed-top sb-slide hidden-print" role="navigation">
+
+        <!-- Right Control -->
+        <div class="sb-toggle-left visible-xs visible-sm">
+            <i class="fa fa-fw fa-bars"></i>
+        </div>
+        <!-- /.sb-control-right -->
+
+        <!-- Left Control -->
+        <div class="sb-toggle-right visible-xs visible-sm">
+            <i class="fa fa-fw fa-search"></i>
+        </div>
+        <!-- /.sb-control-right -->
+
+        <!-- checkout -->
+        <div class="checkout-mobile visible-xs visible-sm">
+            <i class="fa fa-fw fa-cart-plus" onclick="location.href='/OTS/orderForm.php';"></i>
+        </div>
+        <!-- /.sb-control-right -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-9 col-sm-7 col-lg-4 col-md-3">
+                <div id="logo" class="pull-right">
+                        <a href="/"><img class="img-responsive" src="/images/MMRRC_NIH_logo_web2.png" alt="MMRRC" width="235" height="65"></a>
+                    </div>
+                </div>
+                <div class="col-xs-3 col-sm-5 col-lg-8 col-md-9">
+
+                <div class="row">
+                        <div class="col-lg-12">
+                            <!-- Search Bar -->
+                            <form class="form-inline pull-right" role="search" method="get" action="/sitesearch.php" id="google-search-div">
+                                <div class="form-group">
+                                    <div class="col-xs-11">
+                                        <div class="input-group input-group-sm">
+                                            <input type="text" class="form-control" name="q" id='google-search-input' placeholder="Search MMRRC via Google">
+                        <span class="input-group-btn">
+                                <button class="btn btn-default" type="submit">
+                                    <i class="glyphicon glyphicon-search"></i>
+                                </button>
+                        </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <!-- /.search bar -->
+                        </div>
+                        <div class="col-lg-12">
+                            <!-- Menu -->
+                            <ul class="nav navbar-nav" id="nav_links">
+                                                                    <li class="dropdown">
+                                        <a href="/about/" class="dropdown-toggle header-titles SUBMISSIONS" data-toggle="dropdown">SUBMISSIONS                                            <b class="caret"></b></a>
+                                        <ul class="dropdown-menu pull-left multi-level" id="child_nav_links">
+                                            <li><a id='Start Submission' href='/submission/strain_submission_terms.php'>Start Submission</a></li><li><a id='Introduction' href='/submission/submIntro.php'>Introduction</a></li><li><a id='Review Criteria' href='/submission/submRevwCriteria.php'>Review Criteria</a></li><li><a id='Application Stage' href='/submission/submApplicStage.php'>Application Stage</a></li><li><a id='Strain Acceptance' href='/submission/submAcceptStage.php'>Strain Acceptance</a></li><li><a id='Strain Transfer Methods' href='/submission/transfer_methods.php'>Strain Transfer Methods</a></li><li><a id='Types of Strain Submissions' href='/submission/strain_submission_type.php'>Types of Strain Submissions</a></li><li><a id='Contract Submissions' href='/submission/fundedSubmissions.php'>Contract Submissions</a></li><li><a id='Benefits of Strain Submission' href='/submission/BenefitsOfSubmission.php'>Benefits of Strain Submission</a></li><li><a id='Material Transfer Agreements' href='/submission/mtaInstructions.php'>Material Transfer Agreements</a></li><li><a id='Special Arrangements' href='/submission/specialArrangements.php'>Special Arrangements</a></li><li><a id='Application Submission' href='/submission/instructions.php'>Application Submission</a></li>                                        </ul>
+                                    </li>
+                                                                    <li class="dropdown">
+                                        <a href="/about/" class="dropdown-toggle header-titles ORDERS" data-toggle="dropdown">ORDERS                                            <b class="caret"></b></a>
+                                        <ul class="dropdown-menu pull-left multi-level" id="child_nav_links">
+                                            <li><a id='Catalog Search' href='/catalog/StrainCatalogSearchForm.php'>Catalog Search</a></li><li><a id='Placing Orders' href='/catalog/requestform_helpdoc.php'>Placing Orders</a></li><li class='dropdown-submenu'><a href='#' class='dropdown-toggle' data-toggle='dropdown'>General Information</a>
+                                                                <ul class='dropdown-menu'><li><a href='/catalog/distrInfo.php' id='Distribution Information'>Distribution Information</a></li><li><a href='/catalog/mtaInstructions.php' id='Agreements'>Agreements</a></li><li><a href='/catalog/fees.php' id='Fees'>Fees</a></li><li><a href='/catalog/addlInfo.php' id='Vendor Accounts Information'>Vendor Accounts Information</a></li><li><a href='/catalog/cryoRecovery.php' id='Cryo-recovery'>Cryo-recovery</a></li><li><a href='/catalog/general_ES_cellline_fee_resequencing.php' id='ES Cell Clones'>ES Cell Clones</a></li><li><a href='/catalog/overview_Major_Collection.php' id='Major Collections'>Major Collections</a></li></ul>
+                                                            </li><li><a id='Strain Search Help' href='/catalog/searchGeneAllele.php'>Strain Search Help</a></li>                                        </ul>
+                                    </li>
+                                                                    <li class="dropdown">
+                                        <a href="/about/" class="dropdown-toggle header-titles ABOUT US" data-toggle="dropdown">ABOUT US                                            <b class="caret"></b></a>
+                                        <ul class="dropdown-menu pull-left multi-level" id="child_nav_links">
+                                            <li class='dropdown-submenu'><a href='#' class='dropdown-toggle' data-toggle='dropdown'>Overview</a>
+                                                                <ul class='dropdown-menu'><li><a href='/about/generalInfo.php' id='Introduction to the MMRRC'>Introduction to the MMRRC</a></li><li><a href='/about/generalInfoBkgrnd.php' id='Background'>Background</a></li><li><a href='/about/organization.php' id='Organization'>Organization</a></li><li><a href='/about/members.php' id='Members and Services'>Members and Services</a></li><li><a href='/about/mmrrcContacts.php' id='Contact Information'>Contact Information</a></li></ul>
+                                                            </li><li class='dropdown-submenu'><a href='#' class='dropdown-toggle' data-toggle='dropdown'>Links & Downloads</a>
+                                                                <ul class='dropdown-menu'><li><a href='/about/linking.php' id='How to Link to Us'>How to Link to Us</a></li><li><a href='/about/data_download.php' id='How to Download MMRRC Data'>How to Download MMRRC Data</a></li><li><a href='/about/mmrrc_api.php' id='MMRRC API'>MMRRC API</a></li><li><a href='/about/resources.php' id='Other Resources'>Other Resources</a></li></ul>
+                                                            </li><li><a id='Reproducibility' href='/about/reproducibility.php'>Reproducibility</a></li><li><a id='Waiving Quarantine' href='/about/approvedVendor.php'>Waiving Quarantine</a></li><li><a id='FAQ' href='/about/faq.php'>FAQ</a></li>                                        </ul>
+                                    </li>
+                                
+                                <li class="login_li">
+                                                                            <a class="btn btn-sky" href="#login-modal" id="main-login-button" data-toggle="modal" data-target="#login-modal"><span class="fa fa-fw fa-lock fa-1x"></span> Log In</a>
+                                                                    </li>
+                                <li class="contact_us">
+                                    <a class="btn btn-sky" href="#contact-us-modal" id="contact-us-button" data-toggle="modal" data-target="#contact-us-modal"><span class="fa fa-fw fa-user fa-1x"></span> Contact Us</a>
+                                </li>
+                                <li class="checkout_li">
+                                    <i class="fa fa-fw fa-cart-plus checkout-icon" onclick="location.href='/OTS/orderForm.php';"></i>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </nav>
+
+    <!-- Pull out menu left -->
+    <div class="sb-slidebar sb-left hidden-print">
+        <nav>
+            <!-- Menu -->
+            <ul class="nav sb-menu">
+                <li>
+                    <a href="/"><img src="/images/MMRRC_NIH_logo_web2.png" class='side-logo' alt="MMRRC" width="180" height="57"></a>
+                </li>
+                                    <li class="header-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">SUBMISSIONS                            <b class="caret"></b></a>
+                        <ul class="dropdown-menu sidebar-menu pull-left">
+                            <li><a id='Start Submission' href='/submission/strain_submission_terms.php'>Start Submission</a></li><li><a id='Introduction' href='/submission/submIntro.php'>Introduction</a></li><li><a id='Review Criteria' href='/submission/submRevwCriteria.php'>Review Criteria</a></li><li><a id='Application Stage' href='/submission/submApplicStage.php'>Application Stage</a></li><li><a id='Strain Acceptance' href='/submission/submAcceptStage.php'>Strain Acceptance</a></li><li><a id='Strain Transfer Methods' href='/submission/transfer_methods.php'>Strain Transfer Methods</a></li><li><a id='Types of Strain Submissions' href='/submission/strain_submission_type.php'>Types of Strain Submissions</a></li><li><a id='Contract Submissions' href='/submission/fundedSubmissions.php'>Contract Submissions</a></li><li><a id='Benefits of Strain Submission' href='/submission/BenefitsOfSubmission.php'>Benefits of Strain Submission</a></li><li><a id='Material Transfer Agreements' href='/submission/mtaInstructions.php'>Material Transfer Agreements</a></li><li><a id='Special Arrangements' href='/submission/specialArrangements.php'>Special Arrangements</a></li><li><a id='Application Submission' href='/submission/instructions.php'>Application Submission</a></li>                        </ul>
+                    </li>
+                                    <li class="header-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">ORDERS                            <b class="caret"></b></a>
+                        <ul class="dropdown-menu sidebar-menu pull-left">
+                            <li><a id='Catalog Search' href='/catalog/StrainCatalogSearchForm.php'>Catalog Search</a></li><li><a id='Placing Orders' href='/catalog/requestform_helpdoc.php'>Placing Orders</a></li><li class='sidebar-submenu'><a href='#' class='dropdown-toggle' data-toggle='dropdown'>General Information</a>
+                                            <ul class='dropdown-menu'><li><a href='/catalog/distrInfo.php' id='Distribution Information'>Distribution Information</a></li><li><a href='/catalog/mtaInstructions.php' id='Agreements'>Agreements</a></li><li><a href='/catalog/fees.php' id='Fees'>Fees</a></li><li><a href='/catalog/addlInfo.php' id='Vendor Accounts Information'>Vendor Accounts Information</a></li><li><a href='/catalog/cryoRecovery.php' id='Cryo-recovery'>Cryo-recovery</a></li><li><a href='/catalog/general_ES_cellline_fee_resequencing.php' id='ES Cell Clones'>ES Cell Clones</a></li><li><a href='/catalog/overview_Major_Collection.php' id='Major Collections'>Major Collections</a></li></ul>
+                                        </li><li><a id='Strain Search Help' href='/catalog/searchGeneAllele.php'>Strain Search Help</a></li>                        </ul>
+                    </li>
+                                    <li class="header-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">ABOUT US                            <b class="caret"></b></a>
+                        <ul class="dropdown-menu sidebar-menu pull-left">
+                            <li class='sidebar-submenu'><a href='#' class='dropdown-toggle' data-toggle='dropdown'>Overview</a>
+                                            <ul class='dropdown-menu'><li><a href='/about/generalInfo.php' id='Introduction to the MMRRC'>Introduction to the MMRRC</a></li><li><a href='/about/generalInfoBkgrnd.php' id='Background'>Background</a></li><li><a href='/about/organization.php' id='Organization'>Organization</a></li><li><a href='/about/members.php' id='Members and Services'>Members and Services</a></li><li><a href='/about/mmrrcContacts.php' id='Contact Information'>Contact Information</a></li></ul>
+                                        </li><li class='sidebar-submenu'><a href='#' class='dropdown-toggle' data-toggle='dropdown'>Links & Downloads</a>
+                                            <ul class='dropdown-menu'><li><a href='/about/linking.php' id='How to Link to Us'>How to Link to Us</a></li><li><a href='/about/data_download.php' id='How to Download MMRRC Data'>How to Download MMRRC Data</a></li><li><a href='/about/mmrrc_api.php' id='MMRRC API'>MMRRC API</a></li><li><a href='/about/resources.php' id='Other Resources'>Other Resources</a></li></ul>
+                                        </li><li><a id='Reproducibility' href='/about/reproducibility.php'>Reproducibility</a></li><li><a id='Waiving Quarantine' href='/about/approvedVendor.php'>Waiving Quarantine</a></li><li><a id='FAQ' href='/about/faq.php'>FAQ</a></li>                        </ul>
+                    </li>
+                                                    <a class="btn btn-block btn-sky" href="#login-modal" id="main-login-button" data-toggle="modal" data-target="#login-modal"><span class="fa fa-fw fa-lock fa-1x"></span> Log In</a>
+                                <a class="btn btn-block btn-sky" href="#contact-us-modal" id="contact-us-button" data-toggle="modal" data-target="#contact-us-modal">
+                    <span class="fa fa-fw fa-user fa-1x"></span> Contact Us</a>
+            </ul>
+        </nav>
+    </div>
+    <!-- ./pulllout menu left -->
+
+    <!-- Pull out search right -->
+    <div class="sb-slidebar sb-right hidden-print">
+        <nav>
+            <!-- Menu -->
+            <ul class="nav sb-menu">
+                <li>
+                    <a href="/"><img src="/images/MMRRC_NIH_logo_web2.png" class='side-logo' alt="MMRRC" width="180" height="57"></a>
+                </li>
+                <!-- Search Bar -->
+                <li class="">
+                    <form class="" role="search" method="get" action="/sitesearch.php">
+                        <div class="form-group">
+                            <div class="col-xs-12">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" name="q" placeholder="Search MMRRC via Google">
+                                        <span class="input-group-btn">
+                                                <button class="btn btn-default" type="submit">
+                                                    <i class="glyphicon glyphicon-search"></i></button>
+                                        </span>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </li>
+                <!-- /.search bar -->
+            </ul>
+        </nav>
+    </div>
+    <!-- ./pulllout search right -->
+
+    <!-- Login Modal popup -->
+    <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h3 class="modal-title">MMRRC Log In</h3>
+                </div>
+                <form class="form-horizontal" id="login-form" action="" method="post">
+                    <div class="modal-body">
+                        <input type="hidden" name="action_type" value="save_login_form">
+                        <input type="hidden" name="login-url-redirect" id="login-url-redirect" value="">
+                        <input type="hidden" name="mmrrc-product-id" id="mmrrc-product-id" value="">
+
+                        <div class="form-group">
+                            <label class="col-lg-3 control-label">Email</label>
+
+                            <div class="col-lg-9">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" name="email" placeholder="Email"/>
+                                    <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
+                                </div>
+                                <div class="help-block text-danger"></div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-lg-3 control-label">Password</label>
+
+                            <div class="col-lg-9">
+                                <div class="input-group">
+                                    <input type="password" class="form-control" name="password" placeholder="Password"/>
+                                    <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
+                                </div>
+                                <div class="help-block text-danger"></div>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-offset-3">
+                            <p><a href="/account/register.php">Register New MMRRC Account</a></p>
+                        </div>
+                        <div class="col-lg-offset-3">
+                            <p><a href="/account/reset.php">Reset Password</a></p>
+                        </div>
+                        <p class="text-left text-danger" id="error" style="display: none"></p>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#" data-dismiss="modal" class="btn btn-danger">Close</a>
+                        <button type="submit" class="btn btn-success" id="login">Log In</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- /.Login -->
+
+    <!-- Contact Us popup -->
+    <div class="modal fade" id="contact-us-modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h3 class="modal-title">Contact Us</h3>
+                </div>
+                <form class="form-horizontal" id="contact-us-form" action="" method="post">
+                    <input type="hidden" name="contact-us-url" value="https://www.mmrrc.org/">
+                    <input type="hidden" id="send-to-email" name="send-to-email" value="service@mmrrc.org">
+                    <input type="hidden" id="send-function" name="send-function" value="">
+                    <input type="hidden" id="necessary-id" name="necessary-id" value="">
+
+                    <div class="modal-body">
+                        <div class="form-group feedback-to">
+                            <label class="col-md-4 control-label" for="radios">Send Feedback To</label>
+
+                            <div class="col-md-8">
+                                <label class="radio-inline" for="cs">
+                                    <input type="radio" name="contact-us-type" id="cs" value="service@mmrrc.org" checked="checked">Customer Service
+                                </label> <label class="radio-inline" for="wd">
+                                    <input type="radio" name="contact-us-type" id="wd" value="support@mmrrc.org"> Web Developer
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Subject</label>
+
+                            <div class="col-md-9">
+                                <input type="text" class="form-control" name="contact-us-subject" placeholder="Subject"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Name</label>
+
+                            <div class="col-md-9">
+                                <input type="text" class="form-control" name="contact-us-name" placeholder="Name"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Email</label>
+
+                            <div class="col-md-9">
+                                <input type="email" class="form-control" name="contact-us-email" placeholder="Email"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Message</label>
+
+                            <div class="col-md-9">
+                                <textarea class="form-control" name="contact-us-message"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Captcha</label>
+
+                            <div class="g-recaptcha col-md-9" data-sitekey="6LddCyAUAAAAACRxR03HDHrQubhKSoAHByDY0jIV"></div>
+                        </div>
+                        <p>
+                            <a href="/about/mmrrcContacts.php">Click Here for Additional Contact Information</a>
+                        </p>
+
+
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#" data-dismiss="modal" class="btn btn-danger">Close</a>
+                        <button type="submit" class="btn btn-success" id="send-feedback">Send</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- /.Contact Us -->
+
+    <!-- Register Interest popup-->
+    <div class="modal fade" id="register-interest" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h3 class="modal-title">Register Interest Details</h3>
+                </div>
+                <form id="register-interest-form" class="form-horizontal">
+                    <input type="hidden" name="mmrrc_id" id="mmrrc_id" value="">
+                    <input type="hidden" name="action_type" value="save_add_fav_form">
+
+                    <div class="modal-body">
+                        <fieldset>
+                            <!-- Text input-->
+                            <div class="form-group">
+                                <label class="col-md-4 control-label" for="stock_number">Stock Number</label>
+
+                                <div class="col-md-5 form-control-static" id="stock_number" name="stock_number">
+                                </div>
+                            </div>
+
+                            <!-- Text input-->
+                            <div class="form-group">
+                                <label class="col-md-4 control-label" for="strain_name">Strain Name</label>
+
+                                <div class="col-md-5 form-control-static" id="strain_name" name="strain_name">
+                                </div>
+                            </div>
+
+                            <!-- Select Basic -->
+                            <div class="form-group">
+                                <label class="col-md-4 control-label required" for="mouse_type">Mouse Type</label>
+
+                                <div class="col-md-5">
+                                    <select id="mouse_type" name="mouse_type" class="form-control">
+                                        <option value="">Please Select...</option>
+                                        <option id="" value="IndividualMice">Individual Mice</option>
+                                        <option id="" value="Breeder">Breeder</option>
+                                        <option id="" value="RetiredBreeder">Retired Breeder</option>
+                                        <option id="" value="NoPref">No Preference</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Select Basic -->
+                            <div class="form-group">
+                                <label class="col-md-4 control-label required" for="gender_spec">Gender</label>
+
+                                <div class="col-md-5">
+                                    <select id="gender_spec" name="gender_spec" class="form-control">
+                                        <option value="">Please Select...</option>
+                                        <option id="" value="Female">Female</option>
+                                        <option id="" value="Male">Male</option>
+                                        <option id="" value="Either/All">Either/All one sex</option>
+                                        <option id="" value="Either/Any">Either/Any combo</option>
+                                        <option id="" value="Both">Both sexes</option>
+                                        <option id="" value="NoPref">No Preference</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Select Basic -->
+                            <div class="form-group">
+                                <label class="col-md-4 control-label required" for="order_frequency">Estimated Order Frequency</label>
+
+                                <div class="col-md-5">
+                                    <select id="order_frequency" name="order_frequency" class="form-control">
+                                        <option id="" value="">Please Select...</option>
+                                        <option id="" value="Once">Once</option>
+                                        <option id="" value="Weekly">Per week</option>
+                                        <option id="" value="Monthly">Per month</option>
+                                        <option id="" value="Yearly">Per year</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Text input-->
+                            <div class="form-group">
+                                <label class="col-md-4 control-label required" for="total_qty">Estimated Order Quantity</label>
+
+                                <div class="col-md-5">
+                                    <input id="total_qty" name="total_qty" type="text" placeholder="" class="form-control input-md">
+                                </div>
+                            </div>
+
+                            <!-- Textarea -->
+                            <div class="form-group">
+                                <label class="col-md-4 control-label" for="comments">Comments</label>
+
+                                <div class="col-md-5">
+                                    <textarea class="form-control" id="comments" name="comments"></textarea>
+                                </div>
+                            </div>
+
+                        </fieldset>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#" data-dismiss="modal" class="btn btn-danger">Close</a>
+                        <button type="submit" class="btn btn-success" id="register">Register</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Middle Content between Header & Footer if fullwidth set then make width 100% -->
+<div id="sb-site">
+<div class="container">
+    <!-- Check to see if IE less than 9 show message to upgrade broswer -->
+<script type='text/javascript' src='/minified-js/index.js?v=37cf57755c94eb464d2d97b1dc24ef402a79d536'></script><link rel='stylesheet' type='text/css' href='/minified-css/index.css?v=37cf57755c94eb464d2d97b1dc24ef402a79d536'>
+    <!-- Carousel -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="item active">
+                <img class="img-responsive" src="images/IMG1.jpg" alt="First slide">
+
+                <div class="container">
+                    <div class="carousel-caption text-capitalize">
+	                    We Distribute and Archive Scientifically Valuable Mice And ES Cell Lines
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img class="img-responsive" src="images/IMG2.jpg" alt="Second slide">
+
+                <div class="container">
+                    <div class="carousel-caption text-capitalize">
+	                    We Are One Of The Largest Non-Profit Mouse Repositories
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img class="img-responsive" src="/images/IMG3.jpg" alt="Third slide">
+
+                <div class="container">
+                    <div class="carousel-caption text-capitalize">
+	                    We Are The Premier NIH Supported Mouse Repository
+                    </div>
+                </div>
+            </div>
+	        <div class="item">
+		        <img class="img-responsive" src="/images/IMG7.jpg" alt="Third slide">
+
+		        <div class="container">
+			        <div class="carousel-caption text-capitalize">
+				        We Support Reproducibility Through Annotation And Documentation
+			        </div>
+		        </div>
+	        </div>
+	        <div class="item">
+		        <img class="img-responsive" src="/images/IMG8.jpg" alt="Third slide">
+
+		        <div class="container">
+			        <div class="carousel-caption text-capitalize">
+				        We Are Committed To The Highest Standards Of Experimental Design & Quality Control
+			        </div>
+		        </div>
+	        </div>
+	        <div class="item">
+		        <img class="img-responsive" src="/images/IMG4.jpg" alt="Third slide">
+
+		        <div class="container">
+			        <div class="carousel-caption text-capitalize">
+				        We Provide Mice And ES Cell Lines To Researchers Worldwide
+			        </div>
+		        </div>
+	        </div>
+	        <div class="item">
+		        <img class="img-responsive" src="/images/IMG5.jpg" alt="Third slide">
+
+		        <div class="container">
+			        <div class="carousel-caption text-capitalize">
+				        We Conduct Research Relevant To MMRRC Resources
+			        </div>
+		        </div>
+	        </div>
+	        <div class="item">
+		        <img class="img-responsive" src="/images/IMG6.jpg" alt="Third slide">
+
+		        <div class="container">
+			        <div class="carousel-caption text-capitalize">
+				        Each Month Our Collection Of Mice And ES Cell Lines Grow
+			        </div>
+		        </div>
+	        </div>
+        </div>
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+    </div><!-- /.carousel -->
+
+	<!-- Search Div -->
+    <div class="row">
+        <div class="col-lg-12">
+            <form class="" role="search" method="post" action="/catalog/StrainCatalogSearchForm.php" id="searchForm">
+                <div class="row">
+                    <div class="form-group">
+                        <div class="form-group">
+                            <label class="col-lg-1 col-md-1 control-label"></label>
+                            <div class="col-lg-7 col-md-7">
+                                <div class="input-group">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default catalog-search-button-div" type="button"><i class="glyphicon glyphicon-search catalog-search"></i></button>
+                                    </span>
+                                    <input type="text" class="form-control typeahead" name="search_query" id='search_query'>
+                                    <input id="mesh_id" name="mesh_id" value="" type="hidden">
+                                    <input id="advanced_search" name="advanced_search" value="" type="hidden">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-lg-4 col-md-4">
+                                <button type="submit" class="btn btn-sky catalog-search-button" style="font-size: 15px;">Search Catalog</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-lg-11 col-lg-offset-1 searchBy">
+                        <b>Search by: </b>
+                        <span class='hint-help' data-toggle="tooltip" data-placement="bottom" title='Example: MeSH: Brain/metabolism'>Major MeSH Term</span>,
+                        <span class='hint-help' data-toggle="tooltip" data-placement="bottom" title='Example: MMRRC:000372-UCD, 372 or 372-UCD'>MMRRC ID</span>,
+                        <span class='hint-help' data-toggle="tooltip" data-placement="bottom" title='Example: 129(B6)-Map3k1<tm1Glj>/Mmnc, Map3k1 or tm1glj'>Gene/Strain Names</span>,
+                        <span class='hint-help' data-toggle="tooltip" data-placement="bottom" title='Example: MGI:2179711'>MGI ID</span>,
+                        <span class='hint-help' data-toggle="tooltip" data-placement="bottom" title='List of Collections: GENSAT'>Major Collection</span> or
+                        <span class='hint-help' data-toggle="tooltip" data-placement="bottom" title='RRID:MMRRC_000372-UCD'>RRID</span>.
+                        <a href='#' class="advanced-search-link">Click here for advanced search form</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- ./search div -->
+    <!-- Page Content -->
+    <div class="row">
+        <!-- News Entries Column -->
+        <div class="col-md-9">
+                 <a href="/news.php"><h2 class="page-header news"><i class="fa fa-fw fa-newspaper-o"></i> News</h2></a>
+            <div class="new-products-header">
+                <a href="/about/newproducts.php#newproducts" class="btn btn-primary new-products-button"> Newly available/Recently accepted</a>
+                <a href="/about/newproducts.php#retiringcolonies" class="btn btn-warning"> Retiring Colonies</a>
+            </div>
+                            <div class="panel panel-default news"  news-id="0">
+                    <div class="panel-heading">
+                        <h4>
+                            <a href="/news.php?post_id=83"> September is Prostate Cancer Awareness Month</a>
+                        </h4>
+                    </div>
+                    <div class="panel-body">
+                        <p><p>This September during Prostate Cancer Awareness Month, the NIH is working to provide easily accessible prostate health screenings and to educate the public about risk factors of prostate related diseases. For more information on Prostate Cancer, visit the NIH’s official website:</p>
+
+<p><a href="https://report.nih.gov/nihfactsheets/ViewFactSheet.aspx?csid=60e" target="_blank">https://report.nih.gov/nihfactsheets/ViewFactSheet.aspx?csid=60</a></p>
+
+<p><b>Popular MMRRC Prostate Cancer Awareness Month Strains:</b><p>
+<ul>
+<li><a href="/catalog/sds.php?mmrrc_id=36713">C.129X1(Cg)-<i>Atp12a<sup>tm1Ges</sup></i></a></li>
+<li><a href="/catalog/sds.php?mmrrc_id=11808">B6;SJL-Tg(Pbsn-TP53*R273H)1Elga/Mmucd</a></li>
+</ul>
+
+<p>Contact us if you need assistance with learning more about strains related to Prostate Cancer in the MMRRC repository.</p>
+
+</p>
+                    </div>
+                </div>
+                            <div class="panel panel-default news"  news-id="1">
+                    <div class="panel-heading">
+                        <h4>
+                            <a href="/news.php?post_id=82"> FREE NIH sponsored Symposium on Precision Mouse Modeling: Translation to Human Disease 9/11/2019
+</a>
+                        </h4>
+                    </div>
+                    <div class="panel-body">
+                        <p><p>Come learn from leading scientific researchers about the latest developments and research surrounding Precision Mouse Modeling as it translates to Human Disease.  Sponsored by the NIH, ORIP, this information symposium will be held from 1:30pm – 5pm on September 11 at Monsanto Auditorium of the Bond Life Science Center on the University of Missouri-Columbia.</p>
+
+<p><a href="/about/2019_MMRRC_Symposium_Flyer.pdf">MMRRC Symposium Flyer</a></p></p>
+                    </div>
+                </div>
+                            <div class="panel panel-default news" style='display:none'; news-id="2">
+                    <div class="panel-heading">
+                        <h4>
+                            <a href="/news.php?post_id=81"> August is Spinal Muscular Atrophy Awareness Month</a>
+                        </h4>
+                    </div>
+                    <div class="panel-body">
+                        <p><p>This August during Spinal Muscular Atrophy Awareness Month, the NIH is raising a public health campaign to spread awareness of spinal muscular atrophy and the availability of carrier screening. For more information on Spinal Muscular Atrophy, visit the NIH’s official website:</p>
+
+<p><a href="https://www.ninds.nih.gov/Disorders/All-Disorders/Spinal-Muscular-Atrophy-Information-Page" target="_blank">https://www.ninds.nih.gov/Disorders/All-Disorders/Spinal-Muscular-Atrophy-Information-Page</a></p>
+
+<p><b>Popular MMRRC Spinal Muscular Atrophy Awareness Month Strains:</b><p>
+<ul>
+<li><a href="/catalog/sds.php?mmrrc_id=10317">B6.129-<i>Dysf<sup>tm1Kcam</sup></i>/Mmmh</a></li>
+<li><a href="/catalog/sds.php?mmrrc_id=16843">B6.129S4-<i>Sspn<sup>tm1Kcam</sup></i>/Mmmh</a></li>
+<li><a href="/catalog/sds.php?mmrrc_id=9967">B6;129X1-<i>Ptk2<sup>tm1Lfr</sup></i></a></li>
+</ul>
+
+<p>Contact us if you need assistance with learning more about strains related to Spinal Muscular Atrophy in the MMRRC repository.</p>
+
+</p>
+                    </div>
+                </div>
+                            <div class="panel panel-default news" style='display:none'; news-id="3">
+                    <div class="panel-heading">
+                        <h4>
+                            <a href="/news.php?post_id=80"> June is Alzheimer’s Awareness Month</a>
+                        </h4>
+                    </div>
+                    <div class="panel-body">
+                        <p><p>June is Alzheimer’s Awareness Month, and a popular research area for MMRRC strains to study the disease.  For more information on Alzheimer’s disease, visit the NIH’s official website:</p>
+
+<p><a href="https://www.nia.nih.gov/health/alzheimers" target="_blank">https://www.nia.nih.gov/health/alzheimers</a></p>
+
+<p><b>Popular MMRRC Alzheimer’s Awareness Month Strains:</b><p>
+<ul>
+<li><a href="/catalog/sds.php?mmrrc_id=11170">6;SJL-<i>Nos2<sup>+</sup></i> Tg(APPSWE)2576Kha Tg(PSEN1)1Zhe/Mmnc</a></li>
+<li><a href="/catalog/sds.php?mmrrc_id=11171">B6;SJL-<i>Nos2<sup>tm1Mrl</sup></i> Tg(APPSWE)2576Kha Tg(PSEN1)1Zhe/Mmnc</a></li>
+<li><a href="/catalog/sds.php?mmrrc_id=34830">B6;129-<i>Psen1<sup>tm1Mpm</sup></i> Tg(APPSwe,tauP301L)1Lfa/Mmjax</a></li>
+<li><a href="/catalog/sds.php?mmrrc_id=34831">B6.129-Tg(APPSw)40Btla/Mmjax</a></li>
+<li><a href="/catalog/sds.php?mmrrc_id=34833">B6.Cg-Tg(APP695)3Dbo Tg(PSEN1dE9)S9Dbo/Mmjax</a></li>
+<li><a href="/catalog/sds.php?mmrrc_id=34837">B6.129S4-Tg(APPSwLon)96Btla/Mmjax</a></li>
+<li><a href="/catalog/sds.php?mmrrc_id=34838">129S1.129(Cg)-Tg(APPSw)40Btla/Mmjax</a></li>
+<li><a href="/catalog/sds.php?mmrrc_id=34839">D2.129(B6)-Tg(APPSw)40Btla/Mmjax</a></li>
+<li><a href="/catalog/sds.php?mmrrc_id=34840">B6SJL-Tg(APPSwFlLon,PSEN1*M146L*L286V)6799Vas/Mmjax</a></li>
+<li><a href="/catalog/sds.php?mmrrc_id=34841">A.129(B6)-Tg(APPSw)40Btla/Mmjax</a></li>
+<li><a href="/catalog/sds.php?mmrrc_id=34848">B6.Cg-Tg(APPSwFlLon,PSEN1*M146L*L286V)6799Vas/Mmjax</a></li>
+<li><a href="/catalog/sds.php?mmrrc_id=36481">B6.Cg-<i>Mapt<sup>tm1Hnd</sup></i> Tg(Thy1-MAPT*)3608Gds/Mmjax</a></li>
+<li><a href="/catalog/sds.php?mmrrc_id=36485">B6.Cg-<i>Mapt<sup>tm1Hnd</sup></i> Tg(Thy1-MAPT*)3610Gds/Mmjax</a></li>
+</ul>
+
+
+<p>Contact us if you need assistance with learning more about strains related to Alzheimer in the MMRRC repository.</p>
+
+</p>
+                    </div>
+                </div>
+                            <div class="panel panel-default news" style='display:none'; news-id="4">
+                    <div class="panel-heading">
+                        <h4>
+                            <a href="/news.php?post_id=79"> May is Cystic Fibrosis Awareness Month</a>
+                        </h4>
+                    </div>
+                    <div class="panel-body">
+                        <p><p>This May during Cystic Fibrosis Awareness Month, the NIH is encouraging the public to support their mission to cure Cystic Fibrosis by participating in walks and sharing facts about the disease on social media. For more information on Cystic Fibrosis, visit the NIH’s official website:</p>
+
+<p><a href="https://ghr.nlm.nih.gov/condition/cystic-fibrosis" target="_blank">https://ghr.nlm.nih.gov/condition/cystic-fibrosis</a></p>
+
+<p><b>Popular MMRRC Cystic Fibrosis Awareness Month Strains:</b><p>
+<ul>
+<li><a href="/catalog/sds.php?mmrrc_id=29585">C.129P2(Cg)-<i>Cftr<sup>tm1Unc</sup></i>/Mmnc</a></li>
+<li><a href="/catalog/sds.php?mmrrc_id=29586">D2.129P2(Cg)-<i>Cftr<sup>tm1Unc</sup></i>/Mmnc</a></li>
+</ul>
+
+<p>Contact us if you need assistance with learning more about strains related to Cystic Fibrosis in the MMRRC repository.</p>
+</p>
+                    </div>
+                </div>
+                            <div class="panel panel-default news" style='display:none'; news-id="5">
+                    <div class="panel-heading">
+                        <h4>
+                            <a href="/news.php?post_id=78"> April is Parkinson’s Awareness Month</a>
+                        </h4>
+                    </div>
+                    <div class="panel-body">
+                        <p><p>This April during Parkinson’s Awareness Month, the NIH is conducting a campaign to gain support for the one million Americans affected by Parkinson’s disease. For more information on Parkinson’s disease, visit the NIH’s official website: </p>
+
+<p><a href="https://www.ninds.nih.gov/Disorders/All-Disorders/Parkinsons-Disease-Information-Page" target="_blank">https://www.ninds.nih.gov/Disorders/All-Disorders/Parkinsons-Disease-Information-Page</a></p>
+
+<p><b>Popular MMRRC Parkinson’s Awareness Month Strains:</b><p>
+<ul>
+<li><a href="/catalog/sds.php?mmrrc_id=36980">B6.129-<i>Dnajc6<sup>tm1Legr</sup></i>/Mmjax</a></li>
+</ul>
+
+<p>Contact us if you need assistance with learning more about strains related to Parkinson’s disease in the MMRRC repository.</p>
+</p>
+                    </div>
+                </div>
+                            <div class="panel panel-default news" style='display:none'; news-id="6">
+                    <div class="panel-heading">
+                        <h4>
+                            <a href="/news.php?post_id=77"> March is National Kidney Month</a>
+                        </h4>
+                    </div>
+                    <div class="panel-body">
+                        <p><p>This March during National Kidney Month, he NIH-NIDDK is focusing on raising that Chronic Kidney Disease is a serious condition affecting more than 30 million adults in the United States, yet people in the early stages may not have symptoms. Many people don’t find out they have kidney disease until their kidneys are permanently damaged.  To learn more about Kidney Disease, visit the NIH-NIDDK’s official website: </p>
+
+<p><a href="https://www.niddk.nih.gov/health-information/kidney-disease" target="_blank">https://www.niddk.nih.gov/health-information/kidney-disease</a></p>
+
+<p><b>Popular MMRRC Kidney Disease Month Strains:</b><p>
+<ul>
+<li><a href="/catalog/sds.php?mmrrc_id=35">B6;129S-<i>S1pr1<sup>tm1Rlp</sup></i>/Mmnc</a></li>
+<li><a href="/catalog/sds.php?mmrrc_id=14110">B6.129X1-<i>Xdh<sup>tm1Fink</sup></i>/Mmucd</a></li>
+<li><a href="/catalog/sds.php?mmrrc_id=32053">B6.129S6-<i>Stat5a/Stat5b<sup>tm2Mam</sup></i>/Mmjax</a></li>
+<li><a href="/catalog/sds.php?mmrrc_id=32880">STOCK <i>Khdc3<sup>tm1Dean</sup></i>/Mmnc</a></li>
+</ul>
+<p>Contact us if you need assistance with learning more about the more than 320 strains related to Kidney Disease available in the MMRRC repository.</p>
+</p>
+                    </div>
+                </div>
+                            <div class="panel panel-default news" style='display:none'; news-id="7">
+                    <div class="panel-heading">
+                        <h4>
+                            <a href="/news.php?post_id=76"> MMRRC Announces Availability of KOMP Repository Mice & ES Cells</a>
+                        </h4>
+                    </div>
+                    <div class="panel-body">
+                        <p><p>The Mutant Mouse Resource and Research Center (MMRRC), the official National Institute of Health (NIH) repository of mouse models, is pleased to announce the availability of genetically-altered mice and embryonic stem (ES) cells made as part of the NIH Knockout Mouse Project (KOMP) and previously maintained in the KOMP Repository.  The KOMP Repository collection will provide investigators with the convenience of a one-stop portal to one of the largest inventories of mutant mouse strains and ES cell lines available to the biomedical research community.</p>
+<p>These newly acquired mouse and ES cell lines have been deposited into the MMRRC at UC Davis. The MMRRC at UC Davis is the largest of four regional archive and distribution centers in the NIH consortium. The MMRRC functions as a single repository resource and is comprised of an Informatics, Coordination and Service Center (ICSC) and three additional regional distribution facilities which include: <u>The Jackson Laboratory</u>, <u>University of Missouri</u>, and <u>University of North Carolina, Chapel Hill</u>. The newly available KOMP Repository mice (4,175 unique lines) & ES cell lines (14,013 unique mutant lines and 7 parental lines) can be accessed by visiting the MMRRC website (<a href='https://www.mmrrc.org'>www.mmrrc.org</a>) and typing in "KOMP Repository" in the search function, or by using the advanced search function and indicating “Major Collection = KOMP", and then searching by gene of interest, which will allow filtering for ES cells or mice.</p>
+<p>The MMRRC was created in 1999, and is supported through the NIH, Office of Infrastructure and Research Programs (ORIP), as the nation’s premier mouse archive and distribution repository.  Since that time, the MMRRC has earned an international reputation for the management, cryopreservation, and distribution of scientifically valuable, genetically engineered mouse strains and mouse ES cells. In partnership with researchers around the globe, the MMRRC continues to expand its holdings of mouse models. Today, with more than 59,000 available models, the MMRRC serves as a valuable resource to drive research discoveries for human disease.</p>
+</p>
+                    </div>
+                </div>
+                            <div class="panel panel-default news" style='display:none'; news-id="8">
+                    <div class="panel-heading">
+                        <h4>
+                            <a href="/news.php?post_id=75"> February is American Heart Month</a>
+                        </h4>
+                    </div>
+                    <div class="panel-body">
+                        <p><p>This February during American Heart Month, the NIH is encouraging people to take charge of their health and start new, heart-healthy behavior that can help reduce their risk of heart disease and stroke. For more information, visit the NIH’s official website. </p>
+
+<p><a href="https://www.nhlbi.nih.gov/health/educational/hearttruth/lower-risk/what-is-heart-disease.htm" target="_blank">https://www.nhlbi.nih.gov/health/educational/hearttruth/lower-risk/what-is-heart-disease.htm</a></p>
+
+<p><b>Popular MMRRC Heart Month Strains:</b><p>
+<ul>
+<li><a href="/catalog/sds.php?mmrrc_id=121">D2.C3-Tg(Myh6-Ngfb)4Fed/Mmmh</a></li>
+<li><a href="/catalog/sds.php?mmrrc_id=210">B6.129S7-<i>Chrnb4<sup>tm1Mdb</sup></i>/Mmnc</a></li>
+<li><a href="/catalog/sds.php?mmrrc_id=34404">B6;129P2-<i>Pde4d<sup>tm1Mct</sup></i>/Mmucd</a></li>
+</ul>
+<p>Contact us if you need assistance with learning more about strains related to heart disease in the MMRRC repository.</p>
+</p>
+                    </div>
+                </div>
+                            <div class="panel panel-default news" style='display:none'; news-id="9">
+                    <div class="panel-heading">
+                        <h4>
+                            <a href="/news.php?post_id=74"> January is National Birth Defects Prevention Month</a>
+                        </h4>
+                    </div>
+                    <div class="panel-body">
+                        <p><p>This month seeks to promote health and awareness of birth defects.  At the MMRRC, we understand that data sharing is essential to speed translation of research results into knowledge, therapies, and procedures to improve human health. The MMRRC is committed to sharing data and offers several strains and models to advance research in structural birth defects and foster discovery of shared genetic pathways between disorders. </p>
+
+<p><a href="https://www.nichd.nih.gov/about/overview/directors_corner/prev_updates/010715-birth-defects" target="_blank">https://www.nichd.nih.gov/about/overview/directors_corner/prev_updates/010715-birth-defects</a></p>
+
+<p><b>Popular research models available in the MMRRC include:</b><p>
+<ul>
+<li>down syndrome</li>
+<li>neural tube defects</li>
+<li>chromosome aberrations</li>
+<li>spinal bifida</li>
+<li>cystic fibrosis</li>
+<li>cleft palate</li>
+<li>fragile X</li>
+</ul>
+<p>Contact us if you need assistance with learning more about strains related to birth defects in the MMRRC repository.</p>
+</p>
+                    </div>
+                </div>
+                            <div class="panel panel-default news" style='display:none'; news-id="10">
+                    <div class="panel-heading">
+                        <h4>
+                            <a href="/news.php?post_id=73"> MMRRC Education & Outreach Booth Conference Wrap Up</a>
+                        </h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>The MMRRC education booth is back from two exciting end of the year conferences in San Diego: <a href='http://www.ashg.org/2018meeting/' target='_blank'>ASHG</a> and <a href='https://www.sfn.org/Meetings/Neuroscience-2018' target='_blank'>SfN</a>.   Both conferences boasted strong attendance rates, with ASHG claiming their highest attendee count to date.  There were many great poster sessions showcasing the latest research efforts involving the use of mouse models.  We had the pleasure of meeting many new investigators and students and learning about their research efforts involving the use of mice.  We were also excited to provide information about role that the MMRRC plays with archiving and distribution of mouse models, and the importance of rigor and reproducibility.  It’s always great to see that our outreach and education efforts can have an impact on increasing awareness of the MMRRC.
+<p>
+<a href='https://twitter.com/hashtag/mousemodels'>#mousemodels</a> <a href='https://twitter.com/hashtag/mouseresearch'>#mouseresearch</a> <a href='https://twitter.com/hashtag/rigorandreproducibility'>#rigorandreproducibility</a> <a href='https://twitter.com/hashtag/NIHORIP'>#NIHORIP</a> <a href='https://twitter.com/hashtag/mouseresearchstudies'>#mouseresearchstudies</a> <a href='https://twitter.com/hashtag/MMRRC'>#MMRRC</a> <a href='https://twitter.com/hashtag/MMRRCMice'>#MMRRCMice</a> <a href='https://twitter.com/hashtag/ASHG'>#ASHG</a> <a href='https://twitter.com/hashtag/ASHG2018'>#ASHG2018</a> <a href='https://twitter.com/hashtag/ASHG18'>#ASHG18</a> <a href='https://twitter.com/hashtag/SFN2018'>#SFN2018</a> <a href='https://twitter.com/hashtag/SfN18'>#SfN18</a></p></p>
+                    </div>
+                </div>
+                            <div class="panel panel-default news" style='display:none'; news-id="11">
+                    <div class="panel-heading">
+                        <h4>
+                            <a href="/news.php?post_id=72"> November is Diabetes Awareness Month</a>
+                        </h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>This November during Diabetes Awareness Month, the NIH is encouraging people to gain understanding and offer support to those dealing with the challenges of diabetes. For more information on Diabetes, visit the NIH’s official website.
+
+<p><a href="https://www.nih.gov/about-nih/what-we-do/nih-turning-discovery-into-health/diabetes" target="_blank">https://www.nih.gov/about-nih/what-we-do/nih-turning-discovery-into-health/diabetes</a></p>
+
+<p><b>Popular MMRRC Diabetes Awareness Month Strains:</b><p>
+<ul>
+<li><a href="/catalog/sds.php?mmrrc_id=10323">C57BL/6-<i>Dnajc3<sup>tm8663Wcl</sup></i>/Mmmh</a></li>
+<li><a href="/catalog/sds.php?mmrrc_id=11191">STOCK Tg(Pax6-cre,GFP)1Pgr/Mmnc</a></li>
+</ul>
+<p>Contact us if you need assistance with learning more about strains related to Diabetes in the MMRRC repository.</p>
+</p>
+                    </div>
+                </div>
+                            <div class="panel panel-default news" style='display:none'; news-id="12">
+                    <div class="panel-heading">
+                        <h4>
+                            <a href="/news.php?post_id=71"> October is Breast Cancer Awareness Month</a>
+                        </h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>This October during Breast Cancer Awareness Month, the NIH is joining efforts across the U.S. to raise awareness, share information, and highlight research to help fight the disease. For more information on Breast Cancer, visit the NIH’s official website.
+
+<p><a href="https://www.cancer.gov/" target="_blank">https://www.cancer.gov/</a></p>
+
+<p><b>Popular MMRRC Breast Cancer Awareness Month Strains</b><p>
+<ul>
+<li><a href="/catalog/sds.php?mmrrc_id=14111">STOCK <i>Chek2<sup>tm1Pjs</sup></i>/Mmnc</a></li>
+<li><a href="/catalog/sds.php?mmrrc_id=30909">FVB/N-Tg(Wap-Tsg101)4389Kuw/Mmmh</a></li>
+<li><a href="/catalog/sds.php?mmrrc_id=36899">129S/SvEv-<i>Bex1<sup>Gt(OST125186)Lex</sup></i>/Mmnc</a></li>
+</ul>
+<p>Contact us if you need assistance with learning more about strains related to Breast Cancer in the MMRRC repository.</p>
+</p>
+                    </div>
+                </div>
+                            <div class="panel panel-default news" style='display:none'; news-id="13">
+                    <div class="panel-heading">
+                        <h4>
+                            <a href="/news.php?post_id=70"> September is Prostate Cancer Awareness Month</a>
+                        </h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>This September during Prostate Cancer Awareness Month, the NIH is working to provide easily accessible prostate health screenings and to educate the public about risk factors of prostate related diseases. For more information on Prostate Cancer, visit the NIH’s official website.
+
+<p><a href="https://report.nih.gov/nihfactsheets/ViewFactSheet.aspx?csid=60" target="_blank">https://report.nih.gov/nihfactsheets/ViewFactSheet.aspx?csid=60</a></p>
+
+<p><b>Popular MMRRC Prostate Cancer Awareness Month Strains</b><p>
+<ul>
+<li><a href='/catalog/sds.php?mmrrc_id=36713'>C.129X1(Cg)-<i>Atp12a<sup>tm1Ges</sup></i>/Mmjax</a></li>
+<li><a href='/catalog/sds.php?mmrrc_id=11808'>B6;SJL-Tg(Pbsn-TP53*R273H)1Elga/Mmucd</a></li>
+</ul>
+<p>Contact us if you need assistance with learning more about strains related to Spinal Muscular Atrophy in the MMRRC repository.</p>
+</p>
+                    </div>
+                </div>
+                            <div class="panel panel-default news" style='display:none'; news-id="14">
+                    <div class="panel-heading">
+                        <h4>
+                            <a href="/news.php?post_id=69"> August is Spinal Muscular Atrophy Awareness Month</a>
+                        </h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>This August during Spinal Muscular Atrophy Awareness Month, the NIH is raising a public health campaign to spread awareness of spinal muscular atrophy and the availability of carrier screening. For more information on Spinal Muscular Atrophy, visit the NIH’s official website.
+
+<p><a href="https://www.ninds.nih.gov/Disorders/All-Disorders/Spinal-Muscular-Atrophy-Information-Page" target="_blank">https://www.ninds.nih.gov/Disorders/All-Disorders/Spinal-Muscular-Atrophy-Information-Page</a></p>
+
+<p><b>Popular MMRRC Spinal Muscular Atrophy Awareness Month Strains</b><p>
+<ul>
+<li><a href='/catalog/sds.php?mmrrc_id=10317'>B6.129-<i>Dysf<sup>tm1Kcam</sup></i>/Mmmh</a></li>
+<li><a href='/catalog/sds.php?mmrrc_id=16843'>B6.129S4-<i>Sspn<sup>tm1Kcam</sup></i>/Mmmh</a></li>
+<li><a href='/catalog/sds.php?mmrrc_id=9967'>B6;129X1-<i>Ptk2<sup>tm1Lfr</sup></i>/Mmucd</a></li>
+</ul>
+<p>Contact us if you need assistance with learning more about strains related to Spinal Muscular Atrophy in the MMRRC repository.</p>
+</p>
+                    </div>
+                </div>
+                            <div class="panel panel-default news" style='display:none'; news-id="15">
+                    <div class="panel-heading">
+                        <h4>
+                            <a href="/news.php?post_id=68"> July 28th is World Hepatitis Day</a>
+                        </h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>On July 28th, during World Hepatitis Day, the NIH aspires to join people together and raise the profile of viral hepatitis among the public, the world’s media, and on the global health agenda. For more information on Hepatitis, visit the NIH’s official website.
+
+<p><a href="https://www.niaid.nih.gov/diseases-conditions/hepatitis" target="_blank">https://www.niaid.nih.gov/diseases-conditions/hepatitis</a></p>
+
+<p><b>Popular MMRRC World Hepatitis Day Strains</b><p>
+<ul>
+<li><a href='/catalog/sds.php?mmrrc_id=217'>C57BL/6J-Tg(HLA-A2/H2-K)1Scr/Mmnc</a></li>
+<li><a href='/catalog/sds.php?mmrrc_id=36053'>STOCK Tg(tetO-HCV)1Mlch/Mmjax</a></li>
+</ul>
+<p>Contact us if you need assistance with learning more about strains related to Hepatitis in the MMRRC repository.</p>
+</p>
+                    </div>
+                </div>
+                            <div class="panel panel-default news" style='display:none'; news-id="16">
+                    <div class="panel-heading">
+                        <h4>
+                            <a href="/news.php?post_id=67"> June is Alzheimer’s Awareness Month</a>
+                        </h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>This June during Alzheimer’s Awareness Month, the NIH is encouraging people to learn more about Alzheimer’s, share their stories, and take action to fight the disease. For more information on Alzheimer’s disease, visit the NIH’s official website.
+
+<p><a href="https://www.nia.nih.gov/health/alzheimers" target="_blank">https://www.nia.nih.gov/health/alzheimers </a></p>
+
+<p><b>Popular MMRRC Alzheimer’s Awareness Month Strains</b><p>
+<ul>
+<li><a href='/catalog/sds.php?mmrrc_id=11170'>B6;SJL-<i>Nos2<sup>+</sup></i> Tg(APPSWE)2576Kha  Tg(PSEN1)1Zhe/Mmnc/Mmnc</a></li>
+<li><a href='/catalog/sds.php?mmrrc_id=11171'>B6;SJL-<i>Nos2<sup>tm1Mrl</sup></i> Tg(APPSWE)2576Kha Tg(PSEN1)1Zhe/Mmnc</sup></i>/Mmnc</a></li>
+<li><a href='/catalog/sds.php?mmrrc_id=34830'>B6;129-<i>Psen1<sup>tm1Mpm</sup></i> Tg(APPSwe,tauP301L)1Lfa/Mmjax</a></li>
+<li><a href='/catalog/sds.php?mmrrc_id=34831'>B6.129-Tg(APPSw)40Btla/Mmjax</a></li>
+<li><a href='/catalog/sds.php?mmrrc_id=34833'>B6.Cg-Tg(APP695)3Dbo Tg(PSEN1dE9)S9Dbo/Mmjax</a></li>
+<li><a href='/catalog/sds.php?mmrrc_id=34837'>B6.129S4-Tg(APPSwLon)96Btla/Mmjax</a></li>
+<li><a href='/catalog/sds.php?mmrrc_id=34838'>129S1.129(Cg)-Tg(APPSw)40Btla/Mmjax</a></li>
+<li><a href='/catalog/sds.php?mmrrc_id=34839'>D2.129(B6)-Tg(APPSw)40Btla/Mmjax</a></li>
+<li><a href='/catalog/sds.php?mmrrc_id=34840'>B6SJL-Tg(APPSwFlLon,PSEN1*M146L*L286V)6799Vas/Mmjax</a></li>
+<li><a href='/catalog/sds.php?mmrrc_id=34841'>A.129(B6)-Tg(APPSw)40Btla/Mmjax</a></li>
+<li><a href='/catalog/sds.php?mmrrc_id=34848'>B6.Cg-Tg(APPSwFlLon,PSEN1*M146L*L286V)6799Vas/Mmjax</a></li>
+<li><a href='/catalog/sds.php?mmrrc_id=36481'>B6.Cg-<i>Mapt<sup>tm1Hnd</sup></i> Tg(Thy1-MAPT*)3608Gds/Mmjax</a></li>
+<li><a href='/catalog/sds.php?mmrrc_id=36485'>B6.Cg-<i>Mapt<sup>tm1Hnd</sup></i> Tg(Thy1-MAPT*)3610Gds/Mmjax</a></li>
+</ul>
+<p>Contact us if you need assistance with learning more about strains related to Alzheimer in the MMRRC repository.</p>
+</p>
+                    </div>
+                </div>
+                            <div class="panel panel-default news" style='display:none'; news-id="17">
+                    <div class="panel-heading">
+                        <h4>
+                            <a href="/news.php?post_id=66"> May is Cystic Fibrosis Awareness Month</a>
+                        </h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>This May during Cystic Fibrosis Awareness Month, the NIH is encouraging the public to support their mission to cure Cystic Fibrosis by participating in walks and sharing facts about the disease on social media. For more information on Cystic Fibrosis, visit the NIH’s official website.
+
+<p><a href="https://ghr.nlm.nih.gov/condition/cystic-fibrosis " target="_blank">https://ghr.nlm.nih.gov/condition/cystic-fibrosis</a></p>
+
+<p><b>Popular MMRRC Cystic Fibrosis Awareness Month Strains</b><p>
+<ul>
+<li><a href='/catalog/sds.php?mmrrc_id=29585'>C.129P2(Cg)-<i>Cftr<sup>tm1Unc</sup></i>/Mmnc</a></li>
+<li><a href='/catalog/sds.php?mmrrc_id=29586'>D2.129P2(Cg)-<i>Cftr<sup>tm1Unc</sup></i>/Mmnc</a></li>
+</ul>
+<p>Contact us if you need assistance with learning more about strains related to Cystic Fibrosis in the MMRRC repository.</p>
+</p>
+                    </div>
+                </div>
+                            <div class="panel panel-default news" style='display:none'; news-id="18">
+                    <div class="panel-heading">
+                        <h4>
+                            <a href="/news.php?post_id=65"> New MMRRC Submission Form Coming Soon!</a>
+                        </h4>
+                    </div>
+                    <div class="panel-body">
+                        <p><p>The MMRRC is excited to announce the upcoming release of our newly redesigned submission form set for debut on Wednesday, May 2nd 2018. </p>
+
+<p>Along with user-friendly navigation the form has been significantly reduced to only include the bare minimum criteria needed for strain acceptance. The new design allows users to navigate through the submission form easily and effectively with informative tool-tips to help explain and clarify questions. </p>
+
+<p>Our new shorter form will reduce completion time significantly and make multiple submissions a much simpler process.  We anticipate a smooth transition over and look forward to hearing your feedback!</p></p>
+                    </div>
+                </div>
+                            <div class="panel panel-default news" style='display:none'; news-id="19">
+                    <div class="panel-heading">
+                        <h4>
+                            <a href="/news.php?post_id=63"> April is Parkinson’s Awareness Month</a>
+                        </h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>This April during Parkinson’s Awareness Month, the NIH is conducting a campaign to gain support for the one million Americans affected by Parkinson’s disease. For more information on Parkinson’s disease, visit the NIH’s official website.
+
+<p><a href="https://www.ninds.nih.gov/Disorders/All-Disorders/Parkinsons-Disease-Information-Page" target="_blank">https://www.ninds.nih.gov/Disorders/All-Disorders/Parkinsons-Disease-Information-Page</a></p>
+
+<p><b>Popular MMRRC Parkinson’s Awareness Month Strains</b><p>
+<ul>
+<li><a href='/catalog/sds.php?mmrrc_id=36980'>B6.129-<i>Dnajc6<sup>tm1Legr</sup></i>/Mmjax</a></li>
+</ul>
+<p>Contact us if you need assistance with learning more about strains related to Parkinson’s disease in the MMRRC repository.</p>
+</p>
+                    </div>
+                </div>
+                            <div class="panel panel-default news" style='display:none'; news-id="20">
+                    <div class="panel-heading">
+                        <h4>
+                            <a href="/news.php?post_id=62"> March is Brain Injury Awareness Month</a>
+                        </h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>This March during Brain Injury Awareness Month, the NIH is conducting a campaign that is aimed at educating the general public about the incidence of brain injuries and the needs of people with brain injuries. For more information on traumatic brain injuries, visit the NIH&rsquo;s official website.
+<p><a href="https://www.ninds.nih.gov/Disorders/All-Disorders/Traumatic-Brain-Injury-Information-Page" target="_blank">https://www.ninds.nih.gov/Disorders/All-Disorders/Traumatic-Brain-Injury-Information-Page
+</a></p>
+<p><b>Popular MMRRC Brain Injury Awareness Month Strains:</b></p>
+<ul>
+<li><a href='/catalog/sds.php?mmrrc_id=36938'>B6.129S6-<i>Kcnk2<sup>tm1Lex</sup></i>/Mmucd</a></li>
+<li><a href='/catalog/sds.php?mmrrc_id=203'>B6.Cg-<i>Sod1<sup>tm1Cje</sup></i>/Mmmh</i></a></li>
+<li><a href='/catalog/sds.php?mmrrc_id=32998'>B6;129-<i>Gt(ROSA)26Sor<sup>tm1(NOTCH3)Sat</sup></i>/Mmjax</a></li>
+</ul>
+<p>Contact us if you need assistance with learning more about strains related to brain injuries in the MMRRC repository.</p>
+</p>
+                    </div>
+                </div>
+                            <div class="panel panel-default news" style='display:none'; news-id="21">
+                    <div class="panel-heading">
+                        <h4>
+                            <a href="/news.php?post_id=61"> February is American Heart Month</a>
+                        </h4>
+                    </div>
+                    <div class="panel-body">
+                        <p><p>This February during American Heart Month, the NIH is encouraging people to take charge of their health and start new, heart-healthy behavior that can help reduce their risk of heart disease and stroke. For more information, visit the NIH’s official website. </p>
+
+<p><a href='https://www.nhlbi.nih.gov/health/educational/hearttruth/lower-risk/what-is-heart-disease.htm' target='_blank'>https://www.nhlbi.nih.gov/health/educational/hearttruth/lower-risk/what-is-heart-disease.htm.</a></p>
+
+<p><b>Popular MMRRC Heart Month Strains:</b></p>
+<ul>
+<li><a href='/catalog/sds.php?mmrrc_id=121'>D2.C3-Tg(Myh6-Ngfb)4Fed/Mmmh</a></li>
+<li><a href='/catalog/sds.php?mmrrc_id=210'>B6.129S7-<i>Chrnb4<sup>tm1Mdb</sup></i>/Mmnc</a></li>
+<li><a href='/catalog/sds.php?mmrrc_id=34404'>B6;129P2-<i>Pde4d<sup>tm1Mct</sup></i>/Mmucd</a></li>
+</ul>
+<p>Contact us if you need assistance with learning more about strains related to heart disease in the MMRRC repository.</p></p>
+                    </div>
+                </div>
+                            <div class="panel panel-default news" style='display:none'; news-id="22">
+                    <div class="panel-heading">
+                        <h4>
+                            <a href="/news.php?post_id=59"> MMRRC to attend ASHG in Orlando</a>
+                        </h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>Representatives from the MMRRC will be attending American Society of Human Genetics 2017 October 17 – 21 in Orlando FL. Please be sure to stop by our education and outreach booth and learn more about how the MMRRC can help you with your mouse related research needs. <p><a href='http://www.ashg.org/2017meeting/' target='_blank'>http://www.ashg.org/2017meeting/</a></p></p>
+                    </div>
+                </div>
+                            <div class="panel panel-default news" style='display:none'; news-id="23">
+                    <div class="panel-heading">
+                        <h4>
+                            <a href="/news.php?post_id=60"> MMRRC to attend Society for Neuroscience in Washington DC</a>
+                        </h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>Representatives from the MMRRC will be attending Society for Neuroscience 2017 November 11 – 15 in Washington, DC. Please be sure to stop by our education and outreach booth and learn more about how the MMRRC can help you with your mouse related research needs. <p><a href='https://www.sfn.org/annual-meeting/neuroscience-2017' target='_blank'>https://www.sfn.org/annual-meeting/neuroscience-2017</a></p></p>
+                    </div>
+                </div>
+                            <div class="panel panel-default news" style='display:none'; news-id="24">
+                    <div class="panel-heading">
+                        <h4>
+                            <a href="/news.php?post_id=58"> MMRRC attending Experimental Biology 2017 in Chicago</a>
+                        </h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>Representatives from the MMRRC will be attending Experimental Biology 2017 April 22 – 26 in Chicago, IL. Please be sure to stop by booth #1412 and learn more about how the MMRRC can help you with your mouse related research needs. <p><a href='http://experimentalbiology.org/2017/Home.aspx' target='_blank'>http://experimentalbiology.org/2017/Home.aspx</a></p></p>
+                    </div>
+                </div>
+                            <div class="panel panel-default news" style='display:none'; news-id="25">
+                    <div class="panel-heading">
+                        <h4>
+                            <a href="/news.php?post_id=56"> Are you interested in a particular gene?</a>
+                        </h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>The IMPC is creating knockout mouse lines for every single protein coding gene in the mouse genome, and characterizing them through standardized, quality-controlled phenotyping tests.
+<p>
+<a href="/about/pdf/IMPC_Flyer.pdf">IMPC Flyer</a>
+</p></p>
+                    </div>
+                </div>
+                            <div class="panel panel-default news" style='display:none'; news-id="26">
+                    <div class="panel-heading">
+                        <h4>
+                            <a href="/news.php?post_id=55"> KOMP 2 Phase 2 Mouse Lines Available Through The MMRRC</a>
+                        </h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>Since 2006, researchers around the world have been working together to generate a targeted knockout mutation for every gene in the mouse genome.  The US component of this effort, The Knockout Mouse Project (KOMP), has been providing critical tools for understanding gene function and the genetic causes of human diseases.
+<p>In 2016, the National Institutes of Health funded the next phase in the KOMP project called KOMP2 Phase 2 with the objective to produce and phenotype more than 3000 new knockout mouse lines on a C57BL6/N genetic background.   Here at the MMRRC, we are pleased to announce that these KOMP2 Phase2 mouse lines will all be made available from the MMRRC repositories.   New mouse lines will be added monthly and full phenotyping data will be available.</p></p>
+                    </div>
+                </div>
+                            <div class="panel panel-default news" style='display:none'; news-id="27">
+                    <div class="panel-heading">
+                        <h4>
+                            <a href="/news.php?post_id=54"> MMRRC Repository Expands Available Mouse Mutations</a>
+                        </h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>Genetically engineered mice serve as valuable models of human disease, contributing to major medical breakthroughs. Often, biomedical researchers must develop unique genetically modified strains of mice for experimentation, a costly and time-consuming process. Now, more researchers in fields from immunology to cancer may be able to save time and money by acquiring genetic material from a repository of previously engineered strains.<p> <a href="https://www.niaid.nih.gov/news-events/niaid-supported-research-expands-number-publicly-available-mouse-mutations">https://www.niaid.nih.gov/news-events/niaid-supported-research-expands-number-publicly-available-mouse-mutations</a></p></p>
+                    </div>
+                </div>
+                            <div class="panel panel-default news" style='display:none'; news-id="28">
+                    <div class="panel-heading">
+                        <h4>
+                            <a href="/news.php?post_id=52"> MMRRC will be attending ASHG 2016 in Vancouver, BC</a>
+                        </h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>Representatives from the MMRRC will be attending The Allied Genetics Conference July  13 – 17  in Orlando FL.  Please be sure to stop by our booth and learn more about how the MMRRC can help you with your mouse related research needs. <a href="http://www.genetics2016.org/" target="_blank">http://www.genetics2016.org</a></p>
+                    </div>
+                </div>
+                            <div class="panel panel-default news" style='display:none'; news-id="29">
+                    <div class="panel-heading">
+                        <h4>
+                            <a href="/news.php?post_id=53"> MMRRC will be attending SfN 2016 in San Diego, CA</a>
+                        </h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>Representatives from the MMRRC will be attending Society for Neuroscience 2016 November 13 –16 in San Diego, CA. Please be sure to stop by booth #4322 and learn more about how the MMRRC can help you with your mouse related research needs. <a href="https://www.sfn.org/annual-meeting/neuroscience-2016" target="_blank">https://www.sfn.org/annual-meeting/neuroscience-2016</a></p>
+                    </div>
+                </div>
+                            <div class="panel panel-default news" style='display:none'; news-id="30">
+                    <div class="panel-heading">
+                        <h4>
+                            <a href="/news.php?post_id=50"> MMRRC attending Experimental Biology 2016 in San Diego</a>
+                        </h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>Representatives from the MMRRC will be attending Experimental Biology 2016 April 2 – 6 in San Diego CA.  Please be sure to stop by booth <b>#1104</b> and learn more about how the MMRRC can help you with your mouse related research needs. <a href="http://experimentalbiology.org/2016/Home.aspx" target="_blank">http://experimentalbiology.org/2016/Home.aspx</a></p>
+                    </div>
+                </div>
+                            <div class="panel panel-default news" style='display:none'; news-id="31">
+                    <div class="panel-heading">
+                        <h4>
+                            <a href="/news.php?post_id=51"> MMRRC attending The Allied Genetics Conference 2016 in Orlando</a>
+                        </h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>Representatives from the MMRRC will be attending American Society for Human Genetics 2016 October 18 – 22 in Vancouver, BC. Please be sure to stop by booth #422B and learn more about how the MMRRC can help you with your mouse related research needs. <br><a href="http://www.ashg.org/2016meeting/" target="_blank">http://www.ashg.org/2016meeting/</a></p>
+                    </div>
+                </div>
+                            <div class="panel panel-default news" style='display:none'; news-id="32">
+                    <div class="panel-heading">
+                        <h4>
+                            <a href="/news.php?post_id=49"> The Value of Biological Repositories</a>
+                        </h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>Read the recently <a href="http://www.nature.com/news/reproducibility-use-mouse-biobanks-or-lose-them-1.17707" target="_blank">published article</a> in <em>Nature</em> about how the MMRRC repository provides scientific value and utility through curation, preservation, genetic quality control, and protection from pathogens.&nbsp; Learn about the efforts that the MMRRC takes to help researchers reduce model redundancy and improve reproducibility of studies. <a href="http://www.nature.com/news/reproducibility-use-mouse-biobanks-or-lose-them-1.17707" target="_blank">http://www.nature.com/news/reproducibility-use-mouse-biobanks-or-lose-them-1.17707</a></p>
+                    </div>
+                </div>
+                            <div class="panel panel-default news" style='display:none'; news-id="33">
+                    <div class="panel-heading">
+                        <h4>
+                            <a href="/news.php?post_id=48"> MMRRC attending the 66th Annual AALAS National Meeting</a>
+                        </h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>Representatives from the MMRRC will be attending the <b>66th Annual AALAS National Meeting November 1-5, 2015 Phoenix, AZ</b>.  Please be sure to stop by booth #215 and learn more about how the MMRRC can help you with your mouse related research needs. <a href="https://www.aalas.org/national-meeting#.VRrfaE10y70" target="_blank">https://www.aalas.org/national-meeting#.VRrfaE10y70</a></p>
+                    </div>
+                </div>
+                            <div class="panel panel-default news" style='display:none'; news-id="34">
+                    <div class="panel-heading">
+                        <h4>
+                            <a href="/news.php?post_id=46"> MMRRC attending ASCB 2014 in Philadelphia</a>
+                        </h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>Representatives of the Mutant Mouse Regional Resource Center will be attending the <b>American Society of Cell Biology Meeting</b> in Philadelphia December 6-10. Please come by booth #916 and let us help you with your mouse research needs.</p>
+                    </div>
+                </div>
+                            <div class="panel panel-default news" style='display:none'; news-id="35">
+                    <div class="panel-heading">
+                        <h4>
+                            <a href="/news.php?post_id=45"> dkNET Releases Version 1.2</a>
+                        </h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>The <b>NIDDK Information Network (dkNET)</b> serves the needs of basic and clinical investigators by providing seamless access to large pools of data relevant to the mission of The National Institute of Diabetes&nbsp;Digestive and Kidney Diseases (NIDDK). The<a href="http://www.dknet.org/" target="_blank"> dkNET</a> portal contains information about research resources such as antibodies, vectors and mouse strains, data, protocols, and literature.</p>
+                    </div>
+                </div>
+                            <div class="panel panel-default news" style='display:none'; news-id="36">
+                    <div class="panel-heading">
+                        <h4>
+                            <a href="/news.php?post_id=44"> MMRRC updated order form</a>
+                        </h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>The MMRRC is pleased to officially announce the release of our newly redesigned order process! Along with user-friendly navigation and the new "<a href="http://www.mmrrc.org/account/myfavorites.php">Favorites</a>" feature, the order form has been updated with the latest information and a fresh new look. The new design allows users to navigate through the order process easily and effectively with alerts for missed questions, in-line hints, and the ability to alter contact information within the form. The new Favorites feature allows users to save and organize their favorite products and even allows them to send their favorites list to their registered email account for later reference.</p>
+                    </div>
+                </div>
+                            <div class="panel panel-default news" style='display:none'; news-id="37">
+                    <div class="panel-heading">
+                        <h4>
+                            <a href="/news.php?post_id=41"> Look for the MMRRC booth at the following shows.  Stop by the booth and learn how to find or donate your mouse model.</a>
+                        </h4>
+                    </div>
+                    <div class="panel-body">
+                        <p><b>April 26 – 30
+<BR>
+Experimental Biology</b>
+<BR>
+Booth 1439
+<BR>
+San Diego, CA, San Diego Convention Center
+<BR>
+<a href='http://experimentalbiology.org/2014/Home.aspx' target='_blank'>http://experimentalbiology.org/2014/Home.aspx</a>
+<BR>
+<BR>
+<b>October 18 - 22
+<BR>
+American Society Human Genetics</b>
+<BR>
+Booth TBD
+<BR>
+San Diego, CA, San Diego Convention Center
+<BR>
+<a href='http://www.ashg.org/2014meeting/' target='_blank'>http://www.ashg.org/2014meeting</a>
+<BR>
+<BR>
+<b>November 15 – 19
+<BR>
+Neuroscience</b>
+<BR>
+Booth TBD
+<BR>
+Washington, DC, Walter E. Washington Convention Center
+<BR>
+<a href='http://www.sfn.org/annual-meeting/neuroscience-2014/' target='_blank'>http://www.sfn.org/annual-meeting/neuroscience-2014</a>
+<BR>
+<BR>
+<b>December 6 - 10
+<BR>
+American Society Cell Biology</b>
+<BR>
+Booth TBD
+<BR>
+Pennsylvania, PA, Pennsylvania Convention Center
+<BR>
+<a href="http://www.ascb.org/meetings-home" target="_blank">http://www.ascb.org/meetings-home</a>
+<BR></p>
+                    </div>
+                </div>
+                            <div class="panel panel-default news" style='display:none'; news-id="38">
+                    <div class="panel-heading">
+                        <h4>
+                            <a href="/news.php?post_id=39"> MMRRC at the 2013 American Society for Cell Biology meeting in New Orleans</a>
+                        </h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>The Mutant Mouse Regional Resource Center (MMRRC) will be attending the 2013 American Society for Cell Biology Meeting December 14 through 18 in New Orleans. The MMRRC has been able to map <a href="http://www.mmrrc.org/catalog/cell_biology.php">900 MeSH terms from attendee publications to mouse models within our repositories</a>. If you are attending the meeting, then please consider visiting our booth and speaking directly with one of our knowledgeable customer service staff members.</p>
+                    </div>
+                </div>
+                            <div class="panel panel-default news" style='display:none'; news-id="39">
+                    <div class="panel-heading">
+                        <h4>
+                            <a href="/news.php?post_id=40"> MMRRC now searchable by major MeSH terms</a>
+                        </h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>The Mutant Mouse Regional Resource Center (MMRRC) repository simple and advanced search methods now include the ability to search by associated <a href="http://www.nlm.nih.gov/mesh/">Major Medical Subject Heading (MeSH) terms</a>. MeSH is the National Library of Medicine\'s controlled vocabulary thesaurus. It consists of sets of terms naming descriptors in a hierarchical structure that permits searching at various levels of specificity. Major MeSH terms are defined by authors of primary research articles as having the most relevance to the research represented by the article.</p>
+                    </div>
+                </div>
+                            <div class="panel panel-default news" style='display:none'; news-id="40">
+                    <div class="panel-heading">
+                        <h4>
+                            <a href="/news.php?post_id=37"> MMRRC at the Society of Neuroscience Meeting in San Diego</a>
+                        </h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>The Mutant Mouse Regional Resource Center (MMRRC) will be attending the <b>Society of Neuroscience Meeting in San Diego November 9-13 (booth 3831)</b>. Among the thousands of model systems within the MMRRC repository, the MMRRC has <a href="http://www.mmrrc.org/catalog/neuroscience.php">440 neuroscience models in 700 major Medical Subject Heading (MeSH) categories</a>. If you are attending the meeting, then please consider visiting our booth (#3831) and speaking directly with one of our knowledgeable customer service staff members.</p>
+                    </div>
+                </div>
+                            <div class="panel panel-default news" style='display:none'; news-id="41">
+                    <div class="panel-heading">
+                        <h4>
+                            <a href="/news.php?post_id=36"> IMPC Survey of the Mouse User Community</a>
+                        </h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>The International Mouse Phenotyping Consortium is conducting a survey with the goal of exploring ways to ensure that researchers utilize high-impact mouse-model resources. The on line survey is available <a href="http://www.impcsurvey.org/" target="_blank">here</a>.</p>
+                    </div>
+                </div>
+                            <div class="panel panel-default news" style='display:none'; news-id="42">
+                    <div class="panel-heading">
+                        <h4>
+                            <a href="/news.php?post_id=35"> Reversal of Behavioral Deficits and Synaptic Dysfunction in Mice Overexpressing Neuregulin 1</a>
+                        </h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>When expressed in mice, high levels of Neuregulin 1 (Nrg1) lead to behavioral deficits and hypofunction of glutamatergic and GABAergic pathways similar to that found in human patients with schizophrenia. <a href="http://www.cell.com/neuron/abstract/S0896-6273(13)00275-4?script=true">Don-Yin Min, et al.</a> found that these effects are diminished when Nrg1 levels are returned to normal.<br /><br /><a href="http://www.mmrrc.org/catalog/StrainCatalogSearchForm.php?search_query=Nrg1">The MMRRC has related mouse models.</a></p>
+                    </div>
+                </div>
+                            <div class="panel panel-default news" style='display:none'; news-id="43">
+                    <div class="panel-heading">
+                        <h4>
+                            <a href="/news.php?post_id=34"> MicroRNA-146a is a therapeutic target and biomarker for peripartum cardiomyopathy</a>
+                        </h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>Evidence that that miR-146a is a downstream-mediator of 16K PRL that could potentially serve as a biomarker and therapeutic target for PPCM.<br />Full publiceation <a href="http://www.jci.org/articles/view/64365">here</a>.<br /><br />The MMRRC has a related <a href="http://www.mmrrc.org/catalog/cellLineSDS.php?mmrrc_id=36857">ES cell line</a>.</p>
+                    </div>
+                </div>
+                            <div class="panel panel-default news" style='display:none'; news-id="44">
+                    <div class="panel-heading">
+                        <h4>
+                            <a href="/news.php?post_id=33"> Gene found that regenerates heart tissue</a>
+                        </h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>Researchers at UT Southwestern Medical Center have identified a specific gene, Meis1 that regulates the heart&rsquo;s ability to regenerate after injuries. The original article can be found in <a href="http://www.nature.com/nature/journal/vaop/ncurrent/full/nature12054.html">Nature</a>.<br /><br />The MMRRC has a <a href="http://www.mmrrc.org/catalog/sds.php?mmrrc_id=11189" target="_parent">GENSAT mouse</a> containing multiple copies of a modified BAC in which EGFP reporter gene is inserted immediately upstream of the Meis1 coding sequence of the targeted gene.</p>
+                    </div>
+                </div>
+                            <div class="panel panel-default news" style='display:none'; news-id="45">
+                    <div class="panel-heading">
+                        <h4>
+                            <a href="/news.php?post_id=32"> MMRRC Resuscitation Success Rate</a>
+                        </h4>
+                    </div>
+                    <div class="panel-body">
+                        <p><span>In 2012, the MMRRC was able to successfully deliver 246 out of 247 resuscitation orders. Please consider our services to best meet your research needs.</span></p>
+                    </div>
+                </div>
+                            <div class="panel panel-default news" style='display:none'; news-id="46">
+                    <div class="panel-heading">
+                        <h4>
+                            <a href="/news.php?post_id=31"> Scientists Make Mouse Model of Human Cancer</a>
+                        </h4>
+                    </div>
+                    <div class="panel-body">
+                        <p><p><a href="http://www.sciencedaily.com/releases/2013/03/130305130451.htm" target="_blank">Scientists Make Mouse Model of Human Cancer, Demonstrate Cure</a><br />UT Southwestern Medical Center scientists report the first successful blocking of tumor development in a genetic mouse model of an incurable human cancer. Blocking the activity of a receptor molecule named CXCR4 inhibited tumor development of malignant peripheral nerve sheath tumors (MPNSTs).</p>
+<p><a href="http://www.mmrrc.org/catalog/sds.php?mmrrc_id=15859">STOCK Tg(Cxcr4-EGFP)CD73Gsat/Mmucd</a> is available from the MMRRC and contains multiple copies of a modified BAC in which EGFP reporter gene is inserted immediately upstream of the coding sequence of the targeted gene.</p></p>
+                    </div>
+                </div>
+                            <div class="panel panel-default news" style='display:none'; news-id="47">
+                    <div class="panel-heading">
+                        <h4>
+                            <a href="/news.php?post_id=30"> MMRRC iPod Raffle Winner: Caius G. Radu, M.D. - UCLA</a>
+                        </h4>
+                    </div>
+                    <div class="panel-body">
+                        <p><p class="p1">In an effort to determine MMRRC's contribution to biomedical research, we reached out to all our previous customers and asked for additional information on previous orders. Customers who filled out the raffle form with valid NIH Grant entries and/or Pubmed publication IDs were entered into a raffle with a chance to win a new iPod. The raffle winner was selected today. Congratulations to Dr. Caius G. Radu from University of California, Los Angeles for winning the iPod. We would like to thank all those who participated in this raffle and provided valuable information about their past purchases from MMRRC. We appreciate their time and effort.</p></p>
+                    </div>
+                </div>
+                            <div class="panel panel-default news" style='display:none'; news-id="48">
+                    <div class="panel-heading">
+                        <h4>
+                            <a href="/news.php?post_id=29"> Transmission of tangles in Alzheimers mice provides more authentic model of tau pathology</a>
+                        </h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>Brain diseases associated with the misformed protein tau, including Alzheimers disease and frontotemporal lobar degeneration with tau pathologies, are characterized by neurofibrillary tangles (NFTs) comprised of pathological tau filaments.&nbsp; <a href="http://medicalxpress.com/news/2013-01-transmission-tangles-alzheimer-mice-authentic.html" target="_blank">article&nbsp;</a> <a href="http://www.mmrrc.org/catalog/StrainCatalogSearchForm.php?search_query=Mapt">Mapt at MMRRC</a></p>
+                    </div>
+                </div>
+                            <div class="panel panel-default news" style='display:none'; news-id="49">
+                    <div class="panel-heading">
+                        <h4>
+                            <a href="/news.php?post_id=20"> Terry Magnuson elected to IOM 2012.</a>
+                        </h4>
+                    </div>
+                    <div class="panel-body">
+                        <p><span>Our very own Terry R. Magnuson, Ph.D., Sarah Graham Kenan Professor and chair, department of genetics, and vice dean for research, School of Medicine, University of North Carolina, Chapel Hill, and Project Director for the MMRRC at North Carolina-Chapel Hill, was just elected to the&nbsp;</span><a href="http://www.iom.edu/Global/News Announcements/2012-New-Members.aspx" target="_blank">Institute of Medicine</a><span>&nbsp;of the National Academies.</span></p>
+                    </div>
+                </div>
+                            <div class="panel panel-default news" style='display:none'; news-id="50">
+                    <div class="panel-heading">
+                        <h4>
+                            <a href="/news.php?post_id=18"> New MMRRC released!</a>
+                        </h4>
+                    </div>
+                    <div class="panel-body">
+                        <p><span>Welcome to the newly revised MMRRC website! The goal of this revision is to modernize the look and feel of MMRRC's web presence. We hope the new simplified search feature will make finding the products you are looking for easier. For any questions/problems you have regarding this release, please email us at&nbsp;</span><a href="mailto:service@mmrrc.org">service@mmrrc.org</a><span>, or use the Feedback function to the right side of the page.</span></p>
+                    </div>
+                </div>
+                        <!-- Pager -->
+            <ul class="pager">
+                <li class="previous">
+                    <a href="#">PREVIOUS</a>
+                </li>
+                <li class="next">
+                    <a href="#">NEXT</a>
+                </li>
+            </ul>
+            <hr>
+        </div>
+
+        <!-- Contact Us Column -->
+        <div class="col-md-3">
+            <h2 class="page-header"><i class="fa fa-fw fa-users"></i> Contact Us</h2>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4> Contact Information</h4>
+                </div>
+
+                <div class="panel-body">
+                    <address>
+                        <strong>Customer Service: </strong><br><i class="fa fa-fw fa-envelope-o"></i><a href="mailto:service@mmrrc.org"> service@mmrrc.org</a>
+                    </address>
+                    <address>
+                        <strong>Web Support: </strong><br><i class="fa fa-fw fa-envelope-o"></i><a href="mailto:support@mmrrc.org"> support@mmrrc.org</a>
+                    </address>
+                    <address><strong>North America: </strong><br><i class="fa fa-fw fa-phone"></i> 800-910-2291</address>
+                    <address><strong>International: </strong><br><i class="fa fa-fw fa-phone"></i> 530-757-5710</address>
+                    <a href="https://twitter.com/mmrrc" class="twitter-follow-button">Follow @mmrrc</a>
+                    <div class="fb-like" data-href="https://www.facebook.com/MMRRCMouseModels/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+                </div>
+            </div>
+                        <!-- Important Information Column -->
+            <h2 class="page-header"><i class="fa fa-fw fa-exclamation-circle"></i> Information</h2>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4> Important Information</h4>
+                </div>
+                <div class="panel-body">
+                    <i class="fa fa-fw fa-external-link"></i>
+                    <a href="/mta/Third Party Transfers of MMRRC Materials.pdf" target="_blank">Third Party Transfers</a>
+                    <br> <i class="fa fa-fw fa-external-link"></i>
+                    <a href="/about/approvedVendor.php" target="_blank">Waiving Quarantine Requirements</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.row -->
+
+    <!-- About MMRRC -->
+    <div class="row">
+        <div class="col-lg-12">
+            <h2 class="page-header"><i class="fa fa-fw fa-info-circle"></i> About MMRRC</h2>
+        </div>
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4>
+                        Welcome to the Mutant Mouse Resource &amp; Research Centers (MMRRC) Website
+                    </h4>
+                </div>
+                <div class="panel-body">
+                    <p>The MMRRC is the nation’s premier national public repository system for mutant mice. Funded by the NIH continuously since 1999, the MMRRC archives and distributes scientifically valuable spontaneous and induced mutant mouse strains and ES cell lines for use by the biomedical research community. The MMRRC consists of a national network of breeding and distribution repositories and an Informatics Coordination and Service Center located at 4 major academic centers across the nation. The MMRRC is committed to upholding the highest standards of experimental design and quality control to optimize the <a href="/about/reproducibility.php">reproducibility</a> of research studies using mutant mice. The MMRRC is supported by the Office of Research Infrastructure Programs (ORIP) in the Office of the Director at NIH. More than 50,000 mutant alleles are maintained as live mice, cryopreserved germplasm, and/or mutant ES cells. Live mice are supplied from a production colony, from a colony recovered from cryopreservation, or via micro-injection of ES cells. An MMRRC facility may offer cryopreserved material for resuscitation at the recipient scientist's institution.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.row -->
+
+
+    <!-- Script to Activate the Carousel -->
+    <script>
+         newsItemCount = 51;
+        $('.carousel').carousel({
+            interval: 5000 //changes the speed
+        });
+            (function(d, s, id){
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if(d.getElementById(id)) return;
+                js = d.createElement(s);
+                js.id = id;
+                js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<br>
+<hr>
+<!-- Footer -->
+<footer>
+    <div class="row hidden-print">
+        <div class="col-lg-12 footer">
+            		  	<small>The MMRRC is a collaborative effort, funded by grants from <a href="http://dpcpsi.nih.gov" target="_blank">DPCPSI</a> of the
+            			<a href="http://www.nih.gov" target="_blank">NIH</a>.
+            			This site requires JavaScript. Tested for Firefox 3.5+, Microsoft Internet Explorer 9+, Google Chrome, Safari.
+                            <br><a href="siteMap.php">Site Map</a>
+            <div class="viewOptions">
+                <BR><button class='btn btn-primary btn-xs desktopView'>Desktop View</button>            </div>
+            </small>
+        </div>
+    </div>
+</footer>
+<!-- /.footer -->
+
+<ul class="nav pull-right scroll-top hidden-print">
+  <li><a href="#" title="Scroll to top"><i class="glyphicon glyphicon-chevron-up"></i></a></li>
+</ul>
+
+</div>
+<!-- /.container -->
+
+</div>
+<!-- /.sb site -->
+
+</body>
+
+</html>

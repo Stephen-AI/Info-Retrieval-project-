@@ -1,0 +1,83 @@
+<base href="http://www.cs.utexas.edu/~clifford//">
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="crouchStyle.css"></link>
+	</head>
+	<body>
+		<table id="happinessContainer">
+			<tr>
+				<td colspan="2">
+					<canvas id="emote" width="490px" height="490px;"></canvas>
+				</td>
+			</tr>
+			<tr>
+				<td width="245px;">
+					<div class="sectionButton" width="128px;" onclick="happiness = happiness + 1;draw();">
+						<span>:D</span>
+					</div>
+				</td>
+				<td width="245px;">
+					<div class="sectionButton" width="128px" onclick="happiness = happiness - 1;draw();">
+						<span>D:</span>
+					</div>
+				</td>
+			</tr>
+		</table>
+		<script type="text/javascript">
+			var happiness = 0;
+			var canvas = document.getElementById("emote");
+			var drawer = canvas.getContext("2d");
+			function draw(){
+				//Face is from (100, 100) to (390, 390)
+				if(happiness > 25){
+					happiness = 25;
+				}
+				if(happiness < -25){
+					happiness = -25;
+				}
+				var delta = happiness * 10;
+				var red = 255 + delta;
+				if(red > 255){
+					red = 255;
+				}
+				if(red < 0){
+					red = 0;
+				}
+				var others = 255 - delta;
+				if(others > 255){
+					others = 255;
+				}
+				if(others < 0){
+					others = 0;
+				}
+				var redData = red.toString(16);
+				if(redData.length == 0){
+					redData = "0" + redData;
+				}
+				var othersData = others.toString(16);
+				if(othersData.length == 0){
+					othersData = "0" + othersData;
+				}
+				drawer.strokeStyle = "#" + redData + othersData + othersData;
+				drawer.fillStyle = drawer.strokeStyle;
+				drawer.clearRect(0, 0, 490, 490);
+				drawer.beginPath();
+				drawer.rect(100, 0, 100, 200);
+				drawer.rect(290, 0, 100, 200);
+				drawer.moveTo(100, 300 - (happiness * 4));
+				if(happiness == 0){
+					drawer.lineTo(390, 300);
+				} else {
+					drawer.quadraticCurveTo(245, 300 + (happiness * 10), 390, 300 - (happiness * 4));
+				}
+				drawer.stroke();
+				drawer.beginPath();
+				var eyeHeight = 50 - 2 * happiness;
+				drawer.fillRect(100, eyeHeight, 100, 100);
+				drawer.fillRect(290, eyeHeight, 100, 100);
+				drawer.fill();
+			}
+			draw();
+		</script>
+	</body>
+</html>

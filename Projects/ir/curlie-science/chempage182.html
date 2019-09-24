@@ -1,0 +1,221 @@
+<BASE HREF="http://serc.carleton.edu/research_education/geochemsheets/">
+<!--[if lt IE 7 ]> <html lang="en" class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head>
+<meta http-equiv="x-ua-compatible" content="IE=Edge"/> <title>Geochemical Instrumentation and Analysis</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1130.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script> <LINK REL='SHORTCUT ICON' HREF='/favicon.ico'><meta name="sercmodulelist" content="187 648 end">
+<meta name="sercmodulename" content="Integrating Research and Education:Geochemical Instrumentation and Analysis">
+<meta name="sercmodulepeers" content="">
+<meta name="longtitle" content="Geochemical Instrumentation and Analysis">
+<meta name="shorttitle" content="Geochemical Instrumentation and Analysis">
+<meta name="sercvocabs" content="455:1 455:2 455:5 end 
+61:1 61:3 end">
+<meta name="serckeywords" content=" Teach the Earth:Course Topics:Geochemistry,  Page:Index Page,  ">
+<meta name="keywords" content=" Teach the Earth:Course Topics:Geochemistry,  Page:Index Page,  ">
+<meta name="page_id" content="18410">
+<meta name="description" content=" Students on the XRD in the Image and Chemical Analysis Laboratory at Montana State University. Details What is the Purpose of this Site? The purpose of this project is to supply an on-line tutorial of the ...">
+<meta name="long_description" content=" Students on the XRD in the Image and Chemical Analysis Laboratory at Montana State University. Details What is the Purpose of this Site? The purpose of this project is to supply an on-line tutorial of the ...">
+<meta name="datemodified" content="20190311">
+<meta name="datemodifiedminutes" content="1658">
+<meta name="datecreated" content="20070517">
+<meta name="datecreatedminutes" content="1234">
+<meta name="news_date_expires" content="2030121">
+<meta name="news_date_stale" content="2030121">
+<meta name="datepublished" content="20070517">
+<meta name="datepublishedminutes" content="1234">
+<meta name="serctype" content="page live natural_home index">
+<meta name="boost" content="1 1 1">
+<meta name="page_type_boost" content="3">
+<meta name="quality_boost" content="0">
+<meta name="thumburl" content="https://d32ogoqmya1dw8.cloudfront.net/images/research_education/sem3.jpg_crops/2e0878e1b5bb10a22933e444afb7580c_80.jpg">
+<meta name="thumbwidth" content="80">
+<meta name="thumbheight" content="60">
+<meta name="thumbid" content="8075">
+<meta name="sercviewprivs" content=" public ">
+<meta name="sercsearchablefiles" content="">
+<meta name="sort_string" content="">
+<meta property="og:title" content="Geochemical Instrumentation and Analysis">
+<meta property="og:site_name" content="Geochemical Instrumentation and Analysis">
+<meta property="og:description" content=" Students on the XRD in the Image and Chemical Analysis Laboratory at Montana State University. Details What is the Purpose of this Site? The purpose of this project is to supply an on-line tutorial of the ...">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://serc.carleton.edu/research_education/geochemsheets/index.html">
+<meta property="og:updated_time" content="2019-03-11T16:58:20-0500">
+<meta property="fb:app_id" content="357747647995292">
+<meta property="og:image" content="https://d32ogoqmya1dw8.cloudfront.net/images/research_education/sem3.jpg_crops/3c6ca8277ddf36a82e8bb1e37d3acf29.jpg">
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<link rel='stylesheet' type='text/css' media='screen' href='//d32ogoqmya1dw8.cloudfront.net/compiledstyles/geochem_anaylysis_chrome.v1562005717.css'>
+<link rel='stylesheet' type='text/css' media='print' href='//d32ogoqmya1dw8.cloudfront.net/styles/print.v1439391966.css'>
+	<script type='text/javascript' src='/scripts/modernizr.custom.10-18-11.v1416946736.js'></script>
+	<script type='text/javascript' src='/scripts/dojo-release1.10.4/release/dojo/dojo.js'></script>
+	<script type='text/javascript' src='/scripts/dojo-release1.10.4/release/serc-build/base_deps.v1435766791.js'></script>
+	<script type='text/javascript' src='/scripts/local/base_dojo.v1561566781.js'></script>
+		<script type='text/javascript'>require(['dojo/parser'])</script>
+	<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	
+	ga('create', 'UA-355624-1', 'auto');
+	ga('send', 'pageview');
+	</script>
+	<script type='text/javascript' src='/scripts/local/chrome_specific/default.v1537461108.js'></script>
+ 
+	<script type="text/javascript">require(["dojo/dom-class", "dojo/domReady!"], function(domClass){domClass.add(document.body, "nagt_not_member not_logged_in "); return;});</script>
+</head> <body  class='claro' > 
+<div id="skip"><a href="#content">Skip to Main Content</a><a href="#nav">Skip to Navigation</a></div> 
+	<div id='serc-account-bar'>
+		<div id='serc-account-link'>
+			<div id='account-menu'><a id='accountMenuTitle' href='/account/index.php'>Your Account</a></div>
+		</div>
+		<div id='serc-quick-links'>
+			<a class='ajax-toggle' targetid='serc-quick-links' autotoggle='true' data-silent-load='true' href='/admin/ajax/ajax_handler.php?action=serc_quick_links&url=https://serc.carleton.edu/research_education/geochemsheets/index.html'></a>
+		</div>
+	</div><header id='header'><a class='headerimagelink' href='/research_education/geochemsheets/'><img src='/images/research_education/geochemsheets/logo.jpg'  alt='' border='0'></a>
+
+<div id='titlebar'>Geochemical Instrumentation and Analysis<br /><div id='subtitle'></div></div></header>
+<nav id='crumbs' aria-label='Breadcrumb'><a href='/research_education'>Integrating Research and Education</a> &gt; <span aria-current='page'>Geochemical Instrumentation and Analysis</span></nav>
+<div id='serc-contentwrapper'><main id="content" class="serc-content"><a name="content"></a><h1>Geochemical Instrumentation and Analysis</h1> 
+<div class='serc-editable' id='contentId1495365'><div  class='original-image-container rightfloat' style='width: 270px ;   margin-left: 15px;'><div class='original-image-container  img-shadow' style='width: 260px ;'><a href='https://d32ogoqmya1dw8.cloudfront.net/images/research_education/xrd4.jpg' target='_blank'><img src='https://d32ogoqmya1dw8.cloudfront.net/images/research_education/xrd4_250.jpg' height='188' width='250'  alt='Students on the XRD in the Image and Chemical Analysis Laboratory at Montana State University.'> 
+</a></div><div class='small'>Students on the XRD in the Image and Chemical Analysis Laboratory at Montana State University. <a href='/details/images/8074.html'>Details</a></div></div> <div class="relatedlinks"><h3>Related Links</h3><p> 
+<p><a href='/NAGTWorkshops/geochemistry/index.html' >Teaching Geochemistry</a></p>
+<p><a href='/NAGTWorkshops/mineralogy/index.html' >Teaching Mineralogy</a></p>
+<p><a href='/NAGTWorkshops/petrology/index.html' >Teaching Petrology</a></p>
+<p><a href='/microbelife/research_methods/index.html' >Microbiology Research Methods Technique Sheets</a></p>
+<p><a href='/NAGTWorkshops/mineralogy/mineral_physics/index.html' >Teaching Mineral Physics</a> </p></div></p>
+<h2>What is the Purpose of this Site?</h2>
+<hr />
+<p>The purpose of this project is to supply an on-line tutorial of the analytical techniques commonly used to characterize geological materials. <strong>The goal is to help novices (e.g. students, or scientists working out of their field) to become critical consumers and producers of data using the arsenal of mineralogical, petrological and geochemical analytical techniques available</strong>.</p>
+<h2>Why Use this Site?</h2>
+<hr />
+<p>This site is designed to help users find information about specific geochemical analytical techniques including fundamental principles, descriptions of instruments, typical applications, strengths and limitations, sample collection and preparation, results, data presentation, interpretation, as well as links to the literature and other on-line resources for users to pursue a deeper understanding of these topics.</p>
+<h2>Who is this Site For?</h2>
+<hr />
+<p>This website is designed to help novice users gain a basic understanding of a number of analytical techniques used in a variety of instructional or professional settings. This site will help users to attend a department seminar or read a journal article, and be &quot;informed consumers&quot; of geochemical data--to be able to understand how the data were acquired and presented, to critically evaluate interpretations based on these data, and to have sufficient knowledge to ask the next important question.</p>
+<h2><a href='browse.html' >Browse</a> the Analytical Instruments and Techniques in this Collection</h2>
+<hr />
+<div  class='original-image-container rightfloat' style='width: 270px ;   margin-left: 15px;'><div class='original-image-container  img-shadow' style='width: 260px ;'><a href='https://d32ogoqmya1dw8.cloudfront.net/images/research_education/sem3.jpg' target='_blank'><img src='https://d32ogoqmya1dw8.cloudfront.net/images/research_education/sem3_250.jpg' height='188' width='250'  alt='Dave Mogk's students on the SEM.'> 
+</a></div><div class='small'>Dave Mogk's students on the SEM. <a href='/details/images/8075.html'>Details</a></div></div> 
+<p><a href='browse.html' >Browse</a> the analytical instruments and techniques in this collection regarding:</p>
+<ul>
+    <li><a href='browse.html#xray' >X-ray Crystallography</a></li>
+    <li><a href='browse.html#ebeam' >Electron Microbeam</a></li>
+    <li><a href='browse.html#elemental' >Elemental Analysis</a></li>
+    <li><a href='browse.html#massspec' >Mass Spectrometers</a></li>
+    <li><a href='browse.html#micro' >Micro-Imaging Instruments</a></li>
+    <li><a href='browse.html#surfacespecs' >Surface Spectroscopies</a></li>
+    <li><a href='browse.html#otherspecs' >Other Spectroscopies</a></li>
+</ul>
+<br />
+From the <a href='/7547' >Microbial Life Educational Resources</a> Project: 
+<ul>
+    <li><a href='/16468' >Environmental Sampling and Analysis</a></li>
+    <li><a href='/16467' >Biogeochemical Methods</a></li>
+    <li><a href='/15909' >Geobiology--Genomic Techniques</a></li>
+</ul>
+<h2>Geochemcial Sample Preparation</h2>
+<ul>
+    <li>Preparation of geochemical samples for whole-rock analysis or to acquire mineral separates requires disaggregation of rocks that may produce rock dusts that can present human health issues. Here is a compilation of responses from lab managers, submitted to the MSA listserv, about methods they use for <a class='piwik_download' href='https://d32ogoqmya1dw8.cloudfront.net/files/research_education/geochemsheets/geochemical_sample_preparation.v4.pdf'><strong>Dust Mitigation in Geochemical Sample Preparation Facilities</a> <span class='small'>(Acrobat (PDF) 607kB Jan16 12)</span></strong></li>
+</ul>
+<h2><a href='/NAGTWorkshops/petrology/instruments.html' >Registry of Analytical Equipment</a></h2>
+This service is provided to help: lab managers build their base of both research and instructional users; instructors and students to gain access to analytical equipment to support scholarly work; and build capacity by optimizing the use of existing analytical equipment to support excellence in science and the training of geoscientists. Students and faculty can follow this link to find analytical equipment you may need to support your own teaching/research activities, or lab managers can use this service to register instruments in your lab to expand your user base. <br />
+<h2>Contribute a Teaching Activity or Instructional Resources</h2>
+<hr />
+<p>If you have a teaching exercise or activity, or other instructional resource (e.g. webpage URL, journal article, etc.) that you regularly use in your own classes related to the use of these analytical techniques, please submit your suggestions via our on-line <a href='contributeteaching.html' >Contribute a Resource</a> form.</p>
+<h2>About this Project</h2>
+<hr />
+<p>This module was developed to help students (and geoscientists working &quot;out of field&quot;) understand the essentials of modern analytical techniques used in the fields of mineralogy, petrology and geochemistry. These webpages were authored by <a href='workshop.html#ListofParticipants' >invited participants</a> at a workshop held at Montana State University, March, 2007. This is one of many explorations in ways to use information technologies to support integration of research and education. This project was originally conceived with funding from the NSF Geo-Ed program (NSF EAR 9809752) and was further developed as part of the DLESE Community Services Center, with funding from the National Science Foundation (EAR 03-06708).</p>
+<h2>Workshop</h2>
+<hr />
+<p>The goal of the workshop was to create web-based resources to effectively help the geoscience community to use geochemical analytical techniques based on the collective experience of master geoscience researchers and educators. Workshop information includes <a href='workshop.html#WorkshopGoals' >workshop goals</a>, a <a href='workshop.html#WorkshopSchedule' >workshop schedule</a>, and <a href='workshop.html#ListofParticipants' >list of participants</a>.</p>
+<hr />
+<h2><a href='http://www.asdlib.org/index.php' >Visit the Analytical Sciences Digital Library (ASDL)</a></h2>
+The ASDL is part of the <a href='http://nsdl.org/' >National Science Digital Library</a> network. The ASDL is an electronic library that collects, catalogs and links web-based information or discovery material (URLs) pertinent to innovations in curricular development and supporting resources in the analytical sciences. Analytical science is the characterization and/or analysis of matter - and area that is a part of many different disciplines. ASDL serves a diverse and multidisciplinary audience of users, teachers, students and practitioners interested in teaching and delivery of educational materials to improve the literacy, skills and thought processes of all scientists that perform analyses. </div>
+<div id='nextprev'> <br><p class='nextprev'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a  name='next' href='/research_education/geochemsheets/browse.html'> Next Page &#187;</a></p> </div>
+</main>  <div id='serc-sidebar'><nav id='nav' aria-label='Main navigation'>  
+ 
+
+<!-- fullnav menu start -->
+
+
+<ul>
+	<li class='fullnavelement'><span class='topnavelement'><a href='/research_education/index.html'>Integrating Research and Education</a></span>
+
+	<ul>
+
+		<li class='fullnavelement'><a href='/research_education/cretaceous/index.html'>Cretaceous</a></li>
+
+		<li class='fullnavelement'><a href='/research_education/crystallography/index.html'>Crystallography</a></li>
+
+		<li class='fullnavelement'><a href='/research_education/cyberinfrastructure/index.html'>EarthChem</a></li>
+
+		<li class='fullnavelement'><a href='/research_education/healthrisk/index.html'>Environmental Health Risk Assessment</a></li>
+
+		<li class='fullnavelement'><a class='currentmodule currentlocation' href='/research_education/geochemsheets/index.html'>Geochemical Instrumentation and Analysis</a>
+
+<div id='localnav'>
+	<div id='localnav-editable'><a name='nav' style='display: none'></a>
+		<ul>
+			</li>
+			<li class='navelement '><a href='/research_education/geochemsheets/browse.html' >Browse Collection</a></li>
+			<li class='navelement '><a href='/research_education/geochemsheets/contributeteaching.html' >Contribute Teaching Activities</a></li>
+			<li class='navelement '><a href='/research_education/geochemsheets/workshop.html' >Workshop</a></li>
+		</ul>
+	</div>
+</div>
+
+</li>
+
+		<li class='fullnavelement'><a href='/research_education/katrina/index.html'>Hurricane Katrina</a></li>
+
+		<li class='fullnavelement'><a href='/research_education/nativelands/index.html'>Impacts on American Indian Lands</a></li>
+
+		<li class='fullnavelement'><a href='/research_education/mtgeodata/index.html'>Montana Geoscience Data Project</a></li>
+
+		<li class='fullnavelement'><a href='/research_education/equilibria/index.html'>Teaching Phase Equilibria</a></li>
+
+		<li class='fullnavelement'><a href='/research_education/geopad/index.html'>Teaching with GeoPads</a></li>
+
+		<li class='fullnavelement'><a href='/research_education/yellowstone_reu/index.html'>Yellowstone REU</a></li>
+
+		<li class='fullnavelement'><a href='/research_education/paleontology/index.html'>Advances in Paleontology</a></li>
+
+		<li class='fullnavelement'><a href='/research_education/mt_geoheritage/index.html'>Montana Geoheritage Project</a></li>
+
+		<li class='fullnavelement'><a href='/research_education/yellowstone/index.html'>Yellowstone</a></li>
+	</ul>
+</li>
+
+</ul>
+
+<!-- fullnav menu end -->
+
+ </nav>
+ </div></div><div id='related-links-block'><a class='ajax-toggle' targetid='related-links-block' autotoggle='true' data-emit-event='recommendations_ready' href='/admin/ajax/ajax_handler.php?action=recommendations_get&element_type=module&element_id=187&url_key=https%3A%2F%2Fserc.carleton.edu%2Fresearch_education%2Fgeochemsheets%2Findex.html'></a></div>
+  <footer id="footer"> <div class='leftfloat'><a href='http://nsf.gov'><img src='/images/serc/nsf_small.gif' alt='NSF'></a></div><div class='rightfloat'>
+<a href='/serc/index.html'><img src='/images/serc/sercatcarleton_logo.gif' alt='SERC'></a>
+</div><div class='rightfloat' style='margin-left:10px;'><a href='http://serc.carleton.edu/msu/'><img src='/images/msu/montana_logo.jpg' alt='MSU'></a></div>
+<div id='subfooter'>&nbsp;<span class='label'> Last Modified: March 11, 2019</span> | <a href='/serc/printer_friendly.html'>Printing</a>  |  <a href='/serc/quick_url.html'>Shortcut:</a> <a href='https://serc.carleton.edu/18410'> https://serc.carleton.edu/18410</a>
+  |  <a href='/serc/privacy.html'>Privacy</a> |  <a href='/serc/terms_of_use.html'>Terms of Use</a> | <a href='/serc/feedback.html'>Report a Problem/Feedback</a></div> 
+</footer>  <script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://serc.carleton.edu/" : "http://serc.carleton.edu/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "scripts/local/piwik-min.v2.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+  var piwikTracker = Piwik.getTracker(pkBaseURL + "1-pix.gif", "serc");
+  piwikTracker.setLinkTrackingTimer( 300 );  //300ms pause on clicked links to allow bug to be grabbed
+  piwikTracker.trackPageView();
+  piwikTracker.enableLinkTracking();
+
+
+} catch( err ) {}
+</script> 
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"268ac6ae9b","applicationID":"4850779","transactionName":"YANVbUBSCEJWVRZcDVlJYktbHA5eWlNNQhVASVRWVlZJQ1JHF1ARQzlfWFxXClRFGBJdEg==","queueTime":0,"applicationTime":31,"atts":"TERWGwhIG0w=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>  </html>

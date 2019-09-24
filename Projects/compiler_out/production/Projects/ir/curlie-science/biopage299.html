@@ -1,0 +1,354 @@
+<BASE HREF="http://www.biosupplynet.com/cfdocs/bannerad/findpage.cfm">
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="description" CONTENT="An easy-to-use directory for life science and biomedical research products. Find special deals on products, order catalogs and browse product lines from suppliers of reagents, antibodies, laboratory equipment, and more.">
+<meta name="keywords" CONTENT="biomedical research products, supplies, life science laboratory, biomedical, biotechnology, biotech, laboratory, genetic engineering, nucleic acid, genome, molecular biology, reagents, suppliers, vendors, catalogs, sourcing, molecular biology databases, biological, medical, sciquest, biosupplynet, source book, scicentral, buyers guide, antibodies, Cold Spring Harbor Lab Manual Source Book">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+	
+	
+		<title>Scientific Supplies</title>
+	
+<link rel="stylesheet" type="text/css" href="/css_new/bsn.css" />
+<link href="/siteimages/bsn.css" rel="stylesheet" type="text/css">
+<link href="/css_new/featuredProduct.shadow.css" rel="stylesheet" type="text/css" />
+<link href="/css_new/sidebarAd.shadow.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Allerta" />
+<script language="Javascript" src="/sitewide_templates/searchProcess.js"></script>
+<script type="text/javascript">
+<!--
+function MM_jumpMenu(targ,selObj,restore){ //v3.0
+  eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");
+  if (restore) selObj.selectedIndex=0;
+}
+//-->
+</script>
+
+	<script type="text/javascript">
+
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+
+</script>
+
+<script type="text/javascript">
+
+var pageTracker = _gat._getTracker("UA-743586-12");
+
+pageTracker._initData();
+
+pageTracker._trackPageview();
+
+</script>
+	
+</head>
+
+<body>
+<!--FORMS FOR SEARCH-->
+<form name="prodsearch" action="/cfdocs/products/suppprod_lu.cfm" method="post">
+	<input type="hidden" name="search_value">
+	<INPUT TYPE="hidden" NAME="search_field" VALUE="product">
+</form>
+<form name="compsearch" action="/cfdocs/products/suppprod_lu.cfm" method="post">
+	<input type="hidden" name="search_value">
+	<INPUT TYPE="hidden" NAME="search_field" VALUE="supplier">
+</form>
+<form name="kitsearch" action="/searchKits.cfm" method="post">
+	<input type="hidden" name="term">
+	
+</form>
+<!--END FORMS FOR SEARCH-->
+
+<!--THIS IS BACKGROUND IMAGE-->
+
+	<img src="/images_new/background_cfdocs.jpg" alt="BioSupply Background" />
+
+<!--END OF BACKGROUND-->
+<div id="toggleText" style="display: none"><h1 style="color:black;">BioSupplyNet</h1> is a user-friendly online directory of life science companies designed to help scientists and researchers find and obtain the products they need quickly and easily.</div>
+
+<div id="blueBar"></div>
+ <div id="navbar">
+ <a href="/">Home</a> | <a href="/cfdocs/forms/addNewCompany.cfm">Add My Company</a>  | <a href="/web_advertising.cfm">Supplier Info</a> | <a href="/kits.cfm">Browse Kits</a> | <a href="mailto:cfarmer@cshl.edu">Contact BSN</a></div>
+
+
+<!--THIS THE WRAPPER-->
+<div id="wrapper">
+<div id="leftsidebar">
+
+<!--THIS IS THE SEARCH BUTTON-->
+  
+  <form name="search1" id="go" onsubmit="javascript:searchProducts();return false;">
+    <table width="148">
+      <tr>
+	<td colspan="2"><span class="searchOption1">Product/Category Search</span></td>
+      </tr>
+      <tr>
+        <td width="127"><input name="searchfor" type="text" class="goButtonTable" id="searchfor" size="19" /></td>
+        <td width="127"><img src="/images_new/go_button.gif" alt="Go Button" width="27" height="20" border="0" onclick="javascript:searchProducts();" /></td>
+      </tr>
+    </table>
+  </form>
+  <form name="search2" id="go" onsubmit="javascript:searchCompanies();return false;">
+    <table width="148">
+      <tr>
+	<td colspan="2"><span class="searchOption1">Company Search</span></td>
+      </tr>
+      <tr>
+        <td width="127"><input name="searchfor" type="text" class="goButtonTable" id="searchfor" size="19" /></td>
+        <td width="127"><img src="/images_new/go_button.gif" alt="Go Button" width="27" height="20" border="0" onclick="javascript:searchCompanies();" /></td>
+      </tr>
+    </table>
+  </form>
+  <form name="search3" id="go" onsubmit="javascript:searchKits();return false;">
+    <table width="148">
+      <tr>
+	<td colspan="2"><span class="searchOption">Kit Search</span></td>
+      </tr>
+      <tr>
+        <td width="127"><input name="searchfor" type="text" class="goButtonTable" id="searchfor" size="19" /></td>
+        <td width="127"><img src="/images_new/go_button.gif" alt="Go Button" width="27" height="20" border="0" onclick="javascript:searchKits();" /></td>
+      </tr>
+    </table>
+   </form>
+<br />
+ 
+
+  <!--END OF SEARCH BUTTON-->
+  
+<div>
+  
+	  <a href="/login.cfm"><img src="/images_new/userButton.gif" alt="User Login" width="150" height="37" border="0" class="userLogin"/></a>
+		
+	
+  
+  
+  <a href="/sp/login.cfm"><img src="/images_new/supplierButton.gif" alt="Supplier Login" width="150" height="37" border="0" class="supplierLogin"/></a></div>
+  
+ <!--THIS STARTS AD SPACE-->
+  <div align="center"> 
+
+      <img src="/images_new/leftSpacerX5.gif" width="10" height="10" alt="spacer" /> <br />
+      <div id="shadowU-container">
+	  <div class="shadow1">
+			<div class="shadow2">
+				<div class="shadow3">
+					<div class="container">
+				    <a target="_new" href="/featuredProductDirect.cfm?product_id=653"><img width="130" height="180" src="/uploadedFeaturedProductImages/GeneLinkBSNbannerl.gif" /></a></div>
+			  </div>
+		  </div>
+  		</div>
+	  </div>
+    <span class="aCopy"><a href="/featuredProductDirect.cfm?product_id=653"><img src="/images_new/leftSpacerX5.gif" width="10" height="5" alt="spacer" /><br />
+    <br/>Gene Link specializes in complex modified and long oligos up to 250mer</a></span>  
+<!--THIS STARTS AD SPACE-->
+  <div align="center"> 
+    <span class="aHead">&nbsp;</span><br />
+      <img src="/images_new/leftSpacerX5.gif" width="10" height="10" alt="spacer" /> <br />
+      <div id="shadowU-container">
+	  <div class="shadow1">
+			<div class="shadow2">
+				<div class="shadow3">
+					<div class="container">
+				    <a target="_new" href="/featuredProductDirect.cfm?product_id=758"><img src="/uploadedFeaturedProductImages/EMS_banner.gif" /></a></div>
+			  </div>
+		  </div>
+  		</div>
+	  </div>
+    <span class="aCopy"><a href="/featuredProductDirect.cfm?product_id=758"><img src="/images_new/leftSpacerX5.gif" width="10" height="5" alt="spacer" /><br />
+<br/>Discover EMS products...<br/>Chemicals, Histology and<br/>Microscopy Tools,<br/>General Lab Supplies<br/>and more!</a></span> 
+
+  <br/><br/>  
+  
+   <br/><br/>
+  	
+      
+	 
+     	</div>
+
+	
+    <!--THIS ENDS AD SPACE-->
+	
+	<div class="aHead" id="maincontent">
+    
+
+<!--THIS IS CENTER, MAIN CONTENT DIV-->
+
+
+<table width="446" align="center" cellpadding="0" cellspacing="0">
+	<tr>
+		<td colspan="3"><div align="center"><img src="/images_new/FeaturedProdPromo.gif" /><p></div></td>
+	</tr>
+
+  <tr align="center">
+      <td width="140"><div align="center">
+     <div id="shadow-container">
+		<div class="shadow1">
+			<div class="shadow2">
+				<div class="shadow3">
+					<div class="container">
+					  <a target="_fp1" href="/featuredProductDirect.cfm?product_id=716"><img src="/uploadedFeaturedProductImages/BiotechSupportGroup Product Advertisement 2.jpg" alt="Featured Products Ad" width="130" height="139" /></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+      </div></td>
+      <td width="140"><div align="center">
+      <div id="shadow-containerT">
+		<div class="shadow1">
+			<div class="shadow2">
+				<div class="shadow3">
+					<div class="container">
+					
+					<a target="_fp2" href="/featuredProductDirect.cfm?product_id=736"><img src="/uploadedFeaturedProductImages/BloodFFPE.jpg" alt="Featured Product Ad2" width="130" height="139" class="imgLR5"/></a></div>
+				</div>
+			</div>
+		</div>
+	</div>
+      </div></td>
+      <td width="140"><div align="center">
+     <div id="shadow-containerU">
+		<div class="shadow1">
+			<div class="shadow2">
+				<div class="shadow3">
+					<div class="container"><a target="_fp3" href="/featuredProductDirect.cfm?product_id=748"><img src="/uploadedFeaturedProductImages/unnamed_20160817.jpg" alt="Featured Product Ad3" width="130" height="139" align="right"/></a></div>
+				</div>
+			</div>
+	 	 </div>
+	</div>
+      </div></td>
+    </tr>
+	<tr>
+		<td width="140">
+			<div class="featprodcopy"><a href="/featuredProductDirect.cfm?product_id=716">Proteomic and Genomic Sample Preparation and Enrichment Products For Biomarker and Drug Discovery, click here</a></div>
+		</td>
+      	<td width="140">
+      		<div class="featprodcopy"><a href="/featuredProductDirect.cfm?product_id=736">Isolate high quality DNA & RNA from whole blood, blood products, stabilized blood and FFPE samples.</a></div>
+		</td>
+      	<td width="140">
+      		<div class="featprodcopy"><a href="/featuredProductDirect.cfm?product_id=748">Novel detection and immunoassay kit development and manufacturing</a></div>
+		</td>
+    </tr>
+</table>
+<table width="446" align="center" cellpadding="0" cellspacing="0">
+	<tr>
+		<td colspan="2"><br/><div align="center"><img src="/images_new/FeaturedSupVid.gif"/><p></div></td>
+	</tr>
+
+
+
+	 <tr align="center">
+      <td width="223"><div align="center">
+						<a target="_fp1" href="http://www.biosupplynet.com/cfdocs/suppliers/supp_det.cfm?Supp_ID=30089"><img src="/suppliers/30089/sbs.gif" width="130" height="139"></a>
+
+
+
+      </div></td>
+      <td width="223"><div align="center">
+      <div id="shadow-containerT">
+		<div class="shadow1">
+			<div class="shadow2">
+				<div class="shadow3">
+					<div class="container">
+					<a target="_fp2" href="/featuredProductDirect.cfm?product_id=767"><img src="/uploadedFeaturedProductImages/2374-youtube.jpg" alt="Featured Product Ad2" width="130" height="139" class="imgLR5"/></a></div>
+				</div>
+			</div>
+		</div>
+	</div>
+      </div></td>
+      </tr>
+
+</table>
+  <img src="/images_new/ScientificSupply.gif" alt="Scientific Supply Directory by Product Type" width="435" height="43" class="mainHeaderImg" />
+<table width="435" align="center">
+  <tr align="center" class="prodtypecopy">
+      <td width="215"><a href="/cfdocs/categories/alpha_cat3.cfm?parent_id=1025&level1_id=10213">Antibodies</a><br />
+        <a href="/cfdocs/categories/alpha_cat2.cfm?parent_id=10213">Bioinformatics / Genomics</a><br />
+        <a href="/cfdocs/categories/alpha_cat2.cfm?parent_id=16">Books / Journals / Lab Manuals</a><br />
+        <a href="/cfdocs/categories/alpha_cat2.cfm?parent_id=10212">Cancer Research</a><br />
+        <a href="/cfdocs/categories/alpha_cat2.cfm?parent_id=2">Cell Biology</a><br />
+        <a href="/cfdocs/categories/alpha_cat2.cfm?parent_id=6">Chromatography</a><br />
+        <a href="/cfdocs/categories/alpha_cat2.cfm?parent_id=10">Computational Biology</a><br />
+        <a href="/cfdocs/categories/alpha_cat2.cfm?parent_id=11">Custom Services</a><br />
+        <a href="/cfdocs/categories/alpha_cat2.cfm?parent_id=10433">Detection Kits</a><br />
+        <a href="/cfdocs/categories/alpha_cat2.cfm?parent_id=10215">DNA Delivery / Gene Therapy</a><br />
+        <a href="/cfdocs/categories/alpha_cat2.cfm?parent_id=10432">EIA/ELISA Kits</a><br />
+        <a href="/cfdocs/categories/alpha_cat2.cfm?parent_id=5">Electrophoresis</a><br />
+        <a href="/cfdocs/categories/alpha_cat2.cfm?parent_id=17">High Throughput Analysis</a><br />
+        <a href="/cfdocs/categories/alpha_cat2.cfm?parent_id=7">Imaging / Microscopy</a><br />
+        <a href="/cfdocs/categories/alpha_cat2.cfm?parent_id=3">Immunology</a><br />
+</td>
+      <td width="197">
+        <a href="/cfdocs/categories/alpha_cat2.cfm?parent_id=12">Lab Organisms and Accessories</a>
+<a href="/cfdocs/categories/alpha_cat2.cfm?parent_id=8">Laboratory Equipment</a><br />
+        <a href="/cfdocs/categories/alpha_cat2.cfm?parent_id=9">Laboratory Supplies</a><br />
+        <a href="/cfdocs/categories/alpha_cat2.cfm?parent_id=1">Molecular Biology</a><br />
+        <a href="/cfdocs/categories/alpha_cat2.cfm?parent_id=10211">Neuroscience</a><br />
+        <a href="/cfdocs/categories/alpha_cat2.cfm?parent_id=14">Nonisotopic Alternatives</a><br />
+        <a href="/cfdocs/categories/alpha_cat2.cfm?parent_id=10414">PCR</a><br />
+        <a href="/cfdocs/categories/alpha_cat2.cfm?parent_id=10391">Pharmaceutical Compounds<br />
+          &nbsp;&nbsp;&nbsp;for Use in Research</a><br />
+        <a href="/cfdocs/categories/alpha_cat2.cfm?parent_id=10214">Plant Biology</a><br />
+        <a href="/cfdocs/categories/alpha_cat2.cfm?parent_id=4">Proteomics</a><br />
+        <a href="/cfdocs/categories/alpha_cat2.cfm?parent_id=13">Radiochemicals</a><br />
+        <a href="/cfdocs/categories/alpha_cat2.cfm?parent_id=10216">RNA Interference (RNA) / siRNA</a><br />
+        <a href="/cfdocs/categories/alpha_cat2.cfm?parent_id=10218">Stem Cell Technology</a><br />
+        <a href="/cfdocs/categories/alpha_cat2.cfm?parent_id=10217">Transgenic Technology</a></td>
+    </tr>
+  </table>
+  
+
+    </p>
+  <p class="benchmarkcopy">
+  
+	
+  </p></div>
+  <p>&nbsp;</p>
+  <div id="copyright">
+    <table width="424">
+      <tr>
+        <td><a href="http://www.cshl.edu/"><img src="/images_new/CSH_logo.gif" alt="csh logo" width="57" height="51" align="left" /></a></td>
+        <td class="copyright">
+					&copy; 2010 by Cold Spring Harbor Laboratory Press. All rights reserved.No
+part of these pages, either text or image, may be used for any
+purpose other than personal use. Therefore, reproduction,
+modification, storage in a retrieval system, or retransmission, in
+any form or by any means, electronic, mechanical, or otherwise, for
+reasons other than personal use, is strictly prohibited without prior
+written permission.&nbsp;&nbsp;<a href="/privacyPolicy.cfm">Privacy Policy</a></td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<!--THIS IS THE END OF MAIN CONTENT DIV-->
+<!--THIS STARTS THE RIGHT SIDEBAR-->
+  <div id="rightsidebar">
+    <div align="center">
+
+	
+
+
+	<br/>
+
+<a href="/featuredProductDirect.cfm?product_id=786"><img src="/uploadedFeaturedProductImages/BSN-Tower_Sirius.gif"></a>
+	<br/>&nbsp;<br/>
+	<a href="/cfdocs/forms/labCheckList.cfm"><img src="/images_new/setup_checklist.gif" width="169" height="84" alt="Setup Checklist" border="0"/></a><br/><br/>
+
+    </div>
+  </div>
+</div>
+  <!--THIS ENDS THE RIGHT SIDEBAR-->
+
+
+
+
+
+</div>
+
+<!--THIS IS THE END OF THE WRAPPER-->
+</body>
+</html>

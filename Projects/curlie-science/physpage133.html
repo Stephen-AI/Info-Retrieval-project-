@@ -1,0 +1,2445 @@
+<BASE HREF="http://denethor.wlu.ca/ltspice/">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" 
+   "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta name="generator" content=
+  "HTML Tidy for Linux/x86 (vers 25 January 2008), see www.w3.org" />
+
+  <title>LTspice Tutorial</title>
+  <meta http-equiv="Content-Type" content=
+  "text/html; charset=iso-8859-1" />
+  <meta name="keywords" content=
+  "ltspice help,ltspice example, 
+  switchercad, switchercad3, switchercadiii, ltspiceiv,
+  physics,wilfrid laurier university" />
+  <meta name="description" content=
+  "LTspice tutorial; an introduction to analog circuit simulation 
+  using LTspice.
+  LTspice is also known as SwitcherCAD by the manufacturer." />
+  <meta name="Publisher" content=
+  "(Sturtevant, Terry; adapted from Johnston, Adam and Webb, Roberta)" />
+  <meta name="CreationDate" content="June 5, 2008" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="http://www.wlu.ca/style.css" type=
+  "text/css" media="screen, print" />
+  <link rel="stylesheet" href="http://www.wlu.ca/printstyle.css" type=
+  "text/css" media="print" />
+  <link rel="stylesheet" type="text/css" href="/ssi/pccss.css" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <style type="text/css">
+/*<![CDATA[*/
+  h2      {
+                text-align:     center
+        }
+  ol.outer { list-style-type: upper-roman }
+  ol.middle { list-style-type: upper-alpha }
+  ol.inner { list-style-type: arabic-numbers }
+  ul.outer { list-style-type: disc }
+  ul.middle { list-style-type: square }
+  ul.inner { list-style-type: circle }
+  /*]]>*/
+  </style>
+</head>
+
+<body class="pc">
+  <div class="logo"><a href="http://www.wlu.ca"><img alt="Laurier" 
+class="header_logo" 
+src="/ssi_images/desktop_logo.png"/></a></div>
+
+
+	
+  <div class="wlubg">
+    <a id="ltop"></a>
+  </div>
+
+  <div class="wlubg"></div>
+
+  <div>
+    <!--    Adapted from
+        PC 300 
+        lab project
+        By:     Adam Johnston
+                Roberta Webb
+        Last modified: Nov. 25, 2000
+        Edited: July 2001
+        Edited January 6, 2006 T.S.
+        Adapted June 5, 2008 T.S.
+        Last Edited February 10, 2009 T.S.
+-->
+<p>
+Pages created and updated by
+<a href="mailto:tsturtevant@wlu.ca">Terry Sturtevant</a> 
+
+         <span class="pdate">Date Posted:
+         
+         May 12, 2017
+         <br/>
+         </span>
+<br/>
+</p>
+
+    <h1>LTspice Tutorial</h1>
+
+    <h2>Introduction</h2>
+    While LTspice is a Windows program, it
+    runs on Linux under Wine as well. (LTspice is also called 
+    SwitcherCAD by its manufacturer, since they use it primarily
+    for the design of switch mode power supplies (SMPS).)
+
+    <br/>
+    <strong>
+    Note: Some of this was written using SwitcherCad III, and some was 
+    written using LTspice IV. The instructions should be the same.
+    </strong>
+
+    <br/>
+    <br/>
+    <em>
+    On my YouTube channnel, I have a 
+    <a href="http://www.youtube.com/playlist?list=PL44572D1F7E26D30D">
+    series of videos about LTspice</a>.
+    </em>
+
+
+
+    <h2>Using LTspice</h2>
+    <ol class="outer">
+      <li>
+        <h3><a href="#HI">Opening LTspice</a></h3>
+      </li>
+
+      <li>
+        <h3><a href="#DRAWING">Drawing the circuit</a></h3>
+
+        <ol class="middle">
+          <li><a href="#ground">Making Sure You Have a
+          GND</a><br /></li>
+
+          <li><a href="#otherparts">Getting the Parts</a></li>
+
+          <li><a href="#placepart">Placing the Parts</a><br /></li>
+
+          <li><a href="#connect">Connecting the Circuit</a><br /></li>
+
+          <li><a href="#partname">Changing the Name of the
+          Part</a><br /></li>
+
+          <li><a href="#partvalue">Changing the Value of the
+          Part</a><br /></li>
+
+          <li><a href="#voltagecurrent">Using Net Labels</a><br /></li>
+
+          <li><a href="#models">Adding your own SPICE Models 
+           or Subcircuits</a><br /></li>
+
+          <li><a href="#savingcircuit">Saving</a><br /></li>
+
+          <li><a href="#III">Printing</a></li>
+        </ol>
+      </li>
+
+      <li>
+        <h3><a href="#HIII">Simulation</a></h3>
+
+        <ol class="middle">
+          <li><a href="#IIIA">Before you do the
+          simulation</a><br /></li>
+
+          <li><a href="#IIIB">Choosing a simulation</a><br /></li>
+
+          <li><a href="#IIIC">Graphing</a><br /></li>
+
+          <li><a href="#IIID">Adding/Deleting Traces</a><br/></li>
+
+          <li><a href="#IIIE">Doing Math</a><br/></li>
+
+          <li><a href="#IIIF">Labeling</a><br/></li>
+
+          <li><a href="#IIIG">Finding Points (aka Using Cursors)</a><br/></li>
+
+          <li><a href="#IIIH">Saving</a><br/></li>
+
+          <li><a href="#IIII">Printing</a></li>
+        </ol>
+      </li>
+
+      <li>
+        <h3><a href="#analysis">Simulation Commands</a></h3>
+<!--
+<table width="100%" border="0" summary="bogus">
+  <tr> 
+    <td> 
+-->
+
+        <ol class="middle">
+          <li><a href="#bias">DC operating point</a></li>
+
+          <li><a href="#trans">Transient</a></li>
+
+          <li><a href="#asweep">AC Analysis</a></li>
+
+          <li><a href="#dsweep">DC Sweep</a></li>
+
+          <li><a href="#noise">Noise</a></li>
+
+          <li><a href="#para">Parametric</a></li>
+
+          <li><a href="#temp">Temperature</a></li>
+
+<!--
+          <li><a href="#dtransfer">DC Transfer</a></li>
+-->
+          <li><a href="#otheranalysis">Other types of analysis</a></li>
+<!--
+          <li><a href="#bias">Bias Point Detail</a></li>
+          <li><a href="#sensitivity">Sensitivity</a></li>
+          <li><a href="#digital">Digital Setup</a></li>
+-->
+        </ol>
+<!--
+
+    </td>
+    <td>
+      <p>Note 1: There are other options, but these are the most 
+        useful ones.</p>
+      <p><br/>
+         Note 2: The Monte Carlo analysis was left out due to 
+        it's incredible depth. In general LTspice will take a 
+        statistical look 
+        at a component while randomly altering other values in the circuit, see 
+        references for pages that introduce this method.</p>
+    </td>
+
+  </tr>
+</table>
+-->
+      </li>
+
+      <li>
+        <h3><a href="#types">Types of Sources</a></h3>
+
+        <ol class="middle">
+          <li>
+            <a href="#volt">Voltage Sources</a>
+
+            <ol class="inner">
+              <li><a href="#vdc">DC</a></li>
+
+              <li><a href="#vpulse">PULSE</a></li>
+
+              <li><a href="#vsin">SINE</a></li>
+
+              <li><a href="#vexp">EXP</a></li>
+<!--
+        <li><a href="#vac">AC</a></li>
+-->
+
+              <li><a href="#vsffm">SFFM</a></li>
+
+              <li><a href="#pwl">PWL</a></li>
+
+              <li><a href="#pwlf">PWL File</a></li>
+            </ol>
+          </li>
+
+          <li><a href="#current">Current Sources</a></li>
+        </ol>
+      </li>
+<!--
+      <li>
+        <h3><a href="#digsim">Digital Simulation</a></h3>
+      </li>
+-->
+      <li>
+        <h3><a href="#ref">References and Links</a></h3>
+      </li>
+    </ol>
+
+    <blockquote>
+      <hr />
+    </blockquote>
+
+    <ol class="outer">
+      <li>
+        <a id="HI">Opening LTspice:</a>
+
+        <ul class="outer">
+          <li>Find LTspice on the C-Drive. Open LTspice IV (or SWCad 
+III). The opening
+          screen will look like this:<br />
+          <img src="../ltspice/ltsmain.png" alt="schematic icon" /> 
+<!--
+     <img src="../ltspice/ltsmain.png" width="409" height="285" alt="main screen"/>
+-->
+           .</li>
+
+          <li>Begin a new circuit 
+          <ul class="middle">
+            <li>from the file menu, or </li>
+            <li>click on the
+          &quot;New Schematic&quot; icon. <img src=
+          "../ltspice/ltscreatenew.png" alt=
+          "new schematic icon" /></li>
+          </ul>
+          Now you will see this:<br />
+          <img src="../ltspice/ltsnew.png" alt="new drawing screen" /> 
+<!--
+     <img src="../ltspice/ltsnew.png" width="411" height="250" alt="new drawing screen"/>
+-->
+           .</li>
+        </ul>
+        <hr />
+      </li>
+
+      <li>
+        <a id="DRAWING">Drawing the circuit:</a>
+
+        <ol class="middle">
+          <li>
+            <a id="ground">Adding a GND:</a>
+
+              This is very important. <strong>You cannot do any
+              simulation on the circuit if you don&#39;t have a
+              ground.</strong> To place a ground, you can 
+              <ul class="outer">
+                <li>press the &#39;g&#39; key, or </li>
+                <li>use the ground icon, <img src=
+                "../ltspice/ltsgnd.png" alt="ground icon" />,
+                or </li>
+                <li>get it from the &#39;Edit&#39; menu.</li> 
+            </ul>
+            If you 
+            aren&#39;t
+            sure where to put it, place it near the bottom of the
+            drawing.
+          </li>
+
+          <li>
+            <a id="otherparts">Getting the other
+            Parts:</a>
+
+            <ul class="outer">
+              <li>The next thing that you have to do is get some or all
+              of the parts you need.</li>
+
+              <li>This can be done by
+
+                <ul class="middle">
+                  <li>clicking on the icon for a specific
+                  component;<br />
+                  <img src="../ltspice/ltsparticons.png" alt=
+                  "get component icon" /><br />
+                  (This is good for common components such as
+                  resistors, capacitors, etc.)</li>
+
+                  <li>clicking on the &#39;component&#39; button;
+                  <img src="../ltspice/ltscomp.png" alt=
+                  "get component icon" />, 
+<!--
+<img src="../ltspice/ltscomp.png" width="116" height="8" alt="get component icon"/>, 
+-->
+                   or</li>
+
+                  <li>pressing &quot;F2&quot;; or</li>
+
+                  <li>going to &quot;Edit&quot; and selecting
+                  &quot;Component...&quot;</li>
+                </ul>
+              </li>
+
+              <li>Once this box is open, select a part that you want in
+              your circuit. This can be done by typing in the name or
+              scrolling down the list until you find it.<br />
+<!--  <dd> -->
+              <img src="../ltspice/ltspart.png" alt=
+              "part browser window" /></li>
+
+              <li>Some common parts are:
+
+                <ul class="middle">
+                  <li>res - resistor</li>
+
+                  <li>cap - capacitor</li>
+
+                  <li>ind - inductor</li>
+
+                  <li>diode - diode</li>
+
+                  <li>voltage - any kind of power supply or
+                  battery</li>
+                </ul>Anything in <strong>[&#160;]</strong> is a
+                library, which contains many parts.
+              </li>
+
+              <li>To rotate parts so that they will fit in your circuit
+              nicely, press &quot;Ctrl+R&quot; before placing the part.
+              If you want to reflect (or &#39;Mirror&#39;) the part,
+              press &quot;Ctrl+E&quot;.</li>
+
+              <li>Upon selecting your parts, click where you want them
+              placed (somewhere on the grey page with the dots).
+              Don&#39;t worry about putting it in exactly the right
+              place, it can always be moved later.<br />
+              Each type of part can be placed multiple times in
+              succession, and they will be automatically numbered. when
+              you want to stop placing a particular type of part,
+              right-click or press &#39;Esc&#39;.</li>
+<!--
+  <li> Once you have all the parts you think you need, close that box. You can 
+    always open it again later if you need more or different parts. </li>
+-->
+            </ul>
+          </li>
+
+          <li>
+            <a id="placepart">Placing the Parts:</a>
+
+            <ul class="outer">
+              <li>You should have most of the parts that you need at
+              this point.</li>
+
+              <li>Now, all you do is put them in the places that make
+              the most sense (usually a rectangle works well for simple
+              circuits). To move parts, click on the &#39;move&#39;
+              icon, <img src="../ltspice/ltsmove.png" alt=
+              "move icon" /> and then you may select parts and drag
+              them where you want them.<br />
+              <em>(When you have a part selected for a move, you can
+              rotate or reflect it as well.)</em></li>
+
+              <li>If you have any parts left over, just select them and
+              press &quot;Delete&quot;.</li>
+            </ul>
+          </li>
+
+          <li>
+            <a id="connect">Connecting the Circuit:</a>
+
+            <ul class="outer">
+              <li>Now that your parts are arranged well, you&#39;ll
+              have to attach them with wires.</li>
+
+              <li>Go up to the tool bar and
+
+                <ul class="middle">
+                  <li>select the &quot;Draw Wire&quot; button &#160;
+                  <img src="../ltspice/ltswire.png" alt=
+                  "draw wire icon" /> , or</li>
+
+                  <li>&quot;F3&quot; or</li>
+
+                  <li>go to &quot;Edit&quot; and select &quot;Draw
+                  Wire&quot;.</li>
+                </ul>
+              </li>
+
+              <li>With the pencil looking pointer, click on one end of
+              a part, when you move your mouse around, you should see
+              crossed lines appear. Attach the other end of your wire
+              to the next part in the circuit.</li>
+
+              <li>Repeat this until your circuit is completely
+              wired.</li>
+
+              <li>If you want to make a node (to make a wire go more
+              then one place), click somewhere on the wire and then
+              click to the part (or the other wire). Or you can go from
+              the part to the wire. You should see a square block when
+              3 or more wires connect at a point.</li>
+
+             <li> Holding down <strong>CTRL</strong> while 
+             drawing lines 
+             allows you to make diagonal connections in the editor.</li>
+    
+              <li>To get rid of the pencil, right click.</li>
+<!--
+  <li>If you end up with extra dots near your parts, you probably have an extra 
+    wire, select this short wire (it will turn red), then press "Delete". </li>
+  <li> If the wire doesn't go the way you want (it doesn't look the way you want), 
+    you can make extra bends in it by clicking in different places on the way 
+    (each click will form a corner).</li>
+-->
+
+               <li>
+               Mousing over a component allows you to edit its properties.
+               <strong>Note the status bar in the lower left.</strong>
+               <br/>
+               <img src="../ltspice/status_bar_resistor_mouse.png" alt=
+                "Mouse over component" /><br />
+               <br/>
+               The value of a component is one thing which can be edited.
+               <br/>
+               <img src="../ltspice/status_bar_resistor_edit.png" alt=
+                "Edit component value" /><br />
+               </li>
+
+            </ul>
+          </li>
+
+          <li>
+            <a id="partname">Changing the Name of the
+            Part:</a>
+
+            <ul class="outer">
+              <li>You probably don&#39;t want to keep the names C1, C2
+              etc., especially if you didn&#39;t put the parts in the
+              most logical order. To change the name, right click on
+              the present name (C1, or R1 or whatever your part is),
+              then a box will pop up (Enter New Reference Designator),
+              where you can type in the name you want the part to
+              have.<br />
+              <br />
+<!--  <dd> -->
+              <img src="../ltspice/ltsref.png" alt=
+              "enter new reference window" /></li>
+
+              <li>Please note that if you double click on the part or
+              its value, no box will appear.</li>
+            </ul>
+          </li>
+
+          <li>
+            <a id="partvalue">Changing the Value of
+            the Part:</a>
+
+            <ul class="outer">
+              <li>If you only want to change the value of the part (if
+              you don&#39;t want all your resistors to be 1K ohms), you
+              can right click on the part, (<em>not</em> the name), and
+              a box title by the part name (such as
+              &quot;Resistor&quot;) will appear. The number of fields
+              in the box will depend on the type of part it is. Type in
+              the new value and press OK. Use u for micro as in uF =
+              microFarad.<br />
+<!--  <dd> -->
+              <br />
+              <img src="../ltspice/ltspartvalue.png" alt=
+              "set part value window" /></li>
+<!--
+  <li>If you double click on the part itself, you can select VALUE and change 
+    it in this box. <br/>
+-->
+<!-- <dd> -->
+<!--
+<img src="../ltspice/ltspice_tut7.gif" width="453" 
+height="257" alt="edit part window"/></li>
+-->
+            </ul>
+          </li>
+
+          <li>
+            <a id="voltagecurrent">Using Net
+            Labels:</a>
+
+            <ul class="outer">
+              <li>These are important if you want to user your own
+              identifiers for points 
+              in the network 
+              where you want to determine voltages
+              rather than 
+              having
+              to work with the node numbers that LTspice assigns. 
+<!-- measure the voltage at a point or the 
+    current going through that point.
+-->
+              </li>
+
+              <li>To add net labels, 
+              <ul class="middle">
+                <li>press &quot;F4&quot;, or </li>
+                <li>click on
+                the &quot;Label Net&quot; icon <img src=
+                "../ltspice/ltsnet.png" alt="net label icon" />, or
+                </li>
+                <li>select &quot;Edit/Label Net&quot; from the menu.</li>
+              </ul>
+              When you do this, a window will pop up where you assign
+              the label you want to use for the net.<br />
+              <img src="../ltspice/ltsnetedit.png" alt=
+              "net label window" /></li>
+            </ul>
+          </li>
+
+
+          <li>
+            <a id="models"> Adding your own 
+              SPICE Models or Subcircuits</a> <br/> <br/>
+            <h1>How to add a model to LTspice (SwitcherCad)</h1>
+This assumes you want to add a new model for a new device similar to 
+one in 
+the existing library.
+<!--
+(Suppose the file that contains the model you want to use is called
+<strong>1N5338B.LIB</strong> and the model you want to use
+is a <em>subcircuit</em> called  <strong>1N5338B</strong>.)
+-->
+Here are three different methods.
+<br/>
+<h2 class="lh2">Method 1: Modify Libraries</h2>
+This method makes sense if you are working on your own computer, where
+you can update your own libraries and use them again.
+<ol>
+ <li>Look under 
+  <strong>C:\Program Files\LTC\LTspiceIV</strong>
+  <br/> (or 
+  <strong>C:\Program Files\LTC\SwCADIII </strong>
+  )
+</li>
+ <li>Go to the directory <strong>lib\cmp</strong></li>
+ <li>Look at the list of standard devices to figure out which kind you 
+  want, such as:
+  <ul>
+   <li>standard.bjt</li>
+   <li>standard.dio</li>
+   <li>standard.jft</li>
+   <li>...etc...</li>
+  </ul>
+ Each line in each of these files has a model for one device.
+ </li>
+ <li>Add a line with the <strong>.model</strong> 
+  line for your device to the end of the appropriate file using a text 
+  editor.
+  <br/>
+  <strong>Note you may have to adapt the <em>model</em> line to match 
+  the pattern in the file. It should be pretty easy to figure 
+  out.</strong>
+ </li>
+</ol>
+Now when you open LTSpice, you should be able to pick the device you've 
+added as though it was one of the existing models.
+<br/>
+<h2 class="lh2">Method 2: Using an external library file</h2>
+This will work well if you are using a computer where you can't edit
+the built-in library files, or where edits will not be saved, but where 
+you may have several models in one file which you would like to be able 
+to use in the future.
+<ol>
+ <li>Save the file which contains the model you want to use in a 
+  directory where you have write access. (For example, I use 
+  <em>c:\windows\temp</em>.)</li>
+ <li>Insert a SPICE <em>directive</em> from the edit menu, <br/>
+  <img src="../ltspice/ltsdirective.png" alt="directive menu item"/> <br/>
+  by using the 
+  <img src="../ltspice/ltsdirectivebutton.png" alt="directive menu button"/>
+  icon, or by typing 'S'.
+  <br/>
+  In the text box, type 
+  <br/>
+  <strong> .lib </strong><em>path to your library file</em>
+  <br/>
+  so, for example
+  <br/>
+  <strong> .lib c:\windows\temp\myfile.sp3</strong>
+ </li>
+ <li>Change the name of the component in your schematic to match the 
+  <em>exact</em> name of the model in the library file.
+ </li>
+</ol>
+Now when you simulate, your new device model should be used.
+<br/>
+<span class="important">Note: you can use the <strong> .include</strong>
+directive instead of the <strong>.lib</strong> directive if you 
+wish.</span>
+<br/>
+<h2 class="lh2">Method 3: Inserting the model directly into the 
+drawing</h2>
+This will work well if you are using a computer where you can't edit
+the built-in library files, or where edits will not be saved, and that 
+there is only a single model you want to use.
+<ol>
+ <li>Open file which contains the model you want to use, and 
+  copy the model into the clipboard.
+ </li>
+ <li>Insert a SPICE <em>directive</em> from the edit menu, by using the 
+  icon, or by typing 'S'.
+  <br/>
+  In the text box, paste the model from the clipboard.
+ </li>
+ <li>Change the name of the component in your schematic to match the 
+  <em>exact</em> name of the model in the model line.
+ </li>
+</ol>
+Now when you simulate, your new device model should be used.
+<br/>
+<span class="important">Note: Because you now have the model saved as 
+part of your schematic, this is completely portable between computers.
+</span>
+
+
+              <br/>
+              <br/>
+            <h1 class="lh1">How to add a subcircuit model to LTspice 
+(SwitcherCad)</h1>
+Sometimes you need to add something which is more complicated than 
+simply a model.<br/>
+In this case you can add add a <em>subcircuit</em> model for a device.
+You'll save a bit of time if the new device at least <em>looks</em>
+similar 
+to 
+one in 
+the existing library.
+Otherwise you may have to draw a new symbol.
+(Suppose the file that contains the model you want to use is called
+<strong>1N5338B.LIB</strong> and the model you want to use
+is a <em>subcircuit</em> called  <strong>1N5338B</strong>.)
+<h2 class="lh2">Method 1: Modify Libraries</h2>
+This method makes sense if you are working on your own computer, where
+you can update your own libraries and use them again.
+
+<ol>
+ <li>Look under 
+   <strong>C:\Program Files\LTC\LTspiceIV</strong>
+   <br/>
+   (or 
+   <strong>C:\Program Files\LTC\SwCADIII </strong>
+   )
+</li>
+ <li>Put the file  <strong>1N5338B.LIB</strong>
+  in the subdirectory <strong>lib\sub
+</strong>.</li>
+ <li>Go to the directory <strong>lib\sym</strong> </li>
+ <li>Find a component similar to what you want. That way you won't have 
+ to draw the symbol from scratch.
+ For instance,
+ if I were adding a new zener diode, I see there's a component 
+ <strong>zener.asy</strong>.</li>
+ <li>Copy <strong>zener.asy</strong> to <strong>1N5338B.asy</strong>.
+ (1N5338B will be the name of the new zener diode model I want to 
+  use.)</li>
+ <li>Open <strong>1N5338B.asy</strong> in a text editor, and make the 
+  following changes:
+  <ul>
+   <li>change <em>SYMATTR Prefix D</em>
+	to <em>SYMATTR Prefix X</em>
+      <br/>
+      (This says that the model we're using is a 
+       <strong>.subckt</strong>.)
+   </li>
+   <li>change SYMATTR Value D
+	to SYMATTR Value 1N5338B
+      <br/>
+      (This says that the name that will show up on the schematic is 
+       <strong>1N5338B</strong>.)
+   </li>
+   <li>add a line 
+        SYMATTR ModelFile 1N5338B.LIB
+      <br/>
+      (This says that the name of the file containing the subcircuit 
+      we're using is 
+       <strong>1N5338B.LIB</strong>.)
+   </li>
+   <li>add a line 
+        SYMATTR SpiceModel 1N5338B
+      <br/>
+      (This says that the name of the subcircuit 
+      we're using is 
+       <strong>1N5338B</strong>. You can see this by looking
+       at the first line of the file:<br/>
+       <strong>.SUBCKT 1n5338b 2 1</strong><br/>
+       This tells the name of the subcircuit and that it has two pins.)
+   </li>
+  </ul>
+ </li>
+</ol>
+Now when you open LTSpice, you should be able to find the component
+you have added, and use it like any of the ones that are built-in .
+<h2 class="lh2">Method 2 and Method 3: Setup</h2>
+This same procedure applies to both methods. These methods will be useful where 
+you can't edit the library files. This might happen if you are working on 
+computers in public labs, for instance.
+<br/>
+<ol>
+<li>
+Hold down <strong>CTRL-M</strong> while right-clicking on the component
+to bring up the dialog.
+<br/>
+  <img src="../ltspice/ltssubcircuitorig.png" alt="subcircuit stuff"/> <br/>
+<br/>
+</li>
+<li>
+Change the <strong>prefix</strong> of the device to "X" to indicate you are using 
+a 
+subcircuit,
+and edit the <strong>value</strong> of the device to match the subcircuit name 
+exactly.
+<br/>
+  <img src="../ltspice/ltssubcircuit.png" alt="subcircuit stuff"/> <br/>
+<br/>
+</li>
+</ol>
+After these steps, go on to either Method 2 or Method 3.
+
+<h2 class="lh2">Method 2: Using an external library file</h2>
+This will work well if you are using a computer where you can't edit
+the built-in library files, or where edits will not be saved, but where
+you may have several models in one file which you would like to be able
+to use in the future.
+<ol>
+ <li>Save the file which contains the subcircuit you want to use in a
+  directory where you have write access. (For example, I use
+  <em>c:\windows\temp</em>.)</li>
+ <li>Insert a SPICE <em>directive</em> from the edit menu, <br/>
+  <img src="../ltspice/ltssubcircuitlib.png" alt="subcircuit stuff"/> <br/>
+  by using the
+  <img src="../ltspice/ltsdirectivebutton.png" alt="directive menu button"/>
+  icon, or by typing 'S'.
+  <br/>
+  In the text box, type
+  <br/>
+  <strong> .lib </strong><em>path to your library file</em>
+  <br/>
+  so, for example
+  <br/>
+  <strong> .lib c:\windows\temp\myfile.sp3</strong>
+ </li>
+<!--
+ <li>Change the name of the component in your schematic to match the
+  <em>exact</em> name of the subcircuit in the library file.
+ </li>
+-->
+</ol>
+
+<h2 class="lh2">Method 3: Inserting the model directly into the
+drawing</h2>
+This will work well if you are using a computer where you can't edit
+the built-in library files, or where edits will not be saved, and that
+there is only a single model you want to use.
+<ol>
+ <li>Open file which contains the subcircuit you want to use, and
+  copy the subcircuit into the clipboard.
+ </li>
+ <li>Insert a SPICE <em>directive</em> from the edit menu, by using the
+  icon, or by typing 'S'.
+  <br/>
+  In the text box, paste the subcircuit  from the clipboard.
+  <br/>
+  <img src="../ltspice/ltssubcircuitdirective.png" alt="subcircuit stuff"/> <br/>
+  <span class="important">The subbcircuit itself may include model definitions, so 
+  you may have to include several lines when you copy. If the library file is only 
+  for that one device, then you'll want to copy and paste the entire file 
+  contents.</span>
+ </li>
+<!--
+ <li>Change the name of the component in your schematic to match the
+  <em>exact</em> name of the subcircuit in the model line.
+ </li>
+-->
+</ol>
+
+
+          </li>
+
+          <li>
+            <a id="savingcircuit">Saving:</a>
+
+            <ul class="outer">
+              <li>To save the circuit, use the save button
+              <img src="../ltspice/ltssave.png" alt=
+              "save button icon" /> on the tool bar or any other method
+              you would normally use to save files.</li>
+            </ul>
+          </li>
+
+          <li>
+            <a id="III">Printing:</a>
+
+            <ul class="outer">
+              <li>To print, you may use the menu or the print icon
+              <img src="../ltspice/ltsprint.png" alt="print icon" /> as
+              usual.</li>
+            </ul>
+          </li>
+        </ol>
+        <hr />
+      </li>
+
+      <li>
+        <a id="HIII">Simulation:</a>
+
+        <ol class="middle">
+          <li>
+            <a id="IIIA">Before you do the simulation:</a>
+
+            <ul class="outer">
+              <li>You have to have your circuit properly drawn and
+              saved.</li>
+
+              <li>There must not be any floating parts on your page
+              (i.e. unattached devices).</li>
+
+              <li>You should make sure that all parts have the values
+              that you want.</li>
+
+              <li>There are no extra wires.</li>
+
+              <li><strong>It is essential that you have a ground in
+              your circuit.</strong></li>
+            </ul>
+          </li>
+
+          <li>
+            <a id="IIIB">Choosing a simulation:</a>
+
+            <ul class="outer">
+              <li>Click on the Simulate button on the tool bar
+              <img src="../ltspice/ltssim.png" alt="simulate icon" />
+              or use the &quot;Simulate/Edit Simulation Cmd&quot;
+              command.<br />
+              <img src="../ltspice/ltssimmenu.png" alt=
+              "simulate menu" /><br /></li>
+
+              <li>Enable whatever type(s) of analysis you want using the
+              <a href="#analysis">Edit Simulation Command</a> window.
+              The last one you choose is the one which will be done
+              when you simulate.</li>
+<!--
+  <li>Make sure that you have done the <a href="#analysis">Edit 
+Simulation Command</a> and that only the things you want are enabled. </li>
+-->
+
+              <li>Click on the Simulate button on the tool bar
+              <img src="../ltspice/ltssim.png" alt="simulate icon" />
+              or use the &quot;Simulate/Run&quot; command.</li>
+
+              <li>It will check to make sure you don&#39;t have any
+              errors. If you do have errors, correct them.</li>
+<!--
+              <li>Then a new window will pop up. Here is where you can
+              do your graphs.</li>
+-->
+            </ul>
+          </li>
+
+          <li>
+            <a id="IIIC">Graphing:</a>
+
+            <ul class="outer">
+              <li>Go to the "View" menu: 
+              <br/> 
+              <img src=
+              "../ltspice/ltsviewmenu.png" 
+              alt="view menu" /> 
+              <br/>
+              </li>
+<!--
+              <li>If you don&#39;t have any errors, you should get a
+              window with a black background to pop up (even with
+              errors, it will be LTspice A/D Demo).</li>
+
+              <li>If you did have errors, in the bottom, left hand
+              side, it will say what your errors were (these may be
+              difficult to understand, so go To &quot;View - Output
+              File&quot;).</li>
+-->
+            </ul>
+          </li>
+
+          <li>
+            <a id="IIID">Adding/Deleting Traces:</a>
+
+            <ul class="outer">
+<!--
+              <li>LTspice will automatically put some traces in. You
+              will probably want to change them.</li>
+-->
+              <li>Use "Visible Traces" or <img src=
+              "../ltspice/ltsaddtraceicon.png" 
+              alt="add trace icon" /> on the toolbar to select 
+              all the traces you want.</li>
+
+              <li>The add traces window allows you to choose various 
+              signals from the circuit, or to create mathematical 
+              expressions involving them. 
+              <img src="../ltspice/ltsaddtracewindow.png" 
+              alt="visible waveforms window" />
+              </li>  
+
+              <li>To delete a trace, select its title on the  
+              graph and press "Delete".</li>
+            </ul>
+          </li>
+
+          <li>
+            <a id="IIIE">Doing Math:</a>
+
+            <ul class="outer">
+              <li>In Visible Traces, there are functions that can be
+              performed, these will add/subtract (or whatever you
+              chose) the lines together. 
+<!--  <dd> -->
+              <img src="../ltspice/ltsviswavewindow.png" 
+              alt="visible waveforms window" /></li>
+
+              <li>Select the signal(s) that you wish to have 
+              displayed.</li>
+
+              <li>There are many functions here that may or may not be
+              useful. If you want to know how to use them, you can use
+              LTspice&#39;s Help Menu.</li>
+<!--
+              <li>It is interesting to note that you can plot the phase
+              of a value by using IP(xx), where xx is the name of the
+              source you wish to see the phase for.</li>
+-->
+            </ul>
+          </li>
+
+          <li>
+            <a id="IIIF">Labeling:</a>
+
+            <ul class="outer">
+              <li>Click on Text Label <img src=
+              "../ltspice/ltstexticon.png" width="26" height="27"
+              alt="text label icon" /> on top tool bar.</li>
+
+              <li>Type in what you want to write.</li>
+
+              <li>Click OK</li>
+
+              <li>You can move this around by single clicking and
+              dragging.</li>
+            </ul>
+          </li>
+
+          <li>
+            <a id="IIIG">Finding Points: (aka Using Cursors)</a>
+
+            <ul class="outer">
+              <li>Click on the name of the trace you 
+               want to look at and then a cursor window will appear, 
+               showing
+               information about the point currently selected.
+              <img src=
+              "../ltspice/ltscursorwindow.png" width="288" height="305"
+              alt="cursor window" />.
+             <br/>
+             Note that if you right click on the trace name, you can 
+             choose to show <em>two</em> cursors. This then allows 
+             automatic math to be done, such as to give the difference 
+             between them in both dimensions.
+             </li>
+ 
+             <li>You can use the cursor keys to move back and forth
+               through the data points.</li>
+<!--
+             <li>
+              select &quot;Toggle Cursor&quot; <img src=
+              "../ltspice/ltspice_tut16.gif" width="25" height="25"
+              alt="toggle cursor icon" />.</li>
+              <li>There are Cursor buttons that allow you to find the
+              maximum or minimum or just a point on the line. These are
+              located on the toolbar (to the right).</li>
+
+              <li>Select which curve you want to look at and then
+              select &quot;Toggle Cursor&quot; <img src=
+              "../ltspice/ltspice_tut16.gif" width="25" height="25"
+              alt="toggle cursor icon" />.</li>
+
+              <li>Then you can find the max, min, the slope, or the
+              relative max or min ( <img src=
+              "../ltspice/ltspice_tut17.jpg" width="27" height="25"
+              alt="cursor function icon" /> is find relative max).</li>
+--> 
+           </ul>
+          </li>
+
+          <li>
+            <a id="IIIH">Saving:</a>
+
+            <ul class="outer">
+              <li>To save your probe you need to go into the tools menu
+              and click display, this will open up a menu which will
+              allow you to name the probe file and choose where to save
+              it. You can also open previously saved plots from here as
+              well.</li>
+            </ul>
+          </li>
+
+          <li>
+            <a id="IIII">Printing:</a>
+
+            <ul class="outer">
+              <li>Select Print in Edit or on the toolbar 
+              <img src="../ltspice/ltsprint.png" alt="print icon" /> 
+              .</li>
+
+              <li>Print as usual.</li>
+            </ul>
+          </li>
+        </ol>
+        <hr />
+      </li>
+
+      <li>
+        <a id="analysis">Simulation Commands</a> 
+<!--
+<p>To open the analysis menu click on the <img 
+src="../ltspice/ltspice_tut21.gif" width="25" height="26" alt="analysis menu 
+button"/> 
+  button. </p>
+-->
+
+        <ol class="middle">
+
+<!--
+<li><a id="bias">Bias Point Detail</a>
+-->
+
+          <li>
+            <a id="bias">DC Operating Point</a><br />
+            <img src="../ltspice/ltsdcop.png" alt=
+            "DC operating point command menu" /><br />
+
+            <ul class="outer">
+              <li>This is a simple, but incredibly useful analysis. It
+              will not give you anything to plot, but it will indicate
+              the DC voltages at all nodes and DC currents through all
+              devices in the circuit.</li>
+
+              <li>
+               <img src="../ltspice/status_bar_op.png" alt=
+                "Drawing with operating point analysis selected" /><br />
+               <br/>
+               The output of the simulation is a very simple text file.
+               <br/>
+               <img src="../ltspice/op_output.png" alt=
+                "Operating point analysis output" /><br />
+               <br/>
+               After a simulation has been performed, 
+               mousing over any wire in the circuit will show what node it belongs to in the 
+               status bar. (See the lower left corner of the screen.)
+               <br/>
+               <img src="../ltspice/status_bar_node.png" alt=
+                "Drawing with operating point analysis selected" /><br />
+               <br/>
+               After a simulation has been performed, 
+               mousing over a component shows parameters like current and power
+               in the status bar.
+               <br/>
+               <img src="../ltspice/status_bar_result_resistor_mouse.png" alt=
+                "Component information after analysis" /><br />
+               <br/>
+               Note the <em>sign</em> of the current and power from the source.
+                <br/>
+               <img src="../ltspice/status_bar_result_source.png" alt=
+                "Source information after analysis" /><br />
+
+               <br/>
+               You can view the netlist from the menu.
+               <br/>
+               <img src="../ltspice/menu_netlist.png" alt=
+                "Select netlist from menu" /><br />
+               <br/>
+               The netlist allows you to see the node numbers for each device, among other 
+               things.
+               <br/>
+               <img src="../ltspice/netlist.png" alt=
+                "Sample netlist" /><br />
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <a id="trans">Transient</a><br />
+
+            <br/>
+               When doing a transient analysis of a source, the 
+               sections highlighted 
+               below in the source configuration window are relevant.
+               <br/>
+                <img src="../ltspice/ltsvoltagesine_trans.png" alt=
+                "source configuration window" /><br />
+            <br/>
+
+            Here's the simulation command window:
+             <br/>
+
+            <img src="../ltspice/ltssimcmd.png" alt=
+            "simulation command menu" /><br />
+
+            <ul class="outer">
+   
+
+              <li>The transient analysis is probably the most important
+              analysis you can run in LTspice, and it computes various
+              values of your circuit over time. Two very important
+              parameters in the transient analysis are:
+
+                <ul class="middle">
+                  <li><strong>Stop Time</strong>.</li>
+
+                  <li><strong>Time to Start Saving Data</strong></li>
+
+                  <li><strong>Maximum Timestep</strong></li>
+                </ul>
+
+                <ul class="middle">
+                  <li><strong>(various
+                  checkboxes....later)</strong></li>
+                </ul>
+              </li>
+
+              <li>The ratio of <strong>Stop Time: Maximum
+              Timestep</strong> determines how many calculations
+              LTspice must make to plot a wave form. LTspice always
+              defaults the start time to zero seconds and going until
+              it reaches the user defined final time. It is incredibly
+              important that you think about what timestep you should
+              use before running the simulation, if you make the
+              timestep too small the probe screen will be cluttered
+              with unnecessary points making it hard to read, and
+              taking extreme amounts of time for LTspice to calculate.
+              However, at the opposite side of that coin is the problem
+              that if you set the timestep too high you might miss
+              important phenomenon that are occurring over very short
+              periods of time in the circuit. Therefore play with step
+              time to see what works best for your circuit.<br />
+              <br /></li>
+
+              <li>You can set a step ceiling which will limit the size
+              of each interval, thus increasing calculation speed.
+              Another handy feature is the Fourier analysis, which
+              allows you to specify your fundamental frequency and the
+              number of harmonics you wish to see on the plot. LTspice
+              defaults to the 9th harmonic unless you specify
+              otherwise, but this still will allow you to decompose a
+              square wave to see it&#39;s components with sufficient
+              detail.
+               <br/>
+               <br/>
+              </li>
+
+              <li>
+               You can look at the signal at any node.<br/>
+               <br/>
+               <img src="../ltspice/transient_node_select.png" 
+                height="395" width="435"
+                alt=
+                "selecting a node" /><br />
+               <br/>
+               Note the status bar shows more information.
+               <br/>
+               <img src="../ltspice/transient_node_select_status.png" 
+                alt="status bar node information" /><br />
+               <br/>
+               The output shows up like this..
+               <br/>
+               <img src="../ltspice/transient_node_output.png" 
+                height="395" width="435"
+                alt=
+                "node trace" /><br />
+               <br/>
+              </li>
+              <li>
+               You can delete or modify any signal.<br/>
+               <br/>
+               <img src="../ltspice/transient_signal_select.png" 
+                height="395" width="435"
+                alt=
+                "selecting a trace" /><br />
+               <br/>
+               The dialog allows various changes.<br/>
+               <img src="../ltspice/transient_signal_delete.png" 
+                height="395" width="435"
+                alt=
+                "deleting a trace" /><br />
+               <br/>
+               Note the status bar shows more information.
+               <br/>
+               <img src="../ltspice/transient_signal_delete_status.png" 
+                alt="status bar; deleting a trace" /><br />
+               <br/>
+              </li>
+              <li>
+               You can look at the current through any device.<br/>
+               <br/>
+               <img src="../ltspice/transient_current_select.png" 
+                height="395" width="435"
+                alt="selecting a device current" /><br />
+               <br/>
+               Note the status bar shows more information.
+               <br/>
+               <img src="../ltspice/transient_current_select_status.png" 
+                alt="status bar device current information" /><br />
+               <br/>
+               The output shows up like this..
+               <br/>
+               <img src="../ltspice/transient_current_output.png" 
+                height="395" width="435"
+                alt="status bar device current trace" /><br />
+               <br/>
+             </li>
+             <li>You can also look at the current through any 
+              <em>wire</em>. Remember you get the voltage by mousing 
+               over any point in a node, (such as along a wire).
+               <br/>
+               <img src="../ltspice/power_pointer_wire_voltage.png" 
+                height="354" width="673"
+                alt="node voltage" /><br />
+               <br/>
+               Now, if while mousing
+               over it you hold down 
+               the 
+               <strong>ALT</strong> key, you'll see the current
+               pointer and the status bar indicates you can click to 
+               plot the wire current.
+               <br/>
+               <img src="../ltspice/power_pointer_wire_current.png" 
+                height="355" width="669"
+                alt="wire current" /><br />
+               <br/>
+              </li>
+
+             <li>You can also look at the power dissipation in 
+              any 
+              <em>device</em>. Remember you get the current by mousing 
+               over any device.
+               <br/>
+               <img src="../ltspice/power_pointer_device_current.png" 
+                height="351" width="635"
+                alt="device current" /><br />
+               <br/>
+               Now, if while mousing
+               over it you hold down 
+               the 
+               <strong>ALT</strong> key, you'll see the power
+               pointer, (a thermometer), and the status bar will show 
+               you can plot the device power dissipation.
+               <br/>
+               <img src="../ltspice/power_pointer_device_power.png" 
+                height="360" width="667"
+                alt="device power" /><br />
+               <br/>
+              </li>
+
+            </ul>
+          </li>
+
+          <li>
+            <a id="asweep">AC Analysis</a><br />
+            <br/>
+               When doing an AC sweep of a source, the sections 
+               highlighted
+               below in the source configuration window are relevant.
+               <br/>
+                <em>Note: In an AC sweep, all AC sources are treated as 
+                sine waves.</em>
+                <br/>
+                <img src="../ltspice/ltsvoltagesine_ac.png" alt=
+                "source configuration window" /><br />
+             <br/>
+
+            Here's the simulation command window:
+             <br/>
+
+            <img src="../ltspice/ltsac.png" alt=
+            "ac analysis command " /><br />
+            The AC analysis allows you to plot magnitude and/or phase
+            versus frequency for different inputs in your
+            circuit.<br />
+
+            <ul class="outer">
+
+              <li>
+                <strong>Type of Sweep</strong><br />
+                In the AC analysis menu you have the choice of three
+                types of analysis:
+
+                <ul class="middle">
+                  <li><strong>Linear,</strong></li>
+
+                  <li><strong>Octave and</strong></li>
+
+                  <li><strong>Decade</strong>.</li>
+                </ul>These three choices describe the X-axis scaling
+                which will be produced in probe. For example, if you
+                choose decade then a sample of your X-axis might be
+                10Hz, 1kHz, 100kHz, 10MHz, etc.... Therefore if you
+                want to see how your circuit reacts over a very large
+                range of frequencies choose the decade option.<br />
+                <br />
+              </li>
+
+              <li>You now have to specify at how many points you want
+              LTspice to calculate frequencies, and what the start and
+              end frequency will be. That is, over what range of
+              frequencies do you want to simulate your circuit.<br />
+                <br />
+
+                <ul class="middle">
+                  <li><strong>Number of points</strong></li>
+
+                  <li><strong>Start Frequency</strong></li>
+
+                  <li><strong>Stop Frequency</strong></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <a id="dsweep">DC Sweep</a><br/>
+            <img src="../ltspice/ltsdcsweep.png" alt=
+            "dc sweep command " /><br />
+
+            <ul class="outer">
+              <li>The DC sweep allows you to do various different
+              sweeps of your circuit to see how it responds to various
+              conditions.</li>
+
+              <li>For all the possible sweeps,
+
+                <ul class="middle">
+                  <li>voltage,</li>
+
+                  <li>current</li>
+                </ul>you need to specify a start value, an end value,
+                and the number of points you wish to calculate.
+              </li>
+
+              <li>For example you can sweep your circuit over a voltage
+              range from 0 to 12 volts. The main two sweeps that will
+              be most important to us at this stage are the voltage
+              sweep and the current sweep. For these two, you need to
+              indicate to LTspice what component you wish to sweep, for
+              example V1 or V2.<br />
+              <br /></li>
+
+              <li>Another excellent feature of the DC sweep in LTspice,
+              is the ability to do a <strong>nested
+              sweep</strong>.</li>
+
+              <li>A nested sweep allows you to run two simultaneous
+              sweeps to see how changes in two different DC sources
+              will affect your circuit.</li>
+
+              <li>Once you&#39;ve filled in the main sweep menu, click
+              on the nested sweep button and choose the second type of
+              source to sweep and name it, also specifying the start
+              and end values. (Note: In some versions of LTspice you
+              need to click on <strong>enable nested sweep</strong>).
+              Again you can choose Linear, Octave or Decade, but also
+              you can indicate your own list of values, example: 1V 10V
+              20V. <strong>DO NOT</strong> separate the values with
+              commas.</li>
+            </ul>
+          </li>
+
+          <li>
+            <a id="noise">Noise</a><br/>
+            <img src="../ltspice/ltsnoise.png" alt=
+            "noise command " /><br />
+
+            <ul class="outer">
+              <li>LTspice will simulate noise for you either on the
+              output or the input of the circuit. These noise
+              calculations are performed at each frequency step and can
+              be plotted in probe.</li>
+
+              <li>The two types of noise are:
+
+                <ul class="middle">
+                  <li><strong>Output</strong> for noise on the outputs
+                  and</li>
+
+                  <li><strong>Input</strong> for noise on the input
+                  source.</li>
+
+                  <li><strong>Type of Sweep</strong> (same as for AC
+                  analysis)</li>
+
+                  <li><strong>Number of points...</strong> (same as for
+                  AC analysis)</li>
+
+                  <li><strong>Start Frequency</strong> (same as for AC
+                  analysis)</li>
+
+                  <li><strong>Stop Frequency</strong> (same as for AC
+                  analysis)</li>
+                </ul>
+              </li>
+
+              <li>To use input noise you need to tell LTspice where you
+              consider the &#39;input&#39; in your circuit to be, for
+              example, if your voltage source is labeled
+              &#39;V1&#39;.</li>
+<!--
+  <li>Finally you need to specify in what interval you want the noise to be calculated 
+    (note: the default interval for spice is zero, i.e.: no noise will be calculated).</li>
+-->
+            </ul>
+          </li>
+
+          <li>
+            <a id="dctransfer">DC Transfer</a><br />
+            <img src="../ltspice/ltsdctransfer.png" alt=
+            "DC transfer command menu" /><br />
+            <br />
+<!--
+            <ul class="middle">
+              <li> &nbsp;</li>
+            </ul>
+-->
+          </li>
+
+<li><a id="para">Parametric</a>
+<ul class="outer">
+  <li>Parametric analysis allows you to run another type of analysis 
+    (DC operating point, transient, 
+    sweeps) while using a range of component values.
+    The best way to demonstrate this is with an example, we will use 
+    a resistor, but any other standard part would work just as well (capacitor, 
+    inductor). <br/>
+    <br/>
+  </li>
+  <li> First, right click the value resistor that is to be varied. 
+    This will open a dialog box allowing you to set "Resistor 
+    Properties". Enter the name <strong>{R} 
+    </strong>(including the curly braces) in place of the component 
+    value. <br/>
+            <img src="../ltspice/ltsparam.png" alt=
+            "Setting component value for parametric analysis" /><br />
+    This indicates 
+    to LTspice that the value of the resistor is a global parameter 
+    called <strong>R</strong>. 
+    <br/>
+    </li>
+  <li> Now add a spice <strong>directive</strong> to the page,
+    by pressing the 's' key,
+    using 
+    the icon <br/>
+            <img src="../ltspice/ltsdirectivebutton.png" alt=
+            "SPICE directive button" /><br />
+    or
+    the menu command <br/>
+            <img src="../ltspice/ltsdirective.png" alt=
+            "SPICE directive menu command" /><br />
+    Place the box anywhere on the schematic page. 
+  </li>
+  <li> Edit the directive. <br/>
+            <img src="../ltspice/ltsdirect_window.png" alt=
+            "Setting parameter and details for parametric 
+     analysis" /><br />
+     <strong>Directives always start with a period.</strong><br/>
+     <em>.STEP PARAM R 1k 10k 0.1k</em> means to step the parameter
+     <strong>R</strong> from 
+     <strong>1k&Omega;</strong>
+     to
+     <strong>10k&Omega;</strong>
+     in steps of
+     <strong>0.1k&Omega;</strong>
+     <em>for every step of the outer simulation.</em>
+  </li>
+  <li>You'll need to have one simulation command, even if it's a DC 
+    operating point analysis. <br/>
+    Choose an analysis as usual, and run the simulation.
+  </li>
+  <li>If your did a <em>non-graphical</em> analysis, such as a DC 
+    operating point, then you'll get a 
+    <em>graphical</em> output which has the stepped parameter as the 
+    horizontal axis.<br/>
+    If you did an analysis that is already graphical, such as transient, 
+    you'll get a graph with a <em>series of lines</em>, one for each 
+    value of the stepped parameter. In order to isolate one trace,<br/>
+            <img src="../ltspice/ltsparamstep.png" alt=
+            "Choosing which parameter value(s) to display for 
+    parametric analysis" /><br />
+    use the command to "Select Steps" from the trace menu.
+    This brings up a dialog<br/>
+            <img src="../ltspice/ltsparamstepdisplay.png" alt=
+            "Choosing which parameter value(s) to display for 
+    parametric analysis" /><br />
+    which allows you to choose which one(s) you want to show.
+  </li> 
+
+</ul>
+</li>
+
+<li><a id="temp">Temperature</a>
+<ul class="outer">
+  <li>To do a temperature sweep, do a parametric analysis but 
+    instead of varying a component value, vary the temperature as 
+    follows:<br/>
+     <em>.STEP TEMP  0 100 1</em> means to step the
+     <strong>temperature</strong> from 
+     <strong>0&deg;C</strong>
+     to
+     <strong>100&deg;C</strong>
+     in steps of
+     <strong>1&deg;C</strong>
+     <em>for every step of the outer simulation.</em>
+  </li>
+</ul>
+</li>
+
+
+          <li>
+            <a id="otheranalysis">Other types of
+            analysis</a> There are other SPICE analyses possible.
+            Eventually I might get them in here, including
+
+            <ul class="outer">
+
+              <li>fourier</li>
+<!--
+              <li>sensitivity</li>
+-->
+            </ul>
+          </li>
+
+<!--
+<li><a id="sensitivity">Sensitivity</a>
+<ul class="outer">
+  <li>Sensitivity causes a DC sensitivity analysis to be performed in which one 
+    or more output variables may be specified. </li>
+  <li>Device sensitivities are provided for the following device types only: 
+    <ul class="middle">
+      <li>resistors,</li>
+      <li> independent voltage and current sources, </li>
+      <li>voltage and current-controlled switches, </li>
+      <li>diodes, and </li>
+      <li>bipolar transistors. </li>
+    </ul>
+  </li>
+  <li> You would use the sensitivity setting for discovering the maximum range 
+    of circuit performance and the causes of extreme operation. These techniques 
+    are used to identify effective changes to improve the quality of circuit operation 
+    (for example, which components need to have tight tolerance and which can 
+    be lower quality and less expensive). </li>
+  <li>This isn't as important for us in the lab, but some day when you are constructing 
+    real circuits that need to function under various conditions this will be 
+    useful.</li>
+</ul>
+</li>
+
+<li><a id="digital">Digital Setup</a>
+<ul class="outer">
+  <li>This paragraph will only indicate the features of the digital setup on the 
+    analysis menu, see below for a more complete description.</li>
+  <li> In addition to letting you simulate analog circuits, LTspice 
+    provides a 
+    number of digital parts that can be used in a homogeneous digital circuit, 
+    or a heterogeneous analog/digital combination. The digital analysis option 
+    allows you to specify the timing of your circuit, by running the gates at 
+    their minimum, maximum and typical values. A superb feature allows you to 
+    test the worst case timing of your circuit to see how it will operate under 
+    these extreme conditions. You also have the option of setting the value of 
+    any flip flops you have in your circuit to predefined states which is good 
+    to simulate any startup conditions for finite state machines that you are 
+    simulating. </li>
+</ul>
+</li>
+-->
+        </ol>
+        <hr />
+      </li>
+
+      <li>
+        <a id="types">Types of Sources</a>
+
+        <ol class="middle">
+          <li>
+            <a id="volt">Voltage Sources</a> A voltage
+            source can be configured in many possible ways. Right
+            clicking on one will bring up the &quot;Independent Voltage
+            Source&quot; window. 
+<!--
+<br/>
+<img src="../ltspice/ltsvoltage.png" alt="voltage configuration window"/>
+<br/>
+-->
+            The options which show up in the window will change as the
+            function selected changes.
+
+            <ol class="inner">
+              <li>
+                <a id="vdc">(none)</a><br />
+                <img src="../ltspice/ltsvoltagedc.png" alt=
+                "dc voltage configuration window" /><br />
+
+                <ul class="middle">
+                  <li>This is your basic direct current voltage source
+                  that simulates a simple battery and allows you to
+                  specify the DC voltage value.</li>
+                </ul>
+              <br/>
+              </li>
+
+              <li>
+                <a id="vpulse">PULSE</a><br />
+                <img src="../ltspice/ltsvoltagepulse.png" alt=
+                "exponential voltage configuration window" /><br />
+
+                <ul class="outer">
+                  <li>PULSE is often used for a transient simulation of
+                  a circuit where we want to make it act like a square
+                  wave source. It should never be used in a frequency
+                  response study because LTspice assumes it is in the
+                  time domain, and therefore your probe plot will give
+                  you inaccurate results.
+
+                    <ul class="middle">
+                      
+<!--
+        <li><strong>DC</strong> the DC component of the wave.</li>
+        <li><strong>AC</strong> the AC component of the wave.</li>
+-->
+
+                      <li><strong>V<sub>initial</sub></strong> is the
+                      value when the pulse is not &quot;on.&quot; So
+                      for a square wave, the value when the wave is
+                      &#39;low&#39;. This can be zero or negative as
+                      required. For a pulsed current source, the units
+                      would be &quot;amps&quot; instead of
+                      &quot;volts.&quot;</li>
+
+                      <li><strong>V<sub>on</sub></strong> is the value
+                      when the pulse is fully turned &#39;on&#39;. This
+                      can also be zero or negative. (Obviously, 
+                      V<sub>1</sub> and V<sub>2</sub> 
+                      should not be equal.) Again, the units would
+                      be &quot;amps&quot; if this were a current
+                      pulse.</li>
+
+                      <li><strong>T<sub>delay</sub></strong> is the
+                      time delay. The default units are seconds. The
+                      time delay may be zero, but not negative.</li>
+
+                      <li><strong>T<sub>rise</sub></strong> is the rise
+                      time of the pulse. LTspice allows this value to
+                      be zero, but zero rise time may cause convergence
+                      problems in some transient analysis simulations.
+                      The default units are seconds.</li>
+
+                      <li><strong>T<sub>fall</sub></strong> is the fall
+                      time in seconds of the pulse.</li>
+
+                      <li><strong>T<sub>on</sub></strong> is the pulse
+                      width. This is the time in seconds that the pulse
+                      is fully on.</li>
+
+                      <li><strong>T<sub>period</sub></strong> is the
+                      period and is the total time in seconds of the
+                      pulse.</li>
+
+                      <li><strong>N<sub>cycles</sub></strong> is the
+                      number of cycles of the pulse that should happen.
+                      Leave it as zero if you want ongoing pulses.</li>
+                    </ul>
+                  </li>
+
+                  <li>This is a very important source for us because we
+                  do a lot of work with the square wave on the wave
+                  generator to see how various components and circuits
+                  respond to it.</li>
+                </ul>
+              <br/>
+              </li>
+
+              <li>
+                <a id="vac">SINE</a> <a id="vsin"></a><br />
+                <img src="../ltspice/ltsvoltagesine.png" alt=
+                "sine voltage configuration window" /><br />
+
+                <ul class="outer">
+                  <li>A few things to note about the alternating
+                  current source. First, there are two possible
+                  analyses which can be done and so there are two sets
+                  of parameters.<br />
+                    For an ac analysis, the parameters are:
+
+                    <ul class="middle">
+                      <li><strong>AC Amplitude</strong> which is the
+                      peak value of the voltage.</li>
+
+                      <li><strong>AC Phase</strong> which is the phase
+                      angle of the voltage</li>
+                    </ul>For a transient analysis, the parameters are:
+
+                    <ul class="middle">
+                      <li><strong>DC offset</strong> is the DC offset
+                      voltage. It should be set to zero if you need a
+                      pure sinusoid.</li>
+
+                      <li><strong>Amplitude</strong> is the undamped
+                      amplitude of the sinusoid; i.e., the peak value
+                      measured from zero no DC offset value.</li>
+
+                      <li><strong>Freq</strong> is the frequency in Hz
+                      of the sinusoid.</li>
+
+                      <li><strong>T<sub>delay</sub></strong> is the
+                      time delay in seconds. Set this to zero for the
+                      normal sinusoid.</li>
+
+                      <li><strong>Theta</strong> is the damping factor.
+                      (<strong>Not the phase angle!</strong>) Also set
+                      this to zero for the normal sinusoid.<br />
+                      This is used to apply an exponential decay to the
+                      sinusoid; theta is the decay constant in
+                      1/seconds.</li>
+
+                      <li><strong>PHI</strong> is the phase advance in
+                      degrees. Set this to 90 if you need a cosine wave
+                      form.</li>
+
+                      <li><strong>N<sub>cycles</sub></strong> is the
+                      number of cycles of the pulse that should happen.
+                      Leave it as zero if you want ongoing pulses.</li>
+                    </ul>For this analysis, LTspice takes it to be a
+                    sine source, so if you want to simulate a cosine
+                    wave you need to add (or subtract) a 90° phase
+                    shift. Note that the phase angle if left
+                    unspecified will be set by default to 0°
+                  </li>
+                </ul>
+              <br/>
+              </li>
+
+
+              <li>
+                <a id="vexp">EXP</a><br />
+                <img src="../ltspice/ltsvoltageexp.png" alt=
+                "exponential voltage configuration window" /><br />
+                
+                <ul class="outer">
+                  <li>The EXP type of source is an exponential voltage,
+                illustrated here:<br/>
+                <br/>
+                <img src="../ltspice/voltage_exp_example.png" alt=
+                "exponential voltage example" /><br />
+                <br/>
+         <ul class="middle">
+        <li><strong>Vinitial</strong> the starting voltage, 
+         V<sub>1</sub></li>
+        <li><strong>Vpulsed</strong> the maximum voltage, 
+         V<sub>2</sub></li>
+        <li><strong>Rise Delay</strong> the time to wait at the starting 
+         voltage before changing, 
+         T<sub>d1</sub></li>
+        <li><strong>Rise Tau</strong> the time constant for the change,
+         Tau<sub>1</sub></li>
+        <li><strong>Fall Delay</strong> the time to wait at the maximum
+         voltage before changing, 
+         T<sub>d2</sub></li>
+        <li><strong>Fall Tau</strong> the time constant for the change
+         back to the starting voltage,
+         Tau<sub>2</sub></li>
+      </ul>
+     </li>
+<!--
+
+                  <li>Note that the normal usage of this source type is
+                  ... 
+</li>
+-->
+<!--
+      to set <strong>Voff</strong>, <strong>TD</strong> and <strong>DF</strong> to zero as this will give you 
+      a 'nice' sine wave.
+-->
+                </ul>
+              <br/>
+              </li>
+
+              <li>
+                <a id="vsffm">SFFM</a><br />
+                <img src="../ltspice/ltsvoltagesffm.png" alt=
+                "sffm voltage configuration window" /><br />
+
+                <ul class="outer">
+                  <li>The SFFM (Single Frequency FM) type of source has
+these parameters:
+      <ul class="middle">
+        <li><strong>DC offset</strong> the DC component of the sine wave</li>
+        <li><strong>Amplitude</strong> the AC value of the sine wave</li>
+        <li><strong>Carrier Freq</strong> is the carrier frequency.</li>
+        <li><strong>Modulation Index</strong> is the modulation 
+         index. </li>
+        <li><strong>Signal Freq</strong> is the signal frequency.</li>
+      </ul>
+<!--
+--></li>
+
+<!--
+                  <li>Note that the normal usage of this source type is
+                  ....</li>
+-->
+                </ul>
+              <br/>
+              </li>
+
+              <li>
+                <a id="pwl">PWL (Piece-Wise
+                Linear)</a><br />
+                <img src="../ltspice/ltsvoltagepwl.png" alt=
+                "pwl voltage configuration window" /><br />
+
+                <ul class="outer">
+                  <li>The PWL source is a Piece Wise Linear function
+                  that you can use to create a wave form consisting of
+                  straight line segments drawn by linear interpolation
+                  between points that you define. Since you can use as
+                  many points as you want, you can create a very
+                  complex wave form This source type can be a voltage
+                  source or a current source.</li>
+
+                  <li>The syntax for this source type is flexible and
+                  has several optional parameters. The required
+                  parameters are two-dimensional points consisting of a
+                  time value and a voltage (or current) value. There
+                  can be many of these data pairs, but the time values
+                  must be in ascending order, and the intervals between
+                  time values need not be regular.</li>
+                </ul>
+              <br/>
+              </li>
+
+              <li>
+                <a id="pwlf">PWL File</a><br />
+                <img src="../ltspice/ltsvoltagepwlfile.png" alt=
+                "pwl file voltage configuration window" /><br />
+
+                <ul class="outer">
+                  <li>The PWL File source reads a file for Piece 
+                   Wise Linear function parameters.
+                  </li>
+                </ul>
+              </li>
+            </ol>
+            <br/>
+          </li>
+
+          <li>
+            <a id="current">Current Sources</a>
+
+            <ul class="outer">
+              <li>For each of the previous discussed voltage sources,
+              there exists the exact same source except that it produces
+              current. There is one thing that should be mentioned;
+              current sources in LTspice get a little confusing. For
+              those current sources whose circuit symbol has an arrow,
+              you have to point the arrow in the direction of
+              conventionally flowing current. This applies to all
+              current sources, including AC and DC. Therefore placing
+              the current source in the circuit backwards with
+              seemingly incorrect polarities will give the correct
+              results.</li>
+
+              <li>An interesting little feature under the
+              <strong>markers</strong> menu is the ability to add
+              markers to your circuit so you can see where the current
+              and voltage have imaginary values in the circuit, and the
+              phase of your source at any point in the circuit.</li>
+            </ul>
+          </li>
+        </ol>
+        <hr />
+      </li>
+<!--
+      <li>
+        <a id="digsim">Digital Simulation</a>
+        <ul class="outer">
+          <li>LTspice can simulate digital circuits and Probe can
+          output a timing diagram showing the relationship between all
+          the signals propagating in the circuit. The following will be
+          a brief introduction to digital analysis using LTspice, you
+          should consult the online LTspice manual if you are unsure
+          about any of the following properties.</li>
+
+          <li>The evaluation version of LTspice provides many of the
+          common digital parts that we use in the lab exercises these
+          include, but are not limited to,
+
+            <ul class="middle">
+              <li>counters,</li>
+
+              <li>multiplexers,</li>
+
+              <li>decoders,</li>
+
+              <li>flip-flops,</li>
+
+              <li>latches,</li>
+
+              <li>all common gates,</li>
+
+              <li>buffers,</li>
+
+              <li>adders and a lot more.</li>
+            </ul>
+          </li>
+
+          <li>To begin, create a digital circuit the same way you would
+          create an analog one by getting and placing the parts (see
+          above for details on creating a circuit).</li>
+
+          <li>Now instead of an analog voltage source you want to place
+          digital stimuli, these are located in the parts menu as
+          <strong>HI</strong> and <strong>LO</strong>.</li>
+
+          <li>Draw wires connecting the parts like usual, but whenever
+          you have an output of a gate that would be an output to your
+          circuit you need to terminate it with a block.</li>
+
+          <li>You can add these blocks to your circuit. On the tool bar
+          there is a button labelled <strong>Add Block</strong>;
+          connect this block to any output signal of your circuit.</li>
+
+          <li>Then run a bias point analysis and click on the button to
+          see the <strong>enable voltage bias display</strong>, to see
+          the logic level on each of your lines.</li>
+
+          <li>You can run a transient analysis at this point and plot
+          the signals, but they will just be straight lines, showing
+          the logic level of each signal. However a digital circuit
+          that remains in a constant state all the time is of little
+          interesting. Eventually, you are going to encounter a circuit
+          that needs to be stimulated with a clock pulse.</li>
+
+          <li>To add a time varying &#39;clock pulse&#39; to your
+          circuit, enter the parts menu and get a part labelled
+          <strong>STIM1</strong> and place that as the input to a
+          device. Double click on the <strong>STIM1</strong> to open up
+          a dialogue box that looks like this:</li>
+        </ul>
+
+        <blockquote>
+          <p><img src="../ltspice/ltspice_tut20.gif" width="592"
+          height="293" alt="digital stimulus window" /><br />
+          and fill it in with the <strong>Time Step</strong> that you
+          want your &#39;clock&#39; to have. This <strong>Time
+          Step</strong> value is the your &#39;clock&#39; pulse. There
+          are various ways you can fill out the command prompts, one
+          way is to do it as shown in the picture, however here are
+          some simple commands that will allow you to do a range of
+          simulations:</p>
+
+          <ul class="middle">
+            <li>REPEAT FOREVER, to simulate a real clock</li>
+
+            <li>REPEAT &lt;n&gt; TIMES</li>
+
+            <li>END REPEAT</li>
+
+            <li>&lt;&lt;time&gt;&gt; INCR &lt;&lt;value&gt;&gt;</li>
+
+            <li>&lt;&lt;time&gt;&gt; DECR &lt;&lt;value&gt;&gt;</li>
+
+            <li>for &lt;&lt;value&gt;&gt; you can use, 0,1,R(rising),
+            F(falling), X(unknown), or Z(high impedance)</li>
+          </ul>
+        </blockquote>
+
+        <ul class="middle">
+          <li>There are other useful commands that are documented well
+          in the online manual. If you are interesting in seeing the
+          voltage levels attached to these gates to see if you need to
+          buffer any signals or to see if you are exceeding the fan out
+          and/or fan in of any gate, you need to add dropping resistors
+          to the inputs of gates, and a load resistor the outputs of
+          the gates and simulate again. When you are running the
+          transient analysis, don&#39;t forget to change your
+          <strong>print step</strong> and the <strong>final
+          time</strong> so you will actually be able to see the
+          results.<br />
+          <br /></li>
+
+          <li>If your digital circuit contains a counter, or decoder or
+          some other device with many outputs that are all going to a
+          single destination, instead of drawing many individual signal
+          lines from each source to the proper destination you can use
+          a <strong>bus</strong>. In the <strong>draw</strong> menu at
+          the top of the screen is an option for drawing a bus which is
+          a thick wire able to carry many separate signals to a single
+          place. The order in which the signals go on the bus is the
+          order in which they come off at the destination.<br /></li>
+        </ul>
+        <hr />
+      </li>
+-->
+      <li>
+        <a id="ref">References</a> and Links
+
+        <ol class="middle">
+          <li><a 
+href="http://pkropik.com/storage/1202227692_sb_switchercad_1.pdf">
+          Introduction to SwitcherCAD</a> 
+          (another name for LTspice)  
+          <span class="style5 style3">
+          [PDF;  Petr Kropik]
+          </span> 
+	  <br/>
+          This has a good step-by-step guide, including information 
+          about files and SPICE directives.
+          </li>
+
+          <li><a 
+href="http://kom.aau.dk/~hmi/Teaching/LTspice/restrict/LTspicedoc/LTspice_guide.pdf">
+           LTSpice introductory manual</a> 
+           (adding components)
+           <span class="style5 style3"> 
+           [PDF;  Aalborg University, October 2005]
+           </span> 
+	  <br/>
+          This has useful information 
+          about how to add libraries and models.
+           </li>
+
+           <li><a 
+href="http://www.seas.upenn.edu/%7Ejan/spice/spice.overview.html">
+           SPICE overview</a> 
+           (lots of detail) 
+           <span class="style5 style3">
+           [University of Pennsylvania]
+           </span> 
+	  <br/>
+          Since this is about SPICE itself, rather than any 
+          particular version, such as PSpice or LTspice,
+          the information is very widely applicable.
+           </li>
+
+<!--
+           <li><a 
+href="http://www.linear.com/designtools/software/LTspiceGettingStartedGuide.pdf">
+            LTSpice Getting Started Guide</a> 
+            (from the manufacturer) 
+            <span class="style5 style3">
+            [PDF; Linear Technology 2008]
+            </span> 
+            <br/>
+            This looks like it was adapted from a PowerPoint 
+            presentation, so it has lots of screen shots.
+            </li>
+-->
+<!--
+            <li><a 
+href="http://www.mrc.uidaho.edu/~knoren/ece310s08/Info/LTSpice_Tutorial.pdf">
+            LTspice Tutorial</a> 
+            (very visual) 
+            <span class="style5 style3">
+            [PDF; University of Idaho]
+            </span> 
+            <br/>
+            This includes information about things like colour and grid 
+            settings.
+            </li>
+-->
+
+            <li><a 
+href="http://kom.aau.dk/~hmi/Teaching/LTspice/restrict/LTspicedoc/scad3.pdf">
+            SWCADIII (Another LTspice tutorial)</a> 
+            (very detailed) 
+            <span class="style5 style3">
+            [PDF; Aalborg University]
+            </span> 
+            <br/>
+            This starts off with a lot about Switch Mode Power Supplies, 
+            i.e. what Linear Technology designed it for, but gets into 
+            lots of other stuff as well. (It's 257 pages long, so there
+            really is <em>a lot</em> of stuff there.
+            </li>
+
+<!--
+-->
+
+           <li><a 
+href="http://ece.sdsmt.edu/ee221/Intro%20to%20LTSpice.pdf">
+           Intro to LTspice</a> 
+           (lots of screen shots) 
+           <span class="style5 style3">
+           [PDF; South Dakota School of Mines and Technology]
+           </span> 
+           <br/>
+           Shorter than some of the others, but lots of screen 
+           shots
+           </li>
+
+<!--
+           <li><a 
+href="http://claymore.engineer.gvsu.edu/~steriana/courses/214/LTSpiceTutorial_PartI_TheBasics.wmv">
+           Video Introduction to LTspice</a> 
+           (several videos) 
+           <span class="style5 style3">
+           [WMV; Grand Valley State University Engineering]
+           </span> 
+           <br/>
+           If you'd rather see videos, try this one.
+           </li>
+-->
+
+           <li><a 
+href="http://www.beesnotincluded.com/2008/01/lt-spice-modelling-parametrics-steps.html">
+           Other kinds of analysis</a> 
+           (blog) 
+           <span class="style5 style3">
+           [ Chris Cross]
+           </span> 
+           <br/>
+           This includes an example of varying temperature for an analysis.
+           </li>
+
+<!--
+           <li><a 
+href="http://www.ltspicelabs.blogspot.com/">
+           Other kinds of analysis</a> 
+           (blog) 
+           <span class="style5 style3">
+           [ Chris Cross]
+           </span> 
+           <br/>
+           This includes an example of using WAV files for input 
+           and output of simulations.
+           </li>
+-->
+
+           <li><a href="dcomp.tar.gz">
+           Diagonal symbols</a> 
+           (for common components; resistor, capacitor, inductor, didode) 
+           <span class="style5 style3">
+           </span> 
+           <br/>
+           I think that sometimes it would be nice to be able to draw 
+           things like bridge circuits in the way they're normally 
+           shown, rather than with all components either horizontal
+           or vertical, so I created diagonal versions of the basic
+           components.
+           <br/>
+           (Holding down <strong>CTRL</strong> while 
+           drawing lines 
+           allows you to make diagonal connections in the editor.)
+           </li>
+
+
+
+          <li>
+          <a href=
+          "http://highered.mcgraw-hill.com/sites/0073106941/student_view0/lt_spice_instructions_and_support_files.html">
+          McGraw-Hill tutorial that includes a PowerPoint 
+          presentation and lots of circuit files.
+          </a></li>
+
+          <li>For the more obscure questions you might have go right to
+          the source at Linear Technology&copy;<br />
+          <a href="http://www.linear.com/designtools/software/#LTspice">http://www.linear.com/designtools/software/#LTspice</a></li>
+<!--
+  <li>In the PC221 text, at the end of each chapter, there is information on how 
+    to use LTspice. <br/>
+        <ul class="middle">
+    <li>Electronic Devices and Circuit Theory; 7th edition</li>
+    <li>Boylestad and Nashelsky</li>
+    <li>Prentice Hall</li>
+        </ul>
+  </li>
+-->
+
+          <li>There's a Yahoo! group which is quite active
+          with discussions, examples etc.
+          <br />
+          <a href="https://groups.yahoo.com/neo/groups/LTspice/info">https://groups.yahoo.com/neo/groups/LTspice/info</a></li>
+
+          <li>Another site with useful tutorials<br/>
+          <a href="http://www.zen22142.zen.co.uk/ltspice/ltindex.htm">http://www.zen22142.zen.co.uk/ltspice/ltindex.htm</a>
+          <br/>
+          DC circuits introduction
+          <br/>
+          <a 
+href="http://www.zen22142.zen.co.uk/ltspice/dccircuits.htm">http://www.zen22142.zen.co.uk/ltspice/dccircuits.htm</a>
+
+          </li>
+
+        </ol>
+      </li>
+    </ol>
+    **Most of the pictures and screen shots came from Linear
+    Technology&copy; LTspice version 4.08o
+    <br/>
+    <br/>
+    Not related to LTspice specifically, but there is a
+    tutorial on using LaTeX to typeset technical documents
+    at<br />
+    <a href=
+    "http://denethor.wlu.ca/latex/">http://denethor.wlu.ca/latex/</a>
+    <br/>
+    <br/>
+
+    <p>&#160;</p>
+  </div>
+
+
+
+  <div class="wlubg"></div>
+  <div class="pctools">
+	<h2 class="pclh2">
+	<a id="tools">
+	Resources
+	</a>
+	</h2>
+	To view pdf documents, you can download 
+	<a href="http://get.adobe.com/reader/otherversions/">
+	<em>Adobe 
+	Acrobat Reader</em> 
+	</a>.<br/>
+	<a href="http://get.adobe.com/reader/otherversions/">
+	<img 
+	style="border:0;width:88px;height:31px"
+	src="/ssi/getacro.gif" alt="get Acrobat Reader"/></a>
+	<br/>
+	If you need to update a browser, you might try
+	<a 
+href="https://www.mozilla.org:443/en-US/firefox/new/"><em>Firefox</em></a>
+	which is
+	<ul>
+        	<li>free</li>
+	        <li>open source</li>
+        	<li> available for several platforms</li>
+	</ul>
+
+	<a 
+href="https://www.mozilla.org:443/en-US/firefox/new/"><img 
+	style="border:0;width:88px;height:31px"
+	alt="Get Firefox!" title="Get Firefox!" 
+	src="https://www.mozilla.org/media/img/logos/firefox/logo-quantum-wordmark-white.bd1944395fb6.png"/></a>
+
+<!--
+https://firefox.us/getfirefox.gif
+http://sfx-images.mozilla.org/affiliates/Buttons/88x31/get.gif
+-->
+	<br/>
+
+	Since 
+	this page uses <a href="http://www.w3.org/Style/CSS/">cascading style
+	sheets</a> for its layout, it will look best with a browser which
+	supports the specifications as fully as possible.
+	<br/>
+	<br/>
+
+	If you are looking for an office package, with a word 
+	processor, spreadsheet, etc., you might try
+<!--
+	<a href="http://download.openoffice.org/index.html"><em>OpenOffice</em></a>
+-->
+	<a 
+href="http://www.libreoffice.org/download/index.html"><em>LibreOffice</em></a>
+	which is
+	<ul>
+        	<li>free</li>
+	        <li>open source</li>
+        	<li> available for several platforms</li>
+	</ul>
+
+<!--
+	<a href="http://download.openoffice.org/index.html"><img 
+	style="border:0;width:104px;height:31px"
+	alt="Get OpenOffice!" title="Get OpenOffice!" 
+	src="/ssi/openoffice.png"/></a>
+-->
+	<a href="http://www.libreoffice.org/download/index.html"><img 
+	style="border:0;width:50px;height:50px"
+	alt="Get LibreOffice!" title="Get LibreOffice!" 
+	src="/ssi/libreoffice.png"/></a>
+ 
+<br/>
+<br/>
+
+Go to the main page for the
+        <a href="https://students.wlu.ca/programs/science/physics-and-computer-science/index.html">
+                Department of Physics and Computer Science</a>.
+
+
+<p>
+    <a href="http://validator.w3.org/check?uri=referer"><img
+      src="http://www.w3.org/Icons/valid-xhtml11" alt="Valid XHTML 1.1" 
+height="31" width="88" /></a>
+</p>
+
+
+<p>
+<a href="http://jigsaw.w3.org/css-validator/">
+<img style="border:0;width:88px;height:31px"
+       src="http://jigsaw.w3.org/css-validator/images/vcss" 
+       alt="Valid CSS!"/>
+</a>
+</p>
+</div>
+
+
+<div>
+<p>
+    <a
+href="http://achecker.ca/checker/index.php?uri=referer&amp;gid=WCAG2-AA">
+      <img src="http://achecker.ca/images/icon_W2_aa.jpg" alt="WCAG
+2.0
+(Level AA)" height="32" width="102" />
+    </a>
+</p>
+</div>
+
+  <div class="row"><div class="logo"><img alt="Wilfrid Laurier 
+University" 
+src="http://www.wlu.ca/images/General/desktop_logo.png"/></div><ul 
+class="footer-links"><li><a 
+href="http://www.wlu.ca/about/campuses-locations-maps/index.html">Campuses, 
+Locations 
+&amp; Maps</a></li><li><a 
+href="http://www.wlu.ca/contact-us/index.html">Contact 
+Us</a></li>
+<!--
+<li><a 
+href="http://www.wlu.ca/information-for/employers-and-community-members/careers-at-laurier.html">Careers 
+</a></li><li><a 
+href="http://www.wlu.camedia/social-media-accounts.html">Social 
+Media 
+Directory</a></li>
+-->
+</ul></div>
+<!--
+<div class="row"><ul 
+class="social-links"><li><a class="social" 
+href="http://instagram.com/lauriernews" title="Instagram"><span 
+class="icon icon-instagram"></span></a></li><li><a class="social" 
+href="https://twitter.com/@LaurierNews" title="Twitter"><span 
+class="icon icon-twitter"></span></a></li><li><a class="social" 
+href="https://www.facebook.com/WilfridLaurierUniversity" 
+title="Facebook"><span class="icon icon-facebook"></span></a></li><li><a 
+class="social" 
+href="https://www.linkedin.com/edu/school?id=10883&amp;trk=tyah&amp;trkInfo=tarId%3A1414171807882%2Ctas%3Awilfrid%20%2Cidx%3A2-1-4" 
+title="LinkedIn"><span class="icon icon-linkedin"></span></a></li><li><a 
+class="social" href="mailto:chooselaurier@wlu.ca" title="Email"><span 
+class="icon icon-email"></span></a></li><li><a class="social" 
+href="https://www.youtube.com/user/LaurierVideo" title="Youtube"><span 
+class="icon icon-youtube"></span></a></li></ul></div>
+-->
+<div class="row"><p 
+class="name">
+              Wilfrid Laurier University
+            </p>
+<!--
+<ul class="cities"><li><a 
+href="http://www.wlu.ca">Waterloo</a></li><li><a 
+href="http://www.wlu.ca">Brantford</a></li><li><a 
+href="http://www.wlu.ca">Kitchener</a></li><li><a 
+href="http://www.wlu.ca">Toronto</a></li></ul>
+-->
+<p class="copyright">
+              &#169; 2019 Wilfrid Laurier University
+            </p>
+<script type="text/javascript">
+  
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new 
+Date();a=s.createElement(o),
+  
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-8354696-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+</body>
+</html>

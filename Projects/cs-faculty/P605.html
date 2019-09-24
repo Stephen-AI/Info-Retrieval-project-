@@ -1,0 +1,271 @@
+<base href="http://www.cs.utexas.edu/~ray0237//">
+<html>
+
+<head>
+  <title> BWIBot Information </title>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+  <script>
+    window.jQuery || document.write('<script src="js/jquery-1.8.2.min.js" type="text/javascript"><\/script>');
+  </script>
+  <!--upload jquery api to the server so if the api were to go down, we can pull it
+            directly from the server-->
+</head>
+<style>
+  * {
+    font-family: open_sans, "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  }
+
+  body {
+    background-color: white;
+  }
+
+  h1 {
+    color: black;
+    font-size: 40px;
+    font-family: fantasy;
+  }
+
+  tr {
+    color: black;
+    font-size: 30px;
+    font-family: monospace;
+    font-size: 30px;
+  }
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  table {
+    text-align: center;
+  }
+</style>
+
+<body>
+
+  <h1> <center> BWIBot Information </center> </h1>
+
+  <table style = "width:90%">
+    <tr>
+      <th>Robot</th>
+      <th>Battery</th>
+      <th>User</th>
+      <th>Floor</th>
+      <th>Time Remaining</th>
+      <th>Charge Order</th>    
+    </tr>
+    <tr>
+      <td> <img class = "robot_leela" src = "https://github.com/RayMaB/Robotics_FRI_WebPage/blob/master/Icons/leela.png?raw=true" alt = "" /> </td>
+      <td> <img class = "leela_battery battery" src="https://github.com/RayMaB/Robotics_FRI_WebPage/blob/master/Icons/unknown_battery.png?raw=true"/> </td>
+      <td> <b1 class = "leela_user">Unknown</b1> </td>
+      <td> <b1 class = "leela_floor">Unknown</b1> </td>
+      <td> <b1 class = "leela_time_remaining">Unknown</b1> </td>
+      <td> <b1 class = "leela_order">0</b1> </td>
+    </tr>
+    <tr>
+      <td> <img class = "robot_bender" src = "https://github.com/RayMaB/Robotics_FRI_WebPage/blob/master/Icons/bender.png?raw=true" alt = "" /> </td>
+      <td> <img class = "bender_battery battery" src="https://github.com/RayMaB/Robotics_FRI_WebPage/blob/master/Icons/unknown_battery.png?raw=true"/> </td>
+      <td> <b1 class = "bender_user">Unknown</b1> </td>
+      <td> <b1 class = "bender_floor">Unknown</b1> </td>
+      <td> <b1 class = "bender_time_remaining">Unknown</b1> </td>
+      <td> <b1 class = "bender_order">0</b1> </td>
+    </tr>
+   <!-- <tr> comment in if pickles is ever added to the json
+      <td> <img class = "robot_pickles" src = "https://github.com/RayMaB/Robotics_FRI_WebPage/blob/master/Icons/pickles.png?raw=true" alt = "" /> </td>
+      <td> <img class = "pickles_battery battery" src = "https://github.com/RayMaB/Robotics_FRI_WebPage/blob/master/Icons/unknown_battery.png?raw=true"/> </td>
+      <td> <b1 class = "pickles_user">Unknown</b1> </td>
+      <td> <b1 class = "pickles_floor">Unknown</b1> </td>
+    </tr> -->
+  </table>
+
+  <table>
+    <tr>
+      <th style = "padding: 30px">Turn On</th>
+      <th style = "padding: 30px">Turn Off</th>
+    </tr>
+    <tr>
+      <td> <img class = "on" src = "https://github.com/RayMaB/Robotics_FRI_WebPage/blob/master/Icons/turn_on.png?raw=true"/></td>
+      <td> <img class = "off" src = "https://github.com/RayMaB/Robotics_FRI_WebPage/blob/master/Icons/turn_off.png?raw=true" /></td>
+    </tr>
+  </table>
+
+  <script>
+    (function() {
+      $.get("http://nixons-head.csres.utexas.edu:7978/json", function(data) {
+        var parsedHead = JSON.parse(data);
+        //parsedHead[0] = Leela's info
+        //parsedHead[1] = Bender's info
+
+        //leela's data
+        if(typeof parsedHead[0] != 'undefined')
+        {
+          if(typeof parsedHead[0].Alive != 'undefined')
+          {
+            if(parsedHead[0].Alive === "false")
+            {
+                $(".leela_battery").attr("src", "https://github.com/RayMaB/Robotics_FRI_WebPage/blob/master/Icons/empty_off.jpg?raw=true");
+            } 
+            else 
+            {
+                var leela_time_remaining = parsedHead[0].TimeRemaining;
+                $(".leela_time_remaining").html(leela_time_remaining / 2); 
+                /*if(typeof parsedHead[0].TimeRemaining != 'undefined')
+                    {
+                        var leela_time_remaining = parsedHead[0].TimeRemaining;
+                        $(".leela_time_remaining").html(leela_time_remaining); 
+                        //may need adjustment after we ensure json works
+                    }
+                */
+                if(leela_time_remaining >= 16)
+                    $(".leela_battery").attr("src", "https://github.com/RayMaB/Robotics_FRI_WebPage/blob/master/Icons/full_battery.png?raw=true");
+                else if(leela_time_remaining >= 12)
+                    $(".leela_battery").attr("src", "https://github.com/RayMaB/Robotics_FRI_WebPage/blob/master/Icons/2_part_battery.png?raw=true");
+                else if(leela_time_remaining >= 2)
+                    $(".leela_battery").attr("src", "https://github.com/RayMaB/Robotics_FRI_WebPage/blob/master/Icons/1_part_battery.png?raw=true");
+                else
+                    $(".bender_battery").attr("src", "https://github.com/RayMaB/Robotics_FRI_WebPage/blob/master/Icons/dead_battery.png?raw=true");
+            }
+          }
+
+          if(typeof parsedHead[0].User != 'undefined')
+            $(".leela_user").html(parsedHead[0].User);
+
+          if(typeof parsedHead[0].Level != 'undefined')
+            $(".leela_floor").html(parsedHead[0].Level);
+        }
+
+        //bender's data  
+        if(typeof parsedHead[1] != 'undefined')
+        {
+          if(typeof parsedHead[1].Alive != 'undefined')
+          {
+            if (parsedHead[1].Alive === "false")
+            {
+              $(".bender_battery").attr("src", "https://github.com/RayMaB/Robotics_FRI_WebPage/blob/master/Icons/empty_off.jpg?raw=true");
+            } 
+            else 
+            {   
+                var bender_time_remaining = parsedHead[1].TimeRemaining;
+                $(".bender_time_remaining").html(bender_time_remaining/2); 
+                
+                /*if(typeof parsedHead[1].TimeRemaining != 'undefined')
+                    {
+                        var bender_time_remaining = parsedHead[1].TimeRemaining;
+                        $(".bender_time_remaining").html(bender_time_remaining); 
+                        //may need adjustment after we ensure json works
+                    }
+                */
+               if(bender_time_remaining >= 16)
+                    $(".bender_battery").attr("src", "https://github.com/RayMaB/Robotics_FRI_WebPage/blob/master/Icons/full_battery.png?raw=true");
+                else if(bender_time_remaining >= 12)
+                    $(".bender_battery").attr("src", "https://github.com/RayMaB/Robotics_FRI_WebPage/blob/master/Icons/2_part_battery.png?raw=true");
+                else if(bender_time_remaining >= 2)
+                    $(".bender_battery").attr("src", "https://github.com/RayMaB/Robotics_FRI_WebPage/blob/master/Icons/1_part_battery.png?raw=true");
+                else
+                    $(".bender_battery").attr("src", "https://github.com/RayMaB/Robotics_FRI_WebPage/blob/master/Icons/dead_battery.png?raw=true");
+            }
+          }
+
+          if(typeof parsedHead[1].User != 'undefined')
+            $(".bender_user").html(parsedHead[1].User);
+
+          if(typeof parsedHead[1].Level != 'undefined')
+            $(".bender_floor").html(parsedHead[1].Level);
+        }
+        
+        //determining charge order  
+        //NOTES: have to redeclare what the class is after changing the var, so fix that
+          //later, figure out how to store the last known battery level and use that to 
+          //determine what the charge order is when they're both off
+        var bender_order = 0; 
+        var leela_order = 0;   
+        $(".bender_order").html(bender_order); 
+        $(".leela_order").html(leela_order);
+       if(typeof parsedHead[0] != 'undefined' && parsedHead[1] != undefined)
+        {
+            if(typeof parsedHead[0].Alive != 'undefined' && parsedHead[1].Alive != 'undefined')
+                {
+                    if(parsedHead[0].Alive != "false" && parsedHead[1].Alive != "false")
+                        {
+                            if(bender_time_remaining > leela_time_remaining)
+                                {
+                                    bender_order = 2;
+                                    leela_order = 1;
+                                }
+                            else
+                                {
+                                    bender_order = 1;
+                                    leela_order = 2;
+                                }
+                        }
+                    if(parsedHead[0].Alive != "false" && parsedHead[1].Alive === "false")
+                        {
+                            bender_order = 2;
+                            leela_order = 1;
+                        }
+                    else if(parsedHead[0].Alive === "false" && parsedHead[1].Alive != "false")
+                        {
+                            bender_order = 1;
+                            leela_order = 2;
+                        }
+                }
+        }
+        $(".bender_order").html(bender_order); 
+        $(".leela_order").html(leela_order);
+
+        // comment in if pickles is added to the json
+        /*if(typeof parsedHead[2] != 'undefined')
+        {
+          if(typeof parsedHead[2].Alive != 'undefined')
+          {
+            if (parsedHead[1].Alive === "false") {
+              $(".pickles_battery").attr("src", "https://github.com/RayMaB/Robotics_FRI_WebPage/blob/master/Icons/dead_battery.png?raw=true");
+              //display red battery
+            } else {
+              $(".pickles_battery").attr("src", "https://github.com/RayMaB/Robotics_FRI_WebPage/blob/master/Icons/full_battery.png?raw=true");
+              //if battery is above certain level, display different icons
+            }
+          }
+
+          if(typeof parsedHead[2].User != 'undefined')
+            $(".pickles_user").html(parsedHead[2].User);
+
+          if(typeof parsedHead[2].Level != 'undefined')
+            $(".pickles_floor").html(parsedHead[2].Level);
+
+          if(typeof parsedHead[2].Percentage != 'undefined')
+            $(".picles_batt_perc").html(parsedHead[2].Percentage); // may need adjustment depending on the json implementation
+        }*/
+
+      })
+      .fail(function() {
+        alert("Cannot connect to nixons-head.");
+      });
+      setTimeout(arguments.callee, 60000);
+
+    })();
+
+    var turn_on_instructions = "1. Move main power from 'CHARGER' TO 'BATTERY'." +
+      "\n2. Turn on laptop and log in." +
+      "\n3. Remove charging cable BEFORE moving robot." +
+      "\n4. Move robot to desired start position." +
+      "\n5. Turn on segway base (Push green button, wait 2 seconds, push yellow button)." +
+      "\n6. Launch desired launch file (roslaunch bwi_launch segbot_v2.launch).";
+    var turn_off_instructions = "1. Kill all running launch programs." +
+      "\n2. Turn off segway base (Push yellow button, wait 2 seconds, push green button)." + "\n3. Turn off laptop." +
+      "\n4. Move robot to charging area." +
+      "\n5. Plug in charging cable." +
+      "\n6. Move main power from 'BATTERY' to 'CHARGER'.";
+    $(document).ready(function() {
+      $(".on").click(function() {
+        alert(turn_on_instructions);
+      });
+        
+      $(".off").click(function() {
+        alert(turn_off_instructions);
+      });
+        
+    });
+  </script>
+</body>
+</html>

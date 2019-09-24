@@ -1,0 +1,2157 @@
+<BASE HREF="http://phas.ucalgary.ca/">
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <meta charset="utf-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1130.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+<meta name="title" content="Home | Physics and Astronomy" />
+<meta property="og:site_name" content="Faculty of Science" />
+<link rel="canonical" href="http://science.ucalgary.ca/physics-astronomy" />
+<meta property="og:type" content="article" />
+<meta name="description" content="Learn about the physical forces that shape life as we know it and define our place in the universe." />
+<meta property="og:url" content="http://science.ucalgary.ca/physics-astronomy" />
+<meta property="og:title" content="PHAS Home" />
+<meta property="og:description" content="Learn about the physical forces that shape life as we know it and define our place in the universe." />
+<meta property="og:image" content="http://science.ucalgary.ca/sites/default/files/styles/ucws_image_desktop/public/2018-12/star-gazing-2.jpg?itok=jmdZyRDb" />
+<meta property="og:image:secure_url" content="https://science.ucalgary.ca/sites/default/files/styles/ucws_image_desktop/public/2018-12/star-gazing-2.jpg?itok=jmdZyRDb" />
+<meta property="article:modified_time" content="2019-04-22 15:56:19" />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script>function euCookieComplianceLoadScripts() {}</script>
+<style>div#sliding-popup, div#sliding-popup .eu-cookie-withdraw-banner, .eu-cookie-withdraw-tab {background: #0779bf} div#sliding-popup.eu-cookie-withdraw-wrapper { background: transparent; } #sliding-popup h1, #sliding-popup h2, #sliding-popup h3, #sliding-popup p, .eu-cookie-compliance-more-button, .eu-cookie-compliance-secondary-button, .eu-cookie-withdraw-tab { color: #ffffff;} .eu-cookie-withdraw-tab { border-color: #ffffff;}</style>
+<meta name="msapplication-TileColor" content="#FFFFFF" />
+<meta name="theme-color" content="#FFFFFF" />
+<link rel="shortcut icon" href="/themes/ucalgary/ucws_theme/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/themes/ucalgary/ucws_theme/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/themes/ucalgary/ucws_theme/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/themes/ucalgary/ucws_theme/favicon-16x16.png" />
+<link rel="manifest" href="/themes/ucalgary/ucws_theme/site.webmanifest" />
+<link rel="revision" href="/physics-astronomy" />
+<script>window.a2a_config=window.a2a_config||{};a2a_config.callbacks=[];a2a_config.overlays=[];a2a_config.templates={};a2a_config.icon_color = "transparent,white";
+a2a_config.templates.email = {
+    subject: "Checkout this Basic page from Faculty of Science",
+    body: "PHAS Home\n${link}"
+};
+</script>
+
+          <title>Home | Physics and Astronomy | Faculty of Science | University of Calgary</title>
+    
+          <script>
+        window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+        ga('create', 'UA-173139-1', 'auto');
+        ga('send', 'pageview');
+      </script>
+      <script async src="https://www.google-analytics.com/analytics.js"></script>
+    
+    <link rel="stylesheet" href="/sites/default/files/css/css_Q03FigWfTxGgvCtuWBi8dPIwzOWYBVsBoahNeB0wUEY.css?px2a2h" media="all" />
+<link rel="stylesheet" href="/sites/default/files/css/css_fu_ZTmGdN9-46BZLTfpf0OBUiH6ysPSQ-UrRNxDgM9I.css?px2a2h" media="screen" />
+<link rel="stylesheet" href="/sites/default/files/css/css_OFMactI6G1gR-ggBX_tfJR4bLVjf71wyKKxtHzs-zpI.css?px2a2h" media="print" />
+<link rel="stylesheet" href="/sites/default/files/css/css_GUwFcO8wg7rDjR9sxAhgqLpuswLiZRHucvCxl3GiHaw.css?px2a2h" media="all" />
+<link rel="stylesheet" href="/sites/default/files/css/css_pYLAoAnYt_CzHDkevrcrwM-ggugc7DrmvFyk8XAyZzY.css?px2a2h" media="screen" />
+<link rel="stylesheet" href="/sites/default/files/css/css_Kup_TYjyDhK6eAIxngbEdmP9v5c_VQg-Q2l_19AJ6fs.css?px2a2h" media="print" />
+<link rel="stylesheet" href="/sites/default/files/css/css_A7HTtc9LlS8m9aX-8DEGIlGzA1eRjy8xypIpwmQHR7A.css?px2a2h" media="screen" />
+<link rel="stylesheet" href="/sites/default/files/css/css_1AAvANxpCuDSNlYLdbrRdeqQZhqMMpMDLx2gZxCazCM.css?px2a2h" media="all" />
+<link rel="stylesheet" href="/sites/default/files/css/css_sgwrULgZCAOxDWWbFnL3_fmBAys0Z-39fTvlUt3Rh6M.css?px2a2h" media="all" />
+<link rel="stylesheet" href="/sites/default/files/css/css_TUsTpqIT2_QOqKtcDR9leeGi82Ti91sfIQhF3EnidXI.css?px2a2h" media="screen" />
+<link rel="stylesheet" href="/sites/default/files/css/css__m8jUKdbQ9dTcd9jMoNm6Nz9d3M9vfuuoW9IY-B1ZTM.css?px2a2h" media="print" />
+<link rel="stylesheet" href="/sites/default/files/css/css_ppaywWWDdLk8z_pgI2mmAAOuGcGl1e6dztaNTzdsBMQ.css?px2a2h" media="all" />
+<link rel="stylesheet" href="/sites/default/files/css/css_GYHDKkg0Snj_dUzvFytOn7_s3Ya1UAZWsYO4YZl2WtY.css?px2a2h" media="screen" />
+<link rel="stylesheet" href="/sites/default/files/css/css_hmugpMWzX_-rWCUUTSAhxMvDJqH3QZeQXXHSXytqWto.css?px2a2h" media="all" />
+
+    
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+
+  </head>
+  <body class="group-menu sub-group-menu">
+        <a href="#content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+    
+          
+<header class="container-fluid">
+        
+    
+    
+    
+  <div id="toolbox" class="row red-back">
+    <div class="container">
+      <div class="row button">
+        <div class="col-sm-12">
+                    <div id="desktop-search" class="row">
+            <div class="col-sm-12">
+              <form id="search-desktop"
+                    name="search-desktop"
+                    role="form"
+                    action="/sitesearch"
+                    data-ucws-analytics-search
+                    data-ucws-analytics-category="On-site search">
+                <input type="hidden" name="m" value="" />
+                <div class="btn-toolbar">
+                  <div class="btn-group search-field">
+                    <div class="input-group input-group-sm">
+                      <input id="uc-global-search-field" name="as_q" data-ucws-analytics-search-input type="text" autocomplete="off" class="form-control" placeholder="Search UCalgary">
+                      <span class="input-group-btn">
+                        <button id="uc-global-search-submit" class="btn btn-default" type="submit" data-ucws-analytics-search-submit>
+                          <span class="sr-only">Search</span>
+                          <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="btn-group">
+                    <button id="toolbox-toggle"
+                            class="btn btn-rounded btn-tab"
+                            type="button"
+                            data-ucws-analytics-toggle
+                            data-ucws-analytics-category="Toolbox"
+                            data-ucws-analytics-label="http://science.ucalgary.ca/physics-astronomy"
+                            data-ucws-analytics-off-class="btn-tab">
+                      <span class="sr-only">Toggle Toolbox</span>
+                      <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row content">
+        <div class="col-sm-12">
+                    <div id="mobile-search" class="row">
+            <div class="col-sm-12">
+              <form id="search-mobile"
+                    name="search-mobile"
+                    role="form"
+                    action="/sitesearch"
+                    data-ucws-analytics-search
+                    data-ucws-analytics-category="On-site search">
+                <input type="hidden" name="m" value="" />
+                <div class="btn-toolbar">
+                  <div class="btn-group search-field">
+                    <div class="input-group input-group-sm">
+                      <input id="uc-global-search-field" name="as_q" data-ucws-analytics-search-input type="text" autocomplete="off" class="form-control show-toolbox" placeholder="Search UCalgary" tabindex="-1">
+                      <span class="input-group-btn">
+                        <button id="uc-global-search-submit" class="btn btn-default" type="submit" data-ucws-analytics-search-submit>
+                          <span class="sr-only">Search</span>
+                          <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+                    <div id="quicklinks" class="row">
+            <div class="col-sm-12 col-md-5">
+              <div id="buttons" class="row">
+                                                                      <div class="col-xs-6 col-sm-4 col-md-6">
+                      <a class="btn btn-default btn-block" href="https://my.ucalgary.ca/" title="UCalgary Portal Login" role="button">My UCalgary</a>
+                    </div>
+                                      <div class="col-xs-6 col-sm-4 col-md-6">
+                      <a class="btn btn-default btn-block" href="https://office365.ucalgary.ca/" title="UCalgary Office 365 Login" role="button">Webmail</a>
+                    </div>
+                                      <div class="col-xs-6 col-sm-4 col-md-6">
+                      <a class="btn btn-default btn-block" href="https://d2l.ucalgary.ca/" title="UCalgary Desire2Learn Login" role="button">D2L</a>
+                    </div>
+                                      <div class="col-xs-6 col-sm-4 col-md-6">
+                      <a class="btn btn-default btn-block" href="https://afm.ucalgary.ca/" title="UCalgary Facilities Management" role="button">ARCHIBUS</a>
+                    </div>
+                                      <div class="col-xs-6 col-sm-4 col-md-6">
+                      <a class="btn btn-default btn-block" href="https://www.ucalgary.ca/iriss/" title="Institutional Research Information Services Solution" role="button">IRISS</a>
+                    </div>
+                                                      <div class="col-xs-6 col-sm-4 col-md-6">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-default btn-block dropdown-toggle"
+                          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Faculty Websites <span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu scrollable-menu dropdown-menu-right">
+                                                  <li><a href="https://cumming.ucalgary.ca/">Cumming School of Medicine</a></li>
+                                                  <li><a href="https://arts.ucalgary.ca/">Faculty of Arts</a></li>
+                                                  <li><a href="https://grad.ucalgary.ca/">Faculty of Graduate Studies</a></li>
+                                                  <li><a href="https://www.ucalgary.ca/knes/">Faculty of Kinesiology</a></li>
+                                                  <li><a href="https://law.ucalgary.ca/">Faculty of Law</a></li>
+                                                  <li><a href="https://nursing.ucalgary.ca/">Faculty of Nursing</a></li>
+                                                  <li><a href="https://www.ucalgary.edu.qa/">Faculty of Nursing (Qatar)</a></li>
+                                                  <li><a href="https://science.ucalgary.ca/">Faculty of Science</a></li>
+                                                  <li><a href="https://fsw.ucalgary.ca/">Faculty of Social Work</a></li>
+                                                  <li><a href="https://vet.ucalgary.ca/">Faculty of Veterinary Medicine</a></li>
+                                                  <li><a href="https://haskayne.ucalgary.ca/">Haskayne School of Business</a></li>
+                                                  <li><a href="https://sapl.ucalgary.ca/">School of Architecture, Planning and Landscape</a></li>
+                                                  <li><a href="https://schulich.ucalgary.ca/">Schulich School of Engineering</a></li>
+                                                  <li><a href="https://werklund.ucalgary.ca/">Werklund School of Education</a></li>
+                                              </ul>
+                    </div>
+                  </div>
+                                                <div class="col-xs-12 col-sm-12 hidden-md hidden-lg">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-default btn-block dropdown-toggle"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Top Sites <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu scrollable-menu">
+                                                                        <li><a href="https://www.ucalgary.ca/it/">Information Technologies</a></li>
+                                                  <li><a href="https://www.ucalgary.ca/hr/">Human Resources</a></li>
+                                                  <li><a href="https://careers.ucalgary.ca/">Careers</a></li>
+                                                  <li><a href="https://library.ucalgary.ca/">Library</a></li>
+                                                  <li><a href="https://www.calgarybookstore.ca/">Bookstore</a></li>
+                                                  <li><a href="https://www.ucalgary.ca/activeliving/">Active Living</a></li>
+                                                  <li><a href="https://conted.ucalgary.ca/">Continuing Education</a></li>
+                                                  <li><a href="https://www.ucalgary.ca/pubs/calendar/">Academic Calendar</a></li>
+                                                  <li><a href="https://csprd.ucalgary.ca/psauthent/class-search/public/">Class Schedule</a></li>
+                                                  <li><a href="https://www.ucalgary.ca/map/">UCalgary Maps</a></li>
+                                                  <li><a href="https://contacts.ucalgary.ca/">UCalgary Directory</a></li>
+                                                  <li><a href="https://www.godinos.com/">Go Dinos</a></li>
+                                                                  </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-7 hidden-xs hidden-sm">
+              <div id="links" class="row">
+                                <div class="col-sm-12">
+                                                            <ul class="list-unstyled">
+                                                  <li>
+                            <a href="https://www.ucalgary.ca/it/">
+                                                              <span class="hidden-md">Information Technologies</span>
+                                <span class="visible-md">IT</span>
+                                                          </a>
+                          </li>
+                                                  <li>
+                            <a href="https://www.ucalgary.ca/hr/">
+                                                              <span class="hidden-md">Human Resources</span>
+                                <span class="visible-md">HR</span>
+                                                          </a>
+                          </li>
+                                                  <li>
+                            <a href="https://careers.ucalgary.ca/">
+                                                              Careers
+                                                          </a>
+                          </li>
+                                              </ul>
+                                          <ul class="list-unstyled">
+                                                  <li>
+                            <a href="https://library.ucalgary.ca/">
+                                                              Library
+                                                          </a>
+                          </li>
+                                                  <li>
+                            <a href="https://www.calgarybookstore.ca/">
+                                                              Bookstore
+                                                          </a>
+                          </li>
+                                                  <li>
+                            <a href="https://www.ucalgary.ca/activeliving/">
+                                                              Active Living
+                                                          </a>
+                          </li>
+                                              </ul>
+                                          <ul class="list-unstyled">
+                                                  <li>
+                            <a href="https://conted.ucalgary.ca/">
+                                                              Continuing Education
+                                                          </a>
+                          </li>
+                                                  <li>
+                            <a href="https://www.ucalgary.ca/pubs/calendar/">
+                                                              Academic Calendar
+                                                          </a>
+                          </li>
+                                                  <li>
+                            <a href="https://csprd.ucalgary.ca/psauthent/class-search/public/">
+                                                              Class Schedule
+                                                          </a>
+                          </li>
+                                              </ul>
+                                          <ul class="list-unstyled">
+                                                  <li>
+                            <a href="https://www.ucalgary.ca/map/">
+                                                              UCalgary Maps
+                                                          </a>
+                          </li>
+                                                  <li>
+                            <a href="https://contacts.ucalgary.ca/">
+                                                              UCalgary Directory
+                                                          </a>
+                          </li>
+                                                  <li>
+                            <a href="https://www.godinos.com/">
+                                                              Go Dinos
+                                                          </a>
+                          </li>
+                                              </ul>
+                                                      </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+      
+  <div id="navigation" class="row group sub-group">
+    <div class="uc-logo-container">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="uc-logo">
+                              <a href="https://www.ucalgary.ca"><img src="/themes/ucalgary/ucws_theme/images/UCalgary.svg"></a>                           </div>
+          </div>
+        </div>
+      </div>
+    </div>
+          <div class="uc-nav-container">
+        <div class="container">
+                                <div class="row division">
+              <div class="col-sm-12">
+
+                                  <ul class="identity">
+                                                              <li class="group">
+                                                  <a href="/">Faculty of Science</a>                                               </li>
+                                                                                  <li class="sub-group">
+                                                  <a href="http://science.ucalgary.ca/physics-astronomy">DEPARTMENT OF PHYSICS AND ASTRONOMY</a>                                               </li>
+                                      </ul>
+                
+              </div>
+            </div>
+                    <div class="row menus">
+            <div class="col-sm-12">
+              <div class="uc-nav">
+                <div id="uc-menu" class="uc-menuwrapper">
+                  <button type="button"
+                          id="hamburger"
+                          class="uc-trigger hamburger hamburger-htx"
+                          data-ucws-analytics-toggle
+                          data-ucws-analytics-category="Menu"
+                          data-ucws-analytics-label="Hamburger"
+                          data-ucws-analytics-on-class="is-active">
+                    <span class="sr-only">Toggle Navigation</span>
+                    <span class="glyphicon glyphicon-menu-hamburger"></span>
+                  </button>
+                      
+
+  
+                
+                                                                                                                                                                                                                                
+    <ul class="level1 uc-menu">
+
+    
+    
+    
+    
+    
+      
+      
+      
+      
+        
+        <li class="uc-mainmenu children" id="menu-item-1-1">
+        <a href="#"
+                      data-ucws-analytics-toggle
+            data-ucws-analytics-category="Menu"
+            data-ucws-analytics-action="Open"
+            data-ucws-analytics-label="Future Students"
+            data-ucws-analytics-on-class="uc-active-menu"
+            data-ucws-analytics-element="#menu-item-1-1"
+                  >Future Students</a>
+
+        
+        
+        
+                      
+                
+                                                                                                                                                                
+    <ul class="level2 uc-submenu tabbed">
+
+    
+                      <li class="overview">
+              <a href="/physics-astronomy/future-students" data-drupal-link-system-path="node/243">Future Students</a>
+            </li>
+          
+    
+    
+    
+    
+      
+      
+      
+      
+        
+        <li class="children" id="menu-item-2-1">
+        <a href="#"
+                      data-ucws-analytics-toggle
+            data-ucws-analytics-category="Menu"
+            data-ucws-analytics-action="Open"
+            data-ucws-analytics-label="Undergraduate"
+            data-ucws-analytics-on-class="uc-active-menu"
+            data-ucws-analytics-element="#menu-item-2-1"
+                  >Undergraduate</a>
+
+        
+        
+        
+                      
+                
+                                                                                                                                                                                                                                                                  
+    <ul class="level3 uc-submenu overview-link">
+
+    
+                      <li class="overview">
+              <a href="/physics-astronomy/future-students/undergraduate" data-drupal-link-system-path="node/250">Undergraduate</a>
+            </li>
+          
+    
+    
+    
+    
+      
+      
+      
+      
+        <li>
+                          <a href="/physics-astronomy/future-students/undergraduate/programs" data-drupal-link-system-path="node/257">Explore Programs</a>
+                                 
+      
+      </li>
+
+    
+      
+      
+      
+      
+        <li>
+                          <a href="https://www.ucalgary.ca/future-students/undergraduate/requirements" title="Admission Requirements">Admission Requirements</a>
+                                 
+      
+      </li>
+
+    
+      
+      
+      
+      
+        <li>
+                          <a href="https://science.ucalgary.ca/future-students/undergraduate/fees-funding">Fees and Funding</a>
+                                 
+      
+      </li>
+
+    
+      
+      
+      
+      
+        <li>
+                          <a href="/physics-astronomy/future-students/undergraduate/student-community" data-drupal-link-system-path="node/262">Student Community</a>
+                                 
+      
+      </li>
+
+    
+      
+      
+      
+      
+        <li>
+                          <a href="https://www.ucalgary.ca/future-students/undergraduate/international">International Students</a>
+                                 
+      
+      </li>
+
+    
+      
+      
+      
+      
+        <li>
+                          <a href="/physics-astronomy/future-students/undergraduate/advice" data-drupal-link-system-path="node/259">Get Advice</a>
+                                 
+      
+      </li>
+
+    
+      
+      
+      
+      
+        <li>
+                          <a href="https://www.ucalgary.ca/future-students/undergraduate/apply">Apply Now</a>
+                                 
+      
+      </li>
+
+    
+    
+    </ul>
+  
+
+        
+      
+      </li>
+
+    
+      
+      
+      
+      
+        
+        <li class="children" id="menu-item-2-2">
+        <a href="#"
+                      data-ucws-analytics-toggle
+            data-ucws-analytics-category="Menu"
+            data-ucws-analytics-action="Open"
+            data-ucws-analytics-label="Graduate"
+            data-ucws-analytics-on-class="uc-active-menu"
+            data-ucws-analytics-element="#menu-item-2-2"
+                  >Graduate</a>
+
+        
+        
+        
+                      
+                
+                                                                                                                                                                                                                                                                                                                                                                        
+    <ul class="level3 uc-submenu overview-link">
+
+    
+                      <li class="overview">
+              <a href="/physics-astronomy/future-students/graduate" data-drupal-link-system-path="node/251">Graduate</a>
+            </li>
+          
+    
+    
+    
+    
+      
+      
+      
+      
+        <li>
+                          <a href="/physics-astronomy/future-students/graduate/programs" data-drupal-link-system-path="node/292">Explore Programs</a>
+                                 
+      
+      </li>
+
+    
+      
+      
+      
+      
+        <li>
+                          <a href="https://www.ucalgary.ca/future-students/graduate/understanding-graduate-studies">Admission Requirements</a>
+                                 
+      
+      </li>
+
+    
+      
+      
+      
+      
+        <li>
+                          <a href="/physics-astronomy/future-students/graduate/degree-equivalency" data-drupal-link-system-path="node/316">Degree Equivalency</a>
+                                 
+      
+      </li>
+
+    
+      
+      
+      
+      
+        <li>
+                          <a href="https://science.ucalgary.ca/future-students/graduate/fees-funding" title="Fees and Funding">Fees and Funding</a>
+                                 
+      
+      </li>
+
+    
+      
+      
+      
+      
+        <li>
+                          <a href="/physics-astronomy/future-students/graduate/student-community" data-drupal-link-system-path="node/270">Student Community</a>
+                                 
+      
+      </li>
+
+    
+      
+      
+      
+      
+        <li>
+                          <a href="https://www.ucalgary.ca/future-students/graduate/international">International Students</a>
+                                 
+      
+      </li>
+
+    
+      
+      
+      
+      
+        <li>
+                          <a href="/physics-astronomy/future-students/graduate/assistantships" title="Graduate Assistantships" data-drupal-link-system-path="node/315">Graduate Assistantships</a>
+                                 
+      
+      </li>
+
+    
+      
+      
+      
+      
+        <li>
+                          <a href="/physics-astronomy/future-students/graduate/oversight" data-drupal-link-system-path="node/304">Oversight</a>
+                                 
+      
+      </li>
+
+    
+      
+      
+      
+      
+        <li>
+                          <a href="/physics-astronomy/future-students/graduate/advice" data-drupal-link-system-path="node/267">Get Advice</a>
+                                 
+      
+      </li>
+
+    
+      
+      
+      
+      
+        <li>
+                          <a href="https://www.ucalgary.ca/future-students/graduate/apply" title="Apply Now">Apply Now</a>
+                                 
+      
+      </li>
+
+    
+    
+    </ul>
+  
+
+        
+      
+      </li>
+
+    
+    
+    </ul>
+  
+
+        
+      
+      </li>
+
+    
+      
+      
+      
+      
+        
+        <li class="uc-mainmenu children" id="menu-item-1-2">
+        <a href="#"
+                      data-ucws-analytics-toggle
+            data-ucws-analytics-category="Menu"
+            data-ucws-analytics-action="Open"
+            data-ucws-analytics-label="Current Students"
+            data-ucws-analytics-on-class="uc-active-menu"
+            data-ucws-analytics-element="#menu-item-1-2"
+                  >Current Students</a>
+
+        
+        
+        
+                      
+                
+                                                                                                                                                                
+    <ul class="level2 uc-submenu tabbed">
+
+    
+                      <li class="overview">
+              <a href="/physics-astronomy/current-students" data-drupal-link-system-path="node/244">Current Students</a>
+            </li>
+          
+    
+    
+    
+    
+      
+      
+      
+      
+        
+        <li class="children" id="menu-item-2-1">
+        <a href="#"
+                      data-ucws-analytics-toggle
+            data-ucws-analytics-category="Menu"
+            data-ucws-analytics-action="Open"
+            data-ucws-analytics-label="Undergraduate"
+            data-ucws-analytics-on-class="uc-active-menu"
+            data-ucws-analytics-element="#menu-item-2-1"
+                  >Undergraduate</a>
+
+        
+        
+        
+                      
+                
+                                                                                                                                                                                                                                                                                                                                                                                                          
+    <ul class="level3 uc-submenu overview-link">
+
+    
+                      <li class="overview">
+              <a href="/physics-astronomy/current-students/undergraduate" data-drupal-link-system-path="node/252">Undergraduate</a>
+            </li>
+          
+    
+    
+    
+    
+      
+      
+      
+      
+        <li>
+                          <a href="/physics-astronomy/current-students/undergraduate/new-students" title="New Students" data-drupal-link-system-path="node/401">New Students</a>
+                                 
+      
+      </li>
+
+    
+      
+      
+      
+      
+        <li>
+                          <a href="http://contacts.ucalgary.ca/info/phas/courses">Courses and Outlines</a>
+                                 
+      
+      </li>
+
+    
+      
+      
+      
+      
+        <li>
+                          <a href="/physics-astronomy/current-students/undergraduate/independent-study" data-drupal-link-system-path="node/343">Independent Study</a>
+                                 
+      
+      </li>
+
+    
+      
+      
+      
+      
+        <li>
+                          <a href="https://science.ucalgary.ca/current-students/undergraduate/awards-and-scholarships">Awards and Scholarships</a>
+                                 
+      
+      </li>
+
+    
+      
+      
+      
+      
+        <li>
+                          <a href="/physics-astronomy/future-students/undergraduate/student-community" data-drupal-link-system-path="node/262">Student Community</a>
+                                 
+      
+      </li>
+
+    
+      
+      
+      
+      
+        <li>
+                          <a href="/physics-astronomy/current-students/undergraduate/summer-student-opportunities" data-drupal-link-system-path="node/319">Summer Student Opportunities</a>
+                                 
+      
+      </li>
+
+    
+      
+      
+      
+      
+        <li>
+                          <a href="/physics-astronomy/current-students/undergraduate/teaching-labs" title="Teaching Labs" data-drupal-link-system-path="node/342">Teaching Labs</a>
+                                 
+      
+      </li>
+
+    
+      
+      
+      
+      
+        <li>
+                          <a href="https://science.ucalgary.ca/current-students/undergraduate/study-abroad">Study Abroad</a>
+                                 
+      
+      </li>
+
+    
+      
+      
+      
+      
+        <li>
+                          <a href="/physics-astronomy/future-students/undergraduate/advice" data-drupal-link-system-path="node/259">Get Advice</a>
+                                 
+      
+      </li>
+
+    
+      
+      
+      
+      
+        <li>
+                          <a href="https://science.ucalgary.ca/current-students/usc/science-mentorship-program">Mentorship</a>
+                                 
+      
+      </li>
+
+    
+      
+      
+      
+      
+        <li>
+                          <a href="/current-students/undergraduate-science-centre" data-drupal-link-system-path="node/32">Undergraduate Science Centre</a>
+                                 
+      
+      </li>
+
+    
+    
+    </ul>
+  
+
+        
+      
+      </li>
+
+    
+      
+      
+      
+      
+        
+        <li class="children" id="menu-item-2-2">
+        <a href="#"
+                      data-ucws-analytics-toggle
+            data-ucws-analytics-category="Menu"
+            data-ucws-analytics-action="Open"
+            data-ucws-analytics-label="Graduate"
+            data-ucws-analytics-on-class="uc-active-menu"
+            data-ucws-analytics-element="#menu-item-2-2"
+                  >Graduate</a>
+
+        
+        
+        
+                      
+                
+                                                                                                                                                                                                                                                                                                                                                                        
+    <ul class="level3 uc-submenu overview-link">
+
+    
+                      <li class="overview">
+              <a href="/physics-astronomy/current-students/graduate" data-drupal-link-system-path="node/253">Graduate</a>
+            </li>
+          
+    
+    
+    
+    
+      
+      
+      
+      
+        <li>
+                          <a href="https://www.ucalgary.ca/future-students/graduate/new-students">New Students</a>
+                                 
+      
+      </li>
+
+    
+      
+      
+      
+      
+        <li>
+                          <a href="http://contacts.ucalgary.ca/info/phas/courses">Courses and Outlines</a>
+                                 
+      
+      </li>
+
+    
+      
+      
+      
+      
+        <li>
+                          <a href="/physics-astronomy/current-students/graduate/timelines" data-drupal-link-system-path="node/280">Program Timelines</a>
+                                 
+      
+      </li>
+
+    
+      
+      
+      
+      
+        <li>
+                          <a href="/physics-astronomy/current-students/graduate/procedures-policies-and-forms" data-drupal-link-system-path="node/279">Procedures, Policies and Forms</a>
+                                 
+      
+      </li>
+
+    
+      
+      
+      
+      
+        <li>
+                          <a href="https://www.ucalgary.ca/pubs/calendar/grad/current/gs-j.html" title="Supervisor Rules and Regulations">Supervisor Rules and Regulations</a>
+                                 
+      
+      </li>
+
+    
+      
+      
+      
+      
+        <li>
+                          <a href="/physics-astronomy/current-students/graduate/awards-and-scholarships" title="Awards and Scholarships" data-drupal-link-system-path="node/915">Awards and Scholarships</a>
+                                 
+      
+      </li>
+
+    
+      
+      
+      
+      
+        <li>
+                          <a href="/physics-astronomy/future-students/graduate/assistantships" title="Graduate Assistantships" data-drupal-link-system-path="node/315">Graduate Assistantships</a>
+                                 
+      
+      </li>
+
+    
+      
+      
+      
+      
+        <li>
+                          <a href="/physics-astronomy/future-students/graduate/student-community" data-drupal-link-system-path="node/270">Student Community</a>
+                                 
+      
+      </li>
+
+    
+      
+      
+      
+      
+        <li>
+                          <a href="/physics-astronomy/future-students/graduate/advice" data-drupal-link-system-path="node/267">Get Advice</a>
+                                 
+      
+      </li>
+
+    
+      
+      
+      
+      
+        <li>
+                          <a href="https://grad.ucalgary.ca/">Faculty of Graduate Students Support and Resources </a>
+                                 
+      
+      </li>
+
+    
+    
+    </ul>
+  
+
+        
+      
+      </li>
+
+    
+    
+    </ul>
+  
+
+        
+      
+      </li>
+
+    
+      
+      
+      
+      
+        
+        <li class="uc-mainmenu children" id="menu-item-1-3">
+        <a href="#"
+                      data-ucws-analytics-toggle
+            data-ucws-analytics-category="Menu"
+            data-ucws-analytics-action="Open"
+            data-ucws-analytics-label="Research"
+            data-ucws-analytics-on-class="uc-active-menu"
+            data-ucws-analytics-element="#menu-item-1-3"
+                  >Research</a>
+
+        
+        
+        
+                      
+                
+                                                                                                                                                
+    <ul class="level2 uc-submenu">
+
+    
+                      <li class="overview">
+              <a href="/physics-astronomy/research" data-drupal-link-system-path="node/245">Research</a>
+            </li>
+          
+    
+    
+          <div class="uc-sublinks">
+    
+    
+      
+      
+      
+      
+        
+        <li class="children" id="menu-item-2-1">
+        <a href="#"
+                      data-ucws-analytics-toggle
+            data-ucws-analytics-category="Menu"
+            data-ucws-analytics-action="Open"
+            data-ucws-analytics-label="Research Areas"
+            data-ucws-analytics-on-class="uc-active-menu"
+            data-ucws-analytics-element="#menu-item-2-1"
+                  >Research Areas</a>
+
+        
+        
+        
+                      
+                
+                                                                                                                                                                                                                                                                                                                                                                                                                                            
+    <ul class="level3 uc-submenu overview-link">
+
+    
+                      <li class="overview">
+              <a href="/physics-astronomy/research/research-areas" data-drupal-link-system-path="node/283">Research Areas</a>
+            </li>
+          
+    
+    
+    
+    
+      
+      
+      
+      
+        <li>
+                          <a href="https://www.ucalgary.ca/astronomyastrophys/">Astronomy and Astrophysics</a>
+                                 
+      
+      </li>
+
+    
+      
+      
+      
+      
+        <li>
+                          <a href="http://iqst.ca/research/index.php">Atomic, Molecular, and Optical Physics</a>
+                                 
+      
+      </li>
+
+    
+      
+      
+      
+      
+        <li>
+                          <a href="/physics-astronomy/research/research-areas/biophysics" data-drupal-link-system-path="node/1139">Biophysics</a>
+                                 
+      
+      </li>
+
+    
+      
+      
+      
+      
+        <li>
+                          <a href="https://www.ucalgary.ca/complexity/">Complexity Science</a>
+                                 
+      
+      </li>
+
+    
+      
+      
+      
+      
+        <li>
+                          <a href="/physics-astronomy/research/research-areas/condensed-matter-physics" data-drupal-link-system-path="node/1141">Condensed Matter Physics</a>
+                                 
+      
+      </li>
+
+    
+      
+      
+      
+      
+        <li>
+                          <a href="https://www.ucalgary.ca/envirophys/">Environmental Physics</a>
+                                 
+      
+      </li>
+
+    
+      
+      
+      
+      
+        <li>
+                          <a href="https://www.ucalgary.ca/uofcisl/">Isotope Science Laboratory</a>
+                                 
+      
+      </li>
+
+    
+      
+      
+      
+      
+        <li>
+                          <a href="https://www.ucalgary.ca/rop/">Medical Physics</a>
+                                 
+      
+      </li>
+
+    
+      
+      
+      
+      
+        <li>
+                          <a href="/physics-astronomy/research/research-areas/neurophysics" data-drupal-link-system-path="node/1140">Neurophysics</a>
+                                 
+      
+      </li>
+
+    
+      
+      
+      
+      
+        <li>
+                          <a href="http://www.iqst.ca/">Quantum Information Science</a>
+                                 
+      
+      </li>
+
+    
+      
+      
+      
+      
+        <li>
+                          <a href="https://www.phys.ucalgary.ca/">Space and Plasma Physics</a>
+                                 
+      
+      </li>
+
+    
+      
+      
+      
+      
+        <li>
+                          <a href="/physics-astronomy/research/research-areas/subatomic-physics" data-drupal-link-system-path="node/1142">Subatomic Physics</a>
+                                 
+      
+      </li>
+
+    
+    
+    </ul>
+  
+
+        
+      
+      </li>
+
+    
+      
+      
+      
+      
+        <li>
+                          <a href="/physics-astronomy/research/researchers" title="Reseachers" data-drupal-link-system-path="node/385">Researchers</a>
+                                 
+      
+      </li>
+
+    
+      
+      
+      
+      
+        <li>
+                          <a href="/physics-astronomy/research/institutes-groups-and-facilities" data-drupal-link-system-path="node/285">Institutes, Groups and Facilities</a>
+                                 
+      
+      </li>
+
+    
+          </div>
+    
+    </ul>
+  
+
+        
+      
+      </li>
+
+    
+      
+      
+      
+      
+        <li class="uc-mainmenu">
+                          <a href="/physics-astronomy/news-and-events" data-drupal-link-system-path="node/246">News and Events</a>
+                                 
+      
+      </li>
+
+    
+      
+      
+      
+      
+        
+        <li class="uc-mainmenu children" id="menu-item-1-5">
+        <a href="#"
+                      data-ucws-analytics-toggle
+            data-ucws-analytics-category="Menu"
+            data-ucws-analytics-action="Open"
+            data-ucws-analytics-label="About"
+            data-ucws-analytics-on-class="uc-active-menu"
+            data-ucws-analytics-element="#menu-item-1-5"
+                  >About</a>
+
+        
+        
+        
+                      
+                
+                                                                                                                                                                                                                                                                                
+    <ul class="level2 uc-submenu tabbed">
+
+    
+                      <li class="overview">
+              <a href="/physics-astronomy/about" data-drupal-link-system-path="node/248">About</a>
+            </li>
+          
+    
+    
+    
+    
+      
+      
+      
+      
+        
+        <li class="children" id="menu-item-2-1">
+        <a href="#"
+                      data-ucws-analytics-toggle
+            data-ucws-analytics-category="Menu"
+            data-ucws-analytics-action="Open"
+            data-ucws-analytics-label="Our Department"
+            data-ucws-analytics-on-class="uc-active-menu"
+            data-ucws-analytics-element="#menu-item-2-1"
+                  >Our Department</a>
+
+        
+        
+        
+                      
+                
+                                                                                                                                                            
+    <ul class="level3 uc-submenu overview-link">
+
+    
+                      <li class="overview">
+              <a href="/physics-astronomy/about/our-department" title="Our Department Overview" data-drupal-link-system-path="node/320">Our Department</a>
+            </li>
+          
+    
+    
+    
+    
+      
+      
+      
+      
+        <li>
+                          <a href="/physics-astronomy/about/our-department/heads-message" title="Head&#039;s Message" data-drupal-link-system-path="node/321">Head&#039;s Message</a>
+                                 
+      
+      </li>
+
+    
+      
+      
+      
+      
+        <li>
+                          <a href="/physics-astronomy/about/our-department/history" title="History of the Department" data-drupal-link-system-path="node/322">History of the Department</a>
+                                 
+      
+      </li>
+
+    
+      
+      
+      
+      
+        <li>
+                          <a href="/physics-astronomy/about/our-department/excellence-and-awards" title="Excellence and Awards" data-drupal-link-system-path="node/1163">Excellence and Awards</a>
+                                 
+      
+      </li>
+
+    
+      
+      
+      
+      
+        <li>
+                          <a href="https://science.ucalgary.ca/about/faculty-office/giving" title="Giving to the Department of Physics and Astronomy">Giving to the Department of Physics and Astronomy</a>
+                                 
+      
+      </li>
+
+    
+    
+    </ul>
+  
+
+        
+      
+      </li>
+
+    
+      
+      
+      
+      
+        
+        <li class="children" id="menu-item-2-2">
+        <a href="#"
+                      data-ucws-analytics-toggle
+            data-ucws-analytics-category="Menu"
+            data-ucws-analytics-action="Open"
+            data-ucws-analytics-label="Community and Connections"
+            data-ucws-analytics-on-class="uc-active-menu"
+            data-ucws-analytics-element="#menu-item-2-2"
+                  >Community and Connections</a>
+
+        
+        
+        
+                      
+                
+                                                                                                                          
+    <ul class="level3 uc-submenu overview-link">
+
+    
+                      <li class="overview">
+              <a href="/physics-astronomy/about/community-and-connections" title="Community and Connections" data-drupal-link-system-path="node/579">Community and Connections</a>
+            </li>
+          
+    
+    
+    
+    
+      
+      
+      
+      
+        <li>
+                          <a href="/physics-astronomy/about/community-and-connections/rollercoasterology" title="Rollercoasterology" data-drupal-link-system-path="node/324">Rollercoasterology</a>
+                                 
+      
+      </li>
+
+    
+      
+      
+      
+      
+        <li>
+                          <a href="/physics-astronomy/about/community-and-connections/cap" title="Canadian Association of Physics" data-drupal-link-system-path="node/384">Canadian Association of Physics</a>
+                                 
+      
+      </li>
+
+    
+      
+      
+      
+      
+        <li>
+                          <a href="/rothney-observatory" data-drupal-link-system-path="node/344">Rothney Astrophysical Observatory</a>
+                                 
+      
+      </li>
+
+    
+    
+    </ul>
+  
+
+        
+      
+      </li>
+
+    
+      
+      
+      
+      
+        
+        <li class="children" id="menu-item-2-3">
+        <a href="#"
+                      data-ucws-analytics-toggle
+            data-ucws-analytics-category="Menu"
+            data-ucws-analytics-action="Open"
+            data-ucws-analytics-label="Careers"
+            data-ucws-analytics-on-class="uc-active-menu"
+            data-ucws-analytics-element="#menu-item-2-3"
+                  >Careers</a>
+
+        
+        
+        
+                      
+                
+                                                      
+    <ul class="level3 uc-submenu overview-link">
+
+    
+                      <li class="overview">
+              <a href="/physics-astronomy/about/careers" title="Careers Overview" data-drupal-link-system-path="node/325">Careers</a>
+            </li>
+          
+    
+    
+    
+    
+      
+      
+      
+      
+        <li>
+                          <a href="https://careers.ucalgary.ca/jobs/search?sort_by=updated_at%2Cdesc&amp;faculty%5B0%5D=science&amp;cf%5Blocationid%5D%5B0%5D=12010&amp;q=Department%20of%20Physics%20and%20Astronomy&amp;c_keywords=Department%20of%20Physics%20and%20Astronomy">Career Opportunities</a>
+                                 
+      
+      </li>
+
+    
+    
+    </ul>
+  
+
+        
+      
+      </li>
+
+    
+      
+      
+      
+      
+        
+        <li class="children" id="menu-item-2-4">
+        <a href="#"
+                      data-ucws-analytics-toggle
+            data-ucws-analytics-category="Menu"
+            data-ucws-analytics-action="Open"
+            data-ucws-analytics-label="Teaching and Learning"
+            data-ucws-analytics-on-class="uc-active-menu"
+            data-ucws-analytics-element="#menu-item-2-4"
+                  >Teaching and Learning</a>
+
+        
+        
+        
+                      
+                
+                                                      
+    <ul class="level3 uc-submenu overview-link">
+
+    
+                      <li class="overview">
+              <a href="/physics-astronomy/about/teaching-and-learning" title="Teaching and Learning" data-drupal-link-system-path="node/936">Teaching and Learning</a>
+            </li>
+          
+    
+    
+    
+    
+      
+      
+      
+      
+        <li>
+                          <a href="/physics-astronomy/about/teaching-and-learning/demonstrations" title="Demonstrations" data-drupal-link-system-path="node/937">Demonstrations</a>
+                                 
+      
+      </li>
+
+    
+    
+    </ul>
+  
+
+        
+      
+      </li>
+
+    
+    
+    </ul>
+  
+
+        
+      
+      </li>
+
+    
+      
+      
+      
+      
+        <li class="uc-mainmenu">
+                          <a href="/physics-astronomy/contacts" data-drupal-link-system-path="node/249">Contacts</a>
+                                 
+      
+      </li>
+
+    
+    
+    </ul>
+  
+
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+  </header>
+
+<main id="content">
+      <div class="loading"></div>       
+    <div class="container-fluid layout col1 hero">
+    <div class="row">
+      <div  class="layout-col hero layout-12 col-sm-12">
+          
+    
+      
+
+  
+    
+  
+
+    
+    
+  <div class="layout-blocks-ucws-hero-cta container-fluid full-width block hero-cta bg-image top parallax light">
+    <div class="row berry-back vmiddle hleft" style="background-image: url(&#039;/sites/default/files/styles/ucws_hero_cta_desktop_short/public/2018-12/star-gazing-2.jpg?itok=Pagtx02G&#039;);">       <div class="container">
+        <div class="row">
+                      <div class="col-sm-12 col-image hidden-md hidden-lg">
+              <picture>
+                                                      <source srcset="/sites/default/files/styles/ucws_hero_cta_tablet/public/2018-12/star-gazing-2.jpg?itok=Pqf4Mv13 1x" media="all and (min-width: 768px)" type="image/jpeg"/>
+                                      <source srcset="/sites/default/files/styles/ucws_hero_cta_mobile/public/2018-12/star-gazing-2.jpg?itok=kZEqFYNe 1x" media="all and (max-width: 767px)" type="image/jpeg"/>
+                                                                  <img class="img-responsive" src="/sites/default/files/styles/ucws_hero_cta_desktop_short/public/2018-12/star-gazing-2.jpg?itok=Pagtx02G" alt="Stargazing." />
+              </picture>
+            </div>
+                    <div class="col-sm-12 col-text">
+                          <div class="cta-content light left">
+                                                    <h1>Department of Physics and Astronomy</h1>
+                                <p>Learn about the physical forces that shape life as we know it and define our place in the universe.</p>
+                              </div>
+                      </div>
+        </div>
+      </div>
+          </div>
+  </div>
+
+
+
+  
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid layout col1">
+    <div class="row">
+      <div  class="layout-col col1 layout-12 col-sm-12">
+          
+    
+      
+
+  
+    
+
+    
+    
+  <div class="layout-blocks-ucws-banner container-fluid roundable full-width block hero-cta banner graphic rounded-top">
+          <div class="row grey-back">           <div class="container">
+        <div class="row">
+                    <div class="col-sm-12 col-text">
+                          <div class="cta-content center">
+                                                    <h2>Why join us</h2>
+                                <p><span><span><span lang="EN-CA" xml:lang="EN-CA" xml:lang="EN-CA"><span>Work with world-leading researchers to learn the math, computer, and laboratory skills that underlie scientific investigation of the universe. </span></span><span>Explore the world in new ways and forge a career on the forefront of innovation and discovery.</span></span></span></p>
+                              </div>
+                      </div>
+        </div>
+      </div>
+          </div>
+  </div>
+
+
+
+  
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid layout col2-50-50">
+    <div class="row">
+      <div class="container">
+        <div class="row">
+
+          
+                    <div  class="layout-col col2-50 layout-6 col-md-6">
+              
+    
+      
+
+  
+    
+  <div class="layout-blocks-ucws-text container-fluid roundable block text">
+    <div class="row">
+      <div class="container">
+                  <div class="row header center">
+            <div class="col-sm-12">
+                            <h2>Undergraduate programs</h2>
+            </div>
+          </div>
+                          <div class="row center">
+            <div class="col-sm-12 one-col">
+              <p>Our department offers two main undergraduate concentrations.</p>
+            </div>
+          </div>
+                          <div class="row footer center">
+            <div class="col-sm-12">
+              <div class="btn-wrapper">
+                                  <a class="btn btn-default red-back"
+                     href="/physics-astronomy/future-students/undergraduate/programs"
+                     role="button"
+                     data-ucws-analytics-click
+                     data-ucws-analytics-category="CTA button click"
+                     data-ucws-analytics-action="Explore"
+                     data-ucws-analytics-label="http://science.ucalgary.ca/physics-astronomy">Explore</a>
+                              </div>
+            </div>
+          </div>
+              </div>
+          </div>
+  </div>
+
+
+
+  
+          </div>
+
+                    <div  class="layout-col col2-50 layout-6 col-md-6">
+              
+    
+      
+
+  
+    
+  <div class="layout-blocks-ucws-text container-fluid roundable block text">
+    <div class="row">
+      <div class="container">
+                  <div class="row header center">
+            <div class="col-sm-12">
+                            <h2>Graduate programs</h2>
+            </div>
+          </div>
+                          <div class="row center">
+            <div class="col-sm-12 one-col">
+              <p>Pursue a master's or doctorate in one of five specializations.</p>
+            </div>
+          </div>
+                          <div class="row footer center">
+            <div class="col-sm-12">
+              <div class="btn-wrapper">
+                                  <a class="btn btn-default red-back"
+                     href="/physics-astronomy/future-students/graduate/programs"
+                     role="button"
+                     data-ucws-analytics-click
+                     data-ucws-analytics-category="CTA button click"
+                     data-ucws-analytics-action="Explore"
+                     data-ucws-analytics-label="http://science.ucalgary.ca/physics-astronomy">Explore</a>
+                              </div>
+            </div>
+          </div>
+              </div>
+          </div>
+  </div>
+
+
+
+  
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid layout col1">
+    <div class="row">
+      <div  class="layout-col col1 layout-12 col-sm-12">
+          
+    
+      
+
+  
+    
+
+    
+    
+  <div class="layout-blocks-ucws-banner container-fluid full-width block hero-cta banner bg-image light tall">
+          <div class="row grey-back vmiddle hleft" style="background-image: url(&#039;/sites/default/files/styles/ucws_banner_desktop_tall/public/2019-01/160317_EDIT_%20Johnathan-Burchill-0001.jpg?h=fa9b32e7&amp;itok=KJVQGkbo&#039;);">           <div class="container">
+        <div class="row">
+                      <div class="col-sm-12 col-image hidden-md hidden-lg">
+              <picture>
+                                                      <source srcset="/sites/default/files/styles/ucws_banner_tablet/public/2019-01/160317_EDIT_%20Johnathan-Burchill-0001.jpg?itok=TsAs1NpE 1x" media="all and (min-width: 768px)" type="image/jpeg"/>
+                                      <source srcset="/sites/default/files/styles/ucws_banner_mobile/public/2019-01/160317_EDIT_%20Johnathan-Burchill-0001.jpg?itok=TRnQB34h 1x" media="all and (max-width: 767px)" type="image/jpeg"/>
+                                                                  <img class="img-responsive" src="/sites/default/files/styles/ucws_banner_desktop_tall/public/2019-01/160317_EDIT_%20Johnathan-Burchill-0001.jpg?h=fa9b32e7&amp;itok=KJVQGkbo" alt="Dr. Johnathan Burchill designs instrumentation for tracking space weather" />
+              </picture>
+            </div>
+                    <div class="col-sm-12 col-text">
+                          <div class="cta-content light left">
+                                                    <h2>Research areas</h2>
+                                <p>From quantum physics to space research, our researchers explore how our world works, and help explain the extraordinary. </p>
+                                  <div class="btn-wrapper">
+                                                                                      <a class="btn btn-default btn-primary"
+                         href="/physics-astronomy/research/research-areas"
+                         role="button"
+                         data-ucws-analytics-click
+                         data-ucws-analytics-category="CTA button click"
+                         data-ucws-analytics-action="Explore"
+                         data-ucws-analytics-label="http://science.ucalgary.ca/physics-astronomy">Explore</a>
+                                      </div>
+                              </div>
+                      </div>
+        </div>
+      </div>
+          </div>
+  </div>
+
+
+
+    
+    
+      
+
+
+
+
+<div class="layout-blocks-ucws-news-feed container-fluid roundable block news-feed">
+  <div class="row">
+    <div class="container">
+              <div class="row header">
+          <div class="col-sm-12">
+            <h2>Featured news</h2>
+          </div>
+        </div>
+      
+      <div class="row divider"><div class="col-sm-12"><hr class="dark-orange"></div></div>
+
+      <div class="row news-items dark-orange-accents">
+                  
+                        
+                          <div class="col-sm-12 col-md-6 news-item news-items__main">
+                <div class="news-item">
+                  <div class="item-info">
+                                                                                <div class="title-spacer"></div>
+                                          <h3>Fall Orientation welcomes new UCalgary students to campus community</h3>
+                                                              <p>New Student Induction Ceremony and related events set important tone for academic career...</p>
+                                                              <p><a href="http://news.ucalgary.ca/news/fall-orientation-welcomes-new-ucalgary-students-campus-community" class="read-more">Read more</a></p>
+                                      </div>
+                </div>
+              </div>
+            
+                        
+          
+                                      <div class="col-sm-12 col-md-6 news-items__second">
+                <div class="row">
+            
+                          <div class="col-sm-12 col-lg-4 news-item">
+                <div class="item-info">
+                                                      <div class="title-border"></div>
+                                      <h4>NASA awards group of local scientists and photographers</h4>
+                                                        <p><a href="https://calgary.ctvnews.ca/nasa-awards-group-of-local-scientists-and-photographers-1.4569586" class="read-more">Read more</a></p>
+                                  </div>
+              </div>
+            
+                        
+          
+                        
+                          <div class="col-sm-12 col-lg-4 news-item">
+                <div class="item-info">
+                                                      <div class="title-border"></div>
+                                      <h4>Mysterious STEVE gets ‘mint’ treatment</h4>
+                                                        <p><a href="http://news.ucalgary.ca/news/mysterious-steve-gets-mint-treatment" class="read-more">Read more</a></p>
+                                  </div>
+              </div>
+            
+                        
+          
+                        
+                          <div class="col-sm-12 col-lg-4 news-item">
+                <div class="item-info">
+                                                      <div class="title-border"></div>
+                                      <h4>University of Calgary on a mission to better understand weather in space</h4>
+                                                        <p><a href="https://globalnews.ca/video/5718778/university-of-calgary-on-a-mission-to-better-understand-weather-in-space/" class="read-more">Read more</a></p>
+                                  </div>
+              </div>
+            
+                                        </div>
+              </div>
+            
+                        </div>
+    </div>
+
+      </div>
+</div>
+
+  
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid layout col1">
+    <div class="row">
+      <div  class="layout-col col1 layout-12 col-sm-12">
+          
+    
+      
+
+  
+    
+
+    
+    
+  <div class="layout-blocks-ucws-info-shim container-fluid roundable block info-shim">
+    <div class="row">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <p>
+              
+                              <a href="https://news.ucalgary.ca/news/science/physics-astronomy">View all news</a>
+                          </p>
+            <div class="more-info-line">
+              <div class="more-info-icon">
+                <span class="icon icomoon ucws-info-shim-copy berry" aria-hidden="true"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+          </div>
+  </div>
+
+
+
+  
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid layout col1">
+    <div class="row">
+      <div  class="layout-col col1 layout-12 col-sm-12">
+          
+    
+      
+
+  
+    
+
+    
+    
+  <div class="layout-blocks-ucws-image_text container-fluid roundable block image-text image-right">
+    <div class="row">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 min-height-fix">
+                          <div class="rounded-box grey-back">
+                                <div class="sidekick-image" style="background-image: url('/sites/default/files/styles/ucws_image_with_text_desktop/public/2019-01/RAO_03b_1.jpg?itok=m-v0pExR');">
+                  <picture>
+                                                                  <source srcset="/sites/default/files/styles/ucws_image_with_text_desktop/public/2019-01/RAO_03b_1.jpg?itok=m-v0pExR 1x" media="all and (min-width: 768px)" type="image/jpeg"/>
+                                              <source srcset="/sites/default/files/styles/ucws_image_with_text_mobile/public/2019-01/RAO_03b_1.jpg?itok=yHNRbr3J 1x" media="all and (max-width: 767px)" type="image/jpeg"/>
+                                                                                  <img class="img-responsive" src="/sites/default/files/styles/ucws_image_with_text_desktop/public/2019-01/RAO_03b_1.jpg?itok=m-v0pExR" alt="Rothney Astrophysical Observatory" />
+                  </picture>
+                </div>
+                <div class="sidekick-text">
+                                                          <h2>Explore the cosmos</h2>
+                                    <p>Experience the wonders of the night sky at the Rothney Astrophysical Observatory, Canada's best-equipped astronomical learning facility.</p>
+                                      <p><a class="btn btn-default btn-ghost"
+                          href="/rothney-observatory"
+                          role="button"
+                          data-ucws-analytics-click
+                          data-ucws-analytics-category="CTA button click"
+                          data-ucws-analytics-action="Visit the RAO"
+                          data-ucws-analytics-label="http://science.ucalgary.ca/physics-astronomy">Visit the RAO</a></p>
+                                  </div>
+              </div>
+                      </div>
+        </div>
+      </div>
+          </div>
+  </div>
+
+
+
+  
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid layout col1">
+    <div class="row">
+      <div  class="layout-col col1 layout-12 col-sm-12">
+          
+    
+      
+
+  
+    
+
+    
+    
+  <div class="layout-blocks-ucws-info-shim container-fluid roundable block info-shim">
+    <div class="row">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <p>
+              Connect to the 
+                              <a href="https://science.ucalgary.ca/">Faculty of Science</a>
+                          </p>
+            <div class="more-info-line">
+              <div class="more-info-icon">
+                <span class="icon icomoon ucws-info-shim-earth dark-grey" aria-hidden="true"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+          </div>
+  </div>
+
+
+
+  
+      </div>
+    </div>
+  </div>
+
+
+
+
+  </main>
+
+<footer class="container-fluid">
+    <div id="block-marketosnippet">
+  
+    
+        <div class="container-fluid layout col1 hero">
+    <div class="row">
+      <div  class="layout-col hero layout-12 col-sm-12">
+          
+    
+      
+            <div><script type="text/javascript">
+<!--//--><![CDATA[// ><!--
+
+(function() {
+  var didInit = false;
+  function initMunchkin() {
+    if(didInit === false) {
+      didInit = true;
+      Munchkin.init('161-OLN-990');
+    }
+  }
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = '//munchkin.marketo.net/munchkin.js';
+  s.onreadystatechange = function() {
+    if (this.readyState == 'complete' || this.readyState == 'loaded') {
+      initMunchkin();
+    }
+  };
+  s.onload = initMunchkin;
+  document.getElementsByTagName('head')[0].appendChild(s);
+})();
+
+//--><!]]>
+</script></div>
+      
+  
+      </div>
+    </div>
+  </div>
+
+  </div>
+<div id="block-sectioninformation-2">
+  
+    
+      
+                    
+
+
+    
+
+  
+
+  <div id="pre-footer" class="row grey-back">
+    <div class="container">
+      <div class="row">
+        <div id="pre-footer-deets" class="col-md-9">
+
+                      <p class="icon"><span class="glyphicon glyphicon-question-sign"></span></p>
+          
+                      <p class="title">Physics and Astronomy</p>
+          
+                      <ul class="links">
+                              <li><a href="https://science.ucalgary.ca/physics-astronomy/contacts">Contacts</a></li>
+                              <li><a href="http://science.ucalgary.ca/rothney-observatory">Rothney Astrophysical Observatory</a></li>
+                          </ul>
+          
+        </div>
+                  <div id="pre-footer-links" class="col-md-3">
+
+                        <ul class="social">
+                                                                                                    <li><a class="btn-social" href="https://twitter.com/UofC_Science" target="_blank"><img
+                          class="svg twitter"
+                          src="/modules/ucalgary/ucws_common/ucws_section_information/templates/images/social-icon-twitter-round.svg"
+                          alt="Twitter"></a></li>
+                                                                                                                                                                                                          <li><a class="btn-social" href="https://www.facebook.com/UofCFacultyofScience" target="_blank"><img
+                          class="svg facebook"
+                          src="/modules/ucalgary/ucws_common/ucws_section_information/templates/images/social-icon-facebook-round.svg"
+                          alt="Facebook"></a></li>
+                                                            </ul>
+
+          </div>
+              </div>
+    </div>
+  </div>
+
+  <script>
+    if (typeof ga === "function") {
+            ga('create', 'UA-54246827-1', {'name': 'PhysicsandAstronomy'});
+      ga('PhysicsandAstronomy.send', 'pageview');
+    }
+  </script>
+
+  </div>
+
+
+        
+    
+  <div id="footer" class="row">
+    <div class="container">
+      <div class="row">
+        <div id="footer-special" class="col-md-4 col-md-push-4">
+                      <a href="https://www.ucalgary.ca/campaign/"><img src="/themes/ucalgary/ucws_theme/images/energize-footer-button.png" alt="Energize: The Campaign for Eyes High"></a>
+                  </div>
+        <div id="footer-links" class="col-md-4 col-md-pull-4">
+          <p class="small social">
+                                          <a class="btn-social" href="https://www.facebook.com/universityofcalgary" target="_blank"><img class="svg facebook" src="/themes/ucalgary/ucws_theme/images/social-icon-facebook.svg" alt="Facebook"></a>
+                              <a class="btn-social" href="https://www.twitter.com/ucalgary" target="_blank"><img class="svg twitter" src="/themes/ucalgary/ucws_theme/images/social-icon-twitter.svg" alt="Twitter"></a>
+                              <a class="btn-social" href="https://www.linkedin.com/company/university-of-calgary" target="_blank"><img class="svg linkedin" src="/themes/ucalgary/ucws_theme/images/social-icon-linkedin.svg" alt="LinkedIn"></a>
+                              <a class="btn-social" href="https://www.instagram.com/ucalgary" target="_blank"><img class="svg instagram" src="/themes/ucalgary/ucws_theme/images/social-icon-instagram.svg" alt="Instagram"></a>
+                              <a class="btn-social" href="https://www.youtube.com/c/UCalgaryCa" target="_blank"><img class="svg youtube" src="/themes/ucalgary/ucws_theme/images/social-icon-youtube.svg" alt="YouTube"></a>
+                                    </p>
+          <p class="small legalese">
+                          <a href="https://www.ucalgary.ca/sites/default/files/ucgy/groups/Marketing/digital-privacy-statement.pdf">Digital Privacy Statement</a><br>
+              <a href="https://www.ucalgary.ca/policies/files/policies/privacy-policy-2011.pdf">Privacy Policy</a><br>
+              <a href="https://ucalgarysurvey.qualtrics.com/SE/?SID=SV_2lcAqNmIryzHpZ3" target="_blank">Website feedback</a>
+                      </p>
+        </div>
+        <div id="footer-deets" class="col-md-4">
+          <p class="small address">
+                          University of Calgary<br>
+              2500 University Drive NW<br>
+              Calgary Alberta <span class="postal-code">T2N 1N4</span><br>
+              CANADA
+                      </p>
+          <p class="small copyright">
+                          Copyright &copy; 2019
+                      </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </footer>
+
+  
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/242","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","clientside_validation_jquery":{"validate_all_ajax_forms":2,"force_validate_on_blur":false},"colorbox":{"opacity":"0.85","current":"{current} of {total}","previous":"\u00ab Prev","next":"Next \u00bb","close":"Close","maxWidth":"98%","maxHeight":"98%","fixed":true,"mobiledetect":false,"mobiledevicewidth":null},"data":{"extlink":{"extTarget":true,"extTargetNoOverride":false,"extNofollow":false,"extFollowNoOverride":false,"extClass":"0","extLabel":"(link is external)","extImgClass":false,"extSubdomains":true,"extExclude":"","extInclude":"(.*\\.pdf)|(iac01\\.*)|(homepages\\.*)|(www2\\.*)|(people\\.ucalgary\\.ca\\~*)|(webapps2\\.ucalgary\\.ca\\~*)|(webapps3\\.ucalgary\\.ca\\~*)|(webapp6\\.ucalgary\\.ca\\~*)|(csh\\.ucalgary\\.ca\\~*)|(d2l\\.ucalgary\\.ca\\~*)","extCssExclude":"","extCssExplicit":"","extAlert":false,"extAlertText":"This link will take you to an external web site. We are not responsible for their content.","mailtoClass":"0","mailtoLabel":"(link sends email)"}},"eu_cookie_compliance":{"popup_enabled":true,"popup_agreed_enabled":false,"popup_hide_agreed":false,"popup_clicking_confirmation":false,"popup_scrolling_confirmation":false,"popup_html_info":"\u003Cdiv class=\u0022eu-cookie-compliance-banner eu-cookie-compliance-banner-info\u0022\u003E\n  \u003Cdiv class =\u0022popup-content info eu-cookie-compliance-content\u0022\u003E\n    \u003Cdiv id=\u0022popup-text\u0022 class=\u0022eu-cookie-compliance-message\u0022\u003E\n      \u003Cp\u003EBy continuing to use this site, you permit us to place cookies on your browser and agree to our use of cookies as explained in our Digital Privacy Statement. Please review the \u003Ca href=\u0022https:\/\/www.ucalgary.ca\/sites\/default\/files\/ucgy\/groups\/Marketing\/digital-privacy-statement.pdf\u0022\u003EDigital Privacy Statement\u003C\/a\u003E for details and instructions on changing your cookie preferences.\u003C\/p\u003E\n          \u003C\/div\u003E\n    \u003Cdiv id=\u0022popup-buttons\u0022 class=\u0022eu-cookie-compliance-buttons\u0022\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022agree-button eu-cookie-compliance-default-button\u0022\u003EClose\u003C\/button\u003E\n          \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E","use_mobile_message":false,"mobile_popup_html_info":"\u003Cdiv class=\u0022eu-cookie-compliance-banner eu-cookie-compliance-banner-info\u0022\u003E\n  \u003Cdiv class =\u0022popup-content info eu-cookie-compliance-content\u0022\u003E\n    \u003Cdiv id=\u0022popup-text\u0022 class=\u0022eu-cookie-compliance-message\u0022\u003E\n      \n          \u003C\/div\u003E\n    \u003Cdiv id=\u0022popup-buttons\u0022 class=\u0022eu-cookie-compliance-buttons\u0022\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022agree-button eu-cookie-compliance-default-button\u0022\u003EClose\u003C\/button\u003E\n          \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E","mobile_breakpoint":768,"popup_html_agreed":false,"popup_use_bare_css":false,"popup_height":"auto","popup_width":"100%","popup_delay":1000,"popup_link":"\/sites\/default\/files\/digital-privacy-statement.pdf","popup_link_new_window":true,"popup_position":false,"popup_language":"en","store_consent":true,"better_support_for_screen_readers":false,"cookie_name":"","reload_page":false,"domain":"","popup_eu_only_js":false,"cookie_lifetime":100,"cookie_session":0,"disagree_do_not_show_popup":false,"method":"default","whitelisted_cookies":"","withdraw_markup":"\u003Cbutton type=\u0022button\u0022 class=\u0022eu-cookie-withdraw-tab\u0022\u003E\u003C\/button\u003E\n\u003Cdiv class=\u0022eu-cookie-withdraw-banner\u0022\u003E\n  \u003Cdiv class=\u0022popup-content info eu-cookie-compliance-content\u0022\u003E\n    \u003Cdiv id=\u0022popup-text\u0022 class=\u0022eu-cookie-compliance-message\u0022\u003E\n      \n    \u003C\/div\u003E\n    \u003Cdiv id=\u0022popup-buttons\u0022 class=\u0022eu-cookie-compliance-buttons\u0022\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022eu-cookie-withdraw-button\u0022\u003E\u003C\/button\u003E\n    \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E","withdraw_enabled":false},"specialBlocksAccess":false,"userRoles":[["anonymous"]],"ucws_layout":{"settings":{"layout_json_url":"\/modules\/ucalgary\/ucws_common\/ucws_layout\/js\/ucws_layout_rules.json?t=1567023567"}},"user":{"uid":0,"permissionsHash":"7232cb712294855941fccc837974e7b20f982d6cbd045186da20e1b340660f1a"}}</script>
+<script src="/sites/default/files/js/js_c6sBYcgPYd3dKKsqe7iP6GIHZvyCj-q66Ny81NMgZ7U.js"></script>
+<script src="https://static.addtoany.com/menu/page.js" async></script>
+<script src="/sites/default/files/js/js_5WyV14GC7y6_J2dKtZaidr3ZLnHfHdDVdWTN8JmtC_w.js"></script>
+
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"2f1f7a5441","applicationID":"296387166","transactionName":"ZFQHZhNQDEoDUUdZDF0eJFEVWA1XTUJSVwZsUgRRCVQ=","queueTime":0,"applicationTime":16,"atts":"SBMEEFtKH0Q=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

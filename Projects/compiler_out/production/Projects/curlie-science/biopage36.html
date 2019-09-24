@@ -1,0 +1,226 @@
+<BASE HREF="http://muscle.ucsd.edu/">
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+		<title>Muscle Physiology - Home Page</title>
+		<link href="includes/Master.css" rel="stylesheet" type="text/css" media="all">
+		<style type="text/css">
+		.body1 {font-size: 10pt; font-family: Verdana, Arial, Helvetica, sans-serif; font-style: normal; font-weight: normal; text-align: justify; margin-right: 20px; margin-left: 20px }
+        </style>
+	</head>
+	<script language="JavaScript1.2">
+//var randomnumber = (Math.random() + 0.2);
+//var rand1 = Math.round( 10 * randomnumber);
+var rand1 = Math.floor(Math.random()*20+1);
+var images = new Array();
+images[1] = "<a href='/musintro/bridge.shtml'><img src='/images/thumbs/bridge.gif' border='1' ALT='Learn about the Cross-bridge Cycle'></a>"
+images[2] = "<a href='/musintro/glucose.shtml'><img src='/images/thumbs/citriccycle.gif' border='1' ALT='Learn about Glucose Metabolism'></a>"
+images[3] = "<a href='/musintro/eccentric.shtml'><img src='/images/thumbs/damage.gif' border='1' ALT='Learn about Eccentric Injury'></a>"
+images[4] = "<a href='/musintro/eccentric.shtml'><img src='/images/thumbs/desloss.gif' border='1' ALT='Learn about Eccentric Injury'></a>"
+images[5] = "<a href='/musintro/diffraction.shtml'><img src='/images/thumbs/diffpattern.gif' border='1' ALT='Learn about Diffraction Patterns in Muscle'></a>"
+images[6] = "<a href='/musintro/fibril.shtml'><img src='/images/thumbs/em.gif' border='1' ALT='Learn about Histochemistry'></a>"
+images[7] = "<a href='/musintro/histochem.shtml'><img src='/images/thumbs/histo.gif' border='1' ALT='Learn about Succinate Dehydrogenase'></a>"
+images[8] = "<a href='/projects/guide.shtml'><img src='/images/thumbs/laserdevice.gif' border='1' ALT='Learn about the Laser Device'></a>"
+images[9] = "<a href='/musintro/fibril.shtml'><img src='/images/thumbs/sarccart.gif' border='1' ALT='Learn about Muscle Architecture'></a>"
+images[10] = "<a href='/musintro/ecc.shtml'><img src='/images/thumbs/tt.gif' border='1' ALT='Learn about Myosin ATPase'></a>"
+images[11] = "<a href='/musintro/myofiber.shtml'><img src='/images/thumbs/nuclei.gif' border='1' ALT='Learn about the Myofibers'></a>"
+images[12] = "<a href='/projects/fish.shtml'><img src='/images/thumbs/fish.gif' border='1' ALT='Learn about sarcomere length measurements in fish'></a>"
+images[13] = "<a href='/projects/guide.shtml#LEarch'><img src='/images/thumbs/le.gif' border='1' ALT='Learn about lower extremity architecture'></a>"
+images[14] = "<a href='/projects/guide.shtml#Passive'><img src='/images/thumbs/singlefiber.gif' border='1' ALT='Learn about passive mechanics of muscle cells'></a>"
+images[15] = "<a href='/projects/guide.shtml#Transfection'><img src='/images/thumbs/gfp_ta.gif' border='1' ALT='Learn about plasmid transfection of muscle'></a>"
+images[16] = "<a href='/projects/guide.shtml#Transfection'><img src='/images/thumbs/gfp-desmin_fiber.gif' border='1' ALT='Learn about plasmid transfection of muscle'></a>"
+images[17] = "<a href='/projects/guide.shtml#Transfection'><img src='/images/thumbs/gfp-desmin_ta.gif' border='1' ALT='Learn about plasmid transfection of muscle'></a>"
+images[18] = "<a href='/projects/guide.shtml#Confocal'><img src='/images/thumbs/Chamber+Stage.gif' border='1' ALT='Learn about real-time imaging of cytoskeletal proteins'></a>"
+images[19] = "<a href='/projects/guide.shtml#Confocal'><img src='/images/thumbs/nuclei-2_7.gif' border='1' ALT='Learn about real-time imaging of cytoskeletal proteins'></a>"
+images[20] = "<a href='/projects/guide.shtml#Botox'><img src='/images/thumbs/histos_BoNTA.gif' border='1' ALT='Learn about the effects of BoNT/A on muscle'></a>"
+var image = images[rand1]
+</script>
+	<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<csscriptdict>
+			<script type="text/javascript"><!--
+function newImage(arg) {
+	if (document.images) {
+		rslt = new Image();
+		rslt.src = arg;
+		return rslt;
+	}
+}
+function changeImagesArray(array) {
+	if (preloadFlag == true) {
+		var d = document; var img;
+		for (var i=0; i<array.length; i+=2) {
+			img = null; var n = array[i];
+			if (d.images) {img = d.images[n];}
+			if (!img && d.getElementById) {img = d.getElementById(n);}
+			if (img) {img.src = array[i+1];}
+		}
+	}
+}
+function changeImages() {
+	changeImagesArray(changeImages.arguments);
+}
+
+// --></script>
+		</csscriptdict>
+		<csactiondict>
+			<script type="text/javascript"><!--
+var preloadFlag = false;
+function preloadImages() {
+	if (document.images) {
+		home_over = newImage('/images/header/home-over.gif');
+		intro_over = newImage('/images/header/intro-over.gif');
+		over_over = newImage('/images/header/over-over.gif');
+		proj_over = newImage('/images/header/proj-over.gif');
+		conf_over = newImage('/images/header/conf-over.gif');
+		link_over = newImage('/images/header/events-over.gif');
+		pubs_over = newImage('/images/header/pubs-over.gif');
+		movie_over = newImage('/images/header/movie-over.gif');
+		pre_pers_over = newImage('/images/header/pers-over.gif');
+		preloadFlag = true;
+	}
+}
+
+// --></script>
+		</csactiondict>
+	</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onLoad="preloadImages();">
+<!-- ImageReady Slices (head1005.psd) -->
+<table id="Table_01" width="100%" border="0" cellpadding="0" cellspacing="0" height="100%">
+	<tr align="left" valign="top" height="104" >
+		<td rowspan="2" width="164" height="142">
+			<a href="http://www.ucsd.edu">
+				<img src="/images/header/head1.gif" height="142" width="164" border="0" alt="" /></a></td>
+				<td bgcolor="#001482" height="104"><img src="/images/header/head2.gif" alt="" height="104" width="369" /></td>
+				
+</tr>
+	<tr align="left" valign="top" height="38">
+				<td align="left" valign="top" bgcolor="#FFFFFF" height="38">
+			<img src="/images/header/head4.gif" alt="" height="38" width="38" /></td>
+			</tr>
+	<tr valign="top">
+				<td align="left" valign="top" width="164">
+			<table id="Menu" width="164" border="0" cellpadding="0" cellspacing="0">
+						<tr align="left" valign="top" height="40">
+							<td align="left" valign="top" width="164" height="40"><a href="/index.shtml"
+							onmouseover="window.status='Go to the Home Page'; changeImages('home', '/images/header/home-over.gif'); return true;"
+							onmouseout="window.status=''; changeImages('home', '/images/header/home.gif'); return true;"
+							onmousedown="changeImages('home', '/images/header/home-over.gif'); return true;"
+							onmouseup="changeImages('home', '/images/header/home-over.gif'); return true;"><img name="home" src="/images/header/home.gif" width="164" height="40" border="0" alt="" /></a></td>
+						</tr>
+						<tr height="30">
+					<td align="left" valign="top" width="164" height="30">
+						<a href="/musintro/jump.shtml"
+							onmouseover="window.status='Go to the Introduction to Muscle Index'; changeImages('intro', '/images/header/intro-over.gif'); return true;"
+							onmouseout="window.status=''; changeImages('intro', '/images/header/intro.gif'); return true;"
+							onmousedown="changeImages('intro', '/images/header/intro-over.gif'); return true;"
+							onmouseup="changeImages('intro', '/images/header/intro-over.gif'); return true;">
+							<img name="intro" src="/images/header/intro.gif" width="164" height="30" border="0" alt="" /></a></td>
+				</tr>
+						<tr height="30">
+					<td align="left" valign="top" width="164" height="30">
+						<a href="/more_html/overview.shtml"
+							onmouseover="window.status='Go to the General Overview'; changeImages('over', '/images/header/over-over.gif'); return true;"
+							onmouseout="window.status=''; changeImages('over', '/images/header/over.gif'); return true;"
+							onmousedown="changeImages('over', '/images/header/over-over.gif'); return true;"
+							onmouseup="changeImages('over', '/images/header/over-over.gif'); return true;">
+							<img name="over" src="/images/header/over.gif" width="164" height="30" border="0" alt="" /></a></td>
+				</tr>
+				<tr height="31">
+					<td align="left" valign="top" width="164" height="31">
+						<a href="/more_html/people.shtml"
+							onmouseover="window.status='Meet the Lab Members'; changeImages('pers', '/images/header/pers-over.gif'); return true;"
+							onmouseout="window.status=''; changeImages('pers', '/images/header/pers.gif'); return true;"
+						
+						>
+							<img name="pers" src="/images/header/pers.gif" width="164" height="31" border="0" alt="" /></a></td>
+				</tr>
+				<tr height="30">
+					<td align="left" valign="top" width="164" height="30">
+						<a href="/projects/guide.shtml"
+							onmouseover="window.status='View the Current Projects'; changeImages('proj', '/images/header/proj-over.gif'); return true;"
+							onmouseout="window.status=''; changeImages('proj', '/images/header/proj.gif'); return true;"
+							onmousedown="changeImages('proj', '/images/header/proj-over.gif'); return true;"
+							onmouseup="changeImages('proj', '/images/header/proj-over.gif'); return true;">
+							<img name="proj" src="/images/header/proj.gif" width="164" height="30" border="0" alt="" /></a></td>
+				</tr>
+				<tr height="30">
+					<td align="left" valign="top" width="164" height="30">
+						<a href="/more_html/jc.shtml"
+							onmouseover="window.status='Read About Recent Conferences'; changeImages('conf', '/images/header/conf-over.gif'); return true;"
+							onmouseout="window.status=''; changeImages('conf', '/images/header/conf.gif'); return true;"
+							onmousedown="changeImages('conf', '/images/header/conf-over.gif'); return true;"
+							onmouseup="changeImages('conf', '/images/header/conf-over.gif'); return true;">
+							<img name="conf" src="/images/header/conf.gif" width="164" height="30" border="0" alt="" /></a></td>
+				</tr>
+				<tr height="30">
+					<td align="left" valign="top" width="164" height="30">
+						<a href="/more_html/bibliography.shtml"
+							onmouseover="window.status='Browse Publications from Our Lab'; changeImages('pubs', '/images/header/pubs-over.gif'); return true;"
+							onmouseout="window.status=''; changeImages('pubs', '/images/header/pubs.gif'); return true;"
+							onmousedown="changeImages('pubs', '/images/header/pubs-over.gif'); return true;"
+							onmouseup="changeImages('pubs', '/images/header/pubs-over.gif'); return true;">
+							<img name="pubs" src="/images/header/pubs.gif" width="164" height="30" border="0" alt="" /></a></td>
+				</tr>
+				<tr height="30">
+					<td align="left" valign="top" width="164" height="30">
+						<a href="/more_html/events.shtml"
+							onmouseover="window.status='See Current Events'; changeImages('events', '/images/header/events-over.gif'); return true;"
+							onmouseout="window.status=''; changeImages('events', '/images/header/events.gif'); return true;"
+							onmousedown="changeImages('events', '/images/header/events-over.gif'); return true;"
+							onmouseup="changeImages('events', '/images/header/events-over.gif'); return true;">
+							<img name="events" src="/images/header/events.gif" width="164" height="30" border="0" alt="" /></a></td>
+				</tr>
+				<tr height="60">
+					<td align="left" valign="top" width="164" height="60">
+						<a href="/projects/movies.shtml"
+							onmouseover="window.status='Movies from Our Lab'; changeImages('movie', '/images/header/movie-over.gif'); return true;"
+							onmouseout="window.status=''; changeImages('movie', '/images/header/movie.gif'); return true;"
+							onmousedown="changeImages('movie', '/images/header/movie-over.gif'); return true;"
+							onmouseup="changeImages('movie', '/images/header/movie-over.gif'); return true;">
+							<img name="movie" src="/images/header/movie.gif" width="164" height="60" border="0" alt="" /></a></td>
+				</tr>
+			</table></td>
+		<td valign="top">
+					
+
+	<p class="body">Welcome to the <a href="more_html/overview.shtml">Muscle Physiology Laboratory</a>. We are part of the Departments of <a href="http://ortho.ucsd.edu/">Orthopaedic Surgery</a>, <a href="http://www.be.ucsd.edu/">Bioengineering</a> and the <a href="http://orpheus.ucsd.edu/biomedsc/">Biomedical Sciences Group</a> at the <a href="http://www.ucsd.edu">University of California, San Diego</a>.</p>
+	<table border="0" cellspacing="5" cellpadding="5">
+		<tr>
+			<td><p class="body"><b>The Muscle Physiology Laboratory<br>
+		      UCSD<br>9500 Gilman Drive MC 0863<br>
+			    La Jolla, CA 92093-0863<br>
+			    Telephone: (858) 822-1344<br>
+			    FAX: (858) 822-3807</b></p></td>
+			<td>
+				<script type="text/javascript" language="JavaScript1.2"><!--
+document.write(image)
+// -->
+</script>
+			</td>
+		</tr>
+	</table>
+
+<!--	<p class="header">Congratulations to Michael Gibbons, Ph.D. candidate in Dr. Samuel Ward's lab, for being named as one of the <a href="http://jacobsschool.ucsd.edu/news/news_releases/release.sfe?id=2362">2018 Siebel Scholars</a>!</p>
+	<p class="body"><a href="http://jacobsschool.ucsd.edu/news/news_releases/release.sfe?id=2362"><img src="/images/lab/mike_siebel.jpg" height="280" alt=""/></a></p>
+-->	<p class="header">Acknowledgments</p>
+	<ul>
+		<li type="circle">The skeletal muscle physiology laboratory is supported by the <a href="http://www.va.gov/vasmr.htm">Department of Veterans Affairs</a> and the <a href="http://www.nih.gov/">National Institutes of Health</a>.
+		<li type="circle">We are always trying to improve our presence on the WWW, so please send us your <a href="mailto:web@muscle.ucsd.edu">comments and suggestions</a>.
+	</ul>
+	<br />
+<center>
+	<hr size="1" />
+	<font size="1" color="#CCCCCC" face="verdana, arial, helvetica"><i>Last Updated: Tuesday, 05-Mar-2019 13:24:55 PST</i><br />
+		<font color="#999999">For questions or comments regarding this site, please e-mail the <a href="mailto:web@muscle.ucsd.edu">webmaster</a>.<br />Copyright &copy; 2000, University of California Regents. All rights reserved.</font>
+</font></center>
+		</td>
+	</tr>
+</table>
+
+
+	</BODY>
+
+</html>

@@ -1,0 +1,471 @@
+<BASE HREF="http://denethor.wlu.ca/data/xc.shtml">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>
+Uncertainty Calculator;
+Wilfrid Laurier University Department of Physics and Computer Science 
+(JavaScript version)
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+<meta name="keywords" content="data analysis, uncertainty 
+analysis, experimental uncertainties, maximum uncertainty,
+correlated uncertainty, uncorrelated uncertainty,
+uncertainty calculation,
+error propagation,
+uncertainty propagation,
+experimental uncertainty, javascript,
+physics, chemistry, wilfrid laurier university"/>
+<meta name="description" content="A javascript calculator to determine 
+uncertainties in lab calculations for physics labs, chemistry labs, 
+and other science
+labs, using the principles of maximum uncertainty 
+(maximum error, correlated uncertainty)
+and standard 
+uncertainty 
+(standard error, uncorrelated uncertainty)
+to study error propagation."/>
+<meta name="Publisher" content="(Sturtevant, Terry)"/>
+<meta name="CreationDate" content="March 23 2006"/>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="http://www.wlu.ca/style.css" type="text/css" 
+media="screen, print"/>
+<link rel="stylesheet" href="http://www.wlu.ca/printstyle.css" 
+type="text/css" media="print"/>
+<link rel="stylesheet" type="text/css" href="/ssi/pccss.css"/>
+<script src="x_error.js" type="text/javascript"></script>
+<script src="error_lib.js" type="text/javascript"></script>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" /> 
+<link rel="stylesheet" type="text/css" href="xc.css"/>
+</head>
+
+
+<body class="pc"  onload = "document.getElementById('X').focus();">
+
+<div class="logo"><a href="http://www.wlu.ca"><img alt="Laurier" 
+class="header_logo" 
+src="/ssi_images/desktop_logo.png"/></a></div>
+
+
+
+<div class="preamble">
+          <span class="pcupdated">Page last updated
+           
+	   Friday May 12, 2017
+         </span>
+
+<h1>Credits: 
+</h1>
+
+I didn't create this calculator; I adapted it (with permission) from the 
+original which 
+is at
+<a href="http://web.mst.edu/~gbert/JAVA/uncertainty.HTML">
+http://web.mst.edu/~gbert/JAVA/uncertainty.HTML
+</a>. 
+<br/>
+<br/>
+Here's an
+<a href="xc2.ogg">OGG video
+</a> 
+about how to use the calculator.
+<br/> 
+<h1>Uncertainty Calculator</h1>
+
+	This is a device for performing
+calculations involving quantities with known or estimated uncertainties.
+This is known as <strong>error propagation</strong> or 
+<strong>uncertainty propagation</strong>.
+<br/>
+It calculates uncertainties two ways:
+<ul>
+<li>
+<em>most probable uncertainty</em>, 
+also called standard error (or uncorrelated uncertainty), 
+which is used when 
+errors 
+are independent;
+</li>
+<li>
+<em>maximum uncertainty</em>, 
+also called maximum error  (or correlated uncertainty), 
+which is 
+used when they are not.
+</li>
+</ul>
+There are a couple of radio buttons to choose which type of uncertainty 
+you want to use.
+<br/>
+
+<br/>
+<h1>Why is there no equals sign?</h1>
+This calculator operates in what is known as <em>postfix</em> mode.
+That means you input your values for X and Y first, and <em>then</em>
+you choose what you want to do with them.
+This will be explained later in the section under <em>Operation</em>.
+(In many ways this actually makes it easier to use once you get used
+to it.)
+
+<br/>
+<br/>
+
+
+<h1>What calculations can I do?</h1>
+
+The calculations may involve algebraic 
+<em>operations</em>
+such as:
+<ul>
+	<li>Z = X + Y</li>
+	<li>Z = X - Y</li>
+	<li>Z = X * Y</li>
+	<li>Z = X/Y</li>
+	<li>Z = X<sup>Y</sup></li>
+</ul>
+or mathematical 
+<em>
+functions 
+</em>
+of
+the type:
+<ul>
+	<li>Z = 1/X</li>
+	<li>Z = |X|</li>
+	<li>Z = ln(X)</li>
+	<li>Z = log<sub>10</sub>(X)</li>
+	<li>Z = 10<sup>X</sup></li>
+	<li>Z = e<sup>X</sup></li>
+	<li>Z = sqrt(X)</li>
+	<li>Z = X<sup>2</sup></li>
+</ul>
+It also includes trigonometric functions. <strong>
+The trig functions assume angles are in radians.
+</strong> There are also functions to convert between degrees and radians.
+<br/>
+If uncertainties (dX, dY) are
+provided for the input quantities (X,Y), the program will perform the operation
+or function to calculate the answer (Z) and will also calculate the uncertainty
+in the answer (dZ). The program will assume the value has no uncertainty
+if an uncertainty is not provided.
+<br/>
+FZ and FdZ refer to formatted versions of Z and dZ. These are still being 
+developed (ie. they may not be quite right at present.)
+</div>
+<!-- end preamble -->
+
+<div class="content">
+<div class="calc">
+<a name="top"></a>
+<div class="commands">
+<h2>Commands</h2>
+<div class="functions">
+<h2>Functions</h2>
+<input class="btn" type="button" name="recip"  value="  1/X   " 
+onclick="processFunction('recip');return false;"/>
+<input class="btn" type="button" name="abs"  value="  |X|   " 
+onclick="processFunction('abs');return false;"/>
+<br/>
+<input class="btn" type="button" name="sqrt"  value="sqrt(X)" 
+onclick="processFunction('sqrt');return false;"/>
+<input class="btn" type="button" name="sqr"  value="X^2" 
+onclick="processFunction('sqr');return false;"/>
+<br/>
+<input class="btn" type="button" name="ln"  value=" ln(X)  " 
+onclick="processFunction('ln');return false;"/>
+<input class="btn" type="button" name="exp"  value="exp(X)" 
+onclick="processFunction('exp');return false;"/>
+<br/>
+<input class="btn" type="button" name="log"  value="log(X) " 
+onclick="processFunction('log');return false;"/>
+<input class="btn" type="button" name="tenpow"  value="10^(X)" 
+onclick="processFunction('tenpow');return false;"/>
+<br/>
+<input class="btn" type="button" name="DegToRad"  value="rads(X)" 
+onclick="processFunction('DegToRad');return false;"/>
+<input class="btn" type="button" name="RadToDeg"  value="degrees(X)" 
+onclick="processFunction('RadToDeg');return false;"/>
+<br/>
+<input class="btn" type="button" name="sin"  value="sin(X)" 
+onclick="processFunction('sin');return false;"/>
+<input class="btn" type="button" name="Arccos"  value="Arcsin(X)" 
+onclick="processFunction('Arcsin');return false;"/>
+<br/>
+<input class="btn" type="button" name="cos"  value="cos(X)" 
+onclick="processFunction('cos');return false;"/>
+<input class="btn" type="button" name="Arccos"  value="Arccos(X)" 
+onclick="processFunction('Arccos');return false;"/>
+<br/>
+<input class="btn" type="button" name="tan"  value="tan(X)" 
+onclick="processFunction('tan');return false;"/>
+<input class="btn" type="button" name="Arctan"  value="Arctan(X)"  
+onclick="processFunction('Arctan');return false;"/>
+</div>
+<!-- end functions -->
+
+<div class="mode">
+<h2>Mode</h2>
+<input class="btn2" id="m" type="radio" name="modeSwitch"  value="m" 
+checked="checked"  
+onclick="ModeSwitch('m');" />Maximum Error
+<input class="btn2" id="s" type="radio" name="modeSwitch"  value="s"  
+onclick="ModeSwitch('s');"/>Standard Error
+</div>
+<!-- end mode -->
+</div>
+<!-- end commands -->
+
+
+<div class="data">
+<h2>Data</h2>
+<div class="inpt">
+<h2>Input</h2>
+
+<span class="field">
+<label class="q" for="X">
+<b>&nbsp;&nbsp;X</b>
+</label>
+<input class="qtxt" id="X" type="text" name="X"  value="" />
+<b>&plusmn;</b>
+</span>
+
+<span class="field">
+<label class="dq" for="dX">
+<b>&nbsp;&nbsp;dX</b>
+</label>
+<input class="dqtxt" id="dX" type="text" name="dX"  value="" />
+</span>
+<br/>
+
+<span class="field">
+<label class="q" for="Y">
+<b>&nbsp;&nbsp;Y</b>
+</label>
+<input class="qtxt" id="Y" type="text" name="Y"  value="" />
+&plusmn;
+</span>
+
+<span class="field">
+<label class="dq" for="dY">
+<b>&nbsp;&nbsp;dY</b>
+</label>
+<input class="dqtxt" id="dY" type="text" name="dY"  value="" />
+</span>
+
+<br/>
+<span class="field">
+<label for="op">
+<b>Operation</b>
+</label>
+<input class="txt" id="op" type="text" name="op"  value="" 
+readonly="readonly"/>
+</span>
+</div>
+<!-- end inpt -->
+<div class="outpt">
+<h2>Output</h2>
+ 
+   <span class="field">
+   <label class="q" for="Z">
+   <b>&nbsp;&nbsp;Z</b>
+   </label>
+   <input class="qtxt" id="Z" type="text" name="Z"  value="" 
+    readonly="readonly"/>
+
+   &plusmn;
+   </span>
+
+   <span class="field">
+   <label class="dq" for="dZ">
+   <b>&nbsp;&nbsp;dZ</b>
+   </label>
+   <input class="dqtxt" id="dZ" type="text" name="dZ"  value="" 
+    readonly="readonly"/>
+
+   </span>
+   <br/>
+
+   <span class="field">
+   <label class="q" for="FZ">
+   <b>&nbsp;FZ</b>
+   </label>
+   <input class="qtxt" id="FZ" type="text" name="FZ"  value="" 
+   readonly="readonly"/>
+
+   &plusmn;
+   </span>
+
+   <span class="field">
+   <label class="dq" for="FdZ">
+   <b>&nbsp;FdZ</b>
+   </label>
+   <input class="dqtxt" id="FdZ" type="text" name="FdZ"  value="" 
+   readonly="readonly"/>
+
+   </span>
+   <br/>
+ 
+   <span class="field">
+   <label class="q" for="Mem">
+   <b>Mem</b>
+   </label>
+   <input class="qtxt" id="Mem" type="text" name="Mem"  value="" 
+   readonly="readonly"/>
+
+   &plusmn;
+   <label class="dq" for="dMem">
+   <b>dMem</b>
+   </label>
+   <input class="dqtxt" id="dMem" type="text" name="dMem"  value="" 
+   readonly="readonly"/>
+
+   </span>
+    </div>
+   <!-- end outpt -->
+
+<div class="operators">
+<h2>Operators</h2>
+<input class ="btn" type="button" name="plus"  value=" +  " 
+onclick="processOperation('+');return false;"/>
+<input class="btn" type="button" name="minus" value=" - "  
+onclick="processOperation('-');return false;"/>
+<input class ="btn" type="button" name="mult"  value=" x  " 
+onclick="processOperation('x');return  false;"/>
+<input class="btn" type="button" name="div"  value="  /  "  
+onclick="processOperation('/');return false;"/>
+<input class="btn" type="button" name="xpowy"  value="  ^   "
+onclick="processOperation('xpowy');return false;"/>
+<br/>
+<input class="btn" type="button" name="ZMem"  value="  Z to Mem  " 
+onclick="Movit('Z','Mem');return false;"/>
+<input class="btn" type="button" name="ZX" value="   Z to X   " 
+onclick="Movit('Z','X');return false;"/>
+<input class="btn" type="button" name="ZY"  value="   Z to Y   "
+onclick="Movit('Z','Y');return false;"/>
+<input class="btn" type="button" name="MemX"  value="   Mem to X   " 
+onclick="Movit('Mem','X');return false;"/>
+<input class="btn" type="button" name="MemY" value="   Mem to Y   " 
+onclick="Movit('Mem','Y');return false;"/>
+<br/>
+<input class="btn" type="button" name="XY"  value="  Swap X,Y  " 
+onclick="Movit('XY','XY');return false;"/>
+<input class="btn" id="clear" type="button" name="clear"  value=" clear " 
+checked="checked" 
+onclick="Clearem();return false;"/>
+<input class="btn" type="button" name="reger" value= "reg" onclick = 
+"notation(0);return false;"/>
+<input class="btn" type = "button" name = "exper" value = "exp" onclick = 
+"notation(1);return false;"/>
+</div>
+<!-- end operators -->
+
+  </div>
+<!-- end data -->
+
+
+</div>
+<!-- end calc -->
+</div>
+<!-- end content -->
+
+<div class="postamble">
+<a name="operation"></a>
+<h1>
+Operation:
+</h1>
+Position the
+cursor on the blank under "X", click the mouse, and type a value.
+Alternately, press the TAB key until the cursor appears in this blank,
+then type the number. In case of an error, use normal text-editing
+procedures.Enter values for X and dX, and possibly for Y and dY.
+(The TAB key moves the cursor through the blanks in the order: X, dX, Y,
+dY).
+<br/>
+Click on
+the button for the desired operation or function.
+The equation for
+the calculation appears in the central blank, and the values of Z and dZ
+appear in their respective blanks.
+<br/>
+There are
+buttons for transferring values from Z to a MEMory location, or to the
+blanks for X or Y; or from the MEMory to X or Y.
+  
+  <p>
+    <a href="http://validator.w3.org/check?uri=referer"><img
+        src="http://www.w3.org/Icons/valid-xhtml10"
+        alt="Valid XHTML 1.0 Strict" height="31" width="88" /></a>
+  </p>
+
+</div>
+
+
+<div class="row"><div class="logo"><img alt="Wilfrid Laurier 
+University" 
+src="http://www.wlu.ca/images/General/desktop_logo.png"/></div><ul 
+class="footer-links"><li><a 
+href="http://www.wlu.ca/about/campuses-locations-maps/index.html">Campuses, 
+Locations 
+&amp; Maps</a></li><li><a 
+href="http://www.wlu.ca/contact-us/index.html">Contact 
+Us</a></li>
+<!--
+<li><a 
+href="http://www.wlu.ca/information-for/employers-and-community-members/careers-at-laurier.html">Careers 
+</a></li><li><a 
+href="http://www.wlu.camedia/social-media-accounts.html">Social 
+Media 
+Directory</a></li>
+-->
+</ul></div>
+<!--
+<div class="row"><ul 
+class="social-links"><li><a class="social" 
+href="http://instagram.com/lauriernews" title="Instagram"><span 
+class="icon icon-instagram"></span></a></li><li><a class="social" 
+href="https://twitter.com/@LaurierNews" title="Twitter"><span 
+class="icon icon-twitter"></span></a></li><li><a class="social" 
+href="https://www.facebook.com/WilfridLaurierUniversity" 
+title="Facebook"><span class="icon icon-facebook"></span></a></li><li><a 
+class="social" 
+href="https://www.linkedin.com/edu/school?id=10883&amp;trk=tyah&amp;trkInfo=tarId%3A1414171807882%2Ctas%3Awilfrid%20%2Cidx%3A2-1-4" 
+title="LinkedIn"><span class="icon icon-linkedin"></span></a></li><li><a 
+class="social" href="mailto:chooselaurier@wlu.ca" title="Email"><span 
+class="icon icon-email"></span></a></li><li><a class="social" 
+href="https://www.youtube.com/user/LaurierVideo" title="Youtube"><span 
+class="icon icon-youtube"></span></a></li></ul></div>
+-->
+<div class="row"><p 
+class="name">
+              Wilfrid Laurier University
+            </p>
+<!--
+<ul class="cities"><li><a 
+href="http://www.wlu.ca">Waterloo</a></li><li><a 
+href="http://www.wlu.ca">Brantford</a></li><li><a 
+href="http://www.wlu.ca">Kitchener</a></li><li><a 
+href="http://www.wlu.ca">Toronto</a></li></ul>
+-->
+<p class="copyright">
+              &#169; 2019 Wilfrid Laurier University
+            </p>
+<script type="text/javascript">
+  
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new 
+Date();a=s.createElement(o),
+  
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-8354696-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>
+

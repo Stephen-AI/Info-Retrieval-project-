@@ -1,0 +1,495 @@
+<BASE HREF="http://chandrakantha.com/articles/spectrum/spectrum.html">
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="This is an article about Spectrum analysis. It is written by David Courtney." />
+<title>Introduction to Spectrum Analysis - by David Courtney</title>
+<meta name="title" content="Introduction to Spectrum Analysis - by David Courtney" />
+<meta property="og:title"  name="title" content="Introduction to Spectrum Analysis - by David Courtney" />
+<meta name="viewport" content="device-width, initial-scale=0.75" />
+<link rel="stylesheet" media="screen and (min-device-width: 800px)" href="https://chandrakantha.com/stylesheet2.css" />
+<link rel="stylesheet" media="screen and (max-device-width: 799px)" href="https://chandrakantha.com/style_handheld.css" />
+<meta property="og:image" content="https://chandrakantha.com/images/Chandra_David2.jpg" />
+
+<!--  ********** start Google Analytics code *******    -->
+<!-- Global Site Tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-6033705-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  func&shy;tion gtag(){dataLayer.push(arguments)};
+  gtag('js', new Date());
+
+  gtag('config', 'UA-6033705-1');
+</script>
+<!--  ********** end Google Analytics code *******    -->
+
+
+
+</head>
+
+<body>
+<div id="Header">&nbsp; &nbsp; &nbsp; CHANDRAKANTHA.COM</div><!-- header -->
+
+<div id="Content"><!--  *********** start content ********    -->
+
+<div class="center"><!-- start center -->
+
+<p class="breadcrumb"><a href="https://chandrakantha.com/">Homepage</a> &gt;&gt; <a href="https://chandrakantha.com/articles/indian_music/misc.html">Misc. Topics</a> &gt;&gt; This Page</p><!-- ****breadcrumbs*** -->
+
+
+
+<table border="3" cellpadding="5" width="60%" bgcolor="#FFFFFF">
+<tr>
+<td>This arti&shy;cle ori&shy;gi&shy;nally appeared in the September 1992 (volume VIII #1) issue of "Experimental Musical Instruments", published from Nicasio, CA. Page 18-22</td>
+</tr>
+</table>
+
+<h1 id="top">INTRODUCTION TO SPECTRUM ANALYSIS</h1>
+
+<p class="author">by <a href="https://chandrakantha.com/biodata/david.html">David Courtney</a> <img style="width:39px;height:10px;" src="https://chandrakantha.com/media/l_p_s.gif" height="10" width="39" alt="working tools" /></p>
+
+
+
+
+
+
+
+<br />
+</div><!--  stop center -->
+
+
+<h2>Introduction</h2>
+
+<p>The technique of designing mus&shy;ical in&shy;stru&shy;ments has not chan&shy;ged much in the last seve&shy;ral thousand years.&nbsp; A maker builds an instrument, listens to the tone, then repeats the en&shy;tire pro&shy;cess with a slight change in construction.&nbsp; This is a tedious pro&shy;cess and one often thinks that it could be easier if there was a way to "see" the sound.&nbsp; Spectrum analysis is a tool that gives us the ab&shy;ility to see the timbre.&nbsp; In this arti&shy;cle we will dis&shy;cuss its var&shy;ious aspects; including sampling theory, pro&shy;cessing, and graphic output.</p>
+
+
+<h2>Background</h2>
+
+<p>The graphic re&shy;pre&shy;sentation of sound has been an area of interest for years.&nbsp; The ear&shy;liest experiments focused beams of light ag&shy;ainst a mirror which was at&shy;ta&shy;ched to a vibrating object.&nbsp; This technique was used ex&shy;ten&shy;sively un&shy;til the twentieth cen&shy;tury when the oscilloscope was in&shy;ven&shy;ted.&nbsp; Both light beams and oscilloscopes give a graphic re&shy;pre&shy;sentation of the vibratory nature of sound.</p>
+
+
+
+
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- basic ad -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-0047309040523061"
+     data-ad-slot="9158141442"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+<p>Musical sounds are us&shy;ually visualized as "waves" of air that vibrate with a par&shy;ti&shy;cu&shy;lar frequency.&nbsp;This frequency is expressed in cycles per se&shy;cond; how&shy;ever, instead of saying "cycles per se&shy;cond" we say "Hertz".&nbsp; The range of human hearing is said to extend from 20 Hertz to 20 Kilohertz (i.e., 20 cycles to 20,000 cycles-per-second).&nbsp; This range is re&shy;fer&shy;red to as the "audio spectrum".</p>
+
+<p>However, day-to-day sounds and mus&shy;ical sounds consist of a mix&shy;ture of dif&shy;fer&shy;ent frequencies.&nbsp; It is the nature of this mix which helps to determine timbre.&nbsp; There&shy;fore, by look&shy;ing closely at these compo&shy;nent frequencies we get insight into the timbre of any sound.&nbsp; This is spectrum analysis.</p>
+
+<p>The pioneer of spectrum analysis was undoubtedly Hermann von Helmholtz.&nbsp; He developed a series of hollow glass spheres with care&shy;fully calibrated resonance frequencies.&nbsp; They would vibrate when excited by the appropriate frequency and one could hear this by placing them ag&shy;ainst the ear.&nbsp; It was a very tedious pro&shy;cess, but with these simple devices he was a pioneer in the field.</p>
+
+<p>The Helmholtz resonators had their problems.&nbsp; The were awkward and the lack of a graphic output meant that only a sub&shy;jective evaluation of the compo&shy;nent frequencies was pos&shy;sible.&nbsp; By the later part of this cen&shy;tury they were replaced by to&shy;tally electronic techniques.&nbsp; Unfor&shy;tunately, they were very expensive.</p>
+
+<p>However today these once expensive spectrum analyzers are within the reach of the average instrument maker.&nbsp; This is a consequence of the rapid drop in the price of digital electronics.&nbsp; $200 and a per&shy;sonal computer is all that one requires to enter the world of spectrum analysis.&nbsp;Table 1 is a small list of available packages. <b>(NOTE - This arti&shy;cle was published in 1992. Products and pricing are not cur&shy;rent.)</b></p>
+
+<p>&nbsp;</p>
+
+<p class="noindent">TABLE 1</p><br />
+
+<div class="center"><!-- start center -->
+
+<table cellpadding="3" bgcolor="#FFFFFF" border="0">
+<tr>
+<td>PRODUCT NAME</td>
+
+<td>HARDWARE ENVIRONMENT</td>
+
+<td>MANUFACTURER</td>
+
+<td>STREET PRICE</td>
+
+<td>COMMENTS</td>
+</tr>
+
+<tr>
+<td>Digital Sound Studio</td>
+
+<td>Amiga</td>
+
+<td>Great Valley Products</td>
+
+<td>$100</td>
+
+<td>Hardware / Software</td>
+</tr>
+
+<tr>
+<td>Compuscope / GageCalc</td>
+
+<td>IBM</td>
+
+<td>Gage Applied Sciences</td>
+
+<td>N/A</td>
+
+<td>Hardware / Software</td>
+</tr>
+
+<tr>
+<td>MacRecorder Sound System</td>
+
+<td>Macintosh</td>
+
+<td>Macromind</td>
+
+<td>$175</td>
+
+<td>Hardware / Software</td>
+</tr>
+
+<tr>
+<td>MacRecorder Pro</td>
+
+<td>Macintosh</td>
+
+<td>Macromind</td>
+
+<td>$240</td>
+
+<td>Hardware / Software</td>
+</tr>
+
+<tr>
+<td>Alchemy</td>
+
+<td>Macintosh</td>
+
+<td>Passport Designs</td>
+
+<td>$695</td>
+
+<td>Software only</td>
+</tr>
+</table>
+</div><!--  stop center -->
+
+<p>&nbsp;</p>
+
+<p>We have briefly reviewed what spectrum analysis is.&nbsp;It would be very appropriate to dis&shy;cuss the technical de&shy;tails.&nbsp; One of the most fun&shy;da&shy;men&shy;tal is the pro&shy;cess of taking the sound and putting it into the computer.&nbsp; This is a sub&shy;ject known as sampling.</p><a id="sampling"></a>
+
+
+<h2>Sampling</h2>
+
+<p>If the computer is going to do our work, we have to find some way to get the music into the computer.&nbsp; The hardware and software, with all of the myriad of technical con&shy;si&shy;dera&shy;tions has been the topic of nu&shy;mer&shy;ous books, and dissertations.&nbsp; How&shy;ever the essen&shy;tials are surprisingly simple.</p>
+
+<p>The hardware in our sampling pro&shy;cess revolves around a specialized peripheral called an Analog-to-Digital converter.&nbsp; This device, us&shy;ually called A/D converter for short is re&shy;spon&shy;sible for taking the analog signal and converting it into discrete num&shy;bers that the computer can pro&shy;cess.&nbsp; These discrete num&shy;bers are our samples</p>
+
+<p>The con&shy;cept be&shy;hind sampling is quite simple.&nbsp; The waveform in figure1-A can be sampled and expressed as figure 1-B.&nbsp; This is si&shy;mi&shy;lar to the operation of a motion pic&shy;ture camera.&nbsp; Just as an event may be captured on film as a series of still frames, so too an audio signal may be captured as a series of discrete values.</p>
+
+<div class="center"><!-- start center -->
+<img src="analogue_digital.gif" alt="Digitizing the wave" height="307" width="300" />
+</div><!--  stop center -->
+<br />
+
+<p>The con&shy;cept may be quite simple but the implementation may be quite complicated.&nbsp; There are a num&shy;ber of fac&shy;tors which must be kept in mind.&nbsp; The two most impor&shy;tant are the sampling rate and the resolution.</p>
+
+<p>The sampling rate is an op&shy;tion on most computer sys&shy;tems.&nbsp; But how fast should it be?</p><a id="aliasing"></a>
+
+<p>We must turn to the Nyquist theorem to help us find the cor&shy;rect sampling rate.&nbsp; It tells us that the sampling rate must be greater then twice the highest frequency to be encoun&shy;tered.&nbsp; Any attempt to sample at a lower rate re&shy;sults in a pheno&shy;mena known as aliasing.</p>
+
+<p>Aliasing is where the frequencies above the Nyquist point (half the sampling rate) be&shy;come ref&shy;lected back down the audio spectrum.&nbsp; This is il&shy;lus&shy;tra&shy;ted in figure 2.&nbsp; It is very much like the move&shy;ment of the wheels in the old films.&nbsp; If the wheels were moving slowly, the camera has no trouble "sampling" the event.&nbsp; How&shy;ever, as the wheels go fas&shy;ter the apparent motion tends to slow down.&nbsp; At a cer&shy;tain point the wheel ap&shy;pears to stop, thereafter it ap&shy;pears to go backwards.&nbsp; This apparent retrograde motion of the wheels is analogous to the aliasing which occurs in digitized audio signals.</p>
+
+<div class="center"><!-- start center -->
+<img src="aliasing.gif" alt="Aliasing Noise" height="197" width="288" />
+</div><!--  stop center -->
+<br />
+
+<p>The resolution is an&shy;other con&shy;sideration.&nbsp; Most low cost sys&shy;tems default to eight bits.&nbsp; An 8-bit code has 256 pos&shy;sible com&shy;bi&shy;na&shy;tions.&nbsp; There&shy;fore the maximum resolution that one could expect from an 8-bit code is 256 steps.&nbsp; There are sys&shy;tems which are capable of pro&shy;cessing up to 16-bit codes.&nbsp; This gives 65,536 pos&shy;sible steps!&nbsp; How&shy;ever these sys&shy;tems cost more than the average instrument maker would be wil&shy;ling to spend.&nbsp; For the pur&shy;poses of the average craftsman an 8-bit resolution is quite suf&shy;fi&shy;cient.</p>
+
+<p>This digitizing pro&shy;cess, with all of its con&shy;si&shy;dera&shy;tions is the first step.&nbsp; How&shy;ever merely putting the information into the computer is insufficient to produce any useful re&shy;sult.&nbsp; The data must be pro&shy;cessed to yield the frequency information.</p>
+
+
+
+
+
+
+
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- basic ad -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-0047309040523061"
+     data-ad-slot="9158141442"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+
+
+<br />
+
+<h2>Processing</h2>
+
+<p>The key to spectrum analysis lies in the computer pro&shy;cesses.&nbsp;These pro&shy;cesses are variations upon an ext&shy;remely complicated field of mathematics known as Fourier transforms.&nbsp; The utility of the Fourier transform is underscored by the fail&shy;ure of simpler meth&shy;ods to yield clear information about mus&shy;ical timbre.</p><a id="inverse_domain"></a>
+
+<p>The oscilloscope is a classic example of the inadequacy of a simpler tech&shy;no&shy;logy.&nbsp; Virtually any instrument maker can afford to purchase an oscilloscope.&nbsp; Yet the images that appear fail to give much information about timbre.&nbsp; It fails be&shy;cause the oscilloscope func&shy;tions in what is called "Time domain" while our perception of timbre depends upon something called "Frequency domain".&nbsp; These are re&shy;fer&shy;red to as "inverse domains" of each other.</p>
+
+<p>The con&shy;cept of the inverse domain may sound very intimidating but it is based upon a simple idea.&nbsp; Let us begin by look&shy;ing at figure 3.&nbsp; Here is a simple ques&shy;tion.&nbsp; Which one is the quar&shy;ter?&nbsp; We know that both images re&shy;pre&shy;sent the same object even though they look abso&shy;lutely nothing alike.&nbsp; Once we accept the fact that to&shy;tally dif&shy;fer&shy;ent images may re&shy;pre&shy;sent the same object, we have made the first con&shy;ceptual breakthrough in the under&shy;stand&shy;ing of inverse domains.</p>
+
+<div class="center"><!-- start center -->
+<img src="figure3.gif" alt="Two sides of the same coin." height="153" width="300" />
+</div><!--  stop center -->
+<br />
+
+<p>A fur&shy;ther under&shy;stand&shy;ing of inverse domains is seen in com&shy;mon wall cur&shy;rent.&nbsp; Wall cur&shy;rent (60Hz, 120V) is graphically shown by the two diagrams in figure four.&nbsp; Figure 4-A shows voltage as a func&shy;tion of time.&nbsp; This is the standard sine wave which is fami&shy;liar to most peo&shy;ple.&nbsp; Figure 4-B shows voltage with respect to frequency.&nbsp; This shows a sin&shy;gle spectral line at 60Hz.&nbsp; It does not require a strong technical or mathematical back&shy;ground to see that both of these diagrams re&shy;pre&shy;sent the same phe&shy;no&shy;menon.</p>
+
+<div class="center"><!-- start center -->
+<img src="inverse.gif" alt="Inverse domains" height="382" width="300" />
+</div><!--  stop center -->
+<br />
+
+<p>The rea&shy;son that these two re&shy;pre&shy;sentations are re&shy;fer&shy;red to as inverse domains is equally simple.&nbsp; The time domain diagram (fig. 4-A) shows the period as be&shy;ing .01667 sec.&nbsp; The Frequency domain (fig. 4B) shows the frequency as be&shy;ing 60Hz. &nbsp; The re&shy;la&shy;tionship is simple:</p>
+
+<div class="center"><!-- start center -->
+<img src="math.gif" alt="Reciprocal re&shy;la&shy;tionships" height="36" width="300" />
+</div><!--  stop center -->
+<br />
+
+<p>We see that this is a simple reciprocal re&shy;la&shy;tionship.&nbsp; It is be&shy;cause of this simple re&shy;la&shy;tionship that they are called inverse domains.</p>
+
+<p>Unfortunately, the real world con&shy;di&shy;tions do not allow us to take a simple reciprocal and ob&shy;tain our spectra.&nbsp; To derive spectra from comp&shy;lex sounds we are forced to perform what is called a Fourier transform.</p><a id="fourier"></a>
+
+<p>The Fourier transform may be visualized as a magic "Black Box" which is able to convert time domain to frequency domain.&nbsp;There are nu&shy;mer&shy;ous algorithms to accomplish, how&shy;ever the most com&shy;mon is an algorithm known as the "Fast Fourier Transform".&nbsp;This par&shy;ti&shy;cu&shy;lar algorithm is us&shy;ually abbreviated as FFT.&nbsp; The FFT is the most com&shy;monly used algorithm for small computer sys&shy;tems.</p>
+
+<p>The Fourier transform was developed by Jean Baptiste Joseph Fourier in the begin&shy;ning of the 19th cen&shy;tury.&nbsp; The life of Fourier would make an inter&shy;est&shy;ing book in its own right.&nbsp; He was suc&shy;cess&shy;ful at politics, sciences, and mathematics.&nbsp; It is also curious that the mathematical pro&shy;cess that made him immortal was not developed for acoustics.&nbsp; It was instead developed du&shy;ring the course of his work on thermodynamics.&nbsp; How&shy;ever to us it is his "black box" that con&shy;verts time domain to frequency domain which is impor&shy;tant.</p>
+
+<p>Although the Fourier transform may be visualized as "black box" there are still some con&shy;si&shy;dera&shy;tions which should be observed.&nbsp; Primarily we need to keep in mind the ef&shy;fects of our sample.</p>
+
+<p>The size of the sample is ext&shy;remely impor&shy;tant.&nbsp; This is be&shy;cause the amount of information which goes into the pro&shy;cess is going to be the same as the information which comes out.&nbsp; The Fourier transform merely changes the form of the information.&nbsp; It does not generate nor destroy information.&nbsp; There&shy;fore a larger sample will give us a higher frequency resolution.&nbsp; Let us say that we transform a sample which has 1024 points.&nbsp; Our output will have 512 frequency bands.</p>
+
+<p>At this point the attentive reader will be saying "Hey, that is only half the information which went into the transform.&nbsp; Where did the other information go?"&nbsp; This would be a convenient place to zoom into the stratosphere with an esoteric dis&shy;cus&shy;sion of imaginary num&shy;bers, but we will not do that.&nbsp; The simple fact is that the other half of the information is the phase re&shy;la&shy;tionship of the var&shy;ious frequency bands.&nbsp;Therefore the 1024 point sample was transformed into 512 frequency bands and the corresponding 512 phase re&shy;la&shy;tionships.&nbsp; How&shy;ever, this phase information is gen&shy;erally ignored.</p>
+
+<p>There are si&shy;tua&shy;tions when a cha&shy;rac&shy;teristic of the sample produces a frequency which is not in the ori&shy;gi&shy;nal.&nbsp; This is called an artifact.&nbsp; Aliasing is one example of an artifact.</p>
+
+<p>There is an&shy;other artifact which is par&shy;ti&shy;cu&shy;larly troublesome for the Fourier transform.&nbsp; This arises when the sample does not correspond to an even num&shy;ber of per&shy;iods.&nbsp; We find that the Fourier transform presumes that it is dealing with an even num&shy;ber of per&shy;iods and generates the frequency information ac&shy;cor&shy;dingly.&nbsp; There&shy;fore the presumed waveform from the sample in figure 5-A would be the waveform in figure 5-B</p>
+
+<div class="center"><!-- start center -->
+<img src="window.gif" alt="Sampling Artifact" height="422" width="350" />
+</div><!--  stop center -->
+<br />
+
+<p>This artifact points to a fun&shy;da&shy;men&shy;tal weakness of the Fourier transform.&nbsp; The pro&shy;cess presumes that there is a repeating pattern and that the sample conforms to an even num&shy;ber of per&shy;iods.</p>
+
+<p>Unfortunately, real world sounds tend to show an ab&shy;sence of such simple repeating patterns.&nbsp; This ab&shy;sence is us&shy;ually der&shy;ived from seve&shy;ral mechanisms.&nbsp; The first is a random compo&shy;nent in the sound (i.e., white noise).&nbsp; The an&shy;other is the ef&shy;fect of the envelope (i.e., the at&shy;tack and decay of the sound).&nbsp; And an&shy;other deals with dif&shy;fer&shy;ent envelopes for each compo&shy;nent frequency.&nbsp; Although such fun&shy;da&shy;men&shy;tal inconsistencies exist bet&shy;ween the presumptions of the Fourier transform and the real world, this does not weaken the value of the pro&shy;cess.&nbsp; It merely means that we must be conscious of the artifacts and how they may influence our final re&shy;sults.</p>
+
+<p>Usually these artifacts are of such a low amplitude that we do not need to worry about them.&nbsp; How&shy;ever, if one suspects that an area of interest may be an artifact, the easiest thing to do is to resample with a dif&shy;fer&shy;ent sample size.&nbsp; If the par&shy;ti&shy;cu&shy;lar compo&shy;nent shows wide variation, it is prob&shy;ably an artifact.&nbsp; If it shows a cer&shy;tain consistency then it is prob&shy;ably a legitimate compo&shy;nent.</p>
+
+<p>We have seen that the Fourier transform is the major tool by which we are able to ob&shy;tain the frequency information from a sample.&nbsp; We have also shown that there are cer&shy;tain con&shy;si&shy;dera&shy;tions which should be observed if the transform is to be reliable.&nbsp; How&shy;ever we have not dis&shy;cus&shy;sed one of the most impor&shy;tant aspects of the pro&shy;cess.&nbsp; That is the graphic re&shy;pre&shy;sentation of the information.</p><a id="graphic"></a>
+
+
+<h2>Output</h2>
+
+<p>The output of the spectrum analyzer is of prime importance.&nbsp; This is what is going to be interpreted by the instrument maker.&nbsp; An unintelligible output renders the whole sys&shy;tem worthless.</p>
+
+<p>Undoubtedly a simple numeric table would be the most fun&shy;da&shy;men&shy;tal computer output.&nbsp; After all, the Fourier transform is just a mathematical pro&shy;cess which takes in num&shy;ber and spits out num&shy;bers.&nbsp; Unfortuanately, this is not an intuitive way to read the data.&nbsp; It is for this rea&shy;son that a numeric output is not com&shy;mon for spectrum analyzers.</p>
+
+<p>The simple X/Y plot is the most com&shy;mon form of output.&nbsp; This sim&shy;ply plots the data from the Fourier transform in standard Cartesian coordinates.&nbsp; The X axis is conventionally fixed as frequency and the Y axis is conventionally fixed as the amplitude.&nbsp; Fur&shy;ther&shy;more there is a tendency to "fill" the diagram to make it visually more ap&shy;pealing. Figure 6 is a typical X/Y spectrum of a guitar with a black fill.</p><a id="guitar"></a>
+
+<div class="center"><!-- start center -->
+<img src="X_Y.gif" alt="X-Y plot" height="199" width="350" />
+</div><!--  stop center -->
+<br />
+
+<p>The simple X/Y has one disadvantage.&nbsp; It does not have the ab&shy;ility to show how the spectrum changes with respect to time.&nbsp; It is a cha&shy;rac&shy;teristic of acoustic in&shy;stru&shy;ments that the spectrum is not fixed but changes over the course of time.&nbsp; If we take repetitive samples and plot them on the Z axis, then we can better illustrate the timbre of an instrument.</p>
+
+<p>This is the principal be&shy;hind the 3-D wireframe.&nbsp; In figure 7 we see a 3-D re&shy;pre&shy;sentation of the sound of a mridangam.&nbsp; There are seve&shy;ral char&shy;acter&shy;is&shy;tics which may be seen that would not be apparent in a simple X/Y plot.&nbsp; For insta&shy;nce there is a moderate compo&shy;nent of white noise (random vibration) in the initial sounding.&nbsp; This is indicated by the unusually broad peaks and the large degree of filling bet&shy;ween them.&nbsp; The initial spectrum very quic&shy;kly dies away and is replaced by a re&shy;la&shy;ti&shy;vely stable 2nd, 3rd, and 4th harmonic.&nbsp; There is a peak in the se&shy;cond harmonic at an unusually long period after the drum was excited.&nbsp; All of these are char&shy;acter&shy;is&shy;tics which are clear when viewed as an 3-D wireframe but would not be so evident in a simple X/Y plot.</p><a id="mridangam"></a>
+
+<div class="center"><!-- start center -->
+<img src="X_Y_Z.gif" alt="3-D plot" height="307" width="330" />
+</div><!--  stop center -->
+<br />
+
+<p>There is an&shy;other way to re&shy;pre&shy;sent the same information in a 2-D format.&nbsp; This is in the form of a "sonogram". This par&shy;ti&shy;cu&shy;lar form of re&shy;pre&shy;sentation gained wide pop&shy;ular&shy;ity in the pre-computer era be&shy;cause it lent it&shy;self well to analog techniques of spectrum analysis.&nbsp; This technique uses the X axis to display time and the Y axis to portray frequency.&nbsp; The amplitude is denoted by the darkness of the print.&nbsp; This method is still in use today in voice-print analysis, how&shy;ever for vir&shy;tually all other applications it is on the de&shy;cline.</p><a id="pakhawaj"></a>
+
+<div class="center"><!-- start center -->
+<img src="sonogram.gif" alt="Sonogram" height="350" width="359" />
+</div><!--  stop center -->
+<br />
+
+<p>All of the previous examples utilized a linear method of pres&shy;enting the information.&nbsp; That is to say that each unit of time or voltage corresponded to a sin&shy;gle unit of vertical or horizontal displacement.&nbsp; How&shy;ever, this one-to-one re&shy;la&shy;tionship is inconsistent with human perception.</p>
+
+<p>Haven't you al&shy;ways wondered why when you walk into a dark room and turn on a light it gets bright but when you turn on two lights it doesn't get twice as bright.&nbsp; This is be&shy;cause human perception is not linear.&nbsp; Sometimes spectrum analyzers allow you to look at the spectrum in a non linear fash&shy;ion somewhat analogous to the way we hear.&nbsp; This is re&shy;fer&shy;red to as a power spectrum while the normal linear graph is re&shy;fer&shy;red to as a normal spectrum.&nbsp; Figure 9 (A &amp; B) shows both the normal spectrum and the power spectrum of steel drums.</p><a id="steel_drum"></a>
+
+<div class="center"><!-- start center -->
+<img src="normal_power.gif" alt="Normal - Power spectra" height="262" width="350" />
+</div><!--  stop center -->
+<br />
+
+<p>It is apparent that that the power spectrum shows much more de&shy;tail than the normal spectrum.&nbsp; Unfor&shy;tunately it takes some practice to properly interpret the relative values of the compo&shy;nent frequencies.&nbsp; The choice bet&shy;ween displaying the power spectra or normal spectra is often a ques&shy;tion of per&shy;sonal choice.</p>
+
+<p>We may summarize the whole topic of output quite sim&shy;ply.&nbsp; Although the output from the Fourier transform must be numeric, vir&shy;tually every package gives a graphic output.&nbsp; These may a standard X/Y plot, the older spectrogram, or the much more attractive 3-D wireframe.</p>
+
+
+<h2>Conclusion</h2>
+
+<p>Spectrum analyzers are not out of the reach of the com&shy;mon man.&nbsp; Software/ hardware packages are now in the range where al&shy;most anybody can afford one.&nbsp; How&shy;ever, the comp&shy;lexity of the sub&shy;ject still means that there has to be a cer&shy;tain attention to de&shy;tail.&nbsp; If the nature of sampling and the quirks of the Fourier transform are known, it may be a useful tool for vir&shy;tually any ser&shy;ious instrument builder, es&shy;pec&shy;ially with an appropriate graphic output.</p>
+
+<p>&nbsp;</p>
+
+
+
+
+
+
+
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- basic ad -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-0047309040523061"
+     data-ad-slot="9158141442"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+
+
+<br />
+
+<p>&nbsp;</p>
+
+
+
+<p class="small">&copy; 1998 - 2019 David and Chandrakantha Courtney</p>
+<p class="noindent">For comments, cor&shy;rections, and sug&shy;gestions, kindly contact David Courtney at <a href="mailto:david@chandrakantha.com">david@chandrakantha.com</a></p>
+
+</div><!--  ***** End Content  ****** -->
+
+
+
+
+<div id="Menu"><!--  ******* Start Menu ***** -->
+
+<a href="https://chandrakantha.com/"><img src="https://chandrakantha.com/images/Chandra_David2.jpg" alt="Chandra and David Courtney's Homepage" height="342" width="201" /></a> 
+<br />
+<br />
+
+
+
+<!-- **************** Start So&shy;cial Media links  ************************** -->
+<div class="center"><!-- start center -->
+<g:plusone></g:plusone><!-- Google Plus so&shy;cial media link -->
+
+<!-- Start new Facebook Like sec&shy;tion  -->
+<iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fchandrakantha.com%2F&amp;send=true&amp;layout=button&amp;width=100&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=22" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:22px;" allowTransparency="true"></iframe>
+
+<p class="small">&nbsp;</p>
+</div><!--  stop center -->
+<!-- **************** End So&shy;cial Media links  ******************************* -->
+
+
+<!-- Facebook Badge START -->
+
+<div class="center"><!-- start center -->
+<a href="https://www.facebook.com/ChandraDavidCourtney" target="_TOP" style="font-family: &quot;lucida grande&quot;,tahoma,verdana,arial,sans-serif; font-size: 11px; font-variant: normal; font-style: normal; font-weight: normal; color: #3B5998; text-decoration: none;" title="Chandrakantha and David Courtney">Chandrakantha and David Courtney</a><br /><a href="https://www.facebook.com/ChandraDavidCourtney" target="_TOP" title="Chandrakantha and David Courtney"><img src="https://badge.facebook.com/badge/201549866552042.2053.467693573.png" width="120" height="113" alt="" style="border: 0px;" /></a><br /><a href="https://www.facebook.com/business/dashboard/" target="_TOP" style="font-family: &quot;lucida grande&quot;,tahoma,verdana,arial,sans-serif; font-size: 11px; font-variant: normal; font-style: normal; font-weight: normal; color: #3B5998; text-decoration: none;" title="Make your own badge!">Promote Your Page Too</a>
+</div><!--  stop center -->
+<!-- Facebook Badge END -->
+<br />
+
+
+
+<hr />
+
+<h2>SEARCH</h2>
+
+
+
+<!-- **********************Start sphider search ********** -->
+
+<table style='margin:0px auto; padding:5px; border-spacing:1px; border-collapse:separate;' class='searchBox'>
+<tr>
+<td style='text-align:center;'>
+<form action='/search/search.php' method='get'>
+<table><tr><td>
+<div style="text-align:left;">
+<input type="text" size="14" name="query" id="keyword" value="" autocomplete="off">
+<div id='sresults'></div>
+</div>
+</tr><tr>
+<td>
+<input type='submit' value='Search'>
+</td></tr></table>
+<input type='hidden' name='search' value='1'>
+<input type='hidden' name='s' value='1'>
+</form>
+</td>
+</tr>
+</table>
+<!-- **********************End Sphider search ********** -->
+
+
+
+<hr />
+
+
+<h2>SITE LINKS</h2>
+
+<br />
+
+<!-- **********************Start site navigation links ********** -->
+<script type="text/javascript" src="https://chandrakantha.com/navigation/nav_main.js">
+</script>
+<noscript>Your browser does not sup&shy;port JavaScript!<br />
+Javascript is re&shy;quired for proper navigation</noscript>
+<!-- **********************end site navigation links ********** -->
+
+<hr />
+
+
+
+
+
+<h2>OTHER SITES OF INTEREST</h2>
+<p class="nav_bar2"><a href="http://www.silcom.com/~aludwig/contents.htm" target="_blank">Art Ludwig's Sound Page</a></p>
+
+
+
+<hr />
+
+<h2>MISC.</h2>
+<script type="text/javascript" src="https://chandrakantha.com/adverts/adverts.js"></script><!-- **Advertisements ** -->
+<script type="text/javascript" src="https://chandrakantha.com/adverts/adverts.js"></script><!-- **Advertisements ** -->
+<script type="text/javascript" src="https://chandrakantha.com/adverts/adverts.js"></script><!-- **Advertisements ** -->
+<script type="text/javascript" src="https://chandrakantha.com/adverts/adverts.js"></script><!-- **Advertisements ** -->
+<script type="text/javascript" src="https://chandrakantha.com/adverts/adverts.js"></script><!-- **Advertisements ** -->
+<script type="text/javascript" src="https://chandrakantha.com/adverts/adverts.js"></script><!-- **Advertisements ** -->
+<br />
+
+</div><!--  ********** end menu *******    -->
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

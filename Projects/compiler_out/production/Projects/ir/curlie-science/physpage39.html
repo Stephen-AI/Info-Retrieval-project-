@@ -1,0 +1,665 @@
+<BASE HREF="http://www.aem.umn.edu/Solid-Liquid_Flows/methods.html">
+<!DOCTYPE html>
+<html  lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <meta charset="utf-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1130.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+<meta name="title" content="Home | College of Science and Engineering" />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="google-site-verification" content="O0tuyujLt18OFtKXmLnRgfsxQ7Qpl1JVvTu1ermJurc" />
+<link rel="shortcut icon" href="/sites/cse.umn.edu/files/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="canonical" href="https://cse.umn.edu/aem" />
+<link rel="shortlink" href="https://cse.umn.edu/node/33941" />
+<link rel="revision" href="https://cse.umn.edu/aem" />
+<script src="/sites/cse.umn.edu/files/google_tag/google_tag.script.js?pxbjuv"></script>
+<script>window.a2a_config=window.a2a_config||{};a2a_config.callbacks=[];a2a_config.overlays=[];a2a_config.templates={};</script>
+
+    <title>Home | College of Science and Engineering</title>
+    <link rel="stylesheet" media="all" href="/sites/cse.umn.edu/files/css/css_jtZ1VPxIZHq8RBdG_4IbauFi3FnkbSgldUaERNWE6KQ.css?pxbjuv" />
+<link rel="stylesheet" media="all" href="/sites/cse.umn.edu/files/css/css_pmjB2g83IzPXdHJJaO0YlE6uuIR9x-lI-HrQ1yFG_lw.css?pxbjuv" />
+<link rel="stylesheet" media="all" href="https://fonts.googleapis.com/css?family=Merriweather+Sans:300,300i,400,700" />
+
+    
+<!--[if lte IE 8]>
+<script src="/sites/cse.umn.edu/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+
+  </head>
+  <body class="page-node-33941 path-node page-node-type-unit-landing-page has-glyphicons">
+    <div id="skip">
+      <a href="#main-content" class="visually-hidden focusable skip-link">
+        Skip to main content
+      </a>
+    </div>
+    <!-- Begin UMN Header -->
+<header id="mandatory-header-wrapper" class="umnhf-campus-tc dtd umnhf-background-maroon dropdown no-links" role="banner">
+    <div class="umnhf" id="umnhf-h">
+        <div class="umnhf" id="umnhf-h-mast">
+            <a class="umnhf" id="umnhf-h-wm" href="https://twin-cities.umn.edu"><span>Go to the U of M home page</span></a>
+                                    <ul class="umnhf" id="umnhf-h-ql" role="presentation">
+                <li class="umnhf" id="umnhf-h-onestop"><a href="https://onestop.umn.edu">One Stop</a></li>
+                <li class="umnhf" id="umnhf-h-myu"><a href="https://www.myu.umn.edu">MyU<span></span>: For Students, Faculty, and Staff</a></li>
+            </ul>
+                        <!-- Button below is for dropdown toggle, only visible on mobile screens. If using a non-dropdown version you can delete this tag -->
+            <button class="umnhf" id="umnhf-m-search" href="#" title="toggle search field">Search</button>        </div>
+        <div
+  class="gcse-searchbox-only"
+        data-resultsUrl="/search/results"
+  ></div>
+    </div>
+</header>
+<!-- End UMN Header -->
+    <noscript aria-hidden="true"><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N3CDPQ7" height="0" width="0" title="Google Tag Manager"></iframe></noscript>
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+
+          <div id="header" class="header header-color gold">
+              <div class="header-inner">
+          <div class="logo">
+                       	 <div class="views-element-container form-group"><div class="view view-unit-custom-config view-id-unit_custom_config view-display-id-block_1 js-view-dom-id-daa074b73d29a090e7c656c93b200105f69a8cb2eadb3b2ebc77089a12a1b50b">
+  
+    
+      
+      <div class="view-content">
+          <div>
+
+<div class="views-field-field-unit-logo">
+          <a href="/aem/launch-your-future-here" class="unit-site-name"> Aerospace Engineering and Mechanics</a>
+    </div>
+</div>
+
+    </div>
+  
+          </div>
+</div>
+
+                      </div>
+        </div>
+        <div class="menu header-main super-main">
+            <!-- Main menu -->
+                              <div class="region region-navigation-collapsible">
+    <section id="block-aem-2" data-block-plugin-id="superfish:aem" class="block block-superfish block-superfishaem clearfix">
+  
+    
+
+      
+<ul id="superfish-aem" class="menu sf-menu sf-aem sf-horizontal sf-style-none">
+  
+<li id="aem-menu-link-content2f58ee89-1fef-4f6f-ae45-efd2261182ed" class="sf-depth-1 menuparent"><a href="/aem/about-aem" class="sf-depth-1 menuparent">About AEM</a><ul><li id="aem-menu-link-content106b8bcd-eabb-4cce-bfda-40d872da9e5b" class="sf-depth-2 sf-no-children"><a href="/aem/history" class="sf-depth-2">History</a></li><li id="aem-menu-link-contentc401d3df-098c-4236-a794-bf444c90615a" class="sf-depth-2 sf-no-children"><a href="/aem/news-events" class="sf-depth-2">News &amp; Events</a></li><li id="aem-menu-link-contentea6ff2c2-ba1a-4321-a4c1-afd2c89fe15c" class="sf-depth-2 sf-no-children"><a href="/aem/employment-aem" title="Employment" class="sf-depth-2">Employment</a></li><li id="aem-menu-link-content4288725c-5c2a-4a60-847d-f90e199245fa" class="sf-depth-2 sf-no-children"><a href="/aem/contact-us" class="sf-depth-2">Contact Us</a></li><li id="aem-menu-link-contentd87ca6d9-df5e-4e7d-a71c-da4923687c26" class="sf-depth-2 sf-no-children"><a href="https://www.mnspacegrant.org/" title="MN Space Grant Consortium" class="sf-depth-2 sf-external">MN Space Grant Consortium</a></li></ul></li><li id="aem-menu-link-contentbf502470-fb27-44a6-86be-a66c8c84d076" class="sf-depth-1 menuparent"><a href="/aem/academics" class="sf-depth-1 menuparent">Academics</a><ul><li id="aem-menu-link-content553a5552-fbde-49c7-a4fb-af7db232e927" class="sf-depth-2 menuparent"><a href="/aem/undergraduates" class="sf-depth-2 menuparent">Undergraduate Studies</a><ul><li id="aem-menu-link-content47f36eb9-c56b-4243-9922-2704a0b4b142" class="sf-depth-3 sf-no-children"><a href="/aem/undergraduates-what-expect" class="sf-depth-3">What to Expect</a></li><li id="aem-menu-link-content8407223b-1ba7-4a3a-911e-6a49783015d3" class="sf-depth-3 sf-no-children"><a href="/aem/undergraduate-degree-requirements" class="sf-depth-3">Degree Requirements</a></li><li id="aem-menu-link-content9ba6b4af-1541-4d8e-bb65-fe8efc599c6b" class="sf-depth-3 sf-no-children"><a href="/aem/undergraduates-advising" class="sf-depth-3">Advising</a></li><li id="aem-menu-link-content0b56e98b-3ea9-443f-ab01-c6980b2ce215" class="sf-depth-3 sf-no-children"><a href="/aem/outside-classroom" class="sf-depth-3">Outside the Classroom</a></li></ul></li><li id="aem-menu-link-content5aad7562-9f08-4eeb-a7bd-c23ea5a91216" class="sf-depth-2 menuparent"><a href="/aem/graduate-studies" class="sf-depth-2 menuparent">Graduate Studies</a><ul><li id="aem-menu-link-contenteb3cb39d-45da-4166-a88f-808361769a45" class="sf-depth-3 sf-no-children"><a href="/aem/what-expect" class="sf-depth-3">What to Expect</a></li><li id="aem-menu-link-content755c0b80-132e-4957-a9e2-ba9c9fe79285" class="sf-depth-3 sf-no-children"><a href="/aem/degree-programs" class="sf-depth-3">Degree Programs</a></li><li id="aem-menu-link-contentb9736c33-00c0-46fd-a8c7-614ec401e8d7" class="sf-depth-3 sf-no-children"><a href="/aem/financial-aid-and-funding" class="sf-depth-3">Financial Aid &amp; Funding</a></li></ul></li><li id="aem-menu-link-content392aea3c-9b77-495d-a8b8-42b4b88eae33" class="sf-depth-2 sf-no-children"><a href="/aem/resources" class="sf-depth-2">Resources</a></li><li id="aem-menu-link-contentcd072de5-9530-48d0-ae55-50df13925a2a" class="sf-depth-2 sf-no-children"><a href="/aem/courses" title="AEM courses and course descriptions" class="sf-depth-2">Courses</a></li></ul></li><li id="aem-menu-link-contentc6f71c2c-2925-44b1-b3ec-c3a1546a159d" class="sf-depth-1 menuparent"><a href="/aem/research" class="sf-depth-1 menuparent">Research</a><ul><li id="aem-menu-link-content8ca68963-b2ad-4e4f-8b4e-1126aa1d2409" class="sf-depth-2 sf-no-children"><a href="/aem/aerospace-systems" class="sf-depth-2">Aerospace Systems</a></li><li id="aem-menu-link-contentbca0bafa-114a-45bc-a242-6782f98a70fb" class="sf-depth-2 sf-no-children"><a href="/aem/solid-mechanics-and-materials-aerospace-structures-and-advanced-materials" class="sf-depth-2">Solid Mechanics</a></li><li id="aem-menu-link-content1c2eb75d-4031-4bb8-8cb1-99858b5a47ef" class="sf-depth-2 sf-no-children"><a href="/aem/fluid-mechanics" class="sf-depth-2">Fluid Mechanics</a></li><li id="aem-menu-link-content223d482d-3780-48b7-8f7b-ec9c3e5b5701" class="sf-depth-2 sf-no-children"><a href="/aem/facilities" class="sf-depth-2">Facilities</a></li></ul></li><li id="aem-menu-link-content3a2d49f3-c14f-4ec9-8be1-edcbcb311ba4" class="sf-depth-1 menuparent"><a href="/aem/people" class="sf-depth-1 menuparent">People</a><ul><li id="aem-menu-link-content9f9f509e-876a-4363-8139-66bba4d0df7a" class="sf-depth-2 sf-no-children"><a href="/aem/faculty" class="sf-depth-2">Faculty</a></li><li id="aem-menu-link-contentfaa6cccb-fb25-49ec-b774-a28022c0a6b7" class="sf-depth-2 sf-no-children"><a href="/aem/research-staff" class="sf-depth-2">Research Staff</a></li><li id="aem-menu-link-content37a1afc8-90c0-4326-93f6-961b07a86f17" class="sf-depth-2 sf-no-children"><a href="/aem/graduate-students" class="sf-depth-2">Graduate Students</a></li><li id="aem-menu-link-content1331480b-6785-45cc-8ff0-84e175229a9d" class="sf-depth-2 sf-no-children"><a href="/aem/staff" class="sf-depth-2">Staff</a></li><li id="aem-menu-link-content49f1009a-5976-4dd2-ad51-9b8a2496ad62" class="sf-depth-2 sf-no-children"><a href="/aem/advisory-board" class="sf-depth-2">Advisory Board</a></li><li id="aem-menu-link-content773cad70-0489-4322-9e33-dff32397e21e" class="sf-depth-2 sf-no-children"><a href="https://cse.umn.edu/aem/emergency" title="Emergency contact and information" class="sf-depth-2 sf-external">Emergency</a></li></ul></li><li id="aem-menu-link-contentb2357fc2-c473-4bd8-aa23-686a56e24b02" class="sf-depth-1 sf-no-children"><a href="/aem/give" class="sf-depth-1">Give</a></li>
+</ul>
+
+  </section>
+
+
+  </div>
+
+                    </div>
+      </div>
+    </div>
+  
+
+<div class="landing-page-content">
+
+      <section>
+
+                
+                
+                                      
+                  
+                
+                          <a id="main-content"></a>
+            <div class="region region-content">
+      <article class="node node--type-unit_landing_page node--view-mode-full clearfix node--promoted">
+  
+    
+
+  <div>
+    <div class="master-one-column" >
+  <div class="main-content">
+    <div class="block-region-main"><section data-block-plugin-id="entity_field:node:field_banner_header" class="block block-ctools-block block-entity-fieldnodefield-banner-header clearfix">
+  
+    
+
+      
+            <div class="field field--name-field-banner-header field--type-entity-reference-revisions field--label-hidden field--item">
+
+
+
+
+            <div class="field field--name-field-banner field--type-entity-reference field--label-hidden field--item"><div>
+  
+  
+            <div class="field field--name-image field--type-image field--label-hidden field--item">    <picture>
+                <!--[if IE 9]><video style="display: none;"><![endif]-->
+              <source srcset="/sites/cse.umn.edu/files/styles/banner_big_desk/public/ballooningresized_2_3.jpg?h=a141ebb6&amp;itok=qK9daL75 1x" media="(min-width: 1200px)" type="image/jpeg"/>
+              <source srcset="/sites/cse.umn.edu/files/styles/banner_desk/public/ballooningresized_2_3.jpg?h=a141ebb6&amp;itok=nwiuYn2v 1x" media="(min-width: 992px)" type="image/jpeg"/>
+              <source srcset="/sites/cse.umn.edu/files/styles/banner_tablet/public/ballooningresized_2_3.jpg?h=a141ebb6&amp;itok=HuIJsZcz 1x, /sites/cse.umn.edu/files/styles/banner_tablet_2x/public/ballooningresized_2_3.jpg?h=a141ebb6&amp;itok=Ayfk08uL 2x" media="all and (min-width: 768px)" type="image/jpeg"/>
+              <source srcset="/sites/cse.umn.edu/files/styles/banner_mobile/public/ballooningresized_2_3.jpg?h=a141ebb6&amp;itok=-ST-p7Ky 1x, /sites/cse.umn.edu/files/styles/banner_mobile_2x/public/ballooningresized_2_3.jpg?h=a141ebb6&amp;itok=_laOlo7N 2x" media="(min-width: 0px)" type="image/jpeg"/>
+            <!--[if IE 9]></video><![endif]-->
+            <img src="/sites/cse.umn.edu/files/styles/banner_big_desk/public/ballooningresized_2_3.jpg?h=a141ebb6&amp;itok=qK9daL75" alt="AEM ballooning students" typeof="foaf:Image" class="img-responsive" />
+
+  </picture>
+
+</div>
+      
+</div>
+</div>
+      
+<div class="banner-info
+no-callout
+">
+
+<div class="banner-title"><h1>
+            <div class="field field--name-field-landing-page-title-text field--type-string field--label-hidden field--item">Launch your future </div>
+      </h1></div>
+	<div class="leadin-wrapper gold">
+                                
+		<div class="leadin-subwrapper empty-leadin-multi">
+					<div class="banner-text-n-links">
+		
+											<div class="banner-text-n-links-inner">
+						       						<div class="banner-text">
+								<p></p>
+									       						</div>
+               																							<div class="no-leadin">
+
+
+<ul class="small-callout-buttons" >
+	    		<li><a href="https://cse.umn.edu/aem/research">Research</a></li>
+  	    		<li><a href="https://cse.umn.edu/aem/faculty">Faculty</a></li>
+  	    		<li><a href="https://cse.umn.edu/aem/academics">Teaching</a></li>
+  	</ul>
+
+</div>
+								
+								               						 
+             					</div>
+           			</div>
+       			
+    		</div>
+</div>
+</div>
+      
+  </section>
+
+<section data-block-plugin-id="entity_field:node:field_widgets" class="block block-ctools-block block-entity-fieldnodefield-widgets clearfix">
+  
+    
+
+      
+      <div class="field--name-field-oc-widgets field--type-paragraphs">
+             
+
+
+
+
+	
+	
+
+<div class="slope left">
+			
+				<div class="paragraph paragraph--type--text-media paragraph--view-mode--default paragraphs-item-941">
+
+										<div class="widget-style slate">
+			
+    			<div class="wrapper ">
+    					
+	<div class="tm-holder">
+					<div class="media-right grid-single rounded">
+									<div class="field--name-field-text-media-images field--type-entity-reference">
+																					<div class="field--item">
+									<div>
+  
+  
+            <div class="field field--name-image field--type-image field--label-hidden field--item">    <picture>
+                <!--[if IE 9]><video style="display: none;"><![endif]-->
+              <source srcset="/sites/cse.umn.edu/files/styles/medium_image/public/Student%20with%20plane.jpg?itok=2uHwuwDy 1x" media="all and (min-width: 768px)" type="image/jpeg"/>
+              <source srcset="/sites/cse.umn.edu/files/styles/small_image/public/Student%20with%20plane.jpg?itok=3d5r2C7Q 1x, /sites/cse.umn.edu/files/styles/small_image_2x/public/Student%20with%20plane.jpg?itok=Wg3LeBmV 2x" media="(min-width: 0px)" type="image/jpeg"/>
+            <!--[if IE 9]></video><![endif]-->
+            <img src="/sites/cse.umn.edu/files/styles/medium_image/public/Student%20with%20plane.jpg?itok=2uHwuwDy" alt="Student with plane" typeof="foaf:Image" class="img-responsive" />
+
+  </picture>
+
+</div>
+      
+</div>
+
+								</div>
+																		</div>
+							</div>
+			<div class="text half large-text">
+				
+            <div class="field field--name-field-long-text field--type-text-long field--label-hidden field--item"><p>Aerospace engineers play a key role in the advancement of society, performing work that touches our lives in countless ways beyond aircraft and spacecraft design alone. <br /><br />
+With a stellar reputation and strong research focus that yields real-world breakthroughs, the University of Minnesota (UMN) Aerospace Engineering and Mechanics (AEM) Department is the premier destination for transforming active learners into lifelong contributors.</p></div>
+      
+							</div>
+			</div>
+    			</div>
+
+    			 		</div>
+		
+		</div>
+
+	
+</div>
+
+             
+
+
+
+
+	
+
+
+<div class="slope right">
+			
+				<div class="paragraph paragraph--type--department-news paragraph--view-mode--default paragraphs-item-901">
+
+										<div class="widget-style lt-gray">
+			
+    			<div class="wrapper ">
+    				
+	
+	<h2 class="widget-title">News &amp; Events</h2>
+
+
+	
+
+
+	<div class="view-setup horizontal smimage">
+
+		<div class="views-element-container form-group"><div class="view view-widgets view-id-widgets view-display-id-department_news js-view-dom-id-6060f8dfeaac2806257535eeec510bb9c1e87f7714000383d0d1c9e4c2c00968">
+  
+    
+      
+      <div class="view-content">
+      
+  
+
+            <div class="views-row">
+        
+	<div class="news-image small">
+		<div>
+  
+  
+            <div class="field field--name-image field--type-image field--label-hidden field--item">    <picture>
+                <!--[if IE 9]><video style="display: none;"><![endif]-->
+              <source srcset="/sites/cse.umn.edu/files/styles/square_150x150/public/brekke_648x432_v02.jpg?h=79f8b8d0&amp;itok=u8EKH8cg 1x, /sites/cse.umn.edu/files/styles/square_150x150_2x/public/brekke_648x432_v02.jpg?h=79f8b8d0&amp;itok=B_tdutbL 2x" media="(min-width: 0px)" type="image/jpeg"/>
+            <!--[if IE 9]></video><![endif]-->
+            <img src="/sites/cse.umn.edu/files/styles/square_150x150_2x/public/brekke_648x432_v02.jpg?h=79f8b8d0&amp;itok=B_tdutbL" alt="Brekke in front of rockets" typeof="foaf:Image" class="img-responsive" />
+
+  </picture>
+
+</div>
+      
+</div>
+
+	</div>
+
+
+<div class="text">
+
+	
+	
+	<h4><a href="/aem/news/michele-brekke-meet-and-greet">Michele Brekke: Meet and Greet</a></h4>
+
+	
+			<div class="news-desc">
+			AEM alumna and flight manager for the Boeing CST-100 Starliner operational missions, Michele Brekke, will be talking about her career and answering questions in the Gary Balas Atrium prior to serving
+		</div>
+	
+</div>
+    </div>
+  
+  
+
+            <div class="views-row">
+        
+	<div class="news-image small">
+		<div>
+  
+  
+            <div class="field field--name-image field--type-image field--label-hidden field--item">    <picture>
+                <!--[if IE 9]><video style="display: none;"><![endif]-->
+              <source srcset="/sites/cse.umn.edu/files/styles/square_150x150/public/UMN%20AKH%20Exterior%20with%20Old%20Eng%20Bldg.jpg?h=416b1678&amp;itok=ZGaGVwld 1x, /sites/cse.umn.edu/files/styles/square_150x150_2x/public/UMN%20AKH%20Exterior%20with%20Old%20Eng%20Bldg.jpg?h=416b1678&amp;itok=tkZboYSC 2x" media="(min-width: 0px)" type="image/jpeg"/>
+            <!--[if IE 9]></video><![endif]-->
+            <img src="/sites/cse.umn.edu/files/styles/square_150x150_2x/public/UMN%20AKH%20Exterior%20with%20Old%20Eng%20Bldg.jpg?h=416b1678&amp;itok=tkZboYSC" alt="AEM Building Exterior" typeof="foaf:Image" class="img-responsive" />
+
+  </picture>
+
+</div>
+      
+</div>
+
+	</div>
+
+
+<div class="text">
+
+	
+	
+	<h4><a href="/aem/news/welcome-aem-students">Welcome AEM Students!</a></h4>
+
+	
+			<div class="news-desc">
+			Welcome to the Aerospace Engineering &amp; Mechanics department!
+		</div>
+	
+</div>
+    </div>
+  
+  
+
+        
+  
+
+        
+  
+
+        
+  
+
+        
+  
+
+        
+  
+
+        
+  
+
+        
+  
+
+        
+  
+
+        
+  
+
+        
+
+    </div>
+  
+          </div>
+</div>
+
+
+		
+	</div>
+
+	
+            <div class="field field--name-field-callout-link field--type-link field--label-hidden field--item"><a href="/aem/news-events">More news &amp; events</a></div>
+      
+
+    			</div>
+
+    			 		</div>
+		
+		</div>
+
+	
+</div>
+
+             
+
+
+
+
+	
+
+
+<div class="slope left">
+			
+				<div class="paragraph paragraph--type--buttons paragraph--view-mode--default paragraphs-item-1036">
+
+										<div class="widget-style red">
+			
+    			<div class="wrapper ">
+    					<h2 class="widget-title">Learn More</h2>
+
+
+	<div class="button-holder below">
+					<div class="text">
+				
+			</div>
+			<div class="buttons">
+				
+
+
+			
+		<div class="field--name-field-buttons gold-button"><a href="/aem/academics">Explore degree programs</a></div>
+		
+			
+		<div class="field--name-field-buttons gold-button"><a href="https://cse.umn.edu/aem/about-aem">About AEM</a></div>
+		
+			
+		<div class="field--name-field-buttons gold-button"><a href="https://drive.google.com/file/d/14I00ZkHTn-HUYEfQzjVcU_x-JOYYFhJZ/view?usp=sharing">AEM Strategic Plan</a></div>
+		
+			
+		<div class="field--name-field-buttons gold-button"><a href="/aem/contact-us">Contact us</a></div>
+		
+	
+
+
+			</div>
+			</div>
+    			</div>
+
+    			 		</div>
+		
+		</div>
+
+	
+</div>
+
+          </div>
+  
+  </section>
+
+</div>
+  </div>
+</div>
+
+  </div>
+</article>
+
+
+  </div>
+
+              </section>
+
+</div>
+
+  
+  <footer class="footer" role="contentinfo">
+    <div class="decoration">
+      <div class="first"></div>
+      <div class="second"></div>
+      <div class="third"></div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 col-md-4">
+            <div class="region region-footer">
+    <div class="block block--contact-info-holder">
+<div class="views-element-container form-group"><div class="view view-unit-custom-config view-id-unit_custom_config view-display-id-block_2 js-view-dom-id-d967010117119730a18695bab045ecdeaa8246ae2612caebb515b0ede096ccf3">
+  
+    
+      
+      <div class="view-content">
+          <div>
+      
+ </div>
+
+    </div>
+  
+          </div>
+</div>
+
+</div>
+<div class="block block--custom-text-holder">
+<div class="views-element-container form-group"><div class="view view-unit-custom-config view-id-unit_custom_config view-display-id-block_4 js-view-dom-id-40246e6927ef5e496a3bc3f278a792fd7003505dd3848a14b8e45e991ede12de">
+  
+    
+      
+      <div class="view-content">
+          <div>
+     
+ </div>
+
+    </div>
+  
+          </div>
+</div>
+
+</div>
+
+  </div>
+
+        </div>
+        <div class="col-sm-6 col-md-8 menu">
+          <div class="row">
+            <div class="col-md-3">
+              <!-- MENU FOOTER LINKS 1 -->
+              
+            </div>
+            <div class="col-md-3">
+              <!-- MENU FOOTER LINKS 2 -->
+              
+            </div>
+            <div class="col-md-3">
+              <!-- MENU FOOTER LINKS 3 -->
+              
+            </div>
+            <div class="col-md-3">
+              <!-- MENU FOOTER LINKS 4 -->
+              
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 social">
+              <!-- Social Network links -->
+                <div class="region region-footer-social">
+    <div class="block block--footer-links-holder">
+<div class="views-element-container form-group"><div class="view view-unit-custom-config view-id-unit_custom_config view-display-id-block_3 js-view-dom-id-c25b14d614765c46526f71a578c5fa1027fb952fa6334dce24778bc4e57771a8">
+  
+    
+      
+      <div class="view-content">
+      <div class="item-list">
+  
+  <ul>
+
+          <li><div class="views-field views-field-field-unit-footer-links"><div class="field-content">
+      
+
+
+
+
+	
+
+
+<div class="slope ">
+			
+				<div class="paragraph paragraph--type--unit-footer-links paragraph--view-mode--default paragraphs-item-4561">
+
+										<div class="widget-style none">
+			
+    			<div class="wrapper ">
+    				
+							    				
+      <div class="field field--name-field-footer-links field--type-link field--label-hidden field--items">
+              <div class="field--item"><a href="https://cse.umn.edu/">CSE</a></div>
+              <div class="field--item"><a href="https://directory.umn.edu/">Department Directory</a></div>
+              <div class="field--item"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC">People Search</a></div>
+              <div class="field--item"><a href="https://cse.umn.edu/aem/contact-us">Visit Us</a></div>
+              <div class="field--item"><a href="https://dept.aem.umn.edu/dept/">AEM Intranet</a></div>
+          </div>
+  
+
+    				    			</div>
+
+    			 		</div>
+		
+		</div>
+
+	
+</div>
+</div></div></li>
+    
+  </ul>
+
+</div>
+
+    </div>
+  
+          </div>
+</div>
+
+</div>
+<div class="block block--social-media-holder">
+<div class="views-element-container form-group"><div class="view view-unit-custom-config view-id-unit_custom_config view-display-id-block_5 js-view-dom-id-19bfe57e0c2b19c927c79c7413b50825665d288b074651c21f03c0f3c467c024">
+  
+    
+      
+      <div class="view-content">
+      <div class="item-list">
+  
+  <ul>
+
+          <li><div class="views-field views-field-field-unit-social-media"><div class="field-content">
+      <ul><li>		
+
+<a href="https://twitter.com/UMNAEM" aria-label="Twitter">
+	<i class="fa fa-twitter-square"></i>
+</a>
+</li></ul></div></div></li>
+    
+  </ul>
+
+</div>
+
+    </div>
+  
+          </div>
+</div>
+
+</div>
+
+  </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  </div>
+
+    
+    <!-- Begin UMN Footer -->
+<footer id="umnhf-f" class="umnhf" role="contentinfo">
+    <nav id="umnhf-f-myu">
+        <h3 class="umnhf-f-title visually-hidden">For Students, Faculty, and Staff</h3>
+        <ul role="presentation">
+            <li><a href="https://onestop.umn.edu/">One Stop</a></li>
+            <li><a href="https://www.myu.umn.edu/">MyU <span></span></a></li>
+        </ul>
+    </nav>
+    <small>© <span id="cdate">2019</span> Regents of the University of Minnesota. All rights reserved. The University of Minnesota is an equal opportunity educator and employer. <a href="">Privacy Statement</a></small>
+    <small><a href="http://oit-drupal-prd-web.oit.umn.edu/indexAccess.php?ref_url=https://cse.umn.edu/aem">Report Web Disability-Related Issue</a></small>
+    <!-- Optional last updated link-->
+     <!-- add time tag w datetime attr -->
+</footer>
+<!-- End UMN Footer -->
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/33941","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","ajaxPageState":{"libraries":"addtoany\/addtoany,bootstrap\/popover,bootstrap\/tooltip,bootstrap_umn\/bootstrap-scripts,bootstrap_umn\/global-styling,ckeditor_indentblock\/indentblock,core\/html5shiv,core\/picturefill,cse\/bootstrap-scripts,cse\/global-styling,oc_custom\/custom-global,paragraphs\/drupal.paragraphs.unpublished,superfish\/superfish,superfish\/superfish_hoverintent,superfish\/superfish_smallscreen,superfish\/superfish_supposition,superfish\/superfish_touchscreen,system\/base,umn_search\/cse_library,views\/views.module","theme":"cse","theme_token":null},"ajaxTrustedUrl":[],"bootstrap":{"forms_has_error_value_toggle":1,"modal_animation":1,"modal_backdrop":"true","modal_focus_input":1,"modal_keyboard":1,"modal_select_text":1,"modal_show":1,"modal_size":"","popover_enabled":1,"popover_animation":1,"popover_auto_close":1,"popover_container":"body","popover_content":"","popover_delay":"0","popover_html":0,"popover_placement":"right","popover_selector":"","popover_title":"","popover_trigger":"click","tooltip_enabled":1,"tooltip_animation":1,"tooltip_container":"body","tooltip_delay":"0","tooltip_html":0,"tooltip_placement":"auto left","tooltip_selector":"","tooltip_trigger":"hover"},"superfish":{"superfish-aem":{"id":"superfish-aem","sf":{"animation":{"opacity":"show","height":"show"},"speed":0,"autoArrows":false,"dropShadows":false},"plugins":{"touchscreen":{"behaviour":"0","mode":"always_active"},"smallscreen":{"mode":"window_width","breakpoint":991,"accordionButton":"2","title":"Menu"},"supposition":true}}},"umn_search":{"cx":"002834015805923805805:c-0k--9bdkk"},"ajax":[],"user":{"uid":0,"permissionsHash":"49974415304647f040982732a09c69d18532159cc0344b6a66ac32b75904ad84"}}</script>
+<script src="/sites/cse.umn.edu/files/js/js_8hqeOHhjNs7R_4pxy44KMOD8mqETHxatzgKfIVLfViI.js"></script>
+<script src="https://static.addtoany.com/menu/page.js" async></script>
+<script src="/sites/cse.umn.edu/files/js/js_yHFCsxDgrOh5nJ_8W0t71h5uwx7lLdfSB3KyvXuCr-Q.js"></script>
+
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"f70dde473a","applicationID":"85403949,81027624","transactionName":"Y1cAYUAAV0dZBRZaDVodI1ZGCFZaFxYDVAdrUQNWWgQ=","queueTime":0,"applicationTime":25,"atts":"TxADFwgaREk=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

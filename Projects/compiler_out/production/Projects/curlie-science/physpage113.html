@@ -1,0 +1,236 @@
+<BASE HREF="http://www.mathacademy.com/pr/prime/articles/kepler/index.asp">
+
+
+<!DOCTYPE html>
+
+
+
+<html>
+<head id="ctl00_Head1"><title>
+	Kepler’s Laws
+</title><meta charset="utf-8" />
+
+    <!-- for legacy browsers to support styling html5 elements -->
+    <script type="text/javascript" src="http://platonicrealms.com/scripts/html5shiv.js"></script>
+    <script type="text/javascript" src="http://platonicrealms.com/scripts/html5shiv-printshiv.js"></script>
+    <link href="http://platonicrealms.com/App_Themes/Flex/Flex.css" rel="stylesheet" type="text/css" /><link href="http://platonicrealms.com/App_Themes/Flex/main_menu.css" rel="stylesheet" type="text/css" />
+    <!-- Google Analytics script -->
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-38176737-1']);
+        _gaq.push(['_setDomainName', 'platonicrealms.com']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+    <script type="text/x-mathjax-config">  MathJax.Hub.Config({ TeX: { extensions: ["color.js"] }});</script>
+    <script type='text/javascript'src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+    <!-- Details hide/reveal script -->
+    <script type="text/javascript" language="javascript">
+        function toggleDisplay(id) {
+            div = document.getElementById(id);
+            if (div.style.display == 'block') {
+                $('#' + id).hide('normal');
+            }
+            else {
+                $('#' + id).show('normal');
+            }
+        }
+    </script>
+    <!-- SHARE THIS SCRIPTS -->
+    <script type="text/javascript">var switchTo5x = true;</script>
+    <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+    <script type="text/javascript" src="http://s.sharethis.com/loader.js"></script>
+    <!-- JQUERY -->
+    <script type="text/javascript" src="http://platonicrealms.com/scripts/jquery-1.11.0.min.js"></script>
+<link href='http://platonicrealms.com/prime/prime.css' type='text/css' rel='stylesheet' /><link href='http://platonicrealms.com/prime/figures.css' type='text/css' rel='stylesheet' /></head>
+<body >
+    <form name="aspnetForm" method="post" action="Default.aspx" id="aspnetForm">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUIMTg1MjA0NzEPZBYCZg9kFgICBA9kFhACAw9kFgICAQ8WAh4EVGV4dAWhATx1bD48bGk+PGEgaHJlZj0naHR0cDovL3BsYXRvbmljcmVhbG1zLmNvbS8nPkhvbWU8L2E+PC9saT48bGk+PGEgaHJlZj0naHR0cDovL3BsYXRvbmljcmVhbG1zLmNvbS9lbmN5Y2xvcGVkaWEvJz5FbmN5Y2xvcGVkaWE8L2E+PC9saT48bGk+S2VwbGVy4oCZcyBMYXdzPC9saT48dWw+ZAIFD2QWAgIBDxYCHwAFwCY8aDE+S2VwbGVy4oCZcyBMYXdzPC9oMT48ZGl2IGNsYXNzPSdwb3J0cmFpdCc+PGRpdiBjbGFzcz0ncG9ydHJhaXRfZ3JhcGhpYyc+PGltZyBjbGFzcz0ncG9ydHJhaXQnIHNyYz0naHR0cDovL3BsYXRvbmljcmVhbG1zLmNvbS9pbWFnZXMvcHJpbWUvcG9ydHJhaXRzL2tlcGxlcl9tb2RlbC5wbmcnIHRpdGxlPSdLZXBsZXImcnNxdW87cyBQbGF0b25pYyBTb2xpZHMgTW9kZWwgb2YgdGhlIENvc21vcy4gU291cmNlOiBNeXN0ZXJpdW0gQ29zbW9ncmFwaGljdW0gKDE1OTYpIChXaWtpbWVkaWEgQ29tbW9ucywgcHVibGljIGRvbWFpbiknIC8+PC9kaXY+PGRpdiBjbGFzcz0ncG9ydHJhaXRfY2FwdGlvbic+S2VwbGVyJnJzcXVvO3MgUGxhdG9uaWMgU29saWRzIE1vZGVsIG9mIHRoZSBDb3Ntb3M8L2Rpdj48L2Rpdj4NCjxwPlRoZSBHZXJtYW4gbWF0aGVtYXRpY2lhbiBhbmQgYXN0cm9ub21lciBKb2hhbm5lcyBLZXBsZXIgKDE1NzEmbmRhc2g7MTYzMCkgd2FzIGFuIGF2b3dlZCBQbGF0b25pc3QsIGFuZCBzZXQgb3V0IGVhcmx5IGluIGhpcyBwcm9mZXNzaW9uYWwgY2FyZWVyIHRvIGRlbW9uc3RyYXRlIHRoYXQgdGhlIG1vdGlvbiBvZiB0aGUgcGxhbmV0cyB3YXMgY2lyY3VsYXIsIGluIGFjY29yZGFuY2Ugd2l0aCB0aGUgZXN0YWJsaXNoZWQgPGEgaHJlZj0naHR0cDovL3BsYXRvbmljcmVhbG1zLmNvbS9lbmN5Y2xvcGVkaWEvQXJpc3RvdGxlJyBkYXRhLXRpcHVwPSJBIGdyZWVrIHBoaWxvc29waGVyIGFuZCBzY2llbnRpc3Qgd2hvIGRldmVsb3BlZCBzeWxsb2dpc3RpYyBsb2dpYyBhcyBhIGZvcm1hbCBkaXNjaXBsaW5lLiDigKYiPkFyaXN0b3RlbGlhbjwvYT4gZG9jdHJpbmUsIGFuZCB0aGF0IHRoZXkgY291bGQgYmUgZGVzY3JpYmVkIGluIHRlcm1zIG9mIHRoZSBQbGF0b25pYyBzb2xpZHMuIEhvd2V2ZXIsIGhlIHdhcyBhbHNvIGEgZnJpZW5kIGFuZCBhc3Npc3RhbnQgdG8gdGhlIGdyZWF0IERhbmlzaCBhc3Ryb25vbWVyIFR5Y2hvIEJyYWhlLCB3aG8gd2FzIG1ha2luZyBwcmVjaXNlIGFuZCBkZXRhaWxlZCBvYnNlcnZhdGlvbnMgb2YgdGhlIHBsYW5ldHMgYW5kIHN0YXJzLiBXaGVuIFR5Y2hvIEJyYWhlIGRpZWQsIGluIDE2MDEsIEtlcGxlciBpbmhlcml0ZWQgdGhpcyBlbm9ybW91cyBtb3VudGFpbiBvZiByYXcgZGF0YS4gQWZ0ZXIgc3R1ZHlpbmcgdGhpcyBkYXRhIGZvciAyMCB5ZWFycyBLZXBsZXIgY2FtZSB0byB1bmRlcnN0YW5kIHRoYXQgaGlzIGVhcmxpZXIgYXNzdW1wdGlvbnMgYWJvdXQgcGxhbmV0YXJ5IG1vdGlvbiBoYWQgYmVlbiBuYSZpdW1sO3ZlLCBhbmQgdGhhdCBpZiBhbiBlYXJ0aC1jZW50ZXJlZCAoUHRvbGVtYWljKSB1bmRlcnN0YW5kaW5nIG9mIHRoZSB1bml2ZXJzZSB3ZXJlIGFiYW5kb25lZCBmb3IgYSBzdW4tY2VudGVyZWQgKENvcGVybmljYW4pIG1vZGVsIHRoZW4gdGhlIG1vdGlvbiBvZiB0aGUgcGxhbmV0cyB3YXMgY2xlYXJseSBlbGxpcHRpY2FsLjwvcD4NCjxwPkZyb20gdGhpcyBiYXNpcywgS2VwbGVyIGdlbmVyYXRlZCBoaXMgdGhyZWUgZmFtb3VzIOKAnGxhd3PigJ0gb2YgcGxhbmV0YXJ5IG1vdGlvbjo8L3A+DQo8b2w+DQo8bGk+VGhlIG9yYml0IG9mIGVhY2ggcGxhbmV0IGlzIGFuIDxhIGhyZWY9J2h0dHA6Ly9wbGF0b25pY3JlYWxtcy5jb20vZW5jeWNsb3BlZGlhL2VsbGlwc2UnIGRhdGEtdGlwdXA9IlRoZSBzZXQgb2YgcG9pbnRzIGluIGEgcGxhbmUgdGhlIHN1bSBvZiB3aG9zZSBkaXN0YW5jZXMgZnJvbSB0d28gZml4ZWQgcG9pbnRzIGlzIGNvbnN0YW50LuKApiI+ZWxsaXBzZTwvYT4gd2l0aCB0aGUgc3VuIGF0IG9uZSBmb2N1cy48L2xpPg0KPGxpPlRoZSBsaW5lIHNlZ21lbnQgam9pbmluZyBhIHBsYW5ldCB0byB0aGUgc3VuIHN3ZWVwcyBvdXQgZXF1YWwgYXJlYXMgaW4gZXF1YWwgdGltZSBpbnRlcnZhbHMuPC9saT4NCjxsaT5UaGUgc3F1YXJlIG9mIHRoZSBwZXJpb2Qgb2YgcmV2b2x1dGlvbiBvZiBhIHBsYW5ldCBhYm91dCB0aGUgc3VuIGlzIHByb3BvcnRpb25hbCB0byB0aGUgY3ViZSBvZiB0aGUgc2VtaW1ham9yIGF4aXMgb2YgdGhlIHBsYW5ldOKAmXMgZWxsaXB0aWNhbCBvcmJpdC48L2xpPg0KPC9vbD4NCjxwIHN0eWxlPSJ0ZXh0LWluZGVudDowZW07Ij5UaGVzZSBsYXdzIGFyZSBpbGx1c3RyYXRlZCBpbiB0aGUgZm9sbG93aW5nIGRpYWdyYW06PC9wPg0KPGRpdiBzdHlsZT0iYmFja2dyb3VuZC1pbWFnZTogdXJsKGh0dHA6Ly9wbGF0b25pY3JlYWxtcy5jb20vaW1hZ2VzL3ByaW1lL2ZpZ3VyZXMva2VwbGVyMS5zdmcpO2JhY2tncm91bmQtc2l6ZTphdXRvIDEwMCU7YmFja2dyb3VuZC1wb3NpdGlvbjpjZW50ZXI7YmFja2dyb3VuZC1yZXBlYXQ6bm8tcmVwZWF0O21hcmdpbjogMHB4IGF1dG8gMWVtIGF1dG87IiB0aXRsZT0nU291cmNlOiAnPjxpbWcgc3JjPSdodHRwOi8vcGxhdG9uaWNyZWFsbXMuY29tL2ltYWdlcy9zcGFjZXIuZ2lmJyBjbGFzcz0naHQyODAnIC8+PGRpdiBjbGFzcz0nZmlndXJlX2NhcHRpb24nPkZpZ3VyZSAxPC9kaXY+PC9kaXY+DQo8cCBzdHlsZT0idGV4dC1pbmRlbnQ6MGVtOyI+S2VwbGVy4oCZcyBsYXdzIGltcGx5IHRoYXQgdGhlIHNwZWVkIG9mIHJldm9sdXRpb24gb2YgYSBwbGFuZXQgYXJvdW5kIHRoZSBzdW4gaXMgbm90IHVuaWZvcm0sIGJ1dCBjaGFuZ2VzIHRocm91Z2hvdXQgdGhlIHBsYW5ldOKAmXMg4oCceWVhci7igJ0gSXQgaXMgZmFzdGVzdCB3aGVuIHRoZSBwbGFuZXQgaXMgbmVhcmVzdCB0aGUgc3VuIChjYWxsZWQgdGhlIDxlbT5wZXJpaGVsaW9uPC9lbT4pIGFuZCBzbG93ZXN0IHdoZW4gdGhlIHBsYW5ldCBpcyBmYXJ0aGVzdCBhd2F5ICg8ZW0+YXBoZWxpb248L2VtPikuIE9mIGNvdXJzZSwgYSBjaXJjbGUgaXMgYWxzbyBhbiBlbGxpcHNlJm1kYXNoO2FuIGVsbGlwc2Ugd2l0aCBlY2NlbnRyaWNpdHkgMCBhbmQgaW4gd2hpY2ggdGhlIGZvY2kgY29pbmNpZGUgaW4gdGhlIGNlbnRlciZtZGFzaDthbmQgaW5kZWVkIHRoZSBvcmJpdHMgb2YgbW9zdCBwbGFuZXRzIGFyZSBmYXIgbW9yZSBuZWFybHkgY2lyY3VsYXIgdGhhbiB0aGUgZGlhZ3JhbSB3b3VsZCBzdWdnZXN0LiBCdXQgdGhleSBhcmUgbm90IGNpcmNsZXMgbm9uZXRoZWxlc3M7IHRoZXkgYXJlIGVsbGlwc2VzIHdpdGggbm9uLXplcm8gZWNjZW50cmljaXR5LjwvcD4NCjxwPlRoZSB0aGlyZCBsYXcgbWVhbnMgdGhhdCBpZiBcKFlcKSBpcyB0aGUgbGVuZ3RoIG9mIGEgcGxhbmV0J3MgeWVhciwgdGhhdCBpcywgdGhlIHRpbWUgaXQgdGFrZXMgdGhlIHBsYW5ldCB0byBtYWtlIGEgY29tcGxldGUgcmV2b2x1dGlvbiBhYm91dCB0aGUgc3VuLCBhbmQgaWYgd2UgZGVub3RlIGJ5IFwoYVwpIHRoZSBsZW5ndGggb2YgdGhlIHNlbWltYWpvciBheGlzIG9mIHRoZSBwbGFuZXTigJlzIG9yYml0LCB0aGVuIHRoZSBxdWFudGl0eSBcKFxkaXNwbGF5c3R5bGVcZnJhY3tZXzJ9e2FeM31cKSBpcyB0aGUgc2FtZSBmb3IgZXZlcnkgcGxhbmV0IChhbmQgY29tZXQsIGFuZCBvdGhlciBzYXRlbGxpdGUpIGluIHRoZSBzb2xhciBzeXN0ZW0uIFRodXMsIGlmIGEgcGxhbmV04oCZcyBvcmJpdCBpcyBrbm93biwgdGhlIGxlbmd0aCBvZiBpdOKAmXMgeWVhciBjYW4gYmUgaW1tZWRpYXRlbHkgY2FsY3VsYXRlZCwgYW5kIHZpY2UgdmVyc2EuPC9wPg0KPHA+S2VwbGVy4oCZcyBsYXdzIHdlcmUgZW1waXJpY2FsLCB0aGF0IGlzLCB0aGV5IHdlcmUgZGVyaXZlZCBzdHJpY3RseSBmcm9tIGNhcmVmdWwgb2JzZXJ2YXRpb24gYW5kIGhhZCBubyBwdXJlbHkgdGhlb3JldGljYWwgZm91bmRhdGlvbi4gSG93ZXZlciwgYWJvdXQgMzAgeWVhcnMgYWZ0ZXIgS2VwbGVyIGRpZWQsIHRoZSBFbmdsaXNoIG1hdGhlbWF0aWNpYW4gYW5kIHBoeXNpY2lzdCBJc2FhYyBOZXd0b24gZGVyaXZlZCBoaXMgaW52ZXJzZSBzcXVhcmUgbGF3IG9mIGdyYXZpdHksIHdoaWNoIHNheXMgdGhhdCB0aGUgZm9yY2UgYWN0aW5nIG9uIHR3byBncmF2aXRhdGluZyBib2RpZXMgaXMgcHJvcG9ydGlvbmFsIHRvIHRoZSBwcm9kdWN0IG9mIHRoZWlyIG1hc3NlcyBhbmQgaW52ZXJzZWx5IHByb3BvcnRpb25hbCB0byB0aGUgc3F1YXJlIG9mIHRoZSBkaXN0YW5jZSBiZXR3ZWVuIHRoZW0uIEtlcGxlcuKAmXMgbGF3cyBtYXkgYmUgZGVyaXZlZCBmcm9tIHRoaXMgdGhlb3JldGljYWwgcHJpbmNpcGxlIHVzaW5nIGNhbGN1bHVzLjwvcD4NCjxwIGNsYXNzPSdjb250cmlidXRvcnMnIHN0eWxlPSd0ZXh0LWluZGVudDowZW07cGFkZGluZy10b3A6MS41ZW07Jz48YSBocmVmPScjMScgb25jbGljaz0idG9nZ2xlRGlzcGxheSgnY29udHJpYnMnKSI+Q29udHJpYnV0b3JzPC9hPjwvcD48dWwgaWQ9J2NvbnRyaWJzJz48bGk+PGF1dGhvcj4gQi4gU2lkbmV5IFNtaXRoPC9hdXRob3I+LCAgYXV0aG9yPC9saT48L3VsPjxwIGNsYXNzPSdjb250cmlidXRvcnMnIHN0eWxlPSd0ZXh0LWluZGVudDowZW07Jz48YSBocmVmPScjMScgb25jbGljaz0idG9nZ2xlRGlzcGxheSgnY2l0ZXMnKSI+Q2l0YXRpb24gSW5mbzwvYT48L3A+PHVsIGlkPSdjaXRlcyc+PGxpPltNTEFdIFNtaXRoLCBCLiBTaWRuZXkuICJLZXBsZXLigJlzIExhd3MuIiA8ZW0+UGxhdG9uaWMgUmVhbG1zIEludGVyYWN0aXZlIE1hdGhlbWF0aWNzIEVuY3ljbG9wZWRpYS48L2VtPiBQbGF0b25pYyBSZWFsbXMsIDMgTWFyIDIwMTMuIFdlYi4gMyBNYXIgMjAxMy4gJmx0O2h0dHA6Ly9wbGF0b25pY3JlYWxtcy5jb20vJmd0OzwvbGk+PGxpPltBUEFdIFNtaXRoLCBCLiBTaWRuZXkgKDMgTWFyIDIwMTMpLiAgS2VwbGVy4oCZcyBMYXdzLiBSZXRyaWV2ZWQgMyBNYXIgMjAxMyBmcm9tIHRoZSA8ZW0+UGxhdG9uaWMgUmVhbG1zIEludGVyYWN0aXZlIE1hdGhlbWF0aWNzIEVuY3ljbG9wZWRpYTo8L2VtPiBodHRwOi8vcGxhdG9uaWNyZWFsbXMuY29tL2VuY3ljbG9wZWRpYS9LZXBsZXJzLUxhd3MvPC9saT48L3VsPmQCBw9kFgICAQ8WAh8AZWQCCw9kFgJmDxYCHwAFoxM8dWw+PGxpIGNsYXNzPSdoYXNfc3VibGlzdCc+PGEgaHJlZj0naHR0cDovL3d3dy5tYXRoYWNhZGVteS5jb20vcHIvJz5EYWlseSBGdW48L2E+PHVsPjxsaT48YSBocmVmPSdodHRwOi8vd3d3Lm1hdGhhY2FkZW15LmNvbS9wci8nPkRhaWx5IENoYWxsZW5nZTwvYT48L2xpPjxsaT48YSBocmVmPSdodHRwOi8vd3d3Lm1hdGhhY2FkZW15LmNvbS9wci9odW1vci8nPk1hdGggSHVtb3I8L2E+PC9saT48bGk+PGEgaHJlZj0naHR0cDovL3d3dy5tYXRoYWNhZGVteS5jb20vcHIvJz5Ub2RheSBJbiBNYXRoIEhpc3Rvcnk8L2E+PC9saT48L3VsPjwvbGk+PGxpIGNsYXNzPSdoYXNfc3VibGlzdCc+PGEgaHJlZj0naHR0cDovL3BsYXRvbmljcmVhbG1zLmNvbS9Eb3dubG9hZHMvJz5Eb3dubG9hZHM8L2E+PHVsPjxsaT48YSBocmVmPSdodHRwOi8vcGxhdG9uaWNyZWFsbXMuY29tL0Rvd25sb2Fkcy9SZWNyZWF0aW9ucy8nPk1hdGggUmVjcmVhdGlvbnM8L2E+PC9saT48bGk+PGEgaHJlZj0naHR0cDovL3BsYXRvbmljcmVhbG1zLmNvbS9Eb3dubG9hZHMvU3R1ZHktQWlkcy8nPlN0dWR5IEFpZHM8L2E+PC9saT48L3VsPjwvbGk+PGxpPjxhIGhyZWY9J2h0dHA6Ly9wbGF0b25pY3JlYWxtcy5jb20vZW5jeWNsb3BlZGlhLyc+RW5jeWNsb3BlZGlhPC9hPjwvbGk+PC91bD48dWw+PGxpIGNsYXNzPSdoYXNfc3VibGlzdCc+PGEgaHJlZj0naHR0cDovL3BsYXRvbmljcmVhbG1zLmNvbS9NYXRoLVN0b3JlLyc+TWF0aCBTdG9yZTwvYT48dWw+PGxpPjxhIGhyZWY9J2h0dHA6Ly9wbGF0b25pY3JlYWxtcy5jb20vTWF0aC1TdG9yZS9Cb29rcy8nPkJvb2tzPC9hPjwvbGk+PGxpPjxhIGhyZWY9J2h0dHA6Ly9wbGF0b25pY3JlYWxtcy5jb20vTWF0aC1TdG9yZS9DbG9ja3MvJz5DbG9ja3M8L2E+PC9saT48bGk+PGEgaHJlZj0naHR0cDovL3BsYXRvbmljcmVhbG1zLmNvbS9NYXRoLVN0b3JlL0dhbWVzLyc+R2FtZXM8L2E+PC9saT48bGk+PGEgaHJlZj0naHR0cDovL3BsYXRvbmljcmVhbG1zLmNvbS9NYXRoLVN0b3JlL011Z3MvJz5NdWdzPC9hPjwvbGk+PGxpPjxhIGhyZWY9J2h0dHA6Ly9wbGF0b25pY3JlYWxtcy5jb20vTWF0aC1TdG9yZS9wb2x5aGVkcmEvJz5Qb2x5aGVkcmE8L2E+PC9saT48bGk+PGEgaHJlZj0naHR0cDovL3BsYXRvbmljcmVhbG1zLmNvbS9NYXRoLVN0b3JlL1Bvc3RlcnMvJz5Qb3N0ZXJzPC9hPjx1bD48bGk+PGEgaHJlZj0naHR0cDovL3BsYXRvbmljcmVhbG1zLmNvbS9NYXRoLVN0b3JlL1Bvc3RlcnMvbW90aXZhdGlvbmFsLXBvc3RlcnMvJz5Nb3RpdmF0aW9uYWw8L2E+PC9saT48bGk+PGEgaHJlZj0naHR0cDovL3BsYXRvbmljcmVhbG1zLmNvbS9NYXRoLVN0b3JlL1Bvc3RlcnMvbW90aXZhdGlvbmFsLXF1b3RlLXBvc3RlcnMvJz5Nb3RpdmF0aW9uYWw6IFF1b3RlczwvYT48L2xpPjxsaT48YSBocmVmPSdodHRwOi8vcGxhdG9uaWNyZWFsbXMuY29tL01hdGgtU3RvcmUvUG9zdGVycy90b3BpY3MtcG9zdGVycy8nPlRvcGljcyBQb3N0ZXJzPC9hPjwvbGk+PGxpPjxhIGhyZWY9J2h0dHA6Ly9wbGF0b25pY3JlYWxtcy5jb20vTWF0aC1TdG9yZS9Qb3N0ZXJzL3Zpc3VhbC1tYXRoLXBvc3RlcnMvJz5WaXN1YWwgTWF0aDwvYT48L2xpPjxsaT48YSBocmVmPSdodHRwOi8vcGxhdG9uaWNyZWFsbXMuY29tL01hdGgtU3RvcmUvUG9zdGVycy9Xb3JkLUNsb3Vkcy8nPldvcmQtQ2xvdWRzPC9hPjwvbGk+PC91bD48L2xpPjwvdWw+PC9saT48bGkgY2xhc3M9J2hhc19zdWJsaXN0Jz48YSBocmVmPSdodHRwOi8vcGxhdG9uaWNyZWFsbXMuY29tL21pbml0ZXh0cy8nPk1pbml0ZXh0czwvYT48dWw+PGxpPjxhIGhyZWY9J2h0dHA6Ly9wbGF0b25pY3JlYWxtcy5jb20vbWluaXRleHRzL0NvcGluZy13aXRoLU1hdGgtQW54aWV0eSc+Q29waW5nIFdpdGggTWF0aCBBbnhpZXR5PC9hPjwvbGk+PGxpPjxhIGhyZWY9J2h0dHA6Ly9wbGF0b25pY3JlYWxtcy5jb20vbWluaXRleHRzL0luZmluaXR5LVlvdS1DYW50LUdldC1UaGVyZS1Gcm9tLUhlcmUvJz5JbmZpbml0eTogWW91IENhbiZyc3F1bzt0IEdldCBUaGVyZSBGcm9tIEhlcmU8L2E+PC9saT48bGk+PGEgaHJlZj0naHR0cDovL3BsYXRvbmljcmVhbG1zLmNvbS9taW5pdGV4dHMvTWF0aGVtYXRpY2FsLUFydC1PZi1NLUMtRXNjaGVyLyc+TWF0aGVtYXRpY2FsIEFydCBvZiBNLkMuIEVzY2hlciwgVGhlPC9hPjwvbGk+PGxpPjxhIGhyZWY9J2h0dHA6Ly9wbGF0b25pY3JlYWxtcy5jb20vbWluaXRleHRzL1doYXQtSXMtSG93LU1hbnknPldoYXQgSXMgSG93IE1hbnk/PC9hPjwvbGk+PGxpPjxhIGhyZWY9J2h0dHA6Ly9wbGF0b25pY3JlYWxtcy5jb20vbWluaXRleHRzL1dyaXRpbmctRm9yLUEtTWF0aC1DbGFzcyc+V3JpdGluZyBmb3IgYSBNYXRoIENsYXNzPC9hPjwvbGk+PC91bD48L2xpPjxsaT48YSBocmVmPSdodHRwOi8vcGxhdG9uaWNyZWFsbXMuY29tL3F1b3Rlcy8nPlF1b3RlczwvYT48L2xpPjwvdWw+ZAIND2QWAgIDD2QWAmYPZBYCAgEPZBY0AgEPDxYEHghDc3NDbGFzcwUVYWxwaGFfYnV0dG9uX3NlbGVjdGVkHgRfIVNCAgJkZAIDDw8WBB8BBQxhbHBoYV9idXR0b24fAgICZGQCBQ8PFgQfAQUMYWxwaGFfYnV0dG9uHwICAmRkAgcPDxYEHwEFDGFscGhhX2J1dHRvbh8CAgJkZAIJDw8WBB8BBQxhbHBoYV9idXR0b24fAgICZGQCCw8PFgQfAQUMYWxwaGFfYnV0dG9uHwICAmRkAg0PDxYEHwEFDGFscGhhX2J1dHRvbh8CAgJkZAIPDw8WBB8BBQxhbHBoYV9idXR0b24fAgICZGQCEQ8PFgQfAQUMYWxwaGFfYnV0dG9uHwICAmRkAhMPDxYEHwEFDGFscGhhX2J1dHRvbh8CAgJkZAIVDw8WBB8BBQxhbHBoYV9idXR0b24fAgICZGQCFw8PFgQfAQUMYWxwaGFfYnV0dG9uHwICAmRkAhkPDxYEHwEFDGFscGhhX2J1dHRvbh8CAgJkZAIbDw8WBB8BBQxhbHBoYV9idXR0b24fAgICZGQCHQ8PFgQfAQUMYWxwaGFfYnV0dG9uHwICAmRkAh8PDxYEHwEFDGFscGhhX2J1dHRvbh8CAgJkZAIhDw8WBB8BBQxhbHBoYV9idXR0b24fAgICZGQCIw8PFgQfAQUMYWxwaGFfYnV0dG9uHwICAmRkAiUPDxYEHwEFDGFscGhhX2J1dHRvbh8CAgJkZAInDw8WBB8BBQxhbHBoYV9idXR0b24fAgICZGQCKQ8PFgQfAQUMYWxwaGFfYnV0dG9uHwICAmRkAisPDxYEHwEFDGFscGhhX2J1dHRvbh8CAgJkZAItDw8WBB8BBQxhbHBoYV9idXR0b24fAgICZGQCLw8PFgQfAQUMYWxwaGFfYnV0dG9uHwICAmRkAjEPDxYEHwEFDGFscGhhX2J1dHRvbh8CAgJkZAIzDw8WBB8BBQxhbHBoYV9idXR0b24fAgICZGQCDw9kFgICAQ8WAh8AZWQCEQ9kFgICAQ8WAh8AZWQCEw9kFgICAQ8WAh8AZWRkjLYVKgyuXL+QgMjPcI3hACeWHhE=" />
+
+
+<script src="/ScriptResource.axd?d=-9ZDN9FhIorLCS5eyZwIEcnD8XM0gpLG4ptOKBWVenTVGOJ3HWRDFhH8VZtOzoJmTktkHAYkEXMc86VKSKStRMbydMYaPruQ09jamkl5QQUJdntqHeoryUyuJxdVhQFkM9HwWJwelU8dGAPOUOibuVSHhMj2HtFNGCPRCja464BR7eKh0&amp;t=3f4a792d" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="165835AB" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWHAKd+c6aCQLS3omuAQLS3vXSCALS3uH3DwLS3u31DALS3tmaBALS3sW/CwLS3rHkAgLS3v2vBALS3unUCwLS3tX5AgLS3sGeCgLS3s2cBwLS3rnBDgLS3qXmBQLS3pGLDQLS3t3WDgLS3sn7BQLS3rWgDQLS3qHFBALS3q3DAQLS3pnoCALS3oUNAtLe8bEHAtLevf0IAtLeqSIC0t6VxwcC98Oz2gci4ssll+s7aGj1Qh7XtVqg7B8cfQ==" />
+    <div>
+		<div id='outer_wrapper'>
+            <header id="head_wrapper">
+                <a href="http://www.mathacademy.com/pr/"><div id="logo" title="Platonic Realms Home Page link">&nbsp;</div></a>
+                <div id="heading">
+    <div class="prime_heading_large"><p>PRIME</p></div>
+    <div class="prime_heading_small"><p><span style="padding:0px 2px;">P</span>latonic</p><p><span style="padding:0px 2px;">R</span>ealms</p><p><span style="padding:0px 4px;">I</span>nteractive</p><p><span style="padding:0px 1px;">M</span>athematics</p><p><span style="padding:0px 3px;">E</span>ncyclopedia</p></div>
+</div>
+                <div id="site_widgets">&nbsp;</div>
+                <br class="clear" />
+            </header>
+            <section id="body_wrapper">
+                <section id="main_column">
+                    <nav id="breadcrumbs">
+    <ul><li><a href='http://platonicrealms.com/'>Home</a></li><li><a href='http://platonicrealms.com/encyclopedia/'>Encyclopedia</a></li><li>Kepler’s Laws</li><ul>
+</nav>
+                    <article>
+						<div id="content_above">
+        <div class="prime_listing_display">
+            <h1>Kepler’s Laws</h1><div class='portrait'><div class='portrait_graphic'><img class='portrait' src='http://platonicrealms.com/images/prime/portraits/kepler_model.png' title='Kepler&rsquo;s Platonic Solids Model of the Cosmos. Source: Mysterium Cosmographicum (1596) (Wikimedia Commons, public domain)' /></div><div class='portrait_caption'>Kepler&rsquo;s Platonic Solids Model of the Cosmos</div></div>
+<p>The German mathematician and astronomer Johannes Kepler (1571&ndash;1630) was an avowed Platonist, and set out early in his professional career to demonstrate that the motion of the planets was circular, in accordance with the established <a href='http://platonicrealms.com/encyclopedia/Aristotle' data-tipup="A greek philosopher and scientist who developed syllogistic logic as a formal discipline. …">Aristotelian</a> doctrine, and that they could be described in terms of the Platonic solids. However, he was also a friend and assistant to the great Danish astronomer Tycho Brahe, who was making precise and detailed observations of the planets and stars. When Tycho Brahe died, in 1601, Kepler inherited this enormous mountain of raw data. After studying this data for 20 years Kepler came to understand that his earlier assumptions about planetary motion had been na&iuml;ve, and that if an earth-centered (Ptolemaic) understanding of the universe were abandoned for a sun-centered (Copernican) model then the motion of the planets was clearly elliptical.</p>
+<p>From this basis, Kepler generated his three famous “laws” of planetary motion:</p>
+<ol>
+<li>The orbit of each planet is an <a href='http://platonicrealms.com/encyclopedia/ellipse' data-tipup="The set of points in a plane the sum of whose distances from two fixed points is constant.…">ellipse</a> with the sun at one focus.</li>
+<li>The line segment joining a planet to the sun sweeps out equal areas in equal time intervals.</li>
+<li>The square of the period of revolution of a planet about the sun is proportional to the cube of the semimajor axis of the planet’s elliptical orbit.</li>
+</ol>
+<p style="text-indent:0em;">These laws are illustrated in the following diagram:</p>
+<div style="background-image: url(http://platonicrealms.com/images/prime/figures/kepler1.svg);background-size:auto 100%;background-position:center;background-repeat:no-repeat;margin: 0px auto 1em auto;" title='Source: '><img src='http://platonicrealms.com/images/spacer.gif' class='ht280' /><div class='figure_caption'>Figure 1</div></div>
+<p style="text-indent:0em;">Kepler’s laws imply that the speed of revolution of a planet around the sun is not uniform, but changes throughout the planet’s “year.” It is fastest when the planet is nearest the sun (called the <em>perihelion</em>) and slowest when the planet is farthest away (<em>aphelion</em>). Of course, a circle is also an ellipse&mdash;an ellipse with eccentricity 0 and in which the foci coincide in the center&mdash;and indeed the orbits of most planets are far more nearly circular than the diagram would suggest. But they are not circles nonetheless; they are ellipses with non-zero eccentricity.</p>
+<p>The third law means that if \(Y\) is the length of a planet's year, that is, the time it takes the planet to make a complete revolution about the sun, and if we denote by \(a\) the length of the semimajor axis of the planet’s orbit, then the quantity \(\displaystyle\frac{Y_2}{a^3}\) is the same for every planet (and comet, and other satellite) in the solar system. Thus, if a planet’s orbit is known, the length of it’s year can be immediately calculated, and vice versa.</p>
+<p>Kepler’s laws were empirical, that is, they were derived strictly from careful observation and had no purely theoretical foundation. However, about 30 years after Kepler died, the English mathematician and physicist Isaac Newton derived his inverse square law of gravity, which says that the force acting on two gravitating bodies is proportional to the product of their masses and inversely proportional to the square of the distance between them. Kepler’s laws may be derived from this theoretical principle using calculus.</p>
+<p class='contributors' style='text-indent:0em;padding-top:1.5em;'><a href='#1' onclick="toggleDisplay('contribs')">Contributors</a></p><ul id='contribs'><li><author> B. Sidney Smith</author>,  author</li></ul><p class='contributors' style='text-indent:0em;'><a href='#1' onclick="toggleDisplay('cites')">Citation Info</a></p><ul id='cites'><li>[MLA] Smith, B. Sidney. "Kepler’s Laws." <em>Platonic Realms Interactive Mathematics Encyclopedia.</em> Platonic Realms, 3 Mar 2013. Web. 3 Mar 2013. &lt;http://platonicrealms.com/&gt;</li><li>[APA] Smith, B. Sidney (3 Mar 2013).  Kepler’s Laws. Retrieved 3 Mar 2013 from the <em>Platonic Realms Interactive Mathematics Encyclopedia:</em> http://platonicrealms.com/encyclopedia/Keplers-Laws/</li></ul>
+        </div>
+</div>
+						<div id="big_banner_center">
+                            <p style="font:9pt Arial,Helvetica,Sans-serif; padding: 8px 0px;">Advertisement</p>
+                            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                            <!-- flex_mobile_center_wide_300x250 -->
+                            <ins class="adsbygoogle"
+                                    style="display:inline-block;width:300px;height:250px"
+                                    data-ad-client="ca-pub-1051229855708751"
+                                    data-ad-slot="5135967893"></ins>
+                            <script>
+                                (adsbygoogle = window.adsbygoogle || []).push({});
+                            </script>
+                            
+    
+
+						</div>
+						<div id="content_below">
+    
+</div>
+                    </article>
+                </section>
+                <section id="left_column">
+                    <div id="menu"><ul><li class='has_sublist'><a href='http://www.mathacademy.com/pr/'>Daily Fun</a><ul><li><a href='http://www.mathacademy.com/pr/'>Daily Challenge</a></li><li><a href='http://www.mathacademy.com/pr/humor/'>Math Humor</a></li><li><a href='http://www.mathacademy.com/pr/'>Today In Math History</a></li></ul></li><li class='has_sublist'><a href='http://platonicrealms.com/Downloads/'>Downloads</a><ul><li><a href='http://platonicrealms.com/Downloads/Recreations/'>Math Recreations</a></li><li><a href='http://platonicrealms.com/Downloads/Study-Aids/'>Study Aids</a></li></ul></li><li><a href='http://platonicrealms.com/encyclopedia/'>Encyclopedia</a></li></ul><ul><li class='has_sublist'><a href='http://platonicrealms.com/Math-Store/'>Math Store</a><ul><li><a href='http://platonicrealms.com/Math-Store/Books/'>Books</a></li><li><a href='http://platonicrealms.com/Math-Store/Clocks/'>Clocks</a></li><li><a href='http://platonicrealms.com/Math-Store/Games/'>Games</a></li><li><a href='http://platonicrealms.com/Math-Store/Mugs/'>Mugs</a></li><li><a href='http://platonicrealms.com/Math-Store/polyhedra/'>Polyhedra</a></li><li><a href='http://platonicrealms.com/Math-Store/Posters/'>Posters</a><ul><li><a href='http://platonicrealms.com/Math-Store/Posters/motivational-posters/'>Motivational</a></li><li><a href='http://platonicrealms.com/Math-Store/Posters/motivational-quote-posters/'>Motivational: Quotes</a></li><li><a href='http://platonicrealms.com/Math-Store/Posters/topics-posters/'>Topics Posters</a></li><li><a href='http://platonicrealms.com/Math-Store/Posters/visual-math-posters/'>Visual Math</a></li><li><a href='http://platonicrealms.com/Math-Store/Posters/Word-Clouds/'>Word-Clouds</a></li></ul></li></ul></li><li class='has_sublist'><a href='http://platonicrealms.com/minitexts/'>Minitexts</a><ul><li><a href='http://platonicrealms.com/minitexts/Coping-with-Math-Anxiety'>Coping With Math Anxiety</a></li><li><a href='http://platonicrealms.com/minitexts/Infinity-You-Cant-Get-There-From-Here/'>Infinity: You Can&rsquo;t Get There From Here</a></li><li><a href='http://platonicrealms.com/minitexts/Mathematical-Art-Of-M-C-Escher/'>Mathematical Art of M.C. Escher, The</a></li><li><a href='http://platonicrealms.com/minitexts/What-Is-How-Many'>What Is How Many?</a></li><li><a href='http://platonicrealms.com/minitexts/Writing-For-A-Math-Class'>Writing for a Math Class</a></li></ul></li><li><a href='http://platonicrealms.com/quotes/'>Quotes</a></li></ul></div>
+                    <div id="page_widget">
+                        
+    <div id="listings_box">
+        
+        <div id="ctl00_cphPageWidget_upnlListings">
+	
+             <div id="ctl00_cphPageWidget_pnlAlphaButtons" class="listings_alpha_buttons">
+		
+                <a id="ctl00_cphPageWidget_btna" class="alpha_button_selected" href="javascript:__doPostBack('ctl00$cphPageWidget$btna','')">A</a>
+                <a id="ctl00_cphPageWidget_btnb" class="alpha_button" href="javascript:__doPostBack('ctl00$cphPageWidget$btnb','')">B</a>
+                <a id="ctl00_cphPageWidget_btnc" class="alpha_button" href="javascript:__doPostBack('ctl00$cphPageWidget$btnc','')">C</a>
+                <a id="ctl00_cphPageWidget_btnd" class="alpha_button" href="javascript:__doPostBack('ctl00$cphPageWidget$btnd','')">D</a>
+                <a id="ctl00_cphPageWidget_btne" class="alpha_button" href="javascript:__doPostBack('ctl00$cphPageWidget$btne','')">E</a>
+                <a id="ctl00_cphPageWidget_btnf" class="alpha_button" href="javascript:__doPostBack('ctl00$cphPageWidget$btnf','')">F</a>
+                <a id="ctl00_cphPageWidget_btng" class="alpha_button" href="javascript:__doPostBack('ctl00$cphPageWidget$btng','')">G</a>
+                <a id="ctl00_cphPageWidget_btnh" class="alpha_button" href="javascript:__doPostBack('ctl00$cphPageWidget$btnh','')">H</a>
+                <a id="ctl00_cphPageWidget_btni" class="alpha_button" href="javascript:__doPostBack('ctl00$cphPageWidget$btni','')">I</a>
+                <a id="ctl00_cphPageWidget_btnj" class="alpha_button" href="javascript:__doPostBack('ctl00$cphPageWidget$btnj','')">J</a>
+                <a id="ctl00_cphPageWidget_btnk" class="alpha_button" href="javascript:__doPostBack('ctl00$cphPageWidget$btnk','')">K</a>
+                <a id="ctl00_cphPageWidget_btnl" class="alpha_button" href="javascript:__doPostBack('ctl00$cphPageWidget$btnl','')">L</a>
+                <a id="ctl00_cphPageWidget_btnm" class="alpha_button" href="javascript:__doPostBack('ctl00$cphPageWidget$btnm','')">M</a>
+                <a id="ctl00_cphPageWidget_btnn" class="alpha_button" href="javascript:__doPostBack('ctl00$cphPageWidget$btnn','')">N</a>
+                <a id="ctl00_cphPageWidget_btno" class="alpha_button" href="javascript:__doPostBack('ctl00$cphPageWidget$btno','')">O</a>
+                <a id="ctl00_cphPageWidget_btnp" class="alpha_button" href="javascript:__doPostBack('ctl00$cphPageWidget$btnp','')">P</a>
+                <a id="ctl00_cphPageWidget_btnq" class="alpha_button" href="javascript:__doPostBack('ctl00$cphPageWidget$btnq','')">Q</a>
+                <a id="ctl00_cphPageWidget_btnr" class="alpha_button" href="javascript:__doPostBack('ctl00$cphPageWidget$btnr','')">R</a>
+                <a id="ctl00_cphPageWidget_btns" class="alpha_button" href="javascript:__doPostBack('ctl00$cphPageWidget$btns','')">S</a>
+                <a id="ctl00_cphPageWidget_btnt" class="alpha_button" href="javascript:__doPostBack('ctl00$cphPageWidget$btnt','')">T</a>
+                <a id="ctl00_cphPageWidget_btnu" class="alpha_button" href="javascript:__doPostBack('ctl00$cphPageWidget$btnu','')">U</a>
+                <a id="ctl00_cphPageWidget_btnv" class="alpha_button" href="javascript:__doPostBack('ctl00$cphPageWidget$btnv','')">V</a>
+                <a id="ctl00_cphPageWidget_btnw" class="alpha_button" href="javascript:__doPostBack('ctl00$cphPageWidget$btnw','')">W</a>
+                <a id="ctl00_cphPageWidget_btnx" class="alpha_button" href="javascript:__doPostBack('ctl00$cphPageWidget$btnx','')">X</a>
+                <a id="ctl00_cphPageWidget_btny" class="alpha_button" href="javascript:__doPostBack('ctl00$cphPageWidget$btny','')">Y</a>
+                <a id="ctl00_cphPageWidget_btnz" class="alpha_button" href="javascript:__doPostBack('ctl00$cphPageWidget$btnz','')">Z</a>
+            
+	</div>
+            <div id="ctl00_cphPageWidget_pnlListings" class="prime_listings">
+		<a href='https://platonicrealms.com/encyclopedia/a-e' class='prime_listing' data-tip="Abbreviation: ‘almost everywhere.’">a.e.</a><a href='https://platonicrealms.com/encyclopedia/abacus' class='prime_listing' data-tip="An ancient calculator consisting of a frame, rods, and beads. …">abacus</a><a href='https://platonicrealms.com/encyclopedia/Henrik-Neils-Abel' class='prime_listing' data-tip="A Norwegian al­gebra­ist who proved the un­solv­ability of the general quint­ic (fifth degree) equa­tion by radicals. …">Abel, Henrik Neils</a><a href='https://platonicrealms.com/encyclopedia/Abelian-group' class='prime_listing' data-tip="A group in which the group operation is commutative.">Abelian group</a><a href='https://platonicrealms.com/encyclopedia/abscissa' class='prime_listing' data-tip="The first element of an ordered pair, the other being the ordinate.">abscissa</a><a href='https://platonicrealms.com/encyclopedia/absolute-geometry' class='prime_listing' data-tip="Euclidean geometry without the parallel postulate. Also called neutral geometry.">absolute geometry</a><a href='https://platonicrealms.com/encyclopedia/abstract-algebra' class='prime_listing' data-tip="The study of al­gebraic struc­tures, that is, of sets of objects that have some kind of struc­ture de­fined on them, such as an order­ing of the objects or a set of opera­tions on the ob­jects. Also called ‘modern al­gebra.’">abstract algebra</a><a href='https://platonicrealms.com/encyclopedia/abundant-number' class='prime_listing' data-tip="A natural number whose proper divisors sum to more than the number. …">abundant number</a><a href='https://platonicrealms.com/encyclopedia/accumulation-point' class='prime_listing' data-tip="An element of a set with the property than every neighborhood of it contains other elements of the set.">accumulation point</a><a href='https://platonicrealms.com/encyclopedia/acos' class='prime_listing' data-tip="Abbreviation: arccosine or inverse cosine.">acos</a><a href='https://platonicrealms.com/encyclopedia/actual-infinite' class='prime_listing' data-tip="An infinite set or collection considered as a completed whole. …">actual infinite</a><a href='https://platonicrealms.com/encyclopedia/acute' class='prime_listing' data-tip="An angle is acute if it is less than a right angle. A triangle is acute if all of its angles are acute.">acute</a><a href='https://platonicrealms.com/encyclopedia/add' class='prime_listing' data-tip="To add or sum two or more numbers is to perform the operation of addition on them.">add</a><a href='https://platonicrealms.com/encyclopedia/addend' class='prime_listing' data-tip="A number that is being added to another number (called the augend).">addend</a><a href='https://platonicrealms.com/encyclopedia/addition' class='prime_listing' data-tip="A binary operation on quantities to obtain a sum. …">addition</a><a href='https://platonicrealms.com/encyclopedia/algebra' class='prime_listing' data-tip="In general, ‘al­gebra’ refers to ab­stract arithmet­ic, i.e., the general study of arith­metical opera­tions on sets of num­bers. …">algebra</a><a href='https://platonicrealms.com/encyclopedia/algebraic-function' class='prime_listing' data-tip="A function on numbers that applies only the opera­tions  of addition and sub­traction, multi­plica­tion and division, and raising to a rational power or extract­ing a rational root.  Compare: transcendental function.">algebraic function</a><a href='https://platonicrealms.com/encyclopedia/algebraic-number' class='prime_listing' data-tip="A number that is the root of a polynomial with rational coefficients.">algebraic number</a><a href='https://platonicrealms.com/encyclopedia/algebraically-closed' class='prime_listing' data-tip="A field is algebraically closed if every polynomial with coefficients in the field has a root in the field. …">algebraically closed</a><a href='https://platonicrealms.com/encyclopedia/almost-everywhere' class='prime_listing' data-tip="Everywhere except on a set of measure zero. …">almost everywhere</a><a href='https://platonicrealms.com/encyclopedia/angle' class='prime_listing' data-tip="A figure formed by two line segments that extend from a common point.&hellip;">angle</a><a href='https://platonicrealms.com/encyclopedia/arccos' class='prime_listing' data-tip="Abbreviation: arccosine.">arccos</a><a href='https://platonicrealms.com/encyclopedia/arccosine' class='prime_listing' data-tip="The inverse of the cosine function. &hellip;">arccosine</a><a href='https://platonicrealms.com/encyclopedia/Archimedes' class='prime_listing' data-tip="Greek geometer and applied mathematician who lived in Syracuse in the 3rd century BCE. &hellip;">Archimedes</a><a href='https://platonicrealms.com/encyclopedia/arcsin' class='prime_listing' data-tip="Abbreviation: arcsine.">arcsin</a><a href='https://platonicrealms.com/encyclopedia/arcsine' class='prime_listing' data-tip="The inverse of the sine function. &hellip;">arcsine</a><a href='https://platonicrealms.com/encyclopedia/arctan' class='prime_listing' data-tip="Abbreviation: arctangent.">arctan</a><a href='https://platonicrealms.com/encyclopedia/arctangent' class='prime_listing' data-tip="The inverse of the tangent function. &hellip;">arctangent</a><a href='https://platonicrealms.com/encyclopedia/Aristotle' class='prime_listing' data-tip="A greek philosopher and scientist who developed syllogistic logic as a formal discipline. …">Aristotle</a><a href='https://platonicrealms.com/encyclopedia/arithmetic-mean' class='prime_listing' data-tip="The average of a set of values.">arithmetic mean</a><a href='https://platonicrealms.com/encyclopedia/arithmetic' class='prime_listing' data-tip="The branch of mathematics concerned with addition, subtraction, multiplication, and division of numbers.">arithmetic</a><a href='https://platonicrealms.com/encyclopedia/asin' class='prime_listing' data-tip="Abbreviation: arcsine.">asin</a><a href='https://platonicrealms.com/encyclopedia/associative' class='prime_listing' data-tip="A property that may or may not hold of a binary operation. Click for article.…">associative</a><a href='https://platonicrealms.com/encyclopedia/atan' class='prime_listing' data-tip="Abbreviation: arctangent.">atan</a><a href='https://platonicrealms.com/encyclopedia/augend' class='prime_listing' data-tip="A number to which another number is being added. The number being added to the augend is called the addend.">augend</a><a href='https://platonicrealms.com/encyclopedia/axiom' class='prime_listing' data-tip="A mathematical statement stipulated as true (without proof). …">axiom</a><a href='https://platonicrealms.com/encyclopedia/Axiom-of-Choice' class='prime_listing' data-tip="Given a family of sets there exists a set consisting of elements chosen one a-piece from each set in the family. ">Axiom of Choice</a><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+	</div>
+            <div id="ctl00_cphPageWidget_updateProgress2" style="display:block;">
+		
+                    <div class="update_progress"><p class="prime_listing" style="text-indent: 0em; display: block; margin: auto; padding-top: 250px; padding-left: 20px;">Loading...</p></div>
+                
+	</div>
+            <!-- ?
+            <p>Alpha: </p> -->
+            <input type="hidden" name="ctl00$cphPageWidget$hdnAlpha" id="ctl00_cphPageWidget_hdnAlpha" value="a" />
+            
+</div>
+    </div>
+
+
+                    </div>
+                    <div style="display:block; width: 100px; font: .8em Arial,Helvetica, Sans-Serif; color: #C05D1C; text-align:center; clear:both; margin:10px auto;">
+                        Get the ultimate math study-guide <a href="http://platonicrealms.com/Math-Store/Books/Math-and-Me/" style="font: 1em Arial,Helvetica, Sans-Serif; color: #66e; text-decoration: none;">Math &amp; Me: Embracing Success<img src="http://platonicrealms.com/images/products/Books/merch_book_gen_mathnme_thumb_100_125.jpg" alt="product thumbnail image" style="padding: 10px 0px;"></a> Available in the <a href="http://platonicrealms.com/Math-Store/Books/Math-and-Me/" style="font: 1em Arial,Helvetica, Sans-Serif; color: #66e; text-decoration: none;">Math Store</a>
+
+                    </div>
+                </section>
+                <section id="right_column">
+                    <div id="big_banner_right">
+    
+</div>
+                    <div id="column_banners">
+    
+
+                    </div>
+                    <div id="native_banners">
+    
+    <div style="background-color: #f8f8ff; border: 1px #666 solid; border-radius: 5px;">
+        <img src="http://platonicrealms.com/images/Belvedere.jpg" alt="detail from Escher pic Belvedere" title="Detail from the 1958 lithograph 'Belvedere' by M.C. Escher." style="margin-top: 4px;" />
+        <p style="padding: 5px;font: 15px Arial,Helvetica,Sans-Serif; text-indent: 0em; color: #600; padding-top: .5em;">Are you a mathematical artist?</p>
+        <div style=" text-align: left; ">
+            <p style="font: 12px Arial,Helvetica,Sans-Serif; text-indent: 0em; color: #333; padding: .5em 1em 1em 1.2em;">Platonic Realms is preparing an online gallery space to showcase and market the works of painters, sculptors, and other artists working in a tangible medium.</p><p style="font: 12px Arial,Helvetica,Sans-Serif; text-indent: 0em; color: #333; padding: .5em 1em 1em 1.2em; font-weight:bold;">If your work celebrates mathematical themes we want to hear from you!</p><p style="font: 12px Arial,Helvetica,Sans-Serif; text-indent: 0em; color: #333; padding: .5em 1em 1em 1.2em;">Please let us know about yourself using the <a href="http://platonicrealms.com/info/contact/" target="contact" style="font: 12px Helvetica,Arial,Sans-Serif; color:#600; text-decoration: none;">contact page</a>.</p>
+        </div>
+    </div>
+</div>
+                    <div id="wide_banners" style="text-align:center;padding-top:20px;clear:both;">
+                    </div>
+                </section>
+            </section>
+            <footer id="foot_wrapper">
+                <div id="site_links">
+<span class="foot_links">
+    <a href="http://platonicrealms.com">home</a> | 
+    <a href="http://platonicrealms.com/info/About/">about</a> | 
+    <a href="http://platonicrealms.com/info/Contact-Form/">contact</a> | 
+    <a href="http://platonicrealms.com/info/Customer-Service/">customer service</a> | 
+    <a href="http://platonicrealms.com/info/Advertising/">ad info</a> | 
+    <a href="http://platonicrealms.com/info/Site-Map/">sitemap</a> | 
+    <a href="http://platonicrealms.com/info/Submissions/">submissions</a></span></div>
+                <div id="copyright">
+<small class="copyright">Copyright &copy; 1997&ndash;2019 Platonic Realms<sup><span style="font-size:small">&reg;</span></sup>.  Except where otherwise prohibited, material on this site may be printed for personal classroom use without permission by students and instructors for non-profit, educational purposes only.  All other reproduction in whole or in part, including electronic reproduction or redistribution, for any purpose, except by express written agreement is strictly prohibited.  Please send comments, queries, and corrections using our <a href="http://www.platonicrealms.com/info/contact.aspx">contact page</a>.</small></div>
+            </footer>
+            <br class="clear" />
+		</div>
+    </div>
+    
+
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.initialize();
+//]]>
+</script>
+</form>
+    <!-- SHARE THIS SCRIPTS -->
+    <script type="text/javascript">stLight.options({ publisher: "abf63241-0917-443a-b226-fb7af5c61f12", doNotHash: true, doNotCopy: true, hashAddressBar: false });</script>
+    <script>
+        var options = { "publisher": "abf63241-0917-443a-b226-fb7af5c61f12", "position": "right", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0 }, "chicklets": { "items": ["facebook", "twitter", "linkedin", "pinterest", "googleplus", "delicious", "edmodo", "sharethis"] } };
+        var st_hover_widget = new sharethis.widgets.hoverbuttons(options);
+    </script>
+
+</body>
+</html>

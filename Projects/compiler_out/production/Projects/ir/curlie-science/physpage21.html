@@ -1,0 +1,58 @@
+<BASE HREF="http://users.uj.edu.pl/~ufpostaw/">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd"> 
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1250">
+<title>Postawa Group Page</title>
+<SCRIPT LANGUAGE="JavaScript" type="text/javascript">
+Napis="                        Welcome to Dr. Postawa Group Page                                                ";
+i=0
+function SlideStatus() {
+if(i<128) {
+	Napis=Napis.substring(1,Napis.length)+Napis.charAt(0);
+	status=Napis;
+	i=i+1;
+	setTimeout("SlideStatus()",60);
+	}
+else	Zegar();	
+}
+</SCRIPT>
+<SCRIPT LANGUAGE="JavaScript" type="text/javascript">
+function Zegar() {
+Teraz = new Date();
+
+Godzina=Teraz.getHours();
+Minuta=Teraz.getMinutes();
+if (Minuta<10) Minuta="0"+Minuta;
+Sekunda=Teraz.getSeconds();
+if (Sekunda<10) Sekunda="0"+Sekunda;
+Czas=Godzina+":"+Minuta+":"+Sekunda;
+
+Dzien=Teraz.getDate();
+Miesiac=Teraz.getMonth()+1;
+Rok=Teraz.getYear();
+if (document.layers) Rok+=1900;
+Data=Dzien+"."+Miesiac+"."+Rok;
+
+window.status="Time: "+Czas+"     Date: "+Data;
+Timer=setTimeout("Zegar()",1000);}
+</SCRIPT>
+
+</head>
+
+<frameset onLoad="SlideStatus()" rows="57,*">
+  <frame name="banner" scrolling="no" noresize src="header.htm" marginwidth="12" marginheight="10" target="contents" >
+  <frameset cols="186,*">
+    <frame name="contents"  src="contents.htm" target="main">
+    <frame name="main" src="group_page_main.htm" target="_self">
+  </frameset>
+  <noframes>
+  <body>
+
+  <p>This page uses frames, but your browser doesn't support them.
+
+  </body>
+  </noframes>
+</frameset>
+
+</html>

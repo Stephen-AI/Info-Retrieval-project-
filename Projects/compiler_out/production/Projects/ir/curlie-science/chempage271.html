@@ -1,0 +1,108 @@
+<BASE HREF="http://www.eecs.umich.edu/~qstout/abs/Design2000.html">
+<HTML><HEAD>
+<TITLE>Optimizing a Unimodal Response Function in Phase I/II Clinical Trials</TITLE>
+<meta name="description" content="Adaptive designs for optimizing a unimodal
+response function for binary variables.">
+<meta name="keywords" content="dose-response, adaptive sampling,
+competing failure modes, phase I/II,
+nonparametric, sequential design, dose-response,
+clinical trial, multiarm bandit, Gittins index,
+up and down, random walk, Polya urn,
+unimodal regression, design of experiments, bayesian, Bernoulli populations">
+</HEAD>
+
+<BODY bgcolor="#FFFFFF" vlink="#666666" link="#3366CC" text="#000000" alink="#996600">
+<font face="arial,verdana,helvetica">
+
+
+<center>
+<h3>Optimizing a Unimodal Response Function for Binary Variables</h3>
+<p>
+<A HREF="http://www.eecs.umich.edu/~jphard/">Janis Hardwick</A>
+<!-- New address: mailto:jphardwick@excite.com -->
+   &nbsp;&nbsp;&nbsp;&nbsp;
+<A HREF="http://www.eecs.umich.edu/~qstout/">Quentin F. Stout</A><br>
+   University of Michigan
+</center>
+<p>&nbsp;</p>
+
+
+<p>  <b>Abstract</b>:
+In some dose response settings in clinical trials, there are completing
+failure modes where low doses do not elicit a positive response, while
+overly large doses elicit a toxic response.
+Typically this occurs in trials known as phase I/II trials.
+In such settings, often the dose response curve which plots dose vs. 
+success (efficacious and non-toxic), is unimodal, i.e., it is 
+increasing and then decreasing.
+This then leads to the problem of finding the mode (highest point)
+of the curve. </p>
+
+<p> In this paper, 
+several sampling designs are examined for the problem of optimizing a
+response function from a set of Bernoulli populations, where the population
+means are assumed to have a strict unimodal structure.
+The designs are evaluated both on their efficiency in identifying a good
+population at the end of the experiment, and in their efficiency in sampling
+from good populations during the trial.
+</p>
+
+<p>  A new design, that adapts multiarm bandit approaches to this unimodal
+structure, is shown to be superior to the designs previously proposed.
+These earlier designs were based on
+ Polya urns, stochastic approximation, and up and down rules
+(random walks, Markov chains).
+The bandit design utilizes approximate Gittins indices and shape
+constrained regression to model the dependencies between the arms.
+Note that our design, and some of the others, are nonparametric,
+so they are quite
+flexible and do not make strong assumptions about the shape of the
+curve.
+</p>
+
+<p>  <b>Keywords</b>:
+<a href="../AdaptSample.html">response adaptive
+sampling</a>, phase I/II clinical trial, design of experiments,
+<a href="../AdaptSample.html#bandits">bandit
+problem</a>, 
+Gittins index,
+<a href="UniReg.html">unimodal regression</a>
+</p>
+
+<p>  <b><A HREF="../pap/Design2000.pdf">Complete paper</A></b>.
+This paper appears in <i>Optimum Design 2000</i>, A. Atkinson, B. Bogacka, and
+  A. Zhigljavsky, eds., Kluwer, 2001, pp. 195-208.
+</p>
+<p>&nbsp;</p>
+
+
+<b>Related Work</b>:
+This paper assumes that one can only observe a success or fail outcome,
+without knowing which failure mode occured.
+We have also developed efficient designs to locate the mode when one
+has the additional information as to
+<a href="Biom03.html">which failure mode(s) occured</a>.</p>
+ 
+<p>
+More generally, here is an explanation of
+<a href="../AdaptSample.html">
+response adaptive sampling</a>,
+and here are our relevant
+<A HREF="../papers.html#adapt">papers</a>.</p>
+
+<p>
+Here is a description of the algorithm used to rapidly 
+<a href="UniReg.html">compute unimodal regression</a> curves.
+
+
+<p>
+
+<hr>
+<table width=100%>
+<tr><td align=left><a href="../index.html"><img align=middle src="../qfshome.gif" alt="Quentin's Home"></td>
+  <td align=right><font size="-1">
+    Copyright &copy 2005-2017  Quentin F. Stout</td>
+</tr></table>
+
+</BODY>
+</HTML>

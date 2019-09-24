@@ -1,0 +1,4 @@
+InvertedIndex
+DocumentReference
+Document
+

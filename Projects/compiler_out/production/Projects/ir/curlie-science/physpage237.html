@@ -1,0 +1,922 @@
+<BASE HREF="http://www.plasmaphysics.org.uk/">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>Theoretical Principles of Plasma Physics and Atomic Physics</TITLE>
+<META name="description" content="Essential facts and formulae based on a kinematical view of plasmas and the interaction of radiation with atoms">
+<META http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<META name="robots" content="index, follow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style type="text/css">
+  body  {margin-left:5%; margin-right:5%; font-size:105%;}
+  h1 { font-size:170%; }
+  h2 { font-size:140%; }
+  h3 { font-size:105%; display:inline; }
+  p.ind  { margin-left:1.0cm; }
+  a.anch { color:#660033; font-weight:bold;}
+  .hd    { color:#660033; font-weight:bold;}
+  a:hover {color:#404665;}
+  a.nav {color:#505665; }
+  a.nav:hover {color:#660033;}
+  .button { background-color:#a99f8b; color:#505665; font-family:Arial, Helvetica, sans-serif; text-decoration:none; font-weight:bold;}
+  a.button:hover {color:#660033;}
+.text {color:#000000; text-decoration:none;}
+ img { max-width:100%; height:auto; }
+
+
+</style>
+
+<SCRIPT Language="Javascript" src="/scripts/backfwd.js" type="text/javascript"> </SCRIPT>
+
+
+</HEAD>
+
+
+<BODY   bgcolor="#B9AF9B"  text="#000000"  link="#660033"  alink="#330066"  vlink="#660033">
+
+<SCRIPT Language="Javascript" src="/scripts/header.js" type="text/javascript"> </SCRIPT>
+
+<A name="topp"></A>
+
+<DIV ALIGN="center" class="hd">
+<H1>Theoretical Principles of Plasma Physics and Atomic Physics</H1>
+<H2>Essential Facts and Formulae</H2><BR>
+</DIV>
+
+
+
+<DIV align="justify">
+
+<H3><FONT color="#660033">Note:</FONT> </H3> The content of this site derives largely from my own <A HREF="/research/">research</A> in theoretical space plasma physics and the theory of radiative processes (light-atom interaction). This was done mainly in the area of ionospheric physics, but should be applicable to other areas as well (e.g. astrophysics and solar physics). It concentrates on fundamental topics and formulae that, from my own experience, are vital for a correct understanding and solving of corresponding theoretical and practical problems in these areas. There is no claim though that this would be comprehensive and cover all aspects of space plasma- or atomic physics. Note also that in some cases the approach differs from corresponding treatments in standard textbooks where the latter can be shown to be flawed. It is indicated in the corresponding entry when this is the case.<br>
+Gaussian cgs-units are used unless otherwise stated; for conversion into Practical- (SI-) units see the <A HREF="convers.htm">Conversion Table</A>.<br>
+
+<A name="index"><FONT color="#B9AF9B">.</FONT></A>
+
+<NOSCRIPT>
+
+<DIV align="center">
+
+<TABLE border="0"  cellpadding="3"  class="button"><TR>
+<TD><A HREF="/search.htm" class="button"> Search Site </A></TD>
+</TR></TABLE>
+<BR>
+<TABLE border="0"  cellpadding="3"  class="button"><TR>
+<TD><A HREF="print/" class="button"> Print Version </A></TD>
+</TR></TABLE>
+
+</DIV>
+
+</NOSCRIPT>
+
+<p><H3><FONT color="#660033">INDEX:</FONT> </H3>
+<A HREF="#absorb">Absorption</A>,
+<A HREF="#atdecay">Atomic Decay Probability</A>,
+<A HREF="#auto">Auto- Ionization</A>,
+<A HREF="#bohreinst">Bohr- Einstein Radiation Formula</A>,
+<A HREF="#boltzdistr">Boltzmann Distribution</A>,
+<A HREF="#boltzequa">Boltzmann Equation</A>,
+<A HREF="#charge">Charge Screening</A>,
+<A HREF="#collfreq">Collision Frequency</A>,
+<A HREF="#contmed">Continuous Medium</A>,
+<A HREF="#contrad">Continuum Radiation</A>
+<A HREF="#coulomb">Coulomb Scattering</A>,
+<A HREF="#cyclo">Cyclotron Frequency</A>,
+<A HREF="#debshield">Debye Shielding</A>,
+<A HREF="#dbalance">Detailed Balance</A>,
+<A HREF="#doppler">Doppler Broadening</A>,
+<A HREF="#effquant">Effective Quantum Number</A>,
+<A HREF="#elcoll">Elastic Collisions</A>,
+<A HREF="#emiss">Emission Rate</A>,
+<A HREF="#enloss">Energy Loss</A>,
+<A HREF="#ebdrift">ExB- Drift</A>,
+<A HREF="#indemiss">Induced Emission</A>,
+<A HREF="#inelcoll">Inelastic Collisions</A>,
+<A HREF="#larmor">Larmor Frequency</A>,
+<A HREF="#levpop">Level Population</A>,
+<A HREF="#linebroad">Line Broadening</A>,
+<A HREF="#lte">LTE</A>,
+<A HREF="#maxwdistr">Maxwell Distribution</A>,
+<A HREF="#meanfree">Mean Free Path</A>,
+<A HREF="#natbroad">Natural Broadening</A>,
+<A HREF="#optdepth">Optical Depth</A>,
+<A HREF="#ostrength">Oscillator Strength</A>,
+<A HREF="#overlap">Overlap Integral</A>,
+<A HREF="#photoion">Photoionization</A>,
+<A HREF="#photons">Photons</A>,
+<A HREF="#planckrad">Planck Radiation Formula</A>,
+<A HREF="#plasma">Plasma</A>,
+<A HREF="#plasfluc">Plasma Field Fluctuations</A>,
+<A HREF="#plasfreq">Plasma Frequency</A>,
+<A HREF="#plasosc">Plasma Oscillations</A>,
+<A HREF="#plaspol">Plasma Polarization Field</A>,
+<A HREF="#pseudosc">Pseudo- Oscillator</A>,
+<A HREF="#radpress">Radiation Pressure</A>,
+<A HREF="#radrec">Radiative Recombination</A>,
+<A HREF="#radtrans">Radiative Transfer</A>,
+<A HREF="#rescat">Resonance Scattering</A>,
+<A HREF="#saha">Saha Equation</A>,
+<A HREF="#scattering">Scattering of Radiation</A>,
+<A HREF="#specshape">Spectral Line Shape</A>,
+<A HREF="#stark">Stark Broadening</A>,
+<A HREF="#transition">Transition Probability</A>.
+
+
+
+
+<p><br>
+
+
+
+<p><br><H3><A class="anch" name="absorb">Absorption:</A> </H3>
+Light can be absorbed by <A HREF="#photoion">Photoionization</A> of atoms (or photo-dissociation of molecules). In standard treatments, it is assumed that the cross section &sigma;<SUB>Ion</SUB> for this process is independent of the intensity of the radiation. However, for intensities below a certain threshold it is obvious that it will be reduced due to the disturbing influence of <A HREF="#plasfluc">Plasma Field Fluctuations</A>. One can adopt the efficiency factor
+<p class="ind">
+&beta;(E<SUB>w</SUB>)= E<SUB>w</SUB><SUP>2</SUP>/(E<SUB>w</SUB><SUP>2</SUP> +&Delta;{E}<SUB>p</SUB><SUP>2</SUP>) ,
+</p>
+<p>where E<SUB>w</SUB> is the electric field strength of the radiation with frequency <i>&nu;</i> (as given by the intensity I= E<SUB>w</SUB><SUP>2</SUP>/8&pi;) and &Delta;{E}<SUB>p</SUB>=&Delta;E<SUB>p</SUB><SUP>.</SUP><FONT size="+1">&radic;</FONT>(&zeta;<SUB><i>&nu;</i>,e</SUB><SUP>2</SUP>+&zeta;<SUB><i>&nu;</i>,I</SUB><SUP>2</SUP>)  the effective plasma fluctuation field (see <A HREF="#plasfluc">Plasma Field Fluctuations</A> and
+<A HREF="#stark">Stark Broadening</A> with T<SUB>n</SUB> replaced by 1/(2&pi; <i>&nu;</i>)).
+<p>This leads to the circumstance that the <A HREF="#optdepth">Optical Depth</A> with regard to photoionization is not proportional to the column density any more but has to be determined through the integral
+<p class="ind">
+ &tau;(s)= &sigma;<SUB>Ion</SUB>(0) <SUP>.</SUP><SUB>0</SUB><FONT size="+2">&int;</FONT><SUP><SUP><SUP>s</SUP></SUP></SUP>ds' N(s')<SUP>.</SUP>&beta;(E<SUB>w</SUB>(s')) .
+</p>
+<p> Because generally the intensity I (i.e. E<SUB>w</SUB><SUP>2</SUP>) is subject to the <b>Exponential Absorption Law</b>
+<p class="ind">
+ I(s)= I<SUB>0</SUB><SUP>.</SUP>e<SUP>-&tau;(s)</SUP> ,
+</p>
+<p>the optical depth is determined by an integral equation which can be solved numerically (see <A HREF="/research/nlabsorb.htm">/research/nlabsorb.htm</A>).
+
+<p><A HREF="#index">BACK TO INDEX</A>
+
+
+
+
+<p><br><H3><A class="anch" name="atdecay">Atomic Decay Probability:</A> </H3>
+Atoms in excited states are not stable but decay to lower levels more or less rapidly. For dipole allowed transitions the problem can be treated as a radiatively damped oscillator with an amplitude given by the quantum mechanical <A HREF="#overlap">Overlap Integral</A> &lt;r&gt;<SUB>i,k</SUB> for the lower state i=(m,<i>l</i>') and the upper state k=(n,<i>l</i>) involved. By equating the decay rate of the energy of a classical oscillator of frequency <i>&nu;</i><SUB>i,k</SUB> with the quantum mechanical decay rate A<SUB>i,k</SUB><SUP>.</SUP>h<SUP>.</SUP><i>&nu;</i><SUB>i,k</SUB> (h=Planck constant), one obtains for the atomic decay coefficient
+<p class="ind">
+A<SUB>i,k</SUB>= 16&pi;<SUP>.</SUP>e<SUP>4</SUP>/(3c<SUP>3</SUP>h)<SUP>.</SUP><i>&nu;</i><SUB>i,k</SUB><SUP>3</SUP><SUP>.</SUP>&lt;r&gt;<SUB>i,k</SUB><SUP>2</SUP> .
+</p>
+<p>(one should note that this expression is smaller by a factor 1/4 compared to the usual value quoted in the literature which is however derived inconsistently from statistical equilibrium considerations).
+<p>In general, &lt;r&gt;<SUB>i,k</SUB> can only be evaluated numerically, but for large values of the principal <A HREF="#effquant">effective quantum numbers</A> m and n it can be approximated by a power law in terms of these parameters, with the result
+<p class="ind">
+A<SUB>m,n</SUB>= 1.3<SUP>.</SUP>10<SUP>9</SUP><SUP>.</SUP>m<SUP>-1.8</SUP><SUP>.</SUP>(n-1)<SUP>-3.2</SUP>  &nbsp;&nbsp; [sec<SUP>-1</SUP>]     &nbsp;&nbsp; (m,n &gt;&gt;1)
+</p>
+<p>A numerical summation over all lower levels m reveals furthermore that the
+<b>Total Average Atomic Decay Coefficient</b> (i.e. the inverse average lifetime) of level n can be approximated by
+<p class="ind">
+A<SUB>n</SUB>= 1.1<SUP>.</SUP>10<SUP>9</SUP><SUP>.</SUP>(n-1)<SUP>-3.6</SUP> &nbsp;&nbsp; [sec<SUP>-1</SUP>] &nbsp;&nbsp; (n &gt;&gt;1)
+</p>
+<p>(neglection of the angular momentum quantum number <i>l</i> in these approximations may lead to an error up to a factor 2 in the absolute values for A<SUB>m,n</SUB> and A<SUB>n</SUB>, the relative values for fixed <i>l</i> should be accurate to within a few percent however).<p></p>
+<b>Note</b>: the above formula for A<SUB>m,n</SUB> assumes of course that the transition is allowed by the <i>l</i>-selection rule &Delta;<i>l</i>=&plusmn;1. It should not be misunderstood as an expression averaged over <i>l</i>. This is not so much because of the <i>l</i>-dependence of the decay coefficient (which is quite weak and has therefore not been explicitly considered here) but because an electron with angular momentum <i>l</i>&gt;m is unable to decay to level m due to the <i>l</i>-selection rule. In order  to get the <i>l</i>-averaged decay coefficient, one would have to apply a corresponding correction factor  (which obviously also depends on the relative population of the angular momentum substates of the upper level; see for instance the last paragraph regarding <A HREF="#radrec">Radiative Recombination</A>).
+
+<p><A HREF="#index">BACK TO INDEX</A>
+
+
+
+
+<p><br><H3><A class="anch" name="auto">Auto- Ionization:</A> </H3>
+Contrary to established opinion, atoms or molecules can ionize each other through collisions even if their translational energy is smaller than the ionization energy. This is because bound electrons can collide with each other when two atoms come together and one of these may gain enough energy in the process to become ionized, leaving the other with correspondingly less energy in the atom (this is a purely classical process and does not affect the quantum mechanical states the electrons occupy; one has to remember that the quantum mechanical wave function for a given energy is finite everywhere in space and allows the electron therefore to have any classical energy).<br>
+This process should be strongly temperature dependent, having its highest efficiency if the corresponding velocity of the approaching atoms is equal to the velocity of the bound electrons (i.e. about 10<SUP>8</SUP> cm/sec). For smaller velocities the electron orbits will have time to adjust themselves mutually to the field of the other atom and ionizing collisions will become less likely.<br>
+The proposed process could be the explanation for the relatively high plasma density of the nighttime F- region of the earth's ionosphere. This would lead to an effective cross section of 10<SUP>-20</SUP> cm<SUP>2</SUP> in this case (which is characterized by atom velocities of 10<SUP>5</SUP> cm/sec).<br>
+In general this mechanism should result in a significant degree of ionization even in the absence of any UV- radiation sources, which should be highly relevant for some astrophysical problems like star formation (see <A HREF="/research/#A8">/research/#A8</A>).
+
+<p><A HREF="#index">BACK TO INDEX</A>
+
+
+
+
+<p><br><H3><A class="anch" name="bohreinst">Bohr- Einstein Radiation Formula:</A> </H3>
+The internal electronic energy changes of an atom are connected to the frequency of the corresponding emitted radiation by the formula  <FONT size="+2">&epsilon;</FONT>=h<SUP>.</SUP><i>&nu;</i>, with h the Planck constant. Usually, this equation is assumed to determine uniquely the resulting intensity of the radiation. However, there is theoretical and observational evidence that this assumption is only valid if the broadening of the spectral line due to plasma field fluctuations (Stark broadening) is small compared to the natural broadening. In general, one has to assume a relationship in the form
+<p class="ind">
+<FONT size="+2">&epsilon;</FONT><SUB>rad</SUB>=(1+&Delta;<i>&nu;</i><SUB>m,n</SUB><SUP>d</SUP>/A<SUB>m,n</SUB>)<SUP>.</SUP>h<SUP>.</SUP><i>&nu;</i> ,
+</p>
+<p>where &Delta;<i>&nu;</i><SUB>m,n</SUB><SUP>d</SUP> is the dynamical <A HREF="#stark">Stark Broadening</A> due to the plasma field fluctuations and A<SUB>m,n</SUB> the <A HREF="#atdecay">Atomic Decay Probability</A> (natural broadening). This could for instance resolve the discrepancy if one wants to explain the radiative energy output of the present day sun solely through the gravitational contraction of an initial gas cloud (see <A HREF="/research/#A5">/research/#A5</A>).
+
+<p><A HREF="#index">BACK TO INDEX</A>
+
+
+
+
+<p><br><H3><A class="anch" name="boltzdistr">Boltzmann Distribution:</A> </H3>
+Statistical Physics proves that in thermodynamic equilibrium (i.e. in a collisionally determined closed system) the volume density of particles decreases exponentially with increasing energy,i.e.
+<p class="ind">
+<i>f</i>(<FONT size="+2">&epsilon;</FONT>)= exp(-<FONT size="+2">&epsilon;/&epsilon;</FONT><SUB>0</SUB>) .
+</p>
+<p>The energy distribution of electrons within an atom is generally assumed to behave in this way.<br>
+However, in most practical cases collisions are quite insignificant compared to radiative processes which are determined by the lifetime of the individual atomic levels. As a consequence, the distribution function has very little to do with a Boltzmann- distribution (see for instance <A HREF="/research/levpop.htm">/research/levpop.htm</A>).<br>
+(see also
+<A HREF="#maxwdistr">Maxwell Distribution</A>,
+<A HREF="#saha">Saha- Equation</A>,
+<A HREF="#lte">LTE</A>).
+
+<p><A HREF="#index">BACK TO INDEX</A>
+
+
+
+
+<p><br><H3><A class="anch" name="boltzequa">Boltzmann Equation:</A> </H3>
+As a generalized form of the Continuity Equation, the Boltzmann equation gives an exact description for the density of a plasma constituent both in real and velocity space. It is obtained by equating the total time differential for the density distribution function n(<b>r</b>,<b>v</b>,t) with the local production and loss rates, i.e.
+<p class="ind">
+&part;/&part;t(n(<b>r</b>,<b>v</b>,t)) +<b>v</b><SUP>.</SUP>grad<SUB><b>r</b></SUB>(n(<b>r</b>,<b>v</b>,t)) +<b>F</b>/M<SUP>.</SUP>grad<SUB><b>v</b></SUB>(n(<b>r</b>,<b>v</b>,t)) = q<SUP>Ion</SUP>(<b>r</b>,<b>v</b>,t) -<i>l</i><SUP>Rec</SUP>(<b>r</b>,<b>v</b>,t) +C(<b>r</b>,<b>v</b>,t) .
+</p>
+<p>The steady-state (time independent) equation is obtained by setting &part;/&part;t(n(<b>r</b>,<b>v</b>,t))=0. In this case,  the production and loss rates due to convection (transport) in geometrical and velocity space (where <b>F</b> contains all external forces on the particle with mass M, i.e. electric, magnetic and gravitational forces), are exactly balanced by the local production and loss rates due to ionization (q<SUP>Ion</SUP>), recombination (<i>l</i><SUP>Rec</SUP>) and velocity changing collisions (C) (in general, these last three terms do also depend on  n(<b>r</b>,<b>v</b>,t) which has not been written here).<br>
+The ionization and recombination terms are usually neglected in standard treatments. However, they are vitally important as they are responsible for the inhomogeneities of the plasma density and affect therefore the velocity distribution function through the convection terms in the equation (see link below).<br>
+Also, one should note that the usual formulation in terms of the normalized distribution function <i>f</i>(<b>r</b>,<b>v</b>,t)= n(<b>r</b>,<b>v</b>,t)/N(<b>r</b>,t) (with N(<b>r</b>,t) = &int;d<SUP>3</SUP>v n(<b>r</b>,<b>v</b>,t) ) is in general not sufficient because
+of the dependence of N(<b>r</b>,t) on <b>r</b>.<br>
+For the one-dimensional case, the Boltzmann equation can be written as a first order linear differential equation in either the spatial or velocity variable. Formal solution yields a non-linear integral equation which can then be solved numerically (see <A HREF="/research/#A6">/research/#A6</A> for an application to ion diffusion in the earth's ionosphere).
+
+<p><A HREF="#index">BACK TO INDEX</A>
+
+
+
+
+<p><br><H3><A class="anch" name="charge">Charge Screening:</A> </H3>
+see <A HREF="#debshield">Debye Shielding</A>.
+
+<p><A HREF="#index">BACK TO INDEX</A>
+
+
+
+
+<p><br><H3><A class="anch" name="collfreq">Collision Frequency:</A> </H3>
+The concept of a collision frequency is probably the most important one in plasma physics (and the physics of gases in general) when it comes to assessing the significance of the individual physical processes. It is defined as
+<p class="ind">
+<i>&nu;</i><SUB>c</SUB>= N<SUP>.</SUP>&sigma;<SUB>c</SUB>(v)<SUP>.</SUP>v ,
+</p>
+<p>where N is the volume density of the background medium and &sigma;<SUB>c</SUB>(v)
+the cross section of the particle with velocity v for the type of collision being considered (e.g. Coulomb collisions, radiative recombination, collisional excitation).
+<p>Despite the random nature of collisions, <i>&nu;</i><SUB>c</SUB> can be considered as an exact quantity because the large number of particles usually assures that the average is very sharply defined within relatively short time scales and small volumes. This allows therefore an exact assessment of the importance of the individual collisional processes and also a comparison with the physical time scales like the <A HREF="#atdecay">Atomic Decay Probability</A> or <A HREF="#plasfreq">Plasma Frequency</A>.<br>
+(see also
+<A HREF="#meanfree">Mean Free Path</A>,
+<A HREF="#levpop">Level Population</A>,
+<A HREF="#plasma">Plasma</A>).
+
+<p><A HREF="#index">BACK TO INDEX</A>
+
+
+
+
+<p><br><H3><A class="anch" name="contmed">Continuous Medium:</A> </H3>
+The usual description of the <A HREF="#scattering">Scattering of Radiation</A> is based on the assumption of scattering by individual particles. However, this concept breaks down if the medium becomes 'continuous', that is if the distance between the scattering particles becomes less than the wavelength of the radiation (analogous to the specular reflection from a surface). The usual effects of scattering (i.e. spatial redistribution of radiation) disappear in this case as the scattering phase function becomes sharply peaked into the forward direction. Density gradients of the medium will then result in a quasi- refraction effect (the refraction of light in the earth's atmosphere is likely to be of this type).<br>
+There is also evidence that this aspect is of relevance for collisional excitation of atomic states by electrons or ions as the relevant cross section is apparently enhanced if the medium becomes continuous with regard to the wavelength of the equivalent radiative transition (see <A HREF="/research/striapot.htm">/research/striapot.htm</A>).
+
+<p><A HREF="#index">BACK TO INDEX</A>
+
+
+
+
+<p><br><H3><A class="anch" name="contrad">Continuum Radiation:</A> </H3>
+Various processes are listed in the textbook literature that are capable of producing a radiation continuum. Of these, the free-free processes (which are thought to be responsible for Bremsstrahlung and Synchrotron Radiation), can be discounted as fictitious: the emission of radiation can not be explained in a logically consistent manner by the acceleration  of charged particles, as it would make the emission dependent on the state of motion of the observer. The dynamic changes associated with the emission would therefore become a subjective quantity, which is logically not acceptable in the same sense as the mutual force between two objects can (by definition) not depend on the state of motion of the observer (principle of relativity). It can furthermore be ruled out that the physical objects which cause the acceleration provide a preferred reference frame, because any force is either a function of the coordinates alone (coulomb force, gravitational force) or a function of the coordinates and the velocity (Lorentz force). The overall acceleration would therefore still be ambiguous depending on the state of motion of each of the interacting particles due to the presence of third bodies.<br>
+The only true continuum is produced by the recombination of electrons with ions, which results in a continuum according to the energy characteristics of the free electron spectrum and the recombination cross section (<A HREF="https://www.physicsmyths.org.uk/synchrotron.htm">synchrotron radiation</A> could well be interpreted in this sense).<br>
+However, the discrete atomic  spectrum may form a quasi- continuum if the lines are sufficiently broadened. This happens in particular for high plasma densities and/or highly excited atomic states . There is theoretical and observational evidence that under these conditions the 'continuum' of blended lines is many orders of magnitude more intense than the actual recombination continuum (see for instance <A HREF="/research/#A5">/research/#A5</A>).
+(for the latter aspect see also
+<A HREF="#bohreinst">Bohr-Einstein Radiation Formula</A>).
+
+<p><A HREF="#index">BACK TO INDEX</A>
+
+
+
+
+<p><br><H3><A class="anch" name="coulomb">Coulomb Scattering:</A> </H3>
+Integration of the well known Rutherford formula over the scattering angle leads to the <b>Total Cross Section</b> for Coulomb Scattering
+<p class="ind">
+&sigma;<SUB>c</SUB>(E)= 5/16<SUP>.</SUP>Z<SUP>2</SUP><SUP>.</SUP>e<SUP>4</SUP>/<FONT size="+2">&epsilon;</FONT><SUP>2</SUP> ,<br>
+</p>
+<p>with <FONT size="+2">&epsilon;</FONT> the energy of the scattered particle in the center of mass system, e its charge and Z the charge number of the target particle.<br>
+This form is different from the usual result quoted in the literature which contains the additional Coulomb- Logarithm factor. The latter can however be shown to be due to an incorrect <A HREF="#enloss">Energy Loss</A>- weighting function in the integration of the Rutherford formula (<A HREF="coulomb.htm">more</A>).
+<p><A HREF="#index">BACK TO INDEX</A>
+
+
+
+
+
+<p><br><H3><A class="anch" name="cyclo">Cyclotron Frequency:</A> </H3>
+see <A HREF="#larmor">Larmor Frequency</A>.
+
+<p><A HREF="#index">BACK TO INDEX</A>
+
+
+
+
+<p><br><H3><A class="anch" name="debshield">Debye Shielding:</A> </H3>
+The usual theoretical treatment of Debye Shielding (charge screening) of a test charge Q in plasmas obtains the potential
+<p class="ind">
+V(r)= Q/r<SUP>.</SUP>exp(-r/&lambda;<SUB>D</SUB>),
+</p>
+<p>with
+<p class="ind">
+&lambda;<SUB>D</SUB>= <FONT size="+1">&radic;</FONT>(kT<SUB>e</SUB>/4&pi;e<SUP>2</SUP>N<SUB>p</SUB>)
+</p>
+<p>the <b>Debye Length</b> for a plasma with density N<SUB>p</SUB> and electron temperature T<SUB>e</SUB>.
+<p>This result is merely academic because the assumption of a Boltzmann energy distribution in the Debye-H&uuml;ckel theory implies a collisionally dominated isothermal situation where the pressure gradient exactly cancels the force due to the electric field. This non-vanishing potential is therefore the consequence of the implicit assumption of  collisions in Thermodynamic Equilibrium  preventing the purely electrostatic screening which would hold in a collisionless plasma. However, collisions (and the related pressure forces) should only be relevant in a plasma if the <A HREF="#collfreq">collision frequency</A> is higher than the <A HREF="#plasfreq">plasma frequency</A> (which determines the timescale for the electrostatic re-arrangement of charges). Unless one is dealing with a very low degree of ionization, this condition is only satisfied for extremely high plasma densities as encountered in solids, fluids or the interior of the sun.<br>
+It is clear that in almost all cases of practical interest, a force free steady-state situation can only exist if the  electric field is exactly zero within the whole plasma. This is obviously only possible if the test charge is directly neutralized at its surface by charges that have been attracted from the plasma. Charge neutrality within the volume is hereby conserved by the electrons slightly contracting towards the center, which leaves therefore the positive charge excess at the surface of the plasma volume (as one would expect for a conducting medium).<br>
+In addition, one should note that for near collisionless plasmas not only will the assumption of TE be invalid (as indicated above), but also the approximation of a <b>Local</b> Thermodynamic Equilibrium (LTE), i.e. the velocity distribution function may become non-Maxwellian due to diffusion effects in the presence of spatial inhomogeneities. This in turn will produce self-consistent electric fields which serve to adjust the electron flux balance as to maintain local charge neutrality. (see <A HREF="/research/#A6">/research/#A6</A>).
+These plasma polarization fields are obviously not being screened by the plasma, as they are themselves the result of the dynamical imbalance between electrons and ions. In general, a consideration of the force balance is therefore not appropriate, but one has to consider the flux balance of particles (this is how one treats for instance the well known problem of spacecraft charging).<br>
+(see also
+<A HREF="#lte">LTE</A>,
+<A HREF="#maxwdistr">Maxwell Distribution</A>).
+
+<p><A HREF="#index">BACK TO INDEX</A>
+
+
+
+
+<p><br><H3><A class="anch" name="dbalance">Detailed Balance:</A> </H3>
+All physical steady-state situations are by definition characterized by an equality between production and loss processes. A detailed balance is the most general form of an equilibrium as it assumes that the latter holds for each point in phase-space separately. Examples for a detailed balance equation are the <A HREF="#boltzequa">Boltzmann Equation</A> and the equation for the atomic <A HREF="#levpop">Level Population</A> (in contrast, for both of these cases <A HREF="#lte">LTE</A> -models with their given energy distribution will generally yield invalid results).<br>
+One should note that a detailed balance equation does, in contrast to LTE, in general not describe a closed system but assumes certain given input and output rates. For correct results it is obviously important to make sure that these are true sources and sinks for the particle or radiation densities, i.e. that these processes do in reality not significantly couple back into the system.
+
+<p><A HREF="#index">BACK TO INDEX</A>
+
+
+
+
+<p><br><H3><A class="anch" name="doppler">Doppler Broadening:</A> </H3>
+Line radiation emitted or scattered by an atom is shifted in frequency due to the Doppler effect. As the latter is proportional to the velocity of the atom, the Doppler broadening reflects therefore directly the velocity distribution function of the atoms. For collisionally dominated plasmas, this can be taken as identical with the <A HREF="#maxwdistr">Maxwell Distribution</A>, but in general it can depart considerably from this situation and one would need to solve the <A HREF="#boltzequa">Boltzmann Equation</A> for the correct distribution function (see <A HREF="/research/#A6">/research/#A6</A> for the problem of the ion velocity distribution function in the earth's ionosphere).
+
+<p><A HREF="#index">BACK TO INDEX</A>
+
+
+
+<p><br><H3><A class="anch" name="effquant">Effective Quantum Number:</A> </H3>
+For all neutral atoms in their ground state, the outer electrons have about the same distance from the nucleus (1.5 Bohr radii). In an approximate sense, one can therefore identify this with the ground state of hydrogen and assign to it the effective quantum number n=1.
+
+<p><A HREF="#index">BACK TO INDEX</A>
+
+
+
+<p><br><H3><A class="anch" name="elcoll">Elastic Collisions:</A> </H3>
+An elastic collision between two particles conserves both the total energy and momentum. The change of these values for each particle depends on their masses (see <A HREF="#enloss">Energy Loss</A>). Because of this, the energy transfer between electrons and ions can usually be neglected. Electron-electron and ion-ion collisions on the other hand are, at least in certain energy bands, often negligible compared to <A HREF="#inelcoll">Inelastic Collisions</A> or <A HREF="#radrec">Radiative Recombination</A> for the energy balance of the plasma (the relative importance of these processes depends on the corresponding <A HREF="#collfreq">Collision Frequencies</A>).<br>
+Elastic collisions of plasma electrons with bound atomic electrons can lead to collisional ionization and can therefore be an important factor for the atomic <A HREF="#levpop">Level Population</A>. It can also interfere with <A HREF="#radrec">Radiative Recombination</A>.<br>
+All type of collisions tend to inhibit collective processes in plasmas (see under <A HREF="#plasma">Plasma</A>).<br>
+
+<p><A HREF="#index">BACK TO INDEX</A>
+
+
+
+<p><br><H3><A class="anch" name="emiss">Emission Rate:</A> </H3>
+The intensity of radiation emitted during a discrete atomic transition is determined by the <A HREF="#levpop">Level Population</A> and the <A HREF="#atdecay">Atomic Decay Probability</A>. However, there is observational evidence that this emission is enhanced if the line broadening due to plasma field fluctuations exceeds the natural line broadening (see <A HREF="#bohreinst">Bohr- Einstein Radiation Formula</A>, <A HREF="#stark">Stark Broadening</A>). For free-bound transitions this enhancement does not occur and the intensity of the corresponding recombination radiation is directly determined by the plasma density and the associated <A HREF="#radrec">Radiative Recombination</A> rate into the atomic levels.
+
+<p><A HREF="#index">BACK TO INDEX</A>
+
+
+
+<p><br><H3><A class="anch" name="enloss">Energy Loss:</A> </H3>
+The relative energy transfer during elastic scattering of two particles with masses m<SUB>1</SUB> and m<SUB>2</SUB> (m<SUB>2</SUB> initially resting) by the angle &Theta; is (independently of the interaction potential) given by
+<p class="ind">
+&Delta;(&Theta;)= 4m<SUB>1</SUB>m<SUB>2</SUB>/( m<SUB>1</SUB>+m<SUB>2</SUB>)<SUP>2</SUP><SUP>.</SUP>sin<SUP>2</SUP>(&Theta;/2) .
+</p>
+<p>This form is normally used as a weighting function when integrating the Rutherford formula to obtain the total cross section for Coulomb scattering. However, this procedure neglects a further factor sin(&Theta;/2) which describes the density of particles hitting the surface of a spherical target and provides the geometrical connection between the mono-directional incident particle beam and the spherical scattering surface (this connection is ignored in the literature throughout, which invalidates in these cases the interpretation of the scattering angle as an independent variable; see (<A HREF="coulomb.htm">Coulomb Collision Cross Section</A>).  With the additional factor, the total cross section for <A HREF="#coulomb">Coulomb Scattering</A> is finite and the <b>Total Relative Energy Loss</b> becomes
+<p class="ind">
+&Delta;= 8/(5&pi;)<SUP>.</SUP>m<SUB>1</SUB><SUP>.</SUP>m<SUB>2</SUB>/(m<SUB>1</SUB>+m<SUB>2</SUB>)<SUP>2</SUP> =<br>
+&nbsp;&nbsp; = 8/(5&pi;)<SUP>.</SUP>m<SUB>1</SUB>/m<SUB>2</SUB>   &nbsp;&nbsp; if &nbsp; m<SUB>1</SUB>&lt;&lt;m<SUB>2</SUB>
+</p>
+(for further interest see also the exact and general solutions for the <A HREF="collision2d.htm">Elastic Collision in 2 Dimensions</A> and the <A HREF="collision3d.htm">Elastic Collision in 3 Dimensions</A>).
+<p><A HREF="#index">BACK TO INDEX</A>
+
+
+
+<p><br><H3><A class="anch" name="ebdrift">ExB- Drift:</A> </H3>
+The motion of an individual charged particle in combined static and electric fields can be described by a cycloidal trajectory with a uniform drift into the direction of ExB. However, this result neglects the presence of other charges that will react to any externally applied field until the latter is cancelled by the resultant charge displacement field (in a collisionless plasma). As the total electric field inside the plasma volume is therefore 0 (the potential drop due to the applied field occurs at the boundaries), the electron orbit is in this case therefore still given by the usual Larmor circle and no drift occurs. Only in collisional plasmas (i.e. collision frequency &gt; plasma frequency) would an ExB drift be possible as here the shielding is only imperfect due to the additional pressure force (see <A HREF="#debshield">Debye Shielding</A>).
+
+<p><A HREF="#index">BACK TO INDEX</A>
+
+
+
+
+<p><br><H3><A class="anch" name="indemiss">Induced Emission (Absorption):</A> </H3>
+Atomic Physics distinguishes two different mechanisms for radiative transitions between two levels i,k of an atom: a) spontaneous emission that occurs with a probability given by the <A HREF="#atdecay">Atomic Decay Constant</A> A<SUB>i,k</SUB>, and  b) induced emission or absorption due to an external radiation field. Resonant scattering is for instance usually considered as an absorption of a photon which lifts an electron to a higher energy level followed by the re- emission of a photon when the electron falls spontaneously back again. However, both a theoretical consideration and experimental evidence shows that this picture of a two-step process is not correct and that resonant scattering has to be described as a coherent process (i.e. a forced oscillator with damping constant A<SUB>i,k</SUB>). Unlike photoionization or excitation by electron/ion impact, scattering involves therefore no atomic energy changes as no work as being done.<br>
+The existence of an induced absorption process is therefore implausible, as the same physical cause (i.e. the external radiation field) can not result in two different effects. By means of symmetry arguments, this questions also the reality of the induced emission process.<br>
+(see also
+<A HREF="#scattering">Scattering of Radiation</A>).
+
+<p><A HREF="#index">BACK TO INDEX</A>
+
+
+
+
+<p><br><H3><A class="anch" name="inelcoll">Inelastic Collisions:</A> </H3>
+An inelastic collision is a quantum mechanical process in which classical energy and momentum is not conserved as kinetic energy is turned into atomic (or molecular) excitation energy. Established theory assumes that for excitation to take place the particle has to exceed the energy of the transition in question. However, experimental evidence shows that collisional excitation is a resonant process characterized by a sharply peaked cross section identical with the cross section for resonant scattering of light for the same transition (see <A HREF="/research/reschem.htm">/research/reschem.htm</A>). The usual non-resonant behavior of atomic excitation is therefore at best a by-product of the actual resonant process.<br>
+Collisional excitation of hydrogen by protons is likely to be the decisive cooling process needed for star- and solar system formation and also for the low temperature of the photosphere of the present day sun (see <A HREF="/research/#A8">/research/#A8</A> and <A HREF="/research/#A9">/research/#A9</A> respectively).
+
+<p><A HREF="#index">BACK TO INDEX</A>
+
+
+
+
+<p><br><H3><A class="anch" name="larmor">Larmor Frequency:</A> </H3>
+The period of revolution of a charge q with mass m on its Larmor circle in the magnetic field B is characterized by the Larmor frequency
+<p class="ind">
+&omega;<SUB>B</SUB>= qB/mc ,
+</p>
+<p>and the associated <b>Larmor Radius</b> is determined by
+<p class="ind">
+r<SUB>B</SUB>= v/&omega;<SUB>B</SUB> ,
+</p>
+<p>where v is the velocity of the particle perpendicular to the magnetic field.
+
+<p><A HREF="#index">BACK TO INDEX</A>
+
+
+
+
+<p><br><H3><A class="anch" name="levpop">Level Population:</A> </H3>
+In <A HREF="#dbalance">Detailed Balance</A> equilibrium,  the density of atoms in the excited state n is given by the ratio of the production rate q<SUB>n</SUB> and the loss (depopulation) rate <i>&nu;</i><SUB>n</SUB><SUP>loss</SUP>, i.e.
+<p class="ind">
+N<SUB>n</SUB>= q<SUB>n</SUB>/<i>&nu;</i><SUB>n</SUB><SUP>loss</SUP> ,
+</p>
+<p>where q<SUB>n</SUB> consists of the primary production rate due to <A HREF="#radrec">Radiative Recombination</A> and a secondary rate due to cascading from higher levels, i.e.
+<p class="ind">
+q<SUB>n</SUB>= q<SUB>n</SUB><SUP>Rec</SUP>+ q<SUB>n</SUB><SUP>casc</SUP> .
+</p>
+<p>q<SUB>n</SUB><SUP>Rec</SUP> is determined by the plasma density and the radiative recombination cross section while q<SUB>n</SUB><SUP>casc</SUP> is given by the population of levels higher than n and their <A HREF="#atdecay">Atomic Decay Probability</A>.
+<p>The loss frequency on the other hand is given by
+<p class="ind">
+<i>&nu;</i><SUB>n</SUB><SUP>loss</SUP>= A<SUB>n</SUB> +<i>&nu;</i><SUB>n</SUB><SUP>c</SUP> + <i>&nu;</i><SUB>n</SUB><SUP>*</SUP> ,
+</p>
+<p>where A<SUB>n</SUB> is the total decay probability to lower levels, <i>&nu;</i><SUB>n</SUB><SUP>c</SUP> the <A HREF="#collfreq">Collision Frequency</A> for collisions with plasma electrons of sufficiently high energy to enable ionization from level n, and <i>&nu;</i><SUB>n</SUB><SUP>*</SUP> the photoionization frequency (if applicable).
+<br>(see <A HREF="/research/levschem.htm">/research/levschem.htm</A> for a schematic illustration of these processes and <A HREF="/research/levpop.htm">/research/levpop.htm</A> for numerical results applicable to the earth's ionosphere).
+
+<p><A HREF="#index">BACK TO INDEX</A>
+
+
+
+
+<p><br><H3><A class="anch" name="linebroad">Line Broadening:</A> </H3>
+see <A HREF="#natbroad">Natural Broadening</A>, <A HREF="#doppler">Doppler Broadening</A>, <A HREF="#stark">Stark Broadening</A>.
+
+<p><A HREF="#index">BACK TO INDEX</A>
+
+
+
+
+<p><br><H3><A class="anch" name="lte">LTE:</A> </H3>
+Local Thermodynamic Equilibrium (LTE) is usually assumed for a gas if collisions dominate other physical processes. In this case the local velocity and energy distribution of particles is given by the <A HREF="#maxwdistr">Maxwell Distribution</A>  and <A HREF="#boltzdistr">Boltzmann Distribution</A> respectively and a temperature can be defined (which in contrast to Thermodynamic Equilibrium (TE) can vary spatially however).<br>
+For anything but the highest gas densities, atomic processes (e.g.  radiative transitions) and/or dynamical effects can be much more important than elastic collisions however and the assumption of LTE is not justified anymore within the whole energy range.<br>
+(see also
+<A HREF="#saha">Saha Equation</A>,
+<A HREF="#planckrad">Planck Radiation Formula</A>).
+
+<p><A HREF="#index">BACK TO INDEX</A>
+
+
+
+
+<p><br><H3><A class="anch" name="maxwdistr">Maxwell Distribution:</A> </H3>
+The velocity distribution of a collisionally dominated gas can strictly be shown to be given by the Maxwell distribution
+<p class="ind">
+<i>f</i>(v)= 1/&radic;&pi;/v<SUB>0</SUB><SUP>.</SUP>exp[-(v/v<SUB>0</SUB>)<SUP>2</SUP>]
+</p>
+<p>(which corresponds to the <A HREF="#boltzdistr">Boltzmann Distribution</A> exp(-<FONT size="+2">&epsilon;</FONT>/<FONT size="+2">&epsilon;</FONT><SUB>0</SUB>) if formulated in terms of the energy).
+<br>For most practical applications this form is being taken for granted without further justification. However, in many cases the condition of elastic collisions dominating all other processes (<A HREF="#lte">LTE</A>) is not even approximately fulfilled. This holds for instance for the physics of the ionosphere and space plasmas where recombination and collisional excitation (i.e. radiative processes) are of far greater importance in particular for the electrons. Not only would the assumption of a Maxwell distribution yield here quantitatively wrong results, but even  prevent a correct qualitative understanding of the physics involved.<BR>
+Even in the presence of elastic collisions only, the resultant equilibrium distribution can be different from a Maxwell distribution, namely if the situation is not isotropic.<BR>
+For more see the page <A HREF="/maxwell.htm">Collisional Relaxation of Gases and Maxwell Velocity Distribution</A>.
+
+<p><A HREF="#index">BACK TO INDEX</A>
+
+
+
+
+<p><br><H3><A class="anch" name="meanfree">Mean Free Path:</A> </H3>
+Together with the <A HREF="#collfreq">Collision Frequency</A>, the mean free path is a statistical quantity which allows an assessment of the importance of collisional processes in plasmas (in this case the spatial scales involved). It is defined as
+<p class="ind">
+L<SUB>c</SUB>= 1/(N<SUP>.</SUP>&sigma;<SUB>c</SUB>)
+</p>
+<p>A mean free path consideration shows for instance that the striations in glow discharges can not be explained by generally accepted values for the collisional excitation cross section (see <A HREF="/research/striatn.htm">/research/striatn.htm</A>).
+
+<p><A HREF="#index">BACK TO INDEX</A>
+
+
+
+
+<p><br><H3><A class="anch" name="natbroad">Natural Broadening:</A> </H3>
+The spontaneous transition between two atomic states i and k can be described as an oscillator with frequency <i>&nu;</i><SUB>i,k</SUB> and damping constant A<SUB>i,k</SUB> (see <A HREF="#atdecay">Atomic Decay Probability</A>). Solution of the oscillator equation yields the characteristic <b>Lorentz Line Shape</b>
+<p class="ind">
+&phi;<SUB>L</SUB>(<i>&nu;</i>)= A<SUB>i,k</SUB>/4&pi;<SUP>2</SUP>/[(<i>&nu;</i>-<i>&nu;</i><SUB>i,k</SUB>)<SUP>2</SUP>+(A<SUB>i,k</SUB>/4&pi;)<SUP>2</SUP>]
+</p>
+<p>A<SUB>i,k</SUB> is called the natural or damping width of the corresponding spectral line (this applies both for emission and absorption). The <i>&nu;</i><SUP>-2</SUP> decrease of the line intensity with increasing distance from the resonance frequency <i>&nu;</i><SUB>i,k</SUB> is characteristic of any exponentially damped oscillator.
+<p>The natural broadening may be masked both by <A HREF="#doppler">Doppler Broadening</A> and <A HREF="#stark">Stark Broadening</A> (see also <A HREF="#specshape">Spectral Line Shape</A>).
+
+<p><A HREF="#index">BACK TO INDEX</A>
+
+
+
+
+<p><br><H3><A class="anch" name="optdepth">Optical Depth:</A> </H3>
+The relative amount of absorption or scattering of light along a given distance s can be characterized by the optical depth
+<p class="ind">
+&tau;(s)= &sigma;<SUP>.</SUP><SUB>0</SUB><FONT size="+2">&int;</FONT><SUP><SUP><SUP>s</SUP></SUP></SUP>ds'N(s') ,
+</p>
+<p>where N is the density of the medium and &sigma; the cross section for the corresponding process.
+<br>This definition assumes that &sigma; is independent of the intensity of the radiation and therefore of the variable s (as the intensity in general will be a function of s). However, in the case of <A HREF="#photoion">Photoionization</A>, the disturbing influence of <A HREF="#plasfluc">Plasma Field Fluctuations</A> can reduce the absorption efficiency, resulting therefore in a more complicated behaviour (see <A HREF="#absorb">Absorption</A>).
+<p>In terms of &tau;, the intensity reduction is however always given by the <b>Exponential Absorption Law</b>
+<p class="ind">
+ I(s)= I<SUB>0</SUB><SUP>.</SUP>e<SUP>-&tau;(s)</SUP> .
+</p>
+
+<p><A HREF="#index">BACK TO INDEX</A>
+
+
+
+
+<p><br><H3><A class="anch" name="ostrength">Oscillator Strength:</A> </H3>
+The oscillator strength is the factor by which the scattering cross for a classical damped oscillator has to be multiplied in order to yield the quantum mechanical <A HREF="#rescat">Resonance Scattering</A> cross section, i.e.
+<p class="ind">
+f<SUB>i,k</SUB>:= A<SUB>i,k</SUB>/&Gamma; ,
+</p>
+<p>where A<SUB>i,k</SUB> is the quantum mechanical <A HREF="#atdecay">Atomic Decay Probability</A> and
+<p class="ind">
+&Gamma;= 2&omega;<SUB>i,k</SUB><SUP>2</SUP>e<SUP>2</SUP>/(3mc<SUP>3</SUP>)
+</p>
+<p>is the classical damping constant for an oscillator with angular frequency &omega;<SUB>i,k</SUB> (=2&pi;<i>&nu;</i><SUB>i,k</SUB>).
+<p>Evaluation yields
+<p class="ind">
+f<SUB>i,k</SUB>= 2&pi;<SUP>2</SUP><SUP>.</SUP>m/h<SUP>.</SUP><i>&nu;</i><SUB>i,k</SUB><SUP>.</SUP>&lt;r&gt;<SUB>i,k</SUB><SUP>2</SUP> ,
+</p>
+<p>where &lt;r&gt;<SUB>i,k</SUB> is the quantum mechanical <A HREF="#overlap">Overlap Integral</A> for the states i and k in question.
+<p>One should note that this value is a factor 3/4 smaller than the usual expression for the oscillator strength quoted in the literature. However, this here should be the correct value as it has been derived strictly without any statistical assumptions. Established theory claims furthermore that the oscillator strength is subject to a normalization called the f-sum rule (i.e. &Sigma;<SUB>k</SUB>f<SUB>i,k</SUB>=1). This is not correct as all transition are statistically independent possibilities for the electron and therefore all add up numerically. The probability for each transition is uniquely specified by the decay probability A<SUB>i,k</SUB> and not the oscillator strength which, as indicated, is only a proportionality factor to derive the quantum mechanical resonance scattering cross section from the classical oscillator model.
+
+<p><A HREF="#index">BACK TO INDEX</A>
+
+
+
+
+<p><br><H3><A class="anch" name="overlap">Overlap Integral:</A> </H3>
+The physical constants for atomic dipole transitions can generally be obtained by considering the power radiated by an oscillator whose dipole moment is given by the quantum mechanical overlap integral
+<p class="ind">
+&lt;r&gt;<SUB>i,k</SUB>:= r<SUB>0</SUB><SUP>.</SUP><SUB>0</SUB><FONT size="+2">&int;</FONT><SUP><SUP><SUP>&infin;</SUP></SUP></SUP>d&rho; &Psi;<SUB>i</SUB>(&rho;)<SUP>.</SUP>&rho;<SUP>.</SUP> &Psi;<SUB>k</SUB>(&rho;) ,
+</p>
+<p>where &rho; is a dimensionless distance variable normalized to the Bohr radius
+<p class="ind">
+r<SUB>0</SUB>= h<SUP>2</SUP>/(4&pi;<SUP>2</SUP>me<SUP>2</SUP>)=
+<br>&nbsp;&nbsp; =5.3<SUP>.</SUP>10<SUP>-9</SUP> &nbsp;&nbsp; [cm]
+</p>
+<p>with h the Planck constant, m the electron mass and e the elementary charge.
+<p>&Psi;<SUB>i</SUB> and &Psi;<SUB>k</SUB> designate the normalized radial wave functions of the energetically lower and upper state respectively. For bound-bound transitions, state k is characterized by the pair of principal quantum number and angular momentum (n,<i>l</i>) and i by (m,<i>l</i>&plusmn;1), whereas for bound-free transitions (<A HREF="#photoion">Photoionization</A>, <A HREF="#radrec">Radiative Recombination</A>) k is characterized by the continuum electron energy <FONT size="+2">&epsilon;</FONT> (in this case, the corresponding wave function &Psi;<SUB><FONT size="+2">&epsilon;</FONT></SUB>(&rho;) (the regular Coulomb wave function) can not be normalized separately and the absolute value of &lt;r&gt;<SUB>i,k</SUB> has to be fixed by experimental measurements of the Photoionization cross section which is proportional to &lt;r&gt;<SUB>i,k</SUB><SUP>2</SUP>).
+
+<p>In general, the overlap integral can only be calculated exactly by numerical integration. For principal quantum numbers m,n&gt;&gt;1 however, it can, both for bound-bound and bound-free transitions, be approximated analytically which enables a simple representation of both the cross section and decay constant in terms of these quantum numbers or the continuum energy (see under <A HREF="#rescat">Resonance Scattering</A>, <A HREF="#atdecay">Atomic Decay Probability</A>, <A HREF="#photoion">Photoionization</A>, <A HREF="#radrec">Radiative Recombination</A>).<br>
+Note: the square of the overlap integral is sometimes also called 'Line Strength'. This name is only justified in absorption where the Resonance Scattering- cross section is directly determined by this quantity. In emission, the intensity of spectral lines depends (for a given <A HREF="#levpop">Level Population</A>) on the Atomic Decay Probability which is proportional to <i>&nu;</i><SUB>i,k</SUB><SUP>3</SUP><SUP>.</SUP>&lt;r&gt;<SUB>i,k</SUB><SUP>2</SUP>).
+
+<p><A HREF="#index">BACK TO INDEX</A>
+
+
+
+
+<p><br><H3><A class="anch" name="photoion">Photoionization:</A> </H3>
+Electromagnetic radiation of frequency <i>&nu;</i> can ionize an atomic level n if the corresponding ionization energy <FONT size="+2">&epsilon;</FONT><SUB>n</SUB> &lt;h<SUP>.</SUP><i>&nu;</i>. On the basis of the <A HREF="#pseudosc">Pseudo- Oscillator</A> model, the corresponding cross section for this process is calculated from the quantum mechanical <A HREF="#overlap">Overlap Integral</A> involving the wave functions for the bound state n and the continuum energy <FONT size="+2">&epsilon;</FONT>=h<SUP>.</SUP><i>&nu;</i>-<FONT size="+2">&epsilon;</FONT><SUB>n</SUB> (as continuous wave functions can not be normalized (contrary to established theory), the absolute value for the photoionization- (as well as recombination-) cross section has to be fixed by experiments). It has a characteristic energy dependence and decreases rapidly for <FONT size="+2">&epsilon;</FONT>&gt;<FONT size="+2">&epsilon;</FONT><SUB>n</SUB> (see <A HREF="/research/recrsect.htm">/research/recrsect.htm</A> which shows the numerically identical curves for Radiative Recombination).<br>
+For high <A HREF="#effquant">effective quantum numbers</A> n (for lower states it is still a good estimate), the cross section can be approximated by
+<p class="ind">
+&sigma;<SUB>n</SUB><SUP>Ion</SUP>(<FONT size="+2">&epsilon;</FONT>)= 3.7<SUP>.</SUP>10<SUP>-17</SUP><SUP>.</SUP>&radic;(A/T)<SUP>.</SUP>n<SUP>2.4</SUP><SUP>.</SUP>h(<FONT size="+2">&epsilon;</FONT>) &nbsp;&nbsp; [cm<SUP>2</SUP>] &nbsp;&nbsp; (n&gt;&gt;1) ,
+</p>
+<p>where (roughly)
+<p class="ind">
+h(<FONT size="+2">&epsilon;</FONT>)= 1 &nbsp; for &nbsp; <FONT size="+2">&epsilon;</FONT>&le;2<FONT size="+2">&epsilon;</FONT><SUB>n</SUB> &nbsp; and
+<br>h(<FONT size="+2">&epsilon;</FONT>)= (<FONT size="+2">&epsilon;</FONT>/2<FONT size="+2">&epsilon;</FONT><SUB>n</SUB>)<SUP>-2.9</SUP> &nbsp; for &nbsp; <FONT size="+2">&epsilon;</FONT>&gt;2<FONT size="+2">&epsilon;</FONT><SUB>n</SUB>
+</p>
+<p>and A the atomic mass number and T the neutral (ion) temperature in <SUP>o</SUP>K.
+<p>The power law dependence on the quantum number and energy has been derived 'empirically' from explicit numerical calculations involving exact wave functions for hydrogen-like atoms for electron energies <FONT size="+2">&epsilon;</FONT>=10<SUP>-8</SUP>...4 Rydberg (1 Rydberg=13.6 eV) and quantum numbers n=1...1000 averaged over the angular momentum quantum number <i>l</i>. Over this range, the resultant absolute value for the cross section should be accurate to within a factor 2.<br>
+For sufficiently small radiation intensities, the photoionization cross section will be reduced due to the plasma field fluctuations (see <A HREF="#absorb">Absorption</A>) and the increase of the ionization time in comparison to the coherence time of the radiation (see <A HREF="#photons">Photons</A>).<BR>
+(see also the page <A HREF="/photoionization.htm">Photoionization Theory for Coherent and Incoherent Light</A>).
+
+<p><A HREF="#index">BACK TO INDEX</A>
+
+
+
+
+<p><br><H3><A class="anch" name="photons">Photons:</A> </H3>
+Established physical theory assumes light to be of a dualistic nature, i.e. either to be described as a wave (explaining interference effects) or as a particle (photon). Only the latter is claimed to account for the almost instant release of photo-electrons in the photoeffect. However this conclusion is reached because the interaction of the electromagnetic wave with the atom is not being considered properly: an energy flux for the e.m. wave is defined which is assumed to mysteriously build up within the atom until the ionization energy is reached. It is easy to show though that an in-phase acceleration of an atomic electron  by a wave of frequency <i>&nu;</i> and amplitude E will yield an energy increase h<SUP>.</SUP><i>&nu;</i> within  about  T<SUB>Ion</SUB> = 7<SUP>.</SUP>10<SUP>-18</SUP> <SUP>.</SUP>&radic;(<i>&nu;</i>)/E  [sec]  ( <i>&nu;</i> [Hz], E [statvolt/cm] ) (for sunlight ( E=10<SUP>-2</SUP> statvolt/cm) this amounts to about 10<SUP>-8</SUP> sec) (for more see the page <A HREF="/photoionization.htm">Photoionization Theory for Coherent and Incoherent Light</A>).<BR>
+The notion of a photon still makes some sense though in as far as one is dealing with individual wave trains emitted in the course of the atomic transitions. In general there is no unique relationship however between the number of these wavetrains and the  number of released photoelectrons, as the latter depends on certain factors like coherency (i.e. effective length) and amplitude of the wavetrains as well as disturbances of the <A HREF="#photoion">Photoionization</A> process by collisions.
+
+<p><A HREF="#index">BACK TO INDEX</A>
+
+
+
+
+<p><br><H3><A class="anch" name="planckrad">Planck Radiation Formula:</A> </H3>
+In Local Thermodynamic Equilibrium (LTE) the energy and velocity of particles can be macroscopically described by the Boltzmann- and Maxwell- distributions, whereas the associated radiation is assumed to be given by the Planck Radiation Formula. The latter is mathematically strictly derived from certain model assumptions, but these have no real physical basis and lack any connection to the actual radiation processes, i.e. atomic transitions. It is for instance not obvious why the radiation density at a certain wavelength should be determined by the condition of a standing wave (oscillator) in a fictitious cavity. On the other hand, explicit numerical calculations of the radiation intensity produced in a given plasma by recombination and cascading into atomic levels clearly show a qualitative resemblance to a Planck Function   (see <A HREF="/research/solspec.htm">/research/solspec.htm</A>. With a more accurate and realistic computation, the actual form of the Planck Radiation Formula might be recovered, but it would need a detailed mathematical analysis to show its connections to the quantum mechanical atomic transition constants that actually determine the radiation spectrum.<br>
+It should be emphasized however that in most cases of practical interest the assumption of LTE is not appropriate and the spectrum will therefore differ from a Planck Function anyway, i.e. it becomes a function of several physical parameters instead of only the temperature. <br>
+(see also
+<A HREF="#contrad">Continuum Radiation</A>,
+<A HREF="#lte">LTE</A>,
+<A HREF="#maxwdistr">Maxwell Distribution</A>,
+<A HREF="#boltzdistr">Boltzmann Distribution</A>,
+<A HREF="#saha">Saha Equation</A>).
+
+<p><A HREF="#index">BACK TO INDEX</A>
+
+
+
+
+<p><br><H3><A class="anch" name="plasma">Plasma:</A> </H3>
+Sometimes called the fourth state of matter, a plasma is far from being a clearly defined physical state and the only common feature in the various situations is that to some degree free charges (i.e. ions and electrons) are present.<br>
+Generally, one has to distinguish between the microscopic and the collective properties of a plasma. The former are individual particle processes like
+<A HREF="#coulomb">Coulomb Scattering</A>, <A HREF="#radrec">Radiative Recombination</A> or <A HREF="#inelcoll">Inelastic Collisions</A>, whereas the latter are for instance given by <A HREF="#plaspol">Plasma Polarization Fields</A>, <A HREF="#plasosc">Plasma Oscillations</A> or <A HREF="#debshield">Debye Shielding</A>. Collective processes can occur only if the <A HREF="#plasfreq">Plasma Frequency</A> is higher than the <A HREF="#collfreq">Collision Frequency</A>. Apart from very high volume densities like those encountered in fluids, solids or the interior of stars, this is however usually fulfilled. For the latter example there is the additional property that, due to the high temperature in combination with the high density, no bound electronic states can exist and therefore no radiative processes either.
+
+<p><A HREF="#index">BACK TO INDEX</A>
+
+
+
+
+<p><br><H3><A class="anch" name="plasfluc">Plasma Field Fluctuations:</A> </H3>
+The movement of the randomly distributed particles leads to an irregularly varying electric field at each point in the plasma with the average field strength and fluctuation period determined by the average particle distance r<SUB>p</SUB> (i.e. the density N<SUB>P</SUB>) and the particle velocity v, i.e.
+<p class="ind">
+&Delta;E<SUB>p</SUB>= 1.25<SUP>.</SUP>10<SUP>-9</SUP><SUP>.</SUP>N<SUB>P</SUB><SUP>2/3</SUP> &nbsp;&nbsp; [statvolt/cm =3<SUP>.</SUP>10<SUP>4</SUP> V/m] ,
+</p>
+<p>and
+<p class="ind">
+&Delta;t<SUB>f</SUB>= 2<SUP>.</SUP>r<SUB>p</SUB>/v .
+</p>
+<p>For electrons with an energy of <FONT size="+2">&epsilon;</FONT><SUB>e</SUB> [eV], the fluctuation period becomes (N<SUB>P</SUB> in [cm<SUP>-3</SUP>])
+<p class="ind">
+&Delta;t<SUB>e</SUB>= 2<SUP>.</SUP>10<SUP>-8</SUP>/N<SUB>P</SUB><SUP>1/3</SUP>/&radic; <FONT size="+2">&epsilon;</FONT><SUB>e</SUB> &nbsp;&nbsp; [sec] ,
+</p>
+<p>whereas for ions with atomic mass number A and temperature T
+<p class="ind">
+&Delta;t<SUB>I</SUB>= 9.4<SUP>.</SUP>10<SUP>-5</SUP>/N<SUB>P</SUB><SUP>1/3</SUP>/&radic;(T/A) &nbsp;&nbsp; [sec] .
+</p>
+<p>These plasma field fluctuations are important in several respects: they can broaden spectral lines as well as enhance their intensity and scattering cross section (see <A HREF="#stark">Stark Broadening</A>, <A HREF="#emiss">Emission Rate</A>, <A HREF="#rescat">Resonance Scattering</A>). They can also interfere with other fields like that of electromagnetic waves and affect therefore for instance the <A HREF="#photoion">Photoionization</A> process.
+
+<p><A HREF="#index">BACK TO INDEX</A>
+
+
+
+
+<p><br><H3><A class="anch" name="plasfreq">Plasma Frequency:</A> </H3>
+If the electrons are collectively displaced by a distance d from the ions in a finite volume of plasma with density N<SUB>p</SUB>, this gives rise to a <b>Displacement Field</b>
+<p class="ind">
+E= 4&pi;<SUP>.</SUP>N<SUB>p</SUB><SUP>.</SUP>e<SUP>.</SUP>d ,
+</p>
+<p>where e is the elementary charge.
+<p>In a collisionless plasma, this is equivalent of having an oscillator with frequency
+<p class="ind">
+&omega;<SUB>p</SUB>= <FONT size="+1">&radic;</FONT>(4&pi;<SUP>.</SUP>N<SUB>p</SUB><SUP>.</SUP>e<SUP>2</SUP>/m) ,
+</p>
+<p>with m the electron mass (in principle the reduced mass M<SUP>.</SUP>m/(M+m) for the corresponding ion and electron mass should be used here, but as m&lt;&lt;M this is practically identical with m; in any case, the usually assumed ion plasma frequency (where M replaces m in the equation above) does not occur here unless one is dealing with an ion-ion plasma).
+<p>For natural conditions, &omega;<SUB>p</SUB> should be merely considered as the time scale for restoring charge neutrality rather than the frequency for a regular free plasma oscillation as the latter will not be stable in a chaotic medium. However, if the plasma is subjected to a well defined external perturbation like for instance electromagnetic waves, a precisely defined driven oscillation can be maintained in principle indefinitely (see <A HREF="#plasosc">Plasma Oscillations</A>).
+
+<p><A HREF="#index">BACK TO INDEX</A>
+
+
+
+
+<p><br><H3><A class="anch" name="plasosc">Plasma Oscillations:</A> </H3>
+A collective displacement of the electrons from the ion background results in an electric field which tends to restore the initial quasi-neutrality situation within a time scale given by the <A HREF="#plasfreq">Plasma Frequency</A>. In a random medium, a well defined displacement of charges is however unlikely to arise naturally. Even if the plasma oscillations are excited artificially (by means of radio waves for instance) they will in general be difficult to maintain because of outflow and inflow of plasma from and to the volume in question. In the presence of magnetic fields however, charges can not move vertically to the field lines and therefore both free and driven oscillations become possible. In this case two resonance frequencies exist which are determined by a combination of the plasma frequency with the <A HREF="#larmor">Larmor Frequency</A> in the form
+<p class="ind">
+&Omega;<SUP>-</SUP>= <FONT size="+1">&radic;</FONT>(&omega;<SUB>p</SUB><SUP>2</SUP>+&omega;<SUB>B</SUB><SUP>2</SUP>) &nbsp;-&omega;<SUB>B</SUB>  &nbsp; and
+<p class="ind">
+&Omega;<SUP>+</SUP>= <FONT size="+1">&radic;</FONT>(&omega;<SUB>p</SUB><SUP>2</SUP>+&omega;<SUB>B</SUB><SUP>2</SUP>) &nbsp;+&omega;<SUB>B</SUB> .
+</p>
+<p>The two- dimensionality of the problem in the presence of a magnetic field causes a non-linearity of the displacement force which results in a modulation of any driven oscillation and therefore limits its maximum amplitude (see <A HREF="/research/#A2">/research/#A2</A>). This circumstance could be of crucial importance for the heating of plasmas by means of radio waves.
+<br>One has to be aware however that any type of sufficiently frequent collisions will prevent these systematic oscillations (see under <A HREF="#plasma">Plasma</A>).
+
+<p><A HREF="#index">BACK TO INDEX</A>
+
+
+
+
+<p><br><H3><A class="anch" name="plaspol">Plasma Polarization Field:</A> </H3>
+The electrons and ions in a plasma are collectively bound because of their charge and therefore can not separate from each other even for high relative velocities. Established theory claims that for a plasma of density N<SUB>p</SUB> and electron energy <FONT size="+2">&epsilon;</FONT><SUB>e</SUB>, this would result in a steady-state plasma polarisation field (see <A HREF="#plasfreq">Plasma Frequency</A> and <A HREF="#debshield">Debye Shielding</A> for d=&lambda;<SUB>D</SUB> and kT=<FONT size="+2">&epsilon;</FONT><SUB>e</SUB>)
+<p class="ind">
+E= <FONT size="+1">&radic;</FONT>(4&pi;<SUP>.</SUP>N<SUB>p</SUB><SUP>.</SUP><FONT size="+2">&epsilon;</FONT><SUB>e</SUB>) .
+</p>
+<p>However, it is obvious that classically a steady-state field can not be maintained as it would accelerate the ions and consequently make the plasma volume unstable (further processes can of course re-stabilize the situation; see below).<br>
+The only two solutions classically possible are therefore that either the electrons lose most of their kinetic energy to the ions (so that both diffuse with the same velocity), or that the electrons oscillate with regard to the ion background (see <A HREF="#plasosc">Plasma Oscillations</A>) (a further possibility is of course that the charges can not be displaced in the first place because they are already confined locally by a magnetic field for instance).<br>
+In planetary and stellar atmospheres a steady-state plasma polarisation field does exist however because the upwards accelerated ions are lost at greater heights through recombination (see <A HREF="/research/#A6">/research/#A6</A>).
+
+<p><A HREF="#index">BACK TO INDEX</A>
+
+
+
+
+<p><br><H3><A class="anch" name="pseudosc">Pseudo- Oscillator:</A> </H3>
+For the description of bound-free atomic transitions (i.e. <A HREF="#photoion">Photoionization</A>), the model of a forced, radiatively damped oscillator is obviously not applicable in the same way as for <A HREF="#rescat">Resonance Scattering</A> because the incident radiation is not scattered but turned into kinetic energy of the released electron. One can however postulate (see Cowan, The Theory of Atomic Structure and Spectra) that this process can otherwise be described <b>as if</b> energy is absorbed by an oscillating dipole (Pseudo- Oscillator), i.e. the cross section for photoionization can be specified by the same parameters as for resonance scattering (in particular in terms of the <A HREF="#overlap">Overlap Integral</A> (effective dipole moment)). The fundamental difference is however that for bound-free transitions the energy states are not independently fixed, as the upper (the energy of the released electron) is dependent on the lower and the frequency of the incident radiation (i.e. <FONT size="+2">&epsilon;</FONT>= -<FONT size="+2">&epsilon;</FONT><SUB>n</SUB> +h<SUP>.</SUP><i>&nu;</i>). Furthermore, the continuum wave functions can not be normalized separately like the wave functions of the bound electrons as their amplitude remains finite at infinite distances. The absolute value of the overlap integral (and therewith the photoionization cross section) is therefore theoretically undetermined and has to be fixed by an experimental measurement (it turns out that this yields a normalization factor 8.3<SUP>.</SUP>10<SUP>-6</SUP> to the unnormalized cross section).
+
+<p><A HREF="#index">BACK TO INDEX</A>
+
+
+
+
+<p><br><H3><A class="anch" name="radpress">Radiation Pressure:</A> </H3>
+In most physics textbooks (see for instance Berkeley Physics Course Vol.3 (Waves)), the radiation pressure on a free charge due to an electromagnetic wave is classically derived by means of the assumption that the velocity (induced by the electric field component) is always in phase with the oscillating magnetic field and therefore the Lorentz force q/c*<b>v</b>&times;<b>B</b> (Gaussian units) always has the same sign. This is not true. It is obvious (and indeed easy to show by integration of the equation of motion) that <b>v</b> never changes sign as equal periods of acceleration and deceleration alternate (ironically, this is treated in some detail in Berkeley Physics Course Vol.1 (Mechanics)).<br>
+The quantum mechanical argument that radiation pressure is a necessary consequence of momentum conservation is also invalid as photons (i.e. electromagnetic wavetrains) are massless and in fact have no momentum  (see the page regarding the <A HREF="https://www.physicsmyths.org.uk/photons.htm">Photoelectric Effect</A> on my Physicsmyths website). Even if one assumes a momentum, a radiation pressure force could only be caused by a momentum change dp/dt, but this is not possible because the speed of light c has to be constant (the usual definition of the photon momentum p=E/c implies that momentum change is always associated with a given energy change, however for a particle with mass M, E=p<SUP>2</SUP>/2M, i.e. energy change depends on M).  Deriving a radiation pressure by means of the conservation laws would therefore be an unallowed generalization from classical mechanics and indeed violate the experimental fact of the constancy of the speed of light.<br>
+A true radiation pressure effect could only occur in the case of resonant scattering or absorption by bound atomic electrons (i.e. in spectral lines or for photoionization) as here the velocity of the oscillating electrons is always in phase with the driving field. For solid state materials, discrete resonances may in fact be broadened to such an extent as to result in a radiation pressure effect throughout the spectrum (see also <A HREF="#scattering">Scattering of Radiation</A>). The problem is however that one would have refer the velocity <b>v</b> in the Lorentz force- term to some reference frame. For a static magnetic field this can be taken to be the velocity relative to the source creating the field, but for an electromagnetic wave this is in principle undefined, unless the nucleus which the electron orbits provides the reference frame.<br>
+It is therefore much more likely that in a given case the apparent 'radiation pressure' is caused either by thermal surface effects or electrons which are released from the surface by the radiation.
+<p><A HREF="#index">BACK TO INDEX</A>
+
+
+
+
+<p><br><H3><A class="anch" name="radrec">Radiative Recombination:</A> </H3>
+This is the inverse process to <A HREF="#photoion">Photoionization</A> and, assuming symmetry of these processes, the cross section can be taken as identical. This leads to the numerical approximation for large values of the principal <A HREF="#effquant">effective quantum number</A> n (for lower states it is still a good estimate)
+<p class="ind">
+&sigma;<SUB>n</SUB><SUP>Rec</SUP>(<FONT size="+2">&epsilon;</FONT>)= 3.7<SUP>.</SUP>10<SUP>-17</SUP><SUP>.</SUP>&radic;(A/T)<SUP>.</SUP>n<SUP>2.4</SUP><SUP>.</SUP>h(<FONT size="+2">&epsilon;</FONT>) &nbsp;&nbsp; [cm<SUP>2</SUP>] &nbsp;&nbsp; (n&gt;&gt;1) ,
+</p>
+<p>where (roughly)
+<p class="ind">
+h(<FONT size="+2">&epsilon;</FONT>)= 1 &nbsp; for &nbsp; <FONT size="+2">&epsilon;</FONT>&le;2<FONT size="+2">&epsilon;</FONT><SUB>n</SUB> &nbsp; and
+<br>h(<FONT size="+2">&epsilon;</FONT>)= (<FONT size="+2">&epsilon;</FONT>/2<FONT size="+2">&epsilon;</FONT><SUB>n</SUB>)<SUP>-2.9</SUP> &nbsp; for &nbsp; <FONT size="+2">&epsilon;</FONT>&gt;2<FONT size="+2">&epsilon;</FONT><SUB>n</SUB> ,
+</p>
+<p>with <FONT size="+2">&epsilon;</FONT> the energy of the recombining electron, <FONT size="+2">&epsilon;</FONT><SUB>n</SUB> the ionization energy for level n, A the atomic mass number and T the neutral (ion) temperature in <SUP>o</SUP>K (see <A HREF="#photoion">Photoionization</A> for further explanations).
+<p>It should be noted that this result is very much different from the usual formulation found in the literature which is however inconsistently based on a statistical approach and does not conform with experimental  and observational data (see <A HREF="/research/recrsect.htm">/research/recrsect.htm</A>).
+<p>For the calculation of the density of atomic levels populated by recombination, it is important that Radiative Recombination has to be described as a two-step process (see <A HREF="/research/levschem.htm">/research/levschem.htm</A>), i.e. the electron recombines (more or less instantaneously) into a 'pre-bound' level <i>n</i> and from there into the actual level n with the <b>Recombination Decay Constant</b>
+<p class="ind">
+A<SUB>n</SUB><SUP>Rec</SUP>= 7<SUP>.</SUP>10<SUP>4</SUP><SUP>.</SUP>n<SUP>-3.4</SUP> &nbsp;&nbsp; [sec<SUP>-1</SUP>]
+</p>
+<p>This result is independent of the continuum energy <FONT size="+2">&epsilon;</FONT> as the energy dependence of the <A HREF="#overlap">Overlap Integral</A> cancels almost exactly the frequency dependence in the basic formula for the <A HREF="#atdecay">Atomic Decay Probability</A>.<p></p>
+
+Also, it should be mentioned that, unlike the <A HREF="#atdecay">Atomic Decay Probability between bound levels</A> , the recombination probability depends quite significantly on the angular momentum quantum number <i>l</i> (decreasing for increasing <i>l</i>). Although for the formulae above this is not relevant as long as the <i>l</i>-states have identical energy (i.e. are 'degenerate'; which justifies using an <i>l</i>-average as done here), the subsequent cascading to lower levels is affected by the population of the <i>l</i>-substates as the <i>l</i>-selection rule restricts the further decay options. This means that one either has to apply corresponding correction factors (see for instance Appendix 2, Eq.(A.2.10) in <A HREF="/papers/radscat2.htm#a210">/papers/radscat2.htm#a210</A> ) or one has to consider the angular momentum explicitly (which would dramatically increase the computational effort necessary to calculate a whole level scheme).
+
+<p><A HREF="#index">BACK TO INDEX</A>
+
+
+
+
+<p><br><H3><A class="anch" name="radtrans">Radiative Transfer:</A> </H3>
+Unless the <A HREF="/#optdepth">optical depth</A> of the medium is much smaller than 1, radiative transfer effects due to scattering and absorption of the radiation are crucially important for the correct interpretation of observed intensities and spectral shapes. The theoretical treatment requires in general a solution of an integral equation for the source function in the medium, which in most cases requires suitable numerical algorithms (see the page <A HREF="/radiative_transfer.htm">Non-LTE Radiative Transfer of Spectral Lines in a Plane-Parallel Medium</A> for an example).<BR>
+In certain cases, one wants a direct inversion of the radiative transfer equation, in the sense that the source function is directly determined by the measured intensities (rather than through trial and error fits of corresponding 'forward' model calculations). This poses in general much greater problems mathematically and numerically (see <A HREF="/retrieval.htm">A Direct Numerical Solution to the Inverse Radiative Transfer Problem</A>) .
+
+<p><A HREF="#index">BACK TO INDEX</A>
+
+
+
+
+<p><br><H3><A class="anch" name="rescat">Resonance Scattering:</A> </H3>
+Electromagnetic radiation is scattered if its frequency <i>&nu;</i> is close to one of the atomic transition frequencies <i>&nu;</i><SUB>i,k</SUB> provided that the lower level of this transition is occupied by an electron.<br>
+The cross section for this process can be derived by considering the power radiated by a damped oscillator with damping constant A<SUB>i,k</SUB> (see <A HREF="#atdecay">Atomic Decay Probability</A>) which is driven by the electric field of frequency <i>&nu;</i>.<br>
+For combined natural and Doppler broadening it is given by
+<p class="ind">
+&sigma;<SUB>i,k</SUB>(w)= 2&pi;<SUP>5/2</SUP><SUP>.</SUP>e<SUP>2</SUP>/h<SUP>.</SUP><i>&nu;</i><SUB>i,k</SUB>/c/(&Delta;<i>&nu;</i>)<SUB>D</SUB><SUP>.</SUP>
+&lt;r&gt;<SUB>i,k</SUB><SUP>2</SUP><SUP>.</SUP>H(a,w) ,
+</p>
+<p>where
+<p class="ind">
+w=(<i>&nu;</i>-<i>&nu;</i><SUB>i,k</SUB>)/(&Delta;<i>&nu;</i>)<SUB>D</SUB>
+</p>
+<p>is a dimensionless variable normalized to the Doppler width (&Delta;<i>&nu;</i>)<SUB>D</SUB>, H(a,w) the Voigt- function for the corresponding natural and Doppler broadenings (see <A HREF="#specshape">Spectral Line Shape</A>), &lt;r&gt;<SUB>i,k</SUB> the quantum mechanical <A HREF="#overlap">Overlap Integral</A> for the transition, and furthermore e the elementary charge, h the Planck constant and c the velocity of light.
+<p>For principal <A HREF="#effquant">effective quantum numbers</A> m,n&gt;&gt;1 the overlap integral &lt;r&gt;<SUB>i,k</SUB> depends primarily on these parameters and can be approximated analytically, which leads to
+<p class="ind">
+&sigma;<SUB>m,n</SUB>(w)= 5.1<SUP>.</SUP>10<SUP>-12</SUP><SUP>.</SUP>[1/m<SUP>2</SUP>-1/n<SUP>2</SUP>]<SUP>-3</SUP><SUP>.</SUP>m<SUP>-1.8</SUP><SUP>.</SUP>(n-1)<SUP>-3.2</SUP><SUP>.</SUP>&radic;(A/T)
+<SUP>.</SUP>H(a,w) &nbsp;&nbsp; [cm<SUP>2</SUP>] &nbsp;&nbsp; (m,n&gt;&gt;1)
+</p>
+<p>where A is the atomic mass number and T the temperature in <SUP>o</SUP>K.
+<p>Usually, the angular distribution of the scattered radiation exhibits the typical characteristics for dipole scattering, i.e. the Rayleigh Scattering phase function 3/4<SUP>.</SUP>(1+cos<SUP>2</SUP>&theta;) for unpolarized incident radiation (&theta;=scattering angle).<br>
+The combination of the frequency coherence of the scattering in the atom's frame and the frequency due to the Doppler effect leads in general to complicated Partial Frequency Redistribution functions. In many cases the natural broadening is however negligible and the scattered line can be assumed to have a Doppler profile independent of the spectral shape of the incident radiation (Complete Frequency Redistribution). In this case the cross section above would of course also follow a Doppler profile, i.e. H(a,w) = exp(-w<SUP>2</SUP>).
+
+<p><A HREF="#index">BACK TO INDEX</A>
+
+
+
+
+<p><br><H3><A class="anch" name="saha">Saha Equation:</A> </H3>
+The Saha equation describes the ratio of different stages of ionization of an atom under the assumption of LTE and , like the latter, suffers therefore from the limitation that it is strictly only applicable if elastic collisions are responsible for establishing the energetic distribution of particles. In most practical cases (in particular for low gas densities) radiative processes will be more important and an explicit detailed equilibrium calculation is necessary in order to determine the distribution of electrons over the various energy levels.<br>
+(see also
+<A HREF="#lte">LTE</A>,
+<A HREF="#boltzdistr">Boltzmann Distribution</A>,
+<A HREF="#maxwdistr">Maxwell Distribution</A>).
+
+<p><A HREF="#index">BACK TO INDEX</A>
+
+
+
+
+<p><br><H3><A class="anch" name="scattering">Scattering of Radiation:</A> </H3>
+Established theory distinguishes usually two mechanisms for the scattering of radiation: 1) quantum mechanical scattering by atomic resonances (resonance scattering), and 2) classical (continuous )scattering by free charges (Thomson Scattering). The latter is based on the hypothesis that accelerated charges radiate, an assumption that is however inconsistent with the concepts of mechanics as it would lead to different results in different reference frames (see <A HREF="https://www.physicsmyths.org.uk/#continuum">https://www.physicsmyths.org.uk/#continuum</A>). In fact, resonance scattering can account also for the so called 'continuous scattering' if one includes highly excited atomic states energetically broadened by plasma field fluctuations. This can theoretically be shown to explain for instance the scattering of radio waves by the ionosphere (see <A HREF="/research/#A3">/research/#A3</A>).<br>
+It is furthermore not recognized in standard treatments that the usual effects of scattering due to the  redistribution of radiation disappear in case of a continuous medium , that is if the wavelength exceeds the average distance of scatterers (see <A HREF="https://www.physicsmyths.org.uk/#refraction">https://www.physicsmyths.org.uk/#refraction</A>).<br>
+(see also
+<A HREF="#radpress">Radiation Pressure</A>).
+
+<p><A HREF="#index">BACK TO INDEX</A>
+
+
+
+
+<p><br><H3><A class="anch" name="specshape">Spectral Line Shape:</A> </H3>
+The frequency dependence of an atomic emission or absorption line with frequency <i>&nu;</i><SUB>i,k</SUB> is determined by the mechanisms <A HREF="#natbroad">Natural Broadening</A>, <A HREF="#doppler">Doppler Broadening</A> and <A HREF="#stark">Stark Broadening</A>. If the gas is collisionally dominated, the velocity distribution function can be described by the <A HREF="#maxwdistr">Maxwell Distribution</A> and the first two broadening mechanisms can be combined into the <b>Voigt Function</b>
+<p class="ind">
+H(a,w)= a/&pi;<SUP>.</SUP><SUB>-&infin;</SUB><FONT size="+2">&int;</FONT><SUP><SUP><SUP>&infin;</SUP></SUP></SUP>du exp(-u<SUP>2</SUP>)/[(w-u)<SUP>2</SUP>+a<SUP>2</SUP>] ,
+</p>
+<p>where
+<p class="ind">
+w=(<i>&nu;</i>-<i>&nu;</i><SUB>i,k</SUB>)/(&Delta;<i>&nu;</i>)<SUB>D</SUB> &nbsp;  and
+<br>a=A<SUB>i,k</SUB>/4&pi;/(&Delta;<i>&nu;</i>)<SUB>D</SUB> ,
+</p>
+<p>with (&Delta;<i>&nu;</i>)<SUB>D</SUB> the Doppler broadening and A<SUB>i,k</SUB> the natural damping constant.
+<p>H(a,w) combines the properties of the Maxwell velocity distribution function and Lorentz- damping profile and for a&lt;&lt;1 (which is usually the case) can be roughly approximated by
+<p class="ind">
+H(a,w)= exp(-w<SUP>2</SUP>)/(1+a)  + a/&radic;&pi;/(1+w<SUP>2</SUP>)  .
+</p>
+<p>For a more exact representation of H(a,w), one can numerically evaluate the above integral expression, but a more efficient way is to calculate it over the real part of the complex error function which is usually available in computer libraries of mathematical subroutines.
+<p>The Stark broadening due to plasma field fluctuations, which is dominant for sufficiently high plasma densities and/or quantum states, is determined by the
+<b>Holtsmark Distribution</b> which can not be expressed as an elementary function but has to be approximated. In first order, the line wing intensity decreases like <i>&nu;</i><SUP>-5/2</SUP>, so it might be a sufficient approximation to replace the bracket under the integral for H(a,w) by [(w-u)<SUP>2.5</SUP>+a<SUB>S</SUB><SUP>2.5</SUP>] with a<SUB>S</SUB> given by
+<p class="ind">
+a<SUB>S</SUB>=(&Delta;<i>&nu;</i>)<SUB>S</SUB>/4&pi;/(&Delta;<i>&nu;</i>)<SUB>D</SUB> ,
+</p>
+<p>where (&Delta;<i>&nu;</i>)<SUB>S</SUB> is the normal line width due to <A HREF="#stark">Stark Broadening</A>.
+<br>In this case the integral would probably have to be evaluated explicitly by numerical integration (with an according re-normalization).
+
+<p><A HREF="#index">BACK TO INDEX</A>
+
+
+
+
+<p><br><H3><A class="anch" name="stark">Stark Broadening:</A> </H3>
+A static electric field E<SUB>S</SUB> is known to split the energy of an atomic level n of hydrogen or hydrogen-like (e.g. highly excited) atoms by the amount (not considering sub-splitting due to directional quantization)
+<p class="ind">
+&delta;<FONT size="+2">&epsilon;</FONT><SUB>n</SUB><SUP>S</SUP> = &plusmn;e<SUP>.</SUP>E<SUB>S</SUB><SUP>.</SUP>r<SUB>0</SUB><SUP>.</SUP>n<SUP>2</SUP> ,
+</p>
+<p>with e the elementary charge and r<SUB>0</SUB> the Bohr radius.
+<p>This corresponds to the energy difference which the electron experiences in the field E<SUB>S</SUB> on its path with radius r<SUB>0</SUB><SUP>.</SUP>n<SUP>2</SUP>.
+
+<p>However, the plasma microfield is not static but varies randomly with an average period &Delta;t<SUB>f</SUB> given by the plasma density N<SUB>p</SUB> and the average particle velocity (see <A HREF="#plasfluc">Plasma Field Fluctuations</A>).
+<p>If &Delta;t<SUB>f</SUB> is much smaller than the orbital period
+<p class="ind">
+T<SUB>n</SUB>= 8.6<SUP>.</SUP>10<SUP>-18</SUP><SUP>.</SUP>n<SUP>3</SUP> &nbsp;&nbsp; [sec] ,
+</p>
+<p>of the atomic electron, the latter will not experience any field at all any more. One can therefore assume that the energy splitting becomes correspondingly reduced by a factor
+<p class="ind">
+&mu;<SUB>n</SUB>= 1/[1+(T<SUB>n</SUB>/&Delta;t<SUB>e,I</SUB>)<SUP>2</SUP>] ,
+</p>
+<p>where &Delta;t<SUB>e,I</SUB>=&Delta;t<SUB>e</SUB>+&Delta;t<SUB>I</SUB> is the average fluctuation period for the electrons and ions (because of the much smaller velocity, only the ions will usually be relevant here).
+<p>The normal level splitting in a plasma becomes therefore
+<p class="ind">
+&Delta;<FONT size="+2">&epsilon;</FONT><SUB>n</SUB><SUP>S</SUP>= &plusmn;2<SUP>.</SUP>10<SUP>-15</SUP><SUP>.</SUP>&mu;<SUB>n</SUB><SUP>.</SUP>n<SUP>2</SUP><SUP>.</SUP>N<SUB>p</SUB><SUP>2/3</SUP> &nbsp;&nbsp; [eV] ,
+</p>
+<p>where the value for the constants and the normal electric field strength in a plasma of density N<SUB>p</SUB> (in [cm<SUP>-3</SUP>]) have been inserted.
+<p>Because a spectral line frequency is given by the energy difference between states belonging to different principal quantum numbers m and n, the frequency broadening of a line is given by
+<p class="ind">
+&Delta;<i>&nu;</i><SUB>m,n</SUB><SUP>S</SUP>= &plusmn;0.49<SUP>.</SUP>[&mu;<SUB>n</SUB><SUP>.</SUP>n<SUP>2</SUP>-&mu;<SUB>m</SUB><SUP>.</SUP>m<SUP>2</SUP>]<SUP>.</SUP>N<SUB>p</SUB><SUP>2/3</SUP> &nbsp;&nbsp; [Hz].
+</p>
+<p>This statistical broadening is only the consequence of the variability of the energy levels due to the plasma field fluctuations and does not change the overall cross section or radiative emission rates because it is subject to the usual normalization of the particle density.<br>
+However, one can assume on the basis of observational evidence (see <A HREF="/research/#A3">/research/#A3</A>) that there is also a true broadening of each level due to the change dE<SUB>p</SUB>/dt of the plasma field. This dynamical broadening can be taken to be of the form
+<p class="ind">
+&Delta;<i>&nu;</i><SUB>m,n</SUB><SUP>d</SUP>= &plusmn;0.49<SUP>.</SUP><FONT size="+1">&radic;</FONT>(&zeta;<SUB>n,e</SUB><SUP>2</SUP>+&zeta;<SUB>n,I</SUB><SUP>2</SUP>) &nbsp;<SUP>.</SUP>n<SUP>2</SUP><SUP>.</SUP>N<SUB>p</SUB><SUP>2/3</SUP> &nbsp;&nbsp; [Hz],
+</p>
+<p>where
+<p class="ind">
+&zeta;<SUB>n,e</SUB>= &Delta;t<SUB>e</SUB><SUP>.</SUP>T<SUB>n</SUB>/(&Delta;t<SUB>e</SUB>+T<SUB>n</SUB>)<SUP>2</SUP> &nbsp; and
+<br>&zeta;<SUB>n,I</SUB>= &Delta;t<SUB>I</SUB><SUP>.</SUP>T<SUB>n</SUB>/(&Delta;t<SUB>I</SUB>+T<SUB>n</SUB>)<SUP>2</SUP> .
+</p>
+<p>Due to the functions &zeta;<SUB>n,e</SUB> and &zeta;<SUB>n,I</SUB>, the broadening has its maximum if either &Delta;t<SUB>e</SUB>= T<SUB>n</SUB> or &Delta;t<SUB>I</SUB>= T<SUB>n</SUB> (due to the small values of T<SUB>n</SUB>, only the electrons will usually contribute here apart from sufficiently high quantum numbers).
+<p>This dynamical broadening is dominant for sufficiently high quantum numbers (e.g. n&gt;60 for N<SUB>p</SUB>=10<SUP>5</SUP> cm<SUP>-3</SUP>) and can vastly increase the scattering cross section and/or the radiative emission intensities because it is not subject to a normalization with regard to the particle density.
+
+<P>In both cases, the profile of the broadened line is given by the <b>Holtsmark Profile</b> which can not be expressed analytically in closed form (in first order, the line wing intensity decreases proportional to <i>&nu;</i><SUP>-5/2</SUP>, but even with this approximation it is not impossible to include the Stark Broadening into a general analytical function for the <A HREF="#specshape">Spectral Line Shape</A>).<p></p>
+<I>Note: although the initial formula for the line splitting above effectively assumes a linear Stark effect (and therewith appears to limit the result to hydrogen-like atoms),  one has to bear in mind that the electric plasma microfield  is not static but varies on a time scale &Delta;t<SUB>f</SUB> which is practically for all cases much shorter than the time required to polarize the atomic charge distribution (which should be given by the linear Stark frequency). The present treatment should therefore also be applicable to low lying states of multi-electron atoms.</I>
+
+
+<p><A HREF="#index">BACK TO INDEX</A>
+
+
+
+
+<p><br><H3><A class="anch" name="transition">Transition Probability:</A> </H3>
+see <A HREF="#atdecay">Atomic Decay Probability</A>.
+
+<p><A HREF="#index">BACK TO INDEX</A>
+
+<p><br>
+<DIV align="center">
+<TABLE border="0"  cellpadding="5"  class="button"><TR>
+<TD><A HREF="convers.htm" class="button"> Conversion Table cgs/SI- Units </A></TD>
+</TR></TABLE>
+</DIV>
+
+
+</DIV>
+
+
+
+<DIV align="center">
+
+<p>
+<TABLE border="0"  cellpadding="3"  class="button"><TR>
+<TD><A HREF="print/" class="button"> Print Version </A></TD>
+</TR></TABLE>
+
+<NOSCRIPT>
+
+<BR>
+<TABLE border="0"  cellpadding="3"  class="button"><TR>
+<TD><A HREF="/search.htm" class="button"> Search Site </A></TD>
+</TR></TABLE>
+<BR>
+<TABLE border="0"  cellpadding="3"  class="button"><TR>
+<TD><A HREF="/news.htm" class="button"> News </A></TD>
+</TR></TABLE>
+
+</NOSCRIPT>
+
+</DIV>
+
+
+
+
+<BR>
+<HR>
+<A HREF="/" class="text">Thomas Smid</A> (M.Sc. Physics, Ph.D. Astronomy)<BR>
+email:  <SCRIPT Language="Javascript" type="text/javascript">document.write(email_link1);</SCRIPT>
+<NOSCRIPT>Go to the <A HREF="/feedback.htm">Feedback Page</A></NOSCRIPT><p></p>
+
+<SCRIPT Language="Javascript" src="/scripts/footer.js" type="text/javascript"> </SCRIPT>
+<NOSCRIPT><IMG src="/scripts/stats.php" border="0" height="1" width="1" alt=""></NOSCRIPT>
+
+</BODY>
+
+</HTML>

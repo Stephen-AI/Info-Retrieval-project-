@@ -1,0 +1,88 @@
+<base href="http://www.cs.utexas.edu/~jlihuang//">
+<!DOCTYPE html>
+<html>
+<head>
+<title>It's me, Jason.</title>
+
+<!-- FAVICON -->
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+<!-- FONTY FONTS -->
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display:700|Raleway|Open+Sans:300" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="theCSS.css">
+
+<style>
+.parallax {
+
+  /* The image used */
+  background-image: url("images/DSC_2340.JPG");
+
+  /* Set a specific height */
+  height: 65%;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="navbar" id="myNavbar">
+  <a class="active" href="index.html">Jason Lihuang</a>
+  <a href="parrots.html">R&Eacute;SUM&Eacute;</a>
+  <a href="potatoes.html">DESIGN SAMPLES</a>
+  <a href="other.html">CONTACT ME</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction2()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+<div class="parallax"></div>
+
+<div class="content">
+Hi there! I'm a second-year computer science student at the University of Texas
+and Copy Desk Chief at The Daily Texan.
+Welcome to my website. Click around and see what's up with me!<br><br>
+</div>
+
+<script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("myNavbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+
+function myFunction2() {
+  var x = document.getElementById("myNavbar");
+  if (x.className === "navbar") {
+    x.className += " responsive";
+  } else {
+    x.className = "navbar";
+  }
+}
+</script>
+</body>
+</html>

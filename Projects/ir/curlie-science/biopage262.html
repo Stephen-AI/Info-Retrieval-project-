@@ -1,0 +1,626 @@
+<BASE HREF="http://plus.mcmaster.ca/evidenceUpdates/">
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>
+            EvidenceAlerts
+            | Home
+        </title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500">
+        <link rel="shortcut icon" type="image/ico" href="/favicon.ico">
+        <link href="/bundles/css?v=_OTGRGq7_aJfMsC7kvKge27SyDHVQjvNGSh-68B_ASM1" rel="stylesheet"/>
+
+        
+        <!--[if lt IE 8]>
+            <link href="/Content/Site-IE7.css?v=130604917660317012" rel="stylesheet" type="text/css"/>
+        <![endif]-->
+        <!--[if lt IE 9]>
+            <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script><script>(window.jQuery) || document.write('<script src="/Scripts/jquery-1.11.3.min.js?v=130863770385683641"><\/script>');</script>
+        <![endif]-->
+        <!--[if gte IE 9]><!-->
+            <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script><script>(window.jQuery) || document.write('<script src="/Scripts/jquery-2.1.4.min.js?v=130863768278225605"><\/script>');</script>
+        <!--<![endif]-->
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script><script>($.fn.modal) || document.write('<script src="/Scripts/bootstrap.min.js?v=130863778919570453"><\/script>');</script>
+        <script src="/bundles/js?v=CnG1vjPplZbSeQDmY0brs49zDjUqJwZOGQwRxP3S39s1"></script>
+
+
+        
+    </head>
+    <body>
+        <div class="section-alert section-blue" id="layoutAlert" style="display: none;">
+            <div class="container">
+                <table>
+                    <tr>
+                        <td>
+                            <i class="glyphicon glyphicon-star"></i>
+                        </td>
+                        <td>
+                            New and Improved! EvidenceAlerts has been re-designed to optimize function on all media devices. Content, alerting and search functions remain the same, but appearance on tablets and smart phones has been enhanced. <a href="/Pages/Contact">Feedback</a> most welcome!
+                        </td>
+                        <td>
+                            <i class="glyphicon glyphicon-remove" id="dismissLayoutAlert"></i>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="container hidden-print">
+            <a href="/">
+                <img class="header-logo img-responsive" alt="Evidence Alerts | McMaster PLUS&trade; and DynaMed Plus&reg;" src="/Content/Images/evidence-alerts-logo.png?v=131775324813132534" />
+            </a>
+            <nav class="navbar">
+                <div class="navbar-header">
+                    <button class="navbar-toggle pull-left" type="button" data-toggle="collapse" data-target="#navbar-collapse">
+                        <i class="glyphicon glyphicon-menu-hamburger"></i>
+                    </button>
+                </div>
+                <ul class="nav navbar-nav pull-right">
+                        <li class="dropdown pull-left hidden-xs">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sign In <span class="caret"></span></a>
+                            <ul class="dropdown-menu dropdown-right">
+    <li>
+<form action="/Account/Login?ReturnUrl=%2FDashboard" method="post" role="form"><input name="__RequestVerificationToken" type="hidden" value="7RdqGLaXPwlyHh8VQ4NsZ_JzWlYyT3a2jTBWA4XiGfRY0f7xrWyXnMs7S6sW0odxWdf8ZtX1tRHB2eoYOyXhD6-iy7k1" />            <div class="form-group">
+                <label for="Email">Email Address</label>
+                <input class="form-control" data-val="true" data-val-email="The Email Address field is not a valid e-mail address." data-val-required="The Email Address field is required." id="Email" name="Email" placeholder="Enter your email address here..." type="text" value="" />
+                <span class="field-validation-valid" data-valmsg-for="Email" data-valmsg-replace="true"></span>
+            </div>
+            <div class="form-group">
+                <label for="Password">Password</label>
+                <input class="form-control" data-val="true" data-val-required="The Password field is required." id="Password" name="Password" placeholder="Enter your password here..." type="password" />
+                <span class="field-validation-valid" data-valmsg-for="Password" data-valmsg-replace="true"></span>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input data-val="true" data-val-required="The Remember me? field is required." id="RememberMe" name="RememberMe" type="checkbox" value="true" /><input name="RememberMe" type="hidden" value="false" />
+                        Remember me?
+                    </label>
+                    <input type="submit" value="Sign In" class="btn pull-right"/>
+                </div>
+            </div>
+            <br/>
+<a href="/Account/ForgotPassword">Forgot your password? &#187;</a>                <br/><a href="/Account/Register">Register for a new account &#187;</a></form>    </li>
+</ul>
+                        </li>
+                        <li class="pull-left visible-xs"><a href="/Account/Login">Sign In</a></li>
+                        <li class="pull-left"><a href="/Account/Register">Register</a></li>
+                </ul>
+                <div id="navbar-collapse" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="/Search">Search</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Articles <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                        <li><a href="/Articles/Alerted"><span class="glyphicon glyphicon-lock small"></span> Alerted Articles</a></li>
+                                    <li><a href="/Articles/Saved"><span class="glyphicon glyphicon-lock small"></span> Saved Articles</a></li>
+                                    <li class="divider"></li>
+                                <li class="dropdown-header">Stellar Articles</li>
+                                <li><a href="/HitParade/StellarHighestRated?discipline=user"><span class="glyphicon glyphicon-lock small"></span> Highest Rated</a></li>
+                                <li><a href="/HitParade/StellarMostRead?discipline=user"><span class="glyphicon glyphicon-lock small"></span> Most Read</a></li>
+                                <li class="divider"></li>
+                                <li class="dropdown-header">Hit Parade</li>
+                                <li><a href="/HitParade/Reviews"><span class="glyphicon glyphicon-lock small"></span> Reviews</a></li>
+                                <li><a href="/HitParade/OriginalStudies"><span class="glyphicon glyphicon-lock small"></span> Original Studies</a></li>
+                                <li><a href="/HitParade/ClinicalPredictionGuides"><span class="glyphicon glyphicon-lock small"></span> Clinical Prediction Guides</a></li>
+                                <li><a href="/HitParade/Prognosis"><span class="glyphicon glyphicon-lock small"></span> Prognosis</a></li>
+                                <li><a href="/HitParade/MostRead"><span class="glyphicon glyphicon-lock small"></span> Most Read</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Resources <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/Pages/EvidenceBasedLinks">Evidence-Based Links</a></li>
+                                <li class="divider"></li>
+                                
+                                <li><a href="/Redirect/External?x=c7WnOHhojNzb574EbCgeQBJsa8vz97fONj6SBvRbei_hQSclGUtizm3hFh9VJ7emYESDgV2Z5B0U0rZ2WsGdQWXFY0pQziuBeWZPKgm2Zic" target="_blank">ACCESSSS Smart Search</a></li>
+                                <li><a href="/Redirect/External?x=EwB5ucj7kUt88VqD4hDZH9Vl796ph4C8Z-Wvk4UOklr9tcxANXOnVogT_KGFBhdGSHdjuKArD0uzcF2zatpYjQ" target="_blank">Evidence-Based NURSING+</a></li>
+                                <li><a href="/Redirect/External?x=EwB5ucj7kUt88VqD4hDZHzlx_PFutfTSql8GG8s0NLyxSDrDyUVrruQGInWF84VPbD5I0Jy8EQxCusF3991xPg" target="_blank">Evidence-Based OBESITY+</a></li>
+                                <li><a href="/Redirect/External?x=EwB5ucj7kUt88VqD4hDZH6vBi8ZDf4XTNlud7-_tHvdLxX6t0dhbuwM2SahpZrw5tnz_BBoNWbdaGVU5VrGPqg" target="_blank">Evidence-Based REHAB+</a></li>
+                                <li><a href="/Redirect/External?x=EwB5ucj7kUt88VqD4hDZH30-4MCDLac7rbEzMkgbeait3Xm27VB4nl8xoiMbE2hgct4TyueINPEzQbfCIxV5dQ" target="_blank">Knowledge Translation+</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Help <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/Pages/About">About This Site</a></li>
+                                <li><a href="/Pages/AboutDynaMedPlus">About DynaMed Plus</a></li>
+                                <li class="divider"></li>
+                                <li><a href="/Pages/Contact">Contact Us</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <h1 class="visible-print text-center" style="margin-top: 32px; margin-bottom: 0px;">EvidenceAlerts</h1>
+        <!--[if lt IE 8]>
+            <div class="alert alert-danger">
+                Your browser might not support the features used by this site. Please <a href="/Redirect/External?x=euE6V9L4pwoObZ7CeHSINVb1Xy5HCmZ3X1ta4ZxrzrtbYFUitUR1s6PPOTmx-k0cKp-E8eFhuhcSzzKf4OVKs5LBz_IG0xYJVde-aLykbxE" target="_blank">upgrade your browser</a> to improve your experience.
+            </div>
+        <![endif]-->
+        
+
+
+
+
+<div class="section section-grey section-image">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-7">
+                <h1>Best New Evidence for Healthcare</h1>
+                <p>
+                    EvidenceAlerts is an Internet service that notifies physicians and researchers about newly-published clinical studies. Researchers at the McMaster Health Information Unit find the highest quality studies, reviews, and evidence-based clinical practice guidelines from 121 premier clinical journals and these articles are rated by practicing physicians for clinical relevance and interest. Alerts are curated to your own clinical interests.
+                </p>
+                    <p>
+                        <a class="btn" href="/Account/Register">Register Now</a>
+                    </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="section section-red">
+    <div class="container text-center">
+        <h2>What We Offer</h2>
+        <div class="row">
+            <div class="col-sm-4">
+                <p>
+                    <img class="img-responsive feature-icon" alt="Search" src="/Content/Images/search-icon.png?v=131739821151662952" />
+                    
+                </p>
+                <h3>Deep Data Repository</h3>
+                <p>
+                    Search the McMaster PLUS database, which includes articles published as far back as 2003.
+                </p>
+                <p>
+                    <a href="/Pages/About">Learn More &#187;</a>
+                </p>
+            </div>
+            <div class="col-sm-4">
+                <p>
+                    <img class="img-responsive feature-icon" alt="Alerts" src="/Content/Images/alert-icon.png?v=131739821151975477" />
+                    
+                </p>
+                <h3>Email Alerting System</h3>
+                <p>
+                    Get notified about new studies and systematic reviews that match your clinical interests.
+                </p>
+                <p>
+                    <a href="/Pages/About">Learn More &#187;</a>
+                </p>
+            </div>
+            <div class="col-sm-4">
+                <p>
+                    <img class="img-responsive feature-icon" alt="DynaMed Plus" src="/Content/Images/link-icon.png?v=131739821152131743" />
+                    
+                </p>
+                <h3>Evidence-Based Resources</h3>
+                <p>
+                    Link to <em>DynaMed Plus</em> to get fast answers to clinical questions at the point of care.
+                </p>
+                <p>
+                    <a href="/Pages/AboutDynaMedPlus">Learn More &#187;</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="section section-white">
+    <div class="container">
+        <h2 class="text-center">Hit Parade</h2>
+        <p class="text-center">
+            These articles are the most often read articles in all specialties, in the past 30 days.
+        </p>
+            <div class="row" id="grid" data-columns>
+                    <div class="panel panel-default ">
+                        <div class="panel-body">
+                            <a href="/Home/Article/87804" style="font-weight: bold;">Association between vitamin D supplementation and mortality: systematic review and meta-analysis.</a>
+                            <br />
+                            <img src="/Content/Images/ea-Stars6.gif" alt="6 / 7" />
+                        </div>
+                        <div class="panel-footer">
+                            BMJ. 2019 Aug 12;366:l4673. doi: 10.1136/bmj.l4673.<br />
+                            (<em>Systematic review</em>)
+                        </div>
+                    </div>
+                    <div class="panel panel-default ">
+                        <div class="panel-body">
+                            <a href="/Home/Article/87937" style="font-weight: bold;">Oral Paracetamol Versus Combination Oral Analgesics for Acute Musculoskeletal Injuries.</a>
+                            <br />
+                            <img src="/Content/Images/ea-Stars6.gif" alt="6 / 7" />
+                        </div>
+                        <div class="panel-footer">
+                            Ann Emerg Med. 2019 Aug 1. pii: S0196-0644(19)30442-1. doi: 10.1016/j.annemergmed.2019.05.030.<br />
+                            (<em>Original study</em>)
+                        </div>
+                    </div>
+                    <div class="panel panel-default ">
+                        <div class="panel-body">
+                            <a href="/Home/Article/87643" style="font-weight: bold;">Rate or Rhythm Control in Older Atrial Fibrillation Patients: Risk of Fall-Related Injuries and Syncope.</a>
+                            <br />
+                            <img src="/Content/Images/ea-Stars6.gif" alt="6 / 7" />
+                        </div>
+                        <div class="panel-footer">
+                            J Am Geriatr Soc. 2019 Jul 24. doi: 10.1111/jgs.16062.<br />
+                            (<em>Original study</em>)
+                        </div>
+                    </div>
+                    <div class="panel panel-default ">
+                        <div class="panel-body">
+                            <a href="/Home/Article/87672" style="font-weight: bold;">Sodium-Glucose Cotransporter-2 Inhibitors and the Risk for Severe Urinary Tract Infections: A Population-Based Cohort Study.</a>
+                            <br />
+                            <img src="/Content/Images/ea-Stars6.gif" alt="6 / 7" />
+                        </div>
+                        <div class="panel-footer">
+                            Ann Intern Med. 2019 Jul 30. pii: 2739786. doi: 10.7326/M18-3136.<br />
+                            (<em>Original study</em>)
+                        </div>
+                    </div>
+                    <div class="panel panel-default ">
+                        <div class="panel-body">
+                            <a href="/Home/Article/87694" style="font-weight: bold;">A Meta-analysis of Aspirin for the Primary Prevention of Cardiovascular Diseases  in the Context of Contemporary Preventive Strategies.</a>
+                            <br />
+                            <img src="/Content/Images/ea-Stars5.gif" alt="5 / 7" />
+                        </div>
+                        <div class="panel-footer">
+                            Am J Med. 2019 May 30. pii: S0002-9343(19)30448-6. doi: 10.1016/j.amjmed.2019.05.015.<br />
+                            (<em>Systematic review</em>)
+                        </div>
+                    </div>
+                    <div class="panel panel-default ">
+                        <div class="panel-body">
+                            <a href="/Home/Article/87479" style="font-weight: bold;">Buffered solutions versus 0.9% saline for resuscitation in critically ill adults  and children.</a>
+                            <br />
+                            <img src="/Content/Images/ea-Stars6.gif" alt="6 / 7" />
+                        </div>
+                        <div class="panel-footer">
+                            Cochrane Database Syst Rev. 2019 Jul 19;7:CD012247. doi: 10.1002/14651858.CD012247.pub2.<br />
+                            (<em>Systematic review</em>)
+                        </div>
+                    </div>
+                    <div class="panel panel-default hide">
+                        <div class="panel-body">
+                            <a href="/Home/Article/87679" style="font-weight: bold;">2 years of calorie restriction and cardiometabolic risk (CALERIE): exploratory outcomes of a multicentre, phase 2, randomised controlled trial.</a>
+                            <br />
+                            <img src="/Content/Images/ea-Stars6.gif" alt="6 / 7" />
+                        </div>
+                        <div class="panel-footer">
+                            Lancet Diabetes Endocrinol. 2019 Sep;7(9):673-683. doi: 10.1016/S2213-8587(19)30151-2. Epub 2019 Jul 11.<br />
+                            (<em>Original study</em>)
+                        </div>
+                    </div>
+                    <div class="panel panel-default hide">
+                        <div class="panel-body">
+                            <a href="/Home/Article/87775" style="font-weight: bold;">Oral versus intravenous antibiotics for bone and joint infections: the OVIVA non-inferiority RCT.</a>
+                            <br />
+                            <img src="/Content/Images/ea-Stars6.gif" alt="6 / 7" />
+                        </div>
+                        <div class="panel-footer">
+                            Health Technol Assess. 2019 Aug;23(38):1-92. doi: 10.3310/hta23380.<br />
+                            (<em>Original study</em>)
+                        </div>
+                    </div>
+                    <div class="panel panel-default hide">
+                        <div class="panel-body">
+                            <a href="/Home/Article/87521" style="font-weight: bold;">Meta-Analysis of Oral Anticoagulant Monotherapy as an Antithrombotic Strategy in  Patients With Stable Coronary Artery Disease and Nonvalvular Atrial Fibrillation.</a>
+                            <br />
+                            <img src="/Content/Images/ea-Stars6.gif" alt="6 / 7" />
+                        </div>
+                        <div class="panel-footer">
+                            Am J Cardiol. 2019 Sep 15;124(6):879-885. doi: 10.1016/j.amjcard.2019.05.072. Epub 2019 Jun 25.<br />
+                            (<em>Systematic review</em>)
+                        </div>
+                    </div>
+                    <div class="panel panel-default hide">
+                        <div class="panel-body">
+                            <a href="/Home/Article/87611" style="font-weight: bold;">Intensive vs Standard Treatment of Hyperglycemia and Functional Outcome in Patients With Acute Ischemic Stroke: The SHINE Randomized Clinical Trial.</a>
+                            <br />
+                            <img src="/Content/Images/ea-Stars5.gif" alt="5 / 7" />
+                        </div>
+                        <div class="panel-footer">
+                            JAMA. 2019 Jul 23;322(4):326-335. doi: 10.1001/jama.2019.9346.<br />
+                            (<em>Original study</em>)
+                        </div>
+                    </div>
+                    <div class="panel panel-default hide">
+                        <div class="panel-body">
+                            <a href="/Home/Article/87818" style="font-weight: bold;">The 4 'A's test for detecting delirium in acute medical patients: a diagnostic accuracy study.</a>
+                            <br />
+                            <img src="/Content/Images/ea-Stars5.gif" alt="5 / 7" />
+                        </div>
+                        <div class="panel-footer">
+                            Health Technol Assess. 2019 Aug;23(40):1-194. doi: 10.3310/hta23400.<br />
+                            (<em>Original study</em>)
+                        </div>
+                    </div>
+                    <div class="panel panel-default hide">
+                        <div class="panel-body">
+                            <a href="/Home/Article/87922" style="font-weight: bold;">Association Between Drug Treatments for Patients With Osteoporosis and Overall Mortality Rates: A Meta-analysis.</a>
+                            <br />
+                            <img src="/Content/Images/ea-Stars6.gif" alt="6 / 7" />
+                        </div>
+                        <div class="panel-footer">
+                            JAMA Intern Med. 2019 Aug 19. pii: 2747869. doi: 10.1001/jamainternmed.2019.2779.<br />
+                            (<em>Systematic review</em>)
+                        </div>
+                    </div>
+                    <div class="panel panel-default hide">
+                        <div class="panel-body">
+                            <a href="/Home/Article/87740" style="font-weight: bold;">Neonatal, infant, and childhood growth following metformin versus insulin treatment for gestational diabetes: A systematic review and meta-analysis.</a>
+                            <br />
+                            <img src="/Content/Images/ea-Stars6.gif" alt="6 / 7" />
+                        </div>
+                        <div class="panel-footer">
+                            PLoS Med. 2019 Aug 6;16(8):e1002848. doi: 10.1371/journal.pmed.1002848. eCollection 2019 Aug.<br />
+                            (<em>Systematic review</em>)
+                        </div>
+                    </div>
+                    <div class="panel panel-default hide">
+                        <div class="panel-body">
+                            <a href="/Home/Article/87405" style="font-weight: bold;">Pantoprazole to Prevent Gastroduodenal Events in Patients Receiving Rivaroxaban and/or Aspirin in a Randomized, Double-Blind, Placebo-Controlled Trial.</a>
+                            <br />
+                            <img src="/Content/Images/ea-Stars6.gif" alt="6 / 7" />
+                        </div>
+                        <div class="panel-footer">
+                            Gastroenterology. 2019 Aug;157(2):403-412.e5. doi: 10.1053/j.gastro.2019.04.041.  Epub 2019 May 2.<br />
+                            (<em>Original study</em>)
+                        </div>
+                    </div>
+                    <div class="panel panel-default hide">
+                        <div class="panel-body">
+                            <a href="/Home/Article/87604" style="font-weight: bold;">Diagnosis of elevated intracranial pressure in critically ill adults: systematic  review and meta-analysis.</a>
+                            <br />
+                            <img src="/Content/Images/ea-Stars6.gif" alt="6 / 7" />
+                        </div>
+                        <div class="panel-footer">
+                            BMJ. 2019 Jul 24;366:l4225. doi: 10.1136/bmj.l4225.<br />
+                            (<em>Systematic review</em>)
+                        </div>
+                    </div>
+                    <div class="panel panel-default hide">
+                        <div class="panel-body">
+                            <a href="/Home/Article/87435" style="font-weight: bold;">Lifestyle changes for treating psoriasis.</a>
+                            <br />
+                            <img src="/Content/Images/ea-Stars5.gif" alt="5 / 7" />
+                        </div>
+                        <div class="panel-footer">
+                            Cochrane Database Syst Rev. 2019 Jul 16;7:CD011972. doi: 10.1002/14651858.CD011972.pub2.<br />
+                            (<em>Systematic review</em>)
+                        </div>
+                    </div>
+                    <div class="panel panel-default hide">
+                        <div class="panel-body">
+                            <a href="/Home/Article/87116" style="font-weight: bold;">C-Reactive Protein Testing to Guide Antibiotic Prescribing for COPD Exacerbations.</a>
+                            <br />
+                            <img src="/Content/Images/ea-Stars6.gif" alt="6 / 7" />
+                        </div>
+                        <div class="panel-footer">
+                            N Engl J Med. 2019 Jul 11;381(2):111-120. doi: 10.1056/NEJMoa1803185.<br />
+                            (<em>Original study</em>)
+                        </div>
+                    </div>
+                    <div class="panel panel-default hide">
+                        <div class="panel-body">
+                            <a href="/Home/Article/87931" style="font-weight: bold;">The role of anticoagulation in venous thromboembolism primary prophylaxis in patients with malignancy: A systematic review and meta-analysis of randomized controlled trials.</a>
+                            <br />
+                            <img src="/Content/Images/ea-Stars5.gif" alt="5 / 7" />
+                        </div>
+                        <div class="panel-footer">
+                            Thromb Res. 2019 Sep;181:36-45. doi: 10.1016/j.thromres.2019.07.007. Epub 2019 Jul 16.<br />
+                            (<em>Systematic review</em>)
+                        </div>
+                    </div>
+                    <div class="panel panel-default hide">
+                        <div class="panel-body">
+                            <a href="/Home/Article/87765" style="font-weight: bold;">Rivaroxaban With or Without Aspirin in Patients With Heart Failure and Chronic Coronary or Peripheral Artery Disease.</a>
+                            <br />
+                            <img src="/Content/Images/ea-Stars6.gif" alt="6 / 7" />
+                        </div>
+                        <div class="panel-footer">
+                            Circulation. 2019 Aug 13;140(7):529-537. doi: 10.1161/CIRCULATIONAHA.119.039609.  Epub 2019 Jun 5.<br />
+                            (<em>Original study</em>)
+                        </div>
+                    </div>
+                    <div class="panel panel-default hide">
+                        <div class="panel-body">
+                            <a href="/Home/Article/87736" style="font-weight: bold;">Screening for Pancreatic Cancer: Updated Evidence Report and Systematic Review for the US Preventive Services Task Force.</a>
+                            <br />
+                            <img src="/Content/Images/ea-Stars6.gif" alt="6 / 7" />
+                        </div>
+                        <div class="panel-footer">
+                            JAMA. 2019 Aug 6;322(5):445-454. doi: 10.1001/jama.2019.6190.<br />
+                            (<em>Systematic review</em>)
+                        </div>
+                    </div>
+            </div>
+                <p class="text-center"><button id="ShowMoreHitParade" class="btn">View 14 more...</button></p>
+    </div>
+</div>
+
+<div class="section section-grey">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-2">
+                <h2 class="text-center">Search in <em>DynaMed Plus</em></h2>
+                <p class="text-center">
+                    <em>DynaMed Plus</em> is a collection of the most current evidence curated from over 500 medical journals and presented in a bulleted summary, ideal for making clinical decisions at the point of care.
+                </p>
+                <form id="dynaMedSearch">
+                    <div class="input-group">
+                        <input id="dynaMedText" type="text" class="form-control" placeholder="Search topics in Dynamed Plus..." autocomplete="off">
+                        <span class="input-group-btn">
+                            <button class="btn" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="section section-blue">
+        <div class="container">
+            <h3 class="text-center">Not signed up yet? Register for free today!</h3>
+            <p class="text-center">
+                <a class="btn" href="/Account/Register">Register Now</a>
+            </p>
+        </div>
+    </div>
+
+
+
+        <footer class="no-wrap section section-black hidden-print">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-5">
+                        <h4>Mailing Address</h4>
+                        <p>
+                            Health Information Research Unit<br />
+                            McMaster University<br />
+                            Communications Research Lab, First Floor<br />
+                            1280 Main Street West<br />
+                            Hamilton, Ontario &nbsp;L8S 4K1<br />
+                            Canada<br />
+                        </p>
+                    </div>
+                    <div class="col-sm-4">
+                        <h4>Contact Us</h4>
+                        <p>
+                            Social Media:<br />
+                            <a href="/Redirect/External?x=VPwVyJcf90uwaqHYBYa-TZQ60U3nLE45w8QQRntWZKfKgH0EpYuRioNyEu-7huOvfbncWjgkQyM33qZ-Rv3D1hvb1stGOh9N0OGta43u0NCDdfuID-LFzlRz56x9Et2Y" target="_blank">Twitter »</a><br />
+                            Phone:<br />
+                            <a href="tel:+19055259140p22737">(905) 525-9140 ext. 22737 »</a><br />
+                            Email:<br />
+                            <a href="mailto:EvidenceAlerts@McMasterHKR.com">EvidenceAlerts@McMasterHKR.com »</a>
+                        </p>
+                    </div>
+                    <div class="col-sm-3">
+                        <h4>Legal Information</h4>
+                        <p>
+                            <a href="/Pages/Terms">Terms &amp; Conditions &#187;</a><br />
+                            <a href="/Pages/Privacy">Privacy Policy &#187;</a><br />
+                            <a href="/Pages/Disclaimer">Disclaimer &#187;</a><br />
+                        </p>
+                    </div>
+                </div>
+                <hr />
+                <p class="text-center">
+                    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                    Share us on...<br />
+                    <div class="addthis_inline_share_toolbox text-center" data-url="https://www.evidencealerts.com/" data-title="Share EvidenceAlerts on your favourite service!"></div>
+                </p>
+                <p class="text-center">
+                    &copy; 2019 <a href="/Redirect/External?x=9uFM0fEcc0ojYz8SoRLVwDq0aGRf288fIPH1XK6WjqadZNW_XX4GJhanz704mZCWtmXQ33jOCiUj0byJaAPtjQ" target="_blank"><img src="/Content/Images/hiru-logo-white.png" alt="Health Information Research Unit" class="copyright-logo"/></a>, McMaster University
+                </p>
+                <p class="text-center hidden-xs">
+                    <a href="/Redirect/External?x=9uFM0fEcc0ojYz8SoRLVwBsKEzRYRaJo5q-y3k3zFPlf5HDIVHkw921-hdL-lvaCxI0v8afFguOTRqgKIxiKFPxvijpgJ2aKBwQuvH3sNmhtV2FI7Dr1ll3s7QoN_5YhzLMefVDEaPsyxytxOr4Img" target="_blank"><img src="/Content/Images/mcmaster-plus-logo.png" alt="McMaster PLUS" class="footer-logo"/></a>
+                    <a href="/Redirect/External?x=NjEHGDPTDPNR_DoHc7SdbL3KKdlSMhamblHtszURLQnOYhtFlKxAk9wVzFw6g-CMlrx1pc3L7joSrEaHnQAa6g" target="_blank"><img src="/Content/Images/mcmaster-university-logo.png" alt="McMaster University" class="footer-logo"/></a>
+                    <a href="/Redirect/External?x=Hth2fgpmhCXa6_kCBlUF6YEfVCLSQHO2jyDH3JXC0T9MA9PZGw3Qq5S79PkZTxmbOADgIIJh1eFlNt-MdTfSNw" target="_blank"><img src="/Content/Images/dynamed-plus-logo.png" alt="DynaMed Plus" class="footer-logo"/></a>
+                </p>
+                <div id="logo-carousel" class="carousel visible-xs" data-ride="carousel" data-interval="3000">
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <a href="/Redirect/External?x=9uFM0fEcc0ojYz8SoRLVwBsKEzRYRaJo5q-y3k3zFPlf5HDIVHkw921-hdL-lvaCxI0v8afFguOTRqgKIxiKFPxvijpgJ2aKBwQuvH3sNmhtV2FI7Dr1ll3s7QoN_5YhzLMefVDEaPsyxytxOr4Img" target="_blank"><img src="/Content/Images/mcmaster-plus-logo.png" alt="McMaster PLUS" class="carousel-logo"/></a>
+                        </div>
+                        <div class="item">
+                            <a href="/Redirect/External?x=NjEHGDPTDPNR_DoHc7SdbL3KKdlSMhamblHtszURLQnOYhtFlKxAk9wVzFw6g-CMlrx1pc3L7joSrEaHnQAa6g" target="_blank"><img src="/Content/Images/mcmaster-university-logo.png" alt="McMaster University" class="carousel-logo"/></a>
+                        </div>
+                        <div class="item">
+                            <a href="/Redirect/External?x=Hth2fgpmhCXa6_kCBlUF6YEfVCLSQHO2jyDH3JXC0T9MA9PZGw3Qq5S79PkZTxmbOADgIIJh1eFlNt-MdTfSNw" target="_blank"><img src="/Content/Images/dynamed-plus-logo.png" alt="DynaMed Plus" class="carousel-logo"/></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        
+
+
+        
+
+        <button class="btn totop hidden-print"><i class="glyphicon glyphicon-menu-up"></i></button>
+
+        
+    <script src="/Scripts/salvattore.min.js?v=130699641255154221"></script>
+    <script src="/Scripts/jquery.rwdImageMaps.min.js?v=130607084958769042"></script>
+    <script src="/Scripts/bootstrap-typeahead.js?v=130965671393052113"></script>
+    <script src="/Scripts/search-suggestions.js?v=131764996222594495"></script>
+        <script src="/Scripts/dynamed-search.js?v=131769208051431471"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#ShowMoreHitParade').click(function () {
+                // Show hidden articles
+                $('#grid div.hide').each(function (i, elem) {
+                    $(elem).removeClass('hide');
+                });
+
+                // Hide the more link
+                $(this).hide();
+
+                // Prevent click behaviour
+                return false;
+            });
+
+            $('img[usemap]').rwdImageMaps();
+        });
+    </script>
+
+        
+<div id="MessageModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close close-light" data-dismiss="modal" onclick="">&times;</button>
+                <h4 class="modal-title text-default"></h4>
+            </div>
+            <div class="modal-body">
+                
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal" onclick="">OK</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+            <!-- Go to www.addthis.com/dashboard to customize your tools -->
+            <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5b574e241055d6bd"></script>
+            <script>
+                // This adds an ?Source=service parameter to let us know where the share came from (ie ?Source=email or ?Source=facebook)
+                var addthis_share = {
+                    url_transforms: {
+                        add: {
+                            Source: '{{code}}'
+                        }
+                    }
+                }
+            </script>
+                <script>
+                    (function (i, s, o, g, r, a, m) {
+                        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                            (i[r].q = i[r].q || []).push(arguments)
+                        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+                    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+                    ga('create', 'UA-4196262-2', 'auto');
+                    ga('send', 'pageview');
+                </script>
+        <script>
+            // No more launch alert
+            //$(document).ready(function () {
+            //    if (!Cookies.get('dismissLaunchAlert')) {
+            //        $('#layoutAlert').slideDown('slow');
+            //    }
+
+            //    $('#dismissLayoutAlert').click(function () {
+            //        Cookies.set('dismissLaunchAlert', true, { expires: 365 });
+            //        $('#layoutAlert').slideUp('slow');
+            //    });
+            //});
+        </script>
+    </body>
+</html>

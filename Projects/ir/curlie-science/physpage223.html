@@ -1,0 +1,582 @@
+<BASE HREF="http://www.hermetic.ch/compsci/lattgeom.htm">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<TITLE>Lattice Geometries</TITLE>
+<META Name="description" Content="Describes a method of defining lattice geometries for use in computational physics.">
+<link rel="stylesheet" type="text/css" href="../hs.css">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="keywords" content="lattice, geometry, site, vector, direction, computational, physics, method, number, coordination">
+</HEAD>
+
+<BODY BGCOLOR="#BEE7FF" TEXT="#000000" LINK="#0000FF" VLINK="#0000FF" ALINK="#FF4CBD" background="../backg/marb.jpg">
+<font face="Trebuchet MS,Arial,Tahoma,Verdana,Sans-serif,Helvetica">
+
+<CENTER>
+<TABLE BORDER="0" WIDTH="96%"><TR>
+<TD align="center">
+<table border="0" cellpadding="0">
+<TR><TH align="center"><font size="+2" face="Trebuchet MS,Arial,Tahoma,Verdana,Sans-serif,Helvetica">Lattice Geometries</font></TH></TR>
+<TR><TD align="center"><font size="+1" face="Trebuchet MS,Arial,Tahoma,Verdana,Sans-serif,Helvetica">by Peter Meyer</font></TD></TR>
+<TR><TD align="center"><font size="-1" face="Trebuchet MS,Arial,Tahoma,Verdana,Sans-serif,Helvetica">Written during 1999; last revised 2000&#8211;01&#8211;17.<BR>
+Originally published 2001&#8211;02&#8211;17 (archived <a href="https://web.archive.org/web/20030418135918/http://www.hermetic.ch/compsci/lattgeom.htm">here</a>).</font></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<P>
+A lattice (in the sense used in computational physics) has a certain geometric structure, e.g. &quot;square&quot;, &quot;triangular&quot;, &quot;diamond&quot;, &quot;cubic&quot;, etc.  Here we consider how to represent these lattice geometries in a way which facilitates implementation as data structures within computer memory.</P>
+
+<P>The method of representation of lattice geometries described in this article was used in the software developed by the author to simulate the behavior of magnetic material by means of Ising and Potts spin models, as described in detail in his M.Phil. thesis, <a href="thesis/contents.htm">Computational Studies of Pure and Dilute Spin Models</a>.  That these representations are correct is shown by the fact that the measured properties of the models studied accord with results in the literature.</P>
+
+<HR WIDTH="75%"><p>
+
+<P>We begin with the hypothesis that any lattice geometry of interest in spin model studies can be represented as (a) the set of all points in n&#8211;dimensional Cartesian space with integral coordinates, i.e., the space of n&#8211;dimensional vectors (x<SUB>i</SUB>) whose components are integers, together with (b) a set of lines joining these points.  The points are the lattice &quot;sites&quot; and the lines are the lattice &quot;bonds&quot;.  A vector (x<SUB>i</SUB>) is said to be<I> integral</I> if all its components are integers.</P>
+
+<P>We further hypothesize that any lattice geometry can be defined on this basis by the use of a finite number (usually only one or two) of finite sets of integral vectors {(y<SUB>i</SUB>)}, called &quot;direction vectors&quot;, such that -1 &le; y<SUB>i</SUB> &le; +1 for all i, and for any site (x<SUB>i</SUB>) there is a set of direction vectors {(y<SUB>i</SUB>)} such that the set of all sites connected to (x<SUB>i</SUB>) by a &quot;bond&quot; is the set of sites {(x<SUB>i</SUB> + y<SUB>i</SUB>)}.</P>
+
+<P>A site which is connected by a bond to another site is said to be a <I>neighbour</I> of that site.</P>
+
+<P>A lattice is <I>connected</I> if any two lattice sites can be connected by a finite chain of bonds.  All lattices defined in this document, except where otherwise noted, are connected.</P>
+
+<P>A lattice geometry is <I>n-definable</I> (for <I>n</I> &ge; 1) if its definition requires the use of <I>n</I> sets of direction vectors.  </P>
+
+<P>The <B>square lattice</B> is 1-definable as follows:</P>
+
+<B><P>With n=2 (i.e., the 2-dimensional Cartesian space) the set of direction vectors is:</P>
+
+<P ALIGN="CENTER">{(1,0), (-1,0), (0,1), (0,-1)}</P>
+</B>
+<P>Thus the neighbours of the site (1,1) are {(2,1), (0,1), (1,2), (1,0)} and the neighbours of the site (2,1) are {(3,1),(1,1),(2,2),(2,0)}, as shown by the diagram:</P><P>
+<DIR>
+<DIR>
+<DIR>
+<DIR>
+
+<FONT FACE="Courier" SIZE="2"><pre>    |        |        |        |
+--(0,2)----<B>(1,2)</B>----(2,2)----(3,2) --
+    |        |        |        |
+    |        |        |        |
+--<B>(0,1)</B>----<B>(1,1)</B>----<B>(2,1)</B>----(3,1) --
+    |        |        |        |
+    |        |        |        |
+--(0,0)----<B>(1,0)</B>----(2,0)----(3,0) --
+    |        |        |        |
+</pre></FONT>
+</DIR>
+</DIR>
+</DIR>
+</DIR>
+
+The &quot;cubic&quot; and the &quot;hypercubic (4d)&quot; lattices are also 1-definable.  </P>
+
+<P>The <B>cubic lattice</B> is defined by n=3 and the direction vectors:</P>
+
+<B><P ALIGN="CENTER">{(1,0,0), (-1,0,0), (0,1,0), (0,-1,0), (0,0,1), (0,0,-1)}</P>
+</B><P ALIGN="CENTER"></P>
+<P>and the <B>hypercubic lattice (4d)</B> by n=4 and the direction vectors:</P>
+
+<B><P ALIGN="CENTER">{(1,0,0,0), (-1,0,0,0), (0,1,0,0), (0,-1,0,0), (0,0,1,0), (0,0,-1,0), (0,0,0,1), (0,0,0,-1)</B>}</P>
+
+<P>The <I>dimensionality</I> of a lattice is the dimensionality of the Cartesian space used to define that lattice.  Thus a square lattice is 2-dimensional, a cubic lattice is 3-dimensional, and so on.</P>
+
+<P>The <I>coordination numbers</I> of a lattice are the sizes of the sets of direction vectors required for its definition.  Normally the sets of direction vectors all have the same size (i.e., the number of direction vectors in each set is the same), in which case we can speak of <I>the coordination number</I> of the lattice.  A square lattice has a coordination number of 4, a cubic lattice has 6 and a hypercubic (4d) lattice has 8.</P>
+
+<P>We come now to our first lattice geometry which is not 1-definable, but is 2-definable, namely, the &quot;honeycomb&quot; lattice:</P>
+<DIR>
+<DIR>
+<DIR>
+<DIR>
+
+<FONT FACE="Courier" SIZE="2"><pre>  O----O        O----O
+ /      \      /      \
+O        O----O        O--
+ \      /      \      /
+  O----O        O----O
+ /      \      /      \
+O        O----O        O--
+</pre></FONT></DIR>
+</DIR>
+</DIR>
+</DIR>
+
+<P>Since we are interested only in which sites form bonds with which other sites, and not in the visual appearance of the diagram of the lattice, this lattice geometry is equivalent to:</P>
+<DIR>
+<DIR>
+<DIR>
+<DIR>
+
+<FONT FACE="Courier" SIZE="2"><pre>--O----O----O----O----O----O--
+  |         |         |
+  |         |         |
+--O----O----O----O----O----O--
+       |         |         |
+       |         |         |
+--O----O----O----O----O----O--</pre>
+</FONT></DIR>
+</DIR>
+</DIR>
+</DIR>
+
+<P>This is easily seen by visual inspection plus some imagination.</P>
+
+<P>This geometry is 2-definable, but first we must introduce the notion of <I>odd</I> and <I>even</I> sites.</P>
+
+<P>A site (x<SUB>i</SUB>) is odd if the sum of its components is odd, otherwise it is even.  E.g., (0,0) is even since 0 + 0 = 0, and (1,1) is even, but (0,1), (-1,2), etc., are odd.</P>
+
+
+<P>The <B>honeycomb lattice</B> is defined as follows:</P>
+
+<B><P>n=2 and for an even site (x<SUB>i</SUB>) the set of direction vectors is {(1,0),(-1,0),(0,1)} and for an odd site (x<SUB>i</SUB>) the set of direction vectors is {(1,0),(-1,0),(0,-1)}.</P>
+</B>
+<P>This can be seen more clearly by use of coordinates:</P>
+<DIR>
+<DIR>
+
+<FONT FACE="Courier" SIZE="2"><pre>              |                 |
+--(-1,2)----(0,2)----(1,2)----(2,2)----(3,2)--
+     |O        E       |O        E       |O
+     |                 |                 |
+--(-1,1)----(0,1)----(1,1)----(2,1)----(3,1)--
+      E       |O        E       |O        E
+              |                 |
+--(-1,0)----(0,0)----(1,0)----(2,0)----(3,0)--
+     |O        E       |O       |E        O</pre>
+</FONT></DIR>
+</DIR>
+
+<P>Clearly the honeycomb lattice has a coordination number of 3.</P>
+
+<P>Two varieties of the honeycomb lattice may be distinguished, the one as defined above, and the one as defined by:</P>
+
+<B><P>n=2 and for an even site (x<SUB>i</SUB>) the set of direction vectors is {(0,l),(0,-1),(1,0)} and for an odd site (x<SUB>i</SUB>) the set of direction vectors is {(0,1),(0,-1),(-1,0)}.</P>
+</B>
+<P>This lattice has the following geometry:</P>
+<DIR>
+<DIR>
+
+<FONT FACE="Courier" SIZE="2"><pre>     |        |        |        |        |
+--(-1,2)    (0,2)----(1,2)    (2,2)----(3,2)
+     |O       |E       |O       |E       |O
+     |        |        |        |        |
+  (-1,1)----(0,1)    (1,1)----(2,1)    (3,1)--
+     |E       |O       |E       |O       |E
+     |        |        |        |        |
+--(-1,0)    (0,0)----(1,0)    (2,0)----(3,0)
+     |O       |E       |O       |E       |O</pre>
+</FONT></DIR>
+</DIR>
+
+<P>The difference between these two varieties of the honeycomb lattice may be significant for the determination of the bond percolation threshold of this lattice.</P>
+
+<P>Now we come to the &quot;triangular&quot; lattice, which has a coordination number of 6:</P>
+<DIR>
+<DIR>
+<DIR>
+<DIR>
+
+<FONT FACE="Courier" SIZE="2"><pre>  -O---O---O---O---O-
+  / \ / \ / \ / \ / \
+-O---O---O---O---O---O-
+  \ / \ / \ / \ / \ /
+  -O---O---O---O---O-
+  / \ / \ / \ / \ / \
+-O---O---O---O---O---O-</pre>
+</FONT></DIR>
+</DIR>
+</DIR>
+</DIR>
+
+<P>Again, since we are interested only in which sites are connected to which, not in the visual appearance of the diagram, we may transform this to obtain:</P>
+<DIR>
+<DIR>
+<DIR>
+<DIR>
+
+<FONT FACE="Courier" SIZE="2"><pre> -O--O--O--O--O--O--O-
+ /| /| /| /| /| /| /|
+  |/ |/ |/ |/ |/ |/ |/
+ -O--O--O--O--O--O--O-
+ /| /| /| /| /| /| /|
+  |/ |/ |/ |/ |/ |/ |/
+ -O--O--O--O--O--O--O-
+ /| /| /| /| /| /| /|
+  |/ |/ |/ |/ |/ |/ |/
+ -O--O--O--O--O--O--O-</pre>
+</FONT></DIR>
+</DIR>
+</DIR>
+</DIR>
+
+<P>There is a one-to-one correspondence of the sites in each form which presereves their site neighbourhoods, as can be verified by labelling the sites in both diagrams.</P>
+
+<P>The <B>triangular lattice</B> is 1-definable, as follows:</P>
+
+<B><P>n=2 and for any site (x<SUB>i</SUB>) the set of direction vectors is:</P>
+
+<P ALIGN="CENTER">{ (1,0), (-1,0), (0,1), (0,-1), (1,1), (-1,-1) }</P>
+</B>
+<P>A variation on the triangular lattice is the <B>&quot;semitriangular lattice&quot;</B>, which has the structure:</P><DIR>
+<DIR>
+<DIR>
+<DIR>
+
+<FONT FACE="Courier" SIZE="2"><pre> -O--O--O--O--O--O--O-
+  | /|  | /|  | /|  |
+  |/ |  |/ |  |/ |  |/
+ -O--O--O--O--O--O--O-
+  | /|  | /|  | /|  |
+  |/ |  |/ |  |/ |  |/
+ -O--O--O--O--O--O--O-
+  | /|  | /|  | /|  |
+  |/ |  |/ |  |/ |  |/
+ -O--O--O--O--O--O--O-</pre>
+</FONT></DIR>
+</DIR>
+</DIR>
+</DIR>
+
+<P>This is a 2-definable lattice, defined as follows:</P>
+
+<B><P>n=2 and for any site (x<SUB>i</SUB>) with x<SUB>0</SUB> even the set of direction vectors is:</P>
+
+<P ALIGN="CENTER">{ (1,0), (-1,0), (0,1), (0,-1), (1,1) }</P>
+
+<P>and for an site (x<SUB>i</SUB>) with x<SUB>0</SUB> odd the set of direction vectors is:</P>
+
+<P ALIGN="CENTER">{ (1,0), (-1,0), (0,1), (0,-1), (-1,-1) }</P>
+</B>
+<P>This lattice geometry has a coordination number of 5.</P>
+
+
+<P>Another variation on the triangular lattice is the <B>&quot;alternating triangular lattice&quot;</B>, which has the structure:</P>
+<DIR>
+<DIR>
+<DIR>
+<DIR>
+
+<FONT FACE="Courier" SIZE="2"><pre> -O--O--O--O--O--O--O-
+  | /|\ | /|\ | /|\ |
+ \|/ | \|/ | \|/ | \|/
+ -O--O--O--O--O--O--O-
+  | /|\ | /|\ | /|\ |
+ \|/ | \|/ | \|/ | \|/
+ -O--O--O--O--O--O--O-
+  | /|\ | /|\ | /|\ |
+ \|/ | \|/ | \|/ | \|/
+ -O--O--O--O--O--O--O-</pre>
+</FONT></DIR>
+</DIR>
+</DIR>
+</DIR>
+
+<P>This is a 2-definable lattice, defined as follows:</P>
+
+<B><P>n=2 and for any site (x<SUB>i</SUB>) with x<SUB>0</SUB> even the set of direction vectors is:</P>
+
+<P ALIGN="CENTER">{ (1,0), (-1,0), (0,1), (0,-1), (1,1), (-1,1) }</P>
+
+<P>and for an site (x<SUB>i</SUB>) with x<SUB>0</SUB> odd the set of direction vectors is:</P>
+
+<P ALIGN="CENTER">{ (1,0), (-1,0), (0,1), (0,-1), (-1,-1), (1,-1) }</P>
+</B>
+<P>This lattice geometry has a coordination number of 6 (the same as the triangular lattice).</P>
+
+<P>We can define another 1-definable 2d lattice by means of:</P>
+
+<B><P>n=2 and for any site (x<SUB>i</SUB>) the set of direction vectors is:</P>
+
+<P ALIGN="CENTER">{ (1,0), (-1,0), (0,1), (0,-1), (1,1), (-1,-1), (1,-1), (-1,1) }</P>
+</B>
+<P>This gives the lattice geometry:</P>
+<FONT SIZE="2"><DIR>
+<DIR>
+<DIR>
+<DIR>
+
+</FONT><FONT FACE="Courier" SIZE="2"><pre> -O--O--O--O--O--O--O-
+ /|\/|\/|\/|\/|\/|\/|\
+ \|/\|/\|/\|/\|/\|/\|/
+ -O--O--O--O--O--O--O-
+ /|\/|\/|\/|\/|\/|\/|\
+ \|/\|/\|/\|/\|/\|/\|/
+ -O--O--O--O--O--O--O-
+ /|\/|\/|\/|\/|\/|\/|\
+ \|/\|/\|/\|/\|/\|/\|/
+ -O--O--O--O--O--O--O-</pre></FONT></DIR>
+</DIR>
+</DIR>
+</DIR>
+
+<P>This is called the &quot;double triangular&quot; lattice geometry.  This lattice geometry has a coordination number of 8.</P>
+
+<P>The following 1-definable lattice structure, with a coordination number of 4, is definable as:</P>
+
+<B><P>n=2 and the set of direction vectors is { (1,1), (-1,1), (-1,-1), (1,-1) }</P>
+</B><FONT FACE="Courier" SIZE="2"><DIR>
+<DIR>
+<DIR>
+<DIR>
+<DIR>
+<DIR><pre>
+  O  O  O  O  O  O  O
+ / \/ \/ \/ \/ \/ \/ \
+ \ /\ /\ /\ /\ /\ /\ /
+  O  O  O  O  O  O  O
+ / \/ \/ \/ \/ \/ \/ \
+ \ /\ /\ /\ /\ /\ /\ /
+  O  O  O  O  O  O  O
+ / \/ \/ \/ \/ \/ \/ \
+ \ /\ /\ /\ /\ /\ /\ /
+  O  O  O  O  O  O  O</pre>
+</FONT></DIR>
+</DIR>
+</DIR>
+</DIR>
+</DIR>
+</DIR>
+
+<P>This lattice, however, is not connected.  This can be seen by noting that the bonds defined by the direction vectors are such that only even sites are connected to even sites, and only odd sites are connected to odd sites; an even site can never be connected to an odd site.  This lattice may be decomposed into two square lattices with no sites in common.</P>
+
+<P>Which leads to the observation:  If, for any direction vector in the definition of a lattice geometry, the sum of its components is even, then the lattice is not connected, and may be decomposed into two distinct lattices.</P>
+
+<P>Now we come to lattice geometries with dimensionality greater than 2 (in addition to the cubic and hypercubic lattices defined above).</P>
+
+<P>The &quot;diamond&quot; lattice, of dimensionality 3, is the geometry formed by carbon atoms in a diamond crystal.  It has a coordination number of 4.  It is difficult to represent using text characters.  </P>
+
+<P>The <B>diamond lattice</B> is a 2-definable lattice geometry, and may be defined as follows:</P>
+
+<B><P>n=3 and for an even site (x<SUB>i</SUB>) the set of direction vectors is:</P>
+
+<P ALIGN="CENTER">{ (1,0,0), (-1,0,0), (0,1,0), (0,0,1) }</P>
+
+<P>and for an odd site (x<SUB>i</SUB>) the set of direction vectors is:</P>
+
+<P ALIGN="CENTER">{ (1,0,0), (-1,0,0), (0,-1,0), (0,0,-1) }</P>
+</B><P ALIGN="CENTER"></P>
+<P>As with the honeycomb lattice, we may distinguish two varieties of diamond lattice.  The second variety is defined as follows:</P>
+
+<B><P>n=3 and for an even site (x<SUB>i</SUB>) the set of direction vectors is:</P>
+
+<P ALIGN="CENTER">{ (0,1,0), (0,-1,0), (1,0,0), (0,0,1) }</P>
+
+
+<P>and for an odd site (x<SUB>i</SUB>) the set of direction vectors is:</P>
+
+<P ALIGN="CENTER">{ (0,1,0), (0,-1,0), (-1,0,0), (0,0,-1) }</P>
+</B>
+<P>Now we consider the &quot;quadrilateral lattice&quot;, which is a 3d 1-definable lattice, defined as follows:</P>
+
+<B><P>n=3 and the direction vectors are:</P>
+</B>
+<B><P ALIGN="CENTER">{ (1,0,0), (-1,0,0), (0,1,0), (0,-1,0), (0,0,1), (0,0,-1), (1,1,1), (-1,-1,-1) }</P>
+</B>
+<P>The quadrilateral lattice has a coordination number of 8 and it contains the cubic lattice as a proper sublattice.  If the cubic lattice is imagined as consisting of connected cubes then each site is a vertex of eight cubes. The quadrilateral lattice has the same bonds as the cubic lattice, plus diagonal bonds which connect each site to the two sites at the opposite vertices of two of the eight cubes.  These are the bonds defined by the direction vectors (1,1,1) and (-1,-1,-1).</P>
+
+<P>Now we consider the &quot;tetrahedral lattice&quot;, which is a 3d 1-definable lattice, defined as follows:</P>
+
+<B><P>n=3 and the direction vectors are:</P>
+</B>
+<B><P ALIGN="CENTER">{ (1,0,0), (-1,0,0), (0,1,0), (0,-1,0), (0,0,1), (0,0,-1), </P>
+<P ALIGN="CENTER">(1,-1,0), (-1,1,0), (1,0,-1), (-1,0,1), (0,1,-1), (0,-1,1) }</P>
+</B>
+<P>The tetrahedral lattice has a coordination number of 12.  It is the lattice formed by oranges stacked in a tetrahedral arrangement.</P>
+
+<P>This is equivalent to:</P>
+
+<B><P>n=3 and the direction vectors are:</P>
+</B>
+<B><P ALIGN="CENTER">{ (1,0,0), (-1,0,0), (0,1,0), (0,-1,0), (0,0,1), (0,0,-1), </P>
+<P ALIGN="CENTER">(1,1,0), (-1,-1,0), (1,0,1), (-1,0,-1), (0,1,1), (0,-1,-1) }</P>
+</B>
+<P>Analogously to the double triangular lattice geometry we may define a<B> double tetrahedral</B> lattice geometry:</P>
+
+<B><P>n=3 and the direction vectors are:</P>
+</B>
+<B><P ALIGN="CENTER">{ (1,0,0), (-1,0,0), (0,1,0), (0,-1,0), (0,0,1), (0,0,-1), </P>
+<P ALIGN="CENTER">(1,1,0), (-1,-1,0), (1,0,1), (-1,0,-1), (0,1,1), (0,-1,-1) </P>
+<P ALIGN="CENTER">(1,-1,0), (-1,1,0), (1,0,-1), (-1,0,1), (0,1,-1), (0,-1,1) }</P>
+</B>
+<P>The coordination number is 18.</P>
+
+
+<P>We may define the 4-d analogue of the tetrahedral lattice, the <B>hypertetrahedral (4d) lattice</B>:</P>
+
+<B><P>n=4 and the direction vectors are:</P>
+</B>
+<B><P ALIGN="CENTER">{ (1,0,0,0), (-1,0,0,0), (0,1,0,0), (0,-1,0,0), (0,0,1,0), (0,0,-1,0), (0,0,0,1), (0,0,0,-1),</P>
+<P ALIGN="CENTER">(1,1,0,0), (-1,-1,0,0), (1,0,1,0), (-1,0,-1,0), (1,0,0,1), (-1,0,0,-1),</P>
+<P ALIGN="CENTER">(0,1,1,0), (0,-1,-1,0), (0,1,0,1), (0,-1,0,-1), (0,0,1,1), (0,0,-1,-1) }</P>
+</B>
+<P>The lattice geometry has a coordination number of 20.</P>
+
+<P>The 4-dimensional analogue of the diamond lattice is the <B>hyperdiamond lattice</B>.  This lattice is 2-definable, as follows:</P>
+
+<B><P>n=4 and for an even site (x<SUB>i</SUB>) the set of direction vectors is:</P>
+
+<P ALIGN="CENTER">{ (1,0,0,0), (-1,0,0,0), (0,1,0,0), (0,0,1,0), (0,0,0,1) }</P>
+
+<P>and for an odd site (x<SUB>i</SUB>) the set of direction vectors is:</P>
+
+<P ALIGN="CENTER">{ (1,0,0,0), (-1,0,0,0), (0,-1,0,0), (0,0,-1,0), (0,0,0,-1) }</P>
+</B>
+<P>This lattice geometry has a coordination number of 5.</P>
+
+<P>The approach outlined in this document can obviously be extended to dimensions greater than 4 and to more complicated lattice geometries.</P>
+
+<P>For example, we can divide the sites into four types, not just odd and even, as follows: (x<SUB>i</SUB>) is of type <I>k</I> if the sum of its components equals <I>k</I> mod 4.  Then we define a lattice geometry, the <B>decagonal lattice</B>, as follows:</P>
+<DIR>
+<DIR>
+<DIR>
+<DIR>
+<DIR>
+
+<B><P>n=3 and the set of direction vectors is </P>
+<P> { (1,0,0), (-1,0,0), (0,1,0) } if type 0,</P>
+<P> { (1,0,0), (-1,0,0), (0,0,1) } if type 1,</P>
+<P> { (1,0,0), (-1,0,0), (0,-1,0) } if type 2 and</P>
+<P> { (1,0,0), (-1,0,0), (0,0,-1) } if type 3.</P>
+</B></DIR>
+</DIR>
+</DIR>
+</DIR>
+</DIR>
+
+<P>This lattice has a coordination number of 3.  </P>
+
+<P>In computational physics such exotic lattice structures are, however, of little interest because it is unlikely that they occur in real physical systems.  Nevertheless, this approach is sufficiently general that one may conjecture that any lattice geometry found to occur in the physical world can be represented in this way. </P>
+
+<HR WIDTH="75%"><p>
+
+<P>Now follows a short description of how this approach is implemented to provide data structures in computer memory allowing the simulation software to handle any of the above types of lattices.</P>
+
+<P>When the simulation software is run a lattice type is specified.  An array <FONT FACE="Courier New" SIZE="2"
+>dir[8][4</FONT><FONT FACE="Courier New" SIZE="2">]</FONT> is declared, and its elements are assigned values such that, for any given lattice site, the direction vectors for that site are:</P>
+<DIR>
+<DIR>
+<DIR>
+<DIR>
+
+<FONT FACE="Courier" SIZE="2"><pre>{ (dir[0][0],...,dir[0][n-1]),
+  (dir[1][0],...,dir[1][n-1]),
+  ...,
+  (dir[k-1][0],...,dir[k-1][n-1]]) }</pre>
+</FONT></DIR>
+</DIR>
+</DIR>
+</DIR>
+
+<P>where <I>n</I> is the dimensionality of the lattice and <I>k</I> is the coordination number.</P>
+
+<P>Then for any lattice site it is a simple matter to find all the nearest neighbours of that site by adding the direction vectors to the site's coordinates (with some adjustment for boundary conditions if the site is located on a boundary).</P>
+
+<P>In C <FONT FACE="Courier" SIZE="2">dir[][]</FONT> would normally be an array of chars, which is sufficient for lattice geometries with a coordination number of up to&#160;8.  To handle lattice geometries with a coordination number up to 16 <FONT FACE="Courier" SIZE="2">dir[][]</FONT> must be an array of 16-bit short ints.</P>
+
+<P>In the case of 2-definable lattices (e.g., the honeycomb lattice, the diamond lattice and the hyperdiamond lattice) some values in the <FONT FACE="Courier" SIZE="2">dir[][]</FONT> array are adjusted for each site depending on whether that site is odd or even.</P>
+
+<P>The fifteen connected lattice geometries defined in this document are:</P>
+
+<center><TABLE>
+<TR> <TD align="center"><font face="Trebuchet MS,Arial,Tahoma,Verdana,Sans-serif,Helvetica">
+<B>Dimensionality</B></font></TD> <TD align="center"><font face="Trebuchet MS,Arial,Tahoma,Verdana,Sans-serif,Helvetica">
+<B>Name</B></font></TD> <TD align="center"><font face="Trebuchet MS,Arial,Tahoma,Verdana,Sans-serif,Helvetica">
+<B>Coordination number</B></font></TD></TR>
+
+ <TR> <TD align="center"><font face="Trebuchet MS,Arial,Tahoma,Verdana,Sans-serif,Helvetica">
+2 </font></TD> <TD align="center"><font face="Trebuchet MS,Arial,Tahoma,Verdana,Sans-serif,Helvetica">
+honeycomb </font></TD> <TD align="center"><font face="Trebuchet MS,Arial,Tahoma,Verdana,Sans-serif,Helvetica">
+3</font></TD></TR>
+
+ <TR> <TD align="center"><font face="Trebuchet MS,Arial,Tahoma,Verdana,Sans-serif,Helvetica">
+2 </font></TD> <TD align="center"><font face="Trebuchet MS,Arial,Tahoma,Verdana,Sans-serif,Helvetica">
+square </font></TD> <TD align="center"><font face="Trebuchet MS,Arial,Tahoma,Verdana,Sans-serif,Helvetica">
+4</font></TD></TR>
+
+ <TR> <TD align="center"><font face="Trebuchet MS,Arial,Tahoma,Verdana,Sans-serif,Helvetica">
+2 </font></TD> <TD align="center"><font face="Trebuchet MS,Arial,Tahoma,Verdana,Sans-serif,Helvetica">
+semitriangular </font></TD> <TD align="center"><font face="Trebuchet MS,Arial,Tahoma,Verdana,Sans-serif,Helvetica">
+5</font></TD></TR>
+
+ <TR> <TD align="center"><font face="Trebuchet MS,Arial,Tahoma,Verdana,Sans-serif,Helvetica">
+2 </font></TD> <TD align="center"><font face="Trebuchet MS,Arial,Tahoma,Verdana,Sans-serif,Helvetica">
+triangular </font></TD> <TD align="center"><font face="Trebuchet MS,Arial,Tahoma,Verdana,Sans-serif,Helvetica">
+6</font></TD></TR>
+
+ <TR> <TD align="center"><font face="Trebuchet MS,Arial,Tahoma,Verdana,Sans-serif,Helvetica">
+2 </font></TD> <TD align="center"><font face="Trebuchet MS,Arial,Tahoma,Verdana,Sans-serif,Helvetica">
+alternating triangular </font></TD> <TD align="center"><font face="Trebuchet MS,Arial,Tahoma,Verdana,Sans-serif,Helvetica">
+6</font></TD></TR>
+
+ <TR> <TD align="center"><font face="Trebuchet MS,Arial,Tahoma,Verdana,Sans-serif,Helvetica">
+2 </font></TD> <TD align="center"><font face="Trebuchet MS,Arial,Tahoma,Verdana,Sans-serif,Helvetica">
+double triangular </font></TD> <TD align="center"><font face="Trebuchet MS,Arial,Tahoma,Verdana,Sans-serif,Helvetica">
+8</font></TD></TR>
+
+
+ <TR> <TD align="center"><font face="Trebuchet MS,Arial,Tahoma,Verdana,Sans-serif,Helvetica">
+3 </font></TD> <TD align="center"><font face="Trebuchet MS,Arial,Tahoma,Verdana,Sans-serif,Helvetica">
+decagonal </font></TD> <TD align="center"><font face="Trebuchet MS,Arial,Tahoma,Verdana,Sans-serif,Helvetica">
+3</font></TD></TR>
+
+ <TR> <TD align="center"><font face="Trebuchet MS,Arial,Tahoma,Verdana,Sans-serif,Helvetica">
+3 </font></TD> <TD align="center"><font face="Trebuchet MS,Arial,Tahoma,Verdana,Sans-serif,Helvetica">
+diamond </font></TD> <TD align="center"><font face="Trebuchet MS,Arial,Tahoma,Verdana,Sans-serif,Helvetica">
+4</font></TD></TR>
+
+ <TR> <TD align="center"><font face="Trebuchet MS,Arial,Tahoma,Verdana,Sans-serif,Helvetica">
+3 </font></TD> <TD align="center"><font face="Trebuchet MS,Arial,Tahoma,Verdana,Sans-serif,Helvetica">
+cubic </font></TD> <TD align="center"><font face="Trebuchet MS,Arial,Tahoma,Verdana,Sans-serif,Helvetica">
+6</font></TD></TR>
+
+ <TR> <TD align="center"><font face="Trebuchet MS,Arial,Tahoma,Verdana,Sans-serif,Helvetica">
+3 </font></TD> <TD align="center"><font face="Trebuchet MS,Arial,Tahoma,Verdana,Sans-serif,Helvetica">
+quadrilateral </font></TD> <TD align="center"><font face="Trebuchet MS,Arial,Tahoma,Verdana,Sans-serif,Helvetica">
+8</font></TD></TR>
+
+ <TR> <TD align="center"><font face="Trebuchet MS,Arial,Tahoma,Verdana,Sans-serif,Helvetica">
+3 </font></TD> <TD align="center"><font face="Trebuchet MS,Arial,Tahoma,Verdana,Sans-serif,Helvetica">
+tetrahedral </font></TD> <TD align="center"><font face="Trebuchet MS,Arial,Tahoma,Verdana,Sans-serif,Helvetica">
+12</font></TD></TR>
+
+ <TR> <TD align="center"><font face="Trebuchet MS,Arial,Tahoma,Verdana,Sans-serif,Helvetica">
+3 </font></TD> <TD align="center"><font face="Trebuchet MS,Arial,Tahoma,Verdana,Sans-serif,Helvetica">
+double tetrahedral </font></TD> <TD align="center"><font face="Trebuchet MS,Arial,Tahoma,Verdana,Sans-serif,Helvetica">
+18</font></TD></TR>
+
+
+ <TR> <TD align="center"><font face="Trebuchet MS,Arial,Tahoma,Verdana,Sans-serif,Helvetica">
+4 </font></TD> <TD align="center"><font face="Trebuchet MS,Arial,Tahoma,Verdana,Sans-serif,Helvetica">
+hyperdiamond </font></TD> <TD align="center"><font face="Trebuchet MS,Arial,Tahoma,Verdana,Sans-serif,Helvetica">
+5</font></TD></TR>
+
+ <TR> <TD align="center"><font face="Trebuchet MS,Arial,Tahoma,Verdana,Sans-serif,Helvetica">
+4 </font></TD> <TD align="center"><font face="Trebuchet MS,Arial,Tahoma,Verdana,Sans-serif,Helvetica">
+hypercubic </font></TD> <TD align="center"><font face="Trebuchet MS,Arial,Tahoma,Verdana,Sans-serif,Helvetica">
+8</font></TD></TR>
+
+ <TR> <TD align="center"><font face="Trebuchet MS,Arial,Tahoma,Verdana,Sans-serif,Helvetica">
+4 </font></TD> <TD align="center"><font face="Trebuchet MS,Arial,Tahoma,Verdana,Sans-serif,Helvetica">
+hypertetrahedral </font></TD> <TD align="center"><font face="Trebuchet MS,Arial,Tahoma,Verdana,Sans-serif,Helvetica">
+20</font></TD></TR>
+</TABLE></center>
+
+This approach can be extended to handle next-nearest-neighbour models by allowing direction vectors such as (2,0) and (0,-2,1).  One might also allow all direction vectors (x<SUB>0</SUB>, x<SUB>1</SUB>, ...) with |x<SUB>0</SUB>|<SUP>n</SUP> + |x<SUB>1</SUB>|<SUP>n</SUP> + ... &le; k (perhaps in a bond-diluted lattice).</P>
+
+<CENTER>
+<P align="center"><TABLE border="0" cellpadding="4">
+<TR><TD COLSPAN="2" ALIGN="CENTER"><a href="thesis/contents.htm"><font SIZE="-1" face="Trebuchet MS,Arial,Tahoma,Verdana,Sans-serif,Helvetica">Computational Studies of Pure and Dilute Spin Models</FONT></a></TD></TR>
+<TR>
+<TD align="center"><a href="../compsci.htm"><font SIZE="-1" face="Trebuchet MS,Arial,Tahoma,Verdana,Sans-serif,Helvetica">Computational Science</FONT></a></TD>
+<!--<TD align="center"><A HREF="../index.php"><font SIZE="-1" face="Trebuchet MS,Arial,Tahoma,Verdana,Sans-serif,Helvetica">Hermetic&nbsp;Systems Home&nbsp;Page</FONT></A></TD-->
+<TD VALIGN="top"><A HREF="../index.php"><IMG SRC="../hs4.gif" alt="Hermetic Systems" border="0"></A>
+</TD>
+</TR>
+</TABLE></P>
+</CENTER>
+
+</FONT>
+</BODY>
+</HTML>

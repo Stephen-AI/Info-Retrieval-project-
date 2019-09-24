@@ -1,0 +1,2152 @@
+<BASE HREF="http://www.iop.org/EJ/journal/0264-9381">
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		
+		<script>
+			function DeferJS(src) {
+			function downloadJSAtOnload() {
+			var element = document.createElement("script");
+			element.src = src;
+			document.body.appendChild(element);
+			}
+			if (window.addEventListener)
+			window.addEventListener("load", downloadJSAtOnload, false);
+			else if (window.attachEvent)
+			window.attachEvent("onload", downloadJSAtOnload);
+			else window.onload = downloadJSAtOnload;
+			}
+		</script>
+		<script>
+			DeferJS("https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js");
+		</script>
+		<script>
+			DeferJS("https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js");
+		</script>
+		<script>
+                DeferJS("https://badge.dimensions.ai/badge.js");
+			</script>
+		<script>
+                DeferJS("https://badge.dimensions.ai/badge.js");
+			</script>
+		<script>
+                DeferJS("https://badge.dimensions.ai/badge.js");
+			</script>
+		<script>
+			var _urconfig = { sid: "defc3a7d-4b34-4b6f-ad1c-0716e0a05a65", aip: 0, usePageProtocol: false };
+			(function (d, s)
+			
+			{ var js = d.createElement(s), sc = d.getElementsByTagName(s)[0]; js.src = "https://hit.uptrendsdata.com/rum.min.js"; js.async = "async"; sc.parentNode.insertBefore(js, sc); }
+			(document, "script"));
+		</script>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="robots" content="noarchive">
+		<title>Classical and Quantum Gravity - IOPscience</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Note Gridset ref 35089 -->
+<link rel="stylesheet" href="https://static.iopscience.com/2.21.0/css/critical-styles.min.css" type="text/css" />
+<link rel="preload" href="https://static.iopscience.com/2.21.0/css/all-styles.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://static.iopscience.com/2.21.0/css/all-styles.min.css"></noscript>
+    <script>
+        /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+    /* This file is meant as a standalone workflow for
+    - testing support for link[rel=preload]
+    - enabling async CSS loading in browsers that do not support rel=preload
+    - applying rel preload css once loaded, whether supported or not.
+    */
+    (function( w ){
+      "use strict";
+      // rel=preload support test
+      if( !w.loadCSS ){
+        w.loadCSS = function(){};
+      }
+      // define on the loadCSS obj
+      var rp = loadCSS.relpreload = {};
+      // rel=preload feature support test
+      // runs once and returns a function for compat purposes
+      rp.support = (function(){
+        var ret;
+        try {
+          ret = w.document.createElement( "link" ).relList.supports( "preload" );
+        } catch (e) {
+          ret = false;
+        }
+        return function(){
+          return ret;
+        };
+      })();
+      // if preload isn't supported, get an asynchronous load by using a non-matching media attribute
+      // then change that media back to its intended value on load
+      rp.bindMediaToggle = function( link ){
+        // remember existing media attr for ultimate state, or default to 'all'
+        var finalMedia = link.media || "all";
+        function enableStylesheet(){
+          link.media = finalMedia;
+        }
+        // bind load handlers to enable media
+        if( link.addEventListener ){
+          link.addEventListener( "load", enableStylesheet );
+        } else if( link.attachEvent ){
+          link.attachEvent( "onload", enableStylesheet );
+        }
+        // Set rel and non-applicable media type to start an async request
+        // note: timeout allows this to happen async to let rendering continue in IE
+        setTimeout(function(){
+          link.rel = "stylesheet";
+          link.media = "only x";
+        });
+        // also enable media after 3 seconds,
+        // which will catch very old browsers (android 2.x, old firefox) that don't support onload on link
+        setTimeout( enableStylesheet, 3000 );
+      };
+      // loop through link elements in DOM
+      rp.poly = function(){
+        // double check this to prevent external calls from running
+        if( rp.support() ){
+          return;
+        }
+        var links = w.document.getElementsByTagName( "link" );
+        for( var i = 0; i < links.length; i++ ){
+          var link = links[ i ];
+          // qualify links to those with rel=preload and as=style attrs
+          if( link.rel === "preload" && link.getAttribute( "as" ) === "style" && !link.getAttribute( "data-loadcss" ) ){
+            // prevent rerunning on link
+            link.setAttribute( "data-loadcss", true );
+            // bind listeners to toggle media back
+            rp.bindMediaToggle( link );
+          }
+        }
+      };
+      // if unsupported, run the polyfill
+      if( !rp.support() ){
+        // run once at least
+        rp.poly();
+        // rerun poly on an interval until onload
+        var run = w.setInterval( rp.poly, 500 );
+        if( w.addEventListener ){
+          w.addEventListener( "load", function(){
+            rp.poly();
+            w.clearInterval( run );
+          } );
+        } else if( w.attachEvent ){
+          w.attachEvent( "onload", function(){
+            rp.poly();
+            w.clearInterval( run );
+          } );
+        }
+      }
+      // commonjs
+      if( typeof exports !== "undefined" ){
+        exports.loadCSS = loadCSS;
+      }
+      else {
+        w.loadCSS = loadCSS;
+      }
+    }( typeof global !== "undefined" ? global : this ) );
+    </script>
+<!--[if lte IE 10]>
+<link rel="stylesheet" href="https://static.iopscience.com/2.21.0/css/gridset-ie-lte8.css" type="text/css" />
+<![endif]-->
+<!-- Google Tag Manager -->
+<script type="text/javascript">
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push(
+        {'gtm.start': new Date().getTime(),event:'gtm.js'}
+        );var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-M73Z4W');
+    </script>
+<!-- End Google Tag Manager --><script>
+		/*  Cutting the mustard - http://responsivenews.co.uk/post/18948466399/cutting-the-mustard */
+		
+		/* Below is the original if statement, from the link above. I have amended it to turn of JS on all IE browsers less than 10.
+		This is due to a function in the iop.jquery.toolbar line 35/36. Uses .remove which is not native js supported in IE9 or lower */
+		/*if('querySelector' in document
+		&& 'localStorage' in window
+		&& 'addEventListener' in window)*/
+		
+		/* This is the updated selector, taken from: https://justmarkup.com/log/2015/02/26/cut-the-mustard-revisited/ */
+		if('visibilityState' in document) {
+		
+		/*! loadJS: load a JS. We are loading this command straight away, before the body loads, so that IF a user has JS enabled, their show hide panels will automatically be closed. */
+		/* If this isn't here, then these panels appear open while the page is loading, then when the js loads at the bottom of the page, they are shut. So the users sees open content, then hidden after a second or 2 when the js is loaded. Not nice */
+		document.write("<style>.reveal-content{display:none;}.search-res-filter .reveal-content{display:block;}</style>");
+		}
+		</script>
+		<script>
+		(function(d) {
+			var config = {
+			kitId: 'nal2qzr',
+			scriptTimeout: 3000
+			},
+			h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+		})(document);
+		</script>
+		</head>
+	<body itemscope itemtype="http://schema.org/Organization" class="issn-0264-9381">
+    <a id="back-to-top-target" tabindex="-1"></a>
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M73Z4W"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) --><div class="cookies-banner-wrap" id="cookieBanner">
+    <div class="cookies-banner cf">
+        This site uses cookies. By continuing to use this site you agree to our use of cookies. To find out more, see our
+        <a href="http://ioppublishing.org/privacyPolicy">Privacy and Cookies</a> policy.
+        <div class="cookies-banner-close">
+            <span role="button" tabindex="0" class="icon-close large"><span class="offscreen-hidden">Close this notification</span></span>
+        </div>
+    </div>
+</div><!-- Start Production toolbar -->
+<!-- End Production toolbar --><!-- Start Downtime Banner -->
+<!-- End Downtime Banner --><!-- Header tile starts -->
+<header role="banner" data-nav-group>
+	<div class="accessibility" style="display: none;">
+	    <p><strong>Accessibility Links</strong></p>
+	    <ul>
+	        <li><a href="#page-content">Skip to content</a></li>
+	        <li><a href="/search#contentCol">Skip to search IOPscience</a></li>
+	        <li><a href="/journals#contentCol">Skip to Journals list</a></li>
+	        <li><a href="/page/accessibility#contentCol">Accessibility help</a></li>
+	    </ul>
+	</div>
+    <div class="wrapper dgh-showgrid tgh-showgrid cf" name="contentCol">
+
+        <div class="dgh1 tgh1">
+
+            <div id="mobile-header" class="ta-hide da-hide wd-mobile-nav">
+                <a href="#sidr-main" id="simple-menu" class="icon-menu"></a>
+            </div>
+
+			<a href="/" itemprop="url" class="header-logo wd-header-graphic">
+				<meta itemprop="name" content="IOPscience">
+				<svg height="15" width="100">
+					<image xlink:href="https://static.iopscience.com/2.21.0/img/iops-logo.svg" src="https://static.iopscience.com/2.21.0/img/iops-logo.png" height="15" width="100" border="0" itemprop="logo" />
+				</svg>
+                <span class="offscreen-hidden">IOP Science home</span>
+			</a>
+
+            <section role="region" aria-label="Accessibility links">
+                <div class="accessibility-skip-links">
+                    <ul>
+                        <li>
+                            <a class="btn btn-default" href="#skip-to-content-link-target">Skip to content</a>
+                        </li>
+                        <li>
+                            <a class="btn btn-default" id="accessibility-help" href="/page/accessibility#skip-to-content-link-target">Accessibility Help</a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <nav role="navigation" id="sidr" class="m-hide wd-main-nav" aria-label="Site">
+                <div class="nav-journals nav-item wd-nav-journal">
+                    <a class="nav-top-link-drop-down" href="/journals" data-nav-trigger="journals">Journals<span class="icon-arrow-down"></span></a>
+
+                    <div class="nav-drop-down wd-nav-journal-dd" data-nav-item="journals">
+                        <a href="/journals">
+                            Journals list
+                            <div class="m-hide">Browse more than 70 science journal titles</div>
+                        </a>
+
+                        <a href="/page/subjects">
+                            Subject collections
+                            <div class="m-hide">Read the very best research published in IOP journals</div>
+                        </a>
+
+						<a href="/page/iopcorporate">
+                            IOPcorporate
+                            <div class="m-hide">IOP for R&amp;D</br>Science fueling innovation</div>
+                        </a>
+
+                        <a href="/collections?collectionType=SELECT">
+                            IOPselect
+                            <div class="m-hide">Articles from the past year selected by our editors</div>
+                        </a>
+
+                        <a href="/journals?type=partner#js-tab-pubpart">
+                            Publishing partners
+                            <div class="m-hide">Partner organisations and publications</div>
+                        </a>
+
+                        <a href="/info/page/openaccess">
+                            Open access
+                            <div class="m-hide">IOP Publishing open access policy guide</div>
+                        </a>
+
+                        <a href="/collections?collectionType=PHYSICS_REVIEWS">
+                            Review articles
+                            <div class="m-hide">The latest review articles from our journals</div>
+                        </a>
+
+                        <a href="http://conferenceseries.iop.org/">
+                            IOP Conference Series
+                            <div class="m-hide">Read open access proceedings from science conferences worldwide</div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="nav-books nav-item wd-nav-books">
+                    <a href="/books" class="nav-top-link">Books</a>
+                </div>
+
+                <div class="nav-publishing-support nav-item wd-publishing-support">
+                        <a href="https://publishingsupport.iopscience.iop.org" class="nav-top-link">Publishing Support</a>
+                    </div>
+                <!-- Header Login tile starts here -->
+               <div class="nav-login nav-item wd-nav-login">
+<a class="nav-top-link-drop-down" id="login-drop-down-user" href="https://myiopscience.iop.org/signin?origin=a0&return=https%3A%2F%2Fiopscience.iop.org%2Fjournal%2F0264-9381" data-nav-trigger="login"><span class="nav-top-username">Login</span><span class="icon-arrow-down"></span></a>
+<div class="nav-drop-down wd-nav-login-dd" data-nav-item="login">
+
+    <div class='CMS-content'><p id="wd-login-dropdown__heading" class="replica-h3 mt-0">Reset your password</p>
+            <p id="wd-login-dropdown__body" class="small">If you have a user account, you will need to reset your password the next time you login. You will only need to do this once. <a href="/page/improvement-to-the-iopscience-login-process" aria-label="Find out more about the new I O P science login">Find out more</a>.</p></div><a class="btn btn-default mt-05 mb-05 d-b" href="https://myiopscience.iop.org/signin?origin=a0&return=https%3A%2F%2Fiopscience.iop.org%2Fjournal%2F0264-9381" id="wd-login-link">IOPscience login / Sign Up</a>
+        <div class="bdt-1">
+
+        <div class='CMS-content'><div class="eyebrow eyebrow--small eyebrow--marg-top-05"><span class="red">Please note:</span></div>
+<p id="wd-login-dropdown__athens-info" class="small mb-0">You do not need to reset your password if you login via Athens or an Institutional login.</p></div><a class="btn btn-primary mt-05 mb-05 d-b" href="https://ticket.iop.org/inst_login?return=https%3A%2F%2Fiopscience.iop.org%2Fjournal%2F0264-9381">Athens / Institution login</a>
+    </div>
+</div>
+</div><!-- Header Login tile ends here -->
+            </nav>
+
+
+        </div>
+
+        <div class="dgh2 tgh2">
+            <!-- Header search bar tile starts -->
+<!-- The new search, if the toggle is active -->
+<!-- The old search, if the toggle is not active -->
+<div id="search" class="wd-header-search">
+        <form accept-charset="utf-8,iso-8859-1" class="primary-search" method="get" action="/nsearch">
+            <fieldset>
+                <legend>Primary search</legend>
+                <label for="quickSearch">Search</label>
+                <input type="text" x-webkit-speech="" name="terms" id="quickSearch" placeholder="Search IOPscience content" value=""/>
+                <input type="submit" x-webkit-speech="" value="Search" class="btn btn-default hdr-search-btn bd-0">
+            </fieldset>
+        </form>
+    </div>
+<!-- Header search bar tile ends -->
+<!-- The new search, if the toggle is active -->
+<!-- The old search, if the toggle is not active -->
+<nav role="navigation" aria-label="Article Lookup" class="fl-r tb-hide m-hide">
+        <div class="nav-article-look-up nav-item wd-article-lookup">
+            <!-- Start Advanced search drop down -->
+            <button class="nav-top-link-drop-down" data-nav-trigger="articlelookup">Article Lookup<span class="icon-arrow-down"></span></button>
+        </div>
+    </nav>
+</div>
+    </div>
+    <div class="art-lookup-panel tb-hide m-hide nav-drop-down" data-nav-item="articlelookup">
+    <div class="wrapper cf pt-1 pb-1 ta-c">
+        <form accept-charset="utf-8,iso-8859-1" method="get" action="/findcontent" name="contentFinderForm" id="wd-find-art-form" class="cf find-article-issue-display mt-1 mb-15" autocomplete="OFF">
+            <fieldset>
+                <legend class="hide">Find article</legend>
+                <label for="CF_JOURNAL" class="hide">List of journal titles:</label>
+                <select name="CF_JOURNAL"
+        id="CF_JOURNAL"class="find-article-select" >
+    <option value="2053-1583" >2D Mater. (2014 - present)</option>
+<option value="1004-423X" >Acta Phys. Sin. (Overseas Edn) (1992 - 1999)</option>
+<option value="2043-6262" >Adv. Nat. Sci: Nanosci. Nanotechnol. (2010 - present)</option>
+<option value="1882-0786" >Appl. Phys. Express (2008 - present)</option>
+<option value="1758-5090" >Biofabrication (2009 - present)</option>
+<option value="1748-3190" >Bioinspir. Biomim. (2006 - present)</option>
+<option value="1748-605X" >Biomed. Mater. (2006 - present)</option>
+<option value="2057-1976" >Biomed. Phys. Eng. Express (2015 - present)</option>
+<option value="0508-3443" >Br. J. Appl. Phys. (1950 - 1967)</option>
+<option value="1009-9271" >Chin. J. Astron. Astrophys. (2001 - 2008)</option>
+<option value="1003-7713" >Chin. J. Chem. Phys. (1987 - 2007)</option>
+<option value="1674-0068" >Chin. J. Chem. Phys. (2008 - 2012)</option>
+<option value="1009-1963" >Chinese Phys. (2000 - 2007)</option>
+<option value="1674-1056" >Chinese Phys. B (2008 - present)</option>
+<option value="1674-1137" >Chinese Phys. C (2008 - present)</option>
+<option value="0256-307X" >Chinese Phys. Lett. (1984 - present)</option>
+<option value="0264-9381" selected>Class. Quantum Grav. (1984 - present)</option>
+<option value="0143-0815" >Clin. Phys. Physiol. Meas. (1980 - 1992)</option>
+<option value="0253-6102" >Commun. Theor. Phys. (1982 - present)</option>
+<option value="1749-4699" >Comput. Sci. Disc. (2008 - 2015)</option>
+<option value="2057-1739" >Converg. Sci. Phys. Oncol. (2015 - present)</option>
+<option value="0967-1846" >Distrib. Syst. Engng. (1993 - 1999)</option>
+<option value="0295-5075" >EPL (1986 - present)</option>
+<option value="2516-1075" >Electron. Struct. (2019 - present)</option>
+<option value="2631-8695" >Eng. Res. Express (2019 - present)</option>
+<option value="2515-7620" >Environ. Res. Commun. (2018 - present)</option>
+<option value="1748-9326" >Environ. Res. Lett. (2006 - present)</option>
+<option value="0143-0807" >Eur. J. Phys. (1980 - present)</option>
+<option value="2058-8585" >Flex. Print. Electron. (2015 - present)</option>
+<option value="1873-7005" >Fluid Dyn. Res. (1986 - present)</option>
+<option value="2631-6331" >Funct. Compos. Struct. (2018 - present)</option>
+<option value="1755-1315" >IOP Conf. Ser.: Earth Environ. Sci. (2008 - present)</option>
+<option value="1757-899X" >IOP Conf. Ser.: Mater. Sci. Eng. (2009 - present)</option>
+<option value="2631-7990" >Int. J. Extrem. Manuf. (2019 - present)</option>
+<option value="0266-5611" >Inverse Problems (1985 - present)</option>
+<option value="1064-5632" >Izv. Math. (1995 - present)</option>
+<option value="1752-7163" >J. Breath Res. (2007 - present)</option>
+<option value="1475-7516" >J. Cosmol. Astropart. Phys. (2003 - present)</option>
+<option value="1742-2140" >J. Geophys. Eng. (2004 - 2018)</option>
+<option value="1126-6708" >J. High Energy Phys. (1997 - 2009)</option>
+<option value="1748-0221" >J. Inst. (2006 - present)</option>
+<option value="0960-1317" >J. Micromech. Microeng. (1991 - present)</option>
+<option value="1741-2552" >J. Neural Eng. (2004 - present)</option>
+<option value="0368-3281" >J. Nucl. Energy, Part C Plasma Phys. (1959 - 1966)</option>
+<option value="0150-536X" >J. Opt. (1977 - 1998)</option>
+<option value="2040-8986" >J. Opt. (2010 - present)</option>
+<option value="1464-4258" >J. Opt. A: Pure Appl. Opt. (1999 - 2009)</option>
+<option value="1464-4266" >J. Opt. B: Quantum Semiclass. Opt. (1999 - 2005)</option>
+<option value="0022-3689" >J. Phys. A: Gen. Phys. (1968 - 1972)</option>
+<option value="0305-4470" >J. Phys. A: Math. Gen. (1975 - 2006)</option>
+<option value="0301-0015" >J. Phys. A: Math. Nucl. Gen. (1973 - 1974)</option>
+<option value="1751-8121" >J. Phys. A: Math. Theor. (2007 - present)</option>
+<option value="0953-4075" >J. Phys. B: At. Mol. Opt. Phys. (1988 - present)</option>
+<option value="0022-3700" >J. Phys. B: At. Mol. Phys. (1968 - 1987)</option>
+<option value="0022-3719" >J. Phys. C: Solid State Phys. (1968 - 1988)</option>
+<option value="2399-6528" >J. Phys. Commun. (2017 - present)</option>
+<option value="2632-072X" >J. Phys. Complex. (2019 - present)</option>
+<option value="0022-3727" >J. Phys. D: Appl. Phys. (1968 - present)</option>
+<option value="0022-3735" >J. Phys. E: Sci. Instrum. (1968 - 1989)</option>
+<option value="2515-7655" >J. Phys. Energy (2018 - present)</option>
+<option value="0305-4608" >J. Phys. F: Met. Phys. (1971 - 1988)</option>
+<option value="0954-3899" >J. Phys. G: Nucl. Part. Phys. (1989 - present)</option>
+<option value="0305-4616" >J. Phys. G: Nucl. Phys. (1975 - 1988)</option>
+<option value="2515-7639" >J. Phys. Mater. (2018 - present)</option>
+<option value="2515-7647" >J. Phys. Photonics (2018 - present)</option>
+<option value="0953-8984" >J. Phys.: Condens. Matter (1989 - present)</option>
+<option value="1742-6596" >J. Phys.: Conf. Ser. (2004 - present)</option>
+<option value="0952-4746" >J. Radiol. Prot. (1988 - present)</option>
+<option value="0950-7671" >J. Sci. Instrum. (1923 - 1967)</option>
+<option value="1674-4926" >J. Semicond. (2009 - present)</option>
+<option value="0260-2814" >J. Soc. Radiol. Prot. (1981 - 1987)</option>
+<option value="1742-5468" >J. Stat. Mech. (2004 - present)</option>
+<option value="1347-4065" >Jpn. J. Appl. Phys. (1962 - present)</option>
+<option value="1555-6611" >Laser Phys. (2013 - present)</option>
+<option value="1612-202X" >Laser Phys. Lett. (2004 - present)</option>
+<option value="2632-2153" >Mach. Learn.: Sci. Technol. (2019 - present)</option>
+<option value="2053-1591" >Mater. Res. Express (2014 - present)</option>
+<option value="0025-5726" >Math. USSR Izv. (1967 - 1992)</option>
+<option value="0025-5734" >Math. USSR Sb. (1967 - 1993)</option>
+<option value="0957-0233" >Meas. Sci. Technol. (1990 - present)</option>
+<option value="2050-6120" >Methods Appl. Fluoresc. (2013 - present)</option>
+<option value="0026-1394" >Metrologia (1965 - present)</option>
+<option value="0965-0393" >Modelling Simul. Mater. Sci. Eng. (1992 - present)</option>
+<option value="2399-7532" >Multifunct. Mater. (2018 - present)</option>
+<option value="2399-1984" >Nano Futures (2017 - present)</option>
+<option value="0957-4484" >Nanotechnology (1990 - present)</option>
+<option value="1367-2630" >New J. Phys. (1998 - present)</option>
+<option value="0951-7715" >Nonlinearity (1988 - present)</option>
+<option value="0335-7368" >Nouvelle Revue d'Optique (1973 - 1976)</option>
+<option value="0029-4780" >Nouvelle Revue d'Optique Appliquée (1970 - 1972)</option>
+<option value="0029-5515" >Nucl. Fusion (1960 - present)</option>
+<option value="1538-3873" >PASP (1889 - present)</option>
+<option value="1478-3975" >Phys. Biol. (2004 - present)</option>
+<option value="0031-9112" >Phys. Bull. (1950 - 1988)</option>
+<option value="0031-9120" >Phys. Educ. (1966 - present)</option>
+<option value="0031-9155" >Phys. Med. Biol. (1956 - present)</option>
+<option value="1402-4896" >Phys. Scr. (1970 - present)</option>
+<option value="2058-7058" >Phys. World (1988 - present)</option>
+<option value="1063-7869" >Phys.-Usp. (1993 - present)</option>
+<option value="0305-4624" >Physics in Technology (1973 - 1988)</option>
+<option value="0967-3334" >Physiol. Meas. (1993 - present)</option>
+<option value="0032-1028" >Plasma Phys. (1967 - 1983)</option>
+<option value="0741-3335" >Plasma Phys. Control. Fusion (1984 - present)</option>
+<option value="2516-1067" >Plasma Res. Express (2018 - present)</option>
+<option value="1009-0630" >Plasma Sci. Technol. (1999 - present)</option>
+<option value="0963-0252" >Plasma Sources Sci. Technol. (1992 - present)</option>
+<option value="0959-5309" >Proc. Phys. Soc. (1926 - 1948)</option>
+<option value="0370-1328" >Proc. Phys. Soc. (1958 - 1967)</option>
+<option value="0370-1298" >Proc. Phys. Soc. A (1949 - 1957)</option>
+<option value="0370-1301" >Proc. Phys. Soc. B (1949 - 1957)</option>
+<option value="1478-7814" >Proc. Phys. Soc. London (1874 - 1925)</option>
+<option value="2516-1091" >Prog. Biomed. Eng. (2018 - present)</option>
+<option value="2516-1083" >Prog. Energy (2018 - present)</option>
+<option value="0963-9659" >Pure Appl. Opt. (1992 - 1998)</option>
+<option value="1063-7818" >Quantum Electron. (1993 - present)</option>
+<option value="0954-8998" >Quantum Opt. (1989 - 1994)</option>
+<option value="2058-9565" >Quantum Sci. Technol. (2015 - present)</option>
+<option value="1355-5111" >Quantum Semiclass. Opt. (1995 - 1998)</option>
+<option value="0034-4885" >Rep. Prog. Phys. (1934 - present)</option>
+<option value="1674-4527" >Res. Astron. Astrophys. (2009 - present)</option>
+<option value="2515-5172" >Research Notes of the AAS (2017 - present)</option>
+<option value="0034-6683" >Review of Physics in Technology (1970 - 1972)</option>
+<option value="1468-4802" >Russ. Acad. Sci. Sb. Math. (1993 - 1995)</option>
+<option value="0036-021X" >Russ. Chem. Rev. (1960 - present)</option>
+<option value="0036-0279" >Russ. Math. Surv. (1960 - present)</option>
+<option value="1468-4810" >Russian Acad. Sci. Izv. Math. (1993 - 1995)</option>
+<option value="1064-5616" >Sb. Math. (1995 - present)</option>
+<option value="1468-6996" >Sci. Technol. Adv. Mater. (2000 - 2015)</option>
+<option value="0268-1242" >Semicond. Sci. Technol. (1986 - present)</option>
+<option value="0964-1726" >Smart Mater. Struct. (1992 - present)</option>
+<option value="0049-1748" >Sov. J. Quantum Electron. (1971 - 1992)</option>
+<option value="0038-5670" >Sov. Phys. Usp. (1958 - 1992)</option>
+<option value="0953-2048" >Supercond. Sci. Technol. (1988 - present)</option>
+<option value="2051-672X" >Surf. Topogr.: Metrol. Prop. (2013 - present)</option>
+<option value="1538-3881" >The Astronomical Journal (1849 - present)</option>
+<option value="0004-637X" >The Astrophysical Journal (1996 - present)</option>
+<option value="1538-4357" >The Astrophysical Journal Letters (1995 - 2009)</option>
+<option value="2041-8205" >The Astrophysical Journal Letters (2010 - present)</option>
+<option value="0067-0049" >The Astrophysical Journal Supplement Series (1996 - present)</option>
+<option value="1475-4878" >Trans. Opt. Soc. (1899 - 1932)</option>
+<option value="2053-1613" >Transl. Mater. Res. (2014 - 2018)</option>
+</select>
+<span class="find-article-inputs">
+                    <!-- Start content finder fields (long list) -->
+<label for="CF_VOLUME" class="hide">Volume number:</label>
+<input type="text" name="CF_VOLUME" id="CF_VOLUME" placeholder="Volume" x-webkit-speech="">
+<label for="CF_ISSUE" class="hide">Issue number (if known):</label>
+<input type="text" name="CF_ISSUE" id="CF_ISSUE" placeholder="Issue" x-webkit-speech="" placeholder="Issue" >
+<label for="CF_PAGE" class="hide">Article or page number:</label>
+<input type="text" name="CF_PAGE" id="CF_PAGE" placeholder="Article or page" x-webkit-speech="">
+<!-- End content finder fields (long list) --><input type="submit" class="btn btn-default" value="Lookup" name="submit">
+                </span>
+            </fieldset>
+        </form>
+    </div>
+</div></header>
+<!-- Header tile ends -->
+<div class="page-body" >
+        <a name="" id="skip-to-content-link-target" tabindex="-1"></a>
+        <div class="wrapper grid-2-col db-showgrid tb-showgrid cf">
+	<main role="main">
+		<!-- Secondary header starts -->
+<div class="secondary-header cf" id="wd-secondary-header">
+
+
+        <!-- Unbranded journal header starts -->
+<div class="unbranded">
+    <div class="publication-name" id="wd-pub-name">
+     <h1 class="publication-title" itemprop="name" itemid="periodical">
+				<a href="/journal/0264-9381" itemprop="url">Classical and Quantum Gravity</a>
+			</h1>
+		 </div>
+
+</div>
+<!-- Unbranded journal header ends -->
+</div> <!-- end secondary-header -->
+<!-- Secondary header ends --><div class="db1 tb1">
+			<div class="flex-container">
+    <!-- Start Journal introduction -->
+    <!-- Start Journal introduction -->
+<div class="flex-half-left mb-2" id="wd-jnl-hm-intro">
+    <div class="pull-left">
+            <img alt="Classical and Quantum Gravity" width="125" src="https://cms.iopscience.org/0217978c-ec1f-11e5-b0b6-759f86a2008e/journal_cover?guest=true" border="0"/>
+        </div>
+    <div class="media-body">
+		<p><em>Classical and Quantum Gravity</em> is an established journal for physicists, mathematicians and cosmologists in the fields of gravitation and the theory of spacetime. The journal is now the acknowledged world leader in classical relativity and all areas of quantum gravity.</p><div class="btn-multi-block">
+            <a id="jhp-submit" href="http://mc04.manuscriptcentral.com/cqg-iop" target="_blank" class="btn btn-primary">Submit an article <span class="offscreen-hidden">opens in new tab</span></a>
+            <a id="jhp-track" href="https://publishingsupport.iopscience.iop.org/track-my-article/" target="_blank" class="btn btn-primary">
+                    Track my article <span class="offscreen-hidden">opens in new tab</span>
+                </a>
+            </div>
+
+	</div>
+    <!-- Start Metric Information -->
+<div id="wd-impact-factor">
+
+	<div class="info-w-label info-w-label--sml mb-05">
+		<span class="label">2018 Impact Factor</span>
+		<span class="red">3.487</span>
+	</div>
+	 </div>
+<!-- End Metric Information -->
+ </div>
+
+<!-- End Journal intro -->
+    <!-- Start Journal home volume listings -->
+<div id="wd-jnl-hm-vol-forms" class="flex-half-right mb-2 mid-table-mb-25">
+		<div class="cf">
+
+			<div class="mid-tablet-half-left">
+					<form id="currentVolumeIssuesForm"
+						class="select-w-btn mb-1 cf" name="currentVolumeIssuesForm"
+						action="/issue" method="get" onsubmit="return false"
+						accept-charset="utf-8,iso-8859-1">
+						<label for="latestVolumeIssuesSelector" class="cf">Current volume</label>
+						<select name="latestVolumeIssuesSelect"
+        id="latestVolumeIssuesSelector" >
+    <option value="/issue/0264-9381/36/19" >Number 19, 10 October 2019</option>
+<option value="/issue/0264-9381/36/18" >Number 18, 19 September 2019</option>
+<option value="/issue/0264-9381/36/17" >Number 17, 5 September 2019</option>
+<option value="/issue/0264-9381/36/16" >Number 16, 22 August 2019</option>
+<option value="/issue/0264-9381/36/15" >Number 15, 8 August 2019</option>
+<option value="/issue/0264-9381/36/14" >Number 14, 25 July 2019</option>
+<option value="/issue/0264-9381/36/13" >Number 13, 11 July 2019</option>
+<option value="/issue/0264-9381/36/12" >Number 12, 20 June 2019</option>
+<option value="/issue/0264-9381/36/11" >Number 11, 6 June 2019</option>
+<option value="/issue/0264-9381/36/10" >Number 10, 23 May 2019</option>
+<option value="/issue/0264-9381/36/9" >Number 9, 9 May 2019</option>
+<option value="/issue/0264-9381/36/8" >Number 8, 25 April 2019</option>
+<option value="/issue/0264-9381/36/7" >Number 7, 11 April 2019</option>
+<option value="/issue/0264-9381/36/6" >Number 6, 21 March 2019</option>
+<option value="/issue/0264-9381/36/5" >Number 5, 7 March 2019</option>
+<option value="/issue/0264-9381/36/4" >Number 4, 21 February 2019</option>
+<option value="/issue/0264-9381/36/3" >Number 3, 7 February 2019</option>
+<option value="/issue/0264-9381/36/2" >Number 2, 24 January 2019</option>
+<option value="/issue/0264-9381/36/1" >Number 1, 10 January 2019</option>
+</select>
+<input type="submit" id="latestVolumeIssues" title="Go to issue"
+									value="Go" class="btn btn-default" />
+							</form>
+				</div>
+			<div class="mid-tablet-half-right">
+					<form id="allVolumesForm"
+						name="allVolumesForm" class="select-w-btn mb-1 cf"
+						action="/volume" method="get" onsubmit="return false"
+						accept-charset="utf-8,iso-8859-1">
+						<label for="allVolumesSelector" class="cf">Journal archive</label>
+						<select name="allVolumesSelect"
+        id="allVolumesSelector" >
+    <option value="/volume/0264-9381/36" >Vol 36, 2019</option>
+<option value="/volume/0264-9381/35" >Vol 35, 2018</option>
+<option value="/volume/0264-9381/34" >Vol 34, 2017</option>
+<option value="/volume/0264-9381/33" >Vol 33, 2016</option>
+<option value="/volume/0264-9381/32" >Vol 32, 2015</option>
+<option value="/volume/0264-9381/31" >Vol 31, 2014</option>
+<option value="/volume/0264-9381/30" >Vol 30, 2013</option>
+<option value="/volume/0264-9381/29" >Vol 29, 2012</option>
+<option value="/volume/0264-9381/28" >Vol 28, 2011</option>
+<option value="/volume/0264-9381/27" >Vol 27, 2010</option>
+<option value="/volume/0264-9381/26" >Vol 26, 2009</option>
+<option value="/volume/0264-9381/25" >Vol 25, 2008</option>
+<option value="/volume/0264-9381/24" >Vol 24, 2007</option>
+<option value="/volume/0264-9381/23" >Vol 23, 2006</option>
+<option value="/volume/0264-9381/22" >Vol 22, 2005</option>
+<option value="/volume/0264-9381/21" >Vol 21, 2004</option>
+<option value="/volume/0264-9381/20" >Vol 20, 2003</option>
+<option value="/volume/0264-9381/19" >Vol 19, 2002</option>
+<option value="/volume/0264-9381/18" >Vol 18, 2001</option>
+<option value="/volume/0264-9381/17" >Vol 17, 2000</option>
+<option value="/volume/0264-9381/16" >Vol 16, 1999</option>
+<option value="/volume/0264-9381/15" >Vol 15, 1998</option>
+<option value="/volume/0264-9381/14" >Vol 14, 1997</option>
+<option value="/volume/0264-9381/13" >Vol 13, 1996</option>
+<option value="/volume/0264-9381/12" >Vol 12, 1995</option>
+<option value="/volume/0264-9381/11" >Vol 11, 1994</option>
+<option value="/volume/0264-9381/10" >Vol 10, 1993</option>
+<option value="/volume/0264-9381/9" >Vol 9, 1992</option>
+<option value="/volume/0264-9381/8" >Vol 8, 1991</option>
+<option value="/volume/0264-9381/7" >Vol 7, 1990</option>
+<option value="/volume/0264-9381/6" >Vol 6, 1989</option>
+<option value="/volume/0264-9381/5" >Vol 5, 1988</option>
+<option value="/volume/0264-9381/4" >Vol 4, 1987</option>
+<option value="/volume/0264-9381/3" >Vol 3, 1986</option>
+<option value="/volume/0264-9381/2" >Vol 2, 1985</option>
+<option value="/volume/0264-9381/1" >Vol 1, 1984</option>
+</select>
+<input type="submit" id="allVolumes" value="Go"
+									title="Go to volume" class="btn btn-default" />
+							</form>
+				</div>
+			<!-- Start Focus issues -->
+			<!-- End Focus issues -->
+		</div>
+
+	<!-- Start Journal RSS feed -->
+		<p class="wd-jnl-rss print-hide">
+			<a href="/journal/rss/0264-9381"><span class="icon-feed"></span> RSS feed</a>
+		</p>
+		<!-- End Journal RSS feed -->
+		<!-- Start Email Alert -->
+
+    <p class="wd-jnl-email-alert print-hide">
+            <a href="https://myiopscience.iop.org/signin?origin=a0&return=https%3A%2F%2Fiopscience.iop.org%2Fmyiopscience%2Falerts%2Fsubscribe%3Fjournal%3D0264-9381" class="loginRequired"  id="noId" title="Create journal email alert">
+                <span class="icon-alarm"></span>
+                Sign up for new issue notifications</a>
+        </p>
+    <!-- End Email Alert -->
+</div>
+<!-- End Journal home volume listings -->
+</div>
+
+<div class="cf mb-1">
+    <!-- Start of Editorial news section -->
+    <div id="wd-jnl-hm-editorial" class="mb-2">
+                <div class="cf">
+<div class="CMS-content">
+<!-- <div class="hlf2 rss-feed hlf-floatleft">
+<div class="rss-feed__header">
+     
+<h2 class="rss-feed__title">CQG+</h2>
+ <a target="_blank" class="rss-feed__src-link rss-feed__src-link--BR" href="https://cqgplus.com/feed/"><span class="offscreen-hidden">Go to the XML source for this </span>RSS feed</a>
+</div> -->
+<!-- start feedwind code --> <!-- <script type="text/javascript" src="https://feed.mikle.com/js/fw-loader.js" data-fw-param="101663/"></script> --> <!-- end feedwind code -->
+<!-- </div><!-- end hlf2 -->
+</div> 
+</div> <!-- end cf --></div>
+    <!-- End of Editorial news section -->
+
+    <!-- Start Article listing tabs -->
+    <!-- Start Article listing tabs -->
+
+<div class="tabs cf mb-2 mt-1" id="wd-jnl-hm-art-list">
+    	<!-- Start Tabs list -->
+    	<div role="tablist">
+	    	<button role="tab"
+	            		aria-selected="false"
+	            		aria-controls="most-read-tab"
+	            		id="most-read"
+	            		tabindex="-1">
+	        	Most read
+	      		</button>
+			   <button role="tab"
+            			aria-selected="false"
+            			aria-controls="most-cited-tab"
+            			id="most-cited"
+            			tabindex="-1">
+        		Most cited
+        		</button>
+			   <button role="tab"
+	            		aria-selected="true"
+	            		aria-controls="latest-articles-tab"
+	            		id="latest-articles">
+	        	Latest articles
+	      		</button>
+			   <button role="tab"
+		            	aria-selected="false"
+		            	aria-controls="review-articles-tab"
+		            	id="review-articles"
+		            	tabindex="-1">
+		        Review articles
+		      	</button>
+			   <button role="tab"
+								aria-selected="false"
+								aria-controls="accepted-manuscripts-tab"
+								id="accepted-manuscripts"
+								tabindex="-1">
+							Accepted manuscripts
+						</button>
+					<button role="tab"
+								aria-selected="false"
+								aria-controls="trending-altmetrics-tab"
+								id="trending-altmetrics"
+								tabindex="-1">
+							Trending
+						</button>
+					</div>
+    	<!-- End Tabs list
+        <!-- Start Most read tabpanel -->
+		<div tabindex="0"
+       			role="tabpanel"
+       			id="most-read-tab"
+       			aria-labelledby="most-read"
+       			hidden="">
+			   <div class="tab-content-padding">
+            <p>
+                    <a href="" data-reveal-label-alt="Hide all abstracts" class="reveal-all-trigger mr-2 small"
+                       data-reveal-text="View all abstracts"> View all abstracts </a>
+                </p>
+            <div class="art-list">
+        <div class="art-list-item reveal-container reveal-closed reveal-plus-icon">
+	<div class="art-list-item-body">
+	
+		<div class="eyebrow">
+					<span class="offscreen-hidden">The following article is </span><span class="red">Open access</span>
+				</div>
+			<a href="/article/10.1088/0264-9381/32/6/065001" class="art-list-item-title"> Gravitational lensing by spinning black holes in astrophysics, and in the movie <I>Interstellar</I> </a>
+			<p class="small art-list-item-meta">Oliver James <em>et al</em>&nbsp;2015 <em>Class. Quantum Grav.</em> <b>32</b> 065001</p>
+			<div class="art-list-item-tools small wd-abstr-upper">
+				<a href=""	data-reveal-label-alt="Hide abstract" class="reveal-trigger mr-2 nowrap" data-reveal-text="View abstract">View abstract</a>
+				<a href="/article/10.1088/0264-9381/32/6/065001/meta" class="mr-2 nowrap"> <span class="icon-article"></span>View article</a>
+				<a href="/article/10.1088/0264-9381/32/6/065001/pdf" class="mr-2 nowrap"><span	class="icon-file-pdf"></span>PDF</a>
+				</div>
+			<div class="reveal-content">
+				<div class="article-text view-text-small"><p>
+<i>Interstellar</i> is the first Hollywood movie to attempt
+depicting a black hole as it would actually be seen by somebody
+nearby. For this, our team at 
+<i>Double Negative Visual Effects</i>, in collaboration with
+physicist Kip Thorne, developed a code called Double Negative
+Gravitational Renderer (DNGR) to solve the equations for ray-bundle
+(light-beam) propagation through the curved spacetime of a spinning
+(Kerr) black hole, and to render IMAX-quality, rapidly changing
+images. Our ray-bundle techniques were crucial for achieving
+IMAX-quality smoothness without flickering; and they differ from
+physicists&rsquo; image-generation techniques (which generally rely
+on individual light rays rather than ray bundles), and also differ
+from techniques previously used in the film industry&rsquo;s CGI
+community. This paper has four purposes: (i) to describe DNGR for
+physicists and CGI practitioners, who may find interesting and
+useful some of our unconventional techniques. (ii) To present the
+equations we use, when the camera is in arbitrary motion at an
+arbitrary location near a Kerr black hole, for mapping light
+sources to camera images via elliptical ray bundles. (iii) To
+describe new insights, from DNGR, into gravitational lensing when
+the camera is near the spinning black hole, rather than far away as
+in almost all prior studies; we focus on the shapes, sizes and
+influence of caustics and critical curves, the creation and
+annihilation of stellar images, the pattern of multiple images, and
+the influence of almost-trapped light rays, and we find similar
+results to the more familiar case of a camera far from the hole.
+(iv) To describe how the images of the black hole Gargantua and its
+accretion disk, in the movie 
+<i>Interstellar</i>, were generated with DNGR&mdash;including,
+especially, the influences of (a) colour changes due to doppler and
+gravitational frequency shifts, (b) intensity changes due to the
+frequency shifts, (c) simulated camera lens flare, and (d)
+decisions that the film makers made about these influences and
+about the Gargantua&rsquo;s spin, with the goal of producing images
+understandable for a mass audience. There are no new astrophysical
+insights in this accretion-disk section of the paper, but disk
+novices may find it pedagogically interesting, and movie buffs may
+find its discussions of 
+<i>Interstellar</i> interesting.</p>
+</div>
+					<div class="art-list-item-tools small wd-abstr-lower">
+                    <a class="mr-2"	href="https://doi.org/10.1088/0264-9381/32/6/065001">https://doi.org/10.1088/0264-9381/32/6/065001</a>
+<a href="/article/10.1088/0264-9381/32/6/065001#references">References</a>
+						</div>
+			</div>
+		</div>
+</div>
+<div class="art-list-item reveal-container reveal-closed reveal-plus-icon">
+	<div class="art-list-item-body">
+	
+		<div class="eyebrow">
+					<span class="offscreen-hidden">The following article is </span><span class="red">Open access</span>
+				</div>
+			<a href="/article/10.1088/1361-6382/ab2e1f" class="art-list-item-title"> Teleparallel theories of gravity: illuminating a fully invariant approach</a>
+			<p class="small art-list-item-meta">M Krššák <em>et al</em>&nbsp;2019 <em>Class. Quantum Grav.</em> <b>36</b> 183001</p>
+			<div class="art-list-item-tools small wd-abstr-upper">
+				<a href=""	data-reveal-label-alt="Hide abstract" class="reveal-trigger mr-2 nowrap" data-reveal-text="View abstract">View abstract</a>
+				<a href="/article/10.1088/1361-6382/ab2e1f/meta" class="mr-2 nowrap"> <span class="icon-article"></span>View article</a>
+				<a href="/article/10.1088/1361-6382/ab2e1f/pdf" class="mr-2 nowrap"><span	class="icon-file-pdf"></span>PDF</a>
+				</div>
+			<div class="reveal-content">
+				<div class="article-text view-text-small"><p>Teleparallel gravity and its popular generalization 
+<img align="middle" alt=""
+src="https://cdn.iopscience.com/images/0264-9381/36/18/183001/cqgab2e1fieqn001.gif" />
+gravity can be formulated as fully invariant (under both coordinate
+transformations and local Lorentz transformations) theories of
+gravity. Several misconceptions about teleparallel gravity and its
+generalizations can be found in the literature, especially
+regarding their local Lorentz invariance. We describe how these
+misunderstandings may have arisen and attempt to clarify the
+situation. In particular, the central point of confusion in the
+literature appears to be related to the inertial spin connection in
+teleparallel gravity models. While inertial spin connections are
+commonplace in special relativity, and not something inherent to
+teleparallel gravity, the role of the inertial spin connection in
+removing the spurious inertial effects within a given frame of
+reference is emphasized here. The careful consideration of the
+inertial spin connection leads to the construction of a fully
+invariant theory of teleparallel gravity and its generalizations.
+Indeed, it is the nature of the spin connection that differentiates
+the relationship between what have been called 
+<i>good tetrads</i> and 
+<i>bad tetrads</i> and clearly shows that, in principle, any tetrad
+can be utilized. The field equations for the fully invariant
+formulation of teleparallel gravity and its generalizations are
+presented and a number of examples using different assumptions on
+the frame and spin connection are displayed to illustrate the
+covariant procedure. Various modified teleparallel gravity models
+are also briefly reviewed.</p>
+</div>
+					<div class="art-list-item-tools small wd-abstr-lower">
+                    <a class="mr-2"	href="https://doi.org/10.1088/1361-6382/ab2e1f">https://doi.org/10.1088/1361-6382/ab2e1f</a>
+<a href="/article/10.1088/1361-6382/ab2e1f#references">References</a>
+						</div>
+			</div>
+		</div>
+</div>
+<div class="art-list-item reveal-container reveal-closed reveal-plus-icon">
+	<div class="art-list-item-body">
+	
+		<div class="eyebrow">
+					<span class="offscreen-hidden">The following article is </span><span class="red">Open access</span>
+				</div>
+			<a href="/article/10.1088/0264-9381/33/13/134001" class="art-list-item-title"> Characterization of transient noise in Advanced LIGO relevant to gravitational wave signal GW150914</a>
+			<p class="small art-list-item-meta">B P Abbott <em>et al</em>&nbsp;2016 <em>Class. Quantum Grav.</em> <b>33</b> 134001</p>
+			<div class="art-list-item-tools small wd-abstr-upper">
+				<a href=""	data-reveal-label-alt="Hide abstract" class="reveal-trigger mr-2 nowrap" data-reveal-text="View abstract">View abstract</a>
+				<a href="/article/10.1088/0264-9381/33/13/134001/meta" class="mr-2 nowrap"> <span class="icon-article"></span>View article</a>
+				<a href="/article/10.1088/0264-9381/33/13/134001/pdf" class="mr-2 nowrap"><span	class="icon-file-pdf"></span>PDF</a>
+				</div>
+			<div class="reveal-content">
+				<div class="article-text view-text-small"><p>On 14 September 2015, a gravitational wave signal from a
+coalescing black hole binary system was observed by the Advanced
+LIGO detectors. This paper describes the transient noise
+backgrounds used to determine the significance of the event
+(designated GW150914) and presents the results of investigations
+into potential correlated or uncorrelated sources of transient
+noise in the detectors around the time of the event. The detectors
+were operating nominally at the time of GW150914. We have ruled out
+environmental influences and non-Gaussian instrument noise at
+either LIGO detector as the cause of the observed gravitational
+wave signal.</p>
+</div>
+					<div class="art-list-item-tools small wd-abstr-lower">
+                    <a class="mr-2"	href="https://doi.org/10.1088/0264-9381/33/13/134001">https://doi.org/10.1088/0264-9381/33/13/134001</a>
+<a href="/article/10.1088/0264-9381/33/13/134001#references">References</a>
+						</div>
+			</div>
+		</div>
+</div>
+<div class="art-list-item reveal-container reveal-closed reveal-plus-icon">
+	<div class="art-list-item-body">
+	
+		<a href="/article/10.1088/1361-6382/ab0587" class="art-list-item-title"> Black holes, gravitational waves and fundamental physics: a roadmap</a>
+			<p class="small art-list-item-meta">Leor Barack <em>et al</em>&nbsp;2019 <em>Class. Quantum Grav.</em> <b>36</b> 143001</p>
+			<div class="art-list-item-tools small wd-abstr-upper">
+				<a href=""	data-reveal-label-alt="Hide abstract" class="reveal-trigger mr-2 nowrap" data-reveal-text="View abstract">View abstract</a>
+				<a href="/article/10.1088/1361-6382/ab0587/meta" class="mr-2 nowrap"> <span class="icon-article"></span>View article</a>
+				<a href="/article/10.1088/1361-6382/ab0587/pdf" class="mr-2 nowrap"><span	class="icon-file-pdf"></span>PDF</a>
+				</div>
+			<div class="reveal-content">
+				<div class="article-text view-text-small"><p>The grand challenges of contemporary fundamental
+physics&mdash;dark matter, dark energy, vacuum energy, inflation
+and early universe cosmology, singularities and the hierarchy
+problem&mdash;all involve 
+<i>gravity</i> as a key component. And of all gravitational
+phenomena, 
+<i>black holes</i> stand out in their elegant simplicity, while
+harbouring some of the most remarkable predictions of General
+Relativity: event horizons, singularities and ergoregions.</p>
+<p>The hitherto invisible landscape of the gravitational Universe
+is being unveiled before our eyes: the historical direct detection
+of gravitational waves by the LIGO-Virgo collaboration marks the
+dawn of a new era of scientific exploration. Gravitational-wave
+astronomy will allow us to test models of black hole formation,
+growth and evolution, as well as models of gravitational-wave
+generation and propagation. It will provide evidence for event
+horizons and ergoregions, test the theory of General Relativity
+itself, and may reveal the existence of new fundamental fields. The
+synthesis of these results has the potential to radically reshape
+our understanding of the cosmos and of the laws of Nature.</p>
+<p>The purpose of this work is to present a concise, yet
+comprehensive overview of the state of the art in the relevant
+fields of research, summarize important open problems, and lay out
+a roadmap for future progress. This write-up is an initiative taken
+within the framework of the European Action on &lsquo;Black holes,
+Gravitational waves and Fundamental Physics&rsquo;.</p>
+</div>
+					<div class="art-list-item-tools small wd-abstr-lower">
+                    <a class="mr-2"	href="https://doi.org/10.1088/1361-6382/ab0587">https://doi.org/10.1088/1361-6382/ab0587</a>
+<a href="/article/10.1088/1361-6382/ab0587#references">References</a>
+						</div>
+			</div>
+		</div>
+</div>
+<div class="art-list-item reveal-container reveal-closed reveal-plus-icon">
+	<div class="art-list-item-body">
+	
+		<div class="eyebrow">
+					<span class="offscreen-hidden">The following article is </span><span class="red">Open access</span>
+				</div>
+			<a href="/article/10.1088/0264-9381/32/1/015014" class="art-list-item-title"> Gravitational-wave sensitivity curves</a>
+			<p class="small art-list-item-meta">C J Moore <em>et al</em>&nbsp;2015 <em>Class. Quantum Grav.</em> <b>32</b> 015014</p>
+			<div class="art-list-item-tools small wd-abstr-upper">
+				<a href=""	data-reveal-label-alt="Hide abstract" class="reveal-trigger mr-2 nowrap" data-reveal-text="View abstract">View abstract</a>
+				<a href="/article/10.1088/0264-9381/32/1/015014/meta" class="mr-2 nowrap"> <span class="icon-article"></span>View article</a>
+				<a href="/article/10.1088/0264-9381/32/1/015014/pdf" class="mr-2 nowrap"><span	class="icon-file-pdf"></span>PDF</a>
+				</div>
+			<div class="reveal-content">
+				<div class="article-text view-text-small"><p>There are several common conventions in use by the
+gravitational-wave community to describe the amplitude of sources
+and the sensitivity of detectors. These are frequently confused. We
+outline the merits of and differences between the various
+quantities used for parameterizing noise curves and characterizing
+gravitational-wave amplitudes. We conclude by producing plots that
+consistently compare different detectors. Similar figures can be
+generated on-line for general use at 
+<a
+href="http://rhcole.com/apps/GWplotter">http://rhcole.com/apps/GWplotter</a>.</p>
+</div>
+					<div class="art-list-item-tools small wd-abstr-lower">
+                    <a class="mr-2"	href="https://doi.org/10.1088/0264-9381/32/1/015014">https://doi.org/10.1088/0264-9381/32/1/015014</a>
+<a href="/article/10.1088/0264-9381/32/1/015014#references">References</a>
+						</div>
+			</div>
+		</div>
+</div>
+<div class="art-list-item reveal-container reveal-closed reveal-plus-icon">
+	<div class="art-list-item-body">
+	
+		<div class="eyebrow">
+					<span class="offscreen-hidden">The following article is </span><span class="red">Open access</span>
+				</div>
+			<a href="/article/10.1088/0264-9381/33/12/125031" class="art-list-item-title"> A micromechanical proof-of-principle experiment for measuring the gravitational force of milligram masses</a>
+			<p class="small art-list-item-meta">Jonas Schmöle <em>et al</em>&nbsp;2016 <em>Class. Quantum Grav.</em> <b>33</b> 125031</p>
+			<div class="art-list-item-tools small wd-abstr-upper">
+				<a href=""	data-reveal-label-alt="Hide abstract" class="reveal-trigger mr-2 nowrap" data-reveal-text="View abstract">View abstract</a>
+				<a href="/article/10.1088/0264-9381/33/12/125031/meta" class="mr-2 nowrap"> <span class="icon-article"></span>View article</a>
+				<a href="/article/10.1088/0264-9381/33/12/125031/pdf" class="mr-2 nowrap"><span	class="icon-file-pdf"></span>PDF</a>
+				</div>
+			<div class="reveal-content">
+				<div class="article-text view-text-small"><p>This paper addresses a simple question: how small can one make a
+gravitational source mass and still detect its gravitational
+coupling to a nearby test mass? We describe an experimental scheme
+based on micromechanical sensing to observe gravity between
+milligram-scale source masses, thereby improving the current
+smallest source mass values by three orders of magnitude and
+possibly even more. We also discuss the implications of such
+measurements both for improved precision measurements of
+Newton&rsquo;s constant and for a new generation of experiments at
+the interface between quantum physics and gravity.</p>
+</div>
+					<div class="art-list-item-tools small wd-abstr-lower">
+                    <a class="mr-2"	href="https://doi.org/10.1088/0264-9381/33/12/125031">https://doi.org/10.1088/0264-9381/33/12/125031</a>
+<a href="/article/10.1088/0264-9381/33/12/125031#references">References</a>
+						</div>
+			</div>
+		</div>
+</div>
+<div class="art-list-item reveal-container reveal-closed reveal-plus-icon">
+	<div class="art-list-item-body">
+	
+		<div class="eyebrow">
+					<span class="offscreen-hidden">The following article is </span><span class="red">Open access</span>
+				</div>
+			<a href="/article/10.1088/1361-6382/aaaafa" class="art-list-item-title"> Effects of data quality vetoes on a search for compact binary coalescences in Advanced LIGO's first observing run</a>
+			<p class="small art-list-item-meta">B P Abbott <em>et al</em>&nbsp;2018 <em>Class. Quantum Grav.</em> <b>35</b> 065010</p>
+			<div class="art-list-item-tools small wd-abstr-upper">
+				<a href=""	data-reveal-label-alt="Hide abstract" class="reveal-trigger mr-2 nowrap" data-reveal-text="View abstract">View abstract</a>
+				<a href="/article/10.1088/1361-6382/aaaafa/meta" class="mr-2 nowrap"> <span class="icon-article"></span>View article</a>
+				<a href="/article/10.1088/1361-6382/aaaafa/pdf" class="mr-2 nowrap"><span	class="icon-file-pdf"></span>PDF</a>
+				</div>
+			<div class="reveal-content">
+				<div class="article-text view-text-small"><p>The first observing run of Advanced LIGO spanned 4 months, from
+12 September 2015 to 19 January 2016, during which gravitational
+waves were directly detected from two binary black hole systems,
+namely GW150914 and GW151226. Confident detection of gravitational
+waves requires an understanding of instrumental transients and
+artifacts that can reduce the sensitivity of a search. Studies of
+the quality of the detector data yield insights into the cause of
+instrumental artifacts and data quality vetoes specific to a search
+are produced to mitigate the effects of problematic data. In this
+paper, the systematic removal of noisy data from analysis time is
+shown to improve the sensitivity of searches for compact binary
+coalescences. The output of the PyCBC pipeline, which is a
+python-based code package used to search for gravitational wave
+signals from compact binary coalescences, is used as a metric for
+improvement. GW150914 was a loud enough signal that removing noisy
+data did not improve its significance. However, the removal of data
+with excess noise decreased the false alarm rate of GW151226 by
+more than two orders of magnitude, from 1 in 770 yr to less than 1
+in 186&thinsp;000 yr.</p>
+</div>
+					<div class="art-list-item-tools small wd-abstr-lower">
+                    <a class="mr-2"	href="https://doi.org/10.1088/1361-6382/aaaafa">https://doi.org/10.1088/1361-6382/aaaafa</a>
+<a href="/article/10.1088/1361-6382/aaaafa#references">References</a>
+						</div>
+			</div>
+		</div>
+</div>
+<div class="art-list-item reveal-container reveal-closed reveal-plus-icon">
+	<div class="art-list-item-body">
+	
+		<a href="/article/10.1088/1361-6382/ab3629" class="art-list-item-title"> Corrigendum: Gravitational waves from plunges into Gargantua (2018 <I>Class. Quantum Grav</I>. <A HREF="https://doi.org/10.1088/1361-6382/aab99e"> <B>35</B> 104002</A>)</a>
+			<p class="small art-list-item-meta">Geoffrey Compère <em>et al</em>&nbsp;2019 <em>Class. Quantum Grav.</em> <b>36</b> 179501</p>
+			<div class="art-list-item-tools small wd-abstr-upper">
+				<a href="/article/10.1088/1361-6382/ab3629/meta" class="mr-2 nowrap"> <span class="icon-article"></span>View article</a>
+				<a href="/article/10.1088/1361-6382/ab3629/pdf" class="mr-2 nowrap"><span	class="icon-file-pdf"></span>PDF</a>
+				</div>
+			<div class="reveal-content">
+				<div class="article-text view-text-small"></div>
+					<div class="art-list-item-tools small wd-abstr-lower">
+                    <a class="mr-2"	href="https://doi.org/10.1088/1361-6382/ab3629">https://doi.org/10.1088/1361-6382/ab3629</a>
+<a href="/article/10.1088/1361-6382/ab3629#references">References</a>
+						</div>
+			</div>
+		</div>
+</div>
+<div class="art-list-item reveal-container reveal-closed reveal-plus-icon">
+	<div class="art-list-item-body">
+	
+		<div class="eyebrow">
+					<span class="offscreen-hidden">The following article is </span><span class="red">Open access</span>
+				</div>
+			<a href="/article/10.1088/0264-9381/32/22/224001" class="art-list-item-title"> The Gravity Probe B test of general relativity</a>
+			<p class="small art-list-item-meta">C W F Everitt <em>et al</em>&nbsp;2015 <em>Class. Quantum Grav.</em> <b>32</b> 224001</p>
+			<div class="art-list-item-tools small wd-abstr-upper">
+				<a href=""	data-reveal-label-alt="Hide abstract" class="reveal-trigger mr-2 nowrap" data-reveal-text="View abstract">View abstract</a>
+				<a href="/article/10.1088/0264-9381/32/22/224001/meta" class="mr-2 nowrap"> <span class="icon-article"></span>View article</a>
+				<a href="/article/10.1088/0264-9381/32/22/224001/pdf" class="mr-2 nowrap"><span	class="icon-file-pdf"></span>PDF</a>
+				</div>
+			<div class="reveal-content">
+				<div class="article-text view-text-small"><p>The Gravity Probe B mission provided two new quantitative tests
+of Einstein&rsquo;s theory of gravity, general relativity (GR), by
+cryogenic gyroscopes in Earth&rsquo;s orbit. Data from four
+gyroscopes gave a geodetic drift-rate of
+&minus;6601.8&nbsp;&plusmn;&nbsp;18.3 marc-s yr
+<sup>&minus;1</sup> and a frame-dragging of
+&minus;37.2&nbsp;&plusmn;&nbsp;7.2 marc-s yr
+<sup>&minus;1</sup>, to be compared with GR predictions of
+&minus;6606.1 and &minus;39.2 marc-s yr
+<sup>&minus;1</sup> (1
+marc-s&nbsp;=&nbsp;4.848&nbsp;&times;&nbsp;10
+<sup>&minus;9</sup> radians). The present paper introduces the
+science, engineering, data analysis, and heritage of Gravity Probe
+B, detailed in the accompanying 20 CQG papers.</p>
+</div>
+					<div class="art-list-item-tools small wd-abstr-lower">
+                    <a class="mr-2"	href="https://doi.org/10.1088/0264-9381/32/22/224001">https://doi.org/10.1088/0264-9381/32/22/224001</a>
+<a href="/article/10.1088/0264-9381/32/22/224001#references">References</a>
+						</div>
+			</div>
+		</div>
+</div>
+<div class="art-list-item reveal-container reveal-closed reveal-plus-icon">
+	<div class="art-list-item-body">
+	
+		<a href="/article/10.1088/0264-9381/32/7/074001" class="art-list-item-title"> Advanced LIGO</a>
+			<p class="small art-list-item-meta"><B>The LIGO Scientific Collaboration</B> <em>et al</em>&nbsp;2015 <em>Class. Quantum Grav.</em> <b>32</b> 074001</p>
+			<div class="art-list-item-tools small wd-abstr-upper">
+				<a href=""	data-reveal-label-alt="Hide abstract" class="reveal-trigger mr-2 nowrap" data-reveal-text="View abstract">View abstract</a>
+				<a href="/article/10.1088/0264-9381/32/7/074001/meta" class="mr-2 nowrap"> <span class="icon-article"></span>View article</a>
+				<a href="/article/10.1088/0264-9381/32/7/074001/pdf" class="mr-2 nowrap"><span	class="icon-file-pdf"></span>PDF</a>
+				</div>
+			<div class="reveal-content">
+				<div class="article-text view-text-small"><p>The Advanced LIGO gravitational wave detectors are
+second-generation instruments designed and built for the two LIGO
+observatories in Hanford, WA and Livingston, LA, USA. The two
+instruments are identical in design, and are specialized versions
+of a Michelson interferometer with 4 km long arms. As in Initial
+LIGO, Fabry&ndash;Perot cavities are used in the arms to increase
+the interaction time with a gravitational wave, and power recycling
+is used to increase the effective laser power. Signal recycling has
+been added in Advanced LIGO to improve the frequency response. In
+the most sensitive frequency region around 100 Hz, the design
+strain sensitivity is a factor of 10 better than Initial LIGO. In
+addition, the low frequency end of the sensitivity band is moved
+from 40 Hz down to 10 Hz. All interferometer components have been
+replaced with improved technologies to achieve this sensitivity
+gain. Much better seismic isolation and test mass suspensions are
+responsible for the gains at lower frequencies. Higher laser power,
+larger test masses and improved mirror coatings lead to the
+improved sensitivity at mid and high frequencies. Data collecting
+runs with these new instruments are planned to begin in
+mid-2015.</p>
+</div>
+					<div class="art-list-item-tools small wd-abstr-lower">
+                    <a class="mr-2"	href="https://doi.org/10.1088/0264-9381/32/7/074001">https://doi.org/10.1088/0264-9381/32/7/074001</a>
+<a href="/article/10.1088/0264-9381/32/7/074001#references">References</a>
+						</div>
+			</div>
+		</div>
+</div>
+</div>
+</div>
+</div>
+		<!-- End Most read tabpanel -->
+
+        <!-- Start Most cited tabpanel -->
+		<div tabindex="0"
+	       		role="tabpanel"
+	       		id="most-cited-tab"
+	       		aria-labelledby="most-cited"
+	       		hidden="">
+			   <div class="tab-content-padding">
+            <p>
+                    <a href="" data-reveal-label-alt="Hide all abstracts" class="reveal-all-trigger mr-2 small"
+                       data-reveal-text="View all abstracts"> View all abstracts </a>
+                </p>
+            <div class="art-list">
+        <div class="art-list-item reveal-container reveal-closed reveal-plus-icon">
+	<div class="art-list-item-body">
+	
+		<a href="/article/10.1088/1361-6382/aa8971" class="art-list-item-title"> The realistic models of relativistic stars in <I>f</I> (<I>R</I>) = <I>R</I> + <I>αR</I> <SUP>2</SUP> gravity</a>
+			<p class="small art-list-item-meta">Artyom V Astashenok <em>et al</em>&nbsp;2017 <em>Class. Quantum Grav.</em> <b>34</b> 205008</p>
+			<div class="art-list-item-tools small wd-abstr-upper">
+				<a href=""	data-reveal-label-alt="Hide abstract" class="reveal-trigger mr-2 nowrap" data-reveal-text="View abstract">View abstract</a>
+				<a href="/article/10.1088/1361-6382/aa8971/meta" class="mr-2 nowrap"> <span class="icon-article"></span>View article</a>
+				<a href="/article/10.1088/1361-6382/aa8971/pdf" class="mr-2 nowrap"><span	class="icon-file-pdf"></span>PDF</a>
+				</div>
+			<div class="reveal-content">
+				<div class="article-text view-text-small"><p>In the context of 
+<img align="middle" alt="$f(R)=R+\alpha R^{2}$ "
+src="https://cdn.iopscience.com/images/0264-9381/34/20/205008/cqgaa8971ieqn003.gif" />
+gravity, we study the existence of neutron and quark stars for
+various 
+<i>&alpha;</i> with no intermediate approximation in the system of
+equations. Analysis shows that for positive 
+<i>&alpha;</i> the scalar curvature does not drop to zero at the
+star surface (as in general relativity) but exponentially decreases
+with distance. Also the stellar mass bounded by star surface
+decreases when the value 
+<i>&alpha;</i> increases. Nonetheless distant observers would
+observe a gravitational mass due to appearance of a so-called 
+<i>gravitational sphere</i> around the star. The non-zero curvature
+contribution to the gravitational mass eventually is shown to
+compensate the stellar mass decrease for growing 
+<i>&alpha;</i>&rsquo;s. We perform our analysis for several
+equations of state including purely hadronic configurations as well
+as hyperons and quark stars. In all cases, we assess that the
+relation between the parameter 
+<i>&alpha;</i> and the gravitational mass weakly depends upon the
+chosen equation of state. Another interesting feature is the
+increase of the star radius in comparison with general relativity
+for stars with masses close to maximal, whereas for intermediate
+masses 
+<img align="middle" alt="$1.4$ "
+src="https://cdn.iopscience.com/images/0264-9381/34/20/205008/cqgaa8971ieqn004.gif" />&ndash;
+<img align="middle" alt="$1.6 M_\odot$ "
+src="https://cdn.iopscience.com/images/0264-9381/34/20/205008/cqgaa8971ieqn005.gif" />
+the radius of star depends upon 
+<i>&alpha;</i> very weakly. Also the decrease in the mass bounded
+by star surface may cause the surface redshift to decrease in 
+<i>R</i> 
+<sup>2</sup>-gravity when compared to Einsteinian predictions. This
+effect is shown to hardly depend upon the observed gravitational
+mass. Finally, for negative values of 
+<i>&alpha;</i> our analysis shows that outside the star the scalar
+curvature has damped oscillations but the contribution of the 
+<i>gravitational sphere</i> into the gravitational mass increases
+indefinitely with radial distance putting into question the very
+existence of such relativistic stars.</p>
+</div>
+					<div class="art-list-item-tools small wd-abstr-lower">
+                    <a class="mr-2"	href="https://doi.org/10.1088/1361-6382/aa8971">https://doi.org/10.1088/1361-6382/aa8971</a>
+<a href="/article/10.1088/1361-6382/aa8971#references">References</a>
+						</div>
+			</div>
+		</div>
+</div>
+<div class="art-list-item reveal-container reveal-closed reveal-plus-icon">
+	<div class="art-list-item-body">
+	
+		<a href="/article/10.1088/1361-6382/aa7f0f" class="art-list-item-title"> Holographic heat engines: general considerations and rotating black holes</a>
+			<p class="small art-list-item-meta">Robie A Hennigar <em>et al</em>&nbsp;2017 <em>Class. Quantum Grav.</em> <b>34</b> 175005</p>
+			<div class="art-list-item-tools small wd-abstr-upper">
+				<a href=""	data-reveal-label-alt="Hide abstract" class="reveal-trigger mr-2 nowrap" data-reveal-text="View abstract">View abstract</a>
+				<a href="/article/10.1088/1361-6382/aa7f0f/meta" class="mr-2 nowrap"> <span class="icon-article"></span>View article</a>
+				<a href="/article/10.1088/1361-6382/aa7f0f/pdf" class="mr-2 nowrap"><span	class="icon-file-pdf"></span>PDF</a>
+				</div>
+			<div class="reveal-content">
+				<div class="article-text view-text-small"><p>We perform the first study of holographic heat engines where the
+working material is a rotating black hole, obtaining exact results
+for the efficiency of a rectangular engine cycle. We also make
+general considerations in the context of benchmarking these engines
+on circular cycles. We find an exact expression that is valid for
+black holes with vanishing specific heat at constant volume and
+derive an upper bound, below the Carnot efficiency and independent
+of spacetime dimension, which holds for any black hole of this
+kind. We illustrate our results with applications to a variety of
+black holes, noting the effects of spacetime dimension, rotation,
+and higher curvature corrections on the efficiency of the
+cycle.</p>
+</div>
+					<div class="art-list-item-tools small wd-abstr-lower">
+                    <a class="mr-2"	href="https://doi.org/10.1088/1361-6382/aa7f0f">https://doi.org/10.1088/1361-6382/aa7f0f</a>
+<a href="/article/10.1088/1361-6382/aa7f0f#references">References</a>
+						</div>
+			</div>
+		</div>
+</div>
+<div class="art-list-item reveal-container reveal-closed reveal-plus-icon">
+	<div class="art-list-item-body">
+	
+		<a href="/article/10.1088/1361-6382/aa8be2" class="art-list-item-title"> Soft hair as a soft wig</a>
+			<p class="small art-list-item-meta">Raphael Bousso and Massimo Porrati&nbsp;2017 <em>Class. Quantum Grav.</em> <b>34</b> 204001</p>
+			<div class="art-list-item-tools small wd-abstr-upper">
+				<a href=""	data-reveal-label-alt="Hide abstract" class="reveal-trigger mr-2 nowrap" data-reveal-text="View abstract">View abstract</a>
+				<a href="/article/10.1088/1361-6382/aa8be2/meta" class="mr-2 nowrap"> <span class="icon-article"></span>View article</a>
+				<a href="/article/10.1088/1361-6382/aa8be2/pdf" class="mr-2 nowrap"><span	class="icon-file-pdf"></span>PDF</a>
+				</div>
+			<div class="reveal-content">
+				<div class="article-text view-text-small"><p>We consider large gauge transformations of gravity and
+electromagnetism in 
+<img align="middle" alt="$D=4$ "
+src="https://cdn.iopscience.com/images/0264-9381/34/20/204001/cqgaa8be2ieqn001.gif" />
+asymptotically flat spacetime. Already at the classical level, we
+identify a canonical transformation that decouples the soft
+variables from the hard dynamics. We find that only the soft
+dynamics is constrained by BMS or large 
+<img align="middle" alt="$U(1)$ "
+src="https://cdn.iopscience.com/images/0264-9381/34/20/204001/cqgaa8be2ieqn002.gif" />
+charge conservation. Physically this corresponds to the fact that
+sufficiently long-wavelength photons or gravitons that are added to
+the in-state will simply pass through the interaction region; they
+scatter trivially in their own sector. This implies in particular
+that the large gauge symmetries bear no relevance to the black hole
+information paradox. We also present the quantum version of soft
+decoupling. As a consistency check, we show that the apparent
+mixing of soft and hard modes in the original variables arises
+entirely from the long range field of the hard charges, which is
+fixed by gauge invariance and so contains no additional
+information.</p>
+</div>
+					<div class="art-list-item-tools small wd-abstr-lower">
+                    <a class="mr-2"	href="https://doi.org/10.1088/1361-6382/aa8be2">https://doi.org/10.1088/1361-6382/aa8be2</a>
+<a href="/article/10.1088/1361-6382/aa8be2#references">References</a>
+						</div>
+			</div>
+		</div>
+</div>
+<div class="art-list-item reveal-container reveal-closed reveal-plus-icon">
+	<div class="art-list-item-body">
+	
+		<a href="/article/10.1088/1361-6382/aa9961" class="art-list-item-title"> Scattering on plane waves and the double copy</a>
+			<p class="small art-list-item-meta">Tim Adamo <em>et al</em>&nbsp;2018 <em>Class. Quantum Grav.</em> <b>35</b> 015004</p>
+			<div class="art-list-item-tools small wd-abstr-upper">
+				<a href=""	data-reveal-label-alt="Hide abstract" class="reveal-trigger mr-2 nowrap" data-reveal-text="View abstract">View abstract</a>
+				<a href="/article/10.1088/1361-6382/aa9961/meta" class="mr-2 nowrap"> <span class="icon-article"></span>View article</a>
+				<a href="/article/10.1088/1361-6382/aa9961/pdf" class="mr-2 nowrap"><span	class="icon-file-pdf"></span>PDF</a>
+				</div>
+			<div class="reveal-content">
+				<div class="article-text view-text-small"><p>Perturbatively around flat space, the scattering amplitudes of
+gravity are related to those of Yang&ndash;Mills by
+colour-kinematic duality, under which gravitational amplitudes are
+obtained as the &lsquo;double copy&rsquo; of the corresponding
+gauge theory amplitudes. We consider the question of how to extend
+this relationship to curved scattering backgrounds, focusing on
+certain &lsquo;sandwich&rsquo; plane waves. We calculate the
+3-point amplitudes on these backgrounds and find that a notion of
+double copy remains in the presence of background curvature:
+graviton amplitudes on a gravitational plane wave are the double
+copy of gluon amplitudes on a gauge field plane wave. This is
+non-trivial in that it requires a non-local replacement rule for
+the background fields and the momenta and polarization vectors of
+the fields scattering on the backgrounds. It must also account for
+new &lsquo;tail&rsquo; terms arising from scattering off the
+background. These encode a memory effect in the scattering
+amplitudes, which naturally double copies as well.</p>
+</div>
+					<div class="art-list-item-tools small wd-abstr-lower">
+                    <a class="mr-2"	href="https://doi.org/10.1088/1361-6382/aa9961">https://doi.org/10.1088/1361-6382/aa9961</a>
+<a href="/article/10.1088/1361-6382/aa9961#references">References</a>
+						</div>
+			</div>
+		</div>
+</div>
+<div class="art-list-item reveal-container reveal-closed reveal-plus-icon">
+	<div class="art-list-item-body">
+	
+		<a href="/article/10.1088/1361-6382/aa92a4" class="art-list-item-title"> Constant-roll inflation in F(<I>R</I>) gravity</a>
+			<p class="small art-list-item-meta">S Nojiri <em>et al</em>&nbsp;2017 <em>Class. Quantum Grav.</em> <b>34</b> 245012</p>
+			<div class="art-list-item-tools small wd-abstr-upper">
+				<a href=""	data-reveal-label-alt="Hide abstract" class="reveal-trigger mr-2 nowrap" data-reveal-text="View abstract">View abstract</a>
+				<a href="/article/10.1088/1361-6382/aa92a4/meta" class="mr-2 nowrap"> <span class="icon-article"></span>View article</a>
+				<a href="/article/10.1088/1361-6382/aa92a4/pdf" class="mr-2 nowrap"><span	class="icon-file-pdf"></span>PDF</a>
+				</div>
+			<div class="reveal-content">
+				<div class="article-text view-text-small"><p>In this paper, we study constant-roll inflation in 
+<img align="middle" alt="$F(R)$ "
+src="https://cdn.iopscience.com/images/0264-9381/34/24/245012/cqgaa92a4ieqn003.gif" />
+gravity. We take two different approaches, one that relates 
+<img align="middle" alt="$F(R)$ "
+src="https://cdn.iopscience.com/images/0264-9381/34/24/245012/cqgaa92a4ieqn004.gif" />
+gravity to well-known scalar models of constant-roll and a second
+that examines the constant-roll condition in 
+<img align="middle" alt="$F(R)$ "
+src="https://cdn.iopscience.com/images/0264-9381/34/24/245012/cqgaa92a4ieqn005.gif" />
+gravity directly. With regard to the first approach, by using
+well-known techniques, we find the 
+<img align="middle" alt="$F(R)$ "
+src="https://cdn.iopscience.com/images/0264-9381/34/24/245012/cqgaa92a4ieqn006.gif" />
+gravity that realizes a given constant-roll evolution in the
+scalar&ndash;tensor theory. We also perform a conformal
+transformation in the resulting 
+<img align="middle" alt="$F(R)$ "
+src="https://cdn.iopscience.com/images/0264-9381/34/24/245012/cqgaa92a4ieqn007.gif" />
+gravity and find the Einstein frame counterpart theory. As we
+demonstrate, the resulting scalar potential is different in
+comparison to the original scalar constant-roll case, and the same
+applies for the corresponding observational indices. Moreover, we
+discuss how cosmological evolutions that can realize constant-roll
+to constant-roll era transitions in the scalar-tensor description
+can be realized by vacuum 
+<img align="middle" alt="$F(R)$ "
+src="https://cdn.iopscience.com/images/0264-9381/34/24/245012/cqgaa92a4ieqn008.gif" />
+gravity. With regard to the second approach, we examine the effects
+of the constant-roll condition on the inflationary dynamics of
+vacuum 
+<img align="middle" alt="$F(R)$ "
+src="https://cdn.iopscience.com/images/0264-9381/34/24/245012/cqgaa92a4ieqn009.gif" />
+gravity directly. We present in detail the formalism of
+constant-roll 
+<img align="middle" alt="$F(R)$ "
+src="https://cdn.iopscience.com/images/0264-9381/34/24/245012/cqgaa92a4ieqn010.gif" />
+gravity inflationary dynamics and we discuss the inflationary
+indices for this case. We use two well-known 
+<img align="middle" alt="$F(R)$ "
+src="https://cdn.iopscience.com/images/0264-9381/34/24/245012/cqgaa92a4ieqn011.gif" />
+gravities in order to illustrate our findings: the 
+<i>R</i> 
+<sup>2</sup> model and a power-law 
+<img align="middle" alt="$F(R)$ "
+src="https://cdn.iopscience.com/images/0264-9381/34/24/245012/cqgaa92a4ieqn012.gif" />
+gravity in vacuum. As we demonstrate, in both cases the parameter
+space is enlarged in comparison to the slow-roll counterparts of
+the models and, in effect, the models can also be compatible with
+the observational data. Finally, we briefly address the graceful
+exit issue.</p>
+</div>
+					<div class="art-list-item-tools small wd-abstr-lower">
+                    <a class="mr-2"	href="https://doi.org/10.1088/1361-6382/aa92a4">https://doi.org/10.1088/1361-6382/aa92a4</a>
+<a href="/article/10.1088/1361-6382/aa92a4#references">References</a>
+						</div>
+			</div>
+		</div>
+</div>
+</div>
+</div>
+</div>
+		<!-- End Most cited tabpanel -->
+
+        <!-- Start Latest tabpanel -->
+		<div tabindex="0"
+	       		role="tabpanel"
+	       		id="latest-articles-tab"
+	       		aria-labelledby="latest-articles">
+			   <div class="tab-content-padding">
+            <p>
+                    <a href="" data-reveal-label-alt="Hide all abstracts" class="reveal-all-trigger mr-2 small"
+                       data-reveal-text="View all abstracts"> View all abstracts </a>
+                </p>
+            <div class="art-list">
+        <div class="art-list-item reveal-container reveal-closed reveal-plus-icon">
+	<div class="art-list-item-body">
+	
+		<a href="/article/10.1088/1361-6382/ab3a23" class="art-list-item-title"> Corrigendum: Quasi-normal modes and fermionic vacuum decay around a Kerr black hole (2019 <I>Class. Quantum Grav</I>. <A HREF="https://doi.org/10.1088/1361-6382/aaf679"> <B>36</B> 035005</A>)</a>
+			<p class="small art-list-item-meta">Antonin Coutant and Peter Millington&nbsp;2019 <em>Class. Quantum Grav.</em> <b>36</b> 199501</p>
+			<div class="art-list-item-tools small wd-abstr-upper">
+				<a href="/article/10.1088/1361-6382/ab3a23/meta" class="mr-2 nowrap"> <span class="icon-article"></span>View article</a>
+				<a href="/article/10.1088/1361-6382/ab3a23/pdf" class="mr-2 nowrap"><span	class="icon-file-pdf"></span>PDF</a>
+				</div>
+			<div class="reveal-content">
+				<div class="article-text view-text-small"></div>
+					<div class="art-list-item-tools small wd-abstr-lower">
+                    <a class="mr-2"	href="https://doi.org/10.1088/1361-6382/ab3a23">https://doi.org/10.1088/1361-6382/ab3a23</a>
+</div>
+			</div>
+		</div>
+</div>
+<div class="art-list-item reveal-container reveal-closed reveal-plus-icon">
+	<div class="art-list-item-body">
+	
+		<a href="/article/10.1088/1361-6382/ab3775" class="art-list-item-title"> Einstein Yang–Mills Higgs dark energy revisited</a>
+			<p class="small art-list-item-meta">Miguel Álvarez <em>et al</em>&nbsp;2019 <em>Class. Quantum Grav.</em> <b>36</b> 195004</p>
+			<div class="art-list-item-tools small wd-abstr-upper">
+				<a href=""	data-reveal-label-alt="Hide abstract" class="reveal-trigger mr-2 nowrap" data-reveal-text="View abstract">View abstract</a>
+				<a href="/article/10.1088/1361-6382/ab3775/meta" class="mr-2 nowrap"> <span class="icon-article"></span>View article</a>
+				<a href="/article/10.1088/1361-6382/ab3775/pdf" class="mr-2 nowrap"><span	class="icon-file-pdf"></span>PDF</a>
+				</div>
+			<div class="reveal-content">
+				<div class="article-text view-text-small"><p>Inspired in the standard model of elementary particles, the
+Einstein Yang&ndash;Mills Higgs action with the Higgs field in the
+SU(2) representation was proposed in Rinaldi (2015 
+<i>Class. Quantum Grav</i>. 
+<b>32</b> 045002) as the element responsible for the dark energy
+phenomenon. We revisit this action emphasizing in a very important
+aspect not sufficiently explored in the original work and that
+substantially changes its conclusions. This aspect is the role that
+the Yang&ndash;Mills Higgs interaction plays at fixing the gauge
+for the Higgs field, in order to sustain a homogeneous and
+isotropic background, and at driving the late accelerated expansion
+of the Universe by moving the Higgs field away of the minimum of
+its potential and holding it towards an asymptotic finite value. We
+analyse the dynamical behaviour of this system and supplement this
+analysis with a numerical solution whose initial conditions are in
+agreement with the current observed values for the density
+parameters. This scenario represents a step towards a successful
+merging of cosmology and well-tested particle physics
+phenomenology.</p>
+</div>
+					<div class="art-list-item-tools small wd-abstr-lower">
+                    <a class="mr-2"	href="https://doi.org/10.1088/1361-6382/ab3775">https://doi.org/10.1088/1361-6382/ab3775</a>
+<a href="/article/10.1088/1361-6382/ab3775#references">References</a>
+						</div>
+			</div>
+		</div>
+</div>
+<div class="art-list-item reveal-container reveal-closed reveal-plus-icon">
+	<div class="art-list-item-body">
+	
+		<a href="/article/10.1088/1361-6382/ab392b" class="art-list-item-title"> A quantum gravity extension to the Mixmaster dynamics</a>
+			<p class="small art-list-item-meta">Edward Wilson-Ewing&nbsp;2019 <em>Class. Quantum Grav.</em> <b>36</b> 195002</p>
+			<div class="art-list-item-tools small wd-abstr-upper">
+				<a href=""	data-reveal-label-alt="Hide abstract" class="reveal-trigger mr-2 nowrap" data-reveal-text="View abstract">View abstract</a>
+				<a href="/article/10.1088/1361-6382/ab392b/meta" class="mr-2 nowrap"> <span class="icon-article"></span>View article</a>
+				<a href="/article/10.1088/1361-6382/ab392b/pdf" class="mr-2 nowrap"><span	class="icon-file-pdf"></span>PDF</a>
+				</div>
+			<div class="reveal-content">
+				<div class="article-text view-text-small"><p>In the loop quantum cosmology effective dynamics for the vacuum
+Bianchi type I and type IX space-times, a non-singular bounce
+replaces the classical singularity. The bounce can be approximated
+as an instantaneous transition between two classical vacuum Bianchi
+I solutions, with simple transition rules relating the solutions
+before and after the bounce. These transition rules are especially
+simple when expressed in terms of the Misner variables: the
+evolution of the mean logarithmic scale factor 
+<img align="middle" alt=""
+src="https://cdn.iopscience.com/images/0264-9381/36/19/195002/cqgab392bieqn001.gif" />
+is reversed, while the shape parameters 
+<img align="middle" alt=""
+src="https://cdn.iopscience.com/images/0264-9381/36/19/195002/cqgab392bieqn002.gif" />
+are unaffected. As a result, the loop quantum cosmology effective
+dynamics for the vacuum Bianchi IX space-time can be approximated
+by a sequence of classical vacuum Bianchi I solutions, following
+the usual Mixmaster transition maps in the classical regime, and
+undergoing a bounce with this new transition rule in the Planck
+regime.</p>
+</div>
+					<div class="art-list-item-tools small wd-abstr-lower">
+                    <a class="mr-2"	href="https://doi.org/10.1088/1361-6382/ab392b">https://doi.org/10.1088/1361-6382/ab392b</a>
+<a href="/article/10.1088/1361-6382/ab392b#references">References</a>
+						</div>
+			</div>
+		</div>
+</div>
+<div class="art-list-item reveal-container reveal-closed reveal-plus-icon">
+	<div class="art-list-item-body">
+	
+		<a href="/article/10.1088/1361-6382/ab38ed" class="art-list-item-title"> Global spacetime structure of compactified inflationary universe</a>
+			<p class="small art-list-item-meta">Tokiro Numasawa and Daisuke Yoshida&nbsp;2019 <em>Class. Quantum Grav.</em> <b>36</b> 195003</p>
+			<div class="art-list-item-tools small wd-abstr-upper">
+				<a href=""	data-reveal-label-alt="Hide abstract" class="reveal-trigger mr-2 nowrap" data-reveal-text="View abstract">View abstract</a>
+				<a href="/article/10.1088/1361-6382/ab38ed/meta" class="mr-2 nowrap"> <span class="icon-article"></span>View article</a>
+				<a href="/article/10.1088/1361-6382/ab38ed/pdf" class="mr-2 nowrap"><span	class="icon-file-pdf"></span>PDF</a>
+				</div>
+			<div class="reveal-content">
+				<div class="article-text view-text-small"><p>We investigate the global spacetime structure of torus de Sitter
+universe, which is exact de Sitter space with torus identification
+based on the flat chart. We show that past incomplete null
+geodesics in torus de Sitter universe are locally extendible. Then
+we give an extension of torus de Sitter universe so that at least
+one of the past incomplete null geodesics in the original spacetime
+becomes complete. However, we find that extended torus de Sitter
+universe has two ill behaviors. The first one is a closed causal
+curve. The second one is so called quasi regular singularity, which
+means that there is no global, consistent extension of spacetime
+where all curves become complete, nevertheless each curve is
+locally extensible.</p>
+</div>
+					<div class="art-list-item-tools small wd-abstr-lower">
+                    <a class="mr-2"	href="https://doi.org/10.1088/1361-6382/ab38ed">https://doi.org/10.1088/1361-6382/ab38ed</a>
+<a href="/article/10.1088/1361-6382/ab38ed#references">References</a>
+						</div>
+			</div>
+		</div>
+</div>
+<div class="art-list-item reveal-container reveal-closed reveal-plus-icon">
+	<div class="art-list-item-body">
+	
+		<a href="/article/10.1088/1361-6382/ab3c1e" class="art-list-item-title"> News versus information</a>
+			<p class="small art-list-item-meta">Stefan Hollands and Akihiro Ishibashi&nbsp;2019 <em>Class. Quantum Grav.</em> <b>36</b> 195001</p>
+			<div class="art-list-item-tools small wd-abstr-upper">
+				<a href=""	data-reveal-label-alt="Hide abstract" class="reveal-trigger mr-2 nowrap" data-reveal-text="View abstract">View abstract</a>
+				<a href="/article/10.1088/1361-6382/ab3c1e/meta" class="mr-2 nowrap"> <span class="icon-article"></span>View article</a>
+				<a href="/article/10.1088/1361-6382/ab3c1e/pdf" class="mr-2 nowrap"><span	class="icon-file-pdf"></span>PDF</a>
+				</div>
+			<div class="reveal-content">
+				<div class="article-text view-text-small"><p>We consider the relative entropy between the vacuum state and a
+coherent state in linearized quantum gravity around an
+asymptotically flat stationary black hole spacetime. Combining
+recent results by Casini 
+<i>et al</i> and Longo with the Raychaudhuri equation, the
+following result is obtained: let 
+<img align="middle" alt=""
+src="https://cdn.iopscience.com/images/0264-9381/36/19/195001/cqgab3c1eieqn001.gif" />
+be the algebra of observables assoiciated with a region that is the
+causal future of some compact set in the interior of the spacetime.
+Let 
+<i>S</i> be the relative entropy with respect to this algebra, 
+<i>A</i> the area of the horizon cross section defined by the
+region, computed to second order in the gravitational perturbation.
+If the region is time-translated by the Killing parameter 
+<i>t</i>, then 
+<img align="middle" alt=""
+src="https://cdn.iopscience.com/images/0264-9381/36/19/195001/cqgab3c1eieqn002.gif" />,
+with 
+<i>F</i> the flux of the gravitational/matter radiation (integrated
+squared news tensor) emitted towards the future of the region.</p>
+</div>
+					<div class="art-list-item-tools small wd-abstr-lower">
+                    <a class="mr-2"	href="https://doi.org/10.1088/1361-6382/ab3c1e">https://doi.org/10.1088/1361-6382/ab3c1e</a>
+<a href="/article/10.1088/1361-6382/ab3c1e#references">References</a>
+						</div>
+			</div>
+		</div>
+</div>
+</div>
+</div>
+</div>
+		<!-- End Latest tabpanel -->
+		<!-- Express Letters tabpanel -->
+        <!-- Express Letters tabpanel -->
+        <!-- Start Select tabpanel -->
+		<!-- End Select tabpanel -->
+
+        <!-- Start Review tabpanel -->
+		<div tabindex="0"
+	       		role="tabpanel"
+	       		id="review-articles-tab"
+	       		aria-labelledby="review-articles"
+	       		hidden="">
+			   <div class="tab-content-padding">
+            <p>
+                    <a href="" data-reveal-label-alt="Hide all abstracts" class="reveal-all-trigger mr-2 small"
+                       data-reveal-text="View all abstracts"> View all abstracts </a>
+                </p>
+            <div class="art-list">
+        <div class="art-list-item reveal-container reveal-closed reveal-plus-icon">
+	<div class="art-list-item-body">
+	
+		<div class="eyebrow">
+					<span class="offscreen-hidden">The following article is </span><span class="red">Open access</span>
+				</div>
+			<a href="/article/10.1088/1361-6382/ab2e1f" class="art-list-item-title"> Teleparallel theories of gravity: illuminating a fully invariant approach</a>
+			<p class="small art-list-item-meta">M Krššák <em>et al</em>&nbsp;2019 <em>Class. Quantum Grav.</em> <b>36</b> 183001</p>
+			<div class="art-list-item-tools small wd-abstr-upper">
+				<a href=""	data-reveal-label-alt="Hide abstract" class="reveal-trigger mr-2 nowrap" data-reveal-text="View abstract">View abstract</a>
+				<a href="/article/10.1088/1361-6382/ab2e1f/meta" class="mr-2 nowrap"> <span class="icon-article"></span>View article</a>
+				<a href="/article/10.1088/1361-6382/ab2e1f/pdf" class="mr-2 nowrap"><span	class="icon-file-pdf"></span>PDF</a>
+				</div>
+			<div class="reveal-content">
+				<div class="article-text view-text-small"><p>Teleparallel gravity and its popular generalization 
+<img align="middle" alt=""
+src="https://cdn.iopscience.com/images/0264-9381/36/18/183001/cqgab2e1fieqn001.gif" />
+gravity can be formulated as fully invariant (under both coordinate
+transformations and local Lorentz transformations) theories of
+gravity. Several misconceptions about teleparallel gravity and its
+generalizations can be found in the literature, especially
+regarding their local Lorentz invariance. We describe how these
+misunderstandings may have arisen and attempt to clarify the
+situation. In particular, the central point of confusion in the
+literature appears to be related to the inertial spin connection in
+teleparallel gravity models. While inertial spin connections are
+commonplace in special relativity, and not something inherent to
+teleparallel gravity, the role of the inertial spin connection in
+removing the spurious inertial effects within a given frame of
+reference is emphasized here. The careful consideration of the
+inertial spin connection leads to the construction of a fully
+invariant theory of teleparallel gravity and its generalizations.
+Indeed, it is the nature of the spin connection that differentiates
+the relationship between what have been called 
+<i>good tetrads</i> and 
+<i>bad tetrads</i> and clearly shows that, in principle, any tetrad
+can be utilized. The field equations for the fully invariant
+formulation of teleparallel gravity and its generalizations are
+presented and a number of examples using different assumptions on
+the frame and spin connection are displayed to illustrate the
+covariant procedure. Various modified teleparallel gravity models
+are also briefly reviewed.</p>
+</div>
+					<div class="art-list-item-tools small wd-abstr-lower">
+                    <a class="mr-2"	href="https://doi.org/10.1088/1361-6382/ab2e1f">https://doi.org/10.1088/1361-6382/ab2e1f</a>
+<a href="/article/10.1088/1361-6382/ab2e1f#references">References</a>
+						</div>
+			</div>
+		</div>
+</div>
+<div class="art-list-item reveal-container reveal-closed reveal-plus-icon">
+	<div class="art-list-item-body">
+	
+		<a href="/article/10.1088/1361-6382/ab0587" class="art-list-item-title"> Black holes, gravitational waves and fundamental physics: a roadmap</a>
+			<p class="small art-list-item-meta">Leor Barack <em>et al</em>&nbsp;2019 <em>Class. Quantum Grav.</em> <b>36</b> 143001</p>
+			<div class="art-list-item-tools small wd-abstr-upper">
+				<a href=""	data-reveal-label-alt="Hide abstract" class="reveal-trigger mr-2 nowrap" data-reveal-text="View abstract">View abstract</a>
+				<a href="/article/10.1088/1361-6382/ab0587/meta" class="mr-2 nowrap"> <span class="icon-article"></span>View article</a>
+				<a href="/article/10.1088/1361-6382/ab0587/pdf" class="mr-2 nowrap"><span	class="icon-file-pdf"></span>PDF</a>
+				</div>
+			<div class="reveal-content">
+				<div class="article-text view-text-small"><p>The grand challenges of contemporary fundamental
+physics&mdash;dark matter, dark energy, vacuum energy, inflation
+and early universe cosmology, singularities and the hierarchy
+problem&mdash;all involve 
+<i>gravity</i> as a key component. And of all gravitational
+phenomena, 
+<i>black holes</i> stand out in their elegant simplicity, while
+harbouring some of the most remarkable predictions of General
+Relativity: event horizons, singularities and ergoregions.</p>
+<p>The hitherto invisible landscape of the gravitational Universe
+is being unveiled before our eyes: the historical direct detection
+of gravitational waves by the LIGO-Virgo collaboration marks the
+dawn of a new era of scientific exploration. Gravitational-wave
+astronomy will allow us to test models of black hole formation,
+growth and evolution, as well as models of gravitational-wave
+generation and propagation. It will provide evidence for event
+horizons and ergoregions, test the theory of General Relativity
+itself, and may reveal the existence of new fundamental fields. The
+synthesis of these results has the potential to radically reshape
+our understanding of the cosmos and of the laws of Nature.</p>
+<p>The purpose of this work is to present a concise, yet
+comprehensive overview of the state of the art in the relevant
+fields of research, summarize important open problems, and lay out
+a roadmap for future progress. This write-up is an initiative taken
+within the framework of the European Action on &lsquo;Black holes,
+Gravitational waves and Fundamental Physics&rsquo;.</p>
+</div>
+					<div class="art-list-item-tools small wd-abstr-lower">
+                    <a class="mr-2"	href="https://doi.org/10.1088/1361-6382/ab0587">https://doi.org/10.1088/1361-6382/ab0587</a>
+<a href="/article/10.1088/1361-6382/ab0587#references">References</a>
+						</div>
+			</div>
+		</div>
+</div>
+<div class="art-list-item reveal-container reveal-closed reveal-plus-icon">
+	<div class="art-list-item-body">
+	
+		<a href="/article/10.1088/1361-6382/aac608" class="art-list-item-title"> Cosmological backgrounds of gravitational waves</a>
+			<p class="small art-list-item-meta">Chiara Caprini and Daniel G Figueroa&nbsp;2018 <em>Class. Quantum Grav.</em> <b>35</b> 163001</p>
+			<div class="art-list-item-tools small wd-abstr-upper">
+				<a href=""	data-reveal-label-alt="Hide abstract" class="reveal-trigger mr-2 nowrap" data-reveal-text="View abstract">View abstract</a>
+				<a href="/article/10.1088/1361-6382/aac608/meta" class="mr-2 nowrap"> <span class="icon-article"></span>View article</a>
+				<a href="/article/10.1088/1361-6382/aac608/pdf" class="mr-2 nowrap"><span	class="icon-file-pdf"></span>PDF</a>
+				</div>
+			<div class="reveal-content">
+				<div class="article-text view-text-small"><p>Gravitational waves (GWs) have a great potential to probe
+cosmology. We review early universe sources that can lead to
+cosmological backgrounds of GWs. We begin by presenting proper
+definitions of GWs in flat space-time and in a cosmological setting
+(section 2). Following, we discuss the reasons why early universe
+GW backgrounds are of a stochastic nature, and describe the general
+properties of a stochastic background (section 3). We recap current
+observational constraints on stochastic backgrounds, and discuss
+the basic characteristics of present and future GW detectors,
+including advanced LIGO, advanced Virgo, the Einstein telescope,
+KAGRA, and LISA (section 4). We then review in detail early
+universe GW generation mechanisms, as well as the properties of the
+GW backgrounds they give rise to. We classify the backgrounds in
+five categories: GWs from quantum vacuum fluctuations during
+standard slow-roll inflation (section 5), GWs from processes that
+operate within extensions of the standard inflationary paradigm
+(section 6), GWs from post-inflationary preheating and related
+non-perturbative phenomena (section 7), GWs from first order phase
+transitions related or not to the electroweak symmetry breaking
+(section 8), and GWs from general topological defects, and from
+cosmic strings in particular (section 9). The phenomenology of
+these early universe processes is extremely rich, and some of the
+GW backgrounds they generate can be within the reach of near-future
+GW detectors. A future detection of any of these backgrounds will
+provide crucial information on the underlying high energy theory
+describing the early universe, probing energy scales well beyond
+the reach of particle accelerators.</p>
+</div>
+					<div class="art-list-item-tools small wd-abstr-lower">
+                    <a class="mr-2"	href="https://doi.org/10.1088/1361-6382/aac608">https://doi.org/10.1088/1361-6382/aac608</a>
+<a href="/article/10.1088/1361-6382/aac608#references">References</a>
+						</div>
+			</div>
+		</div>
+</div>
+<div class="art-list-item reveal-container reveal-closed reveal-plus-icon">
+	<div class="art-list-item-body">
+	
+		<a href="/article/10.1088/1361-6382/aac58d" class="art-list-item-title"> Gravity and unification: a review</a>
+			<p class="small art-list-item-meta">K Krasnov and R Percacci&nbsp;2018 <em>Class. Quantum Grav.</em> <b>35</b> 143001</p>
+			<div class="art-list-item-tools small wd-abstr-upper">
+				<a href=""	data-reveal-label-alt="Hide abstract" class="reveal-trigger mr-2 nowrap" data-reveal-text="View abstract">View abstract</a>
+				<a href="/article/10.1088/1361-6382/aac58d/meta" class="mr-2 nowrap"> <span class="icon-article"></span>View article</a>
+				<a href="/article/10.1088/1361-6382/aac58d/pdf" class="mr-2 nowrap"><span	class="icon-file-pdf"></span>PDF</a>
+				</div>
+			<div class="reveal-content">
+				<div class="article-text view-text-small"><p>We review various classical unified theories of gravity and
+other interactions that have appeared in the literature, paying
+special attention to scenarios in which spacetime remains
+four-dimensional, while an &lsquo;internal&rsquo; space is
+enlarged. The starting point for each such unification scenario is
+a particular formalism for general relativity. We thus start by
+reviewing, besides the usual Einstein&ndash;Hilbert and Palatini
+formulations, the Einstein&ndash;Cartan, MacDowell&ndash;Mansouri
+and BF (both non-chiral and chiral) formulations. Each of these
+introduces some version of &lsquo;internal&rsquo; bundle and a
+dynamical variable that ties the internal and tangent bundles. In
+each of these formulations there is also an independent connection
+in the &lsquo;internal&rsquo; bundle. One can then study the
+effects of &lsquo;enlarging the internal space&rsquo;, which
+typically leads to a theory of gravity and Yang&ndash;Mills fields.
+We review what has been done in the literature on each of these
+unification schemes, and compare and contrast their achievements to
+those of the better developed Kaluza&ndash;Klein scenario.</p>
+</div>
+					<div class="art-list-item-tools small wd-abstr-lower">
+                    <a class="mr-2"	href="https://doi.org/10.1088/1361-6382/aac58d">https://doi.org/10.1088/1361-6382/aac58d</a>
+<a href="/article/10.1088/1361-6382/aac58d#references">References</a>
+						</div>
+			</div>
+		</div>
+</div>
+<div class="art-list-item reveal-container reveal-closed reveal-plus-icon">
+	<div class="art-list-item-body">
+	
+		<a href="/article/10.1088/1361-6382/aac412" class="art-list-item-title"> Measurement uncertainty in pulsar timing array experiments</a>
+			<p class="small art-list-item-meta">Joris P W Verbiest and G M Shaifullah&nbsp;2018 <em>Class. Quantum Grav.</em> <b>35</b> 133001</p>
+			<div class="art-list-item-tools small wd-abstr-upper">
+				<a href=""	data-reveal-label-alt="Hide abstract" class="reveal-trigger mr-2 nowrap" data-reveal-text="View abstract">View abstract</a>
+				<a href="/article/10.1088/1361-6382/aac412/meta" class="mr-2 nowrap"> <span class="icon-article"></span>View article</a>
+				<a href="/article/10.1088/1361-6382/aac412/pdf" class="mr-2 nowrap"><span	class="icon-file-pdf"></span>PDF</a>
+				</div>
+			<div class="reveal-content">
+				<div class="article-text view-text-small"><p>Highly precise monitoring of arrival times of pulses from
+pulsars will allow for gravitational-wave detection in the
+nano-Hertz regime in the near future. Due to the complex nature of
+such pulsar-timing experiments and to the large number of effects
+that can affect these data (starting with magnetospheric effects at
+the pulsars themselves but extending across the entire signal path
+down to the final gravitational-wave detection algorithm), any
+treatment of the measurement uncertainties relevant to such a
+gravitational-wave detection has been lacking and incomplete so
+far.</p>
+<p>In this review, we provide an exhaustive description of the
+currently known influences on measurement precision in
+pulsar-timing experiments in general and in gravitational-wave
+detection through pulsar-timing specifically. While some of these
+effects remain poorly understood and largely unquantified at
+present, we discuss both analytic and observational quantifications
+where available.</p>
+</div>
+					<div class="art-list-item-tools small wd-abstr-lower">
+                    <a class="mr-2"	href="https://doi.org/10.1088/1361-6382/aac412">https://doi.org/10.1088/1361-6382/aac412</a>
+<a href="/article/10.1088/1361-6382/aac412#references">References</a>
+						</div>
+			</div>
+		</div>
+</div>
+</div>
+<p>
+		<a href="/collections?collectionType=PHYSICS_REVIEWS&journal=0264-9381&subject=&online_date=all">More Review articles</a>
+	</p>
+</div>
+</div>
+		<!-- End Review tabpanel -->
+
+        <!-- Start Featured tabpanel -->
+		<!-- End Featured tabpanel -->
+
+		<!-- Start AM tabpanel -->
+		<div tabindex="0"
+					role="tabpanel"
+					id="accepted-manuscripts-tab"
+					aria-labelledby="accepted-manuscripts"
+					hidden="">
+				<div class="tab-content-padding">
+
+    <p id="jnl-issue-disp-links" class="cf">
+            <a href="" data-reveal-label-alt="Hide all abstracts" class="reveal-all-trigger mr-2 small" data-reveal-text="View all abstracts">View all abstracts</a>
+        </p>
+        <!-- Start AM list content -->
+
+	<div class="art-list" id="wd-jnl-issue-art-list">
+    	<div class="art-list">
+       	 <div class="art-list-item reveal-container reveal-closed reveal-plus-icon">
+	<div class="art-list-item-body">
+	
+		<a href="/article/10.1088/1361-6382/ab3bda" class="art-list-item-title"> Surface theory: the classical, the quantum, and the holographic</a>
+			<p class="small art-list-item-meta">Engelhardt et al</p>
+			<div class="art-list-item-tools small wd-abstr-upper">
+				<a href=""	data-reveal-label-alt="Hide abstract" class="reveal-trigger mr-2 nowrap" data-reveal-text="View abstract">View abstract</a>
+				<a href="/article/10.1088/1361-6382/ab3bda/meta" class="mr-2 nowrap"> <span class="icon-article"></span>View accepted manuscript</a>
+				<a href="/article/10.1088/1361-6382/ab3bda/pdf" class="mr-2 nowrap"><span	class="icon-file-pdf"></span>PDF</a>
+				</div>
+			<div class="reveal-content">
+				<div class="article-text view-text-small">
+				 			<!-- Start Abstract -->
+    <div class="article-text wd-jnl-art-abstract cf" itemprop="description">
+            <p>Motivated by the power of subregion/subregion duality for constraining the bulk geometry in gauge/gravity duality, we pursue a comprehensive and systematic approach to the behavior of extremal surfaces under perturbations.  Specifically, we consider modifications to their boundary conditions, to the bulk metric, and to bulk quantum matter fields.  We present a unified framework for treating such perturbations for classical extremal surfaces, classify some of their stability properties, and develop new technology to extend our treatment to quantum extremal surfaces, culminating in an ``equation of quantum extremal deviation''.  Part of the power of this formalism is due to its ability to map geometric statements into the language of elliptic operators; to illustrate, we show that various a priori disparate bulk constraints all follow from basic consistency of subregion/subregion duality.  These include familiar properties such as (smeared) versions of the quantum focusing conjecture and the generalized second law, as well as new constraints on (i) metric and matter perturbations in spacetimes close to vacuum and (ii) the bulk stress tensor in generic (not necessary close to vacuum) spacetimes. This latter constraint is highly reminiscent of a quantum energy inequality.</p></div>
+    <!-- End abstract -->
+</div>
+					<div class="art-list-item-tools small wd-abstr-lower">
+                    <a class="mr-2"	href="https://doi.org/10.1088/1361-6382/ab3bda">https://doi.org/10.1088/1361-6382/ab3bda</a>
+</div>
+			</div>
+		</div>
+</div>
+<div class="art-list-item reveal-container reveal-closed reveal-plus-icon">
+	<div class="art-list-item-body">
+	
+		<a href="/article/10.1088/1361-6382/ab368c" class="art-list-item-title"> Systematic calibration error requirements for gravitational-wave detectors via the Cramér-Rao bound</a>
+			<p class="small art-list-item-meta">Hall et al</p>
+			<div class="art-list-item-tools small wd-abstr-upper">
+				<a href=""	data-reveal-label-alt="Hide abstract" class="reveal-trigger mr-2 nowrap" data-reveal-text="View abstract">View abstract</a>
+				<a href="/article/10.1088/1361-6382/ab368c/meta" class="mr-2 nowrap"> <span class="icon-article"></span>View accepted manuscript</a>
+				<a href="/article/10.1088/1361-6382/ab368c/pdf" class="mr-2 nowrap"><span	class="icon-file-pdf"></span>PDF</a>
+				</div>
+			<div class="reveal-content">
+				<div class="article-text view-text-small">
+				 			<!-- Start Abstract -->
+    <div class="article-text wd-jnl-art-abstract cf" itemprop="description">
+            <p>Gravitational-wave (GW) laser interferometers such as Advanced LIGO transduce spacetime strain into optical power fluctuation. Converting this optical power fluctuations back into an estimated spacetime strain requires a calibration process that accounts for both the interferometer's optomechanical response and the feedback control loop used to control the interferometer test masses. Systematic errors in the calibration parameters lead to systematic errors in the GW strain estimate, and hence to systematic errors in the astrophysical parameter estimates in a particular GW signal. In this work we examine this effect for a GW signal similar to GW150914, both for a low-power detector operation similar to the first and second Advanced LIGO observing runs and for a higher-power operation with detuned signal extraction. We set requirements on the accuracy of the calibration such that the astrophysical parameter estimation is limited by errors introduced by random detector noise, rather than calibration systematics. We also examine the impact of systematic calibration errors on the possible detection of a massive graviton.</p></div>
+    <!-- End abstract -->
+</div>
+					<div class="art-list-item-tools small wd-abstr-lower">
+                    <a class="mr-2"	href="https://doi.org/10.1088/1361-6382/ab368c">https://doi.org/10.1088/1361-6382/ab368c</a>
+</div>
+			</div>
+		</div>
+</div>
+<div class="art-list-item reveal-container reveal-closed reveal-plus-icon">
+	<div class="art-list-item-body">
+	
+		<a href="/article/10.1088/1361-6382/ab3ee5" class="art-list-item-title"> Follow-up procedure for gravitational wave searches from isolated neutron stars using the time-domain F-statistic method</a>
+			<p class="small art-list-item-meta">Sieniawska et al</p>
+			<div class="art-list-item-tools small wd-abstr-upper">
+				<a href=""	data-reveal-label-alt="Hide abstract" class="reveal-trigger mr-2 nowrap" data-reveal-text="View abstract">View abstract</a>
+				<a href="/article/10.1088/1361-6382/ab3ee5/meta" class="mr-2 nowrap"> <span class="icon-article"></span>View accepted manuscript</a>
+				<a href="/article/10.1088/1361-6382/ab3ee5/pdf" class="mr-2 nowrap"><span	class="icon-file-pdf"></span>PDF</a>
+				</div>
+			<div class="reveal-content">
+				<div class="article-text view-text-small">
+				 			<!-- Start Abstract -->
+    <div class="article-text wd-jnl-art-abstract cf" itemprop="description">
+            <p>Among promising sources of gravitational waves are long-lived nearly periodic signals produced by rotating, asymmetric neutron stars. Depending on the astrophysical scenario, the sources of asymmetry may have thermal, viscous, elastic and/or magnetic origin. In this work we introduce a follow-up procedure for an all-sky search for gravitational wave signals from rotating neutron stars. The procedure denoted as Followup implements matched-filtering F-statistic method. We describe data analysis methods and algorithms used in the procedure. We present tests of the Followup for artificial signals added to white, Gaussian noise. The tests show a good agreement with the theoretical predictions. The Followup will become part of the Time-Domain F-statistic pipeline that is routinely used for all-sky searches of LIGO and Virgo detector data.</p></div>
+    <!-- End abstract -->
+</div>
+					<div class="art-list-item-tools small wd-abstr-lower">
+                    <a class="mr-2"	href="https://doi.org/10.1088/1361-6382/ab3ee5">https://doi.org/10.1088/1361-6382/ab3ee5</a>
+</div>
+			</div>
+		</div>
+</div>
+<div class="art-list-item reveal-container reveal-closed reveal-plus-icon">
+	<div class="art-list-item-body">
+	
+		<a href="/article/10.1088/1361-6382/ab40fe" class="art-list-item-title"> Gravitational edge modes: From Kac-Moody charges to Poincaré networks</a>
+			<p class="small art-list-item-meta">Freidel et al</p>
+			<div class="art-list-item-tools small wd-abstr-upper">
+				<a href=""	data-reveal-label-alt="Hide abstract" class="reveal-trigger mr-2 nowrap" data-reveal-text="View abstract">View abstract</a>
+				<a href="/article/10.1088/1361-6382/ab40fe/meta" class="mr-2 nowrap"> <span class="icon-article"></span>View accepted manuscript</a>
+				<a href="/article/10.1088/1361-6382/ab40fe/pdf" class="mr-2 nowrap"><span	class="icon-file-pdf"></span>PDF</a>
+				</div>
+			<div class="reveal-content">
+				<div class="article-text view-text-small">
+				 			<!-- Start Abstract -->
+    <div class="article-text wd-jnl-art-abstract cf" itemprop="description">
+            <p>We revisit the canonical framework for general relativity in its connection-vierbein formulation, recasting the Gauss law, the Bianchi identity and the space diffeomorphism bulk constraints as conservation laws for boundary surface charges, respectively electric, magnetic and momentum charges. Partitioning the space manifold into 3D regions glued together through their interfaces, we focus on a single domain and its punctured 2D boundary. The punctures carry a ladder of Kac-Moody edge modes, whose 0-modes represent the electric and momentum charges while the higher modes describe the stringy vibration modes of the 1D-boundary around each puncture. In particular, this allows to identify missing observables in the discretization scheme used in loop quantum gravity and leads to an enhanced theory upgrading spin net- works to tube networks carrying Virasoro representations. In the limit where the tubes are contracted to 1D links and the string modes neglected, we do not just recover loop quantum gravity but obtain a more general structure: Poincaré charge networks, which carry a representation of the 3D diffeomorphism boundary charges on top of the SU(2) fluxes and gauge transformations.</p></div>
+    <!-- End abstract -->
+</div>
+					<div class="art-list-item-tools small wd-abstr-lower">
+                    <a class="mr-2"	href="https://doi.org/10.1088/1361-6382/ab40fe">https://doi.org/10.1088/1361-6382/ab40fe</a>
+</div>
+			</div>
+		</div>
+</div>
+<div class="art-list-item reveal-container reveal-closed reveal-plus-icon">
+	<div class="art-list-item-body">
+	
+		<a href="/article/10.1088/1361-6382/ab3d48" class="art-list-item-title"> Analogue black hole spectroscopy; or, how to listen to dumb holes</a>
+			<p class="small art-list-item-meta">Torres Vicente et al</p>
+			<div class="art-list-item-tools small wd-abstr-upper">
+				<a href=""	data-reveal-label-alt="Hide abstract" class="reveal-trigger mr-2 nowrap" data-reveal-text="View abstract">View abstract</a>
+				<a href="/article/10.1088/1361-6382/ab3d48/meta" class="mr-2 nowrap"> <span class="icon-article"></span>View accepted manuscript</a>
+				<a href="/article/10.1088/1361-6382/ab3d48/pdf" class="mr-2 nowrap"><span	class="icon-file-pdf"></span>PDF</a>
+				</div>
+			<div class="reveal-content">
+				<div class="article-text view-text-small">
+				 			<!-- Start Abstract -->
+    <div class="article-text wd-jnl-art-abstract cf" itemprop="description">
+            <p>Spectroscopy is a fundamental tool in science which consists in studying the response of a system as a function of frequency. Among its many applications in Physics, Biology, Chemistry and other fields, the possibility of identifying objects and structures through their emission spectra is remarkable and incredibly useful. In this paper we apply the spectroscopy idea to a numerically simulated hydrodynamical flow, with the goal of developing a new, non-invasive flow measurement technique. Our focus lies on an irrotational draining vortex, which can be seen, under specific conditions, as the analogue of a rotating black hole (historically named a dumb hole). This paper is a development of a recent experiment that suggests that irrotational vortices and rotating black holes share a common relaxation process, known as the ringdown phase. We apply techniques borrowed from black hole physics to identify vortex flows from their characteristic spectrum emitted during this ringdown phase. We believe that this technique is a new facet of the fluid-gravity analogy and constitutes a promising way to investigate experimentally vortex flows in fluids and superfluids alike.</p></div>
+    <!-- End abstract -->
+</div>
+					<div class="art-list-item-tools small wd-abstr-lower">
+                    <a class="mr-2"	href="https://doi.org/10.1088/1361-6382/ab3d48">https://doi.org/10.1088/1361-6382/ab3d48</a>
+</div>
+			</div>
+		</div>
+</div>
+</div>
+   	 </div>
+
+<!-- End AM list content --><p>
+            <a href="/journal/0264-9381/acceptedmanuscripts/10/1">More Accepted manuscripts</a>
+        </p>
+    </div>
+</div>
+		<!-- End AM tabpanel -->
+
+		<!-- Start Trending tabpanel -->
+		<div tabindex="0"
+					role="tabpanel"
+					id="trending-altmetrics-tab"
+					aria-labelledby="trending-altmetrics"
+					hidden="">
+				<div class="tab-content-padding">
+					<!-- Start Altmetrics results list -->
+					<div class="trending-altmetric-results-list" id="https://api.altmetric.com/v1/citations/1y?num_results=5&issns=0264-9381">
+						<h2>Trending on Altmetric</h2>
+
+						<div class="art-list">
+
+						</div>
+					</div>
+					<!-- End Altmetrics results list -->
+				</div>
+			</div>
+		<!-- End Trending tabpanel -->
+        
+    </div>
+<!-- End Article listing tabs -->
+<!-- End Article listing tabs -->
+    <!-- Start banner ad -->
+<aside>
+    <div class="advert advert-banner" id="oas_Middle"></div>
+</aside>
+<!-- End banner ad --></div>
+</div>
+	</main>
+
+	<div class="db2 tb2">
+		<div class="side-and-below">
+			<!-- Start Journal links -->
+<aside id="wd-jnl-links">
+        <p class="replica-h4">Journal links</p>
+        <ul><li><a href = "http://mc04.manuscriptcentral.com/cqg-iop" target="_blank"><strong>Submit an article</strong></a></li>
+<li><a href = "/0264-9381/page/About_the_journal">About the journal</a></li>
+<li><a href="/0264-9381/page/Editorial Board">Editorial Board</a></li>
+<li><a href="https://publishingsupport.iopscience.iop.org/" target="_blank">Author guidelines</a></li>
+<li><a href="https://publishingsupport.iopscience.iop.org/questions/volunteering-to-be-a-journal-reviewer">Review for this journal</li>
+<li><a href="/0264-9381//page/Publication_charges">Publication charges</a></li>	
+<li><a href="/0264-9381//page/News">News and editorial</a></li>	
+<li><a href="https://publishingsupport.iopscience.iop.org/questions/classical-and-quantum-gravity-2018-reviewer-awards/"> Awards</a></li>
+<li><a href="/0264-9381/page/Journal_Collections">Journal Collections</a></li>	
+<li><a href="https://ioppublishing.org/librarians/">Pricing and ordering</a></li>						
+<li><a href="/0264-9381/page/Contact us">Contact us</a></li>
+
+</ul>
+        </aside>
+<!-- End Journal links -->
+<!-- Start journal partners list -->
+<!-- End journal partners list -->
+
+<!-- Start open access journals list -->
+<!-- End open access journals list -->
+
+
+<!-- If it is confirmed that we need to keep id`s same as APR, then i will delete this JSP and use the APR one only. -->
+<script type="text/javascript">
+	
+	var tag_query = "iopscience_pagetype=JNL_HOMEPAGE&iopscience_issn=0264-9381";
+	var oas_tag = {};
+	oas_tag.url = 'oasc-eu1.247realmedia.com'; //Define OAS URL
+	oas_tag.site_page = location.hostname; //Define OAS Site page
+	
+	oas_tag.sizes = function () {
+		oas_tag.definePos('Middle', [728,90]);
+		oas_tag.definePos('x11', [180,150]);
+		oas_tag.definePos('x12', [180,150]);
+		oas_tag.definePos('x13', [180,150]);
+	};	
+	
+    oas_tag.analytics = false;
+    oas_tag.taxonomy = 'oas_pv=no_analytics';
+    oas_tag.allowSizeOverride = true;  
+		
+	oas_tag.implMode = {'Middle':'div', 'x11':'div', 'x12':'div', 'x13':'div'};
+	
+    oas_tag.query = tag_query;
+	 
+	 (function() {
+		    oas_tag.version ='1'; var oas = document.createElement('script'),
+		    protocol = 'https:' == document.location.protocol?'https://':'http://',
+		    node = document.getElementsByTagName('script')[0];
+		    oas.type = 'text/javascript'; oas.async = true;
+		    oas.src = protocol + oas_tag.url + '/om/' + oas_tag.version + '.js';
+		    node.parentNode.insertBefore(oas, node);
+		})();
+</script><!--  Start of real media banners on right hand side.  -->
+<aside role="complementary" aria-label="Adverts">
+	<div id="oas_x11" class="advert wd-jnl-art-advert-tile"></div>
+
+	<div id="oas_x12" class="advert wd-jnl-art-advert-tile"></div>
+
+	<div id="oas_x13" class="advert wd-jnl-art-advert-tile"></div>
+</aside>
+<!--  End of real media banners on right hand side.  -->
+
+<!-- Start Journal history -->
+<aside id="wd-jnl-history">
+	<p class="replica-h4">Journal history</p>
+	<ul>
+	<!-- Start journalHistory -->
+<li>
+	      1984-present Classical and Quantum Gravity<br />
+	     doi:10.1088/issn.0264-9381<br />Online ISSN: 1361-6382<br />Print ISSN: 0264-9381</li>
+<!-- End journalHistory -->
+<!-- Start journalHistory -->
+<li>
+	      1984-present Classical and Quantum Gravity<br />
+	     doi:10.1088/issn.0264-9381<br />Online ISSN: 1361-6382<br />Print ISSN: 0264-9381</li>
+<!-- End journalHistory -->
+</ul>
+	
+</aside>
+<!-- End Journal history -->
+</div>
+	</div>
+</div></div>
+
+    <div data-scroll-header="" class="data-header-anchor" id="exp"></div>
+<!-- Footer tile starts -->
+<footer role="contentinfo" data-footer-content>
+    <div class="iops-footer cf">
+        <div class="wrapper">
+            <nav role="navigation" aria-label="Footer">
+       		<a class="iops-footer-logo" id="wd-iops-footer-logo" itemprop="url" href="/">
+					<meta content="IOPscience" itemprop="name">
+					<svg height="13" width="90">
+					  <image xlink:href="https://static.iopscience.com/2.21.0/img/iops-logo.svg" src="https://static.iopscience.com/2.21.0/img/iops-logo.png" border="0" height="13" width="90"/>
+					</svg>
+                    <span class="offscreen-hidden">IOP Science home</span>
+			</a>
+            <small>
+                <ul>
+                    <li><a href="/journals">Journals</a></li>
+                    <li><a href="/books">Books</a></li>
+                    <li><a href="/page/aboutiopscience">About IOPscience</a></li>
+                    <li><a href="/contact">Contact us</a></li>
+                    <li><a href="/info/page/developing-countries-access">Developing countries access</a></li>
+                    <li><a href="/info/page/openaccess">IOP Publishing open access policy</a></li>
+                </ul>
+            </small>
+        </nav>
+        </div> <!-- end wrapper -->
+    </div> <!-- end iopp-footer -->
+
+    <div class="iopp-footer cf">
+        <div class="wrapper">
+            <div class="media mar-0 ">
+                <nav role="navigation" aria-label="Further information about IOP Publishing">
+				<a class="iopp-footer-logo" id="wd-iopp-footer-logo" itemprop="url" href="http://ioppublishing.org">
+					<meta content="IOPscience" itemprop="name">
+					<svg width="100" height="15">
+					  <image xlink:href="https://static.iopscience.com/2.21.0/img/iopp-logo-white.svg" src="https://static.iopscience.com/2.21.0/img/iopp-logo.png" border="0" width="100" height="15"/>
+					</svg>
+                    <span class="offscreen-hidden">IOP Publishing home</span>
+				</a>
+                <div class="media-body mar-0">
+                    <ul>
+                        <li class="small"><a href="/page/copyright_notice">&copy; Copyright 2019 IOP Publishing</a></li>
+                        <li class="small"><a href="/page/terms">Terms &amp; conditions</a></li>
+                        <li class="small"><a href="/page/disclaimer">Disclaimer</a></li>
+                        <li class="small"><a href="http://ioppublishing.org/privacyPolicy" target="_blank">Privacy &amp; cookie policy <span class="icon-newtab white-text"></span></a></li>
+                        <li class="small"><small>This site uses cookies. By continuing to use this site you agree to our use of cookies.</small></li>
+                    </ul>
+                </div>
+            </nav>
+            </div>
+        </div> <!-- end wrapper -->
+    </div> <!-- end iopp-footer -->
+</footer>
+<!-- Footer tile ends -->
+<script>
+  var imgBase = "https://static.iopscience.com/2.21.0/img";
+  /*  Cutting the mustard - http://responsivenews.co.uk/post/18948466399/cutting-the-mustard */
+
+  /* This is the original if statement, from the link above. I have amended it to turn of JS on all IE browsers less than 10.
+	This is due to a function in the iop.jquery.toolbar.js line 35/36. Uses .remove which is not native js supported in IE9 or lower */
+  /* if('querySelector' in document 
+	&& 'localStorage' in window
+	&& 'addEventListener' in window) { */
+
+  /* This is the updated selector, taken from: https://justmarkup.com/log/2015/02/26/cut-the-mustard-revisited/ */
+	if('visibilityState' in document) {
+
+	/*! loadJS: load a JS file asynchronously. [c]2014 @scottjehl, Filament Group, Inc. (Based on http://goo.gl/REQGQ by Paul Irish).. Licensed MIT */
+	function loadJS( src, cb ){
+	  "use strict";
+	  var ref = window.document.getElementsByTagName( "script" )[ 0 ];
+	  var script = window.document.createElement( "script" );
+	  script.src = src;
+	  script.async = true;
+	  ref.parentNode.insertBefore( script, ref );
+	  if (cb && typeof(cb) === "function") {
+		script.onload = cb;
+	  }
+	  return script;
+	}
+
+	loadJS( "https://static.iopscience.com/2.21.0/js/scripts.min.js" );
+
+  }
+</script>
+</body>
+</html>

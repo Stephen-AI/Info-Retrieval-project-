@@ -1,0 +1,91 @@
+<BASE HREF="http://www-sldnt.slac.stanford.edu/nld/new/Docs/Generators/PANDORA.htm">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>pandora</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<META content="Microsoft FrontPage 4.0" name=GENERATOR></HEAD>
+<BODY bgColor=#ffffff>
+<H2>pandora</H2>This page is intended to distribute the current version of a 
+new
+physics event generator for linear collider studies, called pandora. The link 
+below transmits a tar.gz file containing the C++ code for pandora, and some 
+documentation. 
+<P>The program pandora is a general-purpose parton-level event generator 
+which 
+includes beamstrahlung, initial state radiation, and full 
+treatment of polarization effects.  (An interface to PYTHIA that produces 
+fully hadronized events is described below.)
+This version includes the SM physics 
+processes: 
+<UL>
+  <LI>e+e- -&gt; l+l-, q qbar , e+e-, gamma gamma, t tbar, Z gamma, ZZ, W+W- 
+  <LI>e+e- -&gt; Z Higgs, nu nubar Higgs, e+e- Higgs, nu nubar gamma 
+  <LI>gamma gamma -&gt; l+l-, q qbar, t tbar, e+e-, W+W-, Higgs 
+  <LI>e gamma -&gt; e gamma, e Z, nu W 
+  <LI>e-e- -&gt; e-e- </LI></UL>
+and some illustrative Beyond the SM processes:
+<UL>
+  <LI>e+e- -&gt; l+l-, q qbar , e+e-,  with a Z' 
+  <LI>e+e-  -&gt; l+l-, q qbar , e+e-, gamma gamma, ZZ, W+W-
+           with Hewett's contact  interaction for extra dimensions
+  <LI>e+e- -&gt;  gamma Graviton
+  <LI>e+e- -&gt;  t tbar, with general production and decay form factors
+  <LI>e+e- -&gt;  W+W-, with a technirho resonance
+</UL>
+<P>To download pandora, 
+<a href="ftp://ftp.slac.stanford.edu/groups/lcd/Generators/PANDORA/pandora23.tar.gz">
+click this link</a> to receive a tar.gz file. 
+This download contains all C++ files needed 
+to run pandora simulations at the parton level. 
+<P>Some sample programs are contained in the directories SMexamples, 
+SM3examples, BSMexamples. On a UNIX system, it might well be possible 
+to simply enter one of these directories, type (for the program ttevents.cpp,
+for example) `make ttevents', and watch the program compile.  More often,
+you will need to do some minor tinkering with the makefile (e.g. change
+`CC' to `g++' at the top). Programs whose names end in 
+`events' generate a few events and output them to the console. Programs which 
+end in `example' generate a few thousand events and create histograms of their 
+properties as gnuplot (.gp) graphics files. 
+<P>Pandora treats e+e- reactions only at the parton level. To include 
+hadronization, you need the `pandora_pythia' interface, written by Masako 
+Iwasaki. That can be obtained by <a href="PANDORA_PYTHIA.htm">following 
+this link</a>. Instructions for download and running of pandora_pythia are 
+given on that page. 
+<P>A manual for pandora is in preparation.  The manual will come in two 
+parts, first, a user's guide to pandora and pandora-pythia, and, second,
+a documentation of the internal structure of pandora for those who would
+like to write their own processes. <a href=
+"ftp://ftp.slac.stanford.edu/groups/lcd/Generators/PANDORA/ppythia.pdf">The
+user's guide is now available from this link</a>.
+<P>Some less systematic documentation for pandora can be found in the 
+documentation directory of this distribution. This directory contains
+a pandora.README file with basic information, It also has notes on the 
+polarization conventions used in pandora, the modification of beam and
+accelerator parameters, and the (still primitive) SUSY processes included. 
+<P>The default 
+treatment of initial state radiation and beamstrahlung in pandora is 
+described in more detail in my note LCC-0010. You can access
+that paper from <a href="http://www.slac.stanford.edu/~mpeskin/pisin.pdf">this
+link</a>.  Please note that the current version of pandora also includes
+Ohl's CIRCE 1.0 beamstrahlung parametrizations, as well as the option for 
+user-supplied parametrizations.
+<P>The current version&nbsp; (3 March 2003) is pandora 2.3.   Earlier 
+versions of pandora can be obtained here: 
+<UL>
+  <LI>
+  <a href="ftp://ftp.slac.stanford.edu/groups/lcd/Generators/PANDORA/pandora20.tar.gz">
+   pandora 2.0</a> (August, 2000). </LI>
+<LI>
+<a href="ftp://ftp.slac.stanford.edu/groups/lcd/Generators/PANDORA/pandora21.tar.gz">pandora 2.1</a> (September, 2000)</LI>
+<LI>
+<a href="ftp://ftp.slac.stanford.edu/groups/lcd/Generators/PANDORA/pandora22.tar.gz">pandora 2.2</a> (September, 2000)</LI></UL>
+<p>&nbsp;</p>
+<P><a href="http://www.slac.stanford.edu/~mpeskin/LC/pandora.html">Patches for
+the current (2.3) PANDORA</a>
+<P>&nbsp;
+<P>Please send comments or questions to <A 
+href="mailto:mpeskin@slac.stanford.edu">Michael E. Peskin</A>. 
+<P>
+<HR>
+
+<ADDRESS><A 
+href="http://www.slac.stanford.edu/highlighted.html">SLAC</A></ADDRESS></BODY></HTML>

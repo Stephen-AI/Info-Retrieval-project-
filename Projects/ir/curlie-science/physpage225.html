@@ -1,0 +1,1736 @@
+<BASE HREF="http://www.pbs.org/wnet/hawking/html/home.html">
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1130.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","queueTime":4,"licenseKey":"646c3c011e","agent":"","transactionName":"Z1NQZEtSCEcAVEQPWF4ZdEVXUBJdDlkfBFJeQl1vWl4VGgdFXwhDVVhWHk9aA0MSDUIDWVRTQG9VWhBRPkdRAVI=","applicationID":"31139230","errorBeacon":"bam.nr-data.net","applicationTime":63}</script><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/v4-shims.css"><link href="https://d1qbemlbhjecig.cloudfront.net/prod/filer_public/_bento_media/css/bootstrap.min.css" rel="stylesheet"><link href="https://d1qbemlbhjecig.cloudfront.net/prod/filer_public/_bento_media/css/bootstrap-responsive.min.css" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300italic,400italic,600,600italic,700,700italic,300|Arvo:400,700" rel="stylesheet" type="text/css">
+        <link type="text/css" href="https://d1qbemlbhjecig.cloudfront.net/prod/3.35.0/staticfiles/dist/frontend/css/frontend_style.css" rel="stylesheet"/>
+        <link type="text/css" href="https://d1qbemlbhjecig.cloudfront.net/prod/3.35.0/staticfiles/dist/frontend/js/frontend_js.css" rel="stylesheet"/>
+        
+<style id="global-chrome-spacing">
+    body{
+        padding-top: 71px;
+    }
+
+    body.passport > .nav-collapse.collapse ul{
+        margin-top: 71px !important;
+    }
+
+</style>
+
+
+        <title>Retired Site | PBS</title><meta name="description" content="This Content is No Longer Available"/><!-- Twitter Card data --><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:site" content="@Retired Site"/><meta name="twitter:title" content="Retired Site | PBS"><meta name="twitter:description"
+      content="This Content is No Longer Available"/><!-- Open Graph data --><meta property="og:title" content="Retired Site | PBS"/><meta property="og:type" content="website"/><meta property="og:url" content="https://www.pbs.org/retired-site/"/><meta property="og:description"
+      content="This Content is No Longer Available"/><meta property="og:site_name" content="Retired Site"/><meta name="robots" content="noindex, follow"/><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0"/><link rel="apple-touch-icon" sizes="180x180" href="https://d1qbemlbhjecig.cloudfront.net/prod/3.35.0/staticfiles/bento_cms/favicons/apple-touch-icon.png"><link rel="icon" type="image/png" href="https://d1qbemlbhjecig.cloudfront.net/prod/3.35.0/staticfiles/bento_cms/favicons/favicon-32x32.png" sizes="32x32"><link rel="icon" type="image/png" href="https://d1qbemlbhjecig.cloudfront.net/prod/3.35.0/staticfiles/bento_cms/favicons/favicon-16x16.png" sizes="16x16"><link rel="manifest" href="https://d1qbemlbhjecig.cloudfront.net/prod/3.35.0/staticfiles/bento_cms/favicons/manifest.json"><link rel="mask-icon" href="https://d1qbemlbhjecig.cloudfront.net/prod/3.35.0/staticfiles/bento_cms/favicons/safari-pinned-tab.svg" color="#5bbad5"><meta name="theme-color" content="#438eb9"><script type="application/ld+json">
+
+{
+    "publisher": {
+        "logo": {}, 
+        "@type": "Organization", 
+        "name": "Retired Site"
+    }, 
+    "description": "This Content is No Longer Available", 
+    "url": "https://www.pbs.org/retired-site/", 
+    "keywords": "", 
+    "@context": "http://schema.org", 
+    "@type": "WebSite", 
+    "name": "Retired Site | PBS"
+}
+
+</script><!-- Google Tag Manager --><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','GTMDataLayer','GTM-TWTDGH');</script><!-- End Google Tag Manager -->
+    </head>
+
+    <body id="page-23136" class="studio bento3">
+        <style type="text/css">
+        a {
+    color: #126eb5;
+}
+
+a:hover,
+a:active,
+a:visited {
+    color: #0a538b;
+}
+
+/* expose accent classes */
+
+.colorPalette-accent1 {
+    color: #0a538b !important;
+}
+
+.colorPalette-accent3 {
+    color: #e4f3fb !important;
+}
+
+.colorPalette-main {
+    color: #126eb5 !important;
+}
+
+.colorPalette-accent4 {
+    color: #eff9fd !important;
+}
+
+.colorPalette-accent2 {
+    color: #d7eefb !important;
+}
+
+
+        </style>
+
+        <!-- Google Tag Manager (noscript) --><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-TWTDGH"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><!-- End Google Tag Manager (noscript) --><header><div class="row-fluid"><style type="text/css">
+        
+
+#layout-a711ba1b-4ddb-4325-9a1d-48de0c697bd3.container.layout-padding {
+    padding: px 0px px 0px;
+}
+
+@media (min-width: 1024px) {
+    #layout-a711ba1b-4ddb-4325-9a1d-48de0c697bd3.container.layout-padding {
+        padding: px px px px;
+    }
+}
+
+#layout-a711ba1b-4ddb-4325-9a1d-48de0c697bd3.container.has-background-image {
+    background-image: url();
+}
+
+
+@media (min-width: 1200px) {#layout-a711ba1b-4ddb-4325-9a1d-48de0c697bd3.container.has-background-image {background-image: url(1920w);}}@media (min-width: 992px) and (max-width: 1199px) {#layout-a711ba1b-4ddb-4325-9a1d-48de0c697bd3.container.has-background-image {background-image: url(1199w);}}@media (min-width: 768px) and (max-width: 991px) {#layout-a711ba1b-4ddb-4325-9a1d-48de0c697bd3.container.has-background-image {background-image: url(991w);}}@media (min-width: 576px) and (max-width: 767px) {#layout-a711ba1b-4ddb-4325-9a1d-48de0c697bd3.container.has-background-image {background-image: url(767w);}}@media (max-width: 575px) {#layout-a711ba1b-4ddb-4325-9a1d-48de0c697bd3.container.has-background-image {background-image: url(575w);}}
+
+        </style><div id="layout-a711ba1b-4ddb-4325-9a1d-48de0c697bd3"
+                class="container
+                
+                
+                
+                
+                
+                "
+                style=""><div id="column-0"
+                 class="span12 column-12
+                 "><div id="component-c13bfdd0-87b7-11e9-a10c-db56dfa58798" class="component"><div id='c13bfdd0-87b7-11e9-a10c-db56dfa58798' class='jaws-tv-schedules'><div id="jaws-header-c13bfdd0-87b7-11e9-a10c-db56dfa58798"></div></div></div></div></div></div></header>
+
+        
+        <main class="content ">
+          <div class="row">
+              <div class="container">
+        
+
+            <div class="content-wrapper full-width
+                                            
+                                            "><div class="row-fluid"><style type="text/css">
+        
+
+#layout-96972047-7b9e-4175-a0de-5e9e3ca0c6bc.container.layout-padding {
+    padding: 0px 0px 0px 0px;
+}
+
+@media (min-width: 1024px) {
+    #layout-96972047-7b9e-4175-a0de-5e9e3ca0c6bc.container.layout-padding {
+        padding: 0px 0px 0px 0px;
+    }
+}
+
+#layout-96972047-7b9e-4175-a0de-5e9e3ca0c6bc.container.has-background-image {
+    background-image: url(https://image.pbs.org/bento3-prod/retired-site-bento-live-pbs/3a3876f834_3a3876f834_1280x350_Website_Banner_BLANK2.png);
+}
+
+
+@media (min-width: 1200px) {#layout-96972047-7b9e-4175-a0de-5e9e3ca0c6bc.container.has-background-image {background-image: url(https://image.pbs.org/bento3-prod/retired-site-bento-live-pbs/3a3876f834_3a3876f834_1280x350_Website_Banner_BLANK2.png?resize=1280x);}}@media (min-width: 992px) and (max-width: 1199px) {#layout-96972047-7b9e-4175-a0de-5e9e3ca0c6bc.container.has-background-image {background-image: url(https://image.pbs.org/bento3-prod/retired-site-bento-live-pbs/3a3876f834_3a3876f834_1280x350_Website_Banner_BLANK2.png?resize=1199x);}}@media (min-width: 768px) and (max-width: 991px) {#layout-96972047-7b9e-4175-a0de-5e9e3ca0c6bc.container.has-background-image {background-image: url(https://image.pbs.org/bento3-prod/retired-site-bento-live-pbs/3a3876f834_3a3876f834_1280x350_Website_Banner_BLANK2.png?resize=991x);}}@media (min-width: 576px) and (max-width: 767px) {#layout-96972047-7b9e-4175-a0de-5e9e3ca0c6bc.container.has-background-image {background-image: url(https://image.pbs.org/bento3-prod/retired-site-bento-live-pbs/3a3876f834_3a3876f834_1280x350_Website_Banner_BLANK2.png?resize=767x);}}@media (max-width: 575px) {#layout-96972047-7b9e-4175-a0de-5e9e3ca0c6bc.container.has-background-image {background-image: url(https://image.pbs.org/bento3-prod/retired-site-bento-live-pbs/3a3876f834_3a3876f834_1280x350_Website_Banner_BLANK2.png?resize=575x);}}
+
+        </style><div id="layout-96972047-7b9e-4175-a0de-5e9e3ca0c6bc"
+                class="container
+                
+                
+                
+                
+                
+                 layout-padding "
+                style=""><div id="column-31fe3280-87af-11e9-be54-2d9b547e932f"
+                 class="span12 column-12
+                 "><div id="component-a6937920-87af-11e9-be54-2d9b547e932f" class="component"><style type="text/css">
+#component-a6937920-87af-11e9-be54-2d9b547e932f .text-container {
+    background-color: rgba(255, 255, 255, 100);
+    padding: 0px 16px 16px 16px;
+}
+
+#component-a6937920-87af-11e9-be54-2d9b547e932f .text-container.text-background-color {
+    background-color: rgba(255, 255, 255, 0);
+}
+
+#component-a6937920-87af-11e9-be54-2d9b547e932f .text-container.text-padding {
+    padding: 0px 16px 0px 16px;
+}
+
+@media (min-width: 1024px) {
+    #component-a6937920-87af-11e9-be54-2d9b547e932f .text-container.text-padding {
+        padding: 0px 0px 0px 0px;
+    }
+}
+
+</style><div class="text-container
+    text-background-color
+    text-padding"><div id="rich-text-a6937920-87af-11e9-be54-2d9b547e932f"
+     style="
+            max-width: 800px; margin: auto;
+            "><h1 style="text-align: center;"><span style="color:#000000;"><strong>Oops! You've reached a retired site page.</strong></span></h1><p style="text-align: center;"><span style="color:#000000;"><strong>PBS no longer has the rights to distribute the content that had been provided on this page.</strong></span></p></div><script type="text/javascript">
+(function(document) {
+    var baseURL = 'https://www.pbs.org/retired-site/',
+        baseUrlLength = baseURL.length,
+        component = document.getElementById('rich-text-a6937920-87af-11e9-be54-2d9b547e932f'),
+        aPageTags = component.querySelectorAll('a[data-link-page-id]'),
+        aFileTags = component.querySelectorAll('a[data-link-file-id]'),
+        filerImages = component.querySelectorAll('img[data-img-filer-id]'),
+        filerImage;
+
+    if (baseURL[baseUrlLength - 1] === '/') {
+        baseURL = baseURL.substr(0, baseUrlLength - 1);
+    }
+
+    for (var index=0; index < aPageTags.length; index++) {
+        // all internal links are relative
+        aPageTags[index].href = aPageTags[index].dataset.linkPageId;
+    }
+
+    for (var index=0; index < aFileTags.length; index++) {
+
+        aFileTags[index].href = aFileTags[index].dataset.linkFileId;
+    }
+
+    for (var imgIndex=0; imgIndex < filerImages.length; imgIndex++) {
+        filerImage = filerImages[imgIndex];
+        filerImage.src = filerImage.dataset.imgFilerId;
+    }
+    })(document);
+</script></div></div></div></div></div><div class="row-fluid"><style type="text/css">
+        
+
+#layout-764c9275-12ce-4730-81a1-e1b2619da16c.container.layout-padding {
+    padding: 0px 0px 0px 0px;
+}
+
+@media (min-width: 1024px) {
+    #layout-764c9275-12ce-4730-81a1-e1b2619da16c.container.layout-padding {
+        padding: 0px 0px 0px 0px;
+    }
+}
+
+#layout-764c9275-12ce-4730-81a1-e1b2619da16c.container.has-background-image {
+    background-image: url();
+}
+
+
+@media (min-width: 1200px) {#layout-764c9275-12ce-4730-81a1-e1b2619da16c.container.has-background-image {background-image: url(1920w);}}@media (min-width: 992px) and (max-width: 1199px) {#layout-764c9275-12ce-4730-81a1-e1b2619da16c.container.has-background-image {background-image: url(1199w);}}@media (min-width: 768px) and (max-width: 991px) {#layout-764c9275-12ce-4730-81a1-e1b2619da16c.container.has-background-image {background-image: url(991w);}}@media (min-width: 576px) and (max-width: 767px) {#layout-764c9275-12ce-4730-81a1-e1b2619da16c.container.has-background-image {background-image: url(767w);}}@media (max-width: 575px) {#layout-764c9275-12ce-4730-81a1-e1b2619da16c.container.has-background-image {background-image: url(575w);}}
+
+        </style><div id="layout-764c9275-12ce-4730-81a1-e1b2619da16c"
+                class="container
+                
+                
+                
+                
+                
+                 layout-padding "
+                style=""><div id="column-e77665f0-4eee-11e9-b2e8-8f60b2321729"
+                 class="span12 column-12
+                 "><div id="component-79b4d880-8d3c-11e9-bbe2-c736cefc9ede" class="component"><style type="text/css">
+#component-79b4d880-8d3c-11e9-bbe2-c736cefc9ede .section-header-component.filled .text-input {
+    background-color: #0a538b;
+    color: #eff9fd;
+    border-color: transparent;
+}
+
+#component-79b4d880-8d3c-11e9-bbe2-c736cefc9ede .section-header-component.underline .text-input {
+    background-color: inherit;
+    color: #0a538b;
+    border-bottom-color: #0a538b;
+}
+
+</style><div id="79b4d880-8d3c-11e9-bbe2-c736cefc9ede" class="section-header-component filled"><div class="section-header-value h2_tag"><div class="text-input" style=" ">
+            Explore Video by Genre
+        </div></div></div></div></div></div></div><div class="row-fluid"><style type="text/css">
+        
+
+#layout-b1d33d11-cfc6-4ff5-a39c-7bb282913ba7.container.layout-padding {
+    padding: 0px 0px 0px 0px;
+}
+
+@media (min-width: 1024px) {
+    #layout-b1d33d11-cfc6-4ff5-a39c-7bb282913ba7.container.layout-padding {
+        padding: 0px 0px 0px 0px;
+    }
+}
+
+#layout-b1d33d11-cfc6-4ff5-a39c-7bb282913ba7.container.has-background-image {
+    background-image: url();
+}
+
+
+@media (min-width: 1200px) {#layout-b1d33d11-cfc6-4ff5-a39c-7bb282913ba7.container.has-background-image {background-image: url(1920w);}}@media (min-width: 992px) and (max-width: 1199px) {#layout-b1d33d11-cfc6-4ff5-a39c-7bb282913ba7.container.has-background-image {background-image: url(1199w);}}@media (min-width: 768px) and (max-width: 991px) {#layout-b1d33d11-cfc6-4ff5-a39c-7bb282913ba7.container.has-background-image {background-image: url(991w);}}@media (min-width: 576px) and (max-width: 767px) {#layout-b1d33d11-cfc6-4ff5-a39c-7bb282913ba7.container.has-background-image {background-image: url(767w);}}@media (max-width: 575px) {#layout-b1d33d11-cfc6-4ff5-a39c-7bb282913ba7.container.has-background-image {background-image: url(575w);}}
+
+        </style><div id="layout-b1d33d11-cfc6-4ff5-a39c-7bb282913ba7"
+                class="container
+                
+                
+                
+                
+                
+                 layout-padding "
+                style=""><div id="column-f3f9c4d0-8d3b-11e9-bbe2-c736cefc9ede"
+                 class="span3 column-3
+                 "><div id="component-fead54f0-8d3b-11e9-bbe2-c736cefc9ede" class="component"><style type="text/css">
+#component-fead54f0-8d3b-11e9-bbe2-c736cefc9ede .filer-image-container {
+    text-align: center;
+}
+
+#component-fead54f0-8d3b-11e9-bbe2-c736cefc9ede .filer-image-container.img-text-align {
+    text-align: center;
+}
+
+#component-fead54f0-8d3b-11e9-bbe2-c736cefc9ede .filer-image-container .filer-image {
+    max-width: 100%;
+}
+
+#component-fead54f0-8d3b-11e9-bbe2-c736cefc9ede .filer-image-container .img-details {
+    text-align: center;
+    max-width: 100%;
+    margin: auto;
+}
+
+#component-fead54f0-8d3b-11e9-bbe2-c736cefc9ede .filer-image-container .img-details.img-aligned-left {
+    margin: 0 auto 0 0;
+}
+
+#component-fead54f0-8d3b-11e9-bbe2-c736cefc9ede .filer-image-container .img-details.img-aligned-right {
+    margin: 0 0 0 auto;
+}
+
+#component-fead54f0-8d3b-11e9-bbe2-c736cefc9ede .filer-image-container.img-padding-top {
+    padding-top: px;
+}
+
+#component-fead54f0-8d3b-11e9-bbe2-c736cefc9ede .filer-image-container.img-padding-bottom {
+    padding-bottom: px;
+}
+
+@media (min-width: 1024px) {
+    #component-fead54f0-8d3b-11e9-bbe2-c736cefc9ede .filer-image-container.img-padding-left {
+        padding-left: px;
+    }
+
+    #component-fead54f0-8d3b-11e9-bbe2-c736cefc9ede .filer-image-container.img-padding-right {
+        padding-right: px;
+    }
+}
+
+</style><figure
+    id="fead54f0-8d3b-11e9-bbe2-c736cefc9ede"
+    class="filer-image-container
+        has-caption
+        
+        
+        
+        
+        
+        
+        img-text-align"><a href="https://www.pbs.org/video/#video-landing-arts-and-music"
+       target="_self"><img class="filer-image"
+             style="max-width: 100%;"
+             alt="Explore Arts &amp; Music"
+             src="https://image.pbs.org/bento3-prod/retired-site-bento-live-pbs/genre%20images/8629a0021d_arts_and_music_kael-bloom-567370-unsplash.jpg"
+             
+             
+                
+                srcset="https://image.pbs.org/bento3-prod/retired-site-bento-live-pbs/genre%20images/8629a0021d_arts_and_music_kael-bloom-567370-unsplash.jpg?resize=480x 480w,
+https://image.pbs.org/bento3-prod/retired-site-bento-live-pbs/genre%20images/8629a0021d_arts_and_music_kael-bloom-567370-unsplash.jpg?resize=299x 299w,
+https://image.pbs.org/bento3-prod/retired-site-bento-live-pbs/genre%20images/8629a0021d_arts_and_music_kael-bloom-567370-unsplash.jpg?resize=247x 247w,
+https://image.pbs.org/bento3-prod/retired-site-bento-live-pbs/genre%20images/8629a0021d_arts_and_music_kael-bloom-567370-unsplash.jpg?resize=767x 767w,
+https://image.pbs.org/bento3-prod/retired-site-bento-live-pbs/genre%20images/8629a0021d_arts_and_music_kael-bloom-567370-unsplash.jpg?resize=575x 575w"
+                sizes="(min-width: 1200px) 480px,
+ ((min-width: 992px) and (max-width: 1199px)) 299px,
+ ((min-width: 768px) and (max-width: 991px)) 247px,
+ ((min-width: 576px) and (max-width: 767px)) 767px,
+ (max-width: 575px) 575px"
+             
+             /></a><figcaption class="img-details
+            
+            "
+            style="max-width: 100%;"><div class="img-caption">Arts & Music</div></figcaption></figure></div><div id="component-94ccba70-8d3c-11e9-bbe2-c736cefc9ede" class="component"><style type="text/css">
+#component-94ccba70-8d3c-11e9-bbe2-c736cefc9ede .filer-image-container {
+    text-align: center;
+}
+
+#component-94ccba70-8d3c-11e9-bbe2-c736cefc9ede .filer-image-container.img-text-align {
+    text-align: center;
+}
+
+#component-94ccba70-8d3c-11e9-bbe2-c736cefc9ede .filer-image-container .filer-image {
+    max-width: 100%;
+}
+
+#component-94ccba70-8d3c-11e9-bbe2-c736cefc9ede .filer-image-container .img-details {
+    text-align: center;
+    max-width: 100%;
+    margin: auto;
+}
+
+#component-94ccba70-8d3c-11e9-bbe2-c736cefc9ede .filer-image-container .img-details.img-aligned-left {
+    margin: 0 auto 0 0;
+}
+
+#component-94ccba70-8d3c-11e9-bbe2-c736cefc9ede .filer-image-container .img-details.img-aligned-right {
+    margin: 0 0 0 auto;
+}
+
+#component-94ccba70-8d3c-11e9-bbe2-c736cefc9ede .filer-image-container.img-padding-top {
+    padding-top: px;
+}
+
+#component-94ccba70-8d3c-11e9-bbe2-c736cefc9ede .filer-image-container.img-padding-bottom {
+    padding-bottom: px;
+}
+
+@media (min-width: 1024px) {
+    #component-94ccba70-8d3c-11e9-bbe2-c736cefc9ede .filer-image-container.img-padding-left {
+        padding-left: px;
+    }
+
+    #component-94ccba70-8d3c-11e9-bbe2-c736cefc9ede .filer-image-container.img-padding-right {
+        padding-right: px;
+    }
+}
+
+</style><figure
+    id="94ccba70-8d3c-11e9-bbe2-c736cefc9ede"
+    class="filer-image-container
+        has-caption
+        
+        
+        
+        
+        
+        
+        img-text-align"><a href="https://www.pbs.org/video/#video-landing-home-and-howto"
+       target="_self"><img class="filer-image"
+             style="max-width: 100%;"
+             alt="Explore Home and How To"
+             src="https://image.pbs.org/bento3-prod/retired-site-bento-live-pbs/genre%20images/1978623ede_DIY-annie-gray-382969-unsplash.jpg"
+             
+             
+                
+                srcset="https://image.pbs.org/bento3-prod/retired-site-bento-live-pbs/genre%20images/1978623ede_DIY-annie-gray-382969-unsplash.jpg?resize=480x 480w,
+https://image.pbs.org/bento3-prod/retired-site-bento-live-pbs/genre%20images/1978623ede_DIY-annie-gray-382969-unsplash.jpg?resize=299x 299w,
+https://image.pbs.org/bento3-prod/retired-site-bento-live-pbs/genre%20images/1978623ede_DIY-annie-gray-382969-unsplash.jpg?resize=247x 247w,
+https://image.pbs.org/bento3-prod/retired-site-bento-live-pbs/genre%20images/1978623ede_DIY-annie-gray-382969-unsplash.jpg?resize=767x 767w,
+https://image.pbs.org/bento3-prod/retired-site-bento-live-pbs/genre%20images/1978623ede_DIY-annie-gray-382969-unsplash.jpg?resize=575x 575w"
+                sizes="(min-width: 1200px) 480px,
+ ((min-width: 992px) and (max-width: 1199px)) 299px,
+ ((min-width: 768px) and (max-width: 991px)) 247px,
+ ((min-width: 576px) and (max-width: 767px)) 767px,
+ (max-width: 575px) 575px"
+             
+             /></a><figcaption class="img-details
+            
+            "
+            style="max-width: 100%;"><div class="img-caption">Home and How To</div></figcaption></figure></div></div><div id="column-b4c82463-602e-4f92-9b4a-6c151ee0039a"
+                 class="span3 column-3
+                 "><div id="component-1e668460-8d3c-11e9-bbe2-c736cefc9ede" class="component"><style type="text/css">
+#component-1e668460-8d3c-11e9-bbe2-c736cefc9ede .filer-image-container {
+    text-align: center;
+}
+
+#component-1e668460-8d3c-11e9-bbe2-c736cefc9ede .filer-image-container.img-text-align {
+    text-align: center;
+}
+
+#component-1e668460-8d3c-11e9-bbe2-c736cefc9ede .filer-image-container .filer-image {
+    max-width: 100%;
+}
+
+#component-1e668460-8d3c-11e9-bbe2-c736cefc9ede .filer-image-container .img-details {
+    text-align: center;
+    max-width: 100%;
+    margin: auto;
+}
+
+#component-1e668460-8d3c-11e9-bbe2-c736cefc9ede .filer-image-container .img-details.img-aligned-left {
+    margin: 0 auto 0 0;
+}
+
+#component-1e668460-8d3c-11e9-bbe2-c736cefc9ede .filer-image-container .img-details.img-aligned-right {
+    margin: 0 0 0 auto;
+}
+
+#component-1e668460-8d3c-11e9-bbe2-c736cefc9ede .filer-image-container.img-padding-top {
+    padding-top: px;
+}
+
+#component-1e668460-8d3c-11e9-bbe2-c736cefc9ede .filer-image-container.img-padding-bottom {
+    padding-bottom: px;
+}
+
+@media (min-width: 1024px) {
+    #component-1e668460-8d3c-11e9-bbe2-c736cefc9ede .filer-image-container.img-padding-left {
+        padding-left: px;
+    }
+
+    #component-1e668460-8d3c-11e9-bbe2-c736cefc9ede .filer-image-container.img-padding-right {
+        padding-right: px;
+    }
+}
+
+</style><figure
+    id="1e668460-8d3c-11e9-bbe2-c736cefc9ede"
+    class="filer-image-container
+        has-caption
+        
+        
+        
+        
+        
+        
+        img-text-align"><a href="https://www.pbs.org/video/#video-landing-drama"
+       target="_self"><img class="filer-image"
+             style="max-width: 100%;"
+             alt="Explore Drama"
+             src="https://image.pbs.org/bento3-prod/retired-site-bento-live-pbs/genre%20images/7a5b438b79_drama_patrick-gillespie-1466461-unsplash.jpg"
+             
+             
+                
+                srcset="https://image.pbs.org/bento3-prod/retired-site-bento-live-pbs/genre%20images/7a5b438b79_drama_patrick-gillespie-1466461-unsplash.jpg?resize=480x 480w,
+https://image.pbs.org/bento3-prod/retired-site-bento-live-pbs/genre%20images/7a5b438b79_drama_patrick-gillespie-1466461-unsplash.jpg?resize=299x 299w,
+https://image.pbs.org/bento3-prod/retired-site-bento-live-pbs/genre%20images/7a5b438b79_drama_patrick-gillespie-1466461-unsplash.jpg?resize=247x 247w,
+https://image.pbs.org/bento3-prod/retired-site-bento-live-pbs/genre%20images/7a5b438b79_drama_patrick-gillespie-1466461-unsplash.jpg?resize=767x 767w,
+https://image.pbs.org/bento3-prod/retired-site-bento-live-pbs/genre%20images/7a5b438b79_drama_patrick-gillespie-1466461-unsplash.jpg?resize=575x 575w"
+                sizes="(min-width: 1200px) 480px,
+ ((min-width: 992px) and (max-width: 1199px)) 299px,
+ ((min-width: 768px) and (max-width: 991px)) 247px,
+ ((min-width: 576px) and (max-width: 767px)) 767px,
+ (max-width: 575px) 575px"
+             
+             /></a><figcaption class="img-details
+            
+            "
+            style="max-width: 100%;"><div class="img-caption">Drama</div></figcaption></figure></div><div id="component-ab579a30-8d3c-11e9-bbe2-c736cefc9ede" class="component"><style type="text/css">
+#component-ab579a30-8d3c-11e9-bbe2-c736cefc9ede .filer-image-container {
+    text-align: center;
+}
+
+#component-ab579a30-8d3c-11e9-bbe2-c736cefc9ede .filer-image-container.img-text-align {
+    text-align: center;
+}
+
+#component-ab579a30-8d3c-11e9-bbe2-c736cefc9ede .filer-image-container .filer-image {
+    max-width: 100%;
+}
+
+#component-ab579a30-8d3c-11e9-bbe2-c736cefc9ede .filer-image-container .img-details {
+    text-align: center;
+    max-width: 100%;
+    margin: auto;
+}
+
+#component-ab579a30-8d3c-11e9-bbe2-c736cefc9ede .filer-image-container .img-details.img-aligned-left {
+    margin: 0 auto 0 0;
+}
+
+#component-ab579a30-8d3c-11e9-bbe2-c736cefc9ede .filer-image-container .img-details.img-aligned-right {
+    margin: 0 0 0 auto;
+}
+
+#component-ab579a30-8d3c-11e9-bbe2-c736cefc9ede .filer-image-container.img-padding-top {
+    padding-top: px;
+}
+
+#component-ab579a30-8d3c-11e9-bbe2-c736cefc9ede .filer-image-container.img-padding-bottom {
+    padding-bottom: px;
+}
+
+@media (min-width: 1024px) {
+    #component-ab579a30-8d3c-11e9-bbe2-c736cefc9ede .filer-image-container.img-padding-left {
+        padding-left: px;
+    }
+
+    #component-ab579a30-8d3c-11e9-bbe2-c736cefc9ede .filer-image-container.img-padding-right {
+        padding-right: px;
+    }
+}
+
+</style><figure
+    id="ab579a30-8d3c-11e9-bbe2-c736cefc9ede"
+    class="filer-image-container
+        has-caption
+        
+        
+        
+        
+        
+        
+        img-text-align"><a href="https://www.pbs.org/video/#video-landing-news-and-public-affairs"
+       target="_self"><img class="filer-image"
+             style="max-width: 100%;"
+             alt="Explore News and Public Affairs"
+             src="https://image.pbs.org/bento3-prod/retired-site-bento-live-pbs/genre%20images/63b9d37b2a_news_ross-sneddon-798476-unsplash.jpg"
+             
+             
+                
+                srcset="https://image.pbs.org/bento3-prod/retired-site-bento-live-pbs/genre%20images/63b9d37b2a_news_ross-sneddon-798476-unsplash.jpg?resize=480x 480w,
+https://image.pbs.org/bento3-prod/retired-site-bento-live-pbs/genre%20images/63b9d37b2a_news_ross-sneddon-798476-unsplash.jpg?resize=299x 299w,
+https://image.pbs.org/bento3-prod/retired-site-bento-live-pbs/genre%20images/63b9d37b2a_news_ross-sneddon-798476-unsplash.jpg?resize=247x 247w,
+https://image.pbs.org/bento3-prod/retired-site-bento-live-pbs/genre%20images/63b9d37b2a_news_ross-sneddon-798476-unsplash.jpg?resize=767x 767w,
+https://image.pbs.org/bento3-prod/retired-site-bento-live-pbs/genre%20images/63b9d37b2a_news_ross-sneddon-798476-unsplash.jpg?resize=575x 575w"
+                sizes="(min-width: 1200px) 480px,
+ ((min-width: 992px) and (max-width: 1199px)) 299px,
+ ((min-width: 768px) and (max-width: 991px)) 247px,
+ ((min-width: 576px) and (max-width: 767px)) 767px,
+ (max-width: 575px) 575px"
+             
+             /></a><figcaption class="img-details
+            
+            "
+            style="max-width: 100%;"><div class="img-caption">News & Public Affairs</div></figcaption></figure></div></div><div id="column-2be58871-ec93-41b2-b0c9-248f66343295"
+                 class="span3 column-3
+                 "><div id="component-392aef20-8d3c-11e9-bbe2-c736cefc9ede" class="component"><style type="text/css">
+#component-392aef20-8d3c-11e9-bbe2-c736cefc9ede .filer-image-container {
+    text-align: center;
+}
+
+#component-392aef20-8d3c-11e9-bbe2-c736cefc9ede .filer-image-container.img-text-align {
+    text-align: center;
+}
+
+#component-392aef20-8d3c-11e9-bbe2-c736cefc9ede .filer-image-container .filer-image {
+    max-width: 100%;
+}
+
+#component-392aef20-8d3c-11e9-bbe2-c736cefc9ede .filer-image-container .img-details {
+    text-align: center;
+    max-width: 100%;
+    margin: auto;
+}
+
+#component-392aef20-8d3c-11e9-bbe2-c736cefc9ede .filer-image-container .img-details.img-aligned-left {
+    margin: 0 auto 0 0;
+}
+
+#component-392aef20-8d3c-11e9-bbe2-c736cefc9ede .filer-image-container .img-details.img-aligned-right {
+    margin: 0 0 0 auto;
+}
+
+#component-392aef20-8d3c-11e9-bbe2-c736cefc9ede .filer-image-container.img-padding-top {
+    padding-top: px;
+}
+
+#component-392aef20-8d3c-11e9-bbe2-c736cefc9ede .filer-image-container.img-padding-bottom {
+    padding-bottom: px;
+}
+
+@media (min-width: 1024px) {
+    #component-392aef20-8d3c-11e9-bbe2-c736cefc9ede .filer-image-container.img-padding-left {
+        padding-left: px;
+    }
+
+    #component-392aef20-8d3c-11e9-bbe2-c736cefc9ede .filer-image-container.img-padding-right {
+        padding-right: px;
+    }
+}
+
+</style><figure
+    id="392aef20-8d3c-11e9-bbe2-c736cefc9ede"
+    class="filer-image-container
+        has-caption
+        
+        
+        
+        
+        
+        
+        img-text-align"><a href="https://www.pbs.org/video/#video-landing-food"
+       target="_self"><img class="filer-image"
+             style="max-width: 100%;"
+             alt="Explore PBS Food"
+             src="https://image.pbs.org/bento3-prod/retired-site-bento-live-pbs/genre%20images/3bd38cb9d2_food_katie-smith-104748-unsplash.jpg"
+             
+             
+                
+                srcset="https://image.pbs.org/bento3-prod/retired-site-bento-live-pbs/genre%20images/3bd38cb9d2_food_katie-smith-104748-unsplash.jpg?resize=480x 480w,
+https://image.pbs.org/bento3-prod/retired-site-bento-live-pbs/genre%20images/3bd38cb9d2_food_katie-smith-104748-unsplash.jpg?resize=299x 299w,
+https://image.pbs.org/bento3-prod/retired-site-bento-live-pbs/genre%20images/3bd38cb9d2_food_katie-smith-104748-unsplash.jpg?resize=247x 247w,
+https://image.pbs.org/bento3-prod/retired-site-bento-live-pbs/genre%20images/3bd38cb9d2_food_katie-smith-104748-unsplash.jpg?resize=767x 767w,
+https://image.pbs.org/bento3-prod/retired-site-bento-live-pbs/genre%20images/3bd38cb9d2_food_katie-smith-104748-unsplash.jpg?resize=575x 575w"
+                sizes="(min-width: 1200px) 480px,
+ ((min-width: 992px) and (max-width: 1199px)) 299px,
+ ((min-width: 768px) and (max-width: 991px)) 247px,
+ ((min-width: 576px) and (max-width: 767px)) 767px,
+ (max-width: 575px) 575px"
+             
+             /></a><figcaption class="img-details
+            
+            "
+            style="max-width: 100%;"><div class="img-caption">Food</div></figcaption></figure></div><div id="component-bf2ca8c0-8d3c-11e9-bbe2-c736cefc9ede" class="component"><style type="text/css">
+#component-bf2ca8c0-8d3c-11e9-bbe2-c736cefc9ede .filer-image-container {
+    text-align: center;
+}
+
+#component-bf2ca8c0-8d3c-11e9-bbe2-c736cefc9ede .filer-image-container.img-text-align {
+    text-align: center;
+}
+
+#component-bf2ca8c0-8d3c-11e9-bbe2-c736cefc9ede .filer-image-container .filer-image {
+    max-width: 100%;
+}
+
+#component-bf2ca8c0-8d3c-11e9-bbe2-c736cefc9ede .filer-image-container .img-details {
+    text-align: center;
+    max-width: 100%;
+    margin: auto;
+}
+
+#component-bf2ca8c0-8d3c-11e9-bbe2-c736cefc9ede .filer-image-container .img-details.img-aligned-left {
+    margin: 0 auto 0 0;
+}
+
+#component-bf2ca8c0-8d3c-11e9-bbe2-c736cefc9ede .filer-image-container .img-details.img-aligned-right {
+    margin: 0 0 0 auto;
+}
+
+#component-bf2ca8c0-8d3c-11e9-bbe2-c736cefc9ede .filer-image-container.img-padding-top {
+    padding-top: px;
+}
+
+#component-bf2ca8c0-8d3c-11e9-bbe2-c736cefc9ede .filer-image-container.img-padding-bottom {
+    padding-bottom: px;
+}
+
+@media (min-width: 1024px) {
+    #component-bf2ca8c0-8d3c-11e9-bbe2-c736cefc9ede .filer-image-container.img-padding-left {
+        padding-left: px;
+    }
+
+    #component-bf2ca8c0-8d3c-11e9-bbe2-c736cefc9ede .filer-image-container.img-padding-right {
+        padding-right: px;
+    }
+}
+
+</style><figure
+    id="bf2ca8c0-8d3c-11e9-bbe2-c736cefc9ede"
+    class="filer-image-container
+        has-caption
+        
+        
+        
+        
+        
+        
+        img-text-align"><a href="https://www.pbs.org/video/#video-landing-science-and-nature"
+       target="_self"><img class="filer-image"
+             style="max-width: 100%;"
+             alt="Explore Science and Nature"
+             src="https://image.pbs.org/bento3-prod/retired-site-bento-live-pbs/genre%20images/f175cf7471_nature_riccardo-chiarini-365677-unsplash.jpg"
+             
+             
+                
+                srcset="https://image.pbs.org/bento3-prod/retired-site-bento-live-pbs/genre%20images/f175cf7471_nature_riccardo-chiarini-365677-unsplash.jpg?resize=480x 480w,
+https://image.pbs.org/bento3-prod/retired-site-bento-live-pbs/genre%20images/f175cf7471_nature_riccardo-chiarini-365677-unsplash.jpg?resize=299x 299w,
+https://image.pbs.org/bento3-prod/retired-site-bento-live-pbs/genre%20images/f175cf7471_nature_riccardo-chiarini-365677-unsplash.jpg?resize=247x 247w,
+https://image.pbs.org/bento3-prod/retired-site-bento-live-pbs/genre%20images/f175cf7471_nature_riccardo-chiarini-365677-unsplash.jpg?resize=767x 767w,
+https://image.pbs.org/bento3-prod/retired-site-bento-live-pbs/genre%20images/f175cf7471_nature_riccardo-chiarini-365677-unsplash.jpg?resize=575x 575w"
+                sizes="(min-width: 1200px) 480px,
+ ((min-width: 992px) and (max-width: 1199px)) 299px,
+ ((min-width: 768px) and (max-width: 991px)) 247px,
+ ((min-width: 576px) and (max-width: 767px)) 767px,
+ (max-width: 575px) 575px"
+             
+             /></a><figcaption class="img-details
+            
+            "
+            style="max-width: 100%;"><div class="img-caption">Science & Nature</div></figcaption></figure></div></div><div id="column-b95bc039-702e-47a6-bd87-55f7a8687212"
+                 class="span3 column-3
+                 "><div id="component-4ae274e0-8d3c-11e9-bbe2-c736cefc9ede" class="component"><style type="text/css">
+#component-4ae274e0-8d3c-11e9-bbe2-c736cefc9ede .filer-image-container {
+    text-align: center;
+}
+
+#component-4ae274e0-8d3c-11e9-bbe2-c736cefc9ede .filer-image-container.img-text-align {
+    text-align: center;
+}
+
+#component-4ae274e0-8d3c-11e9-bbe2-c736cefc9ede .filer-image-container .filer-image {
+    max-width: 100%;
+}
+
+#component-4ae274e0-8d3c-11e9-bbe2-c736cefc9ede .filer-image-container .img-details {
+    text-align: center;
+    max-width: 100%;
+    margin: auto;
+}
+
+#component-4ae274e0-8d3c-11e9-bbe2-c736cefc9ede .filer-image-container .img-details.img-aligned-left {
+    margin: 0 auto 0 0;
+}
+
+#component-4ae274e0-8d3c-11e9-bbe2-c736cefc9ede .filer-image-container .img-details.img-aligned-right {
+    margin: 0 0 0 auto;
+}
+
+#component-4ae274e0-8d3c-11e9-bbe2-c736cefc9ede .filer-image-container.img-padding-top {
+    padding-top: px;
+}
+
+#component-4ae274e0-8d3c-11e9-bbe2-c736cefc9ede .filer-image-container.img-padding-bottom {
+    padding-bottom: px;
+}
+
+@media (min-width: 1024px) {
+    #component-4ae274e0-8d3c-11e9-bbe2-c736cefc9ede .filer-image-container.img-padding-left {
+        padding-left: px;
+    }
+
+    #component-4ae274e0-8d3c-11e9-bbe2-c736cefc9ede .filer-image-container.img-padding-right {
+        padding-right: px;
+    }
+}
+
+</style><figure
+    id="4ae274e0-8d3c-11e9-bbe2-c736cefc9ede"
+    class="filer-image-container
+        has-caption
+        
+        
+        
+        
+        
+        
+        img-text-align"><a href="https://www.pbs.org/video/#video-landing-history"
+       target="_self"><img class="filer-image"
+             style="max-width: 100%;"
+             alt=""
+             src="https://image.pbs.org/bento3-prod/retired-site-bento-live-pbs/genre%20images/0654d74556_history_mr-cup-fabien-barral-86074-unsplash.jpg"
+             
+             
+                
+                srcset="https://image.pbs.org/bento3-prod/retired-site-bento-live-pbs/genre%20images/0654d74556_history_mr-cup-fabien-barral-86074-unsplash.jpg?resize=480x 480w,
+https://image.pbs.org/bento3-prod/retired-site-bento-live-pbs/genre%20images/0654d74556_history_mr-cup-fabien-barral-86074-unsplash.jpg?resize=299x 299w,
+https://image.pbs.org/bento3-prod/retired-site-bento-live-pbs/genre%20images/0654d74556_history_mr-cup-fabien-barral-86074-unsplash.jpg?resize=247x 247w,
+https://image.pbs.org/bento3-prod/retired-site-bento-live-pbs/genre%20images/0654d74556_history_mr-cup-fabien-barral-86074-unsplash.jpg?resize=767x 767w,
+https://image.pbs.org/bento3-prod/retired-site-bento-live-pbs/genre%20images/0654d74556_history_mr-cup-fabien-barral-86074-unsplash.jpg?resize=575x 575w"
+                sizes="(min-width: 1200px) 480px,
+ ((min-width: 992px) and (max-width: 1199px)) 299px,
+ ((min-width: 768px) and (max-width: 991px)) 247px,
+ ((min-width: 576px) and (max-width: 767px)) 767px,
+ (max-width: 575px) 575px"
+             
+             /></a><figcaption class="img-details
+            
+            "
+            style="max-width: 100%;"><div class="img-caption">History</div></figcaption></figure></div><div id="component-d7e230b0-8d3c-11e9-bbe2-c736cefc9ede" class="component"><style type="text/css">
+#component-d7e230b0-8d3c-11e9-bbe2-c736cefc9ede .filer-image-container {
+    text-align: center;
+}
+
+#component-d7e230b0-8d3c-11e9-bbe2-c736cefc9ede .filer-image-container.img-text-align {
+    text-align: center;
+}
+
+#component-d7e230b0-8d3c-11e9-bbe2-c736cefc9ede .filer-image-container .filer-image {
+    max-width: 100%;
+}
+
+#component-d7e230b0-8d3c-11e9-bbe2-c736cefc9ede .filer-image-container .img-details {
+    text-align: center;
+    max-width: 100%;
+    margin: auto;
+}
+
+#component-d7e230b0-8d3c-11e9-bbe2-c736cefc9ede .filer-image-container .img-details.img-aligned-left {
+    margin: 0 auto 0 0;
+}
+
+#component-d7e230b0-8d3c-11e9-bbe2-c736cefc9ede .filer-image-container .img-details.img-aligned-right {
+    margin: 0 0 0 auto;
+}
+
+#component-d7e230b0-8d3c-11e9-bbe2-c736cefc9ede .filer-image-container.img-padding-top {
+    padding-top: px;
+}
+
+#component-d7e230b0-8d3c-11e9-bbe2-c736cefc9ede .filer-image-container.img-padding-bottom {
+    padding-bottom: px;
+}
+
+@media (min-width: 1024px) {
+    #component-d7e230b0-8d3c-11e9-bbe2-c736cefc9ede .filer-image-container.img-padding-left {
+        padding-left: px;
+    }
+
+    #component-d7e230b0-8d3c-11e9-bbe2-c736cefc9ede .filer-image-container.img-padding-right {
+        padding-right: px;
+    }
+}
+
+</style><figure
+    id="d7e230b0-8d3c-11e9-bbe2-c736cefc9ede"
+    class="filer-image-container
+        has-caption
+        
+        
+        
+        
+        
+        
+        img-text-align"><a href="https://www.pbs.org/video/#video-landing-local-videos"
+       target="_self"><img class="filer-image"
+             style="max-width: 100%;"
+             alt="Explore Local Videos"
+             src="https://image.pbs.org/bento3-prod/retired-site-bento-live-pbs/genre%20images/11e7c9b3de_local_rikki-chan-122582-unsplash.jpg"
+             
+             
+                
+                srcset="https://image.pbs.org/bento3-prod/retired-site-bento-live-pbs/genre%20images/11e7c9b3de_local_rikki-chan-122582-unsplash.jpg?resize=480x 480w,
+https://image.pbs.org/bento3-prod/retired-site-bento-live-pbs/genre%20images/11e7c9b3de_local_rikki-chan-122582-unsplash.jpg?resize=299x 299w,
+https://image.pbs.org/bento3-prod/retired-site-bento-live-pbs/genre%20images/11e7c9b3de_local_rikki-chan-122582-unsplash.jpg?resize=247x 247w,
+https://image.pbs.org/bento3-prod/retired-site-bento-live-pbs/genre%20images/11e7c9b3de_local_rikki-chan-122582-unsplash.jpg?resize=767x 767w,
+https://image.pbs.org/bento3-prod/retired-site-bento-live-pbs/genre%20images/11e7c9b3de_local_rikki-chan-122582-unsplash.jpg?resize=575x 575w"
+                sizes="(min-width: 1200px) 480px,
+ ((min-width: 992px) and (max-width: 1199px)) 299px,
+ ((min-width: 768px) and (max-width: 991px)) 247px,
+ ((min-width: 576px) and (max-width: 767px)) 767px,
+ (max-width: 575px) 575px"
+             
+             /></a><figcaption class="img-details
+            
+            "
+            style="max-width: 100%;"><div class="img-caption">Local Videos</div></figcaption></figure></div></div></div></div><div class="row-fluid"><style type="text/css">
+        
+
+#layout-66c5b7c3-fdd6-47cc-895c-648d22e985e5.container.layout-padding {
+    padding: 0px 0px 0px 0px;
+}
+
+@media (min-width: 1024px) {
+    #layout-66c5b7c3-fdd6-47cc-895c-648d22e985e5.container.layout-padding {
+        padding: 0px 0px 0px 0px;
+    }
+}
+
+#layout-66c5b7c3-fdd6-47cc-895c-648d22e985e5.container.has-background-image {
+    background-image: url();
+}
+
+
+@media (min-width: 1200px) {#layout-66c5b7c3-fdd6-47cc-895c-648d22e985e5.container.has-background-image {background-image: url(1920w);}}@media (min-width: 992px) and (max-width: 1199px) {#layout-66c5b7c3-fdd6-47cc-895c-648d22e985e5.container.has-background-image {background-image: url(1199w);}}@media (min-width: 768px) and (max-width: 991px) {#layout-66c5b7c3-fdd6-47cc-895c-648d22e985e5.container.has-background-image {background-image: url(991w);}}@media (min-width: 576px) and (max-width: 767px) {#layout-66c5b7c3-fdd6-47cc-895c-648d22e985e5.container.has-background-image {background-image: url(767w);}}@media (max-width: 575px) {#layout-66c5b7c3-fdd6-47cc-895c-648d22e985e5.container.has-background-image {background-image: url(575w);}}
+
+        </style><div id="layout-66c5b7c3-fdd6-47cc-895c-648d22e985e5"
+                class="container
+                
+                
+                
+                
+                
+                 layout-padding "
+                style=""><div id="column-97648180-920c-11e9-85a4-7bc5083402d0"
+                 class="span12 column-12
+                 "><div id="component-366a0b60-8c81-11e9-98bc-21c05c00abc2" class="component"><style type="text/css">
+#component-366a0b60-8c81-11e9-98bc-21c05c00abc2 .section-header-component.filled .text-input {
+    background-color: #0a538b;
+    color: #eff9fd;
+    border-color: transparent;
+}
+
+#component-366a0b60-8c81-11e9-98bc-21c05c00abc2 .section-header-component.underline .text-input {
+    background-color: inherit;
+    color: #0a538b;
+    border-bottom-color: #0a538b;
+}
+
+</style><div id="366a0b60-8c81-11e9-98bc-21c05c00abc2" class="section-header-component filled"><div class="section-header-value h2_tag"><div class="text-input" style=" ">
+            Explore More from PBS
+        </div></div></div></div></div></div></div><div class="row-fluid"><style type="text/css">
+        
+
+#layout-becbc26b-d928-4392-8267-6f155109d4d5.container.layout-padding {
+    padding: 0px 0px 0px 0px;
+}
+
+@media (min-width: 1024px) {
+    #layout-becbc26b-d928-4392-8267-6f155109d4d5.container.layout-padding {
+        padding: 0px 0px 0px 0px;
+    }
+}
+
+#layout-becbc26b-d928-4392-8267-6f155109d4d5.container.has-background-image {
+    background-image: url();
+}
+
+
+@media (min-width: 1200px) {#layout-becbc26b-d928-4392-8267-6f155109d4d5.container.has-background-image {background-image: url(1920w);}}@media (min-width: 992px) and (max-width: 1199px) {#layout-becbc26b-d928-4392-8267-6f155109d4d5.container.has-background-image {background-image: url(1199w);}}@media (min-width: 768px) and (max-width: 991px) {#layout-becbc26b-d928-4392-8267-6f155109d4d5.container.has-background-image {background-image: url(991w);}}@media (min-width: 576px) and (max-width: 767px) {#layout-becbc26b-d928-4392-8267-6f155109d4d5.container.has-background-image {background-image: url(767w);}}@media (max-width: 575px) {#layout-becbc26b-d928-4392-8267-6f155109d4d5.container.has-background-image {background-image: url(575w);}}
+
+        </style><div id="layout-becbc26b-d928-4392-8267-6f155109d4d5"
+                class="container
+                
+                
+                
+                
+                
+                 layout-padding "
+                style=""><div id="column-428e6010-4ea8-11e9-9bf0-8538fd593041"
+                 class="span6 column-6
+                 "><div id="component-ebc5a620-87b5-11e9-a10c-db56dfa58798" class="component"><div id="ebc5a620-87b5-11e9-a10c-db56dfa58798" class="promo-container clearfix horizontal"><style type="text/css">
+    #component-ebc5a620-87b5-11e9-a10c-db56dfa58798 article.promo {
+    background-color: #eff9fd;
+}
+
+#component-ebc5a620-87b5-11e9-a10c-db56dfa58798 article .read-more a,
+#component-ebc5a620-87b5-11e9-a10c-db56dfa58798 article .read-more a * {
+    color: #126eb5;
+}
+
+#component-ebc5a620-87b5-11e9-a10c-db56dfa58798 article .read-more a:hover,
+#component-ebc5a620-87b5-11e9-a10c-db56dfa58798 article .read-more a:focus,
+#component-ebc5a620-87b5-11e9-a10c-db56dfa58798 article .read-more a:active,
+#component-ebc5a620-87b5-11e9-a10c-db56dfa58798 article .read-more a:hover *,
+#component-ebc5a620-87b5-11e9-a10c-db56dfa58798 article .read-more a:focus *,
+#component-ebc5a620-87b5-11e9-a10c-db56dfa58798 article .read-more a:active * {
+    background-color: #0a538b;
+    border-color: #0a538b;
+    color: #eff9fd;
+}
+
+
+    </style><article class="clearfix promo span12"><div class="promo-link span6"><img src="https://image.pbs.org/bento3-prod/retired-site-bento-live-pbs/b36487e10c_Illustrations_Community_1600x900_clean.png"
+                         
+                         
+                            
+                            srcset="https://image.pbs.org/bento3-prod/retired-site-bento-live-pbs/b36487e10c_Illustrations_Community_1600x900_clean.png?resize=960x 960w,
+https://image.pbs.org/bento3-prod/retired-site-bento-live-pbs/b36487e10c_Illustrations_Community_1600x900_clean.png?resize=599x 599w,
+https://image.pbs.org/bento3-prod/retired-site-bento-live-pbs/b36487e10c_Illustrations_Community_1600x900_clean.png?resize=495x 495w,
+https://image.pbs.org/bento3-prod/retired-site-bento-live-pbs/b36487e10c_Illustrations_Community_1600x900_clean.png?resize=767x 767w,
+https://image.pbs.org/bento3-prod/retired-site-bento-live-pbs/b36487e10c_Illustrations_Community_1600x900_clean.png?resize=575x 575w"
+                            sizes="(min-width: 1200px) 960px,
+ ((min-width: 992px) and (max-width: 1199px)) 599px,
+ ((min-width: 768px) and (max-width: 991px)) 495px,
+ ((min-width: 576px) and (max-width: 767px)) 767px,
+ (max-width: 575px) 575px"
+                         
+                         alt="Discover the Impact of PBS"
+                         /></div><div class="promo-text span6"/><h3 class="title">
+                    
+                       Discover the Impact of PBS
+                    
+                </h3><p class="description">We educate America on topics that matter. </p><div class="read-more read-more--has-link"><a class="read-more__link" href="https://www.pbs.org/value/home/" target="_self">
+                    
+                            Learn More
+                    
+                        </a></div></div></article></div></div></div><div id="column-373297ac-83bc-47c6-bb59-bf7f2dc15cad"
+                 class="span6 column-6
+                 "><div id="component-f8465fb0-87b6-11e9-a10c-db56dfa58798" class="component"><div id="f8465fb0-87b6-11e9-a10c-db56dfa58798" class="promo-container clearfix horizontal"><style type="text/css">
+    #component-f8465fb0-87b6-11e9-a10c-db56dfa58798 article.promo {
+    background-color: #eff9fd;
+}
+
+#component-f8465fb0-87b6-11e9-a10c-db56dfa58798 article .read-more a,
+#component-f8465fb0-87b6-11e9-a10c-db56dfa58798 article .read-more a * {
+    color: #126eb5;
+}
+
+#component-f8465fb0-87b6-11e9-a10c-db56dfa58798 article .read-more a:hover,
+#component-f8465fb0-87b6-11e9-a10c-db56dfa58798 article .read-more a:focus,
+#component-f8465fb0-87b6-11e9-a10c-db56dfa58798 article .read-more a:active,
+#component-f8465fb0-87b6-11e9-a10c-db56dfa58798 article .read-more a:hover *,
+#component-f8465fb0-87b6-11e9-a10c-db56dfa58798 article .read-more a:focus *,
+#component-f8465fb0-87b6-11e9-a10c-db56dfa58798 article .read-more a:active * {
+    background-color: #0a538b;
+    border-color: #0a538b;
+    color: #eff9fd;
+}
+
+
+    </style><article class="clearfix promo span12"><div class="promo-link span6"><img src="https://image.pbs.org/bento3-prod/retired-site-bento-live-pbs/51ef1ed658_video_app_16x9.jpg"
+                         
+                         
+                            
+                            srcset="https://image.pbs.org/bento3-prod/retired-site-bento-live-pbs/51ef1ed658_video_app_16x9.jpg?resize=960x 960w,
+https://image.pbs.org/bento3-prod/retired-site-bento-live-pbs/51ef1ed658_video_app_16x9.jpg?resize=599x 599w,
+https://image.pbs.org/bento3-prod/retired-site-bento-live-pbs/51ef1ed658_video_app_16x9.jpg?resize=495x 495w,
+https://image.pbs.org/bento3-prod/retired-site-bento-live-pbs/51ef1ed658_video_app_16x9.jpg?resize=767x 767w,
+https://image.pbs.org/bento3-prod/retired-site-bento-live-pbs/51ef1ed658_video_app_16x9.jpg?resize=575x 575w"
+                            sizes="(min-width: 1200px) 960px,
+ ((min-width: 992px) and (max-width: 1199px)) 599px,
+ ((min-width: 768px) and (max-width: 991px)) 495px,
+ ((min-width: 576px) and (max-width: 767px)) 767px,
+ (max-width: 575px) 575px"
+                         
+                         alt="Explore PBS Videos"
+                         /></div><div class="promo-text span6"/><h3 class="title">
+                    
+                       Explore PBS Videos
+                    
+                </h3><p class="description">Watch local and national programs from anywhere at anytime. </p><div class="read-more read-more--has-link"><a class="read-more__link" href="https://www.pbs.org/video/" target="_self">
+                    
+                            Explore Videos
+                    
+                        </a></div></div></article></div></div></div></div></div><div class="row-fluid"><style type="text/css">
+        
+
+#layout-95c8f874-a3d1-467d-8d26-b0d92cc87ba2.container.layout-padding {
+    padding: 0px 0px 0px 0px;
+}
+
+@media (min-width: 1024px) {
+    #layout-95c8f874-a3d1-467d-8d26-b0d92cc87ba2.container.layout-padding {
+        padding: 0px 0px 0px 0px;
+    }
+}
+
+#layout-95c8f874-a3d1-467d-8d26-b0d92cc87ba2.container.has-background-image {
+    background-image: url();
+}
+
+
+@media (min-width: 1200px) {#layout-95c8f874-a3d1-467d-8d26-b0d92cc87ba2.container.has-background-image {background-image: url(1920w);}}@media (min-width: 992px) and (max-width: 1199px) {#layout-95c8f874-a3d1-467d-8d26-b0d92cc87ba2.container.has-background-image {background-image: url(1199w);}}@media (min-width: 768px) and (max-width: 991px) {#layout-95c8f874-a3d1-467d-8d26-b0d92cc87ba2.container.has-background-image {background-image: url(991w);}}@media (min-width: 576px) and (max-width: 767px) {#layout-95c8f874-a3d1-467d-8d26-b0d92cc87ba2.container.has-background-image {background-image: url(767w);}}@media (max-width: 575px) {#layout-95c8f874-a3d1-467d-8d26-b0d92cc87ba2.container.has-background-image {background-image: url(575w);}}
+
+        </style><div id="layout-95c8f874-a3d1-467d-8d26-b0d92cc87ba2"
+                class="container
+                
+                
+                
+                
+                
+                 layout-padding "
+                style=""><div id="column-2f9ee9f0-8c8a-11e9-98bc-21c05c00abc2"
+                 class="span6 column-6
+                 "><div id="component-1e3cb250-87b7-11e9-a10c-db56dfa58798" class="component"><div id="1e3cb250-87b7-11e9-a10c-db56dfa58798" class="promo-container clearfix horizontal"><style type="text/css">
+    #component-1e3cb250-87b7-11e9-a10c-db56dfa58798 article.promo {
+    background-color: #eff9fd;
+}
+
+#component-1e3cb250-87b7-11e9-a10c-db56dfa58798 article .read-more a,
+#component-1e3cb250-87b7-11e9-a10c-db56dfa58798 article .read-more a * {
+    color: #126eb5;
+}
+
+#component-1e3cb250-87b7-11e9-a10c-db56dfa58798 article .read-more a:hover,
+#component-1e3cb250-87b7-11e9-a10c-db56dfa58798 article .read-more a:focus,
+#component-1e3cb250-87b7-11e9-a10c-db56dfa58798 article .read-more a:active,
+#component-1e3cb250-87b7-11e9-a10c-db56dfa58798 article .read-more a:hover *,
+#component-1e3cb250-87b7-11e9-a10c-db56dfa58798 article .read-more a:focus *,
+#component-1e3cb250-87b7-11e9-a10c-db56dfa58798 article .read-more a:active * {
+    background-color: #0a538b;
+    border-color: #0a538b;
+    color: #eff9fd;
+}
+
+
+    </style><article class="clearfix promo span12"><div class="promo-link span6"><img src="https://image.pbs.org/bento3-prod/retired-site-bento-live-pbs/a807c0bba8_pbs-parents_logo.png"
+                         
+                         
+                            
+                            srcset="https://image.pbs.org/bento3-prod/retired-site-bento-live-pbs/a807c0bba8_pbs-parents_logo.png?resize=776x 960w,
+https://image.pbs.org/bento3-prod/retired-site-bento-live-pbs/a807c0bba8_pbs-parents_logo.png?resize=599x 599w,
+https://image.pbs.org/bento3-prod/retired-site-bento-live-pbs/a807c0bba8_pbs-parents_logo.png?resize=495x 495w,
+https://image.pbs.org/bento3-prod/retired-site-bento-live-pbs/a807c0bba8_pbs-parents_logo.png?resize=767x 767w,
+https://image.pbs.org/bento3-prod/retired-site-bento-live-pbs/a807c0bba8_pbs-parents_logo.png?resize=575x 575w"
+                            sizes="(min-width: 1200px) 960px,
+ ((min-width: 992px) and (max-width: 1199px)) 599px,
+ ((min-width: 768px) and (max-width: 991px)) 495px,
+ ((min-width: 576px) and (max-width: 767px)) 767px,
+ (max-width: 575px) 575px"
+                         
+                         alt="PBS KIDS for Parents"
+                         /></div><div class="promo-text span6"/><h3 class="title">
+                    
+                       PBS KIDS for Parents
+                    
+                </h3><p class="description">Parenting tips on raising children, planning birthdays & more. </p><div class="read-more read-more--has-link"><a class="read-more__link" href="http://www.pbs.org/parents/" target="_self">
+                    
+                            Learn More
+                    
+                        </a></div></div></article></div></div></div><div id="column-717cc5f7-3c42-403b-91c5-919bc2d40b1d"
+                 class="span6 column-6
+                 "><div id="component-19615fa0-8894-11e9-a537-a78e1ae3840c" class="component"><div id="19615fa0-8894-11e9-a537-a78e1ae3840c" class="promo-container clearfix horizontal"><style type="text/css">
+    #component-19615fa0-8894-11e9-a537-a78e1ae3840c article.promo {
+    background-color: #eff9fd;
+}
+
+#component-19615fa0-8894-11e9-a537-a78e1ae3840c article .read-more a,
+#component-19615fa0-8894-11e9-a537-a78e1ae3840c article .read-more a * {
+    color: #126eb5;
+}
+
+#component-19615fa0-8894-11e9-a537-a78e1ae3840c article .read-more a:hover,
+#component-19615fa0-8894-11e9-a537-a78e1ae3840c article .read-more a:focus,
+#component-19615fa0-8894-11e9-a537-a78e1ae3840c article .read-more a:active,
+#component-19615fa0-8894-11e9-a537-a78e1ae3840c article .read-more a:hover *,
+#component-19615fa0-8894-11e9-a537-a78e1ae3840c article .read-more a:focus *,
+#component-19615fa0-8894-11e9-a537-a78e1ae3840c article .read-more a:active * {
+    background-color: #0a538b;
+    border-color: #0a538b;
+    color: #eff9fd;
+}
+
+
+    </style><article class="clearfix promo span12"><div class="promo-link span6"><img src="https://image.pbs.org/bento3-prod/retired-site-bento-live-pbs/1e43e48368_teacher.jpg"
+                         
+                         
+                            
+                            srcset="https://image.pbs.org/bento3-prod/retired-site-bento-live-pbs/1e43e48368_teacher.jpg?resize=960x 960w,
+https://image.pbs.org/bento3-prod/retired-site-bento-live-pbs/1e43e48368_teacher.jpg?resize=599x 599w,
+https://image.pbs.org/bento3-prod/retired-site-bento-live-pbs/1e43e48368_teacher.jpg?resize=495x 495w,
+https://image.pbs.org/bento3-prod/retired-site-bento-live-pbs/1e43e48368_teacher.jpg?resize=767x 767w,
+https://image.pbs.org/bento3-prod/retired-site-bento-live-pbs/1e43e48368_teacher.jpg?resize=575x 575w"
+                            sizes="(min-width: 1200px) 960px,
+ ((min-width: 992px) and (max-width: 1199px)) 599px,
+ ((min-width: 768px) and (max-width: 991px)) 495px,
+ ((min-width: 576px) and (max-width: 767px)) 767px,
+ (max-width: 575px) 575px"
+                         
+                         alt="PBS LearningMedia"
+                         /></div><div class="promo-text span6"/><h3 class="title">
+                    
+                       PBS LearningMedia
+                    
+                </h3><p class="description">Explore our free digital resources spanning pre-K - 12th grade. </p><div class="read-more read-more--has-link"><a class="read-more__link" href="https://www.pbslearningmedia.org/" target="_self">
+                    
+                            Learn More
+                    
+                        </a></div></div></article></div></div></div></div></div><div class="row-fluid"><style type="text/css">
+        
+
+#layout-6a4d2590-63b9-4a13-ac8d-b4e13ceebdb9.container.layout-padding {
+    padding: 0px 0px 0px 0px;
+}
+
+@media (min-width: 1024px) {
+    #layout-6a4d2590-63b9-4a13-ac8d-b4e13ceebdb9.container.layout-padding {
+        padding: 0px 0px 0px 0px;
+    }
+}
+
+#layout-6a4d2590-63b9-4a13-ac8d-b4e13ceebdb9.container.has-background-image {
+    background-image: url();
+}
+
+
+@media (min-width: 1200px) {#layout-6a4d2590-63b9-4a13-ac8d-b4e13ceebdb9.container.has-background-image {background-image: url(1920w);}}@media (min-width: 992px) and (max-width: 1199px) {#layout-6a4d2590-63b9-4a13-ac8d-b4e13ceebdb9.container.has-background-image {background-image: url(1199w);}}@media (min-width: 768px) and (max-width: 991px) {#layout-6a4d2590-63b9-4a13-ac8d-b4e13ceebdb9.container.has-background-image {background-image: url(991w);}}@media (min-width: 576px) and (max-width: 767px) {#layout-6a4d2590-63b9-4a13-ac8d-b4e13ceebdb9.container.has-background-image {background-image: url(767w);}}@media (max-width: 575px) {#layout-6a4d2590-63b9-4a13-ac8d-b4e13ceebdb9.container.has-background-image {background-image: url(575w);}}
+
+        </style><div id="layout-6a4d2590-63b9-4a13-ac8d-b4e13ceebdb9"
+                class="container
+                
+                
+                
+                
+                
+                 layout-padding "
+                style=""><div id="column-f4631880-8d3c-11e9-bbe2-c736cefc9ede"
+                 class="span12 column-12
+                 "><div id="component-f78c9310-8d3c-11e9-bbe2-c736cefc9ede" class="component"><div class="row-fluid"><style type="text/css">
+        
+
+#layout-f554f228-3370-48b4-9c21-3d21d141182b.container.layout-padding {
+    padding: 0px 0px 0px 0px;
+}
+
+@media (min-width: 1024px) {
+    #layout-f554f228-3370-48b4-9c21-3d21d141182b.container.layout-padding {
+        padding: 0px 0px 0px 0px;
+    }
+}
+
+#layout-f554f228-3370-48b4-9c21-3d21d141182b.container.has-background-image {
+    background-image: url();
+}
+
+
+@media (min-width: 1200px) {#layout-f554f228-3370-48b4-9c21-3d21d141182b.container.has-background-image {background-image: url(1920w);}}@media (min-width: 992px) and (max-width: 1199px) {#layout-f554f228-3370-48b4-9c21-3d21d141182b.container.has-background-image {background-image: url(1199w);}}@media (min-width: 768px) and (max-width: 991px) {#layout-f554f228-3370-48b4-9c21-3d21d141182b.container.has-background-image {background-image: url(991w);}}@media (min-width: 576px) and (max-width: 767px) {#layout-f554f228-3370-48b4-9c21-3d21d141182b.container.has-background-image {background-image: url(767w);}}@media (max-width: 575px) {#layout-f554f228-3370-48b4-9c21-3d21d141182b.container.has-background-image {background-image: url(575w);}}
+
+        </style><div id="layout-f554f228-3370-48b4-9c21-3d21d141182b"
+                class="container
+                
+                
+                
+                
+                
+                 layout-padding "
+                style=""><div id="column-d0072b90-6c38-11e9-8de7-d57db060e223"
+                 class="span12 column-12
+                 "><div id="component-d9a81330-6c38-11e9-8de7-d57db060e223" class="component"><div id="app-display"><section class="app-lockup"><div class="logo-container"><svg viewBox="0 0 234 130" xmlns="http://www.w3.org/2000/svg" class="pbs-logo-app" aria-labelledby="pbs-logo__title"><title id="pbs-logo__title">PBS</title><g fill="none" fill-rule="evenodd"><g transform="translate(148 46)"><mask id="b" fill="#fff"><path id="a" d="M85.708 37.298V.702H.003v36.596h85.705z"></path></mask></g><path d="M130 65c0 35.899-29.101 65-65 65S0 100.899 0 65 29.101 0 65 0s65 29.101 65 65" fill="#000"></path><path d="M65.347 59.734a6.443 6.443 0 1 1-.001-12.886 6.443 6.443 0 0 1 .001 12.886zm5.154-30.586H50.816c-16.15 0-28.983 10.807-28.983 27.531 0 14.064 9.555 23.635 21.555 25.553v18.916h27v-16h2.054c4.258 0 7.946-5.392 7.946-9.346V65.148h6.416l-16.303-36z" fill="#fff"></path><path d="M92.53 29.148H81.901l16.152 36h-6.666v9.52c0 5.908-4 8.43-10 8.326v18.154h10v-16H94.2c3.06 0 6.188-4.556 6.188-9.382V65.148h8.23l-16.089-36z" fill="#fff"></path></g></svg></div><h2 class="main-header"><span class="font-rules text-rules animate fadeInLeft one">PBS</span><span class="font-rules text-rules animate fadeInLeft two">Video</span><span class="font-rules text-rules animate fadeInLeft three">App</span></h2></section class="tagline-lockup"><section><div class="tagline text-rules"><p>Stream the best of PBS. <br>Anytime, anywhere.</p></div><div class="device-images"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42.24 30.97"><title>television</title><g id="TV" class="cls-1"><path d="M41.36,0H.88A.87.87,0,0,0,0,.88V24.6a.88.88,0,0,0,.88.88h17.6v1.75l-7.7,2a.88.88,0,0,0,.44,1.7h0l9.9-2.58L31,30.94a.88.88,0,1,0,.44-1.7h0l-7.7-2V25.48h17.6a.88.88,0,0,0,.88-.88V.88A.87.87,0,0,0,41.36,0ZM22,26.35H20.24v-.87H22Zm18.41-2.67H1.83V1.82H40.41Z"/></g></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33.12 21.84"><title>laptop</title><g id="Laptop" class="cls-1"><path d="M33.12,19.49v.89a1.42,1.42,0,0,1-1.38,1.46H1.38A1.42,1.42,0,0,1,0,20.38v-.89a.22.22,0,0,1,.22-.22h14a1.38,1.38,0,0,0,1.07.53h2.56a1.38,1.38,0,0,0,1.07-.53h14A.22.22,0,0,1,33.12,19.49Zm-32-1.3V.69A.67.67,0,0,1,1.78,0H31.34A.67.67,0,0,1,32,.69v17.5a.67.67,0,0,1-.64.69H30.7a.78.78,0,0,0-.53-.2H28.89a.82.82,0,0,0-.54.2H4.81a.78.78,0,0,0-.53-.2H3a.78.78,0,0,0-.53.2H1.78A.67.67,0,0,1,1.14,18.19ZM2.71,16a.67.67,0,0,0,.64.69H29.77a.67.67,0,0,0,.64-.69V2.38a.67.67,0,0,0-.64-.69H3.35a.67.67,0,0,0-.64.69Z"/></g></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28.08 18.96"><title>tablet</title><g id="Tablet" class="cls-1"><path d="M0,16.51A2.44,2.44,0,0,0,2.44,19h23.2a2.44,2.44,0,0,0,2.44-2.45V2.45A2.44,2.44,0,0,0,25.64,0H2.44A2.44,2.44,0,0,0,0,2.45Zm2.44,1.23V1.22h22V17.74ZM25.33,9.48a.92.92,0,1,1,.92.92A.92.92,0,0,1,25.33,9.48Z"/></g></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31.68 16.08"><title>phone</title><g id="iPhone" class="cls-1"><path d="M0,2.86V13.22a2.87,2.87,0,0,0,2.88,2.86H28.8a2.87,2.87,0,0,0,2.88-2.86V2.86A2.87,2.87,0,0,0,28.8,0H2.88A2.87,2.87,0,0,0,0,2.86ZM28.38,1.19A1.63,1.63,0,0,1,30,2.82V13a1.63,1.63,0,0,1-1.63,1.63H3.06A1.63,1.63,0,0,1,1.43,13v-1.3h.49a1.35,1.35,0,0,0,1.35-1.35V5.44A1.34,1.34,0,0,0,1.92,4.09H1.43V2.82A1.63,1.63,0,0,1,3.06,1.19Z"/></g></svg></div></section><a class="apbtn text-rules btn--fill--blue-brand" href="https://www.pbs.org/app">
+    Download the Free App
+	</a></div></div><div id="component-74017070-6d0b-11e9-8eff-17852577e9fd" class="component"><style>
+:root {
+  --app-icon-size: 100px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/*--Main container--*/
+#app-display {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  background-color: white;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  max-width:800px;
+  margin:auto;
+}
+
+#app-display > * {
+  margin: calc(var(--app-icon-size) * 0.1);
+}
+
+.app-lockup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.app-lockup .logo-container {
+  width: var(--app-icon-size);
+  height: var(--app-icon-size);
+  background: #00a9ee;
+  border-radius: 0.6em;
+  display: block;
+  overflow: hidden;
+  display: block;
+  position: relative;
+}
+
+.app-lockup .pbs-logo-app {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 79%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: calc(var(--app-icon-size) * 1.3);
+  height: calc(var(--app-icon-size) * 1.3);
+}
+
+.text-rules {
+  color: black;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.app-lockup .main-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  margin: 0 0 0 calc(var(--app-icon-size) * 0.1);
+  padding: 0;
+  justify-self: flex-start;
+}
+
+.app-lockup .main-header .font-rules {
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: calc(var(--app-icon-size) * 0.35);
+  line-height: calc(var(--app-icon-size) * 0.3);
+}
+
+.tagline-lockup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.tagline p {
+  font-weight: 400;
+  font-size: calc(var(--app-icon-size) * 0.2);
+  margin: 0 0 calc(var(--app-icon-size) * 0.1);
+  padding: 0;
+  line-height: calc(var(--app-icon-size) * 0.19);
+}
+
+.device-images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  justify-items: center;
+  -webkit-box-pack:justify;
+      -ms-flex-pack:justify;
+          justify-content:space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.device-images svg {
+  width: calc(var(--app-icon-size) / 2);
+  max-width:21%;
+  -webkit-box-flex:1;
+      -ms-flex:1 1 auto;
+          flex:1 1 auto;
+  -webkit-box-sizing:border-box;
+          box-sizing:border-box;
+}
+
+.device-images .cls-1 {
+  fill: #00a9ee;
+}
+
+/*--Button Styles--*/
+
+a.apbtn {
+  display: inline-block;
+  margin: 10px 10px 10px 0;
+  padding: 16px 32px;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  background: transparent;
+  border: 1px solid #126eb5;
+  border-radius: 2px;
+  font-weight: 600;
+  -webkit-font-smoothing: antialiased;
+  font-size: calc(var(--app-icon-size) * 0.15);
+  line-height: 1;
+  text-align: center;
+  text-shadow: none;
+  text-decoration: none;
+  -webkit-transition: background-color 0.3s ease-in, border-color 0.3s ease-in,
+    color 0.3s ease-in, -webkit-transform 0.3s ease-in;
+  transition: background-color 0.3s ease-in, border-color 0.3s ease-in,
+    color 0.3s ease-in, -webkit-transform 0.3s ease-in;
+  -o-transition: background-color 0.3s ease-in, border-color 0.3s ease-in,
+    color 0.3s ease-in, transform 0.3s ease-in;
+  transition: background-color 0.3s ease-in, border-color 0.3s ease-in,
+    color 0.3s ease-in, transform 0.3s ease-in;
+  transition: background-color 0.3s ease-in, border-color 0.3s ease-in,
+    color 0.3s ease-in, transform 0.3s ease-in, -webkit-transform 0.3s ease-in;
+  color: #126eb5;
+  border-color: #126eb5;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.btn--fill--blue-brand:hover,
+.btn--fill--blue-brand:focus {
+  border-color: #007aaa;
+  background: #007aaa;
+  color: #ffffff;
+}
+
+.apbtn:active {
+  background: #0e5891;
+  border-color: #0e5891;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -webkit-transform: scale(0.95, 0.95);
+  -ms-transform: scale(0.95, 0.95);
+  transform: scale(0.95, 0.95);
+  color: #ffffff;
+}
+
+.apbtn:hover,
+.apbtn:focus,
+.apbtn:active {
+  text-decoration: none;
+}
+
+.btn--fill--blue-brand {
+  background: #0099d4;
+  color: #ffffff;
+  border-color: #0099d4;
+}
+
+/*=== animation rules  ===*/
+.animate {
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  display: block;
+}
+
+.one {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.two {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.three {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+          animation-name: fadeIn;
+}
+
+@-webkit-keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -20%, 0);
+            transform: translate3d(0, -20%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -20%, 0);
+            transform: translate3d(0, -20%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+          animation-name: fadeInDown;
+}
+
+@-webkit-keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-10%, 0, 0);
+            transform: translate3d(-10%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-10%, 0, 0);
+            transform: translate3d(-10%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+.fadeInLeft {
+  -webkit-animation-name: fadeInLeft;
+          animation-name: fadeInLeft;
+}
+</style></div></div></div></div></div></div></div></div><div class="row-fluid"><style type="text/css">
+        
+
+#layout-8bb3df35-6880-48f1-a964-0f567f99c430.container.layout-padding {
+    padding: 0px 0px 0px 0px;
+}
+
+@media (min-width: 1024px) {
+    #layout-8bb3df35-6880-48f1-a964-0f567f99c430.container.layout-padding {
+        padding: 0px 0px 0px 0px;
+    }
+}
+
+#layout-8bb3df35-6880-48f1-a964-0f567f99c430.container.has-background-image {
+    background-image: url();
+}
+
+
+@media (min-width: 1200px) {#layout-8bb3df35-6880-48f1-a964-0f567f99c430.container.has-background-image {background-image: url(1920w);}}@media (min-width: 992px) and (max-width: 1199px) {#layout-8bb3df35-6880-48f1-a964-0f567f99c430.container.has-background-image {background-image: url(1199w);}}@media (min-width: 768px) and (max-width: 991px) {#layout-8bb3df35-6880-48f1-a964-0f567f99c430.container.has-background-image {background-image: url(991w);}}@media (min-width: 576px) and (max-width: 767px) {#layout-8bb3df35-6880-48f1-a964-0f567f99c430.container.has-background-image {background-image: url(767w);}}@media (max-width: 575px) {#layout-8bb3df35-6880-48f1-a964-0f567f99c430.container.has-background-image {background-image: url(575w);}}
+
+        </style><div id="layout-8bb3df35-6880-48f1-a964-0f567f99c430"
+                class="container
+                
+                
+                
+                
+                
+                 layout-padding "
+                style=""><div id="column-e0c79e40-8d41-11e9-bbe2-c736cefc9ede"
+                 class="span12 column-12
+                 "><div id="component-e1d0a9d0-8d41-11e9-bbe2-c736cefc9ede" class="component"><style>
+.filer-image-container .img-details {
+    background: none;
+    border-top: none;
+    color: black;
+</style></div></div></div></div></div>
+            
+
+
+            
+            
+            
+
+        
+            </div>
+          </div>
+        </main>
+        
+
+        <footer><div class="row-fluid"><style type="text/css">
+        
+
+#layout-ca48c970-1041-4cec-9636-1538c849ee04.container.layout-padding {
+    padding: px 0px px 0px;
+}
+
+@media (min-width: 1024px) {
+    #layout-ca48c970-1041-4cec-9636-1538c849ee04.container.layout-padding {
+        padding: px px px px;
+    }
+}
+
+#layout-ca48c970-1041-4cec-9636-1538c849ee04.container.has-background-image {
+    background-image: url();
+}
+
+
+@media (min-width: 1200px) {#layout-ca48c970-1041-4cec-9636-1538c849ee04.container.has-background-image {background-image: url(1920w);}}@media (min-width: 992px) and (max-width: 1199px) {#layout-ca48c970-1041-4cec-9636-1538c849ee04.container.has-background-image {background-image: url(1199w);}}@media (min-width: 768px) and (max-width: 991px) {#layout-ca48c970-1041-4cec-9636-1538c849ee04.container.has-background-image {background-image: url(991w);}}@media (min-width: 576px) and (max-width: 767px) {#layout-ca48c970-1041-4cec-9636-1538c849ee04.container.has-background-image {background-image: url(767w);}}@media (max-width: 575px) {#layout-ca48c970-1041-4cec-9636-1538c849ee04.container.has-background-image {background-image: url(575w);}}
+
+        </style><div id="layout-ca48c970-1041-4cec-9636-1538c849ee04"
+                class="container
+                
+                
+                
+                
+                
+                "
+                style=""><div id="column-0"
+                 class="span12 column-12
+                 "><div id="component-acc027f0-87b7-11e9-a10c-db56dfa58798" class="component"><div class="row-fluid" id="flexi-links"><div class="span12"><ul class="nav main"><li><a href="https://www.pbs.org/about/" class="max12">About</a></li><li><a href="https://www.pbs.org/cgi-registry/sitemembershiplink.cgir" class="max12">Donate</a></li><li><a href="https://www.pbs.org/foundation" class="max12">PBS Foundation</a></li><li><a href="https://www.pbs.org/cgi-registry/whatson/index.cgir" class="max12">TV Schedules</a></li><li><a href="https://www.pbs.org/about/careers/" class="max12">Careers</a></li><li><a href="https://www.pbs.org/about/policies/privacy-policy/" class="max12">Privacy Policy</a></li><li><a href="https://www.pbs.org/about/policies/terms-of-use/" class="max12">Terms of Use</a></li><li><a href="https://shop.pbs.org/" class="max12">Shop</a></li><li><a href="https://www.pbs.org/sponsorship/" class="max12">Sponsorship</a></li></ul></div></div><div class="row-fluid" id="flexi-copyright"><div class="span12"><ul class="nav secondary clearfix"><li class="after"><small>&copy; 2019 Public Broadcasting Service (PBS). </small></li><li class="extra"><small>All rights reserved. PBS is a 501(c)(3) not-for-profit organization.</small></li></ul></div></div></div><div id="component-f7b24090-87b7-11e9-a10c-db56dfa58798" class="component"><script>
+//Delete link that has favicon in the href
+for (var headLinksIndex =document.getElementsByTagName('head')[0].getElementsByTagName('link').length-1; headLinksIndex > 0; headLinksIndex-- ) {
+        if (document.getElementsByTagName('head')[0].getElementsByTagName('link')[headLinksIndex].getAttribute('href').includes("favicon") ) {
+            document.getElementsByTagName('head')[0].getElementsByTagName('link')[headLinksIndex].remove();
+        }
+    }
+   //Create favIcon
+   var favIcon = document.createElement('link'); favIcon.href = "https://www.pbs.org/static/images/favicons/favicon-32x32.9ff598fc92f1.png"; favIcon.type = "image/png"; favIcon.rel = "icon"; 
+  //Insert favIcon at the end of the Head tag
+  document.getElementsByTagName('head')[0].appendChild(favIcon);
+</script></div></div></div></div></footer>
+
+        
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+        <script src="https://d1qbemlbhjecig.cloudfront.net/prod/filer_public/_bento_media/js/pbs-bootstrap.min.js"></script>
+        <script src="https://d1qbemlbhjecig.cloudfront.net/prod/filer_public/_bento_media/js/pbs-player-responsive.js"></script>
+        <script src="https://d1qbemlbhjecig.cloudfront.net/prod/filer_public/_bento_media/js/libs/modernizr.js"></script>
+        <script type="text/javascript">
+         PBS = window.PBS || {};
+         PBS.BentoConfig = PBS.BentoConfig || {};
+         PBS.BentoConfig.baseURL = 'https://www.pbs.org/retired-site/';
+         PBS.BentoConfig.APIBaseURL = 'https://www.pbs.org/retired-site/';
+        </script>
+
+        <script type="text/javascript" src="https://d1qbemlbhjecig.cloudfront.net/prod/3.35.0/staticfiles/dist/frontend/css/frontend_style.js"></script>
+        <script type="text/javascript" src="https://d1qbemlbhjecig.cloudfront.net/prod/3.35.0/staticfiles/dist/frontend/js/frontend_js.js"></script>
+
+        
+    <script type="text/javascript">
+    PBS_CHROME_CONFIG = window.PBS_CHROME_CONFIG || {};
+    PBS_CHROME_CONFIG.widgets = PBS_CHROME_CONFIG.widgets || {};
+    PBS_CHROME_CONFIG.widgets.header = {'placeholder': '#jaws-header-c13bfdd0-87b7-11e9-a10c-db56dfa58798'};
+    PBS_CHROME_CONFIG.api_key = '99aa699e-3de0-4a5f-9cae-a3d7f228819c';
+    </script>
+    
+
+    <script type="text/javascript" src="https://d2ok2u3bz752mp.cloudfront.net/js/gc.js"></script>
+    
+
+    <script type="text/javascript">
+        jQuery(function ($, undefined) {
+            $(document).ready(function () {
+                var after = $('footer').find('li.after').get(0);
+                var extra = $('footer').find('li.extra').get(0);
+                var cxWidth = $('#flexi-copyright').width();
+
+                if ($(after).text().length + $(extra).text().length > 180) {
+                    var diff = ($(after).text().length + $(extra).text().length) - 180;
+                    var newLength = $(extra).text().length - diff;
+                    $(extra).text($(extra).text().substr(0, newLength));
+                }
+
+                if ($(after).width() + $(extra).width() > cxWidth) {
+                    after.setAttribute('style', 'border-right: none !important');
+                }
+            });
+
+        });
+    </script>
+
+
+    </body>
+</html>

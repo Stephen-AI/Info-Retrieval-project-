@@ -1,0 +1,264 @@
+<BASE HREF="http://math.ucr.edu/home/baez/physics/Quantum/bells_inequality.html">
+<html>
+<head>
+<title>The EPR Paradox and Bell's Inequality</title>
+<meta http-equiv="PICS-Label" content='(PICS-1.1 "http://www.weburbia.com/safe/ratings.htm" l r (s 0))'>
+<meta name="copyright" content="this document is copyright
+as described in the copyright notice">
+</head>
+<body>
+
+<p><a href="../index.html">[Physics FAQ]</a> -
+   <a href="../Administrivia/copyright.html">[Copyright]</a></p>
+
+<p>Updated May 1996 by PEG (thanks to Colin Naturman).<br>
+Updated August 1993 by SIC.<br>
+Original by John Blanton.</p>
+<p><br></p>
+
+
+<h1>Does Bell's Inequality rule out local theories of quantum mechanics?</h1>
+
+<p>In 1935 Albert Einstein and two colleagues, Boris Podolsky and Nathan Rosen (EPR)
+developed a thought experiment to demonstrate what they felt was a lack of completeness in
+quantum mechanics.&nbsp; This so-called "EPR Paradox" has led to much subsequent, and
+still ongoing, research.&nbsp; This article is an introduction to EPR, Bell's Inequality,
+and the real experiments that have attempted to address the interesting issues raised by
+this discussion.</p>
+
+<p>One of the principal features of quantum mechanics is that not all the classical
+physical observables of a system can be simultaneously well defined with unlimited
+precision, even in principle.&nbsp; Instead, there may be several sets of observables that
+give qualitatively different, but nonetheless complete (maximal possible), descriptions of
+a quantum mechanical system.&nbsp; These sets are sets of "good quantum numbers," and are
+also known as "maximal sets of commuting observables."&nbsp; Observables from different
+sets are "noncommuting observables".</p>
+
+<p>A well known example is position and momentum.&nbsp; You can put a subatomic particle
+into a state of well-defined momentum, but then the value of its position is completely
+ill defined.&nbsp; This is not a matter of an inability to measure position to some
+accuracy; rather, it's an intrinsic property of the particle, no matter how good our
+measuring apparatus is.&nbsp; Conversely, you can put a particle in a definite position,
+but then the value of its momentum is completely ill defined.&nbsp; You can also create
+states of intermediate "knowledge" of both observables: if you confine the particle to
+some arbitrarily large region of space, you can define the value of its momentum more and
+more precisely.&nbsp; But the particle can never have well-defined values of both position
+and momentum at the same time.&nbsp; When physicists speak of how much "knowledge" they
+have of two noncommuting observables in quantum mechanics, they don't mean that those
+observables both have well-defined values that are not quite known; rather, they mean the
+two observables do not have completely well-defined values.</p>
+
+<p>(Technically speaking, the situation is a little more complicated.&nbsp; Even for
+observables that don't commute, it is sometimes possible for both to have well-defined
+values.&nbsp; Such subtleties are very important to those who examine the derivation of
+Bell's Inequality in great detail in order to find hidden assumptions.&nbsp; For the
+purposes of this short article, we'll overlook these finer points.)</p>
+
+<p>Position and momentum are continuous observables.&nbsp; But the same situation can
+arise for discrete observables, such as spin.&nbsp; The quantum mechanical spin of a
+particle along each of the three space axes is a set of mutually noncommuting
+observables.&nbsp; You can only know the spin along one axis at a time.&nbsp; A proton
+with spin "up" along the <em>x</em>-axis has an undefined spin value along the <em>y</em>
+and <em>z</em> axes.&nbsp; You cannot simultaneously measure the <em>x</em> and <em>y</em>
+spin projections of a proton.&nbsp; EPR sought to demonstrate that this phenomenon could
+be exploited to construct an experiment that would demonstrate a paradox that they
+believed was inherent in the quantum mechanical description of the world.</p>
+
+<p>They imagined two physical systems that are allowed to interact initially so that they
+will subsequently be defined by a single quantum mechanical state.&nbsp; (For simplicity,
+imagine a simple physical realization of this idea&mdash;a neutral pion at rest in your lab,
+which decays into a pair of back-to-back photons.&nbsp; The pair of photons is described
+by a single two-particle wave function.)&nbsp; Once separated, the two systems (read:
+photons) are still described by the same wave function, and a measurement of one
+observable of the first system will determine the measurement of the corresponding
+observable of the second system.&nbsp; (Example: the neutral pion is a scalar particle&mdash;it
+has zero angular momentum.&nbsp; So the two photons must speed off in opposite directions
+with opposite spin.&nbsp; If photon 1 is found to have spin up along the <em>x</em>-axis,
+then photon 2 <em>must</em> have spin down along the <em>x</em>-axis, since the total
+angular momentum of the final-state, two-photon, system must be the same as the angular
+momentum of the initial state, a single neutral pion.&nbsp; You know the spin of photon 2
+even without measuring it.)&nbsp; Likewise, the measurement of another observable of the
+first system will determine the measurement of the corresponding observable of the second
+system, even though the systems are no longer physically linked in the traditional sense
+of local coupling.</p>
+
+<p>(By "local" is meant that influences between the particles must travel in such a way
+that they pass through space continuously; i.e. the simultaneous disappearance of some
+quantity in one place cannot be balanced by its appearance somewhere else if that quantity
+didn't travel, in some sense, across the space in between.&nbsp; In particular, this
+influence cannot travel faster than light, in order to preserve relativity theory.)</p>
+
+<p>QM creates the puzzling situation in which the first measurement of one system should
+"poison" the first measurement of the other system, no matter what the distance between
+them.&nbsp; (In one commonly studied interpretation, the mechanism by which this proceeds
+is "instantaneous collapse of the wave function".&nbsp; But the rules of QM do not require
+this interpretation, and several other perfectly valid interpretations exist.)&nbsp; One
+could imagine the two measurements were so far apart in space that special relativity
+would prohibit any influence of one measurement over the other.&nbsp; For example, after
+the neutral-pion decay, we can wait until the two photons are light years apart, and then
+"simultaneously" measure the <em>x</em>-spin of the photons.&nbsp; QM suggests that if say
+the measurement of photon 1's <em>x</em>-spin happens first, then this measurement must
+instantaneously force photon 2 into a state of well-defined <em>x</em>-spin, even though
+it is light years away from photon 1.</p>
+
+<p>How do we reconcile the fact that photon 2 "knows" that the <em>x</em>-spin of photon 1
+has been measured, even though they are separated by light years of space and far too
+little time has passed for information to have travelled to it according to the rules of
+special relativity?&nbsp; There are basically two choices.&nbsp; We can accept the
+postulates of QM as a fact of life, in spite of its seemingly uncomfortable coexistence
+with special relativity, or we can postulate that QM is not complete: that there
+<em>was</em> more information available for the description of the two-particle system at
+the time it was created, but that we didn't know that information, perhaps because it
+cannot be known in principle, or perhaps because QM is currently incomplete.</p>
+
+<p>So, EPR postulated that the existence of such "hidden variables", some currently
+unknown properties, of the systems should account for the discrepancy.&nbsp; Their claim
+was that QM theory is incomplete: it does not completely describe physical reality.&nbsp;
+System II knows all about System I long before the scientist measures any of the
+observables, thereby supposedly consigning the other noncommuting observables to
+obscurity.&nbsp; Furthermore, they claimed that the hidden variables would be
+<em>local</em>, so that no instantaneous action at a distance would be necessary.&nbsp;
+Niels Bohr, one of the founders of QM, held the opposite view that there were no hidden
+variables.&nbsp; (His interpretation is known as the "Copenhagen Interpretation" of
+QM.)</p>
+
+<p>In 1964 John Bell proposed a mechanism to test for the existence of these hidden
+variables, and he developed his famous inequality as the basis for such a test.&nbsp; He
+showed that if the inequality were ever not satisfied, then it would be impossible to have
+a local hidden variable theory that accounted for the spin experiment.</p>
+
+<p>Using the example of two photons configured in the singlet state, consider this: in the
+hidden variable theory, after separation, each photon will have spin values for each of
+the three axes of space, and each spin will have one of two values; call them "+" and
+"&minus;".&nbsp; Call the axes <em>x</em>, <em>y</em>, <em>z</em>, and call the spin on the
+<em>x</em>-axis <em>x</em>+ if it is "+" on that axis; otherwise call it
+<em>x&minus;</em>.&nbsp; Use similar definitions for the other two axes.</p>
+
+<p>Now perform the experiment.&nbsp; Measure the spin on one axis of one photon and the
+spin in another axis of the other photon.&nbsp; If EPR were correct, each photon will
+simultaneously have properties for spin in each of axes <em>x</em>, <em>y</em> and
+<em>z</em>.</p>
+
+<p>Next, look at the statistics.&nbsp; Perform the measurements with a number of sets of
+photons.&nbsp; Use the symbol <em>N(x+, y&minus;)</em> to designate the words "the number of
+photons with <em>x+</em> and <em>y&minus;</em>".&nbsp; Similarly for <em>N(x+, y+)</em>,
+<em>N(y&minus;, z+)</em>, etc.&nbsp; Also use the designation <em>N(x+, y&minus;, z+)</em> to mean
+"the number of photons with <em>x+</em>, <em>y&minus;</em> and <em>z+</em>", and so on.&nbsp;
+It's easy to demonstrate that for a set of photons</p>
+
+<pre>
+    (1)   N(x+, y&minus;) = N(x+, y&minus;, z+) + N(x+, y&minus;, z&minus;)
+</pre>
+
+<p>because the <em>z+</em> and <em>z&minus;</em> exhaust all possibilities.&nbsp; You can make
+this claim if these measurements are connected to some real properties of the photons.</p>
+
+<p>Let <em>n[x+, y+]</em> be the designation for "the number of measurements of pairs of
+photons in which the first photon measured <em>x+</em>, and the second photon measured
+<em>y+</em>".&nbsp; Use a similar designation for the other possible results.&nbsp; This
+is necessary because this is all that it is possible to measure.&nbsp; You can't measure
+both <em>x</em> and <em>y</em> for the same photon.&nbsp; Bell demonstrated that in an
+actual experiment, if (1) is true (indicating real properties), then the following must be
+true:</p>
+
+<pre>
+    (2)    n[x+, y+] <= n[x+, z+] + n[y&minus;, z&minus;].
+</pre>
+
+<p>Additional inequality relations can be written by just making the appropriate
+permutations of the letters <em>x</em>, <em>y</em> and <em>z</em> and the two signs.&nbsp;
+This is Bell's Inequality, and it is proved to be true if there are real (perhaps hidden)
+variables to account for the measurements.</p>
+    
+<p>At the time Bell's result first became known, the experimental record was reviewed to
+see if any known results provided evidence against locality.&nbsp; None did.&nbsp; Thus an
+effort began to develop tests of Bell's Inequality.&nbsp; A series of experiments was
+conducted by Aspect ending with one in which polarizer angles were changed while the
+photons were in flight.&nbsp; This was widely regarded at the time as being a reasonably
+conclusive experiment that confirmed the predictions of QM.</p>
+
+<p>Three years later, Franson published a paper showing that the timing constraints in
+this experiment were not adequate to confirm that locality was violated.&nbsp; Aspect
+measured the time delays between detections of photon pairs.&nbsp; The critical time delay
+is that between when a polarizer angle is changed and when this affects the statistics of
+detecting photon pairs.&nbsp; Aspect estimated this time based on the speed of a photon
+and the distance between the polarizers and the detectors.&nbsp; Quantum mechanics does
+not allow making assumptions about <em>where</em> a particle is between detections.&nbsp;
+We cannot know <em>when</em> a particle traverses a polarizer unless we detect the
+particle <em>at</em> the polarizer.</p>
+
+<p>Experimental tests of Bell's Inequality are ongoing, but none has yet fully addressed
+the issue raised by Franson.&nbsp; In addition there is an issue of detector
+efficiency.&nbsp; By postulating new laws of physics, one can get the expected
+correlations without any nonlocal effects unless the detectors are close to 90%
+efficient.&nbsp; The importance of these issues is a matter of judgment.</p>
+
+<p>The subject is alive theoretically as well.&nbsp; Eberhard and later Fine uncovered
+further subtleties in Bell's argument.&nbsp; Some physicists argue that it may be possible
+to construct a local theory that does not respect certain assumptions in the derivation of
+Bell's Inequality.&nbsp; The subject is not yet closed, and may yet provide more
+interesting insights into the subtleties of quantum mechanics.</p>
+
+<h2>References</h2>
+
+<ol>
+  <li> A. Einstein, B. Podolsky, N. Rosen: "Can quantum-mechanical description of physical
+       reality be considered complete?"&nbsp; Phys. Rev. <b>41</b>, 777 (15 May 1935).&nbsp;
+       The original EPR paper.
+
+  <li> D. Bohm: Quantum Theory, Dover, New York (1957).&nbsp; Bohm discusses some of his
+       ideas concerning hidden variables.
+
+  <li> N. Herbert: Quantum Reality, Doubleday.&nbsp; A very good popular treatment of EPR
+       and related issues.
+
+  <li> M. Gardner: Science &mdash; Good, Bad and Bogus, Prometheus Books.&nbsp; Martin Gardner
+       gives a skeptics view of the fringe science associated with EPR.
+
+  <li> J. Gribbin: In Search of Schrodinger's Cat, Bantam Books.&nbsp; A popular
+       treatment of EPR and the puzzle of "Schrodinger's cat" that results from the
+       Copenhagen interpretation.
+
+  <li> N. Bohr: "Can quantum-mechanical description of physical reality be considered
+       complete?"&nbsp; Phys. Rev. <b>48</b>, 696 (15 Oct. 1935).&nbsp; Niels Bohr's
+       response to EPR.
+
+  <li> J. Bell: "On the Einstein Podolsky Rosen paradox"&nbsp; Physics <b>1</b> #3, 195 (1964).
+
+  <li> J. Bell: "On the problem of hidden variables in quantum mechanics"&nbsp; Reviews of
+       Modern Physics <b>38</b> #3, 447 (July 1966).
+
+  <li> D. Bohm, J. Bub: "A proposed solution of the measurement problem in quantum
+       mechanics by a hidden variable theory" Reviews of Modern Physics <b>38</b> #3, 453 (July
+       1966).
+
+  <li> B. DeWitt: "Quantum mechanics and reality"&nbsp; Physics Today pg 30 (Sept. 1970).
+
+  <li> J. Clauser, A. Shimony: "Bell's theorem: experimental tests and implications"&nbsp;
+       Rep. Prog. Phys. <b>41</b>, 1881 (1978).
+
+  <li> A. Aspect, Dalibard, Roger: "Experimental test of Bell's inequalities using
+       time-varying analyzers"&nbsp; Phys. Rev. Letters <b>49</b> #25, 1804 (20 Dec. 1982).
+
+  <li> A. Aspect, P. Grangier, G. Roger: "Experimental realization of
+       Einstein-Podolsky-Rosen-Bohm gedanken experiment; a new violation of Bell's
+       inequalities"&nbsp; Phys. Rev. Letters <b>49</b> #2, 91 (12 July 1982).
+
+  <li> A. Robinson: "Loophole closed in quantum mechanics test" Science <b>219</b>, 40 (7 Jan.
+       1983).
+
+  <li> B. d'Espagnat: "The quantum theory and reality"&nbsp; Scientific American <b>241</b> #5
+       (November 1979).
+
+  <li> "Bell's theorem and delayed determinism", Franson, Phys. Rev. D <b>31</b> 10,
+       2529&ndash;2532 (May 1985).
+
+  <li> "Bell's theorem without hidden variables", P. H. Eberhard, Il Nuovo Cimento,
+       <b>38B</b> 1, 75&ndash;80, (1977).
+
+  <li> "Bell's theorem and the different concepts of locality", P. H. Eberhard, Il Nuovo
+       Cimento <b>46B</b>, 392&ndash;419, (1978).
+</ol>
+
+</body>
+</html>

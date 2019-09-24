@@ -1,0 +1,269 @@
+<BASE HREF="http://www.epic-spain.com/libro.html">
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+		<meta name="generator" content="Adobe GoLive 4">
+		<title>EPIC</title>
+		<csscriptdict>
+			<script><!--
+CSStopExecution = false;
+CSInit = new Array;
+function CSScriptInit() {
+idxArray = new Array;
+for(var i=0;i<CSInit.length;i++)
+	idxArray[i] = i;
+CSAction2(CSInit, idxArray);
+}
+CSAg = window.navigator.userAgent; CSBVers = parseInt(CSAg.charAt(CSAg.indexOf("/")+1),10);
+function IsIE() { return CSAg.indexOf("MSIE") > 0;}
+function CSIEStyl(s) { return document.all.tags("div")[s].style; }
+function CSNSStyl(s) { return CSFindElement(s,0); }
+function CSFindElement(n,ly) { if (CSBVers < 4) return document[n];
+	var curDoc = ly ? ly.document : document; var elem = curDoc[n];
+	if (!elem) { for (var i=0;i<curDoc.layers.length;i++) {
+		elem = CSFindElement(n,curDoc.layers[i]); if (elem) return elem; }}
+	return elem;
+}
+function CSButtonReturn () {
+	var bAgent = window.navigator.userAgent; 
+	var bAppName = window.navigator.appName;
+	if ((bAppName.indexOf("Explorer") >= 0) && (bAgent.indexOf("Mozilla/3") >= 0) && (bAgent.indexOf("Mac") >= 0))
+		return false; // follow link
+	else return true; // follow link
+}
+CSIm = new Object();
+function CSIShow(n,i) {
+	if (document.images) {
+		if (CSIm[n]) {
+			var img = (!IsIE()) ? CSFindElement(n,0) : document[n];
+			if (img && typeof(CSIm[n][i].src) != "undefined") {img.src = CSIm[n][i].src;}
+			if(i != 0)
+				self.status = CSIm[n][3];
+			else
+				self.status = " ";
+			return true;
+		}
+	}
+	return false;
+}
+function CSILoad(action) {
+	im = action[1];
+	if (document.images) {
+		CSIm[im] = new Object();
+		for (var i=2;i<5;i++) {
+			if (action[i] != '') { CSIm[im][i-2] = new Image(); CSIm[im][i-2].src = action[i]; }
+			else CSIm[im][i-2] = 0;
+		}
+		CSIm[im][3] = action[5];
+	}
+}
+CSStopExecution = false;
+
+function CSAction(array) { 
+	return CSAction2(CSAct, array);
+}
+function CSAction2(fct, array) { 
+	var result;
+	for (var i=0;i<array.length;i++) {
+		if(CSStopExecution) return false; 
+		var actArray = fct[array[i]];
+		var tempArray = new Array;
+		for(var j=1;j<actArray.length;j++) {
+			if((actArray[j] != null) && (typeof(actArray[j]) == "object") && (actArray[j].length == 2)) {
+				if(actArray[j][0] == "VAR") {
+					tempArray[j] = CSStateArray[actArray[j][1]];
+				}
+				else {
+					if(actArray[j][0] == "ACT") {
+						tempArray[j] = CSAction(new Array(new String(actArray[j][1])));
+					}
+				else
+					tempArray[j] = actArray[j];
+				}
+			}
+			else
+				tempArray[j] = actArray[j];
+		}			
+		result = actArray[0](tempArray);
+	}
+	return result;
+}
+CSAct = new Object;
+
+// --></script>
+		</csscriptdict>
+		<csactiondict>
+		<script><!--
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'button2',/*URL*/'menugeneral/acerca1.jpg',/*URL*/'menugeneral/acerca2.jpg',/*URL*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'button3',/*URL*/'menugeneral/metodo1.jpg',/*URL*/'menugeneral/metodo2.jpg',/*URL*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'button5',/*URL*/'menugeneral/resultados1.jpg',/*URL*/'menugeneral/resultados2.jpg',/*URL*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'button6',/*URL*/'menugeneral/publi1.jpg',/*URL*/'menugeneral/publi2.jpg',/*URL*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'button7',/*URL*/'menugeneral/invest1.jpg',/*URL*/'menugeneral/invest2.jpg',/*URL*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'button8',/*URL*/'menugeneral/colab1.jpg',/*URL*/'menugeneral/colab2.jpg',/*URL*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'button9',/*URL*/'menugeneral/links1.jpg',/*URL*/'menugeneral/links2.jpg',/*URL*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'button10',/*URL*/'menugeneral/contac1.jpg',/*URL*/'menugeneral/contac2.jpg',/*URL*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'button11',/*URL*/'menuprovincias/2.jpg',/*URL*/'menuprovincias/22.jpg',/*URL*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'button',/*URL*/'menuprovincias/3.jpg',/*URL*/'menuprovincias/33.jpg',/*URL*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'button12',/*URL*/'menuprovincias/4.jpg',/*URL*/'menuprovincias/44.jpg',/*URL*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'button13',/*URL*/'menuprovincias/5.jpg',/*URL*/'menuprovincias/55.jpg',/*URL*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'button4',/*URL*/'menuprovincias/6.jpg',/*URL*/'menuprovincias/66.jpg',/*URL*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'button14',/*URL*/'menuprovincias/7.jpg',/*URL*/'menuprovincias/77.jpg',/*URL*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'button15',/*URL*/'menuprovincias/88.jpg',/*URL*/'menuprovincias/8.jpg',/*URL*/'','');
+
+// --></script>
+		</csactiondict>
+		<style type="text/css"><!--
+			#layer { position: absolute; z-index: 1; top: 0px; left: 0px; width: 209px; height: 533px; visibility: visible }
+			#layer2 { position: absolute; z-index: 4; top: 59px; left: 86px; width: 106px; height: 106px; visibility: visible }
+			#layer3 { position: absolute; z-index: 3; top: 0px; left: 209px; width: 581px; height: 107px; visibility: visible }
+			#layer4 { position: absolute; z-index: 5; top: 22px; left: 200px; width: 128px; height: 56px; visibility: visible }
+			#layer5 { position: absolute; z-index: 8; top: 106px; left: 227px; width: 471px; height: 1060px; visibility: visible }
+			#layer6 { position: absolute; z-index: 8; top: 201px; left: 6px; width: 166px; height: 234px; visibility: visible }-->
+		</style>
+	</head>
+
+	<body bgcolor="white" link="#5da29c" alink="#5da29c" vlink="#5da29c" onload="CSScriptInit();">
+		<div id="layer4">
+			<dl>
+				<dt><font size="4" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" color="white"><b>Libro</b></font>
+			</dl>
+		</div>
+		<div id="layer">
+			<div align="left">
+				<a name="arriba"></a><img height="514" width="209" src="int.jpg">
+				<div id="layer6">
+					<csobj w="166" h="29" t="Button" ht="menugeneral/acerca2.jpg"><a href="acerca.html" onmouseover="return CSIShow(/*CMP*/'button2',1)" onmouseout="return CSIShow(/*CMP*/'button2',0)" onclick="return CSButtonReturn()"><img src="menugeneral/acerca1.jpg" width="166" height="29" name="button2" border="0"></a></csobj><csobj w="166" h="24" t="Button" ht="menugeneral/metodo2.jpg"><a href="metodo.html" onmouseover="return CSIShow(/*CMP*/'button3',1)" onmouseout="return CSIShow(/*CMP*/'button3',0)" onclick="return CSButtonReturn()"><img src="menugeneral/metodo1.jpg" width="166" height="24" name="button3" border="0"></a></csobj><csobj w="166" h="27" t="Button" ht="menugeneral/resultados2.jpg"><a href="resultados.html" onmouseover="return CSIShow(/*CMP*/'button5',1)" onmouseout="return CSIShow(/*CMP*/'button5',0)" onclick="return CSButtonReturn()"><img src="menugeneral/resultados1.jpg" width="166" height="27" name="button5" border="0"></a></csobj><csobj w="166" h="30" t="Button" ht="menugeneral/publi2.jpg"><a href="publicaciones.html" onmouseover="return CSIShow(/*CMP*/'button6',1)" onmouseout="return CSIShow(/*CMP*/'button6',0)" onclick="return CSButtonReturn()"><img src="menugeneral/publi1.jpg" width="166" height="30" name="button6" border="0"></a></csobj><csobj w="166" h="29" t="Button" ht="menugeneral/invest2.jpg"><a href="invest.html" onmouseover="return CSIShow(/*CMP*/'button7',1)" onmouseout="return CSIShow(/*CMP*/'button7',0)" onclick="return CSButtonReturn()"><img src="menugeneral/invest1.jpg" width="166" height="29" name="button7" border="0"></a></csobj><csobj w="166" h="30" t="Button" ht="menugeneral/colab2.jpg"><a href="colaboradores.html" onmouseover="return CSIShow(/*CMP*/'button8',1)" onmouseout="return CSIShow(/*CMP*/'button8',0)" onclick="return CSButtonReturn()"><img src="menugeneral/colab1.jpg" width="166" height="30" name="button8" border="0"></a></csobj><csobj w="166" h="31" t="Button" ht="menugeneral/links2.jpg"><a href="links.html" onmouseover="return CSIShow(/*CMP*/'button9',1)" onmouseout="return CSIShow(/*CMP*/'button9',0)" onclick="return CSButtonReturn()"><img src="menugeneral/links1.jpg" width="166" height="31" name="button9" border="0"></a></csobj><csobj w="166" h="34" t="Button" ht="menugeneral/contac2.jpg"><a href="contactos.html" onmouseover="return CSIShow(/*CMP*/'button10',1)" onmouseout="return CSIShow(/*CMP*/'button10',0)" onclick="return CSButtonReturn()"><img src="menugeneral/contac1.jpg" width="166" height="34" name="button10" border="0"></a></csobj></div>
+				<div id="layer2">
+					<img height="106" width="106" src="video.gif"></div>
+				<div id="layer3">
+					<img height="96" width="108" src="menuprovincias/1.jpg"><csobj w="57" h="96" t="Button" ht="menuprovincias/22.jpg"><a href="asturias.html" onmouseover="return CSIShow(/*CMP*/'button11',1)" onmouseout="return CSIShow(/*CMP*/'button11',0)" onclick="return CSButtonReturn()"><img src="menuprovincias/2.jpg" width="57" height="96" name="button11" border="0"></a></csobj><csobj w="59" h="96" t="Button" ht="menuprovincias/33.jpg"><a href="gipuz.html" onmouseover="return CSIShow(/*CMP*/'button',1)" onmouseout="return CSIShow(/*CMP*/'button',0)" onclick="return CSButtonReturn()"><img src="menuprovincias/3.jpg" width="59" height="96" name="button" border="0"></a></csobj><csobj w="55" h="96" t="Button" ht="menuprovincias/44.jpg"><a href="navarra.html" onmouseover="return CSIShow(/*CMP*/'button12',1)" onmouseout="return CSIShow(/*CMP*/'button12',0)" onclick="return CSButtonReturn()"><img src="menuprovincias/4.jpg" width="55" height="96" name="button12" border="0"></a></csobj><csobj w="55" h="96" t="Button" ht="menuprovincias/55.jpg"><a href="granada.html" onmouseover="return CSIShow(/*CMP*/'button13',1)" onmouseout="return CSIShow(/*CMP*/'button13',0)" onclick="return CSButtonReturn()"><img src="menuprovincias/5.jpg" width="55" height="96" name="button13" border="0"></a></csobj><csobj w="48" h="96" t="Button" ht="menuprovincias/66.jpg"><a href="murcia.html" onmouseover="return CSIShow(/*CMP*/'button4',1)" onmouseout="return CSIShow(/*CMP*/'button4',0)" onclick="return CSButtonReturn()"><img src="menuprovincias/6.jpg" width="48" height="96" name="button4" border="0"></a></csobj><csobj w="63" h="96" t="Button" ht="menuprovincias/77.jpg"><a href="bcn.html" onmouseover="return CSIShow(/*CMP*/'button14',1)" onmouseout="return CSIShow(/*CMP*/'button14',0)" onclick="return CSButtonReturn()"><img src="menuprovincias/7.jpg" width="63" height="96" name="button14" border="0"></a></csobj><csobj w="120" h="96" t="Button" ht="menuprovincias/8.jpg"><a href="http://www.epic-spain.com" onmouseover="return CSIShow(/*CMP*/'button15',1)" onmouseout="return CSIShow(/*CMP*/'button15',0)" onclick="return CSButtonReturn()"><img src="menuprovincias/88.jpg" width="120" height="96" name="button15" border="0"></a></csobj></div>
+			</div>
+		</div>
+		<div id="layer5">
+			<center>
+				<a href="acercaeuropa.html"><font size="1" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" color="#5da29c">Acerca de...</font></a></center>
+			<div align="left">
+				<dl>
+					<dt><font size="1" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">
+					<table border="0" cellpadding="0" cellspacing="10" width="446">
+						<tr>
+							<td width="220" valign="top">
+								<div align="left">
+									<dl>
+										<dt><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" color="#66a6a9" size="4"><b>CONTENIDO DE SUSTANCIAS POTENCIALMENTE CANCER&Iacute;GENAS EN ALIMENTOS</b><b><br>
+										</b></font><b><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" color="#66a6a9" size="2">Nitratos, nitritos, nitrosaminas, aminas heteroc&iacute;clicas e hidrocarburos arom&aacute;ticos polic&iacute;clicos<br>
+										<br>
+										</font></b><font size="1" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">Ofrecemos esta primera edici&oacute;n de la tabla a todos los grupos cient&iacute;ficos interesados. Esta edici&oacute;n en formato electr&oacute;nico y la edici&oacute;n impresa est&aacute;n disponibles de manera gratuita. Esperamos que pueda ser un instrumento &uacute;til para el conocimiento de la relaci&oacute;n causal entre estos potenciales cancer&iacute;genos y el riesgo de c&aacute;ncer en poblaciones humanas.<br>
+										<br>
+										Carlos A. Gonz&aacute;lez<br>
+										En nombre de EPIC-Espa&ntilde;a<br>
+										</font>
+									</dl>
+								</div>
+							</td>
+							<td width="220" valign="top">
+								<div align="left">
+									<dl>
+										<dt><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" color="#66a6a9" size="4"><i><b>FOOD<br>
+										CONTENT<br>
+										OF POTENTIAL<br>
+										CARCINOGENS<br>
+										</b></i></font><b><i><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" color="#66a6a9" size="2">Nitrates, nitrites, nitrosamines, heterocyclic amines and polycyclic aromatic hydrocarbons</font><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" color="#66a6a9" size="4"><br>
+										<br>
+										</font></i></b><i><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" color="black" size="1">We offer the first edition of this table to all interested scientific groups. A hard copy, as well as an electronic version, are available upon request, free of<br>
+										charge. We hope that it will be a useful and valuable tool to enable better understanding of the causal relationships between these potential carcinogens<br>
+										and the risk of cancer in human populations.<br>
+										<br>
+										Carlos A. Gonz&aacute;lez<br>
+										On behalf of EPIC-Spain</font></i>
+									</dl>
+								</div>
+							</td>
+						</tr>
+					</table>
+					<br>
+					<table border="0" cellpadding="0" cellspacing="0" width="445">
+						<tr>
+							<td>
+								<center>
+									<dl>
+										<dt><font size="1" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><img height="100" width="142" src="libropdf/portada.jpg"></font>
+									</dl>
+								</center>
+							</td>
+						</tr>
+					</table>
+					<br>
+					<table border="0" cellpadding="0" cellspacing="0" width="444">
+						<tr>
+							<td valign="top">
+								<center>
+									<dl>
+										<dt><a href="libropdf/libro_completo.zip"><font size="1" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><img height="32" width="32" src="libropdf/pdf.jpg" border="0"></font></a>
+										<dt><font size="1" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">Libro al completo<br>
+										<i>Book to the complete one</i></font>
+										<dt><a href="libropdf/libro_completo.zip"><font size="1" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">(Pdf)<br>
+										<br>
+										</font></a><a href="libropdf/1_Material_y_Metodos.zip"><font size="1" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><br>
+										<img height="32" width="32" src="libropdf/pdf.jpg" border="0"></font></a>
+										<dt><font size="1" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">Material y M&eacute;todos<br>
+										<i>Material and Methods </i><a href="libropdf/1_Material_y_Metodos.zip">(Pdf)<br>
+										</a></font>
+									</dl>
+								</center>
+							</td>
+							<td valign="top">
+								<center>
+									<dl>
+										<dt><a href="libropdf/2_Nitrosaminas.zip"><font size="1" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><img height="32" width="32" src="libropdf/pdf.jpg" border="0"></font></a>
+										<dt><font size="1" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">Nitrosaminas y Precursores de Nitrosaminas<br>
+										<i>Nitrosamines and Nitrosamine Precursors </i><a href="libropdf/2_Nitrosaminas.zip">(Pdf)<br>
+										</a></font><font size="1" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><br>
+										<br>
+										<a href="libropdf/3_AMINAS.zip"><img height="32" width="32" src="libropdf/pdf.jpg" border="0"></a></font>
+										<dt><font size="1" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">Heterocyclic amines / Aminas Heteroc&iacute;clicas<a href="libropdf/3_AMINAS.zip"> (Pdf)<br>
+										</a></font>
+									</dl>
+								</center>
+							</td>
+							<td valign="top">
+								<center>
+									<dl>
+										<dt><a href="libropdf/4_HIDROCARBUROS.zip"><font size="1" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><img height="32" width="32" src="libropdf/pdf.jpg" border="0"></font></a>
+										<dt><font size="1" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">Hidrocarburos Arom&aacute;ticos Polic&iacute;clicos<br>
+										<i>Polycyclic aromatic hidrocarbons</i> <a href="libropdf/4_HIDROCARBUROS.zip">(Pdf)<br>
+										</a></font><font size="1" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><br>
+										<br>
+										<a href="libropdf/5_anexo.zip"><img height="32" width="32" src="libropdf/pdf.jpg" border="0"></a></font>
+										<dt><font size="1" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">Anexo. Definici&oacute;n del M&eacute;todo de Cocci&oacute;n<br>
+										<i>Annex. Cooking Method Definition</i> <a href="libropdf/5_anexo.zip">(Pdf)<br>
+										</a></font>
+									</dl>
+								</center>
+							</td>
+						</tr>
+					</table>
+					<br>
+					<img height="33" width="449" src="separador.jpg"></font><br>
+					<a href="#arriba"><font size="1" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" color="#5da29c">
+					<table border="0" cellpadding="0" cellspacing="0" width="447">
+						<tr>
+							<td>
+								<center>
+									<dl>
+										<dt><a href="#arriba"><font size="1" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><img height="10" width="17" src="flecha.jpg" border="0"><br>
+										</font></a><a href="acerca.html"><font size="1" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" color="#5da29c">Acerca de...</font></a><font size="1" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" color="#5da29c">| <a href="metodo.html">Metodolog&iacute;a</a> | <a href="resultados.html">Resultados</a> | <a href="publicaciones.html">Publicaciones</a><a href="invest.html"> | Investigadores</a></font>
+										<dt><a href="colaboradores.html"><font size="1" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" color="#5da29c">Colaboradores</font></a><font size="1" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" color="#5da29c"> | <a href="links.html">Links</a> | <a href="#arriba">Contactenos</a></font>
+									</dl>
+								</center>
+							</td>
+						</tr>
+					</table>
+					</font></a>
+				</dl>
+			</div>
+		</div>
+	</body>
+
+</html>

@@ -1,0 +1,208 @@
+<base href="http://www.cs.utexas.edu/~singh//">
+<!DOCTYPE html>
+  <html>
+    <head>
+        <meta charset=utf-8>
+        <meta name="author" content="Kevin Singh, Ratnika Batra"></meta>
+        <title> Kevin Singh | Software & Web Developer </title>
+        <link rel=stylesheet href="index.css" type=text/css>
+        <link rel=stylesheet href="index-s.css" type=text/css>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0/">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script type="text/javascript">
+				function myFunction1() {
+					    $('html,body').animate({
+					        scrollTop: $('.jumpp1').offset().top},
+					        'slow');
+				}
+				function myFunction2() {
+					    $('html,body').animate({
+					        scrollTop: $('.jumpp2').offset().top},
+					        'slow');
+				}
+				function myFunction3() {
+				   		 $('html,body').animate({
+				        	scrollTop: $('#page3').offset().top},
+				        	'slow');
+				}
+				$(document).scroll(function(){ 
+					var $animate2 = $('.fadework');
+					var $animate1 = $('.fadep');
+					var $animate3 = $('.pdf');
+					var $animate4 = $('.tedu');
+					var $animate5 = $('.block1');
+					var $animate6 = $('.block2');
+					var $animate7 = $('.block3');
+					var $display = $('.outblock');
+					var $animate8 = $('.abp');
+					aObj = document.getElementById('checkNav').getElementsByTagName('a');
+					var $p1 = $('#page1');
+					var $p2 = $('#page2');
+					var $p3 = $('#page3'); 
+					var $animate = $('.emailform');
+					if($(window).width() > 750){
+						var a = 360;
+						var b = 450;
+						var c = 850;
+						var d = 300;
+						var e = 0;
+					}
+					if($(window).width() <= 750){
+						var a = 600;
+						var b = 900;
+						var c = 1500;
+						var d = 600;
+						var e = 200;	
+					}
+					if($(this).scrollTop() > a) {
+						$animate2.fadeIn(500);
+						$animate1.fadeIn(1000);
+						$animate3.fadeIn(2000);
+						$animate3.css("display", "block");
+						aObj[1].className='active';
+						aObj[0].className='inactive';
+						aObj[2].className='inactive';
+					}
+					if($(this).scrollTop() > b) {
+						$animate4.fadeIn(500);
+						$display.css("display", "block");
+						$animate5.fadeIn(1000);
+						$animate5.css("display", "block");
+						$animate6.fadeIn(2000);
+						$animate6.css("display", "block");
+						$animate7.fadeIn(2500);
+						$animate7.css("display", "block");
+					}
+					if($(this).scrollTop() >= c) {
+						$animate.css("animation", "example3 1s forwards");
+						$animate.css("animation-duration", "1s");
+						$animate.css("-webkit-animation-name", "example3");
+						$animate.css("-webkit-animation-duration", "1s"); 
+						aObj[2].className='active';
+						aObj[0].className='inactive';
+						aObj[1].className='inactive';
+					}
+					if($(this).scrollTop() < d){
+						aObj[0].className='active';
+						aObj[1].className='inactive';
+						aObj[2].className='inactive';
+					}
+					if($(this).scrollTop() > e){
+						$animate8.css("opacity", "1");
+					}
+					
+				});
+		</script>
+   </head>
+
+
+	<body>
+		<div class="container"> 
+			<div class="page0">
+					<ul class="navul" id="checkNav">
+						<li class="navli"> <a class="active none" id="navbtn" onclick="myFunction1()" > ABOUT </a> </li>
+						<li class="navli"> <a class="inactive ntwo" id="navbtn"  onclick="myFunction2()"> EXPERIENCE </a> </li>
+						<li class="navli"> <a class="inactive nthree" id="navbtn"  onclick="myFunction3()"> CONTACT </a> </li>
+                        <li class="navli"> <a class="inactive" target="_blank" id="navbtn" href="https://www.github.com/singh5/"> GITHUB </a> </li>
+					</ul>
+			</div>
+				<section id="page1" class="jumpp1">
+					<div class="tomove">
+						<div class="backimgp1"> </div>
+						<!--<p class="name"> Kevin <span class=""> Singh  </span> </p> -->
+							<div class="KSLogo" id="catch1"></div>
+					</div>
+					<div class="about">
+                        <div class="makecenter mcone">
+							<p class="textinto abp"> About </p>
+                            <p class="abp"> Hi there! I'm an undergraduate Computer Science student at The University of Texas at Austin. I'm seeking a summer internship in software or web development where I can work on a real project, with a great team and learn new technologies! I have experience programming in Java, C and Python, and working with Maven, Eclipse, Spring Framework, Hibernate and AWS EC2 and S3. On my free time I like to bike, explore new places, learn new technologies and create 3D animations. If you'd like to learn more about my experience, you can check out my resume <a href="resume.pdf">here</a> or my <a href="https://github.com/singh5"> Github. </a> 
+                            </p>
+						</div>
+					</div>
+				</section>
+				<section id="page2" class="jumpp2">
+					<div class="workimg">
+					</div>
+					<p class="upcoming"> Experience </p> 
+					<div class="work">
+						<div class="makecenter mctwo">
+							<p class="textinto fadework"> Experience </p>
+							<div class="sidebtn">
+								<a class="pdf" href="resume.pdf"> Download Resume </a>
+							</div>
+                            <p class="fadep"> I have experience programming in Java, C and Python, and working with Maven, Eclipse, Spring Framework, Hibernate and AWS EC2 and S3. I love to get my hands on as many areas of technology as I can. From creative 3D animation and design, to software development and even computer repair. In order to do this, I like to keep myself up to date with the latest technologies and gadgets in the industry. You can learn more about my experience and skills on my resume to the right. 					
+							</p>
+						</div>
+							<div class="outblock">
+								<p class="textinto tedu" style="left: calc(-20% - 13%)"> Education </p>
+								<div class="block1"> <p class="edutexttop"> High School </p><p> Carl Wunsche Sr. High School, Houston, TX. Magna Cum Laude Graduate. Focus in 3D animation and design. </p>
+								</div>
+								<div class="block2"> <p class="edutexttop"> Internship </p><p> 3D designer intern at Fuel FX LLC, Houston, TX.</p></div>
+								<div class="block3"> <p class="edutexttop">Undergraduate </p><p> University of Texas at Austin. Bachelors of Science in Computer Science.</p></div>
+							</div>
+					
+					</div>
+				</section>
+				<section id="page3" class="jumpp3">
+					<div class="contactimg">
+					</div>
+					<p class="upcoming"> Contact </p>
+                    <div class="wrapemail">
+						<div class="emailform"> 
+							<p class="textinto" style="line-height: 1.6em"> Contact Me </p>
+							<div class="col-md-8">
+								<p class="bigger">If you would like to get in touch, please send an email through this form. Leave your email to hear back from me!</p> <br>
+								<form class="form-horizontal" role="form" method="post" action="ContactMe.php">
+									<div class="form-group">
+										
+										<div class="col-sm-10">
+											<label for="name" class="control-label">Name</label>
+											<input type="text" class="form-control" id="name" name="name" placeholder="First & Last Name" value="">
+											<p class='text-danger'></p>
+										</div>
+          							</div>
+          							<div class="form-group">
+	       								
+										<div class="col-sm-10">
+											<label for="email" class="control-label">Email</label>
+											<input type="email" class="form-control" id="email" name="email" placeholder="your email address here" value="">
+											<p class='text-danger'></p>
+				       					</div>
+									</div>
+									<div class="form-group">
+            							
+            							<div class="col-sm-10">
+            								<label for="message" class="control-label">Message</label>
+              								<textarea class="form-control" id="message" rows="4" name="message"></textarea>
+											<p class='text-danger'></p>
+										</div>
+          							</div>
+          							<div class="form-group">
+              								<div class="col-sm-10">
+             									<label for="human" class="control-label">2 + 3 = ?</label>
+             									<input type="text" class="form-control" id="human" name="human" placeholder="Your Answer">
+											<p class='text-danger'></p>
+										</div>
+         								</div>
+         								<div class="form-group">
+           								<div class="col-sm-10 col-sm-offset-2">
+             									<input id="submit" name="submit" type="submit" value="Send" class="submitbtn">
+           								</div>
+        								</div>
+         								<div class="form-group">
+           								<div class="col-sm-10 col-sm-offset-2">
+          									</div>
+         								</div>
+      								</form> 
+							</div> <!-- /.col-md-8 -->
+						</div>
+                    </div>   
+                </section>
+				<footer class="foot"> 
+								<p class="toright"> Designed in collaboration with<a class="designed"href="https://www.cs.utexas.edu/~ratnika/"> Ratnika Batra </a></p>
+				</footer>
+		</div>
+	</body>
+	<script type="text/javascript">
+	</script>
+</html>

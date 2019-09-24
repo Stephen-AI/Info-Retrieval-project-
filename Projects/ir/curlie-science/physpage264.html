@@ -1,0 +1,1417 @@
+<BASE HREF="http://www.poynton.com/notes/colour_and_gamma/ColorFAQ.html">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="rtftohtml version 2.7.5, Adobe PageMill 2.0 Mac, with help">
+  <TITLE>Color FAQ - Frequently Asked Questions Color</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff" TEXT="#000000" LINK="#0000dd" VLINK="#9900dd" ALINK="#ff0000">
+
+<P><!-- http://www.poynton.com/colour_and_gamma/ColorFAQ.html -->
+<!-- This document was created from RTF source by rtftohtml version 2.7.5, -->
+<!-- then subsequently maintained by hand (BBEdit). Please report bugs! --></P>
+
+<H1>Color FAQ - Frequently Asked Questions Color</H1>
+
+<H2>a.k.a. Colour FAQ - Frequently Asked Questions Colour</H2>
+
+<P><A TARGET="_top" HREF="http:// www.poynton.com"><I>Charles
+Poynton</I></A></P>
+
+<P><I>Copyright &copy; 2006-11-28</I></P>
+
+<P>This document clarifies aspects of colour specification and image coding
+that are important to computer graphics, image processing, video, and the
+transfer of digital images to print.</P>
+
+<P>I assume that you are familiar with intensity, luminance (CIE Y), lightness
+(CIE L*), and the nonlinear relationship between CRT voltage and intensity
+(gamma). To learn more about these topics, read the companion
+<I><A TARGET="_top" HREF="GammaFAQ.html">Frequently Asked Questions about Gamma</A></I>.</P>
+
+<P>This document is available on the Internet:
+<A HREF="http://www.poynton.com/notes/colour_and_gamma/" TARGET="_top">http:// www.poynton.com/notes/colour_and_gamma/</A></P>
+
+<P>A&nbsp;typeset-quality version of this document is available:
+<A HREF="http://www.poynton.com/PDFs/GammaFAQ.pdf">(Acrobat PDF format)</A>.</P>
+
+<P>I retain copyright to this note. You have permission to use it, but you
+may not publish it.</P>
+
+<p>A <a target="_top" href="http://www.movavi.com/opensource/ColorFAQ-be">translation 
+to Belorussian</a> is available, 
+thanks to Paul Bukhovko.</p>
+
+<P>Another source of information concerning color is the document <I><A HREF="http://www.colourware.co.uk/cpfaq.htm">Frequently asked questions
+about Colour Physics</A></I>, by <A TARGET="_top" HREF="http://www.keele.ac.uk/depts/co/sw96.html">Steve
+Westland</A> &lt;<A TARGET="_top" HREF="mailto:coa23@cc.keele.ac.uk">coa23@cc.keele.ac.uk</A>&gt;.</P>
+
+<H1>Contents</H1>
+
+<DL>
+  <DT>&nbsp;0. <A TARGET="_top" HREF="#RTFToC0">Where does this document
+  live? </A>
+  <DT>&nbsp;1. <A TARGET="_top" HREF="#RTFToC1">What is colour? </A>
+  <DT>&nbsp;2. <A TARGET="_top" HREF="#RTFToC2">What is intensity?</A>
+  <DT>&nbsp;3. <A TARGET="_top" HREF="#RTFToC3">What is luminance? </A>
+  <DT>&nbsp;4. <A TARGET="_top" HREF="#RTFToC4">What is lightness?</A>
+  <DT>&nbsp;5. <A TARGET="_top" HREF="#RTFToC5">What is hue? </A>
+  <DT>&nbsp;6. <A TARGET="_top" HREF="#RTFToC6">What is saturation? </A>
+  <DT>&nbsp;7. <A TARGET="_top" HREF="#RTFToC7">How is colour specified?
+  </A>
+  <DT>&nbsp;8. <A TARGET="_top" HREF="#RTFToC8">Should I use a colour specification
+  system for image data? </A>
+  <DT>&nbsp;9. <A TARGET="_top" HREF="#RTFToC9">What weighting of red, green
+  and blue corresponds to brightness? </A>
+  <DT>10. <A TARGET="_top" HREF="#RTFToC10">Can blue be assigned fewer bits
+  than red or green? </A>
+  <DT>11. <A TARGET="_top" HREF="#RTFToC11">What is &#34;luma&#34;? </A>
+  <DT>12. <A TARGET="_top" HREF="#RTFToC12">What are CIE XYZ components?
+  </A>
+  <DT>13. <A TARGET="_top" HREF="#RTFToC13">Does my scanner use the CIE spectral
+  curves? </A>
+  <DT>14. <A TARGET="_top" HREF="#RTFToC14">What are CIE&nbsp; x and y chromaticity
+  coordinates?</A>
+  <DT>15. <A TARGET="_top" HREF="#RTFToC15">What is white?</A>
+  <DT>16. <A TARGET="_top" HREF="#RTFToC16">What is colour temperature? </A>
+  <DT>17. <A TARGET="_top" HREF="#RTFToC17">How can I characterize red, green
+  and blue?</A>
+  <DT>18. <A TARGET="_top" HREF="#RTFToC18">How do I transform between CIE&nbsp;
+  XYZ and a particular set of RGB primaries? </A>
+  <DT>19. <A TARGET="_top" HREF="#RTFToC19">Is RGB always device-dependent?
+  </A>
+  <DT>20. <A TARGET="_top" HREF="#RTFToC20">How do I transform data from
+  one set of RGB primaries to another? </A>
+  <DT>21. <A TARGET="_top" HREF="#RTFToC21">Should I use RGB or XYZ for image
+  synthesis? </A>
+  <DT>22. <A TARGET="_top" HREF="#RTFToC22">What is subtractive colour?</A>
+  <DT>23. <A TARGET="_top" HREF="#RTFToC23">Why did my grade three teacher
+  tell me that the primaries are red, yellow and blue? </A>
+  <DT>24. <A TARGET="_top" HREF="#RTFToC24">Is CMY just one-minus-RGB? </A>
+  <DT>25. <A TARGET="_top" HREF="#RTFToC25">Why does offset printing use
+  black ink in addition to CMY? </A>
+  <DT>26. <A TARGET="_top" HREF="#RTFToC26">What are colour differences?
+  </A>
+  <DT>27. <A TARGET="_top" HREF="#RTFToC27">How do I obtain colour difference
+  components from tristimulus values?</A>
+  <DT>28. <A TARGET="_top" HREF="#RTFToC28">How do I encode Y'PBPR components?
+  </A>
+  <DT>29. <A TARGET="_top" HREF="#RTFToC29">How do I encode Y'CBCR components
+  from R'G'B' in [0, +1]? </A>
+  <DT>30. <A TARGET="_top" HREF="#RTFToC30">How do I encode Y'CBCR components
+  from computer R'G'B' ? </A>
+  <DT>31. <A TARGET="_top" HREF="#RTFToC31">How do I encode Y'CBCR components
+  from studio video? </A>
+  <DT>32. <A TARGET="_top" HREF="#RTFToC32">How do I decode R'G'B' from PhotoYCC[tm]?
+  </A>
+  <DT>33. <A TARGET="_top" HREF="#RTFToC33">Will you tell me how to decode
+  Y' UV and Y' IQ? </A>
+  <DT>34. <A TARGET="_top" HREF="#RTFToC34">How should I test my encoders
+  and decoders? </A>
+  <DT>35. <A TARGET="_top" HREF="#RTFToC35">What is perceptual uniformity?
+  </A>
+  <DT>36. <A TARGET="_top" HREF="#RTFToC36">What are HSB and HLS? </A>
+  <DT>37. <A TARGET="_top" HREF="#RTFToC37">What is true colour? </A>
+  <DT>38. <A TARGET="_top" HREF="#RTFToC38">What is indexed colour? </A>
+  <DT>39. <A TARGET="_top" HREF="#RTFToC39">I want to visualize a scalar
+  function of two variables.<BR>
+  </A><TT>&nbsp;&nbsp;&nbsp;</TT><A TARGET="_top" HREF="#RTFToC39">Should
+  I use RGB values corresponding to the colours of the rainbow? </A>
+  <DT>40. <A TARGET="_top" HREF="#RTFToC40">What is dithering? </A>
+  <DT>41. <A TARGET="_top" HREF="#RTFToC41">How does halftoning relate to
+  colour? </A>
+  <DT>42. <A TARGET="_top" HREF="#RTFToC42">What's a colour management system?
+  </A>
+  <DT>43. <A TARGET="_top" HREF="#RTFToC43">How does a CMS know about particular
+  devices? </A>
+  <DT>44. <A TARGET="_top" HREF="#RTFToC44">Is a colour management system
+  useful for colour specification? </A>
+  <DT>45. <A TARGET="_top" HREF="#RTFToC45">I'm not a colour expert. What
+  parameters should I use to code my images? </A>
+  <DT>46. <A TARGET="_top" HREF="#RTFToC46">References</A>
+  <DT>47. <A TARGET="_top" HREF="#RTFToC47">Contributors </A>
+</DL>
+
+<H1><A NAME="RTFToC0"></A>0. Where does this document live?</H1>
+
+<P>This document resides in Toronto, linked from my
+<A TARGET="_top" HREF="http://www.poynton.com/ColorFAQ.html">ColorFAQ
+page &lt;http://www.poynton.com/ColorFAQ.html&gt;</A>.
+Should you wish to make a link to the Colour FAQ, link to that page, not
+directly to this one. This will allow me the flexibility to move it, and
+avoid the nuisance of stale links.</P>
+
+<P>If you have an Acrobat Reader, or if you would like to print this document,
+I recommend that you obtain the <A TARGET="_top" HREF="../../PDFs/ColorFAQ.pdf">Acrobat
+PDF version (277356 bytes)</A>
+of this note. You can find
+<A TARGET="_top" HREF="../../Poynton-formats.html">information about document formats</A>.</P>
+
+<P>I retain copyright to this note. You have permission to use it, but you
+may not publish it.</P>
+
+<P>&nbsp;</P>
+
+<H1><A NAME="RTFToC1"></A>1. What is colour?</H1>
+
+<P>Colour is the perceptual result of light in the visible region of the
+spectrum, having wavelengths in the region of 400&nbsp; nm to 700&nbsp;
+nm, incident upon the retina. Physical power (or <I>radiance</I>) is expressed
+in a <I>spectral power distribution</I> (SPD), often in 31 components each
+representing a 10&nbsp; nm band.</P>
+
+<P>The human retina has three types of colour photoreceptor <I>cone </I>cells,
+which respond to incident radiation with somewhat different spectral response
+curves. A fourth type of photoreceptor cell, the <I>rod</I>, is also present
+in the retina. Rods are effective only at extremely low light levels (colloquially,
+<I>night vision</I>), and although important for vision play no role in
+image reproduction.</P>
+
+<P>Because there are exactly three types of colour photoreceptor, three
+numerical components are necessary and sufficient to describe a colour,
+providing that appropriate spectral weighting functions are used. This is
+the concern of the science of <I>colorimetry</I>. In 1931, the Commission
+Internationale de L'&Eacute;clairage (CIE) adopted standard curves for a
+hypothetical <I>Standard Observer</I>. These curves specify how an SPD can
+be transformed into a set of three numbers that specifies a colour.</P>
+
+<P>The CIE system is immediately and almost universally applicable to self-luminous
+sources and displays. However the colours produced by reflective systems
+such as photography, printing or paint are a function not only of the colourants
+but also of the SPD of the ambient illumination. If your application has
+a strong dependence upon the spectrum of the illuminant, you may have to
+resort to spectral matching.</P>
+
+<P>Sir Isaac Newton said, &#34;Indeed rays, properly expressed, are not
+coloured.&#34; SPDs exist in the physical world, but colour exists only
+in the eye and the brain.</P>
+
+<H1><A NAME="RTFToC2"></A>2. What is intensity?</H1>
+
+<P>Intensity is a measure over some interval of the electromagnetic spectrum
+of the flow of power. Intensity
+is what I call a <I>linear-light</I> measure. The standard SI unit for
+luminous intensity is the <I>candela</I> (cd).</P>
+
+<P>The voltages presented to a CRT monitor control the intensities of the
+colour components, but in a nonlinear manner. CRT voltages are not proportional
+to intensity.</P>
+
+<P>For information on issues of nomenclature and units surrounding <I>intensity,</I>
+See the article <A HREF="http://www.optics.arizona.edu/Palmer/intenopn.html">Getting
+Intense on Intensity,</A> by <A HREF="http://www.optics.arizona.edu/Palmer/">James
+M. Palmer</A>. You might be interested in his
+<A HREF="http://www.optics.arizona.edu/Palmer/rpfaq/rpfaq.htm" TARGET="_top"><I>FAQ
+on Radiometry and Photometry.</I></A></P>
+
+<H1><A NAME="RTFToC3"></A>3. What is luminance?</H1>
+
+<P><I>Brightness</I> is defined by the CIE as <I>the attribute of a visual
+sensation according to which an area appears to emit more or less light</I>.
+Because brightness perception is very complex, the CIE defined a more tractable
+quantity <I>luminance</I> which is radiant power weighted by a spectral
+sensitivity function that is characteristic of vision. The <I>luminous efficiency</I>
+of the Standard Observer is defined numerically, is everywhere positive,
+and peaks at about 555&nbsp; nm. When an SPD is integrated using this curve
+as a weighting function, the result is <I>CIE luminance</I>, denoted&nbsp;
+<I>Y</I>.</P>
+
+<P>The magnitude of luminance is proportional to physical power. In that
+sense it is like intensity. But the spectral composition of luminance is
+related to the brightness sensitivity of human vision.</P>
+
+<P>Strictly speaking, luminance should be expressed in a unit such as candelas
+per meter squared, but in practice it is often normalized to 1 or 100 units
+with respect to the luminance of a specified or implied<I> white</I> <I>reference</I>.
+For example, a studio broadcast monitor has a white reference whose luminance
+is about 100&nbsp; cd<B>*</B>m <sup>-2</sup>, and <I>Y&nbsp; </I>=&nbsp; 1 refers
+to this value. </P>
+
+<H1><A NAME="RTFToC4"></A>4. What is lightness?</H1>
+
+<P>Human vision has a nonlinear perceptual response to brightness: a source
+having a luminance only 18% of a reference luminance appears about half
+as bright. The perceptual response to luminance is called <I>Lightness</I>.
+It is denoted L<I>*</I> and is defined by the CIE as a modified cube root
+of luminance:<br><IMG SRC="L-star.gif" WIDTH="307" HEIGHT="52" ALIGN="BOTTOM"></P>
+
+<P>Yn is the luminance of the white reference. If you normalize luminance
+to reference white then you need not compute the fraction. The CIE definition
+applies a linear segment with a slope of 903.3 near black, for (Y/Yn)&nbsp;
+&lt;=&nbsp; 0.008856. The linear segment is unimportant for practical purposes
+but if you don't use it, make sure that you limit L* at zero. L* has a range
+of 0 to 100, and a &#34;delta L-star&#34; of unity is taken to be roughly
+the threshold of visibility.</P>
+
+<P>Stated differently, lightness perception is roughly logarithmic. An observer
+can detect an intensity difference between two patches when their intensities
+differ by more than one about percent.</P>
+
+<P>Video systems approximate the lightness response of vision using R'G'B'
+signals that are each subject to a 0.45 power function. This is comparable
+to the 1/3 power function defined by L*.</P>
+
+<H1><A NAME="RTFToC5"></A>5. What is hue?</H1>
+
+<P>According to the CIE <A TARGET="_top" HREF="#Ref1">[1]</A>, <I>hue is
+the attribute of a visual sensation according to which an area appears to
+be similar to one of the perceived colours, red, yellow, green and blue,
+or a combination of two of them</I>. Roughly speaking, if the dominant wavelength
+of an SPD shifts, the hue of the associated colour will shift.</P>
+
+<H1><A NAME="RTFToC6"></A>6. What is saturation?</H1>
+
+<P>Again from the CIE, <I>saturation is the colourfulness of an area judged
+in proportion to its brightness</I>. Saturation runs from neutral gray through
+pastel to saturated colours. Roughly speaking, the more an SPD is concentrated
+at one wavelength, the more saturated will be the associated colour. You
+can desaturate a colour by adding light that contains power at all wavelengths.</P>
+
+<H1><A NAME="RTFToC7"></A>7. How is colour specified?</H1>
+
+<P>The CIE system defines how to map an SPD to a <I>triple</I> of numerical
+components that are the mathematical coordinates of colour space. Their
+function is analagous to coordinates on a map. Cartographers have different
+map projections for different functions: some map projections preserve areas,
+others show latitudes and longitudes as straight lines. No single map projection
+fills all the needs of map users. Similarly, no single colour system fills
+all of the needs of colour users.</P>
+
+<P>The systems useful today for colour specification include CIE&nbsp; XYZ,
+CIE&nbsp; xyY, CIE&nbsp; L*u*v* and CIE&nbsp; L*a*b*. Numerical values of
+hue and saturation are not very useful for colour specification, for reasons
+to be discussed in <A TARGET="_top" HREF="#RTFToC36">section 36</A>.</P>
+
+<P>A colour specification system needs to be able to represent any colour
+with high precision. Since few colours are handled at a time, a specification
+system can be computationally complex. Any system for colour specification
+must be intimately related to the CIE specifications.</P>
+
+<P>You can specify a single &#34;spot&#34; colour using a <I>colour order
+system</I> such as Munsell. Systems like Munsell come with swatch books
+to enable visual colour matches, and have documented methods of transforming
+between coordinates in the system and CIE values. Systems like Munsell are
+not useful for image data. You can specify an ink colour by specifying the
+proportions of standard (or secret) inks that can be mixed to make the colour.
+That's how <FONT SIZE="-1">PANTONE[tm]</FONT> works. although widespread,
+it's proprietary. No translation to CIE is publicly available.</P>
+
+<H1><A NAME="RTFToC8"></A>8. Should I use a colour specification system
+for image data?</H1>
+
+<P>A digitized colour image is represented as an array of pixels, where
+each pixel contains numerical components that define a colour. Three components
+are necessary and sufficient for this purpose, although in printing it is
+convenient to use a fourth (black) component.</P>
+
+<P>In theory, the three numerical values for image coding could be provided
+by a colour specification system. But a practical image coding system needs
+to be computationally efficient, cannot afford unlimited precision, need
+not be intimately related to the CIE system and generally needs to cover
+only a reasonably wide range of colours and not all of the colours. So image
+coding uses different systems than colour specification.</P>
+
+<P>The systems useful for image coding are linear RGB, nonlinear R'G'B',
+nonlinear CMY, nonlinear CMYK, and derivatives of nonlinear R'G'B' such
+as Y'CBCR. Numerical values of hue and saturation are not useful in colour
+image coding.</P>
+
+<P>If you manufacture cars, you have to match the colour of paint on the
+door with the colour of paint on the fender. A colour specification system
+will be necessary. But to convey a picture of the car, you need image coding.
+You can afford to do quite a bit of computation in the first case because
+you have only two coloured elements, the door and the fender. In the second
+case, the colour coding must be quite efficient because you may have a million
+coloured elements or more.</P>
+
+<P>For a highly readable short introduction to colour image coding, see
+DeMarsh and Giorgianni <A TARGET="_top" HREF="#Ref2">[2]</A>. For a terse,
+complete technical treatment, read Schreiber <A TARGET="_top" HREF="#Ref3">[3]</A>.</P>
+
+<H1><A NAME="RTFToC9"></A>9. What weighting of red, green and blue corresponds
+to brightness?</H1>
+
+<P>Direct acquisition of luminance requires use of a very specific spectral
+weighting. However, luminance can also be computed as a weighted sum of
+red, green and blue components.</P>
+
+<P>If three sources appear red, green and blue, and have the same radiance
+in the visible spectrum, then the green will appear the brightest of the
+three because the luminous efficiency function peaks in the green region
+of the spectrum. The red will appear less bright, and the blue will be the
+darkest of the three. As a consequence of the luminous efficiency function,
+all saturated blue colours are quite dark and all saturated yellows are
+quite light. If luminance is computed from red, green and blue, the coefficients
+will be a function of the particular red, green and blue spectral weighting
+functions employed, but the green coefficient will be quite large, the red
+will have an intermediate value, and the blue coefficient will be the smallest
+of the three.</P>
+
+<P>Contemporary CRT phosphors are standardized in Rec.&nbsp; 709 <A TARGET="_top" HREF="#Ref8">[8]</A>, to be described in <A TARGET="_top" HREF="#RTFToC17">section
+17</A>. The weights to compute true CIE luminance from linear red, green
+and blue (indicated without prime symbols), for the Rec.&nbsp; 709, are
+these:</P>
+
+<P><IMG SRC="Y709_RGB.gif" WIDTH="228" HEIGHT="18" ALIGN="BOTTOM"
+ALT="Y709 = 0.2126*R + 0.7152*G + 0.0722*B"></P>
+
+<P>This computation assumes that the luminance spectral weighting can be
+formed as a linear combination of the scanner curves, and assumes that the
+component signals represent linear-light. Either or both of these conditions
+can be relaxed to some extent depending on the application.</P>
+
+<P>Some computer systems have computed brightness using (R+G+B)/3. This
+is at odds with the properties of human vision, as will be discussed under
+What are HSB and HLS? in <A TARGET="_top" HREF="#RTFToC36">section 36</A>.</P>
+
+<P>The coefficients 0.299, 0.587 and 0.114 properly computed luminance for
+monitors having phosphors that were contemporary at the introduction of
+NTSC television in 1953. They are still appropriate for computing video
+<I>luma</I> to be discussed below in <A TARGET="_top" HREF="#RTFToC11">section
+11</A>. However, these coefficients do not accurately compute luminance
+for contemporary monitors.</P>
+
+<H1><A NAME="RTFToC10"></A>10. Can blue be assigned fewer bits than red
+or green?</H1>
+
+<P>Blue has a small contribution to the brightness sensation. However, human
+vision has extraordinarily good colour discrimination capability in blue
+colours. So if you give blue fewer bits than red or green, you will introduce
+noticeable contouring in blue areas of your pictures.</P>
+
+<H1><A NAME="RTFToC11"></A>11. What is &#34;luma&#34;?</H1>
+
+<P>It is useful in a video system to convey a component representative of
+luminance and two other components representative of colour. It is important
+to convey the component representative of luminance in such a way that noise
+(or quantization) introduced in transmission, processing and storage has
+a perceptually similar effect across the entire tone scale from black to
+white. The ideal way to accomplish these goals would be to form a luminance
+signal by matrixing RGB, then subjecting luminance to a nonlinear transfer
+function similar to the L* function.</P>
+
+<P>There are practical reasons in video to perform these operations in the
+opposite order. First a nonlinear transfer function - <I>gamma correction</I>
+- is applied to each of the linear R, G and B. Then a weighted sum of the
+nonlinear components is computed to form a signal representative of luminance.
+The resulting component is related to brightness but is not CIE luminance.
+Many video engineers call it <CITE>luma</CITE> and give it the symbol <CITE>Y'</CITE>.
+It is often carelessly called <CITE>luminance</CITE> and given the symbol
+<CITE>Y</CITE>. You must be careful to determine whether a particular author
+assigns a linear or nonlinear interpretation to the term <CITE>luminance</CITE>
+and the symbol <CITE>Y</CITE>.</P>
+
+<P>The coefficients that correspond to the &#34;NTSC&#34; red, green and
+blue CRT phosphors of 1953 are standardized in ITU-R Recommendation BT.&nbsp;
+601-2 (formerly CCIR&nbsp; Rec.&nbsp; 601-2). I call it <I>Rec.&nbsp; 601</I>.
+To compute nonlinear video <I>luma</I> from nonlinear red, green and blue:</P>
+
+<P><IMG SRC="Y601_RGBprime.gif" WIDTH="217" HEIGHT="18" ALIGN="BOTTOM"></P>
+
+<P>The prime symbols in this equation, and in those to follow, denote nonlinear
+components.</P>
+
+<H1><A NAME="RTFToC12"></A>12. What are CIE XYZ components?</H1>
+
+<P>The CIE system is based on the description of colour as a luminance component
+Y, as described above, and two additional components X and Z. The spectral
+weighting curves of X and Z have been standardized by the CIE based on statistics
+from experiments involving human observers. XYZ <I>tristimulus values</I>
+can describe any colour. (RGB tristimulus values will be described later.)</P>
+
+<P>The magnitudes of the XYZ components are proportional to physical energy,
+but their spectral composition corresponds to the colour matching characteristics
+of human vision.</P>
+
+<P>The CIE system is defined in Publication CIE&nbsp; No&nbsp; 15.2, <I>Colorimetry,
+Second Edition</I> (1986) <A TARGET="_top" HREF="#Ref4">[4]</A>.</P>
+
+<H1><A NAME="RTFToC13"></A>13. Does my scanner use the CIE spectral curves?</H1>
+
+<P>Probably not. Scanners are most often used to scan images such as colour
+photographs and colour offset prints that are already &#34;records&#34;
+of three components of colour information. The usual task of a scanner is
+not spectral analysis but extraction of the values of the three components
+that have already been recorded. Narrowband filters are more suited to this
+task than filters that adhere to the principles of colorimetry.</P>
+
+<P>If you place on your scanner an original coloured object that has &#34;original&#34;
+SPDs that are not already a record of three components, chances are your
+scanner will not very report accurate RGB values. This is because most scanners
+do not conform very closely to CIE standards.</P>
+
+<H1><A NAME="RTFToC14"></A>14. What are CIE&nbsp; x and y chromaticity coordinates?</H1>
+
+<P>It is often convenient to discuss &#34;pure&#34; colour in the absence
+of brightness. The CIE defines a normalization process to compute &#34;little&#34;
+<I>x</I> and <I>y</I> <I>chromaticity coordinates: </I></P>
+
+<P><IMG SRC="xy_XYZ.gif" WIDTH="190" HEIGHT="33" ALIGN="BOTTOM"></P>
+
+<P>A colour plots as a point in an (<I>x,&nbsp; y</I>) <I>chromaticity diagram</I>.
+When a narrowband SPD comprising power at just one wavelength is swept across
+the range 400&nbsp; nm to 700&nbsp; nm, it traces a shark-fin shaped <I>spectral
+locus</I> in (<I>x,&nbsp; y</I>) coordinates. The sensation of purple cannot
+be produced by a single wavelength: to produce purple requires a mixture
+of shortwave and longwave light. The<I> line of purples</I> on a chromaticity
+diagram joins extreme blue to extreme red. All colours are contained in
+the area in (x,&nbsp; y) bounded by the line of purples and the spectral
+locus.</P>
+
+<P>A colour can be specified by its chromaticity and luminance, in the form
+of an <I>xyY</I> triple. To recover X and Z from chromaticities and luminance,
+use these relations:</P>
+
+<P><IMG SRC="XYZ_xyY.gif" WIDTH="193" HEIGHT="36" ALIGN="BOTTOM"></P>
+
+<P>The bible of colour science is Wyszecki and Styles, <I>Color Science</I>
+<A TARGET="_top" HREF="#Ref5">[5]</A>. But it's daunting. For Wyszecki's
+own condensed version, see <I>Color in Business, Science and Industry, Third
+Edition</I> <A TARGET="_top" HREF="#Ref6">[6]</A>. It is directed to the
+colour industry: ink, paint and the like. For an approachable introduction
+to the same theory, accompanied by descriptions of image reproduction, read
+R.W.G. Hunt, <I>The Reproduction of Colour </I><A TARGET="_top" HREF="#Ref7">[7]</A>. </P>
+
+<H1><A NAME="RTFToC15"></A>15. What is white?</H1>
+
+<P>In additive image reproduction, the <I>white point</I> is the chromaticity
+of the colour reproduced by equal red, green and blue components. White
+point is a function of the ratio (or <I>balance</I>) of power among the
+primaries. In subtractive reproduction, white is the SPD of the illumination,
+multiplied by the SPD of the media. There is no unique physical or perceptual
+definition of white, so to achieve accurate colour interchange you must
+specify the characteristics of your white.</P>
+
+<P>It is often convenient for purposes of calculation to define white as
+a uniform SPD. This white reference is known as the <I>equal-energy illuminant</I>,
+or <I>CIE Illuminant E</I>.</P>
+
+<P>A more realistic reference that approximates daylight has been specified
+numerically by the CIE as Illuminant D65. You should use this unless you
+have a good reason to use something else. The print industry commonly uses
+D50 and photography commonly uses D55. These represent compromises between
+the conditions of indoor (tungsten) and daylight viewing.</P>
+
+<H1><A NAME="RTFToC16"></A>16. What is colour temperature?</H1>
+
+<P>Planck determined that the SPD radiated from a hot object - a <I>black
+body radiator</I> - is a function of the temperature to which the object
+is heated. Many sources of illumination have, at their core, a heated object,
+so it is often useful to characterize an illuminant by specifying the temperature
+(in units of kelvin, K) of a black body radiator that appears to have the
+same hue.</P>
+
+<P>Although an illuminant can be specified informally by its colour temperature,
+a more complete specification is provided by the chromaticity coordinates
+of the SPD of the source.</P>
+
+<P>Modern blue CRT phosphors are more efficient with respect to human vision
+than red or green. In a quest for brightness at the expense of colour accuracy,
+it is common for a computer display to have excessive blue content, about
+twice as blue as daylight, with white at about 9300&nbsp; K.</P>
+
+<P>Human vision adapts to white in the viewing environment. An image viewed
+in isolation - such as a slide projected in a dark room - creates its own
+white reference, and a viewer will be quite tolerant of errors in the white
+point. But if the same image is viewed in the presence of an external white
+reference or a second image, then differences in white point can be objectionable.</P>
+
+<P>Complete adaptation seems to be confined to the range 5000&nbsp; K to
+5500&nbsp; K. For most people, D65 has a little hint of blue. Tungsten illumination,
+at about 3200&nbsp; K, always appears somewhat yellow.</P>
+
+<H1><A NAME="RTFToC17"></A>17. How can I characterize red, green and blue?</H1>
+
+<P>Additive reproduction is based on physical devices that produce all-positive
+SPDs for each primary. Physically and mathematically, the spectra add. The
+largest range of colours will be produced with primaries that appear red,
+green and blue. Human colour vision obeys the principle of superposition,
+so the colour produced by any additive mixture of three primary spectra
+can be predicted by adding the corresponding fractions of the XYZ components
+of the primaries: the colours that can be mixed from a particular set of
+RGB primaries are completely determined by the colours of the primaries
+by themselves. Subtractive reproduction is much more complicated: the colours
+of mixtures are determined by the primaries and by the colours of their
+combinations.</P>
+
+<P>An additive RGB system is specified by the chromaticities of its primaries
+and its white point. The extent (<I>gamut</I>) of the colours that can be
+mixed from a given set of RGB primaries is given in the (x,&nbsp; y) chromaticity
+diagram by a triangle whose vertices are the chromaticities of the primaries.</P>
+
+<P>In computing there are no standard primaries or white point. If you have
+an RGB image but have no information about its chromaticities, you cannot
+accurately reproduce the image.</P>
+
+<P>The NTSC in 1953 specified a set of primaries that were representative
+of phosphors used in colour CRTs of that era. But phosphors changed over
+the years, primarily in response to market pressures for brighter receivers,
+and by the time of the first the videotape recorder the primaries in use
+were quite different than those &#34;on the books&#34;. So although you
+may see the NTSC primary chromaticities documented, they are of no use today.</P>
+
+<P>Contemporary studio monitors have slightly different standards in North
+America, Europe and Japan. But international agreement has been obtained
+on primaries for high definition television (HDTV), and these primaries
+are closely representative of contemporary monitors in studio video, computing
+and computer graphics. The primaries and the D65 white point of <I>Rec.&nbsp;
+709</I> <A TARGET="_top" HREF="#Ref8">[8]</A> are:</P>
+
+<PRE>
+       R           G           B           white       
+x      0.640       0.300       0.150       0.3127      
+y      0.330       0.600       0.060       0.3290      
+z      0.030       0.100       0.790       0.3582    </PRE>
+
+<P>For a discussion of nonlinear RGB in computer graphics, see Lindbloom
+<A TARGET="_top" HREF="#Ref9">[9]</A>. For technical details on monitor
+calibration, consult Cowan <A TARGET="_top" HREF="#Ref10">[10]</A>.</P>
+
+<H1><A NAME="RTFToC18"></A>18. How do I transform between CIE&nbsp; XYZ
+and a particular set of RGB primaries?</H1>
+
+<P>RGB values in a particular set of primaries can be transformed to and
+from CIE&nbsp; XYZ by a three-by-three matrix transform. These transforms
+involve <I>tristimulus</I> <I>values</I>, that is, sets of three linear-light
+components that conform to the CIE colour matching functions. CIE&nbsp;
+XYZ is a special case of tristimulus values. In XYZ, any colour is represented
+by a positive set of values.</P>
+
+<P>Details can be found in <FONT SIZE="-1">SMPTE</FONT> RP&nbsp; 177-1993
+<A TARGET="_top" HREF="#Ref11">[11]</A>.</P>
+
+<P>To transform from CIE&nbsp; XYZ into Rec.&nbsp; 709 RGB (with its D65
+white point), use this transform:</P>
+
+<P><IMG SRC="Rec709_XYZ.gif" WIDTH="321" HEIGHT="61" ALIGN="BOTTOM"></P>
+
+<P>This matrix has some negative coefficients: XYZ colours that are <I>out
+of gamut</I> for a particular RGB transform to RGB where one or more RGB
+components is negative or greater than unity.</P>
+
+<P>Here's the inverse transform. Because white is normalized to unity, the
+middle row sums to unity:</P>
+
+<P><IMG SRC="XYZ_Rec709.gif" WIDTH="294" HEIGHT="61" ALIGN="BOTTOM"></P>
+
+<P>To recover primary chromaticities from such a matrix, compute little
+<I>x</I> and <I>y</I> for each RGB column vector. To recover the white point,
+transform RGB=[1,&nbsp; 1,&nbsp; 1] to XYZ, then compute <I>x</I> and <I>y</I>.</P>
+
+<H1><A NAME="RTFToC19"></A>19. Is RGB always device-dependent?</H1>
+
+<P>Video standards specify abstract R'G'B' systems that are closely matched
+to the characteristics of real monitors. Physical devices that produce additive
+colour involve tolerances and uncertainties, but if you have a monitor that
+conforms to Rec.&nbsp; 709 within some tolerance, you can consider the monitor
+to be device-independent.</P>
+
+<P>The importance of Rec.&nbsp; 709 as an interchange standard in studio
+video, broadcast television and high definition television, and the perceptual
+basis of the standard, assures that its parameters will be used even by
+devices such as flat-panel displays that do not have the same physics as
+CRTs.</P>
+
+<H1><A NAME="RTFToC20"></A>20. How do I transform data from one set of RGB
+primaries to another?</H1>
+
+<P>RGB values in a system employing one set of primaries can be transformed
+into another set by a three-by-three linear-light matrix transform. Generally
+these matrices are normalized for a white point luminance of unity. For
+details, see <I>Television Engineering Handbook</I> <A TARGET="_top" HREF="#Ref12">[12]</A>.</P>
+
+<P>As an example, here is the transform from <FONT SIZE="-1">SMPTE</FONT>&nbsp;
+240M (or <FONT SIZE="-1">SMPTE</FONT> RP&nbsp; 145) RGB to Rec.&nbsp; 709:</P>
+
+<P><IMG SRC="Rec709_240M.gif" WIDTH="330" HEIGHT="61" ALIGN="BOTTOM"></P>
+
+<P>All of these terms are close to either zero or one. In a case like this,
+if the transform is computed in the nonlinear (gamma-corrected) R'G'B' domain
+the resulting errors will be insignificant.</P>
+
+<P>Here's another example. To transform EBU&nbsp; 3213 RGB to Rec.&nbsp;
+709:</P>
+
+<P><IMG SRC="Rec709_EBU.gif" WIDTH="324" HEIGHT="61" ALIGN="BOTTOM"></P>
+
+<P>Transforming among RGB systems may lead to an <I>out of gamut</I> RGB
+result where one or more RGB components is negative or greater than unity.</P>
+
+<H1><A NAME="RTFToC21"></A>21. Should I use RGB or XYZ for image synthesis?</H1>
+
+<P>Once light is on its way to the eye, any tristimulus-based system will
+work. But the interaction of light and objects involves spectra, not tristimulus
+values. In synthetic computer graphics, the calculations are actually simulating
+sampled SPDs, even if only three components are used. Details concerning
+the resultant errors are found in Hall <A TARGET="_top" HREF="#Ref13">[13]</A>.</P>
+
+<H1><A NAME="RTFToC22"></A>22. What is subtractive colour?</H1>
+
+<P>Subtractive systems involve coloured dyes or filters that absorb power
+from selected regions of the spectrum. The three filters are placed in tandem.
+A dye that appears cyan absobs longwave (red) light. By controlling the
+amount of cyan dye (or ink), you modulate the amount of red in the image.</P>
+
+<P>In physical terms the spectral transmission curves of the colourants
+multiply, so this method of colour reproduction should really be called
+&#34;multiplicative&#34;. Photographers and printers have for decades
+measured transmission in base-10 logarithmic <I>density</I> units, where
+transmission of unity corresponds to a density of 0, transmission of 0.1
+corresponds to a density of 1, transmission of 0.01 corresponds to a density
+of 2 and so on. When a printer or photographer computes the effect of filters
+in tandem, he subtracts density values instead of multiplying transmission
+values, so he calls the system <I>subtractive</I>.</P>
+
+<P>To achieve a wide range of colours in a subtractive system requires filters
+that appear coloured cyan, yellow and magenta (CMY). Cyan in tandem with
+magenta produces blue, cyan with yellow produces green, and magenta with
+yellow produces red. Smadar Nehab suggests this memory aid:</P>
+
+<P><IMG SRC="Smadar.gif" WIDTH="383" HEIGHT="88" ALIGN="BOTTOM"></P>
+
+<P>Additive primaries are at the top, subtractive at the bottom. On the
+left, magenta and yellow filters combine to produce red. On the right, red
+and green sources add to produce yellow.</P>
+
+<H1><A NAME="RTFToC23"></A>23. Why did my grade three teacher tell me that
+the primaries are red, yellow and blue?</H1>
+
+<P>To get a wide range of colours in an additive system, the primaries must
+appear red, green and blue (RGB). In a subtractive system the primaries
+must appear yellow, cyan and magenta (CMY). It is complicated to predict
+the colours produced when mixing paints, but roughly speaking, paints mix
+additively to the extent that they are opaque (like oil paints), and subtractively
+to the extent that they are transparent (like watercolours). This question
+also relates to colour names: your grade three &#34;red&#34; was probably
+a little on the magenta side, and &#34;blue&#34; was probably quite cyan.
+For a discussion of paint mixing from a computer graphics perspective, consult
+Haase <A TARGET="_top" HREF="#Ref14">[14]</A>.</P>
+
+<H1><A NAME="RTFToC24"></A>24. Is CMY just one-minus-RGB?</H1>
+
+<P>In a theoretical subtractive system, CMY filters could have spectral
+absorption curves with no overlap. The colour reproduction of the system
+would correspond exactly to additive colour reproduction using the red,
+green and blue primaries that resulted from pairs of filters in combination.</P>
+
+<P>Practical photographic dyes and offset printing inks have spectral absorption
+curves that overlap significantly. Most magenta dyes absorb mediumwave (green)
+light as expected, but incidentally absorb about half that amount of shortwave
+(blue) light. If reproduction of a colour, say brown, requires absorption
+of all shortwave light then the incidental absorption from the magenta dye
+is not noticed. But for other colours, the &#34;one minus RGB&#34; formula
+produces mixtures with much less blue than expected, and therefore produce
+pictures that have a yellow cast in the mid tones. Similar but less severe
+interactions are evident for the other pairs of practical inks and dyes.</P>
+
+<P>Due to the spectral overlap among the colourants, converting CMY using
+the &#34;one-minus-RGB&#34; method works for applications such as business
+graphics where accurate colour need not be preserved, but the method fails
+to produce acceptable colour images.</P>
+
+<P>Multiplicative mixture in a CMY system is mathematically nonlinear, and
+the effect of the unwanted absorptions cannot be easily analyzed or compensated.
+The colours that can be mixed from a particular set of CMY primaries cannot
+be determined from the colours of the primaries themselves, but are also
+a function of the colours of the sets of combinations of the primaries.</P>
+
+<P>Print and photographic reproduction is also complicated by nonlinearities
+in the response of the three (or four) channels. In offset printing, the
+physical and optical processes of <I>dot gain</I> introduce nonlinearity
+that is roughly comparable to gamma correction in video. In a typical system
+used for print, a black code of 128 (on a scale of 0 to 255) produces a
+reflectance of about 0.26, not the 0.5 that you would expect from a linear
+system. Computations cannot be meaningfully performed on CMY components
+without taking nonlinearity into account.</P>
+
+<P>For a detailed discussion of transferring colorimetric image data to
+print media, see Stone <A TARGET="_top" HREF="#Ref15">[15]</A>.</P>
+
+<H1><A NAME="RTFToC25"></A>25. Why does offset printing use black ink in
+addition to CMY?</H1>
+
+<P>Printing black by overlaying cyan, yellow and magenta ink in offset printing
+has three major problems. First, coloured ink is expensive. Replacing coloured
+ink by black ink - which is primarily carbon - makes economic sense. Second,
+printing three ink layers causes the printed paper to become quite wet.
+If three inks can be replaced by one, the ink will dry more quickly, the
+press can be run faster, and the job will be less expensive. Third, if black
+is printed by combining three inks, and mechanical tolerances cause the
+three inks to be printed slightly out of register, then black edges will
+suffer coloured tinges. Vision is most demanding of spatial detail in black
+and white areas. Printing black with a single ink minimizes the visibility
+of registration errors.</P>
+
+<P>Other printing processes may or may not be subject to similar constraints.</P>
+
+<H1><A NAME="RTFToC26"></A>26. What are colour differences?</H1>
+
+<P>This term is ambiguous. In its first sense, <I>colour difference</I>
+refers to numerical differences between colour specifications. The perception
+of colour differences in XYZ or RGB is highly nonuniform. The study of <I>perceptual
+uniformity</I> concerns numerical differences that correspond to colour
+differences at the threshold of perceptibility (<I>just noticeable differences</I>,
+or JNDs).</P>
+
+<P>In its second sense, <I>colour difference</I> refers to colour components
+where brightness is &#34;removed&#34;. Vision has poor response to spatial
+detail in coloured areas of the same luminance, compared to its response
+to luminance spatial detail. If data capacity is at a premium it is advantageous
+to transmit luminance with full detail and to form two <I>colour difference</I>
+components each having no contribution from luminance. The two colour components
+can then have spatial detail removed by filtering, and can be transmitted
+with substantially less information capacity than luminance.</P>
+
+<P>Instead of using a true luminance component to represent brightness,
+it is ubiquitous for practical reasons to use a <I>luma</I> signal that
+is computed nonlinearly as outlined above ( <I>What is luma? </I>).</P>
+
+<P>The easiest way to &#34;remove&#34; brightness information to form
+two colour channels is to subtract it. The luma component already contains
+a large fraction of the green information from the image, so it is standard
+to form the other two components by subtracting luma from nonlinear blue
+(to form B'-Y'<I> </I>) and by subtracting luma from nonlinear red (to form
+R'-Y'<I> </I>). These are called <I>chroma</I>.</P>
+
+<P>Various scale factors are applied to (B'-Y'<I> </I>) and (R'-Y'<I> </I>)
+for different applications. The Y'PBPR scale factors are optimized for
+component analog video. The Y'CBCR scaling is appropriate for component
+digital video such as studio video and MPEG. (JPEG is described in the
+literature as using Y'CBCR; however, no footroom or headroom are used
+for either luma or chroma. Luma is scaled to an excursion of 255. CB and CR
+run -128 to +127; code +128 is clipped.) Kodak's PhotoYCC[tm]
+uses scale factors optimized for the gamut of film colours. Y'UV scaling
+is appropriate as an intermediate step in the formation of composite NTSC
+or PAL video signals, but is not appropriate when the components are kept
+separate. The Y'UV nomenclature is now used rather loosely, and it sometimes
+denotes any scaling of (B'-Y'<I> </I>) and (R'-Y'<I> </I>). Y'IQ coding
+is obsolete.</P>
+
+<P>The subscripts in CBCR and PBPR are often written in lower case. I find
+this to compromise readability, so without introducing any ambiguity I write
+them in uppercase. Authors with great attention to detail sometimes &#34;prime&#34;
+these quantities to indicate their nonlinear nature, but because no practical
+image coding system employs linear colour differences I consider it safe
+to omit the primes.</P>
+
+<H1><A NAME="RTFToC27"></A>27. How do I obtain colour difference components
+from tristimulus values?</H1>
+
+<P>Here is the block diagram for luma/colour difference encoding and decoding:</P>
+
+<P><IMG SRC="lumacoldiff.gif" WIDTH="583" HEIGHT="306" ALIGN="BOTTOM"></P>
+
+<P>From linear XYZ - or linear R1 G1 B1 whose chromaticity coordinates are
+different from the interchange standard - apply a 3&nbsp;x&nbsp;3 matrix
+transform to obtain linear RGB according to the interchange primaries. Apply
+a nonlinear transfer function (&#34;gamma correction&#34;) to each of
+the components to get nonlinear R'G'B'. Apply a 3&nbsp;x&nbsp;3 matrix to
+obtain colour difference components such as Y'PBPR , Y'CBCR or PhotoYCC.
+If necessary, apply a colour subsampling filter to obtain subsampled colour
+difference components. To decode, invert the above procedure: run through
+the block diagram right-to-left using the inverse operations. If your monitor
+conforms to the interchange primaries, decoding need not explicitly use
+a transfer function or the tristimulus 3&nbsp;x&nbsp;3.</P>
+
+<P>The block diagram emphasizes that 3&nbsp;x&nbsp;3 matrix transforms are
+used for two distinctly different tasks. When someone hands you a 3&nbsp;x&nbsp;3,
+you have to ask for which task it is intended.</P>
+
+<H1><A NAME="RTFToC28"></A>28. How do I encode Y'PBPR components?</H1>
+
+<P>Although the following matrices could in theory be used for tristimulus
+signals, it is ubiquitous to use them with gamma-corrected signals.</P>
+
+<P>To encode Y'PBPR , start with the basic Y', (B'-Y'<I> </I>) and (R'-Y'<I>
+</I>) relationships:</P>
+
+<P><A NAME="Eq1"></A><I>Eq 1</I></P>
+
+<P><IMG SRC="Y601ByRy_RGBprime.gif" WIDTH="277" HEIGHT="61" ALIGN="BOTTOM"></P>
+
+<P>Y'PBPR components have unity excursion, where Y' ranges [0..+1] and each
+of PB and PR ranges [-0.5..+0.5]. The (B'-Y'<I> </I>) and (R'-Y'<I> </I>)
+rows need to be scaled by <IMG SRC="0.5div0.886.gif" ALIGN="MIDDLE" WIDTH="40" HEIGHT="33">
+and <IMG SRC="0.5div0.701.gif" ALIGN="MIDDLE" WIDTH="39" HEIGHT="33">. To encode from R'G'B'
+where reference black is 0 and reference white is +1:</P>
+
+<P><A NAME="Eq2"></A><I>Eq 2</I></P>
+
+<P><IMG SRC="YPbPr_RGB.gif" WIDTH="319" HEIGHT="61" ALIGN="BOTTOM"></P>
+
+<P>&nbsp;</P>
+
+<P>The first row comprises the luma coefficients; these sum to unity. The
+second and third rows each sum to zero, a necessity for colour difference
+components. The +0.5 entries reflect the maximum excursion of PB and PR
+of +0.5, for the blue and red primaries [0,&nbsp; 0,&nbsp; 1] and [1,&nbsp;
+0,&nbsp; 0].</P>
+
+<P>The inverse, decoding matrix is this:</P>
+
+<P><IMG SRC="RGBprime_YPbPr.gif" WIDTH="265" HEIGHT="61" ALIGN="BOTTOM"></P>
+
+<P>&nbsp;</P>
+
+<H1><A NAME="RTFToC29"></A>29. How do I encode Y'CBCR components from R'G'B'
+in [0, +1]?</H1>
+
+<P>Rec.&nbsp; 601 specifies eight-bit coding where Y' has an excursion of
+219 and an offset of +16. This coding places black at code 16 and white
+at code 235, reserving the extremes of the range for signal processing headroom
+and footroom. CB&nbsp; and CR have excursions of +/-112 and offset of +128,
+for a range of 16 through 240 inclusive.</P>
+
+<P>To compute Y'CBCR from R'G'B' in the range [0..+1], scale the rows of
+the matrix of Eq 2 by the factors 219, 224 and 224, corresponding to the
+excursions of each of the components:</P>
+
+<P><A NAME="Eq3"></A><I>Eq 3</I></P>
+
+<P><IMG SRC="YCbCr_RGBprime.gif" WIDTH="324" HEIGHT="61" ALIGN="BOTTOM"></P>
+
+<P>&nbsp;</P>
+
+<P>Summing the first row of the matrix yields 219, the luma excursion from
+black to white. The two entries of 112 reflect the positive CBCR extrema
+of the blue and red primaries.</P>
+
+<P>Clamp all three components to the range 1 through 254 inclusive, since
+Rec.&nbsp; 601 reserves codes 0 and 255 for synchronization signals.</P>
+
+<P>To recover R'G'B' in the range [0..+1] from Y'CBCR, use the inverse of
+Eq 3 above:</P>
+
+<P><IMG SRC="RGB_YCbCr.gif" WIDTH="411" HEIGHT="64" ALIGN="BOTTOM"></P>
+
+<P>This looks overwhelming, but the Y'CBCR components are integers in eight
+bits and the reconstructed R'G'B' are scaled down to the range [0..+1].</P>
+
+<H1><A NAME="RTFToC30"></A>30. How do I encode Y'CBCR components from computer
+R'G'B' ?</H1>
+
+<P>In computing it is conventional to use eight-bit coding with black at
+code 0 and white at 255. To encode Y'CBCR from R'G'B' in the range [0..255],
+using eight-bit binary arithmetic, scale the Y'CBCR matrix of Eq 3 by 256/255:</P>
+
+<P><IMG SRC="YCbCr_RGB255.gif" WIDTH="364" HEIGHT="61" ALIGN="BOTTOM"></P>
+
+<P>To decode R'G'B' in the range [0..255] from Rec.&nbsp; 601 Y'CBCR, using
+eight-bit binary arithmetic:</P>
+
+<P><A NAME="Eq4"></A><I>Eq 4</I></P>
+
+<P><IMG SRC="RGB255_YCbCr.gif" WIDTH="384" HEIGHT="64" ALIGN="BOTTOM"></P>
+
+<P>The multiplications by 1/256 can be accomplished by shifting. Some of
+the coefficients, when scaled by 1/256, are larger than unity. These coefficients
+will need more than eight multiplier bits.</P>
+
+<P>For implementation in binary arithmetic the matrix coefficients have
+to be rounded. When you round, take care to preserve the row sums of [1,&nbsp;
+0,&nbsp; 0].</P>
+
+<P>The matrix of Eq 4 will decode standard Y'CBCR components to RGB components
+in the range [0..255], subject to roundoff error. You must take care to
+avoid overflow due to roundoff error. But you must protect against overflow
+in any case, because studio video signals use the extremes of the coding
+range to handle signal overshoot and undershoot, and these will require
+clipping when decoded to an RGB range that has no headroom or footroom.</P>
+
+<H1><A NAME="RTFToC31"></A>31. How do I encode Y'CBCR components from studio
+video?</H1>
+
+<P>Studio R'G'B' signals use the same 219 excursion as the luma component
+of Y'CBCR.To encode Y'CBCR from R'G'B' in the range [0..219], using eight-bit
+binary arithmetic, scale the Y'CBCR encoding matrix of Eq 3 above by 256/219.
+Here is the encoding transform for studio video:</P>
+
+<P><IMG SRC="YCbCr_RGB219.gif" WIDTH="373" HEIGHT="61" ALIGN="BOTTOM"></P>
+
+<P>To decode R'G'B' in the range [0..219] from Y'CBCR, using eight-bit binary
+arithmetic:</P>
+
+<P><IMG SRC="RGB219_YCbCr.gif" WIDTH="357" HEIGHT="64" ALIGN="BOTTOM"></P>
+
+<P>The entries of 256 in this matrix indicate that the corresponding component
+can simply be added; there is no need for a multiplication operation. This
+matrix contains entries larger than 256; the corresponding multipliers will
+need capability for nine bits.</P>
+
+<P>The matrices in this section conform to Rec.&nbsp; 601 and apply directly
+to conventional 525/59.94 and 625/50 video. It is not yet decided whether
+emerging HDTV standards will use the same matrices, or adopt a new set of
+matrices having different luma coefficients. In my view it would be unfortunate
+if different matrices were adopted, because then image coding and decoding
+would depend on whether the picture was small (conventional video) or large
+(HDTV).</P>
+
+<P>In digital video, Rec.&nbsp; 601 standardizes subsampling denoted 4:2:2,
+where CB and CR components are subsampled horizontally by a factor of two
+with respect to luma. JPEG and MPEG conventionally subsample by a factor
+of two in the vertical dimension as well, denoted 4:2:0.</P>
+
+<P>Colour difference coding is standardized in Rec.&nbsp; 601. For details
+on colour difference coding as used in video, consult Watkinson <A TARGET="_top" HREF="#Ref16">[16]</A>.</P>
+
+<H1><A NAME="RTFToC32"></A>32. How do I decode R'G'B' from PhotoYCC[tm]?</H1>
+
+<P>Kodak's PhotoYCC uses the Rec.&nbsp; 709 primaries, white point and transfer
+function. Reference white codes to luma 189; this preserves film highlights.
+The colour difference coding is asymmetrical, to encompass film gamut. You
+are unlikely to encounter any raw image data in PhotoYCC form because YCC
+is closely associated with the PhotoCD[tm] system whose compression methods
+are proprietary. But just in case, the following equation is comparable
+to in that it produces R'G'B' in the range [0..+1] from integer YCC. If
+you want to return R'G'B' in a different range, or implement the equation
+in eight-bit integer arithmetic, use the techniques in the section above.</P>
+
+<P><IMG SRC="RGB709_PhotoYCC.gif" WIDTH="438" HEIGHT="64" ALIGN="BOTTOM"></P>
+
+<P>Decoded R'G'B' components from PhotoYCC can exceed unity or go below
+zero. PhotoYCC extends the Rec.&nbsp; 709 transfer function above unity,
+and reflects it around zero, to accommodate wide excursions of R'G'B'. To
+decode to CRT primaries, clip R'G'B' to the range zero to one.</P>
+
+<H1><A NAME="RTFToC33"></A>33. Will you tell me how to decode Y' UV and
+Y' IQ?</H1>
+
+<P>No, I won't! Y' UV and Y' IQ have scale factors appropriate to composite
+NTSC and PAL. They have no place in component digital video! You shouldn't
+code into these systems, and if someone hands you an image claiming it's
+Y' UV, chances are it's actually Y'CBCR, it's got the wrong scale factors,
+or it's linear-light.</P>
+
+<P>Well OK, just this once. To transform Y', (B'-Y') and (R'-Y') components
+from Eq 1 to Y'UV, scale (B'-Y') by 0.492111 to get U and scale R'-<I>Y'</I>
+by 0.877283 to get V. The factors are chosen to limit composite NTSC or
+PAL amplitude for all legal R'G'B' values:</P>
+
+<P><IMG SRC="UV_scaling.gif" WIDTH="340" HEIGHT="33" ALIGN="BOTTOM"></P>
+
+<P>To transform to Y' IQ to Y' UV, perform a 33 degree rotation and an exchange
+of colour difference axes:</P>
+
+<P><IMG SRC="YIQ_YUV.gif" WIDTH="267" HEIGHT="61" ALIGN="BOTTOM"></P>
+
+<P>&nbsp;</P>
+
+<H1><A NAME="RTFToC34"></A>34. How should I test my encoders and decoders?</H1>
+
+<P>To test your encoding and decoding, ensure that colourbars are handled
+correctly. A colourbar signal comprises a binary RGB sequence ordered for
+decreasing luma: white, yellow, cyan, green, magenta, red, blue and black.</P>
+
+<P><IMG SRC="colorbar_matrix.gif" WIDTH="162" HEIGHT="61" ALIGN="BOTTOM"></P>
+
+<P>To ensure that your scale factors are correct and that clipping is not
+being invoked, test 75% bars, a colourbar sequence having 75%-amplitude
+bars instead of 100%.</P>
+
+<H1><A NAME="RTFToC35"></A>35. What is perceptual uniformity?</H1>
+
+<P>A system is <I>perceptually uniform</I> if a small perturbation to a
+component value is approximately equally perceptible across the range of
+that value. The volume control on your radio is designed to be perceptually
+uniform: rotating the knob ten degrees produces approximately the same perceptual
+increment in volume anywhere across the range of the control. If the control
+were physically linear, the logarithmic nature of human loudness perception
+would place all of the perceptual &#34;action&#34; of the control at the
+bottom of its range.</P>
+
+<P>The XYZ and RGB systems are far from exhibiting perceptual uniformity.
+Finding a transformation of XYZ into a reasonably perceptually-uniform space
+consumed a decade or more at the CIE and in the end no single system could
+be agreed. So the CIE standardized two systems, <I>L*u*v*</I> and <I>L*a*b*</I>,
+sometimes written <FONT SIZE="-1">CIELUV</FONT> and <FONT SIZE="-1">CIELAB</FONT>.
+(The u and v are unrelated to video U and V.) Both <I>L*u*v*</I> and <I>L*a*b*</I>
+improve the 80:1 or so perceptual nonuniformity of XYZ to about 6:1. Both
+demand too much computation to accommodate real-time display, although both
+have been successfully applied to image coding for printing.</P>
+
+<P>Computation of CIE&nbsp; L*u*v* involves intermediate u' and v ' quantities,
+where the prime denotes the successor to the obsolete 1960 CIE u and v system:</P>
+
+<P><IMG SRC="uvprime_XYZ.gif" WIDTH="328" HEIGHT="37" ALIGN="BOTTOM"></P>
+
+<P>First compute un' and vn' for your reference white Xn , Yn and Zn . Then
+compute u' and v ` - and L* as discussed earlier - for your colours. Finally,
+compute:</P>
+
+<P><IMG SRC="uvstar_Luvprime.gif" WIDTH="321" HEIGHT="22" ALIGN="BOTTOM"></P>
+
+<P><I>L*a*b*</I> is computed as follows, for (X/Xn, Y/Yn, Z/Zn )&nbsp; &gt;&nbsp;
+0.01:</P>
+
+<P><IMG SRC="abstar_XYZ.gif" WIDTH="376" HEIGHT="67" ALIGN="BOTTOM"></P>
+
+<P>These equations are great for a few spot colours, but no fun for a million
+pixels. Although it was not specifically optimized for this purpose, the
+nonlinear R'G'B' coding used in video is quite perceptually uniform, and
+has the advantage of being fast enough for interactive applications.</P>
+
+<H1><A NAME="RTFToC36"></A>36. What are HSB and HLS?</H1>
+
+<P>HSB and HLS were developed to specify numerical Hue, Saturation and Brightness
+(or Hue, Lightness and Saturation) in an age when users had to specify colours
+numerically. The usual formulations of HSB and HLS are flawed with respect
+to the properties of colour vision. Now that users can choose colours visually,
+or choose colours related to other media (such as <FONT SIZE="-1">PANTONE</FONT>),
+or use perceptually-based systems like L*u*v* and L*a*b*, HSB and HLS should
+be abandoned.</P>
+
+<P>Here are some of problems of HSB and HLS. In colour selection where &#34;lightness&#34;
+runs from zero to 100, a lightness of 50 should appear to be half as bright
+as a lightness of 100. But the usual formulations of HSB and HLS make no
+reference to the linearity or nonlinearity of the underlying RGB, and make
+no reference to the lightness perception of human vision.</P>
+
+<P>The usual formulation of HSB and HLS compute so-called &#34;lightness&#34;
+or &#34;brightness&#34; as (R+G+B)/3. This computation conflicts badly
+with the properties of colour vision, as it computes yellow to be about
+six times more intense than blue with the same &#34;lightness&#34; value
+(say L=50).</P>
+
+<P>HSB and HSL are not useful for image computation because of the discontinuity
+of hue at 360 degrees. You cannot perform arithmetic mixtures of colours
+expressed in polar coordinates.</P>
+
+<P>Nearly all formulations of HSB and HLS involve different computations
+around 60 degree segments of the hue circle. These calculations introduce
+visible discontinuities in colour space.</P>
+
+<P>Although the claim is made that HSB and HLS are &#34;device independent&#34;,
+the ubiquitous formulations are based on RGB components whose chromaticities
+and white point are unspecified. Consequently, HSB and HLS are useless for
+conveyance of accurate colour information.</P>
+
+<P>If you really need to specify hue and saturation by numerical values,
+rather than HSB and HSL you should use polar coordinate version of u* and
+v*: h*uv for hue angle and c*uv for chroma.</P>
+
+<H1><A NAME="RTFToC37"></A>37. What is true colour?</H1>
+
+<P><I>True colour</I> is the provision of three separate components for
+additive red, green and blue reproduction. True colour systems often provide
+eight bits for each of the three components, so true colour is sometimes
+referred to as <I>24-bit colour</I>.</P>
+
+<P>A true colour system usually interposes a lookup table between each component
+of the framestore and each channel to the display. This makes it possible
+to use a true colour system with either linear or nonlinear coding. In the
+X Window System, <I>true colour</I> refers to fixed lookup tables, and <I>direct
+colour</I> refers to lookup tables that are under the control of application
+software.</P>
+
+<H1><A NAME="RTFToC38"></A>38. What is indexed colour?</H1>
+
+<P><I>Indexed colour</I> (or <I>pseudocolour)</I>, is the provision of a
+relatively small number, say 256, of discrete colours in a <I>colormap</I>
+or <I>palette</I>. The framebuffer stores, at each pixel, the index number
+of a colour. At the output of the framebuffer, a lookup table uses the index
+to retrieve red, green and blue components that are then sent to the display.</P>
+
+<P>The colours in the map may be fixed systematically at the design of a
+system. As an example, 216 index entries an eight-bit indexed colour system
+can be partitioned systematically into a 6&nbsp;x&nbsp;6&nbsp;x&nbsp;6 &#34;cube&#34;
+to implement what amounts to a direct colour system where each of red, green
+and blue has a value that is an integer in the range zero to five.</P>
+
+<P>An RGB image can be converted to a predetermined colormap by choosing,
+for each pixel in the image, the colormap index corresponding to the &#34;closest&#34;
+RGB triple. With a systematic colormap such as a 6&nbsp;x&nbsp;6&nbsp;x&nbsp;6
+colourcube this is straightforward. For an arbitrary colormap, the colormap
+has to be searched looking for entries that are &#34;close&#34; to the
+requested colour. &#34;Closeness&#34; should be determined according to
+the perceptibility of colour differences. Using colour systems such as CIE&nbsp;
+L*u*v* or L*a*b* is computationally prohibitive, but in practice it is adequate
+to use a Euclidean distance metric in R'G'B' components coded nonlinearly
+according to video practice.</P>
+
+<P>A direct colour image can be converted to indexed colour with an image-dependent
+colormap by a process of colour quantization that searches through all of
+the triples used in the image, and chooses the palette for the image based
+on the colours that are in some sense most &#34;important&#34;. Again,
+the decisions should be made according to the perceptibility of colour differences.
+Adobe Photoshop[tm] can perform this conversion. UNIX[tm] users can employ
+the <I>pbm</I> package.</P>
+
+<P>If your system accommodates arbitrary colormaps, when the map associated
+with the image in a particular window is loaded into the hardware colormap,
+the maps associated with other windows may be disturbed. In window system
+such as the X&nbsp; Window System[tm] running on a multitasking operating
+system such as UNIX, even moving the cursor between two windows with different
+maps can cause annoying <I>colormap flashing</I>.</P>
+
+<P>An eight-bit indexed colour system requires less data to represent a
+picture than a twenty-four bit truecolour system. But this data reduction
+comes at a high price. The truecolour system can represent each of its three
+components according to the principles of sampled continuous signals. This
+makes it possible to accomplish, with good quality, operations such as resizing
+the image. In indexed colour these operations introduce severe artifacts
+because the underlying representation lacks the properties of a continuous
+representation, even if converted back to RGB.</P>
+
+<P>In graphic file formats such as GIF of TIFF, an indexed colour image
+is accompanied by its colormap. Generally such a colormap has RGB entries
+that are gamma corrected: the colormap's RGB codes are intended to be presented
+directly to a CRT, without further gamma correction.</P>
+
+<H1><A NAME="RTFToC39"></A>39. I want to visualize a scalar function of
+two variables. Should I use RGB values corresponding to the colours of the
+rainbow?</H1>
+
+<P>When you look at a rainbow you do not see a smooth gradation of colours.
+Instead, some bands appear quite narrow, and others are quite broad. Perceptibility
+of hue variation near 540&nbsp; nm is half that of either 500&nbsp; nm or
+600&nbsp; nm. If you use the rainbow's colours to represent data, the visibility
+of differences among your data values will depend on where they lie in the
+spectrum.</P>
+
+<P>If you are using colour to aid in the visual detection of patterns, you
+should use colours chosen according to the principles of perceptual uniformity.
+This an open research problem, but basing your system on CIE L*a*b* or L*u*v*,
+or on nonlinear video-like RGB, would be a good start.</P>
+
+<H1><A NAME="RTFToC40"></A>40. What is dithering?</H1>
+
+<P>A display device may have only a small number of choices of greyscale
+values or colour values at each device pixel. However if the viewer is sufficiently
+distant from the display, the value of neighboring pixels can be set so
+that the viewer's eye integrates several pixels to achieve an apparent improvement
+in the number of levels or colours that can be reproduced.</P>
+
+<P>Computer displays are generally viewed from distances where the device
+pixels subtend a rather large angle at the viewer's eye, relative to his
+visual acuity. Applying dither to a conventional computer display often
+introduces objectionable artifacts. However, careful application of dither
+can be effective. For example, human vision has poor acuity for blue spatial
+detail but good colour discrimination capability in blue. Blue can be dithered
+across two-by-two pixel arrays to produce four times the number of blue
+levels, with no perceptible penalty at normal viewing distances.</P>
+
+<H1><A NAME="RTFToC41"></A>41. How does halftoning relate to colour?</H1>
+
+<P>The processes of offset printing and conventional laser printing are
+intrinsically <I>bilevel</I>: a particular location on the page is either
+covered with ink or not. However, each of these devices can reproduce closely-spaced
+dots of variable size. An array of small dots produces the perception of
+light gray, and an array of large dots produces dark gray. This process
+is called <I>halftoning</I> or <I>screening</I>. In a sense this is dithering,
+but with device dots so small that acceptable pictures can be produced at
+reasonable viewing distances.</P>
+
+<P>Halftone dots are usually placed in a regular grid, although <I>stochastic
+screening</I> has recently been introduced that modulates the spacing of
+the dots rather than their size.</P>
+
+<P>In colour printing it is conventional to use cyan, magenta, yellow and
+black grids that have exactly the same dot pitch but different carefully-chosen
+<I>screen angles</I>. The recently introduced technique of <I>Flamenco </I>screening
+uses the same screen angles for all screens, but its registration requirements
+are more stringent than conventional offset printing.</P>
+
+<P>Agfa's booklet <A TARGET="_top" HREF="#Ref17">[17]</A><I> </I>is an excellent
+introduction to practical concerns of printing. And it's in colour! The&nbsp;
+standard reference to halftoning algorithms is Ulichney <A TARGET="_top" HREF="#Ref18">[18]</A>, but that work does not detail the nonlinearities
+found in practical printing systems. For details about screening for colour
+reproduction, consult Fink <A TARGET="_top" HREF="#Ref19">[19]</A>. Consult
+<I>Frequently Asked Questions about Gamma</I> for an introduction to the
+transfer function of offset printing.</P>
+
+<H1><A NAME="RTFToC42"></A>42. What's a colour management system?</H1>
+
+<P>Software and hardware for scanner, monitor and printer calibration have
+had limited success in dealing with the inaccuracies of colour handling
+in desktop computing. These solutions deal with specific pairs of devices
+but cannot address the end-to-end system. Certain application developers
+have added colour transformation capability to their applications, but the
+majority of application developers have insufficient expertise and insufficient
+resources to invest in accurate colour.</P>
+
+<P>A <I>colour management system</I> (CMS) is a layer of software resident
+on a computer that negotiates colour reproduction between the application
+and colour devices. It cooperates with the operating system and the graphics
+library components of the platform software. Colour management systems perform
+the colour transformations necessary to exchange accurate colour between
+diverse devices, in various colour coding systems including RGB, CMYK and
+CIE&nbsp; L*a*b*.</P>
+
+<P>The CMS makes available to the application a set of facilities whereby
+the application can determine what colour devices and what colour spaces
+are available. When the application wishes to access a particular device,
+it requests that the colour manager perform a mathematical <I>transform</I>
+from one space to another. The colour spaces involved can be device-independent
+<I>abstract</I> colour spaces such as CIE&nbsp; XYZ, CIE&nbsp; L*a*b* or
+calibrated RGB. Alternatively a colour space can be associated with a particular
+device. In the second case the Colour manager needs access to characterization
+data for the device, and perhaps also to <I>calibration</I> data that reflects
+the state of the particular instance of the device.</P>
+
+<P>Sophisticated colour management systems are commercially available from
+Kodak, Electronics for Imaging (EFI) and Agfa. Apple's ColorSync[tm] provides
+an interface between a Mac application program and colour management capabilities
+either built-in to ColorSync or provided by a plug-in. Sun has announced
+that Kodak's CMS will be shipped with the next version of Solaris.</P>
+
+<P>The basic CMS services provided with desktop operating systems are likely
+to be adequate for office users, but are unlikely to satisfy high-end users
+such as in prepress. All of the announced systems have provisions for plug-in
+<I>colour management modules</I> (CMMs) that can provide sophisticated transform
+machinery. Advanced colour management modules will be commercially available
+from third parties.</P>
+
+<H1><A NAME="RTFToC43"></A>43. How does a CMS know about particular devices?</H1>
+
+<P>A CMS needs access to information that characterizes the colour reproduction
+capabilities of particular devices. The set of characterization data for
+a device is called a <I>device profile</I>. Industry agreement has been
+reached on the format of device profiles, although details have not yet
+been publicly disseminated. Apple has announced that the forthcoming ColorSync
+version 2.0 will adhere to this agreement. Vendors of colour peripherals
+will soon provide industry-standard profiles with their devices, and they
+will have to make, buy or rent characterization services.</P>
+
+<P>If you have a device that has not been characterized by its manufacturer,
+Agfa's FotoTune[tm] software - part of Agfa's FotoFlow[tm] colour manager
+- can create device profiles.</P>
+
+<H1><A NAME="RTFToC44"></A>44. Is a colour management system useful for
+colour specification?</H1>
+
+<P>Not yet. But colour management system interfaces in the future are likely
+to include the ability to accommodate commercial proprietary colour specification
+systems such as <FONT SIZE="-1">PANTONE</FONT>[tm] and <FONT SIZE="-1">COLORCURVE</FONT>[tm].
+These vendors are likely to provide their colour specification systems in
+shrink-wrapped form to plug into colour managers. In this way, users will
+have guaranteed colour accuracy among applications and peripherals, and
+application vendors will no longer need to pay to license these systems
+individually.</P>
+
+<H1><A NAME="RTFToC45"></A>45. I'm not a colour expert. What parameters
+should I use to code my images?</H1>
+
+<P>Use the CIE&nbsp; D65 white point (6504&nbsp; K) if you can.</P>
+
+<P>Use the Rec.&nbsp; 709 primary chromaticities. Your monitor is probably
+already quite close to this. Rec.&nbsp; 709 has international agreement,
+offers excellent performance, and is the basis for HDTV development so it's
+future-proof.</P>
+
+<P>If you need to operate in linear light, so be it. Otherwise, for best
+perceptual performance and maximum ease of interchange with digital video,
+use the Rec.&nbsp; 709 transfer function, with its 0.45-power law. If you
+need Mac compatibility you will have to suffer a penalty in perceptual performance.
+Raise tristimulus values to the 1/1.8-power before presenting them to QuickDraw.</P>
+
+<P>To code luma, use the Rec.&nbsp; 601 luma coefficients 0.299, 0.587 and
+0.114. Use Rec.&nbsp; 601 digital video coding with black at 16 and white
+at 235.</P>
+
+<P>Use prime symbols ( ' ) to denote all of your nonlinear components!</P>
+
+<P>PhotoCD uses all of the preceding measures. PhotoCD codes colour differences
+asymmetrically, according to film gamut. Unless you have a requirement for
+film gamut, you should code into colour differences using Y ` CBCR coding
+with Rec.&nbsp; 601 studio video (16..235/128+/-112) excursion.</P>
+
+<P>Tag your image data with the primary and white chromaticity, transfer
+function and luma coefficients that you are using. TIFF&nbsp; 6.0 tags have
+been defined for these parameters. This will enable intelligent readers,
+today or in the future, to determine the parameters of your coded image
+and give you the best possible results.</P>
+
+<H1><A NAME="RTFToC46"></A>46. References</H1>
+
+<P><A NAME="Ref1"></A><B>[1]</B> Publication CIE&nbsp; No&nbsp; 17.4, I<I>nternational
+Lighting Vocabulary</I>. Central Bureau of the Commission Internationale
+de L'&Eacute;clairage, Vienna, Austria.</P>
+
+<P><A NAME="Ref2"></A><B>[2]</B> LeRoy E. DeMarsh and Edward J. Giorgianni,
+&#34;Color Science for Imaging Systems&#34;, <I>Physics Today</I>, September
+1989, 44-52.</P>
+
+<P><A NAME="Ref3"></A><B>[3]</B> W.F. Schreiber, <I>Fundamentals of Electronic
+Imaging Systems</I>, <I>Second Edition</I> (Springer-Verlag, 1991).</P>
+
+<P><A NAME="Ref4"></A><B>[4]</B> Publication CIE&nbsp; No&nbsp; 15.2, <I>Colorimetry,
+Second Edition</I> (1986), Central Bureau of the Commission Internationale
+de L'&Eacute;clairage, Vienna, Austria.</P>
+
+<P><A NAME="Ref5"></A><B>[5]</B> G&uuml;nter Wyszecki and W.S. Styles, <I>Color
+Science: Concepts and Methods, Quantitative Data and Formulae, Second Edition</I>
+(John Wiley &amp; Sons, New York, 1982).</P>
+
+<P><A NAME="Ref6"></A><B>[6]</B> D.B. Judd and G&uuml;nter Wyszecki, <I>Color
+in Business, Science and Industry, Third Edition</I> (John Wiley, New York,
+1975).</P>
+
+<P><A NAME="Ref7"></A><B>[7]</B> R.W.G. Hunt, <I>The Reproduction of Colour
+in Photography, Printing and Television</I>, <I>Fifth Edition </I>(Fountain
+Press, Tolworth, England, 1995).</P>
+
+<P><A NAME="Ref8"></A><B>[8]</B> ITU-R Recommendation&nbsp; BT.709, <I>Basic
+Parameter Values for the HDTV Standard for the Studio and for International
+Programme Exchange</I> (1990), [formerly CCIR Rec.&nbsp; 709], ITU, 1211&nbsp;
+Geneva&nbsp; 20, Switzerland.</P>
+
+<P><A NAME="Ref9"></A><B>[9]</B> Bruce J. Lindbloom, &#34;Accurate Color
+Reproduction for Computer Graphics Applications&#34;, <I>Computer Graphics</I>,
+Vol.&nbsp; <B>23</B>, No.&nbsp; 3 (July&nbsp; 1989), 117-126 (proceedings
+of <FONT SIZE="-1">SIGGRAPH</FONT>&nbsp; '89).</P>
+
+<P><A NAME="Ref10"></A><B>[10]</B> William B. Cowan, &#34;An Inexpensive
+Scheme for Calibration of a Colour Monitor in terms of CIE Standard Coordinates&#34;,
+<I>Computer Graphics</I>, Vol.&nbsp; <B>17</B>, No.&nbsp; 3 (July&nbsp;
+1983), 315-321.</P>
+
+<P><A NAME="Ref11"></A><B>[11]</B> <FONT SIZE="-1">SMPTE</FONT> RP&nbsp; 177-1993,
+<I>Derivation of Basic Television Color Equations</I>.</P>
+
+<P><A NAME="Ref12"></A><B>[12]</B> <I>Television Engineering Handbook, Featuring
+HDTV Systems, Revised Edition</I> by K. Blair Benson, revised by Jerry C.
+Whitaker (McGraw-Hill, 1992). This supersedes the Second Edition.</P>
+
+<P><A NAME="Ref13"></A><B>[13]</B> Roy Hall, <I>Illumination and Color in
+Computer Generated Imagery</I> (Springer-Verlag, 1989).</P>
+
+<P><A NAME="Ref14"></A><B>[14]</B> Chet S. Haase and Gary W. Meyer, &#34;Modelling 
+Pigmented Materials for Realistic Image Synthesis&#34;, <I>ACM Transactions
+on Graphics</I>, Vol.&nbsp; <B>11</B>, No.&nbsp; 4, 1992, p.&nbsp; 305.</P>
+
+<P><A NAME="Ref15"></A><B>[15]</B> Maureen C. Stone, William B. Cowan and
+John C. Beatty, &#34;Color Gamut Mapping and the Printing of Digital Color
+Images&#34;, <I>ACM Transactions on Graphics</I>, Vol.&nbsp; <B>7</B>,
+No.&nbsp; 3, October&nbsp; 1988.</P>
+
+<P><A NAME="Ref16"></A><B>[16]</B> John Watkinson, <I>An Introduction to
+Digital Video</I> (Focal Press, Sevenoaks, Kent, England, 1994).</P>
+
+<P><A NAME="Ref17"></A><B>[17]</B> Agfa Corporation<I>, An introduction
+to Digital Color Prepress, Volumes 1 and 2 (</I>1990), Prepress Education
+Resources, P.O.&nbsp; Box&nbsp; 7917 Mt.Prospect, IL&nbsp; 60056-7917. 800-395-7007.</P>
+
+<P><A NAME="Ref18"></A><B>[18]</B> Robert Ulichney, <I>Digital Halftoning</I>
+(MIT Press, Cambridge, MA, 1988).</P>
+
+<P><A NAME="Ref19"></A><B>[19]</B> Peter Fink, <I>PostScript Screening:
+Adobe Accurate Screens</I> (Adobe Press, 1992).</P>
+
+<H1><A NAME="RTFToC47"></A>47. Contributors</H1>
+
+<P>Thanks to Norbert Gerfelder, Alan Roberts, and Fred Remley for their proofreading
+and editing. I learned about colour from LeRoy DeMarsh, Ed Giorgianni, Junji
+Kumada, and Bill Cowan. Thanks!</P>
+
+<P>This note contains some errors: if you find any, please let me know.</P>
+
+<P>I&nbsp; welcome suggestions for additions and improvements.</P>
+
+<P>&nbsp;</P>
+
+<ADDRESS><A TARGET="_top" HREF="../../index.html">Poynton</A> -
+<A TARGET="_top" HREF="../../Poynton-color.html">Color page</A><BR>
+2006-11-28a</ADDRESS>
+</BODY>
+</HTML>

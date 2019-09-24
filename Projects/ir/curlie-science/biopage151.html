@@ -1,0 +1,616 @@
+<BASE HREF="http://www.biosciednet.org/">
+<html>
+<head>
+<title>BEN</title>
+<meta http-equiv="Content-Type" content="text/html;">
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<META NAME="DESCRIPTION" CONTENT="The BEN Portal comprises an extensive digital library of biological resources for biology teaching and research at all educational levels.">
+<META NAME="KEYWORDS" CONTENT="digital library, biological sciences, biology teaching">
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-3614922-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<style type="text/css">
+.dropcontent{
+	text-align: left;
+	border: 1px solid #637fe5;
+	background-color: #e7ebfb;
+	padding: 6px;
+	display: block;
+}
+</style>
+<script type="text/javascript">
+/***********************************************
+* ProHTML Ticker script- © Dynamic Drive (www.dynamicdrive.com)
+* This notice must stay intact for use
+* Visit http://www.dynamicdrive.com/ for full source code
+***********************************************/
+var tickspeed=8000 //ticker speed in miliseconds (2000=2 seconds)
+var enablesubject=0 //enable scroller subject? Set to 0 to hide
+
+if (document.getElementById){
+	document.write('<style type="text/css">\n')
+	document.write('.dropcontent{display:none;}\n')
+	document.write('</style>\n')
+}
+var selectedDiv=0
+var totalDivs=0
+function contractall(){
+	var inc=0
+	while (document.getElementById("dropmsg"+inc)){
+		document.getElementById("dropmsg"+inc).style.display="none"
+		inc++
+	}
+}
+function expandone(){
+	var selectedDivObj=document.getElementById("dropmsg"+selectedDiv)
+	contractall()
+	document.getElementById("dropcontentsubject").innerHTML=selectedDivObj.getAttribute("subject")
+	selectedDivObj.style.display="block"
+	selectedDiv=(selectedDiv<totalDivs-1)? selectedDiv+1 : 0
+	setTimeout("expandone()",tickspeed)
+}
+function startscroller(){
+	while (document.getElementById("dropmsg"+totalDivs)!=null)
+	totalDivs++
+	expandone()
+	if (!enablesubject)
+	document.getElementById("dropcontentsubject").style.display="none"
+}
+if (window.addEventListener)
+window.addEventListener("load", startscroller, false)
+else if (window.attachEvent)
+window.attachEvent("onload", startscroller)
+</script>
+
+<script language="JavaScript">
+<!--
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+ var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+   var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+   if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+function newWindow(file,window) {
+    msgWindow = open(file,window, 'toolbar=no, location=no, directories=no, scrollbars=no, resizable=no, width=350, height=250' );
+    if (msgWindow.opener == null) msgWindow.opener = self;
+}
+//-->
+</script>
+
+<script type="text/javascript" src="http://www.biosciednet.org/portal/includes/tabber.js"></script>
+<link rel="stylesheet" href="http://www.biosciednet.org/portal/includes/tabber.css" TYPE="text/css" MEDIA="screen">
+<script type="text/javascript" src="http://www.biosciednet.org/portal/includes/rating.js"></script>
+<link rel="stylesheet" href="http://www.biosciednet.org/portal/includes/rating.css" TYPE="text/css" MEDIA="screen">
+<script type="text/javascript" src="http://api.recaptcha.net/js/recaptcha_ajax.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script src="http://cdn.jquerytools.org/1.2.2/all/jquery.tools.min.js"></script>
+<link rel="stylesheet" href="http://www.biosciednet.org/portal/includes/scrollable-horizontal.css" TYPE="text/css" MEDIA="screen">
+<script type="text/javascript" src="http://www.biosciednet.org/portal/includes/comment.js"></script>
+<link rel="stylesheet" href="http://www.biosciednet.org/portal/includes/comment.css" TYPE="text/css" MEDIA="screen">
+
+<script type="text/javascript">
+/* Optional: Temporarily hide the "tabber" class so it does not "flash"
+   on the page as plain HTML. After tabber runs, the class is changed
+   to "tabberlive" and it will appear. */
+document.write('<style type="text/css">.tabber{display:none;}<\/style>');
+</script>
+
+<link href="http://www.biosciednet.org/portal/includes/ben.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="http://www.biosciednet.org/portal/includes/definition.css" />
+<script type="text/javascript" src="http://www.biosciednet.org/portal/includes/definition.js"></script>
+
+</head>
+<body bgcolor="#ffffff">
+
+<img name="nav_first" src="http://www.biosciednet.org/portal/images/nav_first.gif" width="224" height="15" border="0" alt=""><a href="http://www.biosciednet.org/portal/index.php" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('nav_home','','http://www.biosciednet.org/portal/images/nav_home_f2.gif',1);"><img name="nav_home" src="http://www.biosciednet.org/portal/images/nav_home.gif" width="60" height="15" border="0" alt="Home"></a><a href="http://www.biosciednet.org/portal/about/index.php" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('nav_about','','http://www.biosciednet.org/portal/images/nav_about_f2.gif',1);"><img name="nav_about" src="http://www.biosciednet.org/portal/images/nav_about.gif" width="58" height="15" border="0" alt="About"></a><a href="http://www.biosciednet.org/portal/k12/index.php" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('nav_k12ed','','http://www.biosciednet.org/portal/images/nav_k12ed_f2.gif',1);"><img name="nav_k12ed" src="http://www.biosciednet.org/portal/images/nav_k12ed.gif" width="117" height="15" border="0" alt=""></a><a href="http://www.biosciednet.org/portal/college/index.php" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('nav_college','','http://www.biosciednet.org/portal/images/nav_college_f2.gif',1);"><img name="nav_college" src="http://www.biosciednet.org/portal/images/nav_college.gif" width="122" height="15" border="0" alt=""></a><a href="http://www.biosciednet.org/portal/contributors/index.php" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('nav_contrib','','http://www.biosciednet.org/portal/images/nav_contrib_f2.gif',1);"><img name="nav_contrib" src="http://www.biosciednet.org/portal/images/nav_contrib.gif" width="103" height="15" border="0" alt=""></a><a href="http://www.biosciednet.org/portal/login.php" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('nav_signIn','','http://www.biosciednet.org/portal/images/nav_signIn_f2.gif',1);"><img name="nav_signIn" src="http://www.biosciednet.org/portal/images/nav_signIn.gif" border="0" alt=""></a><br>
+<img name="top_ben" src="http://www.biosciednet.org/portal/images/top_ben.gif" width="760" height="86" border="0" alt=""><br>
+<table border="0" cellpadding="0" cellspacing="0" height="80" width="760">
+    <tr>
+      <td colspan="2" class="searchBar" style="background-image: url('http://www.biosciednet.org/portal/images/top_circle.gif'); background-repeat: no-repeat;">
+        <form method="GET" action="http://www.biosciednet.org/portal/search/searchResults.php">            <table border="0" align="right" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td>
+                        <input type="hidden" name="pageNumber" value="1" />
+                        <input type="hidden" name="searchType" value="basic" />
+                        <input type="hidden" name="sort" value="Relevance" />
+                        <img src="http://www.biosciednet.org/portal/images/nav_search_blue_bkgd.gif" alt="" onmouseover="showDefinitionForTerm(event, this, 'Basic search queries the following felids: Title, Description, Keywords, Educational And Pedagogical Description, Discipline & Pedagogical Use Entries, Discipline Description, Pedagogical Use Description, Classification Keywords, Author Names, Author Institutions, and Validator Institutions. The result can also be filtered by grade level and cost of records.');" onmouseout="hideDefinitionForTerm(this);">&nbsp;&nbsp;
+                    </td>
+                    <td>
+                            <input type="hidden" name="pageNumber" value="1" />
+    <input type="hidden" name="searchType" value="basic" />
+    <input type="hidden" name="sort" value="Relevance" />
+    <input type="text" name="query" class="searchBarField" value="" />&nbsp;&nbsp;
+                        </td>
+                    <td>
+                        	<select name="gradeLevels" class="searchBarField">
+		<option  value="0">All Audience Levels</option>
+		<option  value='Preschool'>Preschool</option><option  value='Primary elementary K-2'>Primary elementary K-2</option><option  value='Intermediate elementary 3-5'>Intermediate elementary 3-5</option><option  value='Middle school 6-8'>Middle school 6-8</option><option  value='High school lower division 9-10'>High school lower division 9-10</option><option  value='High school upper division 11-12'>High school upper division 11-12</option><option  value='Undergraduate lower division 13-14'>Undergraduate lower division 13-14</option><option  value='Undergraduate upper division 15-16'>Undergraduate upper division 15-16</option><option  value='Graduate'>Graduate</option><option  value='Professional (degree program)'>Professional (degree program)</option><option  value='General public & informal education'>General public & informal education</option><option  value='Continuing education'>Continuing education</option>	</select>&nbsp;&nbsp;
+	                    </td>
+                    <td>
+                        	<table border="0" cellspacing="0" cellpadding="0">
+	  <tr>
+	    <td width="1"><img src="http://www.biosciednet.org/portal/images/freebox_L.gif" width="10" height="24" /></td>
+	    <td background="http://www.biosciednet.org/portal/images/freebox_BG.gif">
+	    	<input type="checkbox"  name="freeResourcesOnly" value="1" class="searchBarCheckbox" />
+	    	<span class="searchBarText"><b><font color="white">FREE</font> records only</b></span>&nbsp;
+	    </td>
+	    <td background="http://www.biosciednet.org/portal/images/freebox_BG.gif">
+	    	<input type="checkbox"  name="imageResourcesOnly" value="1" class="searchBarCheckbox" />
+	    	<span class="searchBarText"><b><font color="white">Visual media</font> only</b></span>
+	    </td>
+	    <td width="1"><img src="http://www.biosciednet.org/portal/images/freebox_R.gif" width="10" height="24" /></td>
+	  </tr>
+	</table>
+	                    </td>
+                    <td valign="top">
+                        &nbsp;<input type="image" name="btnSubmit" value="SearchDefault" src="http://www.biosciednet.org/portal/images/btn_go_blue_bkgd.gif" alt="GO" border="0" />
+                    </td>
+                </tr>
+            </table>
+        </form>
+      </td>
+    </tr>
+    <tr>
+        <td class="blueSideLine"><img src="http://www.biosciednet.org/portal/images/spacer.gif" width="142" height="1" border="0" alt=""></td>
+        <td align="right" valign="top" style="padding-top: 8px;" width="618">
+                        	<a href="http://www.biosciednet.org/portal/login.php" class="smRedCap">SIGN IN</a>&nbsp;&nbsp;
+                        <a style="padding-right:18px" href="http://www.biosciednet.org/portal/search/searchAdvanced.php" class="smBlackUnderline">Advanced Search</a>
+        </td>
+  </tr>
+</table>
+
+<table width="760" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="100" valign="top" class="blueSideLine">
+    <a href="http://www.biosciednet.org/portal/about/usingBEN.php?nav=main" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('nav_usingben','','http://www.biosciednet.org/portal/images/headings/navL_usingben_f2.gif',1);"><img src="http://www.biosciednet.org/portal/images/headings/navL_usingben.gif" alt="" name="nav_usingben" border="0" ></a><br><img src="http://www.biosciednet.org/portal/images/headings/nav1L_blank.gif" alt="" name="nav_blank" border="0" ><br><a href="http://www.biosciednet.org/portal/search/browse.php?nav=main&by=subject" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('nav_browsesubject','','http://www.biosciednet.org/portal/images/headings/navL_browsesubject_f2.gif',1);"><img src="http://www.biosciednet.org/portal/images/headings/navL_browsesubject.gif" alt="" name="nav_browsesubject" border="0" ></a><br><a href="http://www.biosciednet.org/portal/search/browse.php?nav=main&by=resourceType" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('nav_browseresource','','http://www.biosciednet.org/portal/images/headings/navL_browseresource_f2.gif',1);"><img src="http://www.biosciednet.org/portal/images/headings/navL_browseresource.gif" alt="" name="nav_browseresource" border="0" ></a><br><a href="http://www.biosciednet.org/portal/search/browse.php?nav=main&by=gradeLevel" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('navL_browselevel','','http://www.biosciednet.org/portal/images/headings/navL_browselevel_f2.gif',1);"><img src="http://www.biosciednet.org/portal/images/headings/navL_browselevel.gif" alt="" name="navL_browselevel" border="0" ></a><br><img src="http://www.biosciednet.org/portal/images/headings/nav1L_blank.gif" alt="" name="nav_blank" border="0" ><br><a href="http://www.biosciednet.org/portal/about/benScholars.php?nav=main" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('nav_benscholars','','http://www.biosciednet.org/portal/images/headings/navL_benscholars_f2.gif',1);"><img src="http://www.biosciednet.org/portal/images/headings/navL_benscholars.gif" alt="" name="nav_benscholars" border="0" ></a><br><a href="http://www.biosciednet.org/wiki/" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('navL_techwiki','','http://www.biosciednet.org/portal/images/headings/navL_techwiki_f2.gif',1);"><img src="http://www.biosciednet.org/portal/images/headings/navL_techwiki.gif" alt="" name="navL_techwiki" border="0" ></a><br><a href="http://www.biosciednet.org/isoveradl/" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('navL_isoverawiki','','http://www.biosciednet.org/portal/images/headings/navL_isoverawiki_f2.gif',1);"><img src="http://www.biosciednet.org/portal/images/headings/navL_isoverawiki.gif" alt="" name="navL_isoverawiki" border="0" ></a><br><a href="http://www.biosciednet.org/portal/calendar/" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('navL_calendar','','http://www.biosciednet.org/portal/images/headings/navL_calendar_f2.gif',1);"><img src="http://www.biosciednet.org/portal/images/headings/navL_calendar.gif" alt="" name="navL_calendar" border="0" ></a><br>    </td>
+    <td width="30">&nbsp;</td>
+    <td valign="top">
+            	<img src="http://www.biosciednet.org/portal/images/headings/main_welcome.gif" width="423" height="22"><br>
+            	<!-- BODY BEGINS -->
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td valign="top">
+
+<br>
+<p>Welcome to the BEN portal, the National Science Digital Library
+(NSDL) Pathway for biological sciences education.  The BEN Portal provides
+access to education resources from BEN Collaborators and is managed by the
+American Association for the Advancement of Science (AAAS).
+Over 20,601 reviewed resources covering
+77  biological sciences topics are
+available. BEN resources can help you engage student interest,
+shorten lesson preparation time, provide concept updates, and develop
+curricula that are in line with national standards for content,
+use of animals and humans, and student safety.</p>
+
+<br>
+<p>Currently, registration is not required in exchange for access to the wealth of information freely available through the BEN Portal. Users retain the option to <a href="http://www.biosciednet.org/portal/join/register.php" onmouseover="showDefinitionForTerm(event, this, 'Register to find out when new BEN resources are added or professional development opportunities are posted!');" onmouseout="hideDefinitionForTerm(this);">Register</a> and/or <a href="http://www.biosciednet.org/portal/login.php">Login</a> to join our community of 11,273 biological science educators. Our <a href="http://www.biosciednet.org/portal/policies.php">privacy policy</a> provides detailed explanation on what information is collected, protected, and used for users desiring to exercise their option of registration.</p>
+
+
+    </td>
+    <td width='20'>&nbsp;</td>
+    <td width="100" valign="top">
+	    <div align="center">
+		    <a href="/portal/search/recentCollaborators.php?numCollaborators=10"><img src="http://www.biosciednet.org/portal/images/new_resources.png" border="0"></a>
+		    <br>
+		    <br>
+		    <a onMouseOver="showDefinitionForTermPhotoLibrary(event, this, 'Click here to browse the visual media library. To search within visual media, enter your search term above, check visual media and click on Go.');" onMouseOut="hideDefinitionForTerm(this);" href="/portal/search/searchResults.php?pageNumber=1&searchType=advanced&sort=Relevance&imageResourcesOnly=1&resourceTypes[]=Animation&resourceTypes[]=Diagram&resourceTypes[]=35mm+slide&resourceTypes[]=Illustration&resourceTypes[]=Photograph&resourceTypes[]=Image">
+		    <img src="http://www.biosciednet.org/portal/images/VisualMediaLibrary.jpg" border="0">
+		    </a>
+		    <br><br>
+		    			<div ID="userGroupsBox">
+				<div class="T">
+				<img class="userGroupsHeader" src="images/userGroups_header.gif" alt="Biological Sciences Education User Groups"><div class="userGroupsContent">
+						<img src="http://c3cyberlearning.ning.com/favicon.ico" border="0" align="ABSMIDDLE"> <a href="http://c3cyberlearning.ning.com/">Cyberlearning at Community Colleges</a><br>
+						<img src="http://www.facebook.com/favicon.ico" border="0" align="ABSMIDDLE"> <a href="http://www.facebook.com/group.php?gid=129755154551">Transforming Undergraduate Biology Education</a>
+					</div>
+				</div>
+			</div>
+	    </div>
+    </td>
+  </tr>
+	<tr>
+	<td colspan="3" valign="top">
+	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+	  <td style="padding-right:15px;">
+	  <br />
+	  <div style="color: #92a6ed; text-transform: uppercase; letter-spacing: 1px; margin: 12px 0px 4px 0px; font-weight: bold;">About the Education Collections of BEN Collaborators</div>
+
+		<div id="scrollBox">
+			<a class="scrollButton prev" href="javascript:void(0)"><img src="http://www.biosciednet.org/portal/images/scrollBox_previous.gif"></a>
+			<div class="scrollable" id="scroller">
+				<div class="items">
+							<div>
+			<h2><a href="http://www.hapsweb.org/"><b>Human Anatomy and Physiology Society</b></a></h2>
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			  <tr>
+			    <td valign="top" width="1%"><a href="http://www.hapsweb.org/"><img src="http://www.biosciednet.org/portal/images/partnerLogos/rLogo_partnerId-15.jpg" border="0" alt="HAPS" align="left" style="padding: 3px; background-color: white; border: 1px solid black;"></a></td>
+			    <td valign="top" style="font-size: 11px;">The HAPS collection includes a number of physiology case studies, as well as articles and newsletters from the <i>HAPS-Educator</i>, the society\'s quarterly magazine.</td>
+			  </tr>
+			</table>
+		</div>
+				<div>
+			<h2><a href="http://www.esa.org"><b>Ecological Society of America</b></a></h2>
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			  <tr>
+			    <td valign="top" width="1%"><a href="http://www.esa.org"><img src="http://www.biosciednet.org/portal/images/partnerLogos/rLogo_partnerId-33.jpg" border="0" alt="ESA2" align="left" style="padding: 3px; background-color: white; border: 1px solid black;"></a></td>
+			    <td valign="top" style="font-size: 11px;">ESA's digital library, <a href="http://www.ecoed.net/">EcoEdNet</a>, provides teaching resources for ecology at the undergraduate level.</td>
+			  </tr>
+			</table>
+		</div>
+				<div>
+			<h2><a href="http://www.apsnet.org/online/"><b>American Phytopathological Society</b></a></h2>
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			  <tr>
+			    <td valign="top" width="1%"><a href="http://www.apsnet.org/online/"><img src="http://www.biosciednet.org/portal/images/partnerLogos/rLogo_partnerId-22.jpg" border="0" alt="APS" align="left" style="padding: 3px; background-color: white; border: 1px solid black;"></a></td>
+			    <td valign="top" style="font-size: 11px;">Is home to the <a
+href="http://www.apsnet.org/education">APSnet Education Center</a>,
+    which offers both introductory and advanced plant pathology information and
+    online courses. The site also includes free publications, instructional
+    materials, and other resources for educators and students.</td>
+			  </tr>
+			</table>
+		</div>
+				<div>
+			<h2><a href="http://www.biotechinstitute.org"><b>The Biotechnology Institute</b></a></h2>
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			  <tr>
+			    <td valign="top" width="1%"><a href="http://www.biotechinstitute.org"><img src="http://www.biosciednet.org/portal/images/partnerLogos/rLogo_partnerId-27.jpg" border="0" alt="BI" align="left" style="padding: 3px; background-color: white; border: 1px solid black;"></a></td>
+			    <td valign="top" style="font-size: 11px;">The Biotechnology Institute publishes a number of educational resources appropriate for teachers of a range of grade levels from upper elementary through high school and community college. <a href="http://www.biotechinstitute.org/resources/index.html/">Education resources</a> include manuals for biotechnology courses and laboratories, articles from the bi-annual biotechnology teaching magazine, online teacher's guides, and additional <a href="http://www.biotechinstitute.org/resources/labs.html/">activities</a>.</td>
+			  </tr>
+			</table>
+		</div>
+				<div>
+			<h2><a href=""><b>Northwest Association for Biomedical Research</b></a></h2>
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			  <tr>
+			    <td valign="top" width="1%"><a href=""><img src="http://www.biosciednet.org/portal/images/partnerLogos/rLogo_partnerId-36.jpg" border="0" alt="NWABR" align="left" style="padding: 3px; background-color: white; border: 1px solid black;"></a></td>
+			    <td valign="top" style="font-size: 11px;">The Northwest Association for Biomedical Research (NWABR) is a non-profit educational organization established in 1988 to promote the public\'s trust in biomedical research and its ethical conduct. Our work centers on supporting excellence in science teaching, building connections between scientists, students and the wider community, and also working to strengthening the research community.</td>
+			  </tr>
+			</table>
+		</div>
+				<div>
+			<h2><a href="http://botany.org/outreach/"><b>Botanical Society of America</b></a></h2>
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			  <tr>
+			    <td valign="top" width="1%"><a href="http://botany.org/outreach/"><img src="http://www.biosciednet.org/portal/images/partnerLogos/rLogo_partnerId-19.jpg" border="0" alt="BSA" align="left" style="padding: 3px; background-color: white; border: 1px solid black;"></a></td>
+			    <td valign="top" style="font-size: 11px;">BSA promotes teaching and learning about plants through <a href="http://www.plantingscience.org/">Planting Science</a>, and <a href="http://www.botany.org/resources/">other resources</a>.</td>
+			  </tr>
+			</table>
+		</div>
+				<div>
+			<h2><a href="http://www.aaas.org/programs/education/"><b>American Association for the Advancement of Science</b></a></h2>
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			  <tr>
+			    <td valign="top" width="1%"><a href="http://www.aaas.org/programs/education/"><img src="http://www.biosciednet.org/portal/images/partnerLogos/rLogo_partnerId-1.jpg" border="0" alt="AAAS" align="left" style="padding: 3px; background-color: white; border: 1px solid black;"></a></td>
+			    <td valign="top" style="font-size: 11px;">Collection is compiled of an array of biological disciplines at all levels of education from K-12 to the general public; it includes journal
+    reviews from <em><a href=\"http://www.sciencemag.org\">Science</a></em> Collections, as well as many scientific reports, lesson plans and activities
+    provided by <i><a href=\"http://www.sciencenetlinks.com/index.php\">Science
+Netlinks</a></i>, <a
+href=\"http://www.eurekalert.org/kidsnews/\">EurekAlert Kids</a>, <a
+href=\"http://www.scienceupdate.com/index.php\">Science Update</a> and <a
+href=\"http://www.kineticcity.org/\">Kinetic City</a>.</td>
+			  </tr>
+			</table>
+		</div>
+				<div>
+			<h2><a href="http://www.vidacollection.org/"><b>Video and Image Data Access</b></a></h2>
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			  <tr>
+			    <td valign="top" width="1%"><a href="http://www.vidacollection.org/"><img src="http://www.biosciednet.org/portal/images/partnerLogos/rLogo_partnerId-16.jpg" border="0" alt="VIDA" align="left" style="padding: 3px; background-color: white; border: 1px solid black;"></a></td>
+			    <td valign="top" style="font-size: 11px;">Collection contains annotated science video and images with
+    content and language appropriate for <a href="http://www.vidacollection.org/browse/browseVocabTrees/viewChildren?vocab=relatedCurriculum&fieldHandle=relatedCurriculum/">K-8 standards-based science</a>. VIDA is meant
+    to facilitate sharing the excitement of current research among scientists,
+    science faculty, and teachers through the use of images.</td>
+			  </tr>
+			</table>
+		</div>
+				<div>
+			<h2><a href="https://www.ncrrsepa.org/"><b>NAHSEP</b></a></h2>
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			  <tr>
+			    <td valign="top" width="1%"><a href="https://www.ncrrsepa.org/"><img src="http://www.biosciednet.org/portal/images/partnerLogos/rLogo_partnerId-29.jpg" border="0" alt="NAHSEP" align="left" style="padding: 3px; background-color: white; border: 1px solid black;"></a></td>
+			    <td valign="top" style="font-size: 11px;">The NAHSEP collection is composed of multidisciplinary aging/health science curricula appropriate for middle and high school students. This includes online tools, informational articles, videos, handouts, quizzes, and more.</td>
+			  </tr>
+			</table>
+		</div>
+				<div>
+			<h2><a href="http://serc.carleton.edu/microbelife/"><b>Microbial Life</b></a></h2>
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			  <tr>
+			    <td valign="top" width="1%"><a href="http://serc.carleton.edu/microbelife/"><img src="http://www.biosciednet.org/portal/images/partnerLogos/rLogo_partnerId-25.jpg" border="0" alt="MBL/MSU" align="left" style="padding: 3px; background-color: white; border: 1px solid black;"></a></td>
+			    <td valign="top" style="font-size: 11px;">This site contains a variety of microbiology educational and supporting materials for students, <a href="http://serc.carleton.edu/microbelife/k12/index.html">K-12 teachers</a>, <a href="http://serc.carleton.edu/microbelife/undergrad/index.html">university faculty</a>, and the general public. You will find information about microorganisms, extremophiles, and extreme habitats, as well as online links providing information about the ecology, diversity, and evolution of micro-organisms.</td>
+			  </tr>
+			</table>
+		</div>
+				<div>
+			<h2><a href="http://www.bio-link.org"><b>Bio-Link (the NSF Advanced Technological Education Center for Biotechnology)</b></a></h2>
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			  <tr>
+			    <td valign="top" width="1%"><a href="http://www.bio-link.org"><img src="http://www.biosciednet.org/portal/images/partnerLogos/rLogo_partnerId-18.jpg" border="0" alt="Bio-Link" align="left" style="padding: 3px; background-color: white; border: 1px solid black;"></a></td>
+			    <td valign="top" style="font-size: 11px;"><a href="http://www.scout.wisc.edu/biolink/">Bio-Link Clearinghouse</a> materials are designed for students and graduates at the two-year college level pursuing careers as biotechnology technicians or bench scientists.</td>
+			  </tr>
+			</table>
+		</div>
+				<div>
+			<h2><a href="http://www.esa.org/"><b>Ecological Society of America</b></a></h2>
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			  <tr>
+			    <td valign="top" width="1%"><a href="http://www.esa.org/"><img src="http://www.biosciednet.org/portal/images/partnerLogos/rLogo_partnerId-7.jpg" border="0" alt="ESA" align="left" style="padding: 3px; background-color: white; border: 1px solid black;"></a></td>
+			    <td valign="top" style="font-size: 11px;">ESA\'s digital library, <a href=\"http://www.ecoed.net/\">EcoEdNet</a>, provides teaching resources for ecology at the undergraduate level.</td>
+			  </tr>
+			</table>
+		</div>
+				<div>
+			<h2><a href="http://www.funfaculty.org"><b>Faculty for Undergraduate Neuroscience</b></a></h2>
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			  <tr>
+			    <td valign="top" width="1%"><a href="http://www.funfaculty.org"><img src="http://www.biosciednet.org/portal/images/partnerLogos/rLogo_partnerId-20.jpg" border="0" alt="FUN" align="left" style="padding: 3px; background-color: white; border: 1px solid black;"></a></td>
+			    <td valign="top" style="font-size: 11px;">Provides resources through JUNE, <a
+href="http://www.funjournal.org">The Journal of Undergraduate
+    Neuroscience Education</a>, an online journal for undergraduate neuroscience faculty that publishes peer-reviewed reports of innovations in undergraduate neuroscience education. JUNE serves as a mechanism for faculty to exchange information regarding topics such as laboratory exercises, new media, curricular considerations, and teaching methods.</td>
+			  </tr>
+			</table>
+		</div>
+				<div>
+			<h2><a href="http://www.hhmi.org/"><b>Howard Hughes Medical Institute</b></a></h2>
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			  <tr>
+			    <td valign="top" width="1%"><a href="http://www.hhmi.org/"><img src="http://www.biosciednet.org/portal/images/partnerLogos/rLogo_partnerId-31.jpg" border="0" alt="HHMI" align="left" style="padding: 3px; background-color: white; border: 1px solid black;"></a></td>
+			    <td valign="top" style="font-size: 11px;">HHMI's <a href="http://www.hhmi.org/coolscience/">Cool
+    Science</a> and <a href="http://www.hhmi.org/biointeractive/">BioInteractive</a> give students and teachers alike, access to topical videos, animations, lectures, virtual labs, interactive tools, and other resources for the classroom. Resources satisfy all levels of education.</td>
+			  </tr>
+			</table>
+		</div>
+				<div>
+			<h2><a href="http://www.toxicology.org/"><b>Society of Toxicology</b></a></h2>
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			  <tr>
+			    <td valign="top" width="1%"><a href="http://www.toxicology.org/"><img src="http://www.biosciednet.org/portal/images/partnerLogos/rLogo_partnerId-12.jpg" border="0" alt="SOT" align="left" style="padding: 3px; background-color: white; border: 1px solid black;"></a></td>
+			    <td valign="top" style="font-size: 11px;">The website features a number of toxicology activities for <a href=\"http://www.toxicology.org/kids/kids.asp\">students K-12</a> as well as a number of toxicology curriculum resources for <a href=\"http://www.toxicology.org/teachers/teachers.asp\">teachers</a>.</td>
+			  </tr>
+			</table>
+		</div>
+				<div>
+			<h2><a href="http://www.sdbonline.org/index.php?option=com_content&task=section&id=6&Itemid=62"><b>Society for Developmental Biology</b></a></h2>
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			  <tr>
+			    <td valign="top" width="1%"><a href="http://www.sdbonline.org/index.php?option=com_content&task=section&id=6&Itemid=62"><img src="http://www.biosciednet.org/portal/images/partnerLogos/rLogo_partnerId-24.jpg" border="0" alt="SDB" align="left" style="padding: 3px; background-color: white; border: 1px solid black;"></a></td>
+			    <td valign="top" style="font-size: 11px;">The <a href=\"http://www.sdbonline.org/index.php?option=com_content&task=section&id=6&Itemid=62\">SDB collection</a> is composed of an array of developmental biology teaching resources (<a href=\"http://www.sdbonline.org/index.php?option=com_content&task=view&id=28&Itemid=28\">K-12</a> and <a href=\"http://www.sdbonline.org/index.php?option=com_content&task=view&id=27&Itemid=29\">undergraduate</a>) including lectures, laboratory manuals, atlases, videos, images, and more.</td>
+			  </tr>
+			</table>
+		</div>
+				<div>
+			<h2><a href="http://www.aibs.org/"><b>American Institute for Biological Sciences</b></a></h2>
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			  <tr>
+			    <td valign="top" width="1%"><a href="http://www.aibs.org/"><img src="http://www.biosciednet.org/portal/images/partnerLogos/rLogo_partnerId-2.jpg" border="0" alt="AIBS" align="left" style="padding: 3px; background-color: white; border: 1px solid black;"></a></td>
+			    <td valign="top" style="font-size: 11px;">AIBS, through <a
+href="http://www.actionbioscience.org/">ActionBioscience</a> , provides formal and informal educators with original lessons, resources, and articles by scientists and science educators. Topics include: environment, biodiversity, genomics, biotechnology, evolution, new frontiers in science, and bioscience education.</td>
+			  </tr>
+			</table>
+		</div>
+				<div>
+			<h2><a href="http://www.bioquest.org/"><b>BioQUEST Curriculum Consortium</b></a></h2>
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			  <tr>
+			    <td valign="top" width="1%"><a href="http://www.bioquest.org/"><img src="http://www.biosciednet.org/portal/images/partnerLogos/rLogo_partnerId-6.jpg" border="0" alt="BCC" align="left" style="padding: 3px; background-color: white; border: 1px solid black;"></a></td>
+			    <td valign="top" style="font-size: 11px;">BCC actively supports undergraduate biology education through <a href="http://www.bioquest.org/BQLibrary/index.php">
+<em>The BioQUEST Library Online</em> </a> which is an ongoing peer-reviewed community publication of modules, software simulations, tools, datasets, and other supporting materials from educators and developers engaged in science education and research.</td>
+			  </tr>
+			</table>
+		</div>
+				<div>
+			<h2><a href="http://www.ableweb.org/proceedings/SPT--Home.php"><b>Association for Biology Laboratory Education</b></a></h2>
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			  <tr>
+			    <td valign="top" width="1%"><a href="http://www.ableweb.org/proceedings/SPT--Home.php"><img src="http://www.biosciednet.org/portal/images/partnerLogos/rLogo_partnerId-14.jpg" border="0" alt="ABLE" align="left" style="padding: 3px; background-color: white; border: 1px solid black;"></a></td>
+			    <td valign="top" style="font-size: 11px;">The focus of the <a href="http://www.ableweb.org/proceedings/SPT--BrowseResources.php">ABLE Collection</a> is to improve the undergraduate biology laboratory experience by promoting the development and dissemination of interesting, innovative, and reliable laboratory exercises.</td>
+			  </tr>
+			</table>
+		</div>
+				<div>
+			<h2><a href="http://www.accessexcellence.org/"><b>National Health Museum-Access Excellence</b></a></h2>
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			  <tr>
+			    <td valign="top" width="1%"><a href="http://www.accessexcellence.org/"><img src="http://www.biosciednet.org/portal/images/partnerLogos/rLogo_partnerId-10.jpg" border="0" alt="NHM-AE" align="left" style="padding: 3px; background-color: white; border: 1px solid black;"></a></td>
+			    <td valign="top" style="font-size: 11px;">Provides teachers of health, biology, and the life sciences with access to a computer network forum through which they can share: <a href="http://www.accessexcellence.org/AE/">activities</a>, <a href="http://www.accessexcellence.org/RC/">resources</a>, information, expert assistance, advice, innovative teaching ideas, and best practices.</td>
+			  </tr>
+			</table>
+		</div>
+				<div>
+			<h2><a href="http://www.sciencemag.org/"><b>Science Collections</b></a></h2>
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			  <tr>
+			    <td valign="top" width="1%"><a href="http://www.sciencemag.org/"><img src="http://www.biosciednet.org/portal/images/partnerLogos/rLogo_partnerId-28.jpg" border="0" alt="Science" align="left" style="padding: 3px; background-color: white; border: 1px solid black;"></a></td>
+			    <td valign="top" style="font-size: 11px;">In <a href="http://www.sciencemag.org/cgi/collection#clicked"><em>Science</em> Collections</a>, you can browse by subject to find <em>Science</em> articles, view special content collections like Netwatch and Books <em>et al.</em>, browse the archive of articles from the Science of Aging Knowledge Environment, and find additional Web-only content and supplements to <em>Science</em>'s special issues. You can also find links to subject-targeted material from <em>Science</em>NOW, the KEs, and <em>Science</em> Careers.</td>
+			  </tr>
+			</table>
+		</div>
+				<div>
+			<h2><a href="http://www.ashg.org/education/"><b>American Society of Human Genetics</b></a></h2>
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			  <tr>
+			    <td valign="top" width="1%"><a href="http://www.ashg.org/education/"><img src="http://www.biosciednet.org/portal/images/partnerLogos/rLogo_partnerId-26.jpg" border="0" alt="ASHG" align="left" style="padding: 3px; background-color: white; border: 1px solid black;"></a></td>
+			    <td valign="top" style="font-size: 11px;">ASHG highlights exemplary genetics curricula, books, videos, toolkits, tutorials, and web sites. Materials are provided that are appropriate for both teachers and students of all levels of education (<a href="http://www.ashg.org/education/k12.shtml">K-12</a>, <a href="http://www.ashg.org/education/undergrad.shtml">Undergraduate</a>, <a href="http://www.ashg.org/education/gradpost.shtml">Graduate</a>, and the <a href="http://www.ashg.org/education/everyone.shtml">General Public</a>).</td>
+			  </tr>
+			</table>
+		</div>
+				<div>
+			<h2><a href="http://stke.sciencemag.org/"><b>STKE/Science Signaling</b></a></h2>
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			  <tr>
+			    <td valign="top" width="1%"><a href="http://stke.sciencemag.org/"><img src="http://www.biosciednet.org/portal/images/partnerLogos/rLogo_partnerId-11.jpg" border="0" alt="STKE" align="left" style="padding: 3px; background-color: white; border: 1px solid black;"></a></td>
+			    <td valign="top" style="font-size: 11px;">In Science Signaling, you can find Perspective and Review articles, as well as peer-reviewed Teaching Resources for teaching topics or courses in cell signaling. These include lecture notes and slides, syllabi, research projects, experiments, animations, discussions, and online tutorials.</td>
+			  </tr>
+			</table>
+		</div>
+				<div>
+			<h2><a href="http://www.sicb.org/"><b>Society for Integrative and Comparative Biology</b></a></h2>
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			  <tr>
+			    <td valign="top" width="1%"><a href="http://www.sicb.org/"><img src="http://www.biosciednet.org/portal/images/partnerLogos/rLogo_partnerId-21.jpg" border="0" alt="SICB" align="left" style="padding: 3px; background-color: white; border: 1px solid black;"></a></td>
+			    <td valign="top" style="font-size: 11px;">The <a href="http://www.sicb.org/dl/">SICB Digital Library</a> provides peer-reviewed instructional materials, resources, and activities in integrative and comparative biology for faculty to enhance undergraduate education at two- and four-year colleges and universities.</td>
+			  </tr>
+			</table>
+		</div>
+				<div>
+			<h2><a href="http://www.ascb.org/"><b>American Society for Cell Biology</b></a></h2>
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			  <tr>
+			    <td valign="top" width="1%"><a href="http://www.ascb.org/"><img src="http://www.biosciednet.org/portal/images/partnerLogos/rLogo_partnerId-17.jpg" border="0" alt="ASCB" align="left" style="padding: 3px; background-color: white; border: 1px solid black;"></a></td>
+			    <td valign="top" style="font-size: 11px;">ASCB is home to <a href="http://bioeducate.ascb.org">BioEDUCATE</a>,an open-access web resource covering cell biology education, as well as <a href="http://www.ibioseminars.org/">iBioSeminars</a> and <a href="http://cellimagelibrary.org/">The Cell: Image Library</a>, which include: cell images, videos, web resources, concept questions, and digitized texts that are freely available for educational and research use.</td>
+			  </tr>
+			</table>
+		</div>
+				<div>
+			<h2><a href="http://www.dnalc.org/"><b>Dolan DNA Learning Center</b></a></h2>
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			  <tr>
+			    <td valign="top" width="1%"><a href="http://www.dnalc.org/"><img src="http://www.biosciednet.org/portal/images/partnerLogos/rLogo_partnerId-23.jpg" border="0" alt="DNALC" align="left" style="padding: 3px; background-color: white; border: 1px solid black;"></a></td>
+			    <td valign="top" style="font-size: 11px;">The DNA Learning Center's <a href="http://www.dnalc.org/resources/">online resources</a> and <a href="http://www.dnalc.org/websites/">websites</a> serve biology students, educators, and the public through detailed pictures, videos, and interactive animations.</td>
+			  </tr>
+			</table>
+		</div>
+				<div>
+			<h2><a href="http://www.the-aps.org/"><b>American Physiological Society</b></a></h2>
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			  <tr>
+			    <td valign="top" width="1%"><a href="http://www.the-aps.org/"><img src="http://www.biosciednet.org/portal/images/partnerLogos/rLogo_partnerId-3.jpg" border="0" alt="APS" align="left" style="padding: 3px; background-color: white; border: 1px solid black;"></a></td>
+			    <td valign="top" style="font-size: 11px;">The <a href=\"http://www.apsarchive.org\">APS Archive of Teaching Resources </a> is a collaborative digital library and educator community that can be used by teachers at all levels (K-12, undergraduate, graduate, and professional school) to enhance and supplement their current physiology  and life science teaching resources.</td>
+			  </tr>
+			</table>
+		</div>
+				<div>
+			<h2><a href="http://www.msmr.org/"><b>Massachusetts Society for Medical Research</b></a></h2>
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			  <tr>
+			    <td valign="top" width="1%"><a href="http://www.msmr.org/"><img src="http://www.biosciednet.org/portal/images/partnerLogos/rLogo_partnerId-35.jpg" border="0" alt="MSMR" align="left" style="padding: 3px; background-color: white; border: 1px solid black;"></a></td>
+			    <td valign="top" style="font-size: 11px;">The MSMR collection contains K-12 teaching resources focused on understanding medical and animal research. This includes the monthly publication <a href=\"http://www.whatayear.org/\">What A Year!</a> that highlights current research discoveries and MSMR Monographs that go in-depth on a variety of topics.</td>
+			  </tr>
+			</table>
+		</div>
+				<div>
+			<h2><a href="http://www.asm.org/"><b>American Society for Microbiology v2.0</b></a></h2>
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			  <tr>
+			    <td valign="top" width="1%"><a href="http://www.asm.org/"><img src="http://www.biosciednet.org/portal/images/partnerLogos/rLogo_partnerId-32.jpg" border="0" alt="ASM-ML2" align="left" style="padding: 3px; background-color: white; border: 1px solid black;"></a></td>
+			    <td valign="top" style="font-size: 11px;">ASM is home to the <a
+href="http://www.microbelibrary.org/">MicrobeLibrary</a>, a peer-reviewed collection of Microbiology teaching and learning materials appropriate for the undergraduate level.</td>
+			  </tr>
+			</table>
+		</div>
+				<div>
+			<h2><a href="http://www.entfdn.org/"><b>Entomological Foundation</b></a></h2>
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			  <tr>
+			    <td valign="top" width="1%"><a href="http://www.entfdn.org/"><img src="http://www.biosciednet.org/portal/images/partnerLogos/rLogo_partnerId-30.jpg" border="0" alt="EDL" align="left" style="padding: 3px; background-color: white; border: 1px solid black;"></a></td>
+			    <td valign="top" style="font-size: 11px;">EDL, through its digital library <a
+href=\"http://www.entlibrary.org/\">EntDigil</a>, provides
+    teachers and learners with access to high-quality, expert-reviewed entomology
+    teaching materials.</td>
+			  </tr>
+			</table>
+		</div>
+				<div>
+			<h2><a href="http://www.anatomy.org/"><b>American Association of Anatomists</b></a></h2>
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			  <tr>
+			    <td valign="top" width="1%"><a href="http://www.anatomy.org/"><img src="http://www.biosciednet.org/portal/images/partnerLogos/rLogo_partnerId-34.jpg" border="0" alt="AAA" align="left" style="padding: 3px; background-color: white; border: 1px solid black;"></a></td>
+			    <td valign="top" style="font-size: 11px;">The AAA collection is composed of a variety of anatomical science teaching tools and resources as well as articles from <i>Anatomical Sciences Education</i>, the society\'s education journal.</td>
+			  </tr>
+			</table>
+		</div>
+				<div>
+			<h2><a href="http://www.asm.org/"><b>American Society for Microbiology</b></a></h2>
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			  <tr>
+			    <td valign="top" width="1%"><a href="http://www.asm.org/"><img src="http://www.biosciednet.org/portal/images/partnerLogos/rLogo_partnerId-5.jpg" border="0" alt="ASM" align="left" style="padding: 3px; background-color: white; border: 1px solid black;"></a></td>
+			    <td valign="top" style="font-size: 11px;">ASM is home to the <a
+href=\"http://www.microbelibrary.org/\">MicrobeLibrary</a>, a peer-reviewed collection of Microbiology teaching and learning materials appropriate for the undergraduate level.</td>
+			  </tr>
+			</table>
+		</div>
+						</div>
+			</div>
+			<a class="scrollButton next" href="javascript:void(0)"><img src="http://www.biosciednet.org/portal/images/scrollBox_next.gif"></a>
+		</div>
+
+	  </td>
+	  <td valign="top">
+	  </td>
+	</tr>
+	</table></td>
+	</tr>
+</table>
+
+<!-- Collaborator's Box START -->
+<script>
+$(document).ready(function() {
+	// interval: The time (in milliseconds) between autoscrolls
+	$("#scroller").scrollable({circular: true}).autoscroll({ autoplay: true, interval: 8000});
+});
+</script>
+<!-- Collaborator's Box END -->
+
+
+    <!-- BODY ENDS -->
+    </td>
+  </tr>
+  <tr>
+    <td width="100">&nbsp;</td>
+    <td width="30">&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="100">&nbsp;</td>
+    <td width="20">&nbsp;</td>
+    <td>
+    <div align="center">
+        <br>
+    	<a href="http://www.biosciednet.org/portal/sitemap.php" class="medBLUEbold">SITE MAP</a>
+        | <a href="http://www.biosciednet.org/portal/contact/index.php" class="medBLUEbold">CONTACT</a>
+        | <a href="http://www.biosciednet.org/portal/policies.php" class="medBLUEbold">POLICIES</a>
+        <br>
+
+        <img width="1" height="12" src="/portal/images/spacer.gif"><br>
+        <a href="http://www.aaas.org/" target="_blank"><img src="http://www.biosciednet.org/portal/images/AAAS.gif" alt="Triple A S" width="151" height="44" border=0></a>
+        <a href="http://www.nsf.gov/" target="_blank"><img src="http://www.biosciednet.org/portal/images/NSF.gif" alt="National Science Foundation" width="81" height="44" border=0></a>
+        <a href="http://nsdl.org/" target="_blank"><img src="http://www.biosciednet.org/portal/images/NSDL.gif" alt="Naitonal Science Digital Library Pathway" width="115" height="44" border=0></a>
+        <br><img width="1" height="8" src="/portal/images/spacer.gif">
+
+   		<div class="smBlue">
+        Funded by the individual BEN Collaborators and grants from the <br>
+        National Science Foundation [DUE 0085840 / DUE 0226185 / DUE 0532797 / DUE 0734995] <br>
+        <br>
+        This website is a National Science Digital Library (NSDL) Pathway.<br>
+        Copyright &copy; 2019. American Association for the Advancement of Science.
+        All Rights Reserved. 
+        </div>
+    </div>
+    </td>
+  </tr>
+</table>
