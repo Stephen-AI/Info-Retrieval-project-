@@ -187,13 +187,31 @@ public abstract class Document {
         while (hasMoreTokens()) {
             String token = nextToken();
             vector.increment(token);
+        }
+        return vector;
+    }
+
+    /**
+     * Returns a hashmap version of the term-vector (bag of words) for this
+     * document, where each token is a key whose value is the number of times
+     * it occurs in the document as stored in a Weight.
+     *
+     * @see Weight
+     */
+    public HashMapVector hashMapVectorProximity() {
+        if (numTokens != 0)
+            return null;
+        HashMapVector vector = new HashMapVector();
+        // Process each token in the document and add it to the vector
+        while (hasMoreTokens()) {
+            String token = nextToken();
+            vector.increment(token);
             //ADDED:
             //Add current location to list of token's locations
             if (!tokenLocations.containsKey(token)) {
                 tokenLocations.put(token, new ArrayList<>());
             }
-            tokenLocations.get(token).add(currentLocation);
-            currentLocation++;
+            tokenLocations.get(token).add(currentLocation++);
         }
         return vector;
     }

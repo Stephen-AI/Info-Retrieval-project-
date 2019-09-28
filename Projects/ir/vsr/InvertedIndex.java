@@ -47,7 +47,10 @@ public class InvertedIndex {
      * Whether tokens should be stemmed with Porter stemmer
      */
     public boolean stem = false;
-
+    /**
+     * Whether or not to take proximity into consideration
+     */
+    public boolean proximity = false;
     /**
      * Whether relevance feedback using the Ide_regular algorithm is used
      */
@@ -66,6 +69,26 @@ public class InvertedIndex {
         this.docType = docType;
         this.stem = stem;
         this.feedback = feedback;
+        tokenHash = new HashMap<String, TokenInfo>();
+        docRefs = new ArrayList<DocumentReference>();
+        indexDocuments();
+    }
+
+    /**
+     * Create an inverted index of the documents in a directory.
+     *
+     * @param dirFile  The directory of files to index.
+     * @param docType  The type of documents to index (See docType in DocumentIterator)
+     * @param stem     Whether tokens should be stemmed with Porter stemmer.
+     * @param feedback Whether relevance feedback should be used.
+     * @param proximity Whether proximity should be considered
+     */
+    public InvertedIndex(File dirFile, short docType, boolean stem, boolean feedback, boolean proximity) {
+        this.dirFile = dirFile;
+        this.docType = docType;
+        this.stem = stem;
+        this.feedback = feedback;
+        this.proximity = proximity;
         tokenHash = new HashMap<String, TokenInfo>();
         docRefs = new ArrayList<DocumentReference>();
         indexDocuments();
@@ -101,7 +124,11 @@ public class InvertedIndex {
             FileDocument doc = docIter.nextDocument();
             // Create a document vector for this document
             System.out.print(doc.file.getName() + ",");
-            HashMapVector vector = doc.hashMapVector();
+            HashMapVector vector;
+            if (!this.proximity)
+                vector = doc.hashMapVector();
+            else
+                vector = doc.hashMapVectorProximity();
             indexDocument(doc, vector);
         }
         // Now that all documents have been processed, we can calculate the IDF weights for
@@ -140,7 +167,8 @@ public class InvertedIndex {
         DocumentReference docRef = new DocumentReference(doc);
         //ADDED:
         //add the token locations to the Document reference
-        docRef.setTokenLocations(doc.getTokenLocations());
+        if (this.proximity)
+            docRef.setTokenLocations(doc.getTokenLocations());
         // Add this document to the list of documents indexed
         docRefs.add(docRef);
         // Iterate through each of the tokens in the document
@@ -258,6 +286,8 @@ public class InvertedIndex {
      * Perform ranked retrieval on this input query Document.
      */
     public Retrieval[] retrieve(Document doc) {
+        if (this.proximity)
+            return retrieve(doc.hashMapVectorProximity());
         return retrieve(doc.hashMapVector());
     }
 
@@ -392,8 +422,10 @@ public class InvertedIndex {
         Map<String, List<Integer>> tokenLocations = retrieval.docRef.getTokenLocations();
         List<Integer> locations = new ArrayList<>();
         for (Map.Entry<String, List<Integer>> locationKV : tokenLocations.entrySet()) {
-            for (Integer location : locationKV.getValue()) {
-                locationToString.put(location, locationKV.getKey());
+            if(queryLocations.containsKey(locationKV.getKey())) {
+                for (Integer location : locationKV.getValue()) {
+                    locationToString.put(location, locationKV.getKey());
+                }
             }
         }
         //a list to contain all the locations of every token within the query
@@ -405,7 +437,7 @@ public class InvertedIndex {
         Collections.sort(locations);
         int windowLength = queryLocations.size();
         double min_proximity = Double.MAX_VALUE;
-        for (int i = 0; i < locations.size() - windowLength; i++) {
+        for (int i = 0; i < locations.size() - windowLength + 1; i++) {
             double calcProx = calculateProximity(i, windowLength, locations, queryLocations, locationToString);
             min_proximity = Math.min(min_proximity, calcProx);
         }
@@ -451,7 +483,8 @@ public class InvertedIndex {
             // Get the ranked retrievals for this query string and present them
             HashMapVector queryVector = (new TextStringDocument(query, stem)).hashMapVector();
             Retrieval[] retrievals = retrieve(queryVector);
-            refineQueries(retrievals, query);
+            if (this.proximity)
+                refineQueries(retrievals, query);
             Arrays.sort(retrievals);
             presentRetrievals(queryVector, retrievals);
         }
@@ -580,7 +613,7 @@ public class InvertedIndex {
 
         String dirName = args[args.length - 1];
         short docType = DocumentIterator.TYPE_TEXT;
-        boolean stem = false, feedback = false;
+        boolean stem = false, feedback = false, proximity=false;
         for (int i = 0; i < args.length - 1; i++) {
             String flag = args[i];
             if (flag.equals("-html"))
@@ -592,6 +625,9 @@ public class InvertedIndex {
             else if (flag.equals("-feedback"))
                 // Use relevance feedback
                 feedback = true;
+            else if (flag.equals("-proximity"))
+                // calculate proximity
+                proximity = true;
             else {
                 throw new IllegalArgumentException("Unknown flag: "+ flag);
             }
@@ -599,7 +635,7 @@ public class InvertedIndex {
 
 
         // Create an inverted index for the files in the given directory.
-        InvertedIndex index = new InvertedIndex(new File(dirName), docType, stem, feedback);
+        InvertedIndex index = new InvertedIndex(new File(dirName), docType, stem, feedback, proximity);
         // index.print();
         // Interactively process queries to this index.
         index.processQueries();
