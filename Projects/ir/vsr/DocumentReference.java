@@ -64,6 +64,11 @@ public class DocumentReference {
         return doc;
     }
 
+    /**
+     * ADDED:
+     * Set the token-location mapping for this document reference
+     * @param tokenLocations token-locations mapping
+     */
     public void setTokenLocations(Map<String, List<Integer>> tokenLocations) {
         this.tokenLocations = tokenLocations;
     }

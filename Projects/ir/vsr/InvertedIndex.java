@@ -75,6 +75,7 @@ public class InvertedIndex {
     }
 
     /**
+     * ADDED:
      * Create an inverted index of the documents in a directory.
      *
      * @param dirFile  The directory of files to index.
@@ -389,6 +390,16 @@ public class InvertedIndex {
         return weight * weight;
     }
 
+    /**
+     * ADDED:
+     * Calculate the proximity score in window WINSIZE of LOCATION starting from START
+     * @param start the index to start from
+     * @param winSize the size of the window
+     * @param locations a sorted list of the locations of all query tokens within the document
+     * @param queryLocations mapping of query token to location in the query string
+     * @param locationToString a mapping from location in the document to the token it corresponds to in the doc.
+     * @return the proximity score
+     */
     public double calculateProximity(int start, int winSize, List<Integer> locations,
                                      HashMap<String, Integer> queryLocations, HashMap<Integer, String> locationToString) {
         int i = start, j, docDist, qDist, loc_i, loc_j, count = 1;
@@ -400,29 +411,37 @@ public class InvertedIndex {
             loc_j = locations.get(j);
             tokenI = locationToString.get(loc_i);
             tokenJ =locationToString.get(loc_j);
-            docDist = loc_j - loc_i;
-            qDist = queryLocations.get(tokenJ) - queryLocations.get(tokenI);
+            docDist = loc_j - loc_i; // distance of adjacent pair by number of words
+            qDist = queryLocations.get(tokenJ) - queryLocations.get(tokenI); // distance of tokens in query string
             if (tokenI != tokenJ){
-                count += 1;
+                count += 1; // count number of unique words
             }
             if (qDist < 0){
-                totalScore += docDist + (-2 * qDist);
+                totalScore += docDist + (-2 * qDist); // reverse order
             }
             else {
                 totalScore += docDist;
             }
             i += 1;
         }
-
-        return totalScore / (double) count;
+        //take into account documents that do not contain all the query tokens
+        return totalScore * Math.pow(2, queryLocations.size() - count) / (double) count;
     }
+
+    /**
+     * ADDED:
+     * Calculate the final score for the retrieval, taking into account the proximity
+     * @param queryLocations the location of each query token in the query string
+     * @param retrieval the previously retrieved document
+     */
     public void proximity(HashMap<String, Integer> queryLocations, Retrieval retrieval) {
-        //map an integer location to a word
+        // map an integer location of a query token in a doc to the token
         HashMap<Integer, String> locationToString = new HashMap<>();
+        // token to location mapping for doc
         Map<String, List<Integer>> tokenLocations = retrieval.docRef.getTokenLocations();
         List<Integer> locations = new ArrayList<>();
         for (Map.Entry<String, List<Integer>> locationKV : tokenLocations.entrySet()) {
-            if(queryLocations.containsKey(locationKV.getKey())) {
+            if(queryLocations.containsKey(locationKV.getKey())) { // token found in the query
                 for (Integer location : locationKV.getValue()) {
                     locationToString.put(location, locationKV.getKey());
                 }
@@ -437,6 +456,7 @@ public class InvertedIndex {
         Collections.sort(locations);
         int windowLength = queryLocations.size();
         double min_proximity = Double.MAX_VALUE;
+        // window through the locations and calculate the window with the minimum proximity
         for (int i = 0; i < locations.size() - windowLength + 1; i++) {
             double calcProx = calculateProximity(i, windowLength, locations, queryLocations, locationToString);
             min_proximity = Math.min(min_proximity, calcProx);

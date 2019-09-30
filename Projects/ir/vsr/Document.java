@@ -20,7 +20,7 @@ public abstract class Document {
     /**
      * The file where a list of stopwords, 1 per line, are stored
      */
-    protected static final String stopWordsFile = "stopwords.txt";
+    protected static final String stopWordsFile = "/u/mooney/ir-code/ir/utilities/stopwords.txt";
     /**
      * The number of stopwords in this file
      */
@@ -192,10 +192,11 @@ public abstract class Document {
     }
 
     /**
+     * ADDED:
      * Returns a hashmap version of the term-vector (bag of words) for this
      * document, where each token is a key whose value is the number of times
-     * it occurs in the document as stored in a Weight.
-     *
+     * it occurs in the document as stored in a Weight. Also create the token
+     * to location mapping.
      * @see Weight
      */
     public HashMapVector hashMapVectorProximity() {
@@ -216,6 +217,10 @@ public abstract class Document {
         return vector;
     }
 
+    /**
+     * Get the token-location mapping for this document
+     * @return tokenLocations
+     */
     public Map<String, List<Integer>> getTokenLocations(){
         return this.tokenLocations;
     }
