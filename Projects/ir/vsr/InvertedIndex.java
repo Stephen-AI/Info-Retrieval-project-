@@ -22,6 +22,8 @@ public class InvertedIndex {
      */
     public static final int MAX_RETRIEVALS = 10;
 
+    public static final int MAX_DISTANCE = 1000;
+
     /**
      * A HashMap where tokens are indexed. Each indexed token maps
      * to a TokenInfo.
@@ -389,59 +391,45 @@ public class InvertedIndex {
         return weight * weight;
     }
 
-    public double calculateProximity(int start, int winSize, List<Integer> locations,
-                                     HashMap<String, Integer> queryLocations, HashMap<Integer, String> locationToString) {
-        int i = start, j, docDist, qDist, loc_i, loc_j, count = 1;
-        double totalScore = 0.0;
-        String tokenI, tokenJ;
-        while (i < start + winSize - 1){
-            j = i + 1;
-            loc_i = locations.get(i);
-            loc_j = locations.get(j);
-            tokenI = locationToString.get(loc_i);
-            tokenJ =locationToString.get(loc_j);
-            docDist = loc_j - loc_i;
-            qDist = queryLocations.get(tokenJ) - queryLocations.get(tokenI);
-            if (tokenI != tokenJ){
-                count += 1;
-            }
-            if (qDist < 0){
-                totalScore += docDist + (-2 * qDist);
+    public double calculateProximity(List<Integer> locationsA, List<Integer> locationsB) {
+        int N = locationsB.size(), diff, locA, locB, idx;
+        double total = 0.0;
+        for (int i = 0; i < N; i++) {
+            locB = locationsB.get(i);
+            idx = Collections.binarySearch(locationsA, locB);
+            idx = -idx - 1;
+            idx = idx == 0 ? idx : idx - 1;
+            locA = locationsA.get(idx);
+            diff = locB - locA;
+            if (diff < 0) {
+                total += -2 * diff;
             }
             else {
-                totalScore += docDist;
+                total += diff;
             }
-            i += 1;
         }
-
-        return totalScore / (double) count;
+        return total / N;
     }
-    public void proximity(HashMap<String, Integer> queryLocations, Retrieval retrieval) {
-        //map an integer location to a word
-        HashMap<Integer, String> locationToString = new HashMap<>();
+
+    public void proximity(List<String> queryTokens, Retrieval retrieval) {
         Map<String, List<Integer>> tokenLocations = retrieval.docRef.getTokenLocations();
-        List<Integer> locations = new ArrayList<>();
-        for (Map.Entry<String, List<Integer>> locationKV : tokenLocations.entrySet()) {
-            if(queryLocations.containsKey(locationKV.getKey())) {
-                for (Integer location : locationKV.getValue()) {
-                    locationToString.put(location, locationKV.getKey());
+        double totalProximity = 0.0;
+        int n = queryTokens.size(), totalPairs;
+        for (int i = 0; i < n; i++) {
+            for (int j = i+1; j < n; j++) {
+                if (tokenLocations.containsKey(queryTokens.get(i)) && tokenLocations.containsKey(queryTokens.get(j))) {
+                    String tokenA = queryTokens.get(i), tokenB = queryTokens.get(j);
+                    totalProximity += calculateProximity(tokenLocations.get(tokenA), tokenLocations.get(tokenB));
+                }
+                else {
+                    totalProximity += MAX_DISTANCE;
                 }
             }
         }
-        //a list to contain all the locations of every token within the query
-        for (String queryToken : queryLocations.keySet()) {
-            if(tokenLocations.containsKey(queryToken)) {
-                locations.addAll(tokenLocations.get(queryToken));
-            }
-        }
-        Collections.sort(locations);
-        int windowLength = queryLocations.size();
-        double min_proximity = Double.MAX_VALUE;
-        for (int i = 0; i < locations.size() - windowLength + 1; i++) {
-            double calcProx = calculateProximity(i, windowLength, locations, queryLocations, locationToString);
-            min_proximity = Math.min(min_proximity, calcProx);
-        }
-        retrieval.score /= min_proximity;
+        totalPairs = (n * (n-1)) / 2;
+        totalProximity /= totalPairs;
+        totalProximity /= MAX_DISTANCE;
+        retrieval.score /= totalProximity;
     }
 
     /**
@@ -451,16 +439,17 @@ public class InvertedIndex {
      * @param query The query as a string
      */
     public void refineQueries(Retrieval[] retrievals, String query) {
-        HashMap<String, Integer> queryTokenLocations = new HashMap<>();
         StringTokenizer queryTokenizer = new StringTokenizer(query);
+        List<String> queryTokens = new ArrayList<>();
         int pos = 0;
         while (queryTokenizer.hasMoreTokens()) {
-            queryTokenLocations.put(queryTokenizer.nextToken(), pos++);
+            queryTokens.add(queryTokenizer.nextToken());
         }
         for (Retrieval retrieval : retrievals) {
-            proximity(queryTokenLocations, retrieval);
+            proximity(queryTokens, retrieval);
         }
     }
+
     public void printRet(Retrieval[] retrievals) {
         for(Retrieval retrieval : retrievals)
             System.out.print(retrieval + " ");
