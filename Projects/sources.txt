@@ -1,0 +1,4 @@
+InvertedIndexRated
+FeedbackRated
+ExperimentRelFeedbackRated
+DocumentReference
