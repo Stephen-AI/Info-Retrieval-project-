@@ -20,8 +20,8 @@ public class Node {
   /**
    * Lists of incoming and outgoing edges.
    */
-  List<Node> edgesOut = new ArrayList<Node>();
-  List<Node> edgesIn = new ArrayList<Node>();
+  Set<Node> edgesOut = new HashSet<>();
+  Set<Node> edgesIn = new HashSet<>();
 
   /**
    * Constructs a node with that name.
@@ -55,14 +55,22 @@ public class Node {
   /**
    * Gives the list of outgoing edges
    */
-  public List<Node> getEdgesOut() {
+  public Set<Node> getEdgesOut() {
     return edgesOut;
   }
 
   /**
    * Gives the list of incoming edges
    */
-  public List<Node> getEdgesIn() {
+  public Set<Node> getEdgesIn() {
     return edgesIn;
+  }
+
+  public boolean equals(Object other) {
+    return name.equals(((Node) other).name);
+  }
+
+  public int hashCode() {
+    return name.hashCode();
   }
 }

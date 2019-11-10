@@ -1,0 +1,101 @@
+Script started on 2019-11-09 19:53:59-0600
+Hello
+Indexing documents in results
+P083.html,P188.html,P014.html,P141.html,P155.html,P003.html,P094.html,P125.html,P190.html,P012.html,P130.html,P027.html,P089.html,P108.html,P071.html,P143.html,P084.html,P011.html,P082.html,P039.html,P031.html,P100.html,P145.html,P187.html,P073.html,P154.html,P024.html,P129.html,P156.html,P195.html,P008.html,P090.html,P191.html,P067.html,P198.html,P119.html,P013.html,P040.html,P177.html,P144.html,P018.html,P001.html,P045.html,P132.html,P062.html,P051.html,P193.html,P042.html,P142.html,P057.html,P037.html,P076.html,P005.html,P166.html,P028.html,P152.html,P186.html,P102.html,P049.html,P174.html,P147.html,P059.html,P112.html,P159.html,P053.html,P080.html,P150.html,P128.html,P131.html,P200.html,P175.html,P087.html,P009.html,P029.html,P138.html,P064.html,P095.html,P109.html,P016.html,P035.html,P044.html,P165.html,P114.html,P056.html,P077.html,P189.html,P091.html,P172.html,P105.html,P137.html,P004.html,P184.html,P113.html,P052.html,P133.html,P068.html,P096.html,P183.html,P030.html,P078.html,P118.html,P026.html,P088.html,P104.html,P065.html,P169.html,P161.html,P148.html,P127.html,P173.html,P006.html,P055.html,P074.html,P122.html,P033.html,P136.html,P139.html,P170.html,P146.html,P060.html,P032.html,P036.html,P199.html,P178.html,P034.html,P163.html,P185.html,P123.html,P097.html,P015.html,P099.html,P002.html,P180.html,P167.html,P111.html,P101.html,P116.html,P196.html,P081.html,P149.html,P153.html,P124.html,P182.html,P054.html,P058.html,P022.html,P050.html,P106.html,P048.html,P192.html,P117.html,P162.html,P103.html,P041.html,P007.html,P107.html,P075.html,P197.html,P181.html,P168.html,P176.html,P046.html,P093.html,P079.html,P038.html,P085.html,P120.html,P023.html,P098.html,P063.html,P157.html,P171.html,P010.html,P194.html,P070.html,P025.html,P072.html,P151.html,P066.html,P043.html,P134.html,P121.html,P092.html,P110.html,P021.html,P047.html,P086.html,P158.html,P115.html,P140.html,P017.html,P069.html,P126.html,P179.html,P061.html,P160.html,P135.html,P164.html,P020.html,P019.html,
+Indexed 200 documents with 6890 unique terms.
+Now able to process queries. When done, enter an empty query to exit.
+
+Enter query:  systems
+
+Top 10 matching Documents from most to least relevant:
+
+1.  P012.html            Score: 0.33639
+2.  P028.html            Score: 0.16035
+3.  P005.html            Score: 0.15694
+4.  P021.html            Score: 0.15317
+5.  P024.html            Score: 0.1486
+6.  P002.html            Score: 0.14528
+7.  P020.html            Score: 0.143
+8.  P007.html            Score: 0.13663
+9.  P030.html            Score: 0.13517
+10. P041.html            Score: 0.13442
+
+Enter `m' to see more, a number to show the nth document, nothing to exit.
+
+ Enter command:  leari nin
+Unknown command.
+Enter `m' to see more, a number to show the nth document, nothing to exit.
+
+ Enter command:  ^[[A
+Unknown command.
+Enter `m' to see more, a number to show the nth document, nothing to exit.
+
+ Enter command:  
+
+Enter query:  learning
+
+Top 10 matching Documents from most to least relevant:
+
+1.  P113.html            Score: 0.32129
+2.  P013.html            Score: 0.12871
+3.  P006.html            Score: 0.12822
+4.  P044.html            Score: 0.11587
+5.  P133.html            Score: 0.09704
+6.  P169.html            Score: 0.09151
+7.  P079.html            Score: 0.08758
+8.  P196.html            Score: 0.07634
+9.  P128.html            Score: 0.06805
+10. P077.html            Score: 0.06521
+
+Enter `m' to see more, a number to show the nth document, nothing to exit.
+
+ Enter command:  
+
+Enter query:  hitler
+
+No matching documents found.
+
+Enter query:  
+
+Script done on 2019-11-09 19:54:24-0600
+Script started on 2019-11-09 19:54:24-0600
+Hello
+Indexing documents in results
+P083.html,P188.html,P014.html,P141.html,P155.html,P003.html,P094.html,P125.html,P190.html,P012.html,P130.html,P027.html,P089.html,P108.html,P071.html,P143.html,P084.html,P011.html,P082.html,P039.html,P031.html,P100.html,P145.html,P187.html,P073.html,P154.html,P024.html,P129.html,P156.html,P195.html,P008.html,P090.html,P191.html,P067.html,P198.html,P119.html,P013.html,P040.html,P177.html,P144.html,P018.html,P001.html,P045.html,P132.html,P062.html,P051.html,P193.html,P042.html,P142.html,P057.html,P037.html,P076.html,P005.html,P166.html,P028.html,P152.html,P186.html,P102.html,P049.html,P174.html,P147.html,P059.html,P112.html,P159.html,P053.html,P080.html,P150.html,P128.html,P131.html,P200.html,P175.html,P087.html,P009.html,P029.html,P138.html,P064.html,P095.html,P109.html,P016.html,P035.html,P044.html,P165.html,P114.html,P056.html,P077.html,P189.html,P091.html,P172.html,P105.html,P137.html,P004.html,P184.html,P113.html,P052.html,P133.html,P068.html,P096.html,P183.html,P030.html,P078.html,P118.html,P026.html,P088.html,P104.html,P065.html,P169.html,P161.html,P148.html,P127.html,P173.html,P006.html,P055.html,P074.html,P122.html,P033.html,P136.html,P139.html,P170.html,P146.html,P060.html,P032.html,P036.html,P199.html,P178.html,P034.html,P163.html,P185.html,P123.html,P097.html,P015.html,P099.html,P002.html,P180.html,P167.html,P111.html,P101.html,P116.html,P196.html,P081.html,P149.html,P153.html,P124.html,P182.html,P054.html,P058.html,P022.html,P050.html,P106.html,P048.html,P192.html,P117.html,P162.html,P103.html,P041.html,P007.html,P107.html,P075.html,P197.html,P181.html,P168.html,P176.html,P046.html,P093.html,P079.html,P038.html,P085.html,P120.html,P023.html,P098.html,P063.html,P157.html,P171.html,P010.html,P194.html,P070.html,P025.html,P072.html,P151.html,P066.html,P043.html,P134.html,P121.html,P092.html,P110.html,P021.html,P047.html,P086.html,P158.html,P115.html,P140.html,P017.html,P069.html,P126.html,P179.html,P061.html,P160.html,P135.html,P164.html,P020.html,P019.html,
+Indexed 200 documents with 6890 unique terms.
+Now able to process queries. When done, enter an empty query to exit.
+
+Enter query:  lea   systens  ms
+
+Top 10 matching Documents from most to least relevant:
+
+1.  P111.html            Score: 1.82887
+2.  P134.html            Score: 0.39314
+3.  P012.html            Score: 0.34172
+4.  P133.html            Score: 0.19709
+5.  P028.html            Score: 0.16442
+6.  P005.html            Score: 0.16327
+7.  P021.html            Score: 0.1599
+8.  P024.html            Score: 0.15384
+9.  P002.html            Score: 0.15235
+10. P020.html            Score: 0.14791
+
+Enter `m' to see more, a number to show the nth document, nothing to exit.
+
+ Enter command:  
+
+Enter query:  
+
+Script done on 2019-11-09 19:54:35-0600
+Script started on 2019-11-09 19:54:35-0600
+Hello
+Indexing documents in results
+
+P083.html,P188.html,
+P014.html,P141.html,P155.html,P003.html,P094.html,P125.html,P190.html,P012.html,P130.html,P027.html,P089.html,P108.html,P071.html,P143.html,P084.html,P011.html,P082.html,P039.html,P031.html,P100.html,P145.html,P187.html,P073.html,P154.html,P024.html,P129.html,P156.html,P195.html,P008.html,P090.html,P191.html,P067.html,P198.html,P119.html,P013.html,P040.html,P177.html,P144.html,P018.html,P001.html,P045.html,P132.html,P062.html,P051.html,P193.html,P042.html,P142.html,P057.html,P037.html,P076.html,P005.html,P166.html,P028.html,P152.html,P186.html,P102.html,P049.html,P174.html,P147.html,P059.html,P112.html,P159.html,P053.html,P080.html,P150.html,P128.html,P131.html,P200.html,P175.html,P087.html,P009.html,P029.html,P138.html,P064.html,P095.html,P109.html,P016.html,P035.html,P044.html,P165.html,P114.html,P056.html,P077.html,P189.html,P091.html,P172.html,P105.html,P137.html,P004.html,P184.html,P113.html,P052.html,P133.html,P068.html,P096.html,P183.html,P030.html,P078.html,P118.html,P026.html,P088.html,P104.html,P065.html,P169.html,P161.html,P148.html,P127.html,P173.html,P006.html,P055.html,P074.html,P122.html,P033.html,P136.html,P139.html,P170.html,P146.html,P060.html,P032.html,P036.html,P199.html,P178.html,P034.html,P163.html,P185.html,P123.html,P097.html,P015.html,P099.html,P002.html,P180.html,P167.html,P111.html,P101.html,P116.html,P196.html,P081.html,P149.html,P153.html,P124.html,P182.html,P054.html,P058.html,P022.html,P050.html,P106.html,P048.html,P192.html,P117.html,P162.html,P103.html,P041.html,P007.html,P107.html,P075.html,P197.html,P181.html,P168.html,P176.html,P046.html,P093.html,P079.html,P038.html,P085.html,
+P120.html,P023.html,P098.html,P063.html,P157.html,P171.html,P010.html,P194.html,P070.html,P025.html,P072.html,P151.html,P066.html,P043.html,P134.html,P121.html,P092.html,P110.html,P021.html,P047.html,P086.html,P158.html,P115.html,P140.html,P017.html,P069.html,P126.html,P179.html,P061.html,P160.html,P135.html,P164.html,P020.html,P019.html,
+Indexed 200 documents with 6890 unique terms.
+Now able to process queries. When done, enter an empty query to exit.
+
+Enter query:  
+Script done on 2019-11-09 19:54:37-0600

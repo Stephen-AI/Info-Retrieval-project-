@@ -62,6 +62,7 @@ public class WebPage {
 
     try {
       URLConnection connection = url.openConnection();
+      connection.setConnectTimeout(7000);
       String line;
       BufferedReader in;
       if (connection.getContentEncoding() == null)

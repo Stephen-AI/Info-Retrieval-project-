@@ -17,10 +17,8 @@ def zip_submission(zip_name, files):
     with ZipFile(zip_name, 'w') as zip:
         for file in files:
             className = file[:-4] + 'class'
-            with open(file, 'rb') as java_file:
-                zip.writestr(os.path.basename(file), java_file.read())
-            with open(className, 'rb') as class_file:
-                zip.writestr(os.path.basename(className),class_file.read())
+            zip.write(file)
+            zip.write(className)
         
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="make submitting code easier")
