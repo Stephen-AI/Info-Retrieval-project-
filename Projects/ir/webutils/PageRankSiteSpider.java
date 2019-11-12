@@ -11,7 +11,7 @@ import java.util.*;
 
 public class PageRankSiteSpider extends PageRankSpider {
     /**
-     * To represent the web as a graph structure for link analysis
+     * Write the page ranks to a file
      */
     public HashMap<String, Double> pageRanks = new HashMap<>();
     public final int MAX_ITERATIONS = 50;
@@ -20,8 +20,11 @@ public class PageRankSiteSpider extends PageRankSpider {
     public void writePageRanks() throws IOException {
         File file = new File(this.saveDir, "page_ranks.txt");
         PrintWriter out = new PrintWriter(new FileWriter(file));
-        for (Map.Entry<String, Double> rankedDoc : pageRanks.entrySet()) {
-            out.println(rankedDoc.getKey() + ".html " + rankedDoc.getValue());
+        Node [] nodes = this.graph.nodeArray();
+        System.out.printf("\nPage Rank: \n");
+        for (Node node : nodes) {
+            System.out.printf("PR(%s): %f\n", node.name, pageRanks.get(node.name));
+            out.println(this.linkToFileName.get(node.name) + ".html " + pageRanks.get(node.name));
         }
         out.close();
     }

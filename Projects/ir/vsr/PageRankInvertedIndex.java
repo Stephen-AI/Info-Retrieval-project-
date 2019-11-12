@@ -48,10 +48,9 @@ public class PageRankInvertedIndex extends InvertedIndex {
     }
 
     /**
-     * Index the documents in dirFile.
+     * Index the documents in dirFile. Filter out page_ranks.txt
      */
     protected void indexDocuments() {
-        System.out.println("Hello");
         if (!tokenHash.isEmpty() || !docRefs.isEmpty()) {
             // Currently can only index one set of documents when an index is created
             throw new IllegalStateException("Cannot indexDocuments more than once in the same InvertedIndex");
@@ -119,13 +118,16 @@ public class PageRankInvertedIndex extends InvertedIndex {
         // Parse the arguments into a directory name and optional flag
 
         String dirName = args[args.length - 1];
-        short docType = DocumentIterator.TYPE_HTML;
+        short docType = DocumentIterator.TYPE_TEXT;
         boolean stem = false, feedback = false;
         double weight = 0.0;
         for (int i = 0; i < args.length - 1; i++) {
             String flag = args[i];
             if (flag.equals("-weight"))
                 weight = Double.parseDouble(args[++i]);
+            else if (flag.equals("-html")) {
+                docType = DocumentIterator.TYPE_HTML;
+            }
             else {
                 throw new IllegalArgumentException("Unknown flag: "+ flag);
             }

@@ -7,7 +7,7 @@ import java.util.*;
 
 public class PageRankSpider extends SiteSpider {
     Graph graph = new Graph();
-
+    HashMap<String, String> linkToFileName = new HashMap<>();
     /**
      * ADDED:
      * For every incoming link into LINK, add an edge between it and LINK
@@ -53,7 +53,6 @@ public class PageRankSpider extends SiteSpider {
         visited = new HashSet<Link>();
         //ADDED: Stores the list of links pointing to a page
         HashMap<String, LinkedList<String>> parentMap = new HashMap<>();
-        HashMap<String, String> linkToFileName = new HashMap<>();
         while (linksToVisit.size() > 0 && count < maxCount) {
             // Pause if in slow mode
             if (slow) {
@@ -104,7 +103,7 @@ public class PageRankSpider extends SiteSpider {
                 String docName = "P" + MoreString.padWithZeros(count,
                         (int) Math.floor(MoreMath.log(maxCount, 10)) + 1);
                 linkToFileName.put(link.toString(), docName);
-                curNode.name = docName;
+//                curNode.name = docName;
                 // End of ADDED code
             }
 
@@ -121,7 +120,7 @@ public class PageRankSpider extends SiteSpider {
                     if (outNode == null)
                         parentMap.get(newLink.toString()).add(link.toString());
                     // Not self referencing
-                    else {
+                    else if (!link.equals(newLink)) {
                         graph.addEdge(link.toString(), newLink.toString());
                     }
                 }
@@ -133,13 +132,8 @@ public class PageRankSpider extends SiteSpider {
             }
 
         }
-        graph.saveGraphToFile();
-//        changeNodeNames(linkToFileName);
+        System.out.printf("\nGraph Structure: \n");
+        graph.print();
     }
-
-    public void changeNodeNames(HashMap<String, String> linkToFileName) {
-        Node [] nodes = graph.nodeArray();
-        for (Node node : nodes)
-            node.name = linkToFileName.get(node.name);
-    }
+    
 }
