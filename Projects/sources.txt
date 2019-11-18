@@ -1,0 +1,3 @@
+TestRocchio
+TestKNN
+TestNaiveBayes
